@@ -36,8 +36,8 @@
 
 <!-- Start: Navbar -->
 
-<div class="container-fluid">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid" style="position: absolute; margin: 0; padding: 0;">
+	<nav class="navbar navbar-expand-lg navbar-default navbar-fixed-to navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="https://wellyington.github.io/">wellyington.<span style="color:#ff6b6b;">github</span>.io</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,16 +46,16 @@
     		<div class="collapse navbar-collapse" id="navbarSupportedContent">
     			<ul class="navbar-nav">
     				<li class="nav-item">
-    					<a class="nav-link" href="#">ABOUT ME</a>
+    					<a class="nav-link" href="#aboutme" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick='document.getElementById("aboutme").scrollIntoView()'>ABOUT ME</a>
     				</li>
     				<li class="nav-item">
-    					<a class="nav-link" href="#">PROJECTS</a>
+    					<a class="nav-link" href="#projects" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick='document.getElementById("projects").scrollIntoView()'>PROJECTS</a>
     				</li>
     				<li class="nav-item">
-    					<a class="nav-link" href="#">PROTOTYPES</a>
+    					<a class="nav-link" href="#prototypes" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick='document.getElementById("prototypes").scrollIntoView()'>PROTOTYPES</a>
     				</li>
     				<li class="nav-item">
-    					<a class="nav-link" href="#">CONTACT ME</a>
+    					<a class="nav-link" href="#contactme" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick='document.getElementById("contactme").scrollIntoView()'>CONTACT ME</a>
     				</li>
     			</ul>
     		</div>
@@ -66,7 +66,8 @@
 <!-- End: Navbar -->
 
 <!-- Start: Header -->
-
+<div class="container-fluid" style="height: 20px; background-color: #fff;">
+</div>
 <div class="container-fluid header">
 	<div class="row">
 		<div class="col align-self-center">
@@ -118,7 +119,7 @@
 
 <!-- Start: Separator -->
 
-<div class="container-fluid separator">
+<div class="container-fluid separator" id="aboutme">
 	<div class="row">
 		<div class="col-3 sep1">
 		</div>
@@ -132,7 +133,6 @@
 <!-- End: Separator -->
 
 <!-- Start: About me -->
-
 <div class="container-fluid aboutme">
 	<center><h3>ABOUT <span style="color:#ff6b6b;">ME</span></h3></center>
 	<div class="container" style="margin: 0; padding: 0;">
@@ -158,7 +158,7 @@
 
 <!-- Start: Separator -->
 
-<div class="container-fluid separator">
+<div class="container-fluid separator" id="projects">
 	<div class="row">
 		<div class="col-2 sep1">
 		</div>
@@ -207,7 +207,7 @@
 
 <!-- Start: Separator -->
 
-<div class="container-fluid separator">
+<div class="container-fluid separator" id="prototypes">
 	<div class="row">
 		<div class="col-9 sep1">
 		</div>
@@ -253,7 +253,7 @@
 
 <!-- Start: Separator -->
 
-<div class="container-fluid separator">
+<div class="container-fluid separator" id="contactme">
 	<div class="row">
 		<div class="col-5 sep1">
 		</div>
