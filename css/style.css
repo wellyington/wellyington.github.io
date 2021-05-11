@@ -78,12 +78,35 @@ h3 {
 	padding:20px;
 }
 .aboutme .photo {
-	width:70%;
+	width: 70%;
 	margin:0 auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
 	background-color: #fff;
 	box-shadow: 5px 5px 20px black;
+}
+.aboutme .bar {
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 25px;
+	background-color: #fff;
+	box-shadow: 5px 5px 20px black;
+}
+.aboutme .bar ul {
+	list-style: none;
+	padding:10px;
+}
+.aboutme .bar a {
+	width:100%;
+	color:#1b4332;
+	text-decoration: none;
+	font-size: 17px;
+}
+.aboutme .bar a:hover {
+	color:#ff6b6b;
+}
+.aboutme .bar a i {
+	padding-right: 10px;
 }
 .aboutme .content {
 	width: 100%;
@@ -244,5 +267,9 @@ nav .navbar-nav li a:hover {
 	}
 	.container .behance-container .wrap-project {
 		height: auto;
+	}
+	.aboutme .bar {
+		width:100%;
+		margin-bottom: -10px;
 	}
 }
