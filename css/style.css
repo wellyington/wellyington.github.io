@@ -139,8 +139,23 @@ h3 {
 	color:#74c69d;
 	font-size:18px;
 }
+.col-sm-4 {
+	margin-bottom: 20px;
+}
 .container .testemonial {
 	margin-top: 0px;
+}
+.testemonialPhoto1 {
+	background-image: url("../images/elonmusk.jpg");
+	background-size: cover;
+}
+.testemonialPhoto2 {
+	background-image: url("../images/billgates.jpg");
+	background-size: cover;
+}
+.testemonialPhoto3 {
+	background-image: url("../images/markzuckerberg.jpg");
+	background-size: cover;
 }
 .container .row .testemonialPhoto {
 	width: 120px;
@@ -150,6 +165,13 @@ h3 {
 	margin-top: 20px;
 	background-color: #fff;
 	border-radius: 60px;
+}
+.testemonialAuthor {
+	color: #ff6b6b;
+	font-size: 17px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
 }
 .prototypes {
 	margin-top:-60px;
