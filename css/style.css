@@ -145,18 +145,30 @@ h3 {
 .container .behance-container {
 	margin-top:40px;
 }
-.container .behance-container .wrap-project {
-	width: 95%;
-	padding: 1%;
-	height:360px;
+.portfolio {
 	background-color: #fff;
-	box-shadow: 5px 5px 20px black;
+	margin:0 auto;
+	width:85%;
 }
-.container .behance-container .wrap-title {
-	color:#1b4332;
+.portfolio .openbutton {
+	margin:0;
+	padding:0;
+	text-align: left;
 }
-.wrap-title {
-	color:#95d5b2;
+.portfolio .openbutton:hover {
+	opacity: 0.5;
+	}
+.portfolio img {
+	width: 100%;
+	padding: 10px;
+}
+.portfolio h4 {
+	padding:10px;
+	padding-bottom: 0;
+	font-size: 18px;
+}
+.portfolio h4:hover {
+	color:#081c15;
 }
 .container p {
 	color:#74c69d;
@@ -271,5 +283,8 @@ nav .navbar-nav li a:hover {
 	.aboutme .bar {
 		width:100%;
 		margin-bottom: -10px;
+	}
+	.portfolio {
+		width:100%;
 	}
 }
