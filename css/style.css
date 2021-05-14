@@ -178,6 +178,11 @@ h3 {
 	font-size:12px;
 	color: #1b4332;
 }
+.modalContent {
+	width:100%;
+	margin:0;
+	padding:0;
+}
 .modalHeader {
 	background-color: #1b4332;
 }
@@ -186,6 +191,11 @@ h3 {
 }
 .modalButton {
 	background-color:#1b4332;
+	border-color: #081c15;
+}
+.modalButton:hover {
+	background-color: #2d6a4f;
+	border-color: #081c15;
 }
 .container p {
 	color:#74c69d;
