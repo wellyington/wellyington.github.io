@@ -155,9 +155,6 @@ h3 {
 	padding:0;
 	text-align: left;
 }
-.portfolio .openbutton:hover {
-	opacity: 0.5;
-	}
 .portfolio img {
 	width: 100%;
 	padding: 10px;
@@ -166,9 +163,29 @@ h3 {
 	padding:10px;
 	padding-bottom: 0;
 	font-size: 18px;
-}
-.portfolio h4:hover {
 	color:#081c15;
+}
+.portfolio ul {
+	margin:0;
+	padding:0;
+}
+.portfolio li {
+	list-style: none;
+	float: left;
+	margin-left:10px;
+	margin-bottom: 5px;
+	padding:0;
+	font-size:12px;
+	color: #1b4332;
+}
+.modalHeader {
+	background-color: #1b4332;
+}
+.modal-title {
+	color:#b7e4c7;
+}
+.modalButton {
+	background-color:#1b4332;
 }
 .container p {
 	color:#74c69d;
