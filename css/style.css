@@ -256,6 +256,21 @@ nav .navbar-nav li a{
 nav .navbar-nav li a:hover {
 	color: #95d5b2 !important;
 }
+.contactme {
+	margin-top:0;
+}
+.contactme a {
+	color:#d8f3dc;
+	
+}
+.formimput {
+	width: 100%;
+}
+label {
+	color:#b7e4c7;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 @media (max-width: 600px) {
 	.header {
 		height: 600px;
