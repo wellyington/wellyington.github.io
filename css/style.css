@@ -114,6 +114,7 @@ h3 {
 	margin-top:25px;
 	margin-bottom: 25px;
 	background-color: #fff;
+	padding-bottom: 2px;
 	box-shadow: 5px 5px 20px black;
 }
 .aboutme .content h2 {
@@ -271,6 +272,17 @@ label {
 	color:#b7e4c7;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+.footer {
+	background-image: url("../images/bg-raw.png");
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.footer span {
+	color:#fff;
+}
+.footer img {
+	margin: 15px;
 }
 @media (max-width: 600px) {
 	.header {
