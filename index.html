@@ -1,451 +1,701 @@
-<!-- All you people can't you see, can't you see -->
-<!-- How you love affect in our reality -->
-<!-- Every time you are down, you can make it right -->
-<!-- And that makes you larger than life -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-	<meta charset="UTF-8">
-	<title>Wellyington</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!-- Bootstrap -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-	
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-	
-	<!-- Fontawesome ICONS -->
-	<script src="https://kit.fontawesome.com/2ff81f920a.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welly — Digital Strategy, Design &amp; Development</title>
+  <meta name="description" content="Welly is an independent digital partner helping ambitious businesses grow through strategy, brand-led design and high-performing websites. Based on the Costa del Sol, working worldwide.">
+  <meta name="author" content="Wellington Almeida">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wellyington.github.io/">
+  <link rel="me" href="https://wellyington.com">
+  <link rel="me" href="https://wellyington.github.io/cv/">
+  <link rel="me" href="https://playtomplay.com">
 
-	<!-- JQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	
-	<!-- jQuery Easing lib -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-	
-	<!-- GitHub Repo Card -->
-	<script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Welly">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://wellyington.github.io/">
+  <meta property="og:title" content="Welly — Digital Strategy, Design &amp; Development">
+  <meta property="og:description" content="Welly is an independent digital partner helping ambitious businesses grow through strategy, brand-led design and high-performing websites. Based on the Costa del Sol, working worldwide.">
+  <meta property="og:image" content="https://wellyington.github.io/images/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Welly — digital that works. Web developer, designer and digital strategist on the Costa del Sol.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Welly — Digital Strategy, Design &amp; Development">
+  <meta name="twitter:description" content="Welly is an independent digital partner helping ambitious businesses grow through strategy, brand-led design and high-performing websites. Based on the Costa del Sol, working worldwide.">
+  <meta name="twitter:image" content="https://wellyington.github.io/images/og.jpg">
+  <meta name="twitter:image:alt" content="Welly — digital that works. Web developer, designer and digital strategist on the Costa del Sol.">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="./css/style.css">
+  <meta name="theme-color" content="#e3fdfd">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("welly-theme");
+        var theme = saved === "light" || saved === "dark"
+          ? saved
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute("content", theme === "dark" ? "#17484d" : "#e3fdfd");
+      } catch (e) {}
+    })();
+  </script>
 
-	<!-- Google Analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch.png">
+  <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-		gtag('config', 'G-4XBY16BPLY');
-	</script>
+  <link rel="stylesheet" href="css/site.css">
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4XBY16BPLY');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://wellyington.github.io/#person",
+        "name": "Wellington Almeida",
+        "alternateName": "Welly",
+        "jobTitle": "Web Developer, Designer and Digital Strategist",
+        "description": "Welly is an independent web developer, designer and digital strategist based on the Costa del Sol, Spain. I bring business thinking, thoughtful design and practical technology together to build digital experiences that help companies grow.",
+        "url": "https://wellyington.github.io/",
+        "image": "https://wellyington.github.io/images/og.jpg",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Costa del Sol, Spain",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Costa del Sol",
+            "addressCountry": "ES"
+          }
+        },
+        "sameAs": [
+          "https://wellyington.com",
+          "https://wellyington.github.io/cv/",
+          "https://playtomplay.com"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://wellyington.github.io/#business",
+        "name": "Welly",
+        "url": "https://wellyington.github.io/",
+        "image": "https://wellyington.github.io/images/og.jpg",
+        "description": "Welly is an independent digital partner helping ambitious businesses grow through strategy, brand-led design and high-performing websites. Based on the Costa del Sol, working worldwide.",
+        "areaServed": "Worldwide",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Costa del Sol",
+          "addressCountry": "ES"
+        },
+        "founder": { "@id": "https://wellyington.github.io/#person" },
+        "provider": { "@id": "https://wellyington.github.io/#person" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Web Development",
+                "description": "Custom websites and web applications built around real business needs. From WordPress and WooCommerce to bespoke front-end experiences, I focus on speed, usability, maintainability and conversion."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital Design",
+                "description": "Clear visual systems and intuitive user journeys. I shape brand direction, information architecture and interface design so a business feels distinctive and is easy to understand and use."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital Strategy",
+                "description": "Digital strategy that connects positioning, audience, content and customer journeys. I help businesses decide what to build, how to present it and where to focus to generate measurable momentum."
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body class="bg-brand-cream font-sans text-brand-primary antialiased">
+  <a class="skip-link" href="#about">Skip to content</a>
 
-<!-- Start: Navbar -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 grid grid-cols-4 grid-lines md:grid-cols-12">
+    <span class="h-full"></span>
+    <span class="h-full"></span>
+    <span class="h-full"></span>
+    <span class="h-full"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+  </div>
 
-<div class="container-fluid" style="position: absolute; margin: 0; padding: 0;">
-	<nav class="navbar navbar-expand-lg navbar-default navbar-fixed-to navbar-dark bg-dark">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="https://wellyington.github.io/">wellyington.<span style="color:#ff6b6b;">github</span>.io</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      			<span class="navbar-toggler-icon"></span>
-    		</button>
-    		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    			<ul class="navbar-nav">
-    				<li class="nav-item">
-    					<a class="nav-link" href="#aboutme" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick='document.getElementById("aboutme").scrollIntoView()'><i class="fas fa-user-tie"></i> ABOUT ME</a>
-    				</li>
-    				<li class="nav-item">
-    					<a class="nav-link" href="#projects" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick='document.getElementById("projects").scrollIntoView()'><i class="fas fa-layer-group"></i> PROJECTS</a>
-    				</li>
-    				<li class="nav-item">
-    					<a class="nav-link" href="#prototypes" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick='document.getElementById("prototypes").scrollIntoView()'><i class="fas fa-code"></i> PROTOTYPES</a>
-    				</li>
-    				<li class="nav-item">
-    					<a class="nav-link" onclick="location.href='https://wellyington.github.io/blog/'" href="https://wellyington.github.io/blog/" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"><i class="fas fa-blog"></i> BLOG</a>
-    				</li>
-       				<li class="nav-item">
-    					<a class="nav-link" href="#contactme" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick='document.getElementById("contactme").scrollIntoView()'><i class="fas fa-address-card"></i> CONTACT ME</a>
-    				</li>
-    			</ul>
-    		</div>
-		</div>
-	</nav>
-</div>
+  <header class="fixed inset-x-0 top-0 z-40 grid h-14 grid-cols-4 border-b border-brand-primary/50 bg-brand-cream transition-colors md:h-16 md:grid-cols-12">
+    <a href="#about" class="group col-span-2 flex min-w-0 items-center border-r border-brand-primary/50 px-4 text-2xl font-bold tracking-[-0.06em] text-brand-primary md:col-span-3 md:px-6 md:text-3xl">
+      <span class="flex min-w-0 items-center gap-1.5">
+        <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1">Welly</span>
+        <span class="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-primary opacity-75" aria-hidden="true"></span>
+      </span>
+    </a>
 
-<!-- End: Navbar -->
+    <div class="hidden min-w-0 border-r border-brand-primary/50 md:col-span-6 md:block">
+      <p class="sr-only">Times for Estepona, London, New York and Dubai.</p>
+      <div class="flex h-full w-full items-center overflow-hidden" aria-hidden="true">
+        <div class="animate-marquee select-none text-xs font-medium uppercase tracking-[0.18em]">
+          <div class="flex shrink-0 items-center whitespace-nowrap" data-marquee-track>
+            <span class="flex shrink-0 items-center whitespace-nowrap">
+              <span class="flex items-center gap-2 bg-brand-primary px-2.5 py-1 font-bold text-brand-cream">
+                <span>Estepona</span>
+                <span class="inline-block min-w-[8ch] text-center font-mono tabular-nums" data-clock="Europe/Madrid">--:--:--</span>
+                <span class="opacity-70">CET</span>
+              </span>
+              <span aria-hidden="true" class="px-5 opacity-40">/</span>
+            </span>
+            <span class="flex shrink-0 items-center whitespace-nowrap">
+              <span class="flex items-center gap-2">
+                <span>London</span>
+                <span class="inline-block min-w-[8ch] text-center font-mono tabular-nums" data-clock="Europe/London">--:--:--</span>
+                <span class="opacity-40">GMT</span>
+              </span>
+              <span aria-hidden="true" class="px-5 opacity-40">/</span>
+            </span>
+            <span class="flex shrink-0 items-center whitespace-nowrap">
+              <span class="flex items-center gap-2">
+                <span>New York</span>
+                <span class="inline-block min-w-[8ch] text-center font-mono tabular-nums" data-clock="America/New_York">--:--:--</span>
+                <span class="opacity-40">ET</span>
+              </span>
+              <span aria-hidden="true" class="px-5 opacity-40">/</span>
+            </span>
+            <span class="flex shrink-0 items-center whitespace-nowrap">
+              <span class="flex items-center gap-2">
+                <span>Dubai</span>
+                <span class="inline-block min-w-[8ch] text-center font-mono tabular-nums" data-clock="Asia/Dubai">--:--:--</span>
+                <span class="opacity-40">GST</span>
+              </span>
+              <span aria-hidden="true" class="px-5 opacity-40">/</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- Start: Header -->
-<div class="container-fluid" style="height: 20px; background-color: #fff;">
-</div>
-<div class="container-fluid header">
-	<div class="row">
-		<div class="col align-self-center">
-			<center><h1>Hello, I'm <span style="color:#ff6b6b;">Welly</span>!</h1></center>
-		</div>
-	</div>
-</div>
+    <div class="col-span-2 flex items-stretch justify-end md:col-span-3">
+      <button id="themeToggleBtn" type="button" class="group group-roll mr-14 flex h-full shrink-0 cursor-pointer items-center gap-2.5 border-l border-brand-primary/50 px-3 text-brand-primary transition-colors hover:bg-brand-primary hover:text-brand-cream md:mr-16 md:px-5" aria-label="Switch to dark theme" aria-pressed="false">
+        <span class="roll-text text-xs font-semibold uppercase tracking-[0.18em]">
+          <span class="theme-word"></span>
+          <span class="theme-word" aria-hidden="true"></span>
+        </span>
+        <span class="relative block h-3 w-3 overflow-hidden border border-brand-primary transition-colors group-hover:border-brand-cream" aria-hidden="true">
+          <span id="themeSquareFill" class="absolute inset-0 bg-brand-primary transition-transform duration-300"></span>
+        </span>
+      </button>
+    </div>
+  </header>
 
-<!-- End: Header -->
+  <button id="navMenuBtn" type="button" class="group fixed right-0 top-0 z-50 flex h-14 w-14 cursor-pointer items-center justify-center border-b border-l border-brand-primary/50 bg-brand-cream transition-colors hover:bg-brand-primary md:h-16 md:w-16" aria-label="Open menu" aria-expanded="false" aria-controls="fullNavMenu">
+    <span class="relative flex h-4 w-6 flex-col justify-between" aria-hidden="true">
+      <span id="barTop" class="block h-px w-full origin-center bg-brand-primary transition-transform duration-300 group-hover:bg-brand-cream"></span>
+      <span id="barMid" class="block h-px w-full bg-brand-primary transition-opacity duration-300 group-hover:bg-brand-cream"></span>
+      <span id="barBot" class="block h-px w-full origin-center bg-brand-primary transition-transform duration-300 group-hover:bg-brand-cream"></span>
+    </span>
+  </button>
 
-<!-- Start: Separator -->
+  <div id="fullNavMenu" class="pointer-events-none fixed inset-0 z-40 flex translate-x-full flex-col justify-between border-l border-brand-primary/50 bg-brand-cream p-6 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:p-12" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true" inert>
+    <div class="grid grid-cols-1 gap-8 border-b border-brand-primary/50 pb-12 pt-16 md:grid-cols-2">
+      <nav aria-label="Primary">
+        <p class="mb-6 text-xs font-semibold uppercase tracking-[0.2em] opacity-60">Navigation</p>
+        <ul class="flex flex-col gap-4 text-4xl font-bold tracking-tight md:text-6xl">
+          <li>
+            <a href="#featured" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>selected work.</span><span aria-hidden="true">selected work.</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#works" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>digital that works.</span><span aria-hidden="true">digital that works.</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#services" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>from idea to impact.</span><span aria-hidden="true">from idea to impact.</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>contact.</span><span aria-hidden="true">contact.</span></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col justify-between gap-8">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] opacity-60">About</p>
+          <p class="max-w-sm text-base leading-relaxed opacity-90 md:text-lg">
+            Welly is an independent web developer, designer and digital strategist based on the Costa del Sol, Spain. I bring business thinking, thoughtful design and practical technology together to build digital experiences that help companies grow.
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] opacity-60">Socials</p>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold uppercase tracking-widest">
+            <a href="https://wellyington.github.io/cv/" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 min-w-11 items-center px-1 underline underline-offset-4">CV<span class="sr-only"> (opens in a new tab)</span></a>
+            <a href="https://wellyington.com" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 min-w-11 items-center px-1 underline underline-offset-4">Website<span class="sr-only"> (opens in a new tab)</span></a>
+            <a href="https://playtomplay.com" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 min-w-11 items-center px-1 underline underline-offset-4">Playtomplay<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-between gap-4 pt-4 text-xs uppercase tracking-widest opacity-60">
+      <span>© 2026 Welly</span>
+      <span>Costa del Sol, Spain</span>
+    </div>
+  </div>
 
-<div class="container-fluid separator">
-	<div class="row">
-		<div class="col-3 sep1">
-		</div>
-		<div class="col-3 sep2">
-		</div>
-		<div class="col-6 sep3">
-		</div>
-	</div>
-</div>
+  <main class="pt-14 md:pt-16">
+    <section id="about" tabindex="-1" class="overflow-hidden border-b border-brand-primary/50 text-brand-primary" aria-labelledby="hero-heading">
+      <div class="grid grid-cols-4 md:grid-cols-12">
+        <div class="relative z-10 col-span-4 flex flex-col justify-end px-4 py-12 md:col-span-8 md:px-8 md:py-16">
+          <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] opacity-70 md:mb-4">Web Developer · Designer · Digital Strategist</p>
+          <h1 id="hero-heading" class="text-[clamp(2.5rem,8vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.10em]">digital that works.</h1>
+        </div>
+        <div class="relative col-span-4 flex min-h-[340px] items-center justify-center border-t border-brand-primary/50 bg-brand-cream p-6 md:col-span-4 md:min-h-0 md:border-l md:border-t-0 md:p-8">
+          <div class="relative flex aspect-square w-full max-w-[340px] max-h-[60svh] items-center justify-center overflow-hidden rounded-2xl bg-[#a6e3e9] shadow-lg">
+            <div class="pointer-events-none absolute left-1/2 top-1/2 z-10 aspect-square h-[82%] -translate-x-1/2 -translate-y-1/2 opacity-95">
+              <svg viewBox="0 0 200 200" class="animate-vinyl h-full w-full" role="img" aria-label="by me vinyl badge">
+                <defs>
+                  <path id="vinyl-path" fill="none" d="M 100,100 m -76,0 a 76,76 0 1,1 152,0 a 76,76 0 1,1 -152,0"></path>
+                </defs>
+                <circle cx="100" cy="100" r="100" fill="var(--color-brand-cream)" fill-opacity="0.95"></circle>
+                <circle cx="100" cy="100" r="96" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="92" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="88" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="62" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="56" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="50" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="44" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <text fill="var(--color-brand-primary)" font-size="9" font-weight="700" letter-spacing="1.6">
+                  <textPath href="#vinyl-path">BY ME &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; </textPath>
+                </text>
+                <circle cx="100" cy="100" r="32" fill="var(--color-brand-primary)"></circle>
+                <circle cx="100" cy="100" r="4" fill="var(--color-brand-cream)"></circle>
+              </svg>
+            </div>
+            <div class="pointer-events-none absolute inset-0 flex items-end justify-center opacity-40">
+              <svg viewBox="0 0 200 200" class="h-full w-full fill-current text-brand-cream" aria-hidden="true">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 6"></circle>
+                <path d="M40 180 C 40 130, 160 130, 160 180 Z" opacity="0.6"></path>
+                <circle cx="100" cy="115" r="28" opacity="0.6"></circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- End: Separator -->
+    <section id="featured" tabindex="-1" class="text-brand-primary" aria-labelledby="featured-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="p-4 md:p-6">
+            <h2 id="featured-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">selected work.</h2>
+          </div>
+        </div>
+      </div>
 
-<!-- Start: Home -->
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
+          <div class="grid grid-cols-4 md:grid-cols-10">
+            <div class="group relative col-span-4 aspect-[4/3] overflow-hidden border-b border-brand-primary/50 md:col-span-5 md:aspect-auto md:min-h-[44rem] md:border-b-0 md:border-r">
+              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" tabindex="0" aria-label="Abstract wireframe for the featured project. Drag horizontally, or use the arrow keys, to rotate."></div>
+              <div class="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 border border-brand-primary/40 bg-brand-cream/80 px-3 py-1 text-xs uppercase tracking-[0.18em] backdrop-blur">
+                <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-[#71c9ce]" aria-hidden="true"></span>
+                <span>Digital ideas, made real</span>
+              </div>
+            </div>
 
-<div class="container">
-	<div class="row">
-		<div class="col">
-			<i class="fas fa-laptop-code icon"></i>
-			<h2>Web Development</h2>
-			<p>Range from developing a simple single static page of plain text to complex web applications, and electronic businesses.</p>
-		</div>
-		<div class="col">
-			<i class="fas fa-mobile-alt icon"></i>
-			<h2>App Development</h2>
-			<p>Creation of computer applications for use on mobile devices such as tablets, smartphones and smart watches.</p>
-		</div>
-		<div class="col">
-			<i class="fas fa-hashtag icon"></i>
-			<h2>Community Management</h2>
-			<p>Community Managers are involved in various activities such as communications, PR, social media, and content creation.</p>
-		</div>
-	</div>
-</div>
+            <div class="col-span-4 flex flex-col justify-center gap-6 p-6 md:col-span-5 md:p-10">
+              <div>
+                <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] opacity-70">Featured build</p>
+                <h3 class="text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-5xl">
+                  <a href="#works" class="transition-colors hover:text-brand-primary/70">Playtomplay — e-commerce from the ground up</a>
+                </h3>
+              </div>
+              <p class="max-w-[46ch] text-lg font-light leading-relaxed opacity-90 md:text-xl">
+                A toy e-commerce store designed and built from the ground up in WordPress and WooCommerce. The project brought together storefront structure, product presentation and the practical foundations of a dropshipping business — taking the idea from concept to a working store in five days.
+              </p>
+              <div class="-mx-6 flex flex-wrap gap-x-12 gap-y-4 border-t border-brand-primary/50 px-6 pt-5 md:-mx-10 md:px-10">
+                <div>
+                  <span class="block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">Format</span>
+                  <span class="text-xs uppercase tracking-[0.15em] opacity-75">E-commerce website</span>
+                </div>
+                <div>
+                  <span class="block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">Disciplines</span>
+                  <span class="text-xs uppercase tracking-[0.15em] opacity-75">WordPress · WooCommerce · E-commerce</span>
+                </div>
+              </div>
+              <a href="https://playtomplay.com" target="_blank" rel="noopener noreferrer" class="group group-roll -mx-6 flex min-h-11 items-center justify-between border-t border-brand-primary/50 px-6 py-5 text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-primary hover:text-brand-cream md:-mx-10 md:px-10 md:text-xl">
+                <span class="roll-text">
+                  <span>explore the project<span class="sr-only"> (opens in a new tab)</span></span>
+                  <span aria-hidden="true">explore the project</span>
+                </span>
+                <span class="transition-transform group-hover:translate-x-1 motion-safe:group-hover:translate-x-1" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- End: Home -->
+    <section id="works" tabindex="-1" class="text-brand-primary" aria-labelledby="works-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="p-4 md:p-6">
+            <h2 id="works-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">more projects.</h2>
+          </div>
+        </div>
+      </div>
 
-<!-- Start: Separator -->
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
+          <div class="grid grid-cols-4 md:grid-cols-10" role="search">
+            <label class="col-span-4 flex min-h-11 cursor-text items-center gap-3 border-b border-r border-brand-primary/50 p-4 transition-colors focus-within:bg-brand-primary focus-within:text-brand-cream md:col-span-3 md:border-b-0">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                <path d="M20 20 15.2 15.2"></path>
+              </svg>
+              <input id="searchInput" type="search" placeholder="SEARCH WORKS" aria-label="Search works" autocomplete="off" class="h-11 w-full min-w-0 bg-transparent text-base uppercase tracking-[0.18em] placeholder:text-current placeholder:opacity-70 focus:outline-none md:text-xs">
+            </label>
+            <div id="filterTagsContainer" class="col-span-4 flex flex-wrap items-center gap-2 p-3 md:col-span-7 md:p-4" role="group" aria-label="Filter projects"></div>
+          </div>
+        </div>
+      </div>
 
-<div class="container-fluid separator" id="aboutme">
-	<div class="row">
-		<div class="col-3 sep1">
-		</div>
-		<div class="col-5 sep2">
-		</div>
-		<div class="col-4 sep3">
-		</div>
-	</div>
-</div>
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
+          <div id="worksGrid" class="grid grid-cols-4 md:grid-cols-10">
+            <p id="worksStatus" class="sr-only" aria-live="polite"></p>
 
-<!-- End: Separator -->
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-3 md:border-r" data-title="Playtomplay" data-category="E-commerce Website" data-tags="Web Development,WordPress,WooCommerce,E-commerce" data-summary="A toy e-commerce store built with WordPress and WooCommerce. Developed from concept to a working dropshipping storefront in five days, with a focus on clear product presentation and a straightforward shopping journey.">
+              <div class="relative z-0 aspect-3/4 w-full grow overflow-hidden bg-brand-dark">
+                <img src="images/work-playtomplay.webp" alt="Assorted children's toys, including blocks, cars and a stuffed monkey, laid out on white" width="1400" height="933" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Playtomplay</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em] opacity-60">E-commerce Website</p>
+              </div>
+            </article>
 
-<!-- Start: About me -->
-<div class="container-fluid aboutme">
-	<center><h3>ABOUT <span style="color:#ff6b6b;">ME</span></h3></center>
-	<div class="container" style="margin: 0; padding: 0;">
-		<div class="row">
-			<div class="col-sm-5">
-				<div class="photo">
-					<img src="./images/iamwelly.jpg">
-				</div>
-				<div class="bar">
-					<ul>
-					<li><a href="https://instagram.com/wellyington"><i class="fab fa-instagram"></i>Instagram</a></li>
-					<li><a href="https://facebook.com/wellyington"><i class="fab fa-facebook-square"></i>Facebook</a></li>
-					<li><a href="https://github.com/wellyington"><i class="fab fa-github-square"></i>GitHub</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-sm-7">
-				<div class="content">
-					<h2>Hi, my name is Welly.</h2>
-					<p>I am a 35 years old developer based in Málaga, Spain. I am graduated in Advertising at School of Visual Arts in New York City, but technology is my life much before I get a degree.</p>
-					<p>I am an hybrid professional and trying to get involved with almost everything that catches my attention; I can design and develop complex system, software, websites and mobile apps for any propose, but as graduated in advertising I am mixing together technology and marketing skills to build functional solutions.</p>
-					<p>My specialities are Python, Ruby, JavaScript, C/C++ and PHP, and I am also proficient with HTML and CSS.</p>
-					<p>I am an expert in mayor cloud platform services, with experience in setup and maintenance of Google Cloud Platform, Microsoft Azure and Amazon Web Service. I am an advanced user with Linux, MacOS and Windows, apt to build servers, embed systems and give full support for platforms of any size.</p>
-					<p>Recently I have edited a Bitnami certified distribution of WordPress to make it more stable and secure when running with WooCommerce and since February 2020 I am developing an AI model that helps Instagram accounts to build organic audience.</p>
-					<p>When I am not coding or engineering new infrastructure, I am probably skating, surfing, swimming, running or making music. I appreciate arts, music and sports a lot.</p>
-					<p>My skills are in fine tune; I am dynamic, fast, team player and professional to perform in any kind of projects. I am also very communicative, talented with languages, extremely polite and patient. The same positive energy that I have in my life, I take into my work.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-3 md:border-r" data-title="Equa Estates" data-category="Real Estate Digital Marketing" data-tags="Digital Strategy,Content,Real Estate,SEO" data-summary="Digital marketing and content work for a Costa del Sol real estate brand. Focused on presenting premium property, communicating local market knowledge and supporting the brand's online presence.">
+              <div class="relative z-0 aspect-square w-full grow overflow-hidden bg-brand-dark">
+                <img src="images/work-equa-estates.webp" alt="Sunlit open-plan living room and kitchen in a modern home" width="1000" height="680" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Equa Estates</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em] opacity-60">Real Estate Digital Marketing</p>
+              </div>
+            </article>
 
-<!-- End: About Me -->
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Marbella SuperHost" data-category="Hospitality &amp; Property" data-tags="Web Development,Digital Strategy,Hospitality" data-summary="Digital presence work for a short-term rental and property hospitality brand. The project sits at the intersection of web, positioning and communicating a high-quality guest experience.">
+              <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
+                <img src="images/work-marbella-superhost.webp" alt="Modern white villa with a swimming pool and palm trees" width="1100" height="733" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Marbella SuperHost</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em] opacity-60">Hospitality &amp; Property</p>
+              </div>
+            </article>
 
-<!-- Start: Separator -->
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Kadoosh" data-category="SEO &amp; Digital Growth" data-tags="SEO,Digital Strategy,Content" data-summary="SEO strategy and website content work designed to strengthen organic visibility, clarify search intent and create a stronger foundation for sustainable acquisition.">
+              <div class="relative z-0 aspect-2/1 w-full grow overflow-hidden bg-brand-dark">
+                <img src="images/work-kadoosh.webp" alt="Laptop on a desk showing analytics charts" width="1100" height="783" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Kadoosh</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em] opacity-60">SEO &amp; Digital Growth</p>
+              </div>
+            </article>
 
-<div class="container-fluid separator" id="projects">
-	<div class="row">
-		<div class="col-2 sep1">
-		</div>
-		<div class="col-3 sep2">
-		</div>
-		<div class="col-7 sep3">
-		</div>
-	</div>
-</div>
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="The Agent Prompt" data-category="SEO &amp; Content Strategy" data-tags="SEO,Content,Digital Strategy" data-summary="Keyword research and SEO direction for a focused digital product. The work centres on understanding the audience, mapping search demand and building content around relevant intent.">
+              <div class="relative z-0 aspect-4/5 w-full grow overflow-hidden bg-brand-dark">
+                <img src="images/work-the-agent-prompt.webp" alt="People reviewing printed notes beside laptops at a desk" width="1000" height="667" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">The Agent Prompt</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em] opacity-60">SEO &amp; Content Strategy</p>
+              </div>
+            </article>
 
-<!-- End: Separator -->
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-5 md:border-r" data-title="Xfetch" data-category="Software &amp; Product Development" data-tags="Web Development,Python,Product" data-summary="A utility application developed with Python and Kivy, bringing video downloading and audio conversion workflows into a simple desktop-style interface.">
+              <div class="relative z-0 aspect-3/2 w-full grow overflow-hidden bg-brand-dark">
+                <img src="images/work-xfetch.webp" alt="Close-up of a computer circuit board" width="1100" height="733" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Xfetch</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em] opacity-60">Software &amp; Product Development</p>
+              </div>
+            </article>
 
-<!-- Start: Projects -->
-<div class="container-fluid projects">
-	<div class="container">
-		<center><h3>PROJECTS</h3></center>
-		<center><p class="darkgreen">I have done some cool things along the way, check them out below and let me know what you like the most.</p></center>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-					<!-- Start: Swift Dreams -->
-					<div class="portfolio">
-						<button type="button" class="btn openbutton" data-bs-toggle="modal" data-bs-target="#swiftdreams">
-						<img src="./images/portfolio/swiftdreams/swiftdreams_cover.png">
-						<h4>Swift Dreams</h4>
-						<ul>
-							<li>Web Shop</li>
-							<li>WooCommerce</li>
-						</ul>
-						</button>
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-5 md:border-r" data-title="Web Platforms &amp; Experiments" data-category="Selected Development" data-tags="Web Development,JavaScript,WordPress,E-commerce" data-summary="A selection of practical builds and technical experiments across WordPress, WooCommerce, JavaScript, Node.js, Python and modern web tooling — exploring how useful products and business websites should work.">
+              <div class="relative z-0 aspect-square w-full grow overflow-hidden bg-brand-dark">
+                <img src="images/work-web-platforms.webp" alt="Laptop screen filled with source code in a dark editor" width="1000" height="667" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Web Platforms &amp; Experiments</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em] opacity-60">Selected Development</p>
+              </div>
+            </article>
 
-						<!-- Start: Modal -->
-						<div class="modal fade" id="swiftdreams" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-							<div class="modal-dialog modal-fullscreen">
-								<div class="modal-content">
-									<div class="modal-header modalHeader">
-										<h5 class="modal-title" id="staticBackdropLabel">Shift Dreams</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-									</div>
+            <p id="worksEmpty" class="is-filtered-out col-span-4 break-words p-12 text-center text-sm uppercase tracking-widest opacity-60 md:col-span-10" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-									<div class="modal-body modalContent" style="background-color: #7ba6a3;">
-										<img src="./images/portfolio/swiftdreams/swiftdreams.png" style="width:100%; margin:0; padding:0;">
-										<center><p style="color:#fff; font-size:20px;">See it live at<br/><a href="https://swiftdreams.shop/" style="color:#fff;">https://swiftdreams.shop/</a></p></center>
-									</div>
+    <section id="services" tabindex="-1" class="text-brand-primary" aria-labelledby="services-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="p-4 md:p-6">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] opacity-70">What I bring to the table</p>
+            <h2 id="services-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">from idea to impact.</h2>
+          </div>
+        </div>
+      </div>
 
-									<div class="modal-footer" style="background-color: #2d6a4f;">
-										<button type="button" class="btn btn-primary modalButton" data-bs-dismiss="modal">Close</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- End: Modal -->
-					</div>
-					<!-- End: Swift Dreams -->
-				</div>
-				<div class="col-sm-4">
-					
-				</div>
-				<div class="col-sm-4">
-					
-				</div>
-			</div>
-		</div>
-		<div class="container testemonial">
-			<!-- Start: Testemonial -->
-			<h3>Testimonial</h3>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="testemonialPhoto testemonialPhoto1">
-					</div>
-					<center>
-						<p>“I needed my printer fixed and Welly came into hand when I contact him, this man is a legends with computers.”</p>
-						<h3 class="testemonialAuthor">Elon Musk - SpaceX</h3>
-					</center>
-				</div>
-				<div class="col-sm-4">
-					<div class="testemonialPhoto testemonialPhoto2">
-					</div>
-					<center>
-						<p>"My computer was always displaying a blue screen with a memory error message, than I called Welly and it is now solved."</p>
-						<h3 class="testemonialAuthor">Bill Gates - Microsoft</h3>
-					</center>
-				</div>
-				<div class="col-sm-4">
-					<div class="testemonialPhoto testemonialPhoto3">
-					</div>
-					<center>
-						<p>"Welly has thought me everything I know about coding, we used to be friends on MySpace before I start Facebook."</p>
-						<h3 class="testemonialAuthor">Mark Zuckerberg - Facebook</h3>
-					</center>
-				</div>
-			</div>
-			<div class="row" st></div>
-			<!-- End: Testemonial -->
-		</div>
-	</div>
-</div>
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
+          <div class="grid grid-cols-1 divide-y divide-brand-primary/50 md:grid-cols-3 md:divide-x md:divide-y-0">
+            <div class="flex min-h-[300px] flex-col justify-between p-6 md:p-8">
+              <div>
+                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em] opacity-50">01 / BUILD</span>
+                <h3 class="mb-4 text-2xl font-bold tracking-tight">Web Development</h3>
+                <p class="mb-6 text-sm leading-relaxed opacity-80">
+                  Custom websites and web applications built around real business needs. From WordPress and WooCommerce to bespoke front-end experiences, I focus on speed, usability, maintainability and conversion.
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em] opacity-70">
+                <li class="border border-brand-primary/40 px-2 py-1">Custom Sites</li>
+                <li class="border border-brand-primary/40 px-2 py-1">E-Commerce</li>
+                <li class="border border-brand-primary/40 px-2 py-1">CMS &amp; Integrations</li>
+              </ul>
+            </div>
+            <div class="flex min-h-[300px] flex-col justify-between p-6 md:p-8">
+              <div>
+                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em] opacity-50">02 / DESIGN</span>
+                <h3 class="mb-4 text-2xl font-bold tracking-tight">Digital Design</h3>
+                <p class="mb-6 text-sm leading-relaxed opacity-80">
+                  Clear visual systems and intuitive user journeys. I shape brand direction, information architecture and interface design so a business feels distinctive and is easy to understand and use.
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em] opacity-70">
+                <li class="border border-brand-primary/40 px-2 py-1">Visual Identity</li>
+                <li class="border border-brand-primary/40 px-2 py-1">UX &amp; UI</li>
+                <li class="border border-brand-primary/40 px-2 py-1">Brand Systems</li>
+              </ul>
+            </div>
+            <div class="flex min-h-[300px] flex-col justify-between p-6 md:p-8">
+              <div>
+                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em] opacity-50">03 / STRATEGY</span>
+                <h3 class="mb-4 text-2xl font-bold tracking-tight">Digital Strategy</h3>
+                <p class="mb-6 text-sm leading-relaxed opacity-80">
+                  Digital strategy that connects positioning, audience, content and customer journeys. I help businesses decide what to build, how to present it and where to focus to generate measurable momentum.
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em] opacity-70">
+                <li class="border border-brand-primary/40 px-2 py-1">Positioning</li>
+                <li class="border border-brand-primary/40 px-2 py-1">SEO &amp; Content</li>
+                <li class="border border-brand-primary/40 px-2 py-1">Growth Planning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- End: Projects -->
+    <section id="contact" tabindex="-1" class="text-brand-primary" aria-labelledby="contact-heading">
+      <div class="grid grid-cols-4 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-12 md:col-span-10 md:col-start-2 md:pt-28">
+          <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-10">
+            <div class="col-span-4 p-4 md:col-span-10 md:p-6">
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] opacity-75">want to</p>
+              <h2 id="contact-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">chat?</h2>
+            </div>
+          </div>
+          <div class="grid grid-cols-4 md:grid-cols-10">
+            <div class="col-span-4 flex flex-col items-start justify-between gap-8 border-b border-r border-brand-primary/50 p-6 py-14 md:col-span-4 md:border-b-0 md:p-8 md:py-20">
+              <div>
+                <p class="mb-8 max-w-[40ch] text-xl font-light leading-relaxed md:text-2xl">
+                  Have a business challenge, a new idea or a website that needs to do more? Let’s make it happen.
+                </p>
+                <p class="text-sm leading-relaxed opacity-70">
+                  Available for web development, digital design and strategy projects with ambitious businesses in Spain and beyond.
+                </p>
+              </div>
+              <a href="https://wellyington.com" class="group-roll relative inline-flex min-h-11 items-center overflow-hidden border border-brand-primary/50 px-6 py-3.5 text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-primary hover:text-brand-cream md:text-xl">
+                <span class="roll-text">
+                  <span>Start a conversation</span>
+                  <span aria-hidden="true">Start a conversation</span>
+                </span>
+              </a>
+            </div>
+            <div class="group relative col-span-4 flex min-h-[380px] items-center justify-center overflow-hidden bg-brand-dark md:col-span-6 md:min-h-[520px]">
+              <img src="images/contact-workspace.webp" alt="Cafe interior with pendant lamps and an illuminated sign" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
+              <div class="absolute inset-0 bg-brand-primary/30 mix-blend-multiply"></div>
+              <div class="relative z-10 px-6 text-center">
+                <span class="inline-block border border-[#e3fdfd]/85 bg-[#12383c]/75 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#e3fdfd] backdrop-blur-sm">
+                  Strategy · Design · Development
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<!-- Start: Separator -->
+  <footer class="border-t border-brand-cream/40 bg-brand-primary text-brand-cream">
+    <div class="relative h-36 overflow-hidden border-b border-brand-cream/40 md:h-52">
+      <img src="images/footer-city.webp" alt="City lights at night along a street of illuminated signs" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-primary via-transparent to-transparent opacity-80"></div>
+      <div class="absolute bottom-4 left-6 right-6 text-xs font-semibold uppercase tracking-[0.25em] opacity-75">
+        Independent by design · Connected to business
+      </div>
+    </div>
 
-<div class="container-fluid separator" id="prototypes">
-	<div class="row">
-		<div class="col-9 sep1">
-		</div>
-		<div class="col-2 sep2">
-		</div>
-		<div class="col-1 sep3">
-		</div>
-	</div>
-</div>
+    <nav class="flex border-b border-brand-cream/40" aria-label="Footer">
+      <a href="#about" class="group-roll flex min-h-11 min-w-0 flex-1 items-center justify-center border-r border-brand-cream/40 p-4 py-10 text-center text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-cream hover:text-brand-primary md:py-14 md:text-2xl">
+        <span class="roll-text"><span>about</span><span aria-hidden="true">about</span></span>
+      </a>
+      <a href="#works" class="group-roll flex min-h-11 min-w-0 flex-1 items-center justify-center border-r border-brand-cream/40 p-4 py-10 text-center text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-cream hover:text-brand-primary md:py-14 md:text-2xl">
+        <span class="roll-text"><span>works</span><span aria-hidden="true">works</span></span>
+      </a>
+      <a href="#contact" class="group-roll flex min-h-11 min-w-0 flex-1 items-center justify-center p-4 py-10 text-center text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-cream hover:text-brand-primary md:py-14 md:text-2xl">
+        <span class="roll-text"><span>contact</span><span aria-hidden="true">contact</span></span>
+      </a>
+    </nav>
 
-<!-- End: Separator -->
+    <div class="grid grid-cols-4 md:grid-cols-12">
+      <div class="col-span-4 border-x border-brand-cream/40 md:col-span-10 md:col-start-2">
+        <div class="grid grid-cols-4 border-b border-brand-cream/40 md:grid-cols-10">
+          <div class="col-span-4 flex flex-col justify-between gap-8 px-6 py-10 md:col-span-6 md:min-h-[18rem] md:px-8 md:py-14">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] opacity-75">elsewhere</p>
+            <ul class="flex flex-col gap-1">
+              <li>
+                <a href="https://wellyington.com" target="_blank" rel="noreferrer noopener" class="group group-roll inline-flex min-h-11 items-center gap-3 text-lg uppercase leading-[1.3] tracking-[0.06em] opacity-85 transition-opacity hover:opacity-100 md:text-xl">
+                  <span class="roll-text">
+                    <span>Website<span class="sr-only"> (opens in a new tab)</span></span>
+                    <span aria-hidden="true">Website</span>
+                  </span>
+                  <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://wellyington.github.io/cv/" target="_blank" rel="noreferrer noopener" class="group group-roll inline-flex min-h-11 items-center gap-3 text-lg uppercase leading-[1.3] tracking-[0.06em] opacity-85 transition-opacity hover:opacity-100 md:text-xl">
+                  <span class="roll-text">
+                    <span>CV<span class="sr-only"> (opens in a new tab)</span></span>
+                    <span aria-hidden="true">CV</span>
+                  </span>
+                  <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://playtomplay.com" target="_blank" rel="noreferrer noopener" class="group group-roll inline-flex min-h-11 items-center gap-3 text-lg uppercase leading-[1.3] tracking-[0.06em] opacity-85 transition-opacity hover:opacity-100 md:text-xl">
+                  <span class="roll-text">
+                    <span>Playtomplay<span class="sr-only"> (opens in a new tab)</span></span>
+                    <span aria-hidden="true">Playtomplay</span>
+                  </span>
+                  <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-4 flex flex-col justify-between gap-8 border-t border-brand-cream/40 px-6 py-10 md:col-span-4 md:border-l md:border-t-0 md:px-8 md:py-14">
+            <div>
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] opacity-75">colophon</p>
+              <p class="text-xs uppercase leading-relaxed tracking-[0.15em] opacity-80">
+                Based on the Costa del Sol, Spain.<br>
+                Working worldwide · Built with curiosity and purpose.
+              </p>
+            </div>
+            <p class="text-xs uppercase tracking-[0.18em] opacity-70">© 2026 Welly. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- Start: Prototypes -->
+    <div class="grid select-none grid-cols-4 overflow-hidden md:grid-cols-12">
+      <div class="col-span-4 overflow-hidden border-x border-brand-cream/40 md:col-span-10 md:col-start-2">
+        <p class="-mb-[0.12em] px-4 text-center text-[18vw] font-bold leading-[0.8] tracking-[-0.10em] text-brand-cream opacity-95 md:text-[20vw]" aria-hidden="true">Welly</p>
+      </div>
+    </div>
+  </footer>
 
-<div class="container-fluid prototypes">
-	<div class="container">
-		<center><h3>PROTOTYPES</h3></center>
-		<center><p>Check out some of my prototype projects on GitHub and feel free to clone them if you are sure about what you are doing. I will take no responsibility if you blow up your computer.</p></center>
-		<div class="row github">
-			<div class="col-sm-6">
-				<div class="repo-card" data-repo="wellyington/gpt3-translator"></div>
-			</div>
-			<div class="col-sm-6">
-				<div class="repo-card" data-repo="wellyington/mars-CV-template"></div>
-			</div>
-			<div class="col-sm-6">
-				<div class="repo-card" data-repo="wellyington/guitar-tuner"></div>
-			</div>
-			<div class="col-sm-6">
-				<div class="repo-card" data-repo="wellyington/maia-instagram-bot"></div>
-			</div>
-			<div class="col-sm-6">
-				<div class="repo-card" data-repo="wellyington/cardapio-QRMenu-template"></div>
-			</div>
-			<div class="col-sm-6">
-				<div class="repo-card" data-repo="wellyington/html-css-templates"></div>
-			</div>
-			<div class="col-sm-6">
-				<div class="repo-card" data-repo="wellyington/python-algorithms"></div>
-			</div>
-			<div class="col-sm-6">
-				<div class="repo-card" data-repo="wellyington/currency"></div>
-			</div>
-		</div>
-	</div>
-</div>
+  <div id="projectModal" class="fixed inset-0 z-50 items-center justify-center bg-black/70 p-4 backdrop-blur-sm md:p-8" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true" hidden>
+    <div class="modal-panel relative flex w-full max-w-2xl flex-col overflow-y-auto rounded-lg border border-brand-primary/50 bg-brand-cream p-6 text-brand-primary md:p-8" tabindex="-1">
+      <div class="sticky top-0 z-10 -mx-6 flex justify-end bg-brand-cream/95 px-2 py-1 backdrop-blur-sm md:-mx-8">
+        <button id="closeModalBtn" type="button" class="inline-flex h-11 w-11 items-center justify-center text-xl font-bold hover:opacity-60" aria-label="Close project details">
+          <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+      <div>
+        <p id="modalCategory" class="mb-2 text-xs font-bold uppercase tracking-[0.2em] opacity-70"></p>
+        <h3 id="modalTitle" class="mb-4 text-3xl font-bold tracking-tight"></h3>
+        <div class="mb-6 aspect-video w-full overflow-hidden rounded bg-brand-dark">
+          <img id="modalImage" alt="" class="h-full w-full object-cover" width="1400" height="933">
+        </div>
+        <p id="modalDescription" class="mb-6 text-base font-light leading-relaxed opacity-90"></p>
+        <div id="modalTags" class="mb-6 flex flex-wrap gap-2"></div>
+      </div>
+      <div class="sticky bottom-0 z-10 -mx-6 mt-2 flex items-center justify-between gap-4 border-t border-brand-primary/40 bg-brand-cream/95 px-6 py-3 backdrop-blur-sm md:-mx-8 md:px-8">
+        <span class="text-xs uppercase tracking-widest opacity-60">Welly Project Archive</span>
+        <button id="modalActionBtn" type="button" class="inline-flex min-h-11 items-center bg-brand-primary px-5 py-2 text-xs font-semibold uppercase tracking-widest text-brand-cream hover:opacity-90">Close</button>
+      </div>
+    </div>
+  </div>
 
-<!-- End: Prototypes -->
-
-<!-- Start: Separator -->
-
-<div class="container-fluid separator" id="contactme">
-	<div class="row">
-		<div class="col-5 sep1">
-		</div>
-		<div class="col-5 sep2">
-		</div>
-		<div class="col-2 sep3">
-		</div>
-	</div>
-</div>
-
-<!-- End: Separator -->
-
-<!-- Start: Contact Me -->
-
-<div class="container contactme">
-	<center><h3>CONTACT ME</h3></center>
-	<center><p>Send me a message using the form, email or social networks to quote your projects, or just to say hello.</p></center>
-	<div class="row">
-		<div class="col-sm-6">
-			<p>email: <a href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a></p>
-			<p>Instagram: <a href="https://instagram.com/wellyington/">@wellyington</a></p>
-			<p>Twitter: <a href="https://twitter.com/wellyington/">@wellyington</a></p>
-			<p>Facebook: <a href="https://facebook.com/wellyington/">@wellyington</a></p>
-			<p>Buy Me a Coffee: <a href="https://www.buymeacoffee.com/wellyington">@wellyington</a></p>
-			<p>GitHub: <a href="https://github.com/wellyington/">@wellyington</a></p>
-		</div>
-		<div class="col-sm-6">
-			<form action="https://formspree.io/f/xdoyewkq" method="POST">
-
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-12">
-							<label>Your Name:</label>
-						</div>
-						<div class="col-12">
-							<input class="formimput" type="name">
-						</div>
-						<div class="col-12">
-							<label>Your E-mail:</label>
-						</div>
-						<div class="col-12">
-							<input class="formimput" type="email" name="_replyto">
-						</div>
-						<div class="col-12">
-							<label>Your message:</label>
-						</div>
-						<div class="col-12">
-							<textarea class="formimput" name="message"></textarea>
-						</div>
-						<div class="col-12">
-							<center><button type="submit" style="margin:10px; margin-bottom: 20px;">Send</button></center>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-		</div>
-</div>
-
-<!-- End: Contact Me --> 
-
-<!-- Start: Separator -->
-
-<div class="container-fluid separator">
-	<div class="row">
-		<div class="col-4 sep1">
-		</div>
-		<div class="col-6 sep2">
-		</div>
-		<div class="col-2 sep3">
-		</div>
-	</div>
-</div>
-
-<!-- End: Separator -->
-
-<!-- Start: Footer -->
-
-<div class="container-fluid footer">
-	<div class="row">
-		<div class="col-6">
-			<div class="row">
-				<div class="col-12">
-					<center><span>Checked With:</span></center>
-				</div>
-				<div class="col-12">
-					<center><a href="https://openai.com/"><img src="./images/openai.png" style="width:100px;"></a></center>
-				</div>
-			</div>
-		</div>
-		<div class="col-6">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-12">
-						<center><span>Powered By:</span></center>
-					</div>
-					<div class="col-12">
-						<center><a href="https://pages.github.com/"><img src="./images/githubpages.png" style="width:100px;"></a></center>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- End: Footer -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
