@@ -1,0 +1,13 @@
+{
+  "name": "welly-portfolio",
+  "private": true,
+  "description": "Personal site of Wellington Almeida, published with GitHub Pages.",
+  "scripts": {
+    "build:pages": "node scripts/build-pages.js",
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/site.css --minify",
+    "build": "npm run build:pages && npm run build:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
