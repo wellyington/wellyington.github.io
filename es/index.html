@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es" data-theme="light" data-theme-to-dark="Cambiar al tema oscuro" data-theme-to-light="Cambiar al tema claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welly — Diseño web y desarrollo en la Costa del Sol</title>
+  <meta name="description" content="Diseño web en Marbella, Estepona y Málaga, y también en Torremolinos, Nerja, Gibraltar y Algeciras. Desarrollo y aplicaciones. Welly — digital que funciona.">
+  <meta name="author" content="Wellington Almeida">
+  <meta name="robots" content="index, follow">
+    <link rel="alternate" hreflang="en" href="https://wellyington.github.io/">
+  <link rel="alternate" hreflang="es" href="https://wellyington.github.io/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/">
+  <link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/">
+  <link rel="canonical" href="https://wellyington.github.io/es/">
+  <link rel="me" href="https://x.com/wellyington">
+  <link rel="me" href="https://instagram.com/wellyington">
+  <link rel="me" href="https://facebook.com/wellyington/">
+  <link rel="me" href="https://www.linkedin.com/in/wellyington/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Welly">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:url" content="https://wellyington.github.io/es/">
+  <meta property="og:title" content="Welly — Diseño web y desarrollo en la Costa del Sol">
+  <meta property="og:description" content="Diseño web en Marbella, Estepona y Málaga, y también en Torremolinos, Nerja, Gibraltar y Algeciras. Desarrollo y aplicaciones. Welly — digital que funciona.">
+  <meta property="og:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="Wellington Almeida (Welly), desarrollador web y estratega digital">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Welly — Diseño web y desarrollo en la Costa del Sol">
+  <meta name="twitter:description" content="Diseño web en Marbella, Estepona y Málaga, y también en Torremolinos, Nerja, Gibraltar y Algeciras. Desarrollo y aplicaciones. Welly — digital que funciona.">
+  <meta name="twitter:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
+  <meta name="twitter:image:alt" content="Wellington Almeida (Welly), desarrollador web y estratega digital">
+
+  <meta name="theme-color" content="#e3fdfd">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("welly-theme");
+        var theme = saved === "light" || saved === "dark"
+          ? saved
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute("content", theme === "dark" ? "#17484d" : "#e3fdfd");
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="(min-width: 768px) 34vw, 100vw" fetchpriority="high">
+
+  <link rel="stylesheet" href="/css/site.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4XBY16BPLY');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://wellyington.github.io/#person",
+        "name": "Wellington Almeida",
+        "alternateName": "Welly",
+        "jobTitle": "Desarrollador web, diseñador y estratega digital",
+        "description": "Wellington Almeida (Welly) es un desarrollador web, diseñador y estratega digital nacido en Brasil. Creció en Londres, vive en Estepona, en la Costa del Sol, y estudió publicidad, cine y fotografía en la School of Visual Arts de Nueva York.",
+        "url": "https://wellyington.github.io/es/",
+        "email": "welly.almeida@gmail.com",
+        "telephone": "+34604286691",
+        "knowsLanguage": [
+          "en",
+          "pt",
+          "es"
+        ],
+        "image": "https://wellyington.github.io/images/welly-portrait.jpg",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "School of Visual Arts",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "New York",
+            "addressCountry": "US"
+          }
+        },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Estepona, Costa del Sol, España",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Estepona",
+            "addressRegion": "Costa del Sol",
+            "addressCountry": "ES"
+          }
+        },
+        "sameAs": [
+          "https://x.com/wellyington",
+          "https://instagram.com/wellyington",
+          "https://facebook.com/wellyington/",
+          "https://www.linkedin.com/in/wellyington/"
+        ]
+      },
+      {
+        "@type": [
+          "ProfessionalService",
+          "LocalBusiness"
+        ],
+        "@id": "https://wellyington.github.io/#business",
+        "name": "Welly",
+        "url": "https://wellyington.github.io/es/",
+        "email": "welly.almeida@gmail.com",
+        "telephone": "+34604286691",
+        "image": "https://wellyington.github.io/images/welly-portrait.jpg",
+        "description": "Diseño web, desarrollo web, desarrollo de aplicaciones y marca digital desde Estepona, Málaga, para negocios de la Costa del Sol.",
+        "inLanguage": "es",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Estepona"
+          },
+          {
+            "@type": "City",
+            "name": "Marbella"
+          },
+          {
+            "@type": "City",
+            "name": "Málaga"
+          },
+          {
+            "@type": "City",
+            "name": "Torremolinos"
+          },
+          {
+            "@type": "City",
+            "name": "Nerja"
+          },
+          {
+            "@type": "City",
+            "name": "Gibraltar"
+          },
+          {
+            "@type": "City",
+            "name": "Algeciras"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Costa del Sol"
+          }
+        ],
+        "serviceType": [
+          "Diseño web",
+          "Desarrollo web",
+          "Desarrollo de aplicaciones",
+          "SEO y AEO",
+          "Marca digital"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Estepona",
+          "addressRegion": "Málaga",
+          "addressCountry": "ES"
+        },
+        "founder": {
+          "@id": "https://wellyington.github.io/#person"
+        },
+        "provider": {
+          "@id": "https://wellyington.github.io/#person"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Diseño web",
+                "description": "Sistemas visuales claros y páginas fáciles de entender y de usar."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Desarrollo web",
+                "description": "Sitios construidos alrededor de un negocio real, con cuidado por la velocidad, el uso y el mantenimiento."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Desarrollo de aplicaciones",
+                "description": "Aplicaciones para cuando un negocio necesita algo que la gente usa en el móvil, no solo una web."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO y AEO",
+                "description": "Ayuda para que un negocio se encuentre en el buscador y en los motores de respuesta, con páginas claras y un lenguaje llano."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Marca digital",
+                "description": "Una voz y un aspecto que se sienten del negocio, y que se notan en el sitio y en el resto de su presencia."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://wellyington.github.io/es/#faq",
+        "inLanguage": "es",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Trabajas con negocios en Marbella y en Gibraltar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Vivo en Estepona y trabajo con gente en Marbella, Málaga, Torremolinos, Nerja, Algeciras y Gibraltar, y en otros puntos de la Costa del Sol. Podemos vernos o trabajar a distancia."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Haces aplicaciones?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Algunas ideas necesitan una web. Otras, una aplicación que la gente abre en el móvil. Hago las dos cosas, y te digo con honestidad cuál encaja."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo planteas los precios?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No tengo una carta de paquetes. Hablamos de lo que necesitas y te doy un precio claro antes de empezar. Un sitio pequeño y una aplicación a medida son trabajos distintos, así que se presupuestan distinto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿En qué idiomas trabajas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Inglés, portugués y español. Muchos negocios de la costa los mezclan, y a mí me parece bien. Si quieres la web en español, con algo tan directo como diseño web en Marbella o en Estepona, lo hacemos."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-brand-cream font-sans text-brand-primary antialiased">
+  <div id="langHint" hidden><a id="langHintLink" href="/"></a><button type="button" id="langHintDismiss" aria-label="Cerrar la sugerencia de idioma">×</button></div>
+  <a class="skip-link" href="#top">Saltar al contenido</a>
+
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 grid grid-cols-4 grid-lines md:grid-cols-12">
+    <span class="h-full"></span>
+    <span class="h-full"></span>
+    <span class="h-full"></span>
+    <span class="h-full"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+    <span class="hidden h-full md:block"></span>
+  </div>
+
+  <header class="fixed inset-x-0 top-0 z-40 grid h-14 grid-cols-4 border-b border-brand-primary/50 bg-brand-cream transition-colors md:h-16 md:grid-cols-12">
+    <a href="#top" class="group col-span-2 flex min-w-0 items-center border-r border-brand-primary/50 px-4 text-2xl font-bold tracking-[-0.06em] text-brand-primary md:col-span-2 md:px-6 md:text-3xl">
+      <span class="flex min-w-0 items-center gap-1.5">
+        <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1">Welly</span>
+        <span class="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-primary opacity-75" aria-hidden="true"></span>
+      </span>
+    </a>
+
+    <div class="hidden min-w-0 border-r border-brand-primary/50 md:col-span-6 md:block">
+      <p class="sr-only">Horas de Estepona, Londres, Nueva York y Dubái.</p>
+      <div class="flex h-full w-full items-center overflow-hidden" aria-hidden="true">
+        <div class="animate-marquee select-none text-xs font-medium uppercase tracking-[0.18em]">
+          <div class="flex shrink-0 items-center whitespace-nowrap" data-marquee-track>
+            <span class="flex shrink-0 items-center whitespace-nowrap">
+              <span class="flex items-center gap-2 bg-brand-primary px-2.5 py-1 font-bold text-brand-cream">
+                <span>Estepona</span>
+                <span class="inline-block min-w-[8ch] text-center font-mono tabular-nums" data-clock="Europe/Madrid">--:--:--</span>
+                <span class="opacity-70">CET</span>
+              </span>
+              <span aria-hidden="true" class="px-5 opacity-40">/</span>
+            </span>
+            <span class="flex shrink-0 items-center whitespace-nowrap">
+              <span class="flex items-center gap-2">
+                <span>London</span>
+                <span class="inline-block min-w-[8ch] text-center font-mono tabular-nums" data-clock="Europe/London">--:--:--</span>
+                <span class="opacity-40">GMT</span>
+              </span>
+              <span aria-hidden="true" class="px-5 opacity-40">/</span>
+            </span>
+            <span class="flex shrink-0 items-center whitespace-nowrap">
+              <span class="flex items-center gap-2">
+                <span>New York</span>
+                <span class="inline-block min-w-[8ch] text-center font-mono tabular-nums" data-clock="America/New_York">--:--:--</span>
+                <span class="opacity-40">ET</span>
+              </span>
+              <span aria-hidden="true" class="px-5 opacity-40">/</span>
+            </span>
+            <span class="flex shrink-0 items-center whitespace-nowrap">
+              <span class="flex items-center gap-2">
+                <span>Dubai</span>
+                <span class="inline-block min-w-[8ch] text-center font-mono tabular-nums" data-clock="Asia/Dubai">--:--:--</span>
+                <span class="opacity-40">GST</span>
+              </span>
+              <span aria-hidden="true" class="px-5 opacity-40">/</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-span-2 flex items-stretch justify-end md:col-span-4">
+      <div class="lang-switcher lang-switcher--header" data-lang-switcher><button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu-header" aria-label="Idioma"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h60v40H0z"/><path fill="#F1BF00" d="M0 10h60v20H0z"/></svg><span>ES</span></button><div id="lang-menu-header" class="lang-menu" data-lang-menu role="group" aria-label="Idioma" hidden><a href="/" hreflang="en" lang="en" data-set-lang="en"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><defs><clipPath id="flag-header-en"><path d="M0 0h60v30H0z"/></clipPath></defs><g clip-path="url(#flag-header-en)"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></g></svg><span>EN</span></a><a href="/es/" hreflang="es" lang="es" data-set-lang="es" aria-current="page"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h60v40H0z"/><path fill="#F1BF00" d="M0 10h60v20H0z"/></svg><span>ES</span></a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#009B3A" d="M0 0h60v42H0z"/><path fill="#FFDF00" d="M30 4 56 21 30 38 4 21z"/><circle cx="30" cy="21" r="8.5" fill="#002776"/></svg><span>PT</span></a><a href="/ru/" hreflang="ru" lang="ru" data-set-lang="ru"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h60v14H0z"/><path fill="#0039A6" d="M0 14h60v14H0z"/><path fill="#D52B1E" d="M0 28h60v14H0z"/></svg><span>RU</span></a></div></div>
+      <button id="themeToggleBtn" type="button" class="group group-roll mr-14 flex h-full shrink-0 cursor-pointer items-center gap-2.5 border-l border-brand-primary/50 px-3 text-brand-primary transition-colors hover:bg-brand-primary hover:text-brand-cream md:mr-16 md:px-5" aria-label="Cambiar al tema oscuro" aria-pressed="false">
+        <span class="roll-text text-xs font-semibold uppercase tracking-[0.18em]">
+          <span class="theme-word" data-light="Claro" data-dark="Oscuro"></span>
+          <span class="theme-word" data-light="Claro" data-dark="Oscuro" aria-hidden="true"></span>
+        </span>
+        <span class="relative block h-3 w-3 overflow-hidden border border-brand-primary transition-colors group-hover:border-brand-cream" aria-hidden="true">
+          <span id="themeSquareFill" class="absolute inset-0 bg-brand-primary transition-transform duration-300"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <button id="navMenuBtn" type="button" class="group fixed right-0 top-0 z-50 flex h-14 w-14 cursor-pointer items-center justify-center border-b border-l border-brand-primary/50 bg-brand-cream transition-colors hover:bg-brand-primary md:h-16 md:w-16" aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="fullNavMenu">
+    <span class="relative flex h-4 w-6 flex-col justify-between" aria-hidden="true">
+      <span id="barTop" class="block h-px w-full origin-center bg-brand-primary transition-transform duration-300 group-hover:bg-brand-cream"></span>
+      <span id="barMid" class="block h-px w-full bg-brand-primary transition-opacity duration-300 group-hover:bg-brand-cream"></span>
+      <span id="barBot" class="block h-px w-full origin-center bg-brand-primary transition-transform duration-300 group-hover:bg-brand-cream"></span>
+    </span>
+  </button>
+
+  <div id="fullNavMenu" class="pointer-events-none fixed inset-0 z-40 flex translate-x-full flex-col justify-between border-l border-brand-primary/50 bg-brand-cream p-6 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:p-12" role="dialog" aria-modal="true" aria-label="Menú" aria-hidden="true" inert>
+    <div class="lang-switcher lang-switcher--menu" data-lang-switcher><button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu-menu" aria-label="Idioma"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h60v40H0z"/><path fill="#F1BF00" d="M0 10h60v20H0z"/></svg><span>ES</span></button><div id="lang-menu-menu" class="lang-menu" data-lang-menu role="group" aria-label="Idioma" hidden><a href="/" hreflang="en" lang="en" data-set-lang="en"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><defs><clipPath id="flag-menu-en"><path d="M0 0h60v30H0z"/></clipPath></defs><g clip-path="url(#flag-menu-en)"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></g></svg><span>EN</span></a><a href="/es/" hreflang="es" lang="es" data-set-lang="es" aria-current="page"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h60v40H0z"/><path fill="#F1BF00" d="M0 10h60v20H0z"/></svg><span>ES</span></a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#009B3A" d="M0 0h60v42H0z"/><path fill="#FFDF00" d="M30 4 56 21 30 38 4 21z"/><circle cx="30" cy="21" r="8.5" fill="#002776"/></svg><span>PT</span></a><a href="/ru/" hreflang="ru" lang="ru" data-set-lang="ru"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h60v14H0z"/><path fill="#0039A6" d="M0 14h60v14H0z"/><path fill="#D52B1E" d="M0 28h60v14H0z"/></svg><span>RU</span></a></div></div>
+    <div class="grid grid-cols-1 gap-8 border-b border-brand-primary/50 pb-12 pt-16 md:grid-cols-2">
+      <nav aria-label="Principal">
+        <p class="mb-6 text-xs font-semibold uppercase tracking-[0.2em]">Navegación</p>
+        <ul class="flex flex-col gap-4 text-4xl font-bold tracking-tight md:text-6xl">
+          <li>
+            <a href="#about" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>sobre mí.</span><span aria-hidden="true">sobre mí.</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#featured" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>trabajos.</span><span aria-hidden="true">trabajos.</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#works" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>digital que funciona.</span><span aria-hidden="true">digital que funciona.</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#services" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>de la idea al resultado.</span><span aria-hidden="true">de la idea al resultado.</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>contacto.</span><span aria-hidden="true">contacto.</span></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col justify-between gap-8">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em]">Sobre mí</p>
+          <p class="max-w-sm text-base leading-relaxed opacity-90 md:text-lg">
+            Soy Welly, desarrollador web, diseñador y estratega digital en Estepona, en la Costa del Sol. Primero escucho, y luego ayudo a dar forma a un digital que funciona para el negocio.
+          </p>
+        </div>
+        <div>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em]">Redes</p>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold uppercase tracking-widest">
+            <a href="https://wellyington.github.io/cv/" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 min-w-11 items-center px-1 underline underline-offset-4">CV<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+            <a href="https://wellyington.com" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 min-w-11 items-center px-1 underline underline-offset-4">Web<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-between gap-4 pt-4 text-xs uppercase tracking-widest opacity-60">
+      <span>© 2026 Welly</span>
+      <span>Estepona, España</span>
+    </div>
+  </div>
+
+  <main class="pt-14 md:pt-16">
+    <section id="top" tabindex="-1" class="overflow-hidden border-b border-brand-primary/50 text-brand-primary" aria-labelledby="hero-heading">
+      <div class="grid grid-cols-4 md:grid-cols-12">
+        <div class="relative z-10 col-span-4 flex flex-col justify-end px-4 py-12 md:col-span-8 md:px-8 md:py-16">
+          <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] md:mb-4">Desarrollador web · Diseñador · Estratega digital</p>
+          <h1 id="hero-heading" class="text-[clamp(2.5rem,8vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.10em]">digital que funciona.</h1>
+        </div>
+        <div class="relative col-span-4 aspect-[4/5] overflow-hidden border-t border-brand-primary/50 md:col-span-4 md:aspect-auto md:min-h-[36rem] md:border-l md:border-t-0">
+          <picture class="absolute inset-0 block h-full w-full">
+            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="(min-width: 768px) 34vw, 100vw">
+            <img class="hero-portrait h-full w-full" src="/images/welly-portrait.jpg" srcset="/images/welly-portrait-640.jpg 640w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Welly), desarrollador web y estratega digital" width="1024" height="1024" decoding="async" fetchpriority="high">
+          </picture>
+          <div class="pointer-events-none absolute bottom-5 left-5 z-10 w-20 md:bottom-6 md:left-6 md:w-28">
+            <svg viewBox="0 0 200 200" class="animate-vinyl h-auto w-full drop-shadow-md" role="img" aria-label="chapa de vinilo by me">
+                <defs>
+                  <path id="vinyl-path" fill="none" d="M 100,100 m -76,0 a 76,76 0 1,1 152,0 a 76,76 0 1,1 -152,0"></path>
+                </defs>
+                <circle cx="100" cy="100" r="100" fill="var(--color-brand-cream)" fill-opacity="0.95"></circle>
+                <circle cx="100" cy="100" r="96" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="92" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="88" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="62" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="56" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="50" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <circle cx="100" cy="100" r="44" fill="none" stroke="var(--color-brand-primary)" stroke-opacity="0.22" stroke-width="0.8"></circle>
+                <text fill="var(--color-brand-primary)" font-size="9" font-weight="700" letter-spacing="1.6">
+                  <textPath href="#vinyl-path">BY ME &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; </textPath>
+                </text>
+                <circle cx="100" cy="100" r="32" fill="var(--color-brand-primary)"></circle>
+                <circle cx="100" cy="100" r="4" fill="var(--color-brand-cream)"></circle>
+              </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" tabindex="-1" class="text-brand-primary" aria-labelledby="featured-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="p-4 md:p-6">
+            <h2 id="featured-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">trabajos.</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
+          <div class="grid grid-cols-4 md:grid-cols-10">
+            <div class="group relative col-span-4 aspect-[4/3] overflow-hidden border-b border-brand-primary/50 md:col-span-5 md:aspect-auto md:min-h-[44rem] md:border-b-0 md:border-r">
+              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Estructura de alambre del proyecto destacado. Arrastra en horizontal, o usa las flechas, para girarla."></div>
+              <div class="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 border border-brand-primary/40 bg-brand-cream/80 px-3 py-1 text-xs uppercase tracking-[0.18em] backdrop-blur">
+                <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-[#71c9ce]" aria-hidden="true"></span>
+                <span>Ideas digitales, hechas reales</span>
+              </div>
+            </div>
+
+            <div class="col-span-4 flex flex-col justify-center gap-6 p-6 md:col-span-5 md:p-10">
+              <div>
+                <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">Proyecto destacado</p>
+                <h3 class="text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-5xl">
+                  <a href="https://equaestates.com/" target="_blank" rel="noopener" class="transition-colors hover:text-brand-primary/70">Equa Estates — propiedad de lujo y relocalización en Marbella</a>
+                </h3>
+              </div>
+              <p class="max-w-[46ch] text-lg font-light leading-relaxed opacity-90 md:text-xl">
+                EQUA Estates ayuda a clientes internacionales a comprar, alquilar y mudarse a Marbella y a la Costa del Sol. El sitio reúne la búsqueda de propiedades, colecciones elegidas, guías de la zona y apoyo para la relocalización, incluida la coordinación de la residencia y de la educación privada.
+              </p>
+              <div class="-mx-6 flex flex-wrap gap-x-12 gap-y-4 border-t border-brand-primary/50 px-6 pt-5 md:-mx-10 md:px-10">
+                <div>
+                  <span class="block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">Formato</span>
+                  <span class="text-xs uppercase tracking-[0.15em] opacity-75">Sitio inmobiliario</span>
+                </div>
+                <div>
+                  <span class="block text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">Disciplinas</span>
+                  <span class="text-xs uppercase tracking-[0.15em] opacity-75">Inmobiliaria · Relocalización · Costa del Sol</span>
+                </div>
+              </div>
+              <a href="https://equaestates.com/" target="_blank" rel="noopener" class="group group-roll -mx-6 flex min-h-11 items-center justify-between border-t border-brand-primary/50 px-6 py-5 text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-primary hover:text-brand-cream md:-mx-10 md:px-10 md:text-xl">
+                <span class="roll-text">
+                  <span>visitar el sitio<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+                  <span aria-hidden="true">visitar el sitio</span>
+                </span>
+                <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" tabindex="-1" class="text-brand-primary" aria-labelledby="works-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="p-4 md:p-6">
+            <h2 id="works-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">más proyectos.</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
+          <div class="grid grid-cols-4 md:grid-cols-10" role="search">
+            <label class="col-span-4 flex min-h-11 cursor-text items-center gap-3 border-b border-r border-brand-primary/50 p-4 transition-colors focus-within:bg-brand-primary focus-within:text-brand-cream md:col-span-3 md:border-b-0">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                <path d="M20 20 15.2 15.2"></path>
+              </svg>
+              <input id="searchInput" type="search" placeholder="BUSCAR TRABAJOS" aria-label="Buscar trabajos" autocomplete="off" class="h-11 w-full min-w-0 bg-transparent text-base uppercase tracking-[0.18em] placeholder:text-current placeholder:opacity-70 focus:outline-none md:text-xs">
+            </label>
+            <div id="filterTagsContainer" class="col-span-4 flex flex-wrap items-center gap-2 p-3 md:col-span-7 md:p-4" role="group" aria-label="Filtrar proyectos"><button type="button" class="tag-filter-btn" data-cat="*" aria-pressed="true">Todos</button><button type="button" class="tag-filter-btn" data-cat="real-estate" aria-pressed="false">Inmobiliaria</button><button type="button" class="tag-filter-btn" data-cat="relocation" aria-pressed="false">Relocalización</button><button type="button" class="tag-filter-btn" data-cat="interior" aria-pressed="false">Interiorismo</button><button type="button" class="tag-filter-btn" data-cat="renovation" aria-pressed="false">Reforma</button><button type="button" class="tag-filter-btn" data-cat="editorial" aria-pressed="false">Editorial</button><button type="button" class="tag-filter-btn" data-cat="culture" aria-pressed="false">Cultura</button><button type="button" class="tag-filter-btn" data-cat="wellness" aria-pressed="false">Bienestar</button><button type="button" class="tag-filter-btn" data-cat="health" aria-pressed="false">Salud</button><button type="button" class="tag-filter-btn" data-cat="coaching" aria-pressed="false">Coaching</button><button type="button" class="tag-filter-btn" data-cat="costa" aria-pressed="false">Costa del Sol</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
+          <div id="worksGrid" class="grid grid-cols-4 md:grid-cols-10" data-empty-query="Ningún proyecto coincide con &quot;{query}&quot; en {filter}." data-empty-filter="Ningún proyecto en {filter}." data-status-one="Mostrando 1 proyecto." data-status-many="Mostrando {count} proyectos.">
+            <p id="worksStatus" class="sr-only" aria-live="polite"></p>
+
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Equa Estates" data-category="Sitio inmobiliario" data-url="https://equaestates.com/" data-tags="real-estate,relocation,costa" data-tag-labels="Inmobiliaria, Relocalización, Costa del Sol" data-summary="EQUA Estates ayuda a clientes internacionales a comprar, alquilar y mudarse a Marbella y a la Costa del Sol. El sitio reúne la búsqueda de propiedades, colecciones elegidas, guías de la zona y apoyo para la relocalización, incluida la coordinación de la residencia y de la educación privada.">
+              <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
+                <picture class="absolute inset-0 block h-full w-full">
+                  <source srcset="/images/projects/equa-estates.webp" type="image/webp">
+                  <img src="/images/projects/equa-estates.jpg" alt="Portada de EQUA Estates: una villa de Marbella al atardecer, con el titular Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                </picture>
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Equa Estates</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em]">Sitio inmobiliario</p>
+              </div>
+            </article>
+
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mirela B Interiors" data-category="Sitio de interiorismo" data-url="https://mirelabinteriors.com/" data-tags="interior,renovation,costa" data-tag-labels="Interiorismo, Reforma, Costa del Sol" data-summary="Mirela B. Interiors es un estudio de reforma e interiorismo que trabaja en toda la Costa del Sol, de Mijas Costa a Casares. El sitio presenta reformas planteadas, consejo de materiales y color, pintura y un servicio de amueblamiento.">
+              <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
+                <picture class="absolute inset-0 block h-full w-full">
+                  <source srcset="/images/projects/mirela-b-interiors.webp" type="image/webp">
+                  <img src="/images/projects/mirela-b-interiors.jpg" alt="Portada de Mirela B. Interiors, partida entre la estructura de un edificio en obra y un salón costero terminado" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                </picture>
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Mirela B Interiors</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em]">Sitio de interiorismo</p>
+              </div>
+            </article>
+
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mistral &amp; Marea" data-category="Sitio editorial" data-url="https://mistralmarea.com/" data-tags="editorial,culture,costa" data-tag-labels="Editorial, Cultura, Costa del Sol" data-summary="Mistral &amp; Marea es un medio diario de negocio y cultura en la Costa del Sol. La portada ordena señales breves, reportajes más largos, un directorio de salones y una agenda de negocios locales.">
+              <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
+                <picture class="absolute inset-0 block h-full w-full">
+                  <source srcset="/images/projects/mistral-marea.webp" type="image/webp">
+                  <img src="/images/projects/mistral-marea.jpg" alt="Portada de Mistral &amp; Marea, un medio de la Costa del Sol, con el titular The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                </picture>
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Mistral &amp; Marea</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em]">Sitio editorial</p>
+              </div>
+            </article>
+
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Chill and Heal Hub" data-category="Sitio de consulta de bienestar" data-url="https://www.chillandhealhub.com/" data-tags="wellness,health" data-tag-labels="Bienestar, Salud" data-summary="Chill and Heal Hub es una consulta de naturopatía y medicina tradicional china en Londres y Marbella. El sitio presenta terapias como la acupuntura, los tratamientos manuales y la nutrición, y lista tipos de sesión y precios.">
+              <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
+                <picture class="absolute inset-0 block h-full w-full">
+                  <source srcset="/images/projects/chill-and-heal-hub.webp" type="image/webp">
+                  <img src="/images/projects/chill-and-heal-hub.jpg" alt="Portada de Chill and Heal Hub, con el titular Find Your Path to Natural Healing y una profesional trabajando" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                </picture>
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Chill and Heal Hub</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em]">Sitio de consulta de bienestar</p>
+              </div>
+            </article>
+
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-10" data-title="Your New Life in Spain" data-category="Sitio de coaching de relocalización" data-url="https://www.yournewlifeinspain.com/" data-tags="relocation,coaching" data-tag-labels="Relocalización, Coaching" data-summary="Your New Life in Spain es la consulta de coaching de relocalización de Natasha Horner, con base en Málaga. El sitio explica el acompañamiento individual para quien planea mudarse a España, desde una llamada breve para orientar el servicio hasta un coaching más largo.">
+              <div class="relative z-0 aspect-2/1 w-full grow overflow-hidden bg-brand-dark">
+                <picture class="absolute inset-0 block h-full w-full">
+                  <source srcset="/images/projects/your-new-life-in-spain.webp" type="image/webp">
+                  <img src="/images/projects/your-new-life-in-spain.jpg" alt="Portada de Your New Life in Spain, con Natasha Horner y el titular Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                </picture>
+                <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
+              </div>
+              <div class="mt-auto flex flex-col gap-1.5 border-t border-brand-primary/50 bg-brand-cream p-4 md:p-5">
+                <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                  <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Your New Life in Spain</button>
+                </h3>
+                <p class="text-xs uppercase tracking-[0.18em]">Sitio de coaching de relocalización</p>
+              </div>
+            </article>
+
+            <p id="worksEmpty" class="is-filtered-out col-span-4 break-words p-12 text-center text-sm uppercase tracking-widest opacity-60 md:col-span-10" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" tabindex="-1" class="text-brand-primary" aria-labelledby="about-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="border-b border-brand-primary/50 p-4 md:p-6">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">Un poco sobre mí</p>
+            <h2 id="about-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">sobre mí.</h2>
+          </div>
+          <div class="grid grid-cols-4 md:grid-cols-10">
+            <div class="col-span-4 flex flex-col justify-center gap-6 border-b border-brand-primary/50 p-6 md:col-span-6 md:border-b-0 md:border-r md:p-10">
+              <p class="max-w-[48ch] text-lg font-light leading-relaxed md:text-xl">
+                Soy Welly — Wellington Almeida —, desarrollador web, diseñador y estratega digital. Nací en Brasil, crecí en Londres y vivo en Estepona, en la Costa del Sol. Aquí en casa estamos mi hijo y yo. Tiene tres años y lo crío solo.
+              </p>
+              <p class="max-w-[48ch] text-lg font-light leading-relaxed md:text-xl">
+                Estudié publicidad, cine y fotografía en la School of Visual Arts de Nueva York. Justo al terminar me metí de lleno en la marca digital y el desarrollo, y desde entonces ese es mi trabajo. En unos quince años he hecho sitios y productos digitales para negocios en Brasil, luego en Barcelona e Ibiza, y ahora aquí en la costa.
+              </p>
+              <p class="max-w-[48ch] text-lg font-light leading-relaxed md:text-xl">
+                Trabajo mejor cerca de las personas. Escucho, me quedo en el proyecto y quiero entender el negocio antes de que la web tome forma. Digital que funciona, para mí, es algo claro y útil, hecho con las personas para las que es.
+              </p>
+            </div>
+            <div class="col-span-4 md:col-span-4">
+              <picture class="block">
+                <source srcset="/images/welly-about.webp" type="image/webp">
+                <img src="/images/welly-about.jpg" alt="Wellington Almeida con su hijo en un parque" width="576" height="1024" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" tabindex="-1" class="text-brand-primary" aria-labelledby="services-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="p-4 md:p-6">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">Lo que pongo sobre la mesa</p>
+            <h2 id="services-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">de la idea al resultado.</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
+          <div class="grid grid-cols-1 divide-y divide-brand-primary/50 md:grid-cols-3 md:divide-x md:divide-y-0">
+            <div class="flex min-h-[300px] flex-col justify-between p-6 md:p-8">
+              <div>
+                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em]">01 / CONSTRUIR</span>
+                <h3 class="mb-4 text-2xl font-bold tracking-tight">Desarrollo web</h3>
+                <p class="mb-6 text-sm leading-relaxed opacity-80">
+                  Sitios y aplicaciones web a medida, pensados para lo que el negocio necesita de verdad. De WordPress y WooCommerce a experiencias de front hechas a propósito, cuido la velocidad, el uso, el mantenimiento y la conversión.
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em]">
+                <li class="border border-brand-primary/40 px-2 py-1">Sitios a medida</li>
+                <li class="border border-brand-primary/40 px-2 py-1">Comercio electrónico</li>
+                <li class="border border-brand-primary/40 px-2 py-1">CMS e integraciones</li>
+              </ul>
+            </div>
+            <div class="flex min-h-[300px] flex-col justify-between p-6 md:p-8">
+              <div>
+                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em]">02 / DISEÑO</span>
+                <h3 class="mb-4 text-2xl font-bold tracking-tight">Diseño digital</h3>
+                <p class="mb-6 text-sm leading-relaxed opacity-80">
+                  Sistemas visuales claros y recorridos fáciles de seguir. Doy forma a la dirección de marca, a la arquitectura de la información y al diseño de la interfaz para que un negocio se reconozca y se entienda.
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em]">
+                <li class="border border-brand-primary/40 px-2 py-1">Identidad visual</li>
+                <li class="border border-brand-primary/40 px-2 py-1">UX y UI</li>
+                <li class="border border-brand-primary/40 px-2 py-1">Sistemas de marca</li>
+              </ul>
+            </div>
+            <div class="flex min-h-[300px] flex-col justify-between p-6 md:p-8">
+              <div>
+                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em]">03 / ESTRATEGIA</span>
+                <h3 class="mb-4 text-2xl font-bold tracking-tight">Estrategia digital</h3>
+                <p class="mb-6 text-sm leading-relaxed opacity-80">
+                  Una estrategia digital que une posicionamiento, público, contenido y recorridos del cliente. Ayudo a decidir qué construir, cómo presentarlo y dónde poner el foco para que el negocio avance de forma visible.
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em]">
+                <li class="border border-brand-primary/40 px-2 py-1">Posicionamiento</li>
+                <li class="border border-brand-primary/40 px-2 py-1">SEO y contenido</li>
+                <li class="border border-brand-primary/40 px-2 py-1">Plan de crecimiento</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" tabindex="-1" class="text-brand-primary" aria-labelledby="areas-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="p-4 md:p-6">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">Dónde trabajo</p>
+            <h2 id="areas-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">a lo largo de la costa.</h2>
+          </div>
+          <div class="grid grid-cols-4 border-t border-brand-primary/50 md:grid-cols-10">
+            <div class="col-span-4 flex flex-col justify-center gap-6 p-6 md:col-span-6 md:p-10">
+              <p class="max-w-[46ch] text-lg font-light leading-relaxed md:text-xl">
+                Vivo en Estepona y trabajo con negocios a lo largo de la Costa del Sol, y en los pueblos de alrededor. Marbella, Málaga, Torremolinos, Nerja, Algeciras y Gibraltar forman parte de eso. Podemos sentarnos juntos o trabajar a distancia.
+              </p>
+              <p class="max-w-[46ch] text-lg font-light leading-relaxed md:text-xl">
+                Diseño web en Marbella, en Estepona y en el resto de la costa, además de desarrollo y aplicaciones, en inglés, español o portugués. El lugar importa menos que el hecho de que el trabajo sea útil.
+              </p>
+            </div>
+            <div class="col-span-4 border-t border-brand-primary/50 p-6 md:col-span-4 md:border-l md:border-t-0 md:p-10">
+              <p class="mb-4 text-xs font-bold uppercase tracking-[0.18em]">Lugares</p>
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em]">
+                <li class="border border-brand-primary/40 px-3 py-2">Estepona</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Marbella</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Málaga</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Torremolinos</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Nerja</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Gibraltar</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Algeciras</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Costa del Sol</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" tabindex="-1" class="text-brand-primary" aria-labelledby="faq-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="border-b border-brand-primary/50 p-4 md:p-6">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">Conviene saber</p>
+            <h2 id="faq-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">preguntas.</h2>
+          </div>
+          <div class="divide-y divide-brand-primary/50">
+            <div class="grid grid-cols-4 gap-4 p-6 md:grid-cols-10 md:p-10">
+              <h3 class="col-span-4 text-2xl font-bold tracking-tight md:col-span-4">¿Trabajas con negocios en Marbella y en Gibraltar?</h3>
+              <p class="col-span-4 max-w-[52ch] text-lg font-light leading-relaxed md:col-span-6">Sí. Vivo en Estepona y trabajo con gente en Marbella, Málaga, Torremolinos, Nerja, Algeciras y Gibraltar, y en otros puntos de la Costa del Sol. Podemos vernos o trabajar a distancia.</p>
+            </div>
+            <div class="grid grid-cols-4 gap-4 p-6 md:grid-cols-10 md:p-10">
+              <h3 class="col-span-4 text-2xl font-bold tracking-tight md:col-span-4">¿Haces aplicaciones?</h3>
+              <p class="col-span-4 max-w-[52ch] text-lg font-light leading-relaxed md:col-span-6">Sí. Algunas ideas necesitan una web. Otras, una aplicación que la gente abre en el móvil. Hago las dos cosas, y te digo con honestidad cuál encaja.</p>
+            </div>
+            <div class="grid grid-cols-4 gap-4 p-6 md:grid-cols-10 md:p-10">
+              <h3 class="col-span-4 text-2xl font-bold tracking-tight md:col-span-4">¿Cómo planteas los precios?</h3>
+              <p class="col-span-4 max-w-[52ch] text-lg font-light leading-relaxed md:col-span-6">No tengo una carta de paquetes. Hablamos de lo que necesitas y te doy un precio claro antes de empezar. Un sitio pequeño y una aplicación a medida son trabajos distintos, así que se presupuestan distinto.</p>
+            </div>
+            <div class="grid grid-cols-4 gap-4 p-6 md:grid-cols-10 md:p-10">
+              <h3 class="col-span-4 text-2xl font-bold tracking-tight md:col-span-4">¿En qué idiomas trabajas?</h3>
+              <p class="col-span-4 max-w-[52ch] text-lg font-light leading-relaxed md:col-span-6">Inglés, portugués y español. Muchos negocios de la costa los mezclan, y a mí me parece bien. Si quieres la web en español, con algo tan directo como diseño web en Marbella o en Estepona, lo hacemos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" tabindex="-1" class="text-brand-primary" aria-labelledby="contact-heading">
+      <div class="grid grid-cols-4 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-12 md:col-span-10 md:col-start-2 md:pt-28">
+          <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-10">
+            <div class="col-span-4 p-4 md:col-span-10 md:p-6">
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] opacity-75">¿quieres</p>
+              <h2 id="contact-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">hablar?</h2>
+            </div>
+          </div>
+          <div class="grid grid-cols-4 md:grid-cols-10">
+            <div class="col-span-4 flex flex-col items-start justify-between gap-8 border-b border-r border-brand-primary/50 p-6 py-14 md:col-span-4 md:border-b-0 md:p-8 md:py-20">
+              <div>
+                <p class="mb-8 max-w-[40ch] text-xl font-light leading-relaxed md:text-2xl">
+                  ¿Tienes un reto de negocio, una idea nueva o una web que necesita hacer más? Lo hacemos posible.
+                </p>
+                <p class="text-sm leading-relaxed">
+                  Disponible para proyectos de desarrollo web, diseño digital y estrategia con negocios ambiciosos en España y fuera.
+                </p>
+              </div>
+              <div class="-mx-6 flex flex-col self-stretch border-t border-brand-primary/50 md:-mx-8">
+                <a href="mailto:welly.almeida@gmail.com" class="flex min-h-11 flex-col justify-center gap-1 border-b border-brand-primary/50 px-6 py-4 transition-colors hover:bg-brand-primary hover:text-brand-cream md:px-8">
+                  <span class="text-xs font-bold uppercase tracking-[0.18em]">Empezar una conversación</span>
+                  <span class="break-all text-lg font-light normal-case tracking-normal md:text-xl">welly.almeida@gmail.com</span>
+                </a>
+                <a href="tel:+34604286691" class="flex min-h-11 flex-col justify-center gap-1 border-b border-brand-primary/50 px-6 py-4 transition-colors hover:bg-brand-primary hover:text-brand-cream md:px-8">
+                  <span class="text-xs font-bold uppercase tracking-[0.18em]">Llamar</span>
+                  <span class="text-lg tracking-normal md:text-xl">+34 604 286 691</span>
+                </a>
+                <a href="https://wa.me/34604286691" target="_blank" rel="noopener" class="group group-roll flex min-h-11 items-center justify-between gap-3 px-6 py-4 text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-primary hover:text-brand-cream md:px-8 md:text-xl">
+                  <span class="roll-text">
+                    <span>WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+                    <span aria-hidden="true">WhatsApp</span>
+                  </span>
+                  <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+            <div class="group relative col-span-4 flex min-h-[380px] items-center justify-center overflow-hidden bg-brand-dark md:col-span-6 md:min-h-[520px]">
+              <img src="/images/contact-workspace.webp" alt="Interior de un café con lámparas de techo y un rótulo iluminado" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
+              <div class="absolute inset-0 bg-brand-primary/30 mix-blend-multiply"></div>
+              <div class="relative z-10 px-6 text-center">
+                <span class="inline-block border border-[#e3fdfd]/85 bg-[#12383c]/75 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#e3fdfd] backdrop-blur-sm">
+                  Estrategia · Diseño · Desarrollo
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-brand-cream/40 bg-brand-primary text-brand-cream">
+    <div class="relative h-36 overflow-hidden border-b border-brand-cream/40 md:h-52">
+      <img src="/images/footer-city.webp" alt="Luces de la ciudad de noche, a lo largo de una calle de rótulos iluminados" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-primary via-transparent to-transparent opacity-80"></div>
+      <div class="absolute bottom-4 left-6 right-6 text-xs font-semibold uppercase tracking-[0.25em] opacity-75">
+        Independiente por decisión · Cerca del negocio
+      </div>
+    </div>
+
+    <nav class="flex border-b border-brand-cream/40" aria-label="Pie de página">
+      <a href="#about" class="group-roll flex min-h-11 min-w-0 flex-1 items-center justify-center border-r border-brand-cream/40 p-4 py-10 text-center text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-cream hover:text-brand-primary md:py-14 md:text-2xl">
+        <span class="roll-text"><span>sobre mí</span><span aria-hidden="true">sobre mí</span></span>
+      </a>
+      <a href="#works" class="group-roll flex min-h-11 min-w-0 flex-1 items-center justify-center border-r border-brand-cream/40 p-4 py-10 text-center text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-cream hover:text-brand-primary md:py-14 md:text-2xl">
+        <span class="roll-text"><span>trabajos</span><span aria-hidden="true">trabajos</span></span>
+      </a>
+      <a href="#contact" class="group-roll flex min-h-11 min-w-0 flex-1 items-center justify-center p-4 py-10 text-center text-lg uppercase leading-[1.3] tracking-[0.06em] transition-colors hover:bg-brand-cream hover:text-brand-primary md:py-14 md:text-2xl">
+        <span class="roll-text"><span>contacto</span><span aria-hidden="true">contacto</span></span>
+      </a>
+    </nav>
+
+    <div class="grid grid-cols-4 md:grid-cols-12">
+      <div class="col-span-4 border-x border-brand-cream/40 md:col-span-10 md:col-start-2">
+        <div class="grid grid-cols-4 border-b border-brand-cream/40 md:grid-cols-10">
+          <div class="col-span-4 flex flex-col justify-between gap-8 px-6 py-10 md:col-span-6 md:min-h-[18rem] md:px-8 md:py-14">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] opacity-75">en otros sitios</p>
+            <ul class="flex flex-col gap-1">
+              <li>
+                <a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="group group-roll inline-flex min-h-11 items-center gap-3 text-lg uppercase leading-[1.3] tracking-[0.06em] opacity-85 transition-opacity hover:opacity-100 md:text-xl">
+                  <span class="roll-text">
+                    <span>X<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+                    <span aria-hidden="true">X</span>
+                  </span>
+                  <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="group group-roll inline-flex min-h-11 items-center gap-3 text-lg uppercase leading-[1.3] tracking-[0.06em] opacity-85 transition-opacity hover:opacity-100 md:text-xl">
+                  <span class="roll-text">
+                    <span>Instagram<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+                    <span aria-hidden="true">Instagram</span>
+                  </span>
+                  <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://facebook.com/wellyington/" target="_blank" rel="noopener me" class="group group-roll inline-flex min-h-11 items-center gap-3 text-lg uppercase leading-[1.3] tracking-[0.06em] opacity-85 transition-opacity hover:opacity-100 md:text-xl">
+                  <span class="roll-text">
+                    <span>Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+                    <span aria-hidden="true">Facebook</span>
+                  </span>
+                  <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="group group-roll inline-flex min-h-11 items-center gap-3 text-lg uppercase leading-[1.3] tracking-[0.06em] opacity-85 transition-opacity hover:opacity-100 md:text-xl">
+                  <span class="roll-text">
+                    <span>LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></span>
+                    <span aria-hidden="true">LinkedIn</span>
+                  </span>
+                  <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-4 flex flex-col justify-between gap-8 border-t border-brand-cream/40 px-6 py-10 md:col-span-4 md:border-l md:border-t-0 md:px-8 md:py-14">
+            <div>
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] opacity-75">colofón</p>
+              <p class="text-xs uppercase leading-relaxed tracking-[0.15em] opacity-80">
+                En Estepona, en la Costa del Sol, España.<br>
+                Trabajo en cualquier lugar · Hecho con curiosidad y propósito.
+              </p>
+            </div>
+            <ul class="flex flex-col">
+              <li>
+                <a href="mailto:welly.almeida@gmail.com" class="inline-flex min-h-11 items-center break-all text-sm uppercase tracking-[0.12em] underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100">welly.almeida@gmail.com</a>
+              </li>
+              <li>
+                <a href="tel:+34604286691" class="inline-flex min-h-11 items-center text-sm uppercase tracking-[0.12em] underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100">+34 604 286 691</a>
+              </li>
+              <li>
+                <a href="https://wa.me/34604286691" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center text-sm uppercase tracking-[0.12em] underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100">WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+              </li>
+            </ul>
+            <p class="text-xs uppercase tracking-[0.18em] opacity-70">© 2026 Welly. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid select-none grid-cols-4 overflow-hidden md:grid-cols-12">
+      <div class="col-span-4 overflow-hidden border-x border-brand-cream/40 md:col-span-10 md:col-start-2">
+        <p class="-mb-[0.12em] px-4 text-center text-[18vw] font-bold leading-[0.8] tracking-[-0.10em] text-brand-cream opacity-95 md:text-[20vw]" aria-hidden="true">Welly</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="projectModal" class="fixed inset-0 z-50 items-center justify-center bg-black/70 p-4 backdrop-blur-sm md:p-8" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true" hidden>
+    <div class="modal-panel relative flex w-full max-w-2xl flex-col overflow-y-auto rounded-lg border border-brand-primary/50 bg-brand-cream p-6 text-brand-primary md:p-8" tabindex="-1">
+      <div class="sticky top-0 z-10 -mx-6 flex justify-end bg-brand-cream/95 px-2 py-1 backdrop-blur-sm md:-mx-8">
+        <button id="closeModalBtn" type="button" class="inline-flex h-11 w-11 items-center justify-center text-xl font-bold hover:opacity-60" aria-label="Cerrar la ficha del proyecto">
+          <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+      <div>
+        <p id="modalCategory" class="mb-2 text-xs font-bold uppercase tracking-[0.2em]"></p>
+        <h3 id="modalTitle" class="mb-4 text-3xl font-bold tracking-tight"></h3>
+        <div class="mb-6 aspect-video w-full overflow-hidden rounded bg-brand-dark">
+          <img id="modalImage" alt="" class="h-full w-full object-cover object-top" width="1440" height="900">
+        </div>
+        <p id="modalDescription" class="mb-6 text-base font-light leading-relaxed opacity-90"></p>
+        <div id="modalTags" class="mb-6 flex flex-wrap gap-2"></div>
+      </div>
+      <div class="sticky bottom-0 z-10 -mx-6 mt-2 flex items-center justify-between gap-4 border-t border-brand-primary/40 bg-brand-cream/95 px-6 py-3 backdrop-blur-sm md:-mx-8 md:px-8">
+        <span class="text-xs uppercase tracking-widest opacity-60">Archivo de proyectos de Welly</span>
+        <div class="flex flex-wrap items-center justify-end gap-2">
+          <a id="modalVisitLink" href="https://equaestates.com/" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center border border-brand-primary/50 px-4 text-xs font-semibold uppercase tracking-widest hover:bg-brand-primary hover:text-brand-cream">Visitar el sitio<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+          <button id="modalActionBtn" type="button" class="inline-flex min-h-11 items-center bg-brand-primary px-5 py-2 text-xs font-semibold uppercase tracking-widest text-brand-cream hover:opacity-90">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

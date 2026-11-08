@@ -1,10 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./js/**/*.js"],
+  content: [
+    "./index.html",
+    "./404.html",
+    "./templates/**/*.html",
+    "./es/**/*.html",
+    "./pt/**/*.html",
+    "./ru/**/*.html",
+    "./js/**/*.js",
+  ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Space Grotesk"', "sans-serif"],
+        sans: ['"Space Grotesk"', "Manrope", "sans-serif"],
       },
       colors: {
         "brand-cream": "rgb(var(--brand-cream) / <alpha-value>)",
@@ -23,6 +31,7 @@ module.exports = {
   plugins: [],
   safelist: [
     "col-span-4",
+    "md:col-span-2",
     "md:col-span-3",
     "md:col-span-4",
     "md:col-span-5",

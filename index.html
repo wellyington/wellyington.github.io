@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-lang="en" data-theme="light" data-theme-to-dark="Switch to dark theme" data-theme-to-light="Switch to light theme">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,11 @@
   <meta name="description" content="Web design, development and apps for businesses in Estepona, Marbella and Málaga, and across Torremolinos, Nerja, Gibraltar and Algeciras. Welly — digital that works.">
   <meta name="author" content="Wellington Almeida">
   <meta name="robots" content="index, follow">
+    <link rel="alternate" hreflang="en" href="https://wellyington.github.io/">
+  <link rel="alternate" hreflang="es" href="https://wellyington.github.io/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/">
+  <link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/">
   <link rel="canonical" href="https://wellyington.github.io/">
   <link rel="me" href="https://x.com/wellyington">
   <link rel="me" href="https://instagram.com/wellyington">
@@ -16,6 +21,9 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Welly">
   <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="ru_RU">
   <meta property="og:url" content="https://wellyington.github.io/">
   <meta property="og:title" content="Welly — Web Design &amp; Development on the Costa del Sol">
   <meta property="og:description" content="Web design, development and apps for businesses in Estepona, Marbella and Málaga, and across Torremolinos, Nerja, Gibraltar and Algeciras. Welly — digital that works.">
@@ -44,14 +52,14 @@
     })();
   </script>
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="apple-touch.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/webp" href="images/welly-portrait.webp" imagesrcset="images/welly-portrait-640.webp 640w, images/welly-portrait.webp 1024w" imagesizes="(min-width: 768px) 34vw, 100vw" fetchpriority="high">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="(min-width: 768px) 34vw, 100vw" fetchpriority="high">
 
-  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="/css/site.css">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
   <script>
@@ -75,7 +83,11 @@
         "url": "https://wellyington.github.io/",
         "email": "welly.almeida@gmail.com",
         "telephone": "+34604286691",
-        "knowsLanguage": ["en", "pt", "es"],
+        "knowsLanguage": [
+          "en",
+          "pt",
+          "es"
+        ],
         "image": "https://wellyington.github.io/images/welly-portrait.jpg",
         "alumniOf": {
           "@type": "CollegeOrUniversity",
@@ -104,7 +116,10 @@
         ]
       },
       {
-        "@type": ["ProfessionalService", "LocalBusiness"],
+        "@type": [
+          "ProfessionalService",
+          "LocalBusiness"
+        ],
         "@id": "https://wellyington.github.io/#business",
         "name": "Welly",
         "url": "https://wellyington.github.io/",
@@ -112,22 +127,46 @@
         "telephone": "+34604286691",
         "image": "https://wellyington.github.io/images/welly-portrait.jpg",
         "description": "Web design, web development, app development and digital branding from Estepona, Málaga, for businesses on the Costa del Sol.",
+        "inLanguage": "en",
         "areaServed": [
-          { "@type": "City", "name": "Estepona" },
-          { "@type": "City", "name": "Marbella" },
-          { "@type": "City", "name": "Málaga" },
-          { "@type": "City", "name": "Torremolinos" },
-          { "@type": "City", "name": "Nerja" },
-          { "@type": "City", "name": "Gibraltar" },
-          { "@type": "City", "name": "Algeciras" },
-          { "@type": "AdministrativeArea", "name": "Costa del Sol" }
+          {
+            "@type": "City",
+            "name": "Estepona"
+          },
+          {
+            "@type": "City",
+            "name": "Marbella"
+          },
+          {
+            "@type": "City",
+            "name": "Málaga"
+          },
+          {
+            "@type": "City",
+            "name": "Torremolinos"
+          },
+          {
+            "@type": "City",
+            "name": "Nerja"
+          },
+          {
+            "@type": "City",
+            "name": "Gibraltar"
+          },
+          {
+            "@type": "City",
+            "name": "Algeciras"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Costa del Sol"
+          }
         ],
         "serviceType": [
           "Web design",
           "Web development",
           "App development",
-          "SEO",
-          "AEO",
+          "SEO and AEO",
           "Digital branding"
         ],
         "address": {
@@ -136,8 +175,12 @@
           "addressRegion": "Málaga",
           "addressCountry": "ES"
         },
-        "founder": { "@id": "https://wellyington.github.io/#person" },
-        "provider": { "@id": "https://wellyington.github.io/#person" },
+        "founder": {
+          "@id": "https://wellyington.github.io/#person"
+        },
+        "provider": {
+          "@id": "https://wellyington.github.io/#person"
+        },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Services",
@@ -188,6 +231,7 @@
       {
         "@type": "FAQPage",
         "@id": "https://wellyington.github.io/#faq",
+        "inLanguage": "en",
         "mainEntity": [
           {
             "@type": "Question",
@@ -228,6 +272,7 @@
   </script>
 </head>
 <body class="bg-brand-cream font-sans text-brand-primary antialiased">
+  <div id="langHint" hidden><a id="langHintLink" href="/"></a><button type="button" id="langHintDismiss" aria-label="Dismiss language suggestion">×</button></div>
   <a class="skip-link" href="#top">Skip to content</a>
 
   <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 grid grid-cols-4 grid-lines md:grid-cols-12">
@@ -246,7 +291,7 @@
   </div>
 
   <header class="fixed inset-x-0 top-0 z-40 grid h-14 grid-cols-4 border-b border-brand-primary/50 bg-brand-cream transition-colors md:h-16 md:grid-cols-12">
-    <a href="#top" class="group col-span-2 flex min-w-0 items-center border-r border-brand-primary/50 px-4 text-2xl font-bold tracking-[-0.06em] text-brand-primary md:col-span-3 md:px-6 md:text-3xl">
+    <a href="#top" class="group col-span-2 flex min-w-0 items-center border-r border-brand-primary/50 px-4 text-2xl font-bold tracking-[-0.06em] text-brand-primary md:col-span-2 md:px-6 md:text-3xl">
       <span class="flex min-w-0 items-center gap-1.5">
         <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1">Welly</span>
         <span class="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-primary opacity-75" aria-hidden="true"></span>
@@ -295,11 +340,12 @@
       </div>
     </div>
 
-    <div class="col-span-2 flex items-stretch justify-end md:col-span-3">
+    <div class="col-span-2 flex items-stretch justify-end md:col-span-4">
+      <div class="lang-switcher lang-switcher--header" data-lang-switcher><button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu-header" aria-label="Language"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><defs><clipPath id="flag-header-current"><path d="M0 0h60v30H0z"/></clipPath></defs><g clip-path="url(#flag-header-current)"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></g></svg><span>EN</span></button><div id="lang-menu-header" class="lang-menu" data-lang-menu role="group" aria-label="Language" hidden><a href="/" hreflang="en" lang="en" data-set-lang="en" aria-current="page"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><defs><clipPath id="flag-header-en"><path d="M0 0h60v30H0z"/></clipPath></defs><g clip-path="url(#flag-header-en)"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></g></svg><span>EN</span></a><a href="/es/" hreflang="es" lang="es" data-set-lang="es"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h60v40H0z"/><path fill="#F1BF00" d="M0 10h60v20H0z"/></svg><span>ES</span></a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#009B3A" d="M0 0h60v42H0z"/><path fill="#FFDF00" d="M30 4 56 21 30 38 4 21z"/><circle cx="30" cy="21" r="8.5" fill="#002776"/></svg><span>PT</span></a><a href="/ru/" hreflang="ru" lang="ru" data-set-lang="ru"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h60v14H0z"/><path fill="#0039A6" d="M0 14h60v14H0z"/><path fill="#D52B1E" d="M0 28h60v14H0z"/></svg><span>RU</span></a></div></div>
       <button id="themeToggleBtn" type="button" class="group group-roll mr-14 flex h-full shrink-0 cursor-pointer items-center gap-2.5 border-l border-brand-primary/50 px-3 text-brand-primary transition-colors hover:bg-brand-primary hover:text-brand-cream md:mr-16 md:px-5" aria-label="Switch to dark theme" aria-pressed="false">
         <span class="roll-text text-xs font-semibold uppercase tracking-[0.18em]">
-          <span class="theme-word"></span>
-          <span class="theme-word" aria-hidden="true"></span>
+          <span class="theme-word" data-light="Light" data-dark="Dark"></span>
+          <span class="theme-word" data-light="Light" data-dark="Dark" aria-hidden="true"></span>
         </span>
         <span class="relative block h-3 w-3 overflow-hidden border border-brand-primary transition-colors group-hover:border-brand-cream" aria-hidden="true">
           <span id="themeSquareFill" class="absolute inset-0 bg-brand-primary transition-transform duration-300"></span>
@@ -308,7 +354,7 @@
     </div>
   </header>
 
-  <button id="navMenuBtn" type="button" class="group fixed right-0 top-0 z-50 flex h-14 w-14 cursor-pointer items-center justify-center border-b border-l border-brand-primary/50 bg-brand-cream transition-colors hover:bg-brand-primary md:h-16 md:w-16" aria-label="Open menu" aria-expanded="false" aria-controls="fullNavMenu">
+  <button id="navMenuBtn" type="button" class="group fixed right-0 top-0 z-50 flex h-14 w-14 cursor-pointer items-center justify-center border-b border-l border-brand-primary/50 bg-brand-cream transition-colors hover:bg-brand-primary md:h-16 md:w-16" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="fullNavMenu">
     <span class="relative flex h-4 w-6 flex-col justify-between" aria-hidden="true">
       <span id="barTop" class="block h-px w-full origin-center bg-brand-primary transition-transform duration-300 group-hover:bg-brand-cream"></span>
       <span id="barMid" class="block h-px w-full bg-brand-primary transition-opacity duration-300 group-hover:bg-brand-cream"></span>
@@ -317,6 +363,7 @@
   </button>
 
   <div id="fullNavMenu" class="pointer-events-none fixed inset-0 z-40 flex translate-x-full flex-col justify-between border-l border-brand-primary/50 bg-brand-cream p-6 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:p-12" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true" inert>
+    <div class="lang-switcher lang-switcher--menu" data-lang-switcher><button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu-menu" aria-label="Language"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><defs><clipPath id="flag-menu-current"><path d="M0 0h60v30H0z"/></clipPath></defs><g clip-path="url(#flag-menu-current)"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></g></svg><span>EN</span></button><div id="lang-menu-menu" class="lang-menu" data-lang-menu role="group" aria-label="Language" hidden><a href="/" hreflang="en" lang="en" data-set-lang="en" aria-current="page"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><defs><clipPath id="flag-menu-en"><path d="M0 0h60v30H0z"/></clipPath></defs><g clip-path="url(#flag-menu-en)"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></g></svg><span>EN</span></a><a href="/es/" hreflang="es" lang="es" data-set-lang="es"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h60v40H0z"/><path fill="#F1BF00" d="M0 10h60v20H0z"/></svg><span>ES</span></a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#009B3A" d="M0 0h60v42H0z"/><path fill="#FFDF00" d="M30 4 56 21 30 38 4 21z"/><circle cx="30" cy="21" r="8.5" fill="#002776"/></svg><span>PT</span></a><a href="/ru/" hreflang="ru" lang="ru" data-set-lang="ru"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h60v14H0z"/><path fill="#0039A6" d="M0 14h60v14H0z"/><path fill="#D52B1E" d="M0 28h60v14H0z"/></svg><span>RU</span></a></div></div>
     <div class="grid grid-cols-1 gap-8 border-b border-brand-primary/50 pb-12 pt-16 md:grid-cols-2">
       <nav aria-label="Primary">
         <p class="mb-6 text-xs font-semibold uppercase tracking-[0.2em]">Navigation</p>
@@ -379,8 +426,8 @@
         </div>
         <div class="relative col-span-4 aspect-[4/5] overflow-hidden border-t border-brand-primary/50 md:col-span-4 md:aspect-auto md:min-h-[36rem] md:border-l md:border-t-0">
           <picture class="absolute inset-0 block h-full w-full">
-            <source type="image/webp" srcset="images/welly-portrait-640.webp 640w, images/welly-portrait.webp 1024w" sizes="(min-width: 768px) 34vw, 100vw">
-            <img class="hero-portrait h-full w-full" src="images/welly-portrait.jpg" srcset="images/welly-portrait-640.jpg 640w, images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Welly), web developer and digital strategist" width="1024" height="1024" decoding="async" fetchpriority="high">
+            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="(min-width: 768px) 34vw, 100vw">
+            <img class="hero-portrait h-full w-full" src="/images/welly-portrait.jpg" srcset="/images/welly-portrait-640.jpg 640w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Welly), web developer and digital strategist" width="1024" height="1024" decoding="async" fetchpriority="high">
           </picture>
           <div class="pointer-events-none absolute bottom-5 left-5 z-10 w-20 md:bottom-6 md:left-6 md:w-28">
             <svg viewBox="0 0 200 200" class="animate-vinyl h-auto w-full drop-shadow-md" role="img" aria-label="by me vinyl badge">
@@ -478,21 +525,21 @@
               </svg>
               <input id="searchInput" type="search" placeholder="SEARCH WORKS" aria-label="Search works" autocomplete="off" class="h-11 w-full min-w-0 bg-transparent text-base uppercase tracking-[0.18em] placeholder:text-current placeholder:opacity-70 focus:outline-none md:text-xs">
             </label>
-            <div id="filterTagsContainer" class="col-span-4 flex flex-wrap items-center gap-2 p-3 md:col-span-7 md:p-4" role="group" aria-label="Filter projects"></div>
+            <div id="filterTagsContainer" class="col-span-4 flex flex-wrap items-center gap-2 p-3 md:col-span-7 md:p-4" role="group" aria-label="Filter projects"><button type="button" class="tag-filter-btn" data-cat="*" aria-pressed="true">All</button><button type="button" class="tag-filter-btn" data-cat="real-estate" aria-pressed="false">Real Estate</button><button type="button" class="tag-filter-btn" data-cat="relocation" aria-pressed="false">Relocation</button><button type="button" class="tag-filter-btn" data-cat="interior" aria-pressed="false">Interior Design</button><button type="button" class="tag-filter-btn" data-cat="renovation" aria-pressed="false">Renovation</button><button type="button" class="tag-filter-btn" data-cat="editorial" aria-pressed="false">Editorial</button><button type="button" class="tag-filter-btn" data-cat="culture" aria-pressed="false">Culture</button><button type="button" class="tag-filter-btn" data-cat="wellness" aria-pressed="false">Wellness</button><button type="button" class="tag-filter-btn" data-cat="health" aria-pressed="false">Health</button><button type="button" class="tag-filter-btn" data-cat="coaching" aria-pressed="false">Coaching</button><button type="button" class="tag-filter-btn" data-cat="costa" aria-pressed="false">Costa del Sol</button></div>
           </div>
         </div>
       </div>
 
       <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
         <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
-          <div id="worksGrid" class="grid grid-cols-4 md:grid-cols-10">
+          <div id="worksGrid" class="grid grid-cols-4 md:grid-cols-10" data-empty-query="No projects found matching &quot;{query}&quot; in {filter}." data-empty-filter="No projects found in {filter}." data-status-one="Showing 1 project." data-status-many="Showing {count} projects.">
             <p id="worksStatus" class="sr-only" aria-live="polite"></p>
 
-            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Equa Estates" data-category="Property website" data-url="https://equaestates.com/" data-tags="Real Estate,Relocation,Costa del Sol" data-summary="EQUA Estates helps international clients buy, rent and relocate to Marbella and the Costa del Sol. The site brings together property search, curated collections, area guidance and relocation support, including residency coordination and private education.">
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Equa Estates" data-category="Property website" data-url="https://equaestates.com/" data-tags="real-estate,relocation,costa" data-tag-labels="Real Estate, Relocation, Costa del Sol" data-summary="EQUA Estates helps international clients buy, rent and relocate to Marbella and the Costa del Sol. The site brings together property search, curated collections, area guidance and relocation support, including residency coordination and private education.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
-                  <source srcset="images/projects/equa-estates.webp" type="image/webp">
-                  <img src="images/projects/equa-estates.jpg" alt="EQUA Estates homepage: a Marbella villa at sunset with the heading Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <source srcset="/images/projects/equa-estates.webp" type="image/webp">
+                  <img src="/images/projects/equa-estates.jpg" alt="EQUA Estates homepage: a Marbella villa at sunset with the heading Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -504,11 +551,11 @@
               </div>
             </article>
 
-            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mirela B Interiors" data-category="Interior design website" data-url="https://mirelabinteriors.com/" data-tags="Interior Design,Renovation,Costa del Sol" data-summary="Mirela B. Interiors is a renovation and interior design studio working across the Costa del Sol, from Mijas Costa to Casares. The site presents planned renovations, material and colour advice, painting, and a furnishing service.">
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mirela B Interiors" data-category="Interior design website" data-url="https://mirelabinteriors.com/" data-tags="interior,renovation,costa" data-tag-labels="Interior Design, Renovation, Costa del Sol" data-summary="Mirela B. Interiors is a renovation and interior design studio working across the Costa del Sol, from Mijas Costa to Casares. The site presents planned renovations, material and colour advice, painting, and a furnishing service.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
-                  <source srcset="images/projects/mirela-b-interiors.webp" type="image/webp">
-                  <img src="images/projects/mirela-b-interiors.jpg" alt="Mirela B. Interiors homepage, split between a raw building structure and a finished coastal living room" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <source srcset="/images/projects/mirela-b-interiors.webp" type="image/webp">
+                  <img src="/images/projects/mirela-b-interiors.jpg" alt="Mirela B. Interiors homepage, split between a raw building structure and a finished coastal living room" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -520,11 +567,11 @@
               </div>
             </article>
 
-            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mistral &amp; Marea" data-category="Editorial website" data-url="https://mistralmarea.com/" data-tags="Editorial,Culture,Costa del Sol" data-summary="Mistral &amp; Marea is a daily coastal wire for business and culture on the Costa del Sol. The homepage files short signals, longer features, a salon directory and a black book of local businesses.">
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mistral &amp; Marea" data-category="Editorial website" data-url="https://mistralmarea.com/" data-tags="editorial,culture,costa" data-tag-labels="Editorial, Culture, Costa del Sol" data-summary="Mistral &amp; Marea is a daily coastal wire for business and culture on the Costa del Sol. The homepage files short signals, longer features, a salon directory and a black book of local businesses.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
-                  <source srcset="images/projects/mistral-marea.webp" type="image/webp">
-                  <img src="images/projects/mistral-marea.jpg" alt="Mistral and Marea homepage, a Costa del Sol editorial wire, with the headline The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <source srcset="/images/projects/mistral-marea.webp" type="image/webp">
+                  <img src="/images/projects/mistral-marea.jpg" alt="Mistral and Marea homepage, a Costa del Sol editorial wire, with the headline The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -536,11 +583,11 @@
               </div>
             </article>
 
-            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Chill and Heal Hub" data-category="Wellness practice website" data-url="https://www.chillandhealhub.com/" data-tags="Wellness,Health" data-summary="Chill and Heal Hub is a naturopathic and Traditional Chinese Medicine practice in London and Marbella. The site sets out therapies such as acupuncture, manual treatments and nutrition, and lists session types and prices.">
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Chill and Heal Hub" data-category="Wellness practice website" data-url="https://www.chillandhealhub.com/" data-tags="wellness,health" data-tag-labels="Wellness, Health" data-summary="Chill and Heal Hub is a naturopathic and Traditional Chinese Medicine practice in London and Marbella. The site sets out therapies such as acupuncture, manual treatments and nutrition, and lists session types and prices.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
-                  <source srcset="images/projects/chill-and-heal-hub.webp" type="image/webp">
-                  <img src="images/projects/chill-and-heal-hub.jpg" alt="Chill and Heal Hub homepage with the heading Find Your Path to Natural Healing and a practitioner at work" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <source srcset="/images/projects/chill-and-heal-hub.webp" type="image/webp">
+                  <img src="/images/projects/chill-and-heal-hub.jpg" alt="Chill and Heal Hub homepage with the heading Find Your Path to Natural Healing and a practitioner at work" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -552,11 +599,11 @@
               </div>
             </article>
 
-            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-10" data-title="Your New Life in Spain" data-category="Relocation coaching website" data-url="https://www.yournewlifeinspain.com/" data-tags="Relocation,Coaching" data-summary="Your New Life in Spain is Natasha Horner's relocation coaching practice, based in Málaga. The site explains one-to-one support for people planning a move to Spain, from a short service-finder call to longer coaching.">
+            <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-10" data-title="Your New Life in Spain" data-category="Relocation coaching website" data-url="https://www.yournewlifeinspain.com/" data-tags="relocation,coaching" data-tag-labels="Relocation, Coaching" data-summary="Your New Life in Spain is Natasha Horner's relocation coaching practice, based in Málaga. The site explains one-to-one support for people planning a move to Spain, from a short service-finder call to longer coaching.">
               <div class="relative z-0 aspect-2/1 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
-                  <source srcset="images/projects/your-new-life-in-spain.webp" type="image/webp">
-                  <img src="images/projects/your-new-life-in-spain.jpg" alt="Your New Life in Spain homepage, with Natasha Horner and the heading Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <source srcset="/images/projects/your-new-life-in-spain.webp" type="image/webp">
+                  <img src="/images/projects/your-new-life-in-spain.jpg" alt="Your New Life in Spain homepage, with Natasha Horner and the heading Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -595,8 +642,8 @@
             </div>
             <div class="col-span-4 md:col-span-4">
               <picture class="block">
-                <source srcset="images/welly-about.webp" type="image/webp">
-                <img src="images/welly-about.jpg" alt="Wellington Almeida with his son in a park" width="576" height="1024" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
+                <source srcset="/images/welly-about.webp" type="image/webp">
+                <img src="/images/welly-about.jpg" alt="Wellington Almeida with his son in a park" width="576" height="1024" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
               </picture>
             </div>
           </div>
@@ -765,7 +812,7 @@
               </div>
             </div>
             <div class="group relative col-span-4 flex min-h-[380px] items-center justify-center overflow-hidden bg-brand-dark md:col-span-6 md:min-h-[520px]">
-              <img src="images/contact-workspace.webp" alt="Cafe interior with pendant lamps and an illuminated sign" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
+              <img src="/images/contact-workspace.webp" alt="Cafe interior with pendant lamps and an illuminated sign" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
               <div class="absolute inset-0 bg-brand-primary/30 mix-blend-multiply"></div>
               <div class="relative z-10 px-6 text-center">
                 <span class="inline-block border border-[#e3fdfd]/85 bg-[#12383c]/75 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#e3fdfd] backdrop-blur-sm">
@@ -781,7 +828,7 @@
 
   <footer class="border-t border-brand-cream/40 bg-brand-primary text-brand-cream">
     <div class="relative h-36 overflow-hidden border-b border-brand-cream/40 md:h-52">
-      <img src="images/footer-city.webp" alt="City lights at night along a street of illuminated signs" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
+      <img src="/images/footer-city.webp" alt="City lights at night along a street of illuminated signs" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
       <div class="absolute inset-0 bg-gradient-to-t from-brand-primary via-transparent to-transparent opacity-80"></div>
       <div class="absolute bottom-4 left-6 right-6 text-xs font-semibold uppercase tracking-[0.25em] opacity-75">
         Independent by design · Connected to business
@@ -902,6 +949,6 @@
     </div>
   </div>
 
-  <script src="js/main.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

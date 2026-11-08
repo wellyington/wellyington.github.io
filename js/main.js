@@ -107,7 +107,9 @@
     function sync(theme) {
       root.setAttribute("data-theme", theme);
       if (themeColor) themeColor.setAttribute("content", theme === "dark" ? "#17484d" : "#e3fdfd");
-      toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+      const toDark = root.dataset.themeToDark || "Switch to dark theme";
+      const toLight = root.dataset.themeToLight || "Switch to light theme";
+      toggle.setAttribute("aria-label", theme === "dark" ? toLight : toDark);
       toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
       document.dispatchEvent(new CustomEvent("welly-theme", { detail: theme }));
     }
@@ -162,7 +164,9 @@
     options = options || {};
     isNavOpen = open;
     navMenuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    navMenuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    const openLabel = navMenuBtn.dataset.labelOpen || "Open menu";
+    const closeLabel = navMenuBtn.dataset.labelClose || "Close menu";
+    navMenuBtn.setAttribute("aria-label", open ? closeLabel : openLabel);
     fullNavMenu.classList.toggle("translate-x-full", !open);
     fullNavMenu.classList.toggle("pointer-events-none", !open);
     fullNavMenu.setAttribute("aria-hidden", open ? "false" : "true");
@@ -216,21 +220,9 @@
     const cards = Array.from(document.querySelectorAll(".work-card"));
     if (!filterContainer || !cards.length) return;
 
-    const allCategories = [
-      "All",
-      "Real Estate",
-      "Relocation",
-      "Interior Design",
-      "Renovation",
-      "Editorial",
-      "Culture",
-      "Wellness",
-      "Health",
-      "Coaching",
-      "Costa del Sol",
-    ];
-
-    let currentFilter = "All";
+    const buttons = Array.from(filterContainer.querySelectorAll("[data-cat]"));
+    const grid = document.getElementById("worksGrid");
+    let currentFilter = "*";
     let searchQuery = "";
     let interacted = false;
 
@@ -251,11 +243,17 @@
         const category = card.dataset.category || "";
         const title = card.dataset.title || "";
         const summary = card.dataset.summary || "";
+        const tagLabels = (card.dataset.tagLabels || "")
+          .split(",")
+          .map(function (tag) {
+            return tag.trim();
+          })
+          .filter(Boolean);
         const matchesCategory =
-          currentFilter === "All" ||
+          currentFilter === "*" ||
           tags.indexOf(currentFilter) !== -1 ||
           category.toLowerCase().indexOf(currentFilter.toLowerCase()) !== -1;
-        const haystack = [title, summary, category].concat(tags).join(" ").toLowerCase();
+        const haystack = [title, summary, category].concat(tags, tagLabels).join(" ").toLowerCase();
         const matchesSearch = !query || haystack.indexOf(query) !== -1;
         const visible = matchesCategory && matchesSearch;
         card.classList.toggle("is-filtered-out", !visible);
@@ -264,38 +262,44 @@
       if (empty) {
         empty.classList.toggle("is-filtered-out", shown !== 0);
         if (shown === 0) {
-          empty.textContent = query
-            ? 'No projects found matching "' + searchQuery.trim() + '" in ' + currentFilter + "."
-            : "No projects found in " + currentFilter + ".";
+          const withQuery = (grid && grid.dataset.emptyQuery) || 'No projects found matching "{query}" in {filter}.';
+          const noQuery = (grid && grid.dataset.emptyFilter) || "No projects found in {filter}.";
+          const activeButton = buttons.find(function (button) {
+            return button.getAttribute("data-cat") === currentFilter;
+          });
+          const filterLabel = activeButton ? activeButton.textContent.trim() : currentFilter;
+          empty.textContent = (query ? withQuery : noQuery)
+            .replace("{query}", searchQuery.trim())
+            .replace("{filter}", filterLabel);
         }
       }
       if (status && interacted) {
-        status.textContent = shown === 1 ? "Showing 1 project." : "Showing " + shown + " projects.";
+        const one = (grid && grid.dataset.statusOne) || "Showing 1 project.";
+        const many = (grid && grid.dataset.statusMany) || "Showing {count} projects.";
+        status.textContent = shown === 1 ? one : many.replace("{count}", String(shown));
       }
     }
 
     function renderFilterButtons() {
-      filterContainer.replaceChildren();
-      allCategories.forEach(function (category) {
-        const button = document.createElement("button");
-        const active = category === currentFilter;
-        button.type = "button";
+      buttons.forEach(function (button) {
+        const active = button.getAttribute("data-cat") === currentFilter;
         button.className =
           "tag-filter-btn inline-flex min-h-11 items-center border border-brand-primary/50 px-3 py-1.5 text-xs uppercase tracking-[0.18em] transition-colors " +
           (active
             ? "bg-brand-primary font-bold text-brand-cream"
             : "hover:bg-brand-primary hover:text-brand-cream");
         button.setAttribute("aria-pressed", active ? "true" : "false");
-        button.textContent = category;
-        button.addEventListener("click", function () {
-          currentFilter = category;
-          interacted = true;
-          renderFilterButtons();
-          applyFilters();
-        });
-        filterContainer.appendChild(button);
       });
     }
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        currentFilter = button.getAttribute("data-cat");
+        interacted = true;
+        renderFilterButtons();
+        applyFilters();
+      });
+    });
 
     renderFilterButtons();
     applyFilters();
@@ -338,7 +342,7 @@
     }
     if (tags) {
       tags.replaceChildren();
-      (card.dataset.tags || "")
+      (card.dataset.tagLabels || card.dataset.tags || "")
         .split(",")
         .map(function (tag) {
           return tag.trim();
@@ -422,6 +426,132 @@
     document.dispatchEvent(new CustomEvent("welly-motion", { detail: reduceMotion }));
   });
 
+  safe("language", function initLanguage() {
+    const hintCopy = {
+      en: { href: "/", text: "Continue in English", lang: "en" },
+      es: { href: "/es/", text: "Continuar en español", lang: "es" },
+      pt: { href: "/pt/", text: "Continuar em português", lang: "pt-BR" },
+      ru: { href: "/ru/", text: "Продолжить на русском", lang: "ru" },
+    };
+
+    document.querySelectorAll("[data-lang-switcher]").forEach(function (rootEl) {
+      const button = rootEl.querySelector("button");
+      const menu = rootEl.querySelector("[data-lang-menu]");
+      if (!button || !menu) return;
+      const links = Array.from(menu.querySelectorAll("a"));
+
+      function closeMenu() {
+        menu.hidden = true;
+        button.setAttribute("aria-expanded", "false");
+      }
+
+      function openMenu() {
+        document.querySelectorAll("[data-lang-menu]").forEach(function (other) {
+          other.hidden = true;
+        });
+        document.querySelectorAll("[data-lang-switcher] button").forEach(function (other) {
+          other.setAttribute("aria-expanded", "false");
+        });
+        menu.hidden = false;
+        button.setAttribute("aria-expanded", "true");
+        const current = menu.querySelector('[aria-current="page"]') || links[0];
+        if (current) current.focus();
+      }
+
+      button.addEventListener("click", function () {
+        if (menu.hidden) openMenu();
+        else closeMenu();
+      });
+
+      menu.addEventListener("keydown", function (event) {
+        const index = links.indexOf(document.activeElement);
+        if (event.key === "ArrowDown" || event.key === "ArrowRight") {
+          event.preventDefault();
+          links[(index + 1 + links.length) % links.length].focus();
+        } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
+          event.preventDefault();
+          links[(index - 1 + links.length) % links.length].focus();
+        } else if (event.key === "Home") {
+          event.preventDefault();
+          links[0].focus();
+        } else if (event.key === "End") {
+          event.preventDefault();
+          links[links.length - 1].focus();
+        } else if (event.key === "Escape") {
+          event.preventDefault();
+          event.stopPropagation();
+          closeMenu();
+          button.focus();
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!rootEl.contains(event.target)) closeMenu();
+      });
+
+      document.addEventListener(
+        "keydown",
+        function (event) {
+          if (event.key === "Escape" && !menu.hidden) {
+            event.preventDefault();
+            event.stopPropagation();
+            closeMenu();
+            button.focus();
+          }
+        },
+        true
+      );
+    });
+
+    document.querySelectorAll("a[data-set-lang]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        const hash = window.location.hash;
+        const base = link.getAttribute("href") || "/";
+        if (hash && /^#[A-Za-z0-9-]+$/.test(hash)) link.href = base + hash;
+        try {
+          localStorage.setItem("welly-lang", link.getAttribute("data-set-lang"));
+        } catch (error) {
+          /* storage can be blocked */
+        }
+      });
+    });
+
+    const hint = document.getElementById("langHint");
+    const current = root.getAttribute("data-lang");
+    let saved = null;
+    try {
+      saved = localStorage.getItem("welly-lang");
+    } catch (error) {
+      saved = null;
+    }
+    if (hint && saved && hintCopy[saved] && saved !== current && sessionStorage.getItem("welly-lang-hint") !== "off") {
+      const link = document.getElementById("langHintLink");
+      const hash = window.location.hash;
+      link.href = hintCopy[saved].href + (/^#[A-Za-z0-9-]+$/.test(hash) ? hash : "");
+      link.textContent = hintCopy[saved].text;
+      link.hreflang = hintCopy[saved].lang;
+      link.addEventListener("click", function () {
+        try {
+          localStorage.setItem("welly-lang", saved);
+        } catch (error) {
+          /* ignore */
+        }
+      });
+      hint.hidden = false;
+    }
+    const dismiss = document.getElementById("langHintDismiss");
+    if (dismiss && hint) {
+      dismiss.addEventListener("click", function () {
+        hint.hidden = true;
+        try {
+          sessionStorage.setItem("welly-lang-hint", "off");
+        } catch (error) {
+          /* ignore */
+        }
+      });
+    }
+  });
+
   safe("visual", function initFeaturedVisual() {
     const container = document.getElementById("threeContainer");
     if (!container) return;
@@ -451,7 +581,7 @@
       if (window.THREE) return Promise.resolve();
       return new Promise(function (resolve, reject) {
         const script = document.createElement("script");
-        script.src = "js/vendor/three.r128.min.js";
+        script.src = "/js/vendor/three.r128.min.js";
         script.async = true;
         script.onload = function () {
           resolve();
