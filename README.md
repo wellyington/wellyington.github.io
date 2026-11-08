@@ -21,6 +21,6 @@ npm install
 npm run build:css
 ```
 
-`Node.js` is only needed for that stylesheet build. Space Grotesk (OFL, see `fonts/OFL.txt`) and Three.js r128 are self-hosted. Three.js loads only when the featured visual is near the viewport. Photography is stored locally in `images/` (Unsplash originals, resized to WebP).
+`Node.js` is only needed for that stylesheet build. Space Grotesk is self-hosted (OFL, see `fonts/OFL.txt`). Project screenshots live in `images/projects/` as WebP with a JPEG fallback. The contact and footer photographs in `images/` are optimized WebP.
 
 `/cv/` and `/blog/` are published from other repositories. Do not add folders with those names here.

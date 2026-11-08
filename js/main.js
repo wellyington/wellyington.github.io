@@ -218,18 +218,16 @@
 
     const allCategories = [
       "All",
-      "Digital Strategy",
-      "E-commerce",
-      "Hospitality",
-      "JavaScript",
-      "Product",
-      "Python",
       "Real Estate",
-      "SEO",
-      "Content",
-      "Web Development",
-      "WordPress",
-      "WooCommerce",
+      "Relocation",
+      "Interior Design",
+      "Renovation",
+      "Editorial",
+      "Culture",
+      "Wellness",
+      "Health",
+      "Coaching",
+      "Costa del Sol",
     ];
 
     let currentFilter = "All";
@@ -326,6 +324,7 @@
     const description = document.getElementById("modalDescription");
     const image = document.getElementById("modalImage");
     const tags = document.getElementById("modalTags");
+    const visit = document.getElementById("modalVisitLink");
     const source = card.querySelector("img");
     if (title) title.textContent = card.dataset.title || "";
     if (category) category.textContent = card.dataset.category || "";
@@ -333,6 +332,9 @@
     if (image && source) {
       image.src = source.currentSrc || source.src;
       image.alt = source.alt || card.dataset.title || "";
+    }
+    if (visit) {
+      visit.href = card.dataset.url || "#";
     }
     if (tags) {
       tags.replaceChildren();
@@ -420,343 +422,4 @@
     document.dispatchEvent(new CustomEvent("welly-motion", { detail: reduceMotion }));
   });
 
-  safe("visual", function initFeaturedVisual() {
-    const container = document.getElementById("threeContainer");
-    if (!container) return;
-
-    const state = {
-      rotX: 0.4,
-      rotY: 0.6,
-      angle: 0,
-      dragging: false,
-      pointer: null,
-    };
-    let api = null;
-    let started = false;
-    let raf = 0;
-    let visible = false;
-
-    function webglAvailable() {
-      try {
-        const test = document.createElement("canvas");
-        return !!(window.WebGLRenderingContext && (test.getContext("webgl") || test.getContext("experimental-webgl")));
-      } catch (error) {
-        return false;
-      }
-    }
-
-    function loadThree() {
-      if (window.THREE) return Promise.resolve();
-      return new Promise(function (resolve, reject) {
-        const script = document.createElement("script");
-        script.src = "js/vendor/three.r128.min.js";
-        script.async = true;
-        script.onload = function () {
-          resolve();
-        };
-        script.onerror = function () {
-          reject(new Error("Three.js failed to load"));
-        };
-        document.body.appendChild(script);
-      });
-    }
-
-    function colors() {
-      const dark = currentTheme() === "dark";
-      return {
-        dark: dark,
-        stroke: dark ? "rgba(227, 253, 253, 0.55)" : "rgba(23, 72, 77, 0.42)",
-        core: dark ? "#e3fdfd" : "#17484d",
-        knot: dark ? 0xe3fdfd : 0x48614b,
-      };
-    }
-
-    function mount2d(allowSpin) {
-      container.replaceChildren();
-      const canvas = document.createElement("canvas");
-      canvas.className = "block h-full w-full";
-      canvas.setAttribute("aria-hidden", "true");
-      container.appendChild(canvas);
-      const ctx = canvas.getContext("2d");
-      let width = 0;
-      let height = 0;
-
-      function resize() {
-        const rect = container.getBoundingClientRect();
-        width = Math.max(1, Math.round(rect.width));
-        height = Math.max(1, Math.round(rect.height));
-        const ratio = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = Math.round(width * ratio);
-        canvas.height = Math.round(height * ratio);
-        canvas.style.width = width + "px";
-        canvas.style.height = height + "px";
-        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-      }
-
-      function render() {
-        if (!width || !height) resize();
-        const palette = colors();
-        ctx.clearRect(0, 0, width, height);
-        const radius = Math.min(width, height) * 0.32;
-        ctx.save();
-        ctx.translate(width / 2, height / 2);
-        ctx.strokeStyle = palette.stroke;
-        ctx.lineWidth = 1.2;
-        const rings = 14;
-        for (let i = 0; i < rings; i += 1) {
-          const phi = (i / rings) * Math.PI;
-          ctx.save();
-          ctx.rotate(state.rotY + phi + state.angle * 0.3);
-          ctx.scale(Math.cos(state.rotX + phi * 0.5), 1);
-          ctx.beginPath();
-          ctx.arc(0, 0, radius * (0.4 + 0.6 * Math.sin(phi)), 0, Math.PI * 2);
-          ctx.stroke();
-          ctx.restore();
-        }
-        ctx.beginPath();
-        ctx.arc(0, 0, 6, 0, Math.PI * 2);
-        ctx.fillStyle = palette.core;
-        ctx.fill();
-        ctx.restore();
-      }
-
-      resize();
-      render();
-      api = {
-        resize: function () {
-          resize();
-          render();
-        },
-        render: render,
-        spin: function () {
-          if (!allowSpin || reduceMotion || state.dragging) return;
-          state.angle += 0.012;
-          state.rotY += 0.004;
-        },
-        setTheme: render,
-      };
-    }
-
-    function mountThree() {
-      const THREE = window.THREE;
-      const rect = container.getBoundingClientRect();
-      const width = Math.max(1, rect.width);
-      const height = Math.max(1, rect.height || width * 0.75);
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-      camera.position.z = 4.2;
-      const renderer = new THREE.WebGLRenderer({
-        alpha: true,
-        antialias: true,
-        powerPreference: "default",
-        failIfMajorPerformanceCaveat: false,
-      });
-      renderer.setSize(width, height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-      renderer.domElement.setAttribute("aria-hidden", "true");
-      container.replaceChildren(renderer.domElement);
-
-      const geometry = new THREE.TorusKnotGeometry(1.1, 0.32, 120, 16, 2, 3);
-      const material = new THREE.MeshStandardMaterial({
-        color: colors().knot,
-        wireframe: true,
-        roughness: 0.3,
-        metalness: 0.8,
-      });
-      const knot = new THREE.Mesh(geometry, material);
-      knot.rotation.x = state.rotX;
-      knot.rotation.y = state.rotY;
-      scene.add(knot);
-      scene.add(new THREE.AmbientLight(0xffffff, 0.9));
-      const dir = new THREE.DirectionalLight(0xfff5e6, 1.2);
-      dir.position.set(5, 5, 5);
-      scene.add(dir);
-
-      function resize() {
-        const box = container.getBoundingClientRect();
-        if (!box.width || !box.height) return;
-        camera.aspect = box.width / box.height;
-        camera.updateProjectionMatrix();
-        renderer.setSize(box.width, box.height);
-      }
-
-      function render() {
-        renderer.render(scene, camera);
-      }
-
-      render();
-      api = {
-        resize: function () {
-          resize();
-          render();
-        },
-        render: render,
-        spin: function () {
-          if (reduceMotion || state.dragging) return;
-          knot.rotation.x += 0.003;
-          knot.rotation.y += 0.005;
-          state.rotX = knot.rotation.x;
-          state.rotY = knot.rotation.y;
-        },
-        nudge: function (dx, dy) {
-          knot.rotation.y += dx;
-          knot.rotation.x += dy;
-          state.rotX = knot.rotation.x;
-          state.rotY = knot.rotation.y;
-        },
-        setTheme: function () {
-          material.color.setHex(colors().knot);
-          render();
-        },
-      };
-    }
-
-    function boot() {
-      if (started) return;
-      started = true;
-      if (reduceMotion || !webglAvailable()) {
-        mount2d(!reduceMotion);
-        return;
-      }
-      loadThree()
-        .then(function () {
-          try {
-            mountThree();
-          } catch (error) {
-            console.warn("WebGL initialization failed, using canvas.", error);
-            mount2d(true);
-          }
-        })
-        .catch(function () {
-          mount2d(true);
-        });
-    }
-
-    function loop() {
-      window.cancelAnimationFrame(raf);
-      const step = function () {
-        if (!visible || document.hidden || reduceMotion) return;
-        if (api) {
-          api.spin();
-          api.render();
-        }
-        raf = window.requestAnimationFrame(step);
-      };
-      raf = window.requestAnimationFrame(step);
-    }
-
-    container.addEventListener("keydown", function (event) {
-      const stepSize = 0.12;
-      let dx = 0;
-      let dy = 0;
-      if (event.key === "ArrowLeft") dx = -stepSize;
-      else if (event.key === "ArrowRight") dx = stepSize;
-      else if (event.key === "ArrowUp") dy = -stepSize;
-      else if (event.key === "ArrowDown") dy = stepSize;
-      else return;
-      event.preventDefault();
-      if (api && api.nudge) api.nudge(dx, dy);
-      else {
-        state.rotY += dx;
-        state.rotX += dy;
-      }
-      if (api) api.render();
-    });
-
-    container.addEventListener("mousedown", function (event) {
-      state.dragging = true;
-      state.pointer = { x: event.clientX, y: event.clientY };
-    });
-    window.addEventListener("mouseup", function () {
-      state.dragging = false;
-      state.pointer = null;
-    });
-    window.addEventListener("mousemove", function (event) {
-      if (!state.dragging || !state.pointer) return;
-      const dx = (event.clientX - state.pointer.x) * 0.008;
-      const dy = (event.clientY - state.pointer.y) * 0.008;
-      state.pointer = { x: event.clientX, y: event.clientY };
-      if (api && api.nudge) api.nudge(dx, dy);
-      else {
-        state.rotY += dx;
-        state.rotX += dy;
-      }
-      if (api) api.render();
-    });
-
-    container.addEventListener(
-      "touchstart",
-      function (event) {
-        if (event.touches.length !== 1) return;
-        state.pointer = { x: event.touches[0].clientX, y: event.touches[0].clientY, axis: null };
-      },
-      { passive: true }
-    );
-    container.addEventListener(
-      "touchmove",
-      function (event) {
-        if (!state.pointer || event.touches.length !== 1) return;
-        const x = event.touches[0].clientX;
-        const y = event.touches[0].clientY;
-        const dx = x - state.pointer.x;
-        const dy = y - state.pointer.y;
-        if (!state.pointer.axis) {
-          if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
-          state.pointer.axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
-        }
-        if (state.pointer.axis === "y") return;
-        event.preventDefault();
-        state.dragging = true;
-        if (api && api.nudge) api.nudge(dx * 0.008, dy * 0.008);
-        else {
-          state.rotY += dx * 0.008;
-          state.rotX += dy * 0.008;
-        }
-        if (api) api.render();
-        state.pointer.x = x;
-        state.pointer.y = y;
-      },
-      { passive: false }
-    );
-    window.addEventListener("touchend", function () {
-      state.dragging = false;
-      state.pointer = null;
-    });
-
-    if (window.ResizeObserver) {
-      const observer = new ResizeObserver(function () {
-        if (api) api.resize();
-      });
-      observer.observe(container);
-    } else {
-      window.addEventListener("resize", function () {
-        if (api) api.resize();
-      });
-    }
-
-    const visibility = new IntersectionObserver(
-      function (entries) {
-        visible = entries.some(function (entry) {
-          return entry.isIntersecting;
-        });
-        if (visible) boot();
-        if (visible && !reduceMotion) loop();
-        else window.cancelAnimationFrame(raf);
-      },
-      { rootMargin: "200px 0px" }
-    );
-    visibility.observe(container);
-
-    document.addEventListener("welly-theme", function () {
-      if (api) api.setTheme();
-    });
-    document.addEventListener("welly-motion", function () {
-      if (reduceMotion) window.cancelAnimationFrame(raf);
-      else if (visible && api) loop();
-    });
-    document.addEventListener("visibilitychange", function () {
-      if (document.hidden) window.cancelAnimationFrame(raf);
-      else if (visible && !reduceMotion && api) loop();
-    });
-  });
 })();
