@@ -203,6 +203,12 @@ html[data-theme="dark"] #themeSquareFill {
     inset 0 0 0 4px #17484d;
 }
 
+.hero-portrait {
+  object-fit: cover;
+  object-position: 62% 30%;
+  filter: grayscale(1);
+}
+
 .skip-link {
   position: fixed;
   left: 0.75rem;
