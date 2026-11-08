@@ -191,6 +191,18 @@ html[data-theme="dark"] #themeSquareFill {
   display: none !important;
 }
 
+#threeContainer {
+  background: radial-gradient(circle at 50% 45%, rgb(var(--brand-primary) / 0.14), transparent 58%);
+  touch-action: pan-y;
+}
+
+#threeContainer:focus-visible {
+  outline: none;
+  box-shadow:
+    inset 0 0 0 2px #e3fdfd,
+    inset 0 0 0 4px #17484d;
+}
+
 .skip-link {
   position: fixed;
   left: 0.75rem;
