@@ -1,0 +1,24 @@
+{
+  "name": "Welly — Web Design & Development on the Costa del Sol",
+  "short_name": "Welly",
+  "description": "Web design, development and apps for businesses in Estepona and along the Costa del Sol.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "en",
+  "background_color": "#e3fdfd",
+  "theme_color": "#17484d",
+  "icons": [
+    {
+      "src": "favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

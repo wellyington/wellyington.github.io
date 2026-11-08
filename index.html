@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welly — Digital Strategy, Design &amp; Development</title>
-  <meta name="description" content="Wellington Almeida (Welly) is a web developer, designer and digital strategist in Estepona, on the Costa del Sol. He works closely with businesses on strategy, design and websites that work.">
+  <title>Welly — Web Design &amp; Development on the Costa del Sol</title>
+  <meta name="description" content="Web design, development and apps for businesses in Estepona, Marbella and Málaga, and across Torremolinos, Nerja, Gibraltar and Algeciras. Welly — digital that works.">
   <meta name="author" content="Wellington Almeida">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://wellyington.github.io/">
@@ -17,15 +17,15 @@
   <meta property="og:site_name" content="Welly">
   <meta property="og:locale" content="en_GB">
   <meta property="og:url" content="https://wellyington.github.io/">
-  <meta property="og:title" content="Welly — Digital Strategy, Design &amp; Development">
-  <meta property="og:description" content="Wellington Almeida (Welly) is a web developer, designer and digital strategist in Estepona, on the Costa del Sol. He works closely with businesses on strategy, design and websites that work.">
+  <meta property="og:title" content="Welly — Web Design &amp; Development on the Costa del Sol">
+  <meta property="og:description" content="Web design, development and apps for businesses in Estepona, Marbella and Málaga, and across Torremolinos, Nerja, Gibraltar and Algeciras. Welly — digital that works.">
   <meta property="og:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="1024">
   <meta property="og:image:alt" content="Wellington Almeida (Welly), web developer and digital strategist">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Welly — Digital Strategy, Design &amp; Development">
-  <meta name="twitter:description" content="Wellington Almeida (Welly) is a web developer, designer and digital strategist in Estepona, on the Costa del Sol. He works closely with businesses on strategy, design and websites that work.">
+  <meta name="twitter:title" content="Welly — Web Design &amp; Development on the Costa del Sol">
+  <meta name="twitter:description" content="Web design, development and apps for businesses in Estepona, Marbella and Málaga, and across Torremolinos, Nerja, Gibraltar and Algeciras. Welly — digital that works.">
   <meta name="twitter:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
   <meta name="twitter:image:alt" content="Wellington Almeida (Welly), web developer and digital strategist">
 
@@ -47,7 +47,9 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/webp" href="images/welly-portrait.webp" imagesrcset="images/welly-portrait-640.webp 640w, images/welly-portrait.webp 1024w" imagesizes="(min-width: 768px) 34vw, 100vw" fetchpriority="high">
 
   <link rel="stylesheet" href="css/site.css">
 
@@ -73,6 +75,7 @@
         "url": "https://wellyington.github.io/",
         "email": "welly.almeida@gmail.com",
         "telephone": "+34604286691",
+        "knowsLanguage": ["en", "pt", "es"],
         "image": "https://wellyington.github.io/images/welly-portrait.jpg",
         "alumniOf": {
           "@type": "CollegeOrUniversity",
@@ -101,19 +104,36 @@
         ]
       },
       {
-        "@type": "ProfessionalService",
+        "@type": ["ProfessionalService", "LocalBusiness"],
         "@id": "https://wellyington.github.io/#business",
         "name": "Welly",
         "url": "https://wellyington.github.io/",
         "email": "welly.almeida@gmail.com",
         "telephone": "+34604286691",
         "image": "https://wellyington.github.io/images/welly-portrait.jpg",
-        "description": "Web development, design and digital strategy from Estepona, on the Costa del Sol, for businesses that want digital that works.",
-        "areaServed": "Worldwide",
+        "description": "Web design, web development, app development and digital branding from Estepona, Málaga, for businesses on the Costa del Sol.",
+        "areaServed": [
+          { "@type": "City", "name": "Estepona" },
+          { "@type": "City", "name": "Marbella" },
+          { "@type": "City", "name": "Málaga" },
+          { "@type": "City", "name": "Torremolinos" },
+          { "@type": "City", "name": "Nerja" },
+          { "@type": "City", "name": "Gibraltar" },
+          { "@type": "City", "name": "Algeciras" },
+          { "@type": "AdministrativeArea", "name": "Costa del Sol" }
+        ],
+        "serviceType": [
+          "Web design",
+          "Web development",
+          "App development",
+          "SEO",
+          "AEO",
+          "Digital branding"
+        ],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Estepona",
-          "addressRegion": "Costa del Sol",
+          "addressRegion": "Málaga",
           "addressCountry": "ES"
         },
         "founder": { "@id": "https://wellyington.github.io/#person" },
@@ -126,28 +146,82 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Web Development",
-                "description": "Custom websites and web applications built around real business needs. From WordPress and WooCommerce to bespoke front-end experiences, I focus on speed, usability, maintainability and conversion."
+                "name": "Web design",
+                "description": "Clear visual systems and pages that are easy to understand and use."
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Digital Design",
-                "description": "Clear visual systems and intuitive user journeys. I shape brand direction, information architecture and interface design so a business feels distinctive and is easy to understand and use."
+                "name": "Web development",
+                "description": "Websites built around a real business, with care for speed, usability and upkeep."
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Digital Strategy",
-                "description": "Digital strategy that connects positioning, audience, content and customer journeys. I help businesses decide what to build, how to present it and where to focus to generate measurable momentum."
+                "name": "App development",
+                "description": "Apps for when a business needs something people use on a phone, not only a website."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO and AEO",
+                "description": "Help for a business to be found in search and in answer engines, with clear pages and plain language."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital branding",
+                "description": "A voice and a look that feel like the business, carried through the site and the wider presence."
               }
             }
           ]
         }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://wellyington.github.io/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you work with businesses in Marbella and Gibraltar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. I live in Estepona and work with people in Marbella, Málaga, Torremolinos, Nerja, Algeciras and Gibraltar, and elsewhere on the Costa del Sol. We can meet, or work together at a distance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you build apps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Some ideas need a website. Some need an app people open on their phone. I do both, and I will tell you honestly which one fits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you approach pricing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I don’t have a menu of packages. We talk about what you need, then I give you a clear price before the work starts. A small site and a custom app are different jobs, so they are priced differently."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which languages do you work in?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "English, Portuguese and Spanish. A lot of businesses on the coast mix them, and that is fine with me. If you want the site in Spanish, including something as straightforward as diseño web en Marbella, we can do that."
+            }
+          }
+        ]
       }
     ]
   }
@@ -245,7 +319,7 @@
   <div id="fullNavMenu" class="pointer-events-none fixed inset-0 z-40 flex translate-x-full flex-col justify-between border-l border-brand-primary/50 bg-brand-cream p-6 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:p-12" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true" inert>
     <div class="grid grid-cols-1 gap-8 border-b border-brand-primary/50 pb-12 pt-16 md:grid-cols-2">
       <nav aria-label="Primary">
-        <p class="mb-6 text-xs font-semibold uppercase tracking-[0.2em] opacity-60">Navigation</p>
+        <p class="mb-6 text-xs font-semibold uppercase tracking-[0.2em]">Navigation</p>
         <ul class="flex flex-col gap-4 text-4xl font-bold tracking-tight md:text-6xl">
           <li>
             <a href="#about" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
@@ -276,13 +350,13 @@
       </nav>
       <div class="flex flex-col justify-between gap-8">
         <div>
-          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] opacity-60">About</p>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em]">About</p>
           <p class="max-w-sm text-base leading-relaxed opacity-90 md:text-lg">
             I’m Welly, a web developer, designer and digital strategist in Estepona, on the Costa del Sol. I listen first, then help shape digital that works for the business.
           </p>
         </div>
         <div>
-          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] opacity-60">Socials</p>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em]">Socials</p>
           <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold uppercase tracking-widest">
             <a href="https://wellyington.github.io/cv/" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 min-w-11 items-center px-1 underline underline-offset-4">CV<span class="sr-only"> (opens in a new tab)</span></a>
             <a href="https://wellyington.com" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 min-w-11 items-center px-1 underline underline-offset-4">Website<span class="sr-only"> (opens in a new tab)</span></a>
@@ -300,7 +374,7 @@
     <section id="top" tabindex="-1" class="overflow-hidden border-b border-brand-primary/50 text-brand-primary" aria-labelledby="hero-heading">
       <div class="grid grid-cols-4 md:grid-cols-12">
         <div class="relative z-10 col-span-4 flex flex-col justify-end px-4 py-12 md:col-span-8 md:px-8 md:py-16">
-          <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] opacity-70 md:mb-4">Web Developer · Designer · Digital Strategist</p>
+          <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] md:mb-4">Web Developer · Designer · Digital Strategist</p>
           <h1 id="hero-heading" class="text-[clamp(2.5rem,8vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.10em]">digital that works.</h1>
         </div>
         <div class="relative col-span-4 aspect-[4/5] overflow-hidden border-t border-brand-primary/50 md:col-span-4 md:aspect-auto md:min-h-[36rem] md:border-l md:border-t-0">
@@ -345,7 +419,7 @@
         <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
           <div class="grid grid-cols-4 md:grid-cols-10">
             <div class="group relative col-span-4 aspect-[4/3] overflow-hidden border-b border-brand-primary/50 md:col-span-5 md:aspect-auto md:min-h-[44rem] md:border-b-0 md:border-r">
-              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" tabindex="0" aria-label="Abstract wireframe for the featured project. Drag horizontally, or use the arrow keys, to rotate."></div>
+              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Abstract wireframe for the featured project. Drag horizontally, or use the arrow keys, to rotate."></div>
               <div class="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 border border-brand-primary/40 bg-brand-cream/80 px-3 py-1 text-xs uppercase tracking-[0.18em] backdrop-blur">
                 <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-[#71c9ce]" aria-hidden="true"></span>
                 <span>Digital ideas, made real</span>
@@ -354,7 +428,7 @@
 
             <div class="col-span-4 flex flex-col justify-center gap-6 p-6 md:col-span-5 md:p-10">
               <div>
-                <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] opacity-70">Featured build</p>
+                <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">Featured build</p>
                 <h3 class="text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-5xl">
                   <a href="https://equaestates.com/" target="_blank" rel="noopener" class="transition-colors hover:text-brand-primary/70">Equa Estates — luxury property and relocation in Marbella</a>
                 </h3>
@@ -426,7 +500,7 @@
                 <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
                   <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Equa Estates</button>
                 </h3>
-                <p class="text-xs uppercase tracking-[0.18em] opacity-60">Property website</p>
+                <p class="text-xs uppercase tracking-[0.18em]">Property website</p>
               </div>
             </article>
 
@@ -442,7 +516,7 @@
                 <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
                   <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Mirela B Interiors</button>
                 </h3>
-                <p class="text-xs uppercase tracking-[0.18em] opacity-60">Interior design website</p>
+                <p class="text-xs uppercase tracking-[0.18em]">Interior design website</p>
               </div>
             </article>
 
@@ -458,7 +532,7 @@
                 <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
                   <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Mistral &amp; Marea</button>
                 </h3>
-                <p class="text-xs uppercase tracking-[0.18em] opacity-60">Editorial website</p>
+                <p class="text-xs uppercase tracking-[0.18em]">Editorial website</p>
               </div>
             </article>
 
@@ -474,7 +548,7 @@
                 <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
                   <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Chill and Heal Hub</button>
                 </h3>
-                <p class="text-xs uppercase tracking-[0.18em] opacity-60">Wellness practice website</p>
+                <p class="text-xs uppercase tracking-[0.18em]">Wellness practice website</p>
               </div>
             </article>
 
@@ -490,7 +564,7 @@
                 <h3 class="text-base font-semibold tracking-[-0.02em] md:text-lg">
                   <button type="button" class="text-left underline-offset-4 after:absolute after:inset-0 after:z-10 after:content-[''] group-hover:underline">Your New Life in Spain</button>
                 </h3>
-                <p class="text-xs uppercase tracking-[0.18em] opacity-60">Relocation coaching website</p>
+                <p class="text-xs uppercase tracking-[0.18em]">Relocation coaching website</p>
               </div>
             </article>
 
@@ -504,7 +578,7 @@
       <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
         <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
           <div class="border-b border-brand-primary/50 p-4 md:p-6">
-            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] opacity-70">A little about me</p>
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">A little about me</p>
             <h2 id="about-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">about.</h2>
           </div>
           <div class="grid grid-cols-4 md:grid-cols-10">
@@ -534,7 +608,7 @@
       <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
         <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
           <div class="p-4 md:p-6">
-            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] opacity-70">What I bring to the table</p>
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">What I bring to the table</p>
             <h2 id="services-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">from idea to impact.</h2>
           </div>
         </div>
@@ -545,13 +619,13 @@
           <div class="grid grid-cols-1 divide-y divide-brand-primary/50 md:grid-cols-3 md:divide-x md:divide-y-0">
             <div class="flex min-h-[300px] flex-col justify-between p-6 md:p-8">
               <div>
-                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em] opacity-50">01 / BUILD</span>
+                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em]">01 / BUILD</span>
                 <h3 class="mb-4 text-2xl font-bold tracking-tight">Web Development</h3>
                 <p class="mb-6 text-sm leading-relaxed opacity-80">
                   Custom websites and web applications built around real business needs. From WordPress and WooCommerce to bespoke front-end experiences, I focus on speed, usability, maintainability and conversion.
                 </p>
               </div>
-              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em] opacity-70">
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em]">
                 <li class="border border-brand-primary/40 px-2 py-1">Custom Sites</li>
                 <li class="border border-brand-primary/40 px-2 py-1">E-Commerce</li>
                 <li class="border border-brand-primary/40 px-2 py-1">CMS &amp; Integrations</li>
@@ -559,13 +633,13 @@
             </div>
             <div class="flex min-h-[300px] flex-col justify-between p-6 md:p-8">
               <div>
-                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em] opacity-50">02 / DESIGN</span>
+                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em]">02 / DESIGN</span>
                 <h3 class="mb-4 text-2xl font-bold tracking-tight">Digital Design</h3>
                 <p class="mb-6 text-sm leading-relaxed opacity-80">
                   Clear visual systems and intuitive user journeys. I shape brand direction, information architecture and interface design so a business feels distinctive and is easy to understand and use.
                 </p>
               </div>
-              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em] opacity-70">
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em]">
                 <li class="border border-brand-primary/40 px-2 py-1">Visual Identity</li>
                 <li class="border border-brand-primary/40 px-2 py-1">UX &amp; UI</li>
                 <li class="border border-brand-primary/40 px-2 py-1">Brand Systems</li>
@@ -573,17 +647,80 @@
             </div>
             <div class="flex min-h-[300px] flex-col justify-between p-6 md:p-8">
               <div>
-                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em] opacity-50">03 / STRATEGY</span>
+                <span class="mb-4 block font-mono text-xs uppercase tracking-[0.2em]">03 / STRATEGY</span>
                 <h3 class="mb-4 text-2xl font-bold tracking-tight">Digital Strategy</h3>
                 <p class="mb-6 text-sm leading-relaxed opacity-80">
                   Digital strategy that connects positioning, audience, content and customer journeys. I help businesses decide what to build, how to present it and where to focus to generate measurable momentum.
                 </p>
               </div>
-              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em] opacity-70">
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em]">
                 <li class="border border-brand-primary/40 px-2 py-1">Positioning</li>
                 <li class="border border-brand-primary/40 px-2 py-1">SEO &amp; Content</li>
                 <li class="border border-brand-primary/40 px-2 py-1">Growth Planning</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" tabindex="-1" class="text-brand-primary" aria-labelledby="areas-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="p-4 md:p-6">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">Where I work</p>
+            <h2 id="areas-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">along the coast.</h2>
+          </div>
+          <div class="grid grid-cols-4 border-t border-brand-primary/50 md:grid-cols-10">
+            <div class="col-span-4 flex flex-col justify-center gap-6 p-6 md:col-span-6 md:p-10">
+              <p class="max-w-[46ch] text-lg font-light leading-relaxed md:text-xl">
+                I live in Estepona and work with businesses along the Costa del Sol, and in the towns around it. Marbella, Málaga, Torremolinos, Nerja, Algeciras and Gibraltar are all part of that. We can sit down together, or work at a distance.
+              </p>
+              <p class="max-w-[46ch] text-lg font-light leading-relaxed md:text-xl">
+                Diseño web, desarrollo y apps, in English, Spanish or Portuguese. The place matters less than whether the work is useful.
+              </p>
+            </div>
+            <div class="col-span-4 border-t border-brand-primary/50 p-6 md:col-span-4 md:border-l md:border-t-0 md:p-10">
+              <p class="mb-4 text-xs font-bold uppercase tracking-[0.18em]">Places</p>
+              <ul class="flex flex-wrap gap-2 text-xs uppercase tracking-[0.15em]">
+                <li class="border border-brand-primary/40 px-3 py-2">Estepona</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Marbella</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Málaga</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Torremolinos</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Nerja</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Gibraltar</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Algeciras</li>
+                <li class="border border-brand-primary/40 px-3 py-2">Costa del Sol</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" tabindex="-1" class="text-brand-primary" aria-labelledby="faq-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="border-b border-brand-primary/50 p-4 md:p-6">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">Good to know</p>
+            <h2 id="faq-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">questions.</h2>
+          </div>
+          <div class="divide-y divide-brand-primary/50">
+            <div class="grid grid-cols-4 gap-4 p-6 md:grid-cols-10 md:p-10">
+              <h3 class="col-span-4 text-2xl font-bold tracking-tight md:col-span-4">Do you work with businesses in Marbella and Gibraltar?</h3>
+              <p class="col-span-4 max-w-[52ch] text-lg font-light leading-relaxed md:col-span-6">Yes. I live in Estepona and work with people in Marbella, Málaga, Torremolinos, Nerja, Algeciras and Gibraltar, and elsewhere on the Costa del Sol. We can meet, or work together at a distance.</p>
+            </div>
+            <div class="grid grid-cols-4 gap-4 p-6 md:grid-cols-10 md:p-10">
+              <h3 class="col-span-4 text-2xl font-bold tracking-tight md:col-span-4">Do you build apps?</h3>
+              <p class="col-span-4 max-w-[52ch] text-lg font-light leading-relaxed md:col-span-6">Yes. Some ideas need a website. Some need an app people open on their phone. I do both, and I will tell you honestly which one fits.</p>
+            </div>
+            <div class="grid grid-cols-4 gap-4 p-6 md:grid-cols-10 md:p-10">
+              <h3 class="col-span-4 text-2xl font-bold tracking-tight md:col-span-4">How do you approach pricing?</h3>
+              <p class="col-span-4 max-w-[52ch] text-lg font-light leading-relaxed md:col-span-6">I don’t have a menu of packages. We talk about what you need, then I give you a clear price before the work starts. A small site and a custom app are different jobs, so they are priced differently.</p>
+            </div>
+            <div class="grid grid-cols-4 gap-4 p-6 md:grid-cols-10 md:p-10">
+              <h3 class="col-span-4 text-2xl font-bold tracking-tight md:col-span-4">Which languages do you work in?</h3>
+              <p class="col-span-4 max-w-[52ch] text-lg font-light leading-relaxed md:col-span-6">English, Portuguese and Spanish. A lot of businesses on the coast mix them, and that is fine with me. If you want the site in Spanish, including something as straightforward as diseño web en Marbella, we can do that.</p>
             </div>
           </div>
         </div>
@@ -605,7 +742,7 @@
                 <p class="mb-8 max-w-[40ch] text-xl font-light leading-relaxed md:text-2xl">
                   Have a business challenge, a new idea or a website that needs to do more? Let’s make it happen.
                 </p>
-                <p class="text-sm leading-relaxed opacity-70">
+                <p class="text-sm leading-relaxed">
                   Available for web development, digital design and strategy projects with ambitious businesses in Spain and beyond.
                 </p>
               </div>
@@ -747,7 +884,7 @@
         </button>
       </div>
       <div>
-        <p id="modalCategory" class="mb-2 text-xs font-bold uppercase tracking-[0.2em] opacity-70"></p>
+        <p id="modalCategory" class="mb-2 text-xs font-bold uppercase tracking-[0.2em]"></p>
         <h3 id="modalTitle" class="mb-4 text-3xl font-bold tracking-tight"></h3>
         <div class="mb-6 aspect-video w-full overflow-hidden rounded bg-brand-dark">
           <img id="modalImage" alt="" class="h-full w-full object-cover object-top" width="1440" height="900">
