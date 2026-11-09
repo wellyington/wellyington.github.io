@@ -594,7 +594,7 @@ function validate(locale, html) {
   assert((html.match(/gtag\/js\?id=G-4XBY16BPLY/g) || []).length === 1, locale.code + " gtag src");
   assert((html.match(/G-4XBY16BPLY/g) || []).length === 2, locale.code + " gtag id count");
   assert(html.includes('href="/css/site.css"'), locale.code + " css path");
-  assert(html.includes('src="/js/main.js"'), locale.code + " js path");
+  assert(html.includes('src="/js/main.min.js"'), locale.code + " js path");
   assert(!html.includes('src="images/') && !html.includes('href="css/'), locale.code + " relative asset");
   const match = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
   assert(match, locale.code + " json-ld");

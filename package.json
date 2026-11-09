@@ -5,9 +5,11 @@
   "scripts": {
     "build:pages": "node scripts/build-pages.js",
     "build:css": "tailwindcss -i ./src/input.css -o ./css/site.css --minify",
-    "build": "npm run build:pages && npm run build:css"
+    "build:js": "terser js/main.js -c -m -o js/main.min.js",
+    "build": "npm run build:pages && npm run build:css && npm run build:js"
   },
   "devDependencies": {
-    "tailwindcss": "3.4.17"
+    "tailwindcss": "3.4.17",
+    "terser": "^5.36.0"
   }
 }

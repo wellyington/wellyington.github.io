@@ -58,16 +58,28 @@
   <link rel="apple-touch-icon" href="/apple-touch.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="(min-width: 768px) 34vw, 100vw" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait-768.webp" imagesrcset="/images/welly-portrait-480.webp 480w, /images/welly-portrait-768.webp 768w" imagesizes="100vw" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="34vw" media="(min-width: 768px)" fetchpriority="high">
 
   <link rel="stylesheet" href="/css/site.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-4XBY16BPLY');
+    function loadWellyAnalytics() {
+      if (window.__wellyGa) return;
+      window.__wellyGa = true;
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+      document.head.appendChild(script);
+    }
+    window.addEventListener("load", function () {
+      if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+      else window.setTimeout(loadWellyAnalytics, 1200);
+    });
   </script>
 
   <script type="application/ld+json">
@@ -427,8 +439,9 @@
         </div>
         <div class="relative col-span-4 aspect-[4/5] overflow-hidden border-t border-brand-primary/50 md:col-span-4 md:aspect-auto md:min-h-[36rem] md:border-l md:border-t-0">
           <picture class="absolute inset-0 block h-full w-full">
-            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="(min-width: 768px) 34vw, 100vw">
-            <img class="hero-portrait h-full w-full" src="/images/welly-portrait.jpg" srcset="/images/welly-portrait-640.jpg 640w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Wellyington), desenvolvedor web, designer digital e estrategista" width="1024" height="1024" decoding="async" fetchpriority="high">
+            <source media="(max-width: 767px)" type="image/webp" srcset="/images/welly-portrait-480.webp 480w, /images/welly-portrait-768.webp 768w" sizes="100vw">
+            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="34vw">
+            <img class="hero-portrait h-full w-full" src="/images/welly-portrait-768.jpg" srcset="/images/welly-portrait-480.jpg 480w, /images/welly-portrait-768.jpg 768w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Wellyington), desenvolvedor web, designer digital e estrategista" width="768" height="768" decoding="async" fetchpriority="high">
           </picture>
           <div class="pointer-events-none absolute bottom-5 left-5 z-10 w-20 md:bottom-6 md:left-6 md:w-28">
             <svg viewBox="0 0 200 200" class="animate-vinyl h-auto w-full drop-shadow-md" role="img" aria-label="selo de vinil by me">
@@ -467,7 +480,19 @@
         <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
           <div class="grid grid-cols-4 md:grid-cols-10">
             <div class="group relative col-span-4 aspect-[4/3] overflow-hidden border-b border-brand-primary/50 md:col-span-5 md:aspect-auto md:min-h-[44rem] md:border-b-0 md:border-r">
-              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Estrutura de arame do projeto em destaque. Arraste na horizontal, ou use as setas, para girar."></div>
+              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Estrutura de arame do projeto em destaque. Arraste na horizontal, ou use as setas, para girar.">
+                <svg class="three-poster" viewBox="0 0 200 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <g fill="none" stroke="currentColor" stroke-width="0.7">
+                    <ellipse cx="100" cy="75" rx="70" ry="24"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(28 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(58 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(92 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="46" ry="16" transform="rotate(14 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="46" ry="16" transform="rotate(74 100 75)"></ellipse>
+                    <circle cx="100" cy="75" r="4" fill="currentColor" stroke="none"></circle>
+                  </g>
+                </svg>
+              </div>
               <div class="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 border border-brand-primary/40 bg-brand-cream/80 px-3 py-1 text-xs uppercase tracking-[0.18em] backdrop-blur">
                 <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-[#71c9ce]" aria-hidden="true"></span>
                 <span>Ideias digitais, feitas de verdade</span>
@@ -539,8 +564,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Equa Estates" data-category="Site imobiliário" data-url="https://equaestates.com/" data-tags="real-estate,relocation,costa" data-tag-labels="Imobiliária, Mudança, Costa del Sol" data-summary="A EQUA Estates ajuda clientes internacionais a comprar, alugar e se mudar para Marbella e para a Costa del Sol. O site junta a busca de imóveis, coleções escolhidas, orientação sobre a região e apoio na mudança, inclusive a coordenação de residência e de educação particular.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/equa-estates-800.webp" type="image/webp">
                   <source srcset="/images/projects/equa-estates.webp" type="image/webp">
-                  <img src="/images/projects/equa-estates.jpg" alt="Página inicial da EQUA Estates: uma villa em Marbella ao pôr do sol, com o título Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/equa-estates.jpg" srcset="/images/projects/equa-estates-800.jpg 800w, /images/projects/equa-estates.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Página inicial da EQUA Estates: uma villa em Marbella ao pôr do sol, com o título Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -555,8 +581,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mirela B Interiors" data-category="Site de design de interiores" data-url="https://mirelabinteriors.com/" data-tags="interior,renovation,costa" data-tag-labels="Design de interiores, Reforma, Costa del Sol" data-summary="A Mirela B. Interiors é um estúdio de reforma e design de interiores que trabalha em toda a Costa del Sol, de Mijas Costa a Casares. O site apresenta reformas planejadas, orientação de materiais e cor, pintura e um serviço de mobiliário.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/mirela-b-interiors-800.webp" type="image/webp">
                   <source srcset="/images/projects/mirela-b-interiors.webp" type="image/webp">
-                  <img src="/images/projects/mirela-b-interiors.jpg" alt="Página inicial da Mirela B. Interiors, dividida entre a estrutura de uma obra e uma sala costeira pronta" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/mirela-b-interiors.jpg" srcset="/images/projects/mirela-b-interiors-800.jpg 800w, /images/projects/mirela-b-interiors.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Página inicial da Mirela B. Interiors, dividida entre a estrutura de uma obra e uma sala costeira pronta" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -571,8 +598,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mistral &amp; Marea" data-category="Site editorial" data-url="https://mistralmarea.com/" data-tags="editorial,culture,costa" data-tag-labels="Editorial, Cultura, Costa del Sol" data-summary="Mistral &amp; Marea é um fio diário de negócios e cultura na Costa del Sol. A página inicial organiza sinais curtos, reportagens mais longas, um diretório de salões e uma lista de negócios locais.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/mistral-marea-800.webp" type="image/webp">
                   <source srcset="/images/projects/mistral-marea.webp" type="image/webp">
-                  <img src="/images/projects/mistral-marea.jpg" alt="Página inicial da Mistral &amp; Marea, um editorial da Costa del Sol, com a manchete The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/mistral-marea.jpg" srcset="/images/projects/mistral-marea-800.jpg 800w, /images/projects/mistral-marea.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Página inicial da Mistral &amp; Marea, um editorial da Costa del Sol, com a manchete The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -587,8 +615,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Chill and Heal Hub" data-category="Site de consultório de bem-estar" data-url="https://www.chillandhealhub.com/" data-tags="wellness,health" data-tag-labels="Bem-estar, Saúde" data-summary="Chill and Heal Hub é um consultório de naturopatia e medicina tradicional chinesa em Londres e Marbella. O site apresenta terapias como acupuntura, tratamentos manuais e nutrição, e lista tipos de sessão e preços.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/chill-and-heal-hub-800.webp" type="image/webp">
                   <source srcset="/images/projects/chill-and-heal-hub.webp" type="image/webp">
-                  <img src="/images/projects/chill-and-heal-hub.jpg" alt="Página inicial da Chill and Heal Hub, com o título Find Your Path to Natural Healing e uma profissional atendendo" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/chill-and-heal-hub.jpg" srcset="/images/projects/chill-and-heal-hub-800.jpg 800w, /images/projects/chill-and-heal-hub.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Página inicial da Chill and Heal Hub, com o título Find Your Path to Natural Healing e uma profissional atendendo" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -603,8 +632,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-10" data-title="Your New Life in Spain" data-category="Site de coaching de mudança" data-url="https://www.yournewlifeinspain.com/" data-tags="relocation,coaching" data-tag-labels="Mudança, Coaching" data-summary="Your New Life in Spain é o consultório de coaching de mudança da Natasha Horner, com base em Málaga. O site explica o acompanhamento individual para quem planeja se mudar para a Espanha, de uma ligação curta para achar o serviço até um coaching mais longo.">
               <div class="relative z-0 aspect-2/1 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/your-new-life-in-spain-800.webp" type="image/webp">
                   <source srcset="/images/projects/your-new-life-in-spain.webp" type="image/webp">
-                  <img src="/images/projects/your-new-life-in-spain.jpg" alt="Página inicial de Your New Life in Spain, com Natasha Horner e o título Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/your-new-life-in-spain.jpg" srcset="/images/projects/your-new-life-in-spain-800.jpg 800w, /images/projects/your-new-life-in-spain.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Página inicial de Your New Life in Spain, com Natasha Horner e o título Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -644,7 +674,7 @@
             <div class="col-span-4 md:col-span-4">
               <picture class="block">
                 <source srcset="/images/welly-about.webp" type="image/webp">
-                <img src="/images/welly-about.jpg" alt="Wellington Almeida com o filho em um parque" width="576" height="1024" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
+                <img src="/images/welly-about.jpg" alt="Wellington Almeida com o filho em um parque" width="576" height="1024" sizes="(min-width: 768px) 28vw, 92vw" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
               </picture>
             </div>
           </div>
@@ -813,7 +843,7 @@
               </div>
             </div>
             <div class="group relative col-span-4 flex min-h-[380px] items-center justify-center overflow-hidden bg-brand-dark md:col-span-6 md:min-h-[520px]">
-              <img src="/images/contact-workspace.webp" alt="Interior de um café com luminárias pendentes e um letreiro aceso" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
+              <img src="/images/contact-workspace.webp" sizes="(min-width: 768px) 50vw, 100vw" alt="Interior de um café com luminárias pendentes e um letreiro aceso" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
               <div class="absolute inset-0 bg-brand-primary/30 mix-blend-multiply"></div>
               <div class="relative z-10 px-6 text-center">
                 <span class="inline-block border border-[#e3fdfd]/85 bg-[#12383c]/75 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#e3fdfd] backdrop-blur-sm">
@@ -829,7 +859,7 @@
 
   <footer class="border-t border-brand-cream/40 bg-brand-primary text-brand-cream">
     <div class="relative h-36 overflow-hidden border-b border-brand-cream/40 md:h-52">
-      <img src="/images/footer-city.webp" alt="Luzes da cidade à noite, numa rua de letreiros acesos" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
+      <img src="/images/footer-city.webp" sizes="100vw" alt="Luzes da cidade à noite, numa rua de letreiros acesos" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
       <div class="absolute inset-0 bg-gradient-to-t from-brand-primary via-transparent to-transparent opacity-80"></div>
       <div class="absolute bottom-4 left-6 right-6 text-xs font-semibold uppercase tracking-[0.25em] opacity-75">
         Independente por escolha · Ligado ao negócio
@@ -950,6 +980,6 @@
     </div>
   </div>
 
-  <script src="/js/main.js" defer></script>
+  <script src="/js/main.min.js" defer></script>
 </body>
 </html>

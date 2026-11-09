@@ -18,6 +18,34 @@
     }
   }
 
+  function onIdle(fn) {
+    const run = function () {
+      fn();
+    };
+    const schedule = function () {
+      if (window.requestIdleCallback) window.requestIdleCallback(run, { timeout: 1500 });
+      else window.setTimeout(run, 600);
+    };
+    if (document.readyState === "complete") schedule();
+    else window.addEventListener("load", schedule);
+  }
+
+  function pauseOffscreen(selector) {
+    const nodes = document.querySelectorAll(selector);
+    if (!nodes.length || !window.IntersectionObserver) return;
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        entry.target.classList.toggle("is-paused", !entry.isIntersecting);
+      });
+    });
+    nodes.forEach(function (node) {
+      node.classList.add("is-paused");
+      observer.observe(node);
+    });
+  }
+
+  pauseOffscreen(".animate-marquee, .animate-vinyl, .animate-pulse");
+
   function currentTheme() {
     return root.getAttribute("data-theme") === "dark" ? "dark" : "light";
   }
@@ -52,7 +80,9 @@
     }
   }
 
+  onIdle(function () {
   safe("clocks", function initClocks() {
+    if (!window.matchMedia("(min-width: 768px)").matches) return;
     const marquee = document.querySelector(".animate-marquee");
     const track = marquee && marquee.querySelector("[data-marquee-track]");
     if (marquee && track && !marquee.querySelector("[data-marquee-clone]")) {
@@ -97,6 +127,7 @@
         timer = window.setInterval(renderClocks, 1000);
       }
     });
+  });
   });
 
   safe("theme", function initTheme() {
@@ -212,6 +243,7 @@
     });
   });
 
+  onIdle(function () {
   safe("works", function initWorks() {
     const filterContainer = document.getElementById("filterTagsContainer");
     const searchInput = document.getElementById("searchInput");
@@ -320,6 +352,7 @@
       });
     });
   });
+  });
 
   function openModal(card, trigger) {
     if (!projectModal) return;
@@ -426,6 +459,7 @@
     document.dispatchEvent(new CustomEvent("welly-motion", { detail: reduceMotion }));
   });
 
+  onIdle(function () {
   safe("language", function initLanguage() {
     const hintCopy = {
       en: { href: "/", text: "Continue in English", lang: "en" },
@@ -551,6 +585,7 @@
       });
     }
   });
+  });
 
   safe("visual", function initFeaturedVisual() {
     const container = document.getElementById("threeContainer");
@@ -617,7 +652,7 @@
         const rect = container.getBoundingClientRect();
         width = Math.max(1, Math.round(rect.width));
         height = Math.max(1, Math.round(rect.height));
-        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        const ratio = Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1.5 : 2);
         canvas.width = Math.round(width * ratio);
         canvas.height = Math.round(height * ratio);
         canvas.style.width = width + "px";
@@ -667,6 +702,7 @@
         },
         setTheme: render,
       };
+      if (visible && !reduceMotion) loop();
     }
 
     function mountThree() {
@@ -677,18 +713,19 @@
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
       camera.position.z = 4.2;
+      const smallScreen = window.innerWidth < 768;
       const renderer = new THREE.WebGLRenderer({
         alpha: true,
-        antialias: true,
-        powerPreference: "default",
+        antialias: !smallScreen,
+        powerPreference: smallScreen ? "low-power" : "default",
         failIfMajorPerformanceCaveat: false,
       });
       renderer.setSize(width, height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, smallScreen ? 1.5 : 2));
       renderer.domElement.setAttribute("aria-hidden", "true");
       container.replaceChildren(renderer.domElement);
 
-      const geometry = new THREE.TorusKnotGeometry(1.1, 0.32, 120, 16, 2, 3);
+      const geometry = new THREE.TorusKnotGeometry(1.1, 0.32, smallScreen ? 48 : 96, smallScreen ? 8 : 12, 2, 3);
       const material = new THREE.MeshStandardMaterial({
         color: colors().knot,
         wireframe: true,
@@ -741,6 +778,7 @@
           render();
         },
       };
+      if (visible && !reduceMotion) loop();
     }
 
     function boot() {
@@ -764,11 +802,17 @@
         });
     }
 
+    let pageIdle = false;
+    let wantsThree = false;
+    const frameGap = window.innerWidth < 768 ? 34 : 16;
+    let lastFrame = 0;
+
     function loop() {
       window.cancelAnimationFrame(raf);
-      const step = function () {
+      const step = function (now) {
         if (!visible || document.hidden || reduceMotion) return;
-        if (api) {
+        if (now - lastFrame >= frameGap && api) {
+          lastFrame = now;
           api.spin();
           api.render();
         }
@@ -776,6 +820,26 @@
       };
       raf = window.requestAnimationFrame(step);
     }
+
+    function tryBoot() {
+      if (!pageIdle || !wantsThree) return;
+      boot();
+    }
+
+    function markIdle() {
+      pageIdle = true;
+      tryBoot();
+    }
+
+    function scheduleIdle() {
+      if (window.requestIdleCallback) window.requestIdleCallback(markIdle, { timeout: 2500 });
+      else window.setTimeout(markIdle, 1200);
+    }
+
+    if (document.readyState === "complete") scheduleIdle();
+    else window.addEventListener("load", scheduleIdle);
+
+    window.addEventListener("pointerdown", markIdle, { once: true, passive: true });
 
     container.addEventListener("keydown", function (event) {
       const stepSize = 0.12;
@@ -869,13 +933,16 @@
     const visibility = new IntersectionObserver(
       function (entries) {
         visible = entries.some(function (entry) {
-          return entry.isIntersecting;
+          return entry.isIntersecting && entry.intersectionRatio >= 0.15;
         });
-        if (visible) boot();
-        if (visible && !reduceMotion) loop();
-        else window.cancelAnimationFrame(raf);
+        wantsThree = entries.some(function (entry) {
+          return entry.isIntersecting && entry.intersectionRatio >= 0.45;
+        });
+        if (wantsThree) tryBoot();
+        if (!visible || reduceMotion) window.cancelAnimationFrame(raf);
+        else if (api) loop();
       },
-      { rootMargin: "200px 0px" }
+      { threshold: [0, 0.15, 0.45, 0.75] }
     );
     visibility.observe(container);
 

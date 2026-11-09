@@ -58,16 +58,28 @@
   <link rel="apple-touch-icon" href="/apple-touch.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="(min-width: 768px) 34vw, 100vw" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait-768.webp" imagesrcset="/images/welly-portrait-480.webp 480w, /images/welly-portrait-768.webp 768w" imagesizes="100vw" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="34vw" media="(min-width: 768px)" fetchpriority="high">
 
   <link rel="stylesheet" href="/css/site.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-4XBY16BPLY');
+    function loadWellyAnalytics() {
+      if (window.__wellyGa) return;
+      window.__wellyGa = true;
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+      document.head.appendChild(script);
+    }
+    window.addEventListener("load", function () {
+      if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+      else window.setTimeout(loadWellyAnalytics, 1200);
+    });
   </script>
 
   <script type="application/ld+json">
@@ -427,8 +439,9 @@
         </div>
         <div class="relative col-span-4 aspect-[4/5] overflow-hidden border-t border-brand-primary/50 md:col-span-4 md:aspect-auto md:min-h-[36rem] md:border-l md:border-t-0">
           <picture class="absolute inset-0 block h-full w-full">
-            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="(min-width: 768px) 34vw, 100vw">
-            <img class="hero-portrait h-full w-full" src="/images/welly-portrait.jpg" srcset="/images/welly-portrait-640.jpg 640w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Wellyington), веб-разработчик, цифровой дизайнер и стратег" width="1024" height="1024" decoding="async" fetchpriority="high">
+            <source media="(max-width: 767px)" type="image/webp" srcset="/images/welly-portrait-480.webp 480w, /images/welly-portrait-768.webp 768w" sizes="100vw">
+            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="34vw">
+            <img class="hero-portrait h-full w-full" src="/images/welly-portrait-768.jpg" srcset="/images/welly-portrait-480.jpg 480w, /images/welly-portrait-768.jpg 768w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Wellyington), веб-разработчик, цифровой дизайнер и стратег" width="768" height="768" decoding="async" fetchpriority="high">
           </picture>
           <div class="pointer-events-none absolute bottom-5 left-5 z-10 w-20 md:bottom-6 md:left-6 md:w-28">
             <svg viewBox="0 0 200 200" class="animate-vinyl h-auto w-full drop-shadow-md" role="img" aria-label="виниловый знак by me">
@@ -467,7 +480,19 @@
         <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
           <div class="grid grid-cols-4 md:grid-cols-10">
             <div class="group relative col-span-4 aspect-[4/3] overflow-hidden border-b border-brand-primary/50 md:col-span-5 md:aspect-auto md:min-h-[44rem] md:border-b-0 md:border-r">
-              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Абстрактный каркас избранного проекта. Тяните по горизонтали или используйте стрелки, чтобы повернуть."></div>
+              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Абстрактный каркас избранного проекта. Тяните по горизонтали или используйте стрелки, чтобы повернуть.">
+                <svg class="three-poster" viewBox="0 0 200 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <g fill="none" stroke="currentColor" stroke-width="0.7">
+                    <ellipse cx="100" cy="75" rx="70" ry="24"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(28 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(58 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(92 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="46" ry="16" transform="rotate(14 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="46" ry="16" transform="rotate(74 100 75)"></ellipse>
+                    <circle cx="100" cy="75" r="4" fill="currentColor" stroke="none"></circle>
+                  </g>
+                </svg>
+              </div>
               <div class="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 border border-brand-primary/40 bg-brand-cream/80 px-3 py-1 text-xs uppercase tracking-[0.18em] backdrop-blur">
                 <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-[#71c9ce]" aria-hidden="true"></span>
                 <span>Цифровые идеи, ставшие делом</span>
@@ -539,8 +564,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Equa Estates" data-category="Сайт недвижимости" data-url="https://equaestates.com/" data-tags="real-estate,relocation,costa" data-tag-labels="Недвижимость, Переезд, Коста-дель-Соль" data-summary="EQUA Estates помогает иностранным клиентам купить, снять жильё и переехать в Марбелью и на Коста-дель-Соль. На сайте вместе поиск объектов, готовые подборки, рассказ о районе и помощь с переездом, включая вид на жительство и частные школы.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/equa-estates-800.webp" type="image/webp">
                   <source srcset="/images/projects/equa-estates.webp" type="image/webp">
-                  <img src="/images/projects/equa-estates.jpg" alt="Главная страница EQUA Estates: вилла в Марбелье на закате и заголовок Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/equa-estates.jpg" srcset="/images/projects/equa-estates-800.jpg 800w, /images/projects/equa-estates.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница EQUA Estates: вилла в Марбелье на закате и заголовок Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -555,8 +581,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mirela B Interiors" data-category="Сайт интерьерной студии" data-url="https://mirelabinteriors.com/" data-tags="interior,renovation,costa" data-tag-labels="Интерьер, Ремонт, Коста-дель-Соль" data-summary="Mirela B. Interiors — студия ремонта и интерьера, которая работает по всей Коста-дель-Соль, от Михас-Коста до Касареса. На сайте задуманные ремонты, советы по материалам и цвету, покраска и услуга меблировки.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/mirela-b-interiors-800.webp" type="image/webp">
                   <source srcset="/images/projects/mirela-b-interiors.webp" type="image/webp">
-                  <img src="/images/projects/mirela-b-interiors.jpg" alt="Главная страница Mirela B. Interiors: слева каркас здания, справа готовая прибрежная гостиная" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/mirela-b-interiors.jpg" srcset="/images/projects/mirela-b-interiors-800.jpg 800w, /images/projects/mirela-b-interiors.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница Mirela B. Interiors: слева каркас здания, справа готовая прибрежная гостиная" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -571,8 +598,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mistral &amp; Marea" data-category="Редакционный сайт" data-url="https://mistralmarea.com/" data-tags="editorial,culture,costa" data-tag-labels="Издание, Культура, Коста-дель-Соль" data-summary="Mistral &amp; Marea — ежедневная лента о бизнесе и культуре на Коста-дель-Соль. На главной короткие сигналы, длинные материалы, каталог салонов и список местных бизнесов.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/mistral-marea-800.webp" type="image/webp">
                   <source srcset="/images/projects/mistral-marea.webp" type="image/webp">
-                  <img src="/images/projects/mistral-marea.jpg" alt="Главная страница Mistral &amp; Marea, издание о Коста-дель-Соль, с заголовком The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/mistral-marea.jpg" srcset="/images/projects/mistral-marea-800.jpg 800w, /images/projects/mistral-marea.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница Mistral &amp; Marea, издание о Коста-дель-Соль, с заголовком The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -587,8 +615,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Chill and Heal Hub" data-category="Сайт практики о здоровье" data-url="https://www.chillandhealhub.com/" data-tags="wellness,health" data-tag-labels="Баланс, Здоровье" data-summary="Chill and Heal Hub — практика натуропатии и традиционной китайской медицины в Лондоне и Марбелье. На сайте методы вроде акупунктуры, ручных методов и питания, а также виды сессий и цены.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/chill-and-heal-hub-800.webp" type="image/webp">
                   <source srcset="/images/projects/chill-and-heal-hub.webp" type="image/webp">
-                  <img src="/images/projects/chill-and-heal-hub.jpg" alt="Главная страница Chill and Heal Hub с заголовком Find Your Path to Natural Healing и специалистом за работой" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/chill-and-heal-hub.jpg" srcset="/images/projects/chill-and-heal-hub-800.jpg 800w, /images/projects/chill-and-heal-hub.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница Chill and Heal Hub с заголовком Find Your Path to Natural Healing и специалистом за работой" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -603,8 +632,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-10" data-title="Your New Life in Spain" data-category="Сайт коучинга по переезду" data-url="https://www.yournewlifeinspain.com/" data-tags="relocation,coaching" data-tag-labels="Переезд, Коучинг" data-summary="Your New Life in Spain — практика Наташи Хорнер по коучингу переезда, с базой в Малаге. Сайт объясняет личное сопровождение для тех, кто планирует переезд в Испанию: от короткого звонка, чтобы понять услугу, до более долгого коучинга.">
               <div class="relative z-0 aspect-2/1 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/your-new-life-in-spain-800.webp" type="image/webp">
                   <source srcset="/images/projects/your-new-life-in-spain.webp" type="image/webp">
-                  <img src="/images/projects/your-new-life-in-spain.jpg" alt="Главная страница Your New Life in Spain, с Наташей Хорнер и заголовком Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/your-new-life-in-spain.jpg" srcset="/images/projects/your-new-life-in-spain-800.jpg 800w, /images/projects/your-new-life-in-spain.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница Your New Life in Spain, с Наташей Хорнер и заголовком Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -644,7 +674,7 @@
             <div class="col-span-4 md:col-span-4">
               <picture class="block">
                 <source srcset="/images/welly-about.webp" type="image/webp">
-                <img src="/images/welly-about.jpg" alt="Wellington Almeida с сыном в парке" width="576" height="1024" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
+                <img src="/images/welly-about.jpg" alt="Wellington Almeida с сыном в парке" width="576" height="1024" sizes="(min-width: 768px) 28vw, 92vw" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
               </picture>
             </div>
           </div>
@@ -813,7 +843,7 @@
               </div>
             </div>
             <div class="group relative col-span-4 flex min-h-[380px] items-center justify-center overflow-hidden bg-brand-dark md:col-span-6 md:min-h-[520px]">
-              <img src="/images/contact-workspace.webp" alt="Интерьер кафе с подвесными лампами и светящейся вывеской" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
+              <img src="/images/contact-workspace.webp" sizes="(min-width: 768px) 50vw, 100vw" alt="Интерьер кафе с подвесными лампами и светящейся вывеской" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
               <div class="absolute inset-0 bg-brand-primary/30 mix-blend-multiply"></div>
               <div class="relative z-10 px-6 text-center">
                 <span class="inline-block border border-[#e3fdfd]/85 bg-[#12383c]/75 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#e3fdfd] backdrop-blur-sm">
@@ -829,7 +859,7 @@
 
   <footer class="border-t border-brand-cream/40 bg-brand-primary text-brand-cream">
     <div class="relative h-36 overflow-hidden border-b border-brand-cream/40 md:h-52">
-      <img src="/images/footer-city.webp" alt="Ночные огни города вдоль улицы со светящимися вывесками" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
+      <img src="/images/footer-city.webp" sizes="100vw" alt="Ночные огни города вдоль улицы со светящимися вывесками" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
       <div class="absolute inset-0 bg-gradient-to-t from-brand-primary via-transparent to-transparent opacity-80"></div>
       <div class="absolute bottom-4 left-6 right-6 text-xs font-semibold uppercase tracking-[0.25em] opacity-75">
         Независимый по характеру · Рядом с бизнесом
@@ -950,6 +980,6 @@
     </div>
   </div>
 
-  <script src="/js/main.js" defer></script>
+  <script src="/js/main.min.js" defer></script>
 </body>
 </html>
