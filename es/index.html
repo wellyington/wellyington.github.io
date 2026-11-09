@@ -38,7 +38,8 @@
   <meta name="twitter:image" content="https://wellyington.github.io/images/og-card.jpg">
   <meta name="twitter:image:alt" content="Wellyington. Desarrollador web, diseñador y estratega digital. Digital que funciona. En Estepona, España, y trabaja en todo el mundo.">
 
-  <meta name="theme-color" content="#e3fdfd">
+  <meta name="theme-color" content="#e3fdfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17484d" media="(prefers-color-scheme: dark)">
   <script>
     (function () {
       try {
@@ -47,15 +48,18 @@
           ? saved
           : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         document.documentElement.setAttribute("data-theme", theme);
-        var meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute("content", theme === "dark" ? "#17484d" : "#e3fdfd");
+        var color = theme === "dark" ? "#17484d" : "#e3fdfd";
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) {
+          meta.setAttribute("content", color);
+        });
       } catch (e) {}
     })();
   </script>
 
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch.png">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait-768.webp" imagesrcset="/images/welly-portrait-480.webp 480w, /images/welly-portrait-768.webp 768w" imagesizes="100vw" media="(max-width: 767px)" fetchpriority="high">

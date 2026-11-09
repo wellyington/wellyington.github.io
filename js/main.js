@@ -132,12 +132,14 @@
 
   safe("theme", function initTheme() {
     const toggle = document.getElementById("themeToggleBtn");
-    const themeColor = document.querySelector('meta[name="theme-color"]');
     if (!toggle) return;
 
     function sync(theme) {
       root.setAttribute("data-theme", theme);
-      if (themeColor) themeColor.setAttribute("content", theme === "dark" ? "#17484d" : "#e3fdfd");
+      var color = theme === "dark" ? "#17484d" : "#e3fdfd";
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) {
+        meta.setAttribute("content", color);
+      });
       const toDark = root.dataset.themeToDark || "Switch to dark theme";
       const toLight = root.dataset.themeToLight || "Switch to light theme";
       toggle.setAttribute("aria-label", theme === "dark" ? toLight : toDark);
