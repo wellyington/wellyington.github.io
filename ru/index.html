@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welly — Веб-дизайн и разработка на Коста-дель-Соль</title>
-  <meta name="description" content="Веб-дизайн в Марбелье и Эстепоне, разработка и приложения для бизнеса в Малаге, Торремолиносе, Нерхе, Гибралтаре и Альхесирасе. Welly — цифра, которая работает.">
+  <title>Wellyington — Веб-дизайн и разработка на Коста-дель-Соль</title>
+  <meta name="description" content="Веб-дизайн в Марбелье и Эстепоне, разработка и приложения для бизнеса в Малаге, Торремолиносе, Нерхе, Гибралтаре и Альхесирасе. Wellyington — цифра, которая работает.">
   <meta name="author" content="Wellington Almeida">
   <meta name="robots" content="index, follow">
     <link rel="alternate" hreflang="en" href="https://wellyington.github.io/">
@@ -19,25 +19,27 @@
   <link rel="me" href="https://www.linkedin.com/in/wellyington/">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Welly">
+  <meta property="og:site_name" content="Wellyington">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:locale:alternate" content="es_ES">
   <meta property="og:locale:alternate" content="pt_BR">
   <meta property="og:url" content="https://wellyington.github.io/ru/">
-  <meta property="og:title" content="Welly — Веб-дизайн и разработка на Коста-дель-Соль">
-  <meta property="og:description" content="Веб-дизайн в Марбелье и Эстепоне, разработка и приложения для бизнеса в Малаге, Торремолиносе, Нерхе, Гибралтаре и Альхесирасе. Welly — цифра, которая работает.">
-  <meta property="og:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="1024">
-  <meta property="og:image:alt" content="Wellington Almeida (Welly), веб-разработчик и digital-стратег">
+  <meta property="og:title" content="Wellyington — Веб-дизайн и разработка на Коста-дель-Соль">
+  <meta property="og:description" content="Веб-дизайн в Марбелье и Эстепоне, разработка и приложения для бизнеса в Малаге, Торремолиносе, Нерхе, Гибралтаре и Альхесирасе. Wellyington — цифра, которая работает.">
+  <meta property="og:image" content="https://wellyington.github.io/images/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Wellyington. Веб-разработчик, дизайнер и digital-стратег. Цифра, которая работает. Эстепона, Испания, работает по всему миру.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Welly — Веб-дизайн и разработка на Коста-дель-Соль">
-  <meta name="twitter:description" content="Веб-дизайн в Марбелье и Эстепоне, разработка и приложения для бизнеса в Малаге, Торремолиносе, Нерхе, Гибралтаре и Альхесирасе. Welly — цифра, которая работает.">
-  <meta name="twitter:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
-  <meta name="twitter:image:alt" content="Wellington Almeida (Welly), веб-разработчик и digital-стратег">
+  <meta name="twitter:title" content="Wellyington — Веб-дизайн и разработка на Коста-дель-Соль">
+  <meta name="twitter:description" content="Веб-дизайн в Марбелье и Эстепоне, разработка и приложения для бизнеса в Малаге, Торремолиносе, Нерхе, Гибралтаре и Альхесирасе. Wellyington — цифра, которая работает.">
+  <meta name="twitter:image" content="https://wellyington.github.io/images/og-card.jpg">
+  <meta name="twitter:image:alt" content="Wellyington. Веб-разработчик, дизайнер и digital-стратег. Цифра, которая работает. Эстепона, Испания, работает по всему миру.">
 
-  <meta name="theme-color" content="#e3fdfd">
+  <meta name="theme-color" content="#e3fdfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17484d" media="(prefers-color-scheme: dark)">
   <script>
     (function () {
       try {
@@ -46,27 +48,42 @@
           ? saved
           : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         document.documentElement.setAttribute("data-theme", theme);
-        var meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute("content", theme === "dark" ? "#17484d" : "#e3fdfd");
+        var color = theme === "dark" ? "#17484d" : "#e3fdfd";
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) {
+          meta.setAttribute("content", color);
+        });
       } catch (e) {}
     })();
   </script>
 
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch.png">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="(min-width: 768px) 34vw, 100vw" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait-768.webp" imagesrcset="/images/welly-portrait-480.webp 480w, /images/welly-portrait-768.webp 768w" imagesizes="100vw" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="34vw" media="(min-width: 768px)" fetchpriority="high">
 
   <link rel="stylesheet" href="/css/site.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-4XBY16BPLY');
+    function loadWellyAnalytics() {
+      if (window.__wellyGa) return;
+      window.__wellyGa = true;
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+      document.head.appendChild(script);
+    }
+    window.addEventListener("load", function () {
+      if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+      else window.setTimeout(loadWellyAnalytics, 1200);
+    });
   </script>
 
   <script type="application/ld+json">
@@ -77,9 +94,9 @@
         "@type": "Person",
         "@id": "https://wellyington.github.io/#person",
         "name": "Wellington Almeida",
-        "alternateName": "Welly",
-        "jobTitle": "Веб-разработчик, дизайнер и digital-стратег",
-        "description": "Wellington Almeida (Welly) — веб-разработчик, дизайнер и digital-стратег, родившийся в Бразилии. Вырос в Лондоне, живёт в Эстепоне на Коста-дель-Соль и учился рекламе, кино и фотографии в Школе визуальных искусств в Нью-Йорке.",
+        "alternateName": "Wellyington",
+        "jobTitle": "Веб-разработчик, цифровой дизайнер и стратег",
+        "description": "Wellington Almeida (Wellyington) — веб-разработчик, цифровой дизайнер и стратег. Живёт в Эстепоне, на Коста-дель-Соль, вместе с маленьким сыном. За 15 с лишним лет сделал заказные веб-платформы и цифровые решения для клиентов в разных странах.",
         "url": "https://wellyington.github.io/ru/",
         "email": "welly.almeida@gmail.com",
         "telephone": "+34604286691",
@@ -121,7 +138,7 @@
           "LocalBusiness"
         ],
         "@id": "https://wellyington.github.io/#business",
-        "name": "Welly",
+        "name": "Wellyington",
         "url": "https://wellyington.github.io/ru/",
         "email": "welly.almeida@gmail.com",
         "telephone": "+34604286691",
@@ -290,15 +307,15 @@
     <span class="hidden h-full md:block"></span>
   </div>
 
-  <header class="fixed inset-x-0 top-0 z-40 grid h-14 grid-cols-4 border-b border-brand-primary/50 bg-brand-cream transition-colors md:h-16 md:grid-cols-12">
-    <a href="#top" class="group col-span-2 flex min-w-0 items-center border-r border-brand-primary/50 px-4 text-2xl font-bold tracking-[-0.06em] text-brand-primary md:col-span-2 md:px-6 md:text-3xl">
-      <span class="flex min-w-0 items-center gap-1.5">
-        <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1">Welly</span>
+  <header class="fixed inset-x-0 top-0 z-40 flex h-14 items-stretch border-b border-brand-primary/50 bg-brand-cream transition-colors md:h-16">
+    <a href="#top" class="group flex shrink-0 items-center border-r border-brand-primary/50 px-3 text-brand-primary md:px-5">
+      <span class="flex items-center gap-1.5">
+        <span class="site-wordmark inline-block whitespace-nowrap font-bold tracking-[-0.06em] transition-transform duration-300 group-hover:-translate-x-1">Wellyington</span>
         <span class="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-primary opacity-75" aria-hidden="true"></span>
       </span>
     </a>
 
-    <div class="hidden min-w-0 border-r border-brand-primary/50 md:col-span-6 md:block">
+    <div class="hidden min-w-0 flex-1 border-r border-brand-primary/50 md:block">
       <p class="sr-only">Время Эстепоны, Лондона, Нью-Йорка и Дубая.</p>
       <div class="flex h-full w-full items-center overflow-hidden" aria-hidden="true">
         <div class="animate-marquee select-none text-xs font-medium uppercase tracking-[0.18em]">
@@ -340,7 +357,7 @@
       </div>
     </div>
 
-    <div class="col-span-2 flex items-stretch justify-end md:col-span-4">
+    <div class="ml-auto flex shrink-0 items-stretch">
       <div class="lang-switcher lang-switcher--header" data-lang-switcher><button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu-header" aria-label="Язык"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h60v14H0z"/><path fill="#0039A6" d="M0 14h60v14H0z"/><path fill="#D52B1E" d="M0 28h60v14H0z"/></svg><span>RU</span></button><div id="lang-menu-header" class="lang-menu" data-lang-menu role="group" aria-label="Язык" hidden><a href="/" hreflang="en" lang="en" data-set-lang="en"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><defs><clipPath id="flag-header-en"><path d="M0 0h60v30H0z"/></clipPath></defs><g clip-path="url(#flag-header-en)"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></g></svg><span>EN</span></a><a href="/es/" hreflang="es" lang="es" data-set-lang="es"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h60v40H0z"/><path fill="#F1BF00" d="M0 10h60v20H0z"/></svg><span>ES</span></a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#009B3A" d="M0 0h60v42H0z"/><path fill="#FFDF00" d="M30 4 56 21 30 38 4 21z"/><circle cx="30" cy="21" r="8.5" fill="#002776"/></svg><span>PT</span></a><a href="/ru/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="page"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h60v14H0z"/><path fill="#0039A6" d="M0 14h60v14H0z"/><path fill="#D52B1E" d="M0 28h60v14H0z"/></svg><span>RU</span></a></div></div>
       <button id="themeToggleBtn" type="button" class="group group-roll mr-14 flex h-full shrink-0 cursor-pointer items-center gap-2.5 border-l border-brand-primary/50 px-3 text-brand-primary transition-colors hover:bg-brand-primary hover:text-brand-cream md:mr-16 md:px-5" aria-label="Включить тёмную тему" aria-pressed="false">
         <span class="roll-text text-xs font-semibold uppercase tracking-[0.18em]">
@@ -399,7 +416,7 @@
         <div>
           <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em]">Обо мне</p>
           <p class="max-w-sm text-base leading-relaxed opacity-90 md:text-lg">
-            Я Welly, веб-разработчик, дизайнер и digital-стратег в Эстепоне, на Коста-дель-Соль. Сначала я слушаю, а потом помогаю собрать цифру, которая работает для бизнеса.
+            Я Wellyington, веб-разработчик, цифровой дизайнер и стратег в Эстепоне, на Коста-дель-Соль.
           </p>
         </div>
         <div>
@@ -412,7 +429,7 @@
       </div>
     </div>
     <div class="flex items-center justify-between gap-4 pt-4 text-xs uppercase tracking-widest opacity-60">
-      <span>© 2026 Welly</span>
+      <span>© 2026 Wellyington</span>
       <span>Эстепона, Испания</span>
     </div>
   </div>
@@ -421,13 +438,14 @@
     <section id="top" tabindex="-1" class="overflow-hidden border-b border-brand-primary/50 text-brand-primary" aria-labelledby="hero-heading">
       <div class="grid grid-cols-4 md:grid-cols-12">
         <div class="relative z-10 col-span-4 flex flex-col justify-end px-4 py-12 md:col-span-8 md:px-8 md:py-16">
-          <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] md:mb-4">Веб-разработчик · Дизайнер · Digital‑стратег</p>
+          <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] md:mb-4">Веб-разработчик · Цифровой дизайнер · Стратег</p>
           <h1 id="hero-heading" class="text-[clamp(2.5rem,8vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.10em]">цифра, которая работает.</h1>
         </div>
         <div class="relative col-span-4 aspect-[4/5] overflow-hidden border-t border-brand-primary/50 md:col-span-4 md:aspect-auto md:min-h-[36rem] md:border-l md:border-t-0">
           <picture class="absolute inset-0 block h-full w-full">
-            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="(min-width: 768px) 34vw, 100vw">
-            <img class="hero-portrait h-full w-full" src="/images/welly-portrait.jpg" srcset="/images/welly-portrait-640.jpg 640w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Welly), веб-разработчик и digital-стратег" width="1024" height="1024" decoding="async" fetchpriority="high">
+            <source media="(max-width: 767px)" type="image/webp" srcset="/images/welly-portrait-480.webp 480w, /images/welly-portrait-768.webp 768w" sizes="100vw">
+            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="34vw">
+            <img class="hero-portrait h-full w-full" src="/images/welly-portrait-768.jpg" srcset="/images/welly-portrait-480.jpg 480w, /images/welly-portrait-768.jpg 768w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Wellyington), веб-разработчик, цифровой дизайнер и стратег" width="768" height="768" decoding="async" fetchpriority="high">
           </picture>
           <div class="pointer-events-none absolute bottom-5 left-5 z-10 w-20 md:bottom-6 md:left-6 md:w-28">
             <svg viewBox="0 0 200 200" class="animate-vinyl h-auto w-full drop-shadow-md" role="img" aria-label="виниловый знак by me">
@@ -466,7 +484,19 @@
         <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
           <div class="grid grid-cols-4 md:grid-cols-10">
             <div class="group relative col-span-4 aspect-[4/3] overflow-hidden border-b border-brand-primary/50 md:col-span-5 md:aspect-auto md:min-h-[44rem] md:border-b-0 md:border-r">
-              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Абстрактный каркас избранного проекта. Тяните по горизонтали или используйте стрелки, чтобы повернуть."></div>
+              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Абстрактный каркас избранного проекта. Тяните по горизонтали или используйте стрелки, чтобы повернуть.">
+                <svg class="three-poster" viewBox="0 0 200 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <g fill="none" stroke="currentColor" stroke-width="0.7">
+                    <ellipse cx="100" cy="75" rx="70" ry="24"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(28 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(58 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(92 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="46" ry="16" transform="rotate(14 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="46" ry="16" transform="rotate(74 100 75)"></ellipse>
+                    <circle cx="100" cy="75" r="4" fill="currentColor" stroke="none"></circle>
+                  </g>
+                </svg>
+              </div>
               <div class="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 border border-brand-primary/40 bg-brand-cream/80 px-3 py-1 text-xs uppercase tracking-[0.18em] backdrop-blur">
                 <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-[#71c9ce]" aria-hidden="true"></span>
                 <span>Цифровые идеи, ставшие делом</span>
@@ -538,8 +568,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Equa Estates" data-category="Сайт недвижимости" data-url="https://equaestates.com/" data-tags="real-estate,relocation,costa" data-tag-labels="Недвижимость, Переезд, Коста-дель-Соль" data-summary="EQUA Estates помогает иностранным клиентам купить, снять жильё и переехать в Марбелью и на Коста-дель-Соль. На сайте вместе поиск объектов, готовые подборки, рассказ о районе и помощь с переездом, включая вид на жительство и частные школы.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/equa-estates-800.webp" type="image/webp">
                   <source srcset="/images/projects/equa-estates.webp" type="image/webp">
-                  <img src="/images/projects/equa-estates.jpg" alt="Главная страница EQUA Estates: вилла в Марбелье на закате и заголовок Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/equa-estates.jpg" srcset="/images/projects/equa-estates-800.jpg 800w, /images/projects/equa-estates.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница EQUA Estates: вилла в Марбелье на закате и заголовок Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -554,8 +585,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mirela B Interiors" data-category="Сайт интерьерной студии" data-url="https://mirelabinteriors.com/" data-tags="interior,renovation,costa" data-tag-labels="Интерьер, Ремонт, Коста-дель-Соль" data-summary="Mirela B. Interiors — студия ремонта и интерьера, которая работает по всей Коста-дель-Соль, от Михас-Коста до Касареса. На сайте задуманные ремонты, советы по материалам и цвету, покраска и услуга меблировки.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/mirela-b-interiors-800.webp" type="image/webp">
                   <source srcset="/images/projects/mirela-b-interiors.webp" type="image/webp">
-                  <img src="/images/projects/mirela-b-interiors.jpg" alt="Главная страница Mirela B. Interiors: слева каркас здания, справа готовая прибрежная гостиная" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/mirela-b-interiors.jpg" srcset="/images/projects/mirela-b-interiors-800.jpg 800w, /images/projects/mirela-b-interiors.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница Mirela B. Interiors: слева каркас здания, справа готовая прибрежная гостиная" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -570,8 +602,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mistral &amp; Marea" data-category="Редакционный сайт" data-url="https://mistralmarea.com/" data-tags="editorial,culture,costa" data-tag-labels="Издание, Культура, Коста-дель-Соль" data-summary="Mistral &amp; Marea — ежедневная лента о бизнесе и культуре на Коста-дель-Соль. На главной короткие сигналы, длинные материалы, каталог салонов и список местных бизнесов.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/mistral-marea-800.webp" type="image/webp">
                   <source srcset="/images/projects/mistral-marea.webp" type="image/webp">
-                  <img src="/images/projects/mistral-marea.jpg" alt="Главная страница Mistral &amp; Marea, издание о Коста-дель-Соль, с заголовком The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/mistral-marea.jpg" srcset="/images/projects/mistral-marea-800.jpg 800w, /images/projects/mistral-marea.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница Mistral &amp; Marea, издание о Коста-дель-Соль, с заголовком The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -586,8 +619,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Chill and Heal Hub" data-category="Сайт практики о здоровье" data-url="https://www.chillandhealhub.com/" data-tags="wellness,health" data-tag-labels="Баланс, Здоровье" data-summary="Chill and Heal Hub — практика натуропатии и традиционной китайской медицины в Лондоне и Марбелье. На сайте методы вроде акупунктуры, ручных методов и питания, а также виды сессий и цены.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/chill-and-heal-hub-800.webp" type="image/webp">
                   <source srcset="/images/projects/chill-and-heal-hub.webp" type="image/webp">
-                  <img src="/images/projects/chill-and-heal-hub.jpg" alt="Главная страница Chill and Heal Hub с заголовком Find Your Path to Natural Healing и специалистом за работой" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/chill-and-heal-hub.jpg" srcset="/images/projects/chill-and-heal-hub-800.jpg 800w, /images/projects/chill-and-heal-hub.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница Chill and Heal Hub с заголовком Find Your Path to Natural Healing и специалистом за работой" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -602,8 +636,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-10" data-title="Your New Life in Spain" data-category="Сайт коучинга по переезду" data-url="https://www.yournewlifeinspain.com/" data-tags="relocation,coaching" data-tag-labels="Переезд, Коучинг" data-summary="Your New Life in Spain — практика Наташи Хорнер по коучингу переезда, с базой в Малаге. Сайт объясняет личное сопровождение для тех, кто планирует переезд в Испанию: от короткого звонка, чтобы понять услугу, до более долгого коучинга.">
               <div class="relative z-0 aspect-2/1 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/your-new-life-in-spain-800.webp" type="image/webp">
                   <source srcset="/images/projects/your-new-life-in-spain.webp" type="image/webp">
-                  <img src="/images/projects/your-new-life-in-spain.jpg" alt="Главная страница Your New Life in Spain, с Наташей Хорнер и заголовком Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/your-new-life-in-spain.jpg" srcset="/images/projects/your-new-life-in-spain-800.jpg 800w, /images/projects/your-new-life-in-spain.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Главная страница Your New Life in Spain, с Наташей Хорнер и заголовком Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -631,19 +666,19 @@
           <div class="grid grid-cols-4 md:grid-cols-10">
             <div class="col-span-4 flex flex-col justify-center gap-6 border-b border-brand-primary/50 p-6 md:col-span-6 md:border-b-0 md:border-r md:p-10">
               <p class="max-w-[48ch] text-lg font-light leading-relaxed md:text-xl">
-                Я Welly — Wellington Almeida — веб-разработчик, дизайнер и digital-стратег. Я родился в Бразилии, вырос в Лондоне и живу в Эстепоне, на Коста-дель-Соль. Дома здесь мы с сыном. Ему три года, и я ращу его один.
+                Я Wellington Almeida (Wellyington) — веб-разработчик, цифровой дизайнер и стратег. Живу в Эстепоне, на Коста-дель-Соль, вместе с маленьким сыном.
               </p>
               <p class="max-w-[48ch] text-lg font-light leading-relaxed md:text-xl">
-                Я учился рекламе, кино и фотографии в Школе визуальных искусств в Нью-Йорке. Сразу после выпуска полностью ушёл в цифровой брендинг и разработку, и с тех пор это моя работа. За примерно пятнадцать лет я делал сайты и цифровые продукты для бизнеса в Бразилии, потом в Барселоне и на Ибице, а теперь здесь, на побережье.
+                Моя база — реклама, кино и визуальные медиа, и я быстро перешёл целиком в цифровые системы и дизайн интерфейсов. За 15 с лишним лет я сделал заказные веб-платформы и цифровые решения для клиентов в разных странах, от Бразилии до Барселоны, Ибицы и южного побережья Испании.
               </p>
               <p class="max-w-[48ch] text-lg font-light leading-relaxed md:text-xl">
-                Мне лучше работается рядом с людьми. Я слушаю, остаюсь в проекте и хочу понять бизнес до того, как сайт обретёт форму. Цифра, которая работает, для меня — это что-то ясное и полезное, сделанное вместе с теми, для кого оно существует.
+                Я считаю, что технология должна служить ясным коммерческим целям, без лишнего шума. Я работаю рядом с основателями и командами, чтобы понять, как устроен их бизнес, до того как писать код или определять интерфейсы. Цифра, которая работает, — это просто, быстро и собрано так, чтобы давать измеримый ход вперёд.
               </p>
             </div>
             <div class="col-span-4 md:col-span-4">
               <picture class="block">
                 <source srcset="/images/welly-about.webp" type="image/webp">
-                <img src="/images/welly-about.jpg" alt="Wellington Almeida с сыном в парке" width="576" height="1024" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
+                <img src="/images/welly-about.jpg" alt="Wellington Almeida с сыном в парке" width="576" height="1024" sizes="(min-width: 768px) 28vw, 92vw" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
               </picture>
             </div>
           </div>
@@ -812,7 +847,7 @@
               </div>
             </div>
             <div class="group relative col-span-4 flex min-h-[380px] items-center justify-center overflow-hidden bg-brand-dark md:col-span-6 md:min-h-[520px]">
-              <img src="/images/contact-workspace.webp" alt="Интерьер кафе с подвесными лампами и светящейся вывеской" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
+              <img src="/images/contact-workspace.webp" sizes="(min-width: 768px) 50vw, 100vw" alt="Интерьер кафе с подвесными лампами и светящейся вывеской" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
               <div class="absolute inset-0 bg-brand-primary/30 mix-blend-multiply"></div>
               <div class="relative z-10 px-6 text-center">
                 <span class="inline-block border border-[#e3fdfd]/85 bg-[#12383c]/75 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#e3fdfd] backdrop-blur-sm">
@@ -828,7 +863,7 @@
 
   <footer class="border-t border-brand-cream/40 bg-brand-primary text-brand-cream">
     <div class="relative h-36 overflow-hidden border-b border-brand-cream/40 md:h-52">
-      <img src="/images/footer-city.webp" alt="Ночные огни города вдоль улицы со светящимися вывесками" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
+      <img src="/images/footer-city.webp" sizes="100vw" alt="Ночные огни города вдоль улицы со светящимися вывесками" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
       <div class="absolute inset-0 bg-gradient-to-t from-brand-primary via-transparent to-transparent opacity-80"></div>
       <div class="absolute bottom-4 left-6 right-6 text-xs font-semibold uppercase tracking-[0.25em] opacity-75">
         Независимый по характеру · Рядом с бизнесом
@@ -910,7 +945,7 @@
                 <a href="https://wa.me/34604286691" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center text-sm uppercase tracking-[0.12em] underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100">WhatsApp<span class="sr-only"> (открывается в новой вкладке)</span></a>
               </li>
             </ul>
-            <p class="text-xs uppercase tracking-[0.18em] opacity-70">© 2026 Welly. Все права защищены.</p>
+            <p class="text-xs uppercase tracking-[0.18em] opacity-70">© 2026 Wellyington. Все права защищены.</p>
           </div>
         </div>
       </div>
@@ -918,7 +953,7 @@
 
     <div class="grid select-none grid-cols-4 overflow-hidden md:grid-cols-12">
       <div class="col-span-4 overflow-hidden border-x border-brand-cream/40 md:col-span-10 md:col-start-2">
-        <p class="-mb-[0.12em] px-4 text-center text-[18vw] font-bold leading-[0.8] tracking-[-0.10em] text-brand-cream opacity-95 md:text-[20vw]" aria-hidden="true">Welly</p>
+        <p class="site-wordmark-xl -mb-[0.12em] px-2 text-center font-bold leading-[0.82] text-brand-cream opacity-95" aria-hidden="true">Wellyington</p>
       </div>
     </div>
   </footer>
@@ -940,7 +975,7 @@
         <div id="modalTags" class="mb-6 flex flex-wrap gap-2"></div>
       </div>
       <div class="sticky bottom-0 z-10 -mx-6 mt-2 flex items-center justify-between gap-4 border-t border-brand-primary/40 bg-brand-cream/95 px-6 py-3 backdrop-blur-sm md:-mx-8 md:px-8">
-        <span class="text-xs uppercase tracking-widest opacity-60">Архив проектов Welly</span>
+        <span class="text-xs uppercase tracking-widest opacity-60">Архив проектов Wellyington</span>
         <div class="flex flex-wrap items-center justify-end gap-2">
           <a id="modalVisitLink" href="https://equaestates.com/" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center border border-brand-primary/50 px-4 text-xs font-semibold uppercase tracking-widest hover:bg-brand-primary hover:text-brand-cream">Открыть сайт<span class="sr-only"> (открывается в новой вкладке)</span></a>
           <button id="modalActionBtn" type="button" class="inline-flex min-h-11 items-center bg-brand-primary px-5 py-2 text-xs font-semibold uppercase tracking-widest text-brand-cream hover:opacity-90">Закрыть</button>
@@ -949,6 +984,6 @@
     </div>
   </div>
 
-  <script src="/js/main.js" defer></script>
+  <script src="/js/main.min.js" defer></script>
 </body>
 </html>

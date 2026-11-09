@@ -226,7 +226,7 @@ function jsonLd(locale) {
         "@type": "Person",
         "@id": origin + "/#person",
         name: "Wellington Almeida",
-        alternateName: "Welly",
+        alternateName: "Wellyington",
         jobTitle: locale.schemaJobTitle,
         description: locale.schemaPerson,
         url: url,
@@ -263,7 +263,7 @@ function jsonLd(locale) {
       {
         "@type": ["ProfessionalService", "LocalBusiness"],
         "@id": origin + "/#business",
-        name: "Welly",
+        name: "Wellyington",
         url: url,
         email: "welly.almeida@gmail.com",
         telephone: "+34604286691",
@@ -594,7 +594,7 @@ function validate(locale, html) {
   assert((html.match(/gtag\/js\?id=G-4XBY16BPLY/g) || []).length === 1, locale.code + " gtag src");
   assert((html.match(/G-4XBY16BPLY/g) || []).length === 2, locale.code + " gtag id count");
   assert(html.includes('href="/css/site.css"'), locale.code + " css path");
-  assert(html.includes('src="/js/main.js"'), locale.code + " js path");
+  assert(html.includes('src="/js/main.min.js"'), locale.code + " js path");
   assert(!html.includes('src="images/') && !html.includes('href="css/'), locale.code + " relative asset");
   const match = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
   assert(match, locale.code + " json-ld");

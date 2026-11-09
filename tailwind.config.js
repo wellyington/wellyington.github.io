@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Space Grotesk"', "Manrope", "sans-serif"],
+        sans: ['"Space Grotesk"', '"Space Grotesk Fallback"', "Manrope", "sans-serif"],
       },
       colors: {
         "brand-cream": "rgb(var(--brand-cream) / <alpha-value>)",

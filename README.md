@@ -1,6 +1,6 @@
-# Welly
+# Wellyington
 
-Personal site of Wellington Almeida (Welly), an independent web developer, designer and digital strategist based on the Costa del Sol. GitHub Pages serves this repository from the root of `main`:
+Personal site of Wellington Almeida (Wellyington), an independent web developer, designer and digital strategist based on the Costa del Sol. GitHub Pages serves this repository from the root of `main`:
 
 https://wellyington.github.io/
 
@@ -21,7 +21,7 @@ npm install
 npm run build
 ```
 
-`npm run build` writes the four pages and `sitemap.xml`, then compiles Tailwind from `src/input.css` to `css/site.css`. After editing a locale or the template, run that and commit the output. `npm run build:pages` or `npm run build:css` run the steps on their own.
+`npm run build` writes the four pages and `sitemap.xml`, compiles Tailwind from `src/input.css` to `css/site.css`, and minifies `js/main.js` to `js/main.min.js`. After editing a locale, the template, or `js/main.js`, run that and commit the output. `npm run build:pages`, `npm run build:css`, or `npm run build:js` run the steps on their own.
 
 Space Grotesk (Latin) and Manrope (Cyrillic, only downloaded when Cyrillic is on the page) are self-hosted under the SIL Open Font License. See `fonts/OFL.txt` and `fonts/OFL-Manrope.txt`. Three.js r128 is self-hosted and loads only when the featured visual is near the viewport. Project screenshots live in `images/projects/` as WebP with a JPEG fallback. The contact and footer photographs in `images/` are optimized WebP.
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welly — Diseño web y desarrollo en la Costa del Sol</title>
-  <meta name="description" content="Diseño web en Marbella, Estepona y Málaga, y también en Torremolinos, Nerja, Gibraltar y Algeciras. Desarrollo y aplicaciones. Welly — digital que funciona.">
+  <title>Wellyington — Diseño web y desarrollo en la Costa del Sol</title>
+  <meta name="description" content="Diseño web en Marbella, Estepona y Málaga, y también en Torremolinos, Nerja, Gibraltar y Algeciras. Desarrollo y aplicaciones. Wellyington — digital que funciona.">
   <meta name="author" content="Wellington Almeida">
   <meta name="robots" content="index, follow">
     <link rel="alternate" hreflang="en" href="https://wellyington.github.io/">
@@ -19,25 +19,27 @@
   <link rel="me" href="https://www.linkedin.com/in/wellyington/">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Welly">
+  <meta property="og:site_name" content="Wellyington">
   <meta property="og:locale" content="es_ES">
   <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:locale:alternate" content="pt_BR">
   <meta property="og:locale:alternate" content="ru_RU">
   <meta property="og:url" content="https://wellyington.github.io/es/">
-  <meta property="og:title" content="Welly — Diseño web y desarrollo en la Costa del Sol">
-  <meta property="og:description" content="Diseño web en Marbella, Estepona y Málaga, y también en Torremolinos, Nerja, Gibraltar y Algeciras. Desarrollo y aplicaciones. Welly — digital que funciona.">
-  <meta property="og:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="1024">
-  <meta property="og:image:alt" content="Wellington Almeida (Welly), desarrollador web y estratega digital">
+  <meta property="og:title" content="Wellyington — Diseño web y desarrollo en la Costa del Sol">
+  <meta property="og:description" content="Diseño web en Marbella, Estepona y Málaga, y también en Torremolinos, Nerja, Gibraltar y Algeciras. Desarrollo y aplicaciones. Wellyington — digital que funciona.">
+  <meta property="og:image" content="https://wellyington.github.io/images/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Wellyington. Desarrollador web, diseñador y estratega digital. Digital que funciona. En Estepona, España, y trabaja en todo el mundo.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Welly — Diseño web y desarrollo en la Costa del Sol">
-  <meta name="twitter:description" content="Diseño web en Marbella, Estepona y Málaga, y también en Torremolinos, Nerja, Gibraltar y Algeciras. Desarrollo y aplicaciones. Welly — digital que funciona.">
-  <meta name="twitter:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
-  <meta name="twitter:image:alt" content="Wellington Almeida (Welly), desarrollador web y estratega digital">
+  <meta name="twitter:title" content="Wellyington — Diseño web y desarrollo en la Costa del Sol">
+  <meta name="twitter:description" content="Diseño web en Marbella, Estepona y Málaga, y también en Torremolinos, Nerja, Gibraltar y Algeciras. Desarrollo y aplicaciones. Wellyington — digital que funciona.">
+  <meta name="twitter:image" content="https://wellyington.github.io/images/og-card.jpg">
+  <meta name="twitter:image:alt" content="Wellyington. Desarrollador web, diseñador y estratega digital. Digital que funciona. En Estepona, España, y trabaja en todo el mundo.">
 
-  <meta name="theme-color" content="#e3fdfd">
+  <meta name="theme-color" content="#e3fdfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17484d" media="(prefers-color-scheme: dark)">
   <script>
     (function () {
       try {
@@ -46,27 +48,42 @@
           ? saved
           : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         document.documentElement.setAttribute("data-theme", theme);
-        var meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute("content", theme === "dark" ? "#17484d" : "#e3fdfd");
+        var color = theme === "dark" ? "#17484d" : "#e3fdfd";
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) {
+          meta.setAttribute("content", color);
+        });
       } catch (e) {}
     })();
   </script>
 
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch.png">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="(min-width: 768px) 34vw, 100vw" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait-768.webp" imagesrcset="/images/welly-portrait-480.webp 480w, /images/welly-portrait-768.webp 768w" imagesizes="100vw" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="/images/welly-portrait.webp" imagesrcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" imagesizes="34vw" media="(min-width: 768px)" fetchpriority="high">
 
   <link rel="stylesheet" href="/css/site.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-4XBY16BPLY');
+    function loadWellyAnalytics() {
+      if (window.__wellyGa) return;
+      window.__wellyGa = true;
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+      document.head.appendChild(script);
+    }
+    window.addEventListener("load", function () {
+      if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+      else window.setTimeout(loadWellyAnalytics, 1200);
+    });
   </script>
 
   <script type="application/ld+json">
@@ -77,9 +94,9 @@
         "@type": "Person",
         "@id": "https://wellyington.github.io/#person",
         "name": "Wellington Almeida",
-        "alternateName": "Welly",
-        "jobTitle": "Desarrollador web, diseñador y estratega digital",
-        "description": "Wellington Almeida (Welly) es un desarrollador web, diseñador y estratega digital nacido en Brasil. Creció en Londres, vive en Estepona, en la Costa del Sol, y estudió publicidad, cine y fotografía en la School of Visual Arts de Nueva York.",
+        "alternateName": "Wellyington",
+        "jobTitle": "Desarrollador web, diseñador digital y estratega",
+        "description": "Wellington Almeida (Wellyington) es desarrollador web, diseñador digital y estratega, con base en Estepona, en la Costa del Sol, donde vive con su hijo pequeño. A lo largo de más de 15 años ha creado plataformas web a medida y soluciones digitales para clientes de distintos países.",
         "url": "https://wellyington.github.io/es/",
         "email": "welly.almeida@gmail.com",
         "telephone": "+34604286691",
@@ -121,7 +138,7 @@
           "LocalBusiness"
         ],
         "@id": "https://wellyington.github.io/#business",
-        "name": "Welly",
+        "name": "Wellyington",
         "url": "https://wellyington.github.io/es/",
         "email": "welly.almeida@gmail.com",
         "telephone": "+34604286691",
@@ -290,15 +307,15 @@
     <span class="hidden h-full md:block"></span>
   </div>
 
-  <header class="fixed inset-x-0 top-0 z-40 grid h-14 grid-cols-4 border-b border-brand-primary/50 bg-brand-cream transition-colors md:h-16 md:grid-cols-12">
-    <a href="#top" class="group col-span-2 flex min-w-0 items-center border-r border-brand-primary/50 px-4 text-2xl font-bold tracking-[-0.06em] text-brand-primary md:col-span-2 md:px-6 md:text-3xl">
-      <span class="flex min-w-0 items-center gap-1.5">
-        <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1">Welly</span>
+  <header class="fixed inset-x-0 top-0 z-40 flex h-14 items-stretch border-b border-brand-primary/50 bg-brand-cream transition-colors md:h-16">
+    <a href="#top" class="group flex shrink-0 items-center border-r border-brand-primary/50 px-3 text-brand-primary md:px-5">
+      <span class="flex items-center gap-1.5">
+        <span class="site-wordmark inline-block whitespace-nowrap font-bold tracking-[-0.06em] transition-transform duration-300 group-hover:-translate-x-1">Wellyington</span>
         <span class="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-primary opacity-75" aria-hidden="true"></span>
       </span>
     </a>
 
-    <div class="hidden min-w-0 border-r border-brand-primary/50 md:col-span-6 md:block">
+    <div class="hidden min-w-0 flex-1 border-r border-brand-primary/50 md:block">
       <p class="sr-only">Horas de Estepona, Londres, Nueva York y Dubái.</p>
       <div class="flex h-full w-full items-center overflow-hidden" aria-hidden="true">
         <div class="animate-marquee select-none text-xs font-medium uppercase tracking-[0.18em]">
@@ -340,7 +357,7 @@
       </div>
     </div>
 
-    <div class="col-span-2 flex items-stretch justify-end md:col-span-4">
+    <div class="ml-auto flex shrink-0 items-stretch">
       <div class="lang-switcher lang-switcher--header" data-lang-switcher><button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu-header" aria-label="Idioma"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h60v40H0z"/><path fill="#F1BF00" d="M0 10h60v20H0z"/></svg><span>ES</span></button><div id="lang-menu-header" class="lang-menu" data-lang-menu role="group" aria-label="Idioma" hidden><a href="/" hreflang="en" lang="en" data-set-lang="en"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><defs><clipPath id="flag-header-en"><path d="M0 0h60v30H0z"/></clipPath></defs><g clip-path="url(#flag-header-en)"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></g></svg><span>EN</span></a><a href="/es/" hreflang="es" lang="es" data-set-lang="es" aria-current="page"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h60v40H0z"/><path fill="#F1BF00" d="M0 10h60v20H0z"/></svg><span>ES</span></a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#009B3A" d="M0 0h60v42H0z"/><path fill="#FFDF00" d="M30 4 56 21 30 38 4 21z"/><circle cx="30" cy="21" r="8.5" fill="#002776"/></svg><span>PT</span></a><a href="/ru/" hreflang="ru" lang="ru" data-set-lang="ru"><svg class="flag" viewBox="0 0 60 42" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h60v14H0z"/><path fill="#0039A6" d="M0 14h60v14H0z"/><path fill="#D52B1E" d="M0 28h60v14H0z"/></svg><span>RU</span></a></div></div>
       <button id="themeToggleBtn" type="button" class="group group-roll mr-14 flex h-full shrink-0 cursor-pointer items-center gap-2.5 border-l border-brand-primary/50 px-3 text-brand-primary transition-colors hover:bg-brand-primary hover:text-brand-cream md:mr-16 md:px-5" aria-label="Cambiar al tema oscuro" aria-pressed="false">
         <span class="roll-text text-xs font-semibold uppercase tracking-[0.18em]">
@@ -399,7 +416,7 @@
         <div>
           <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em]">Sobre mí</p>
           <p class="max-w-sm text-base leading-relaxed opacity-90 md:text-lg">
-            Soy Welly, desarrollador web, diseñador y estratega digital en Estepona, en la Costa del Sol. Primero escucho, y luego ayudo a dar forma a un digital que funciona para el negocio.
+            Soy Wellyington, desarrollador web, diseñador digital y estratega en Estepona, en la Costa del Sol.
           </p>
         </div>
         <div>
@@ -412,7 +429,7 @@
       </div>
     </div>
     <div class="flex items-center justify-between gap-4 pt-4 text-xs uppercase tracking-widest opacity-60">
-      <span>© 2026 Welly</span>
+      <span>© 2026 Wellyington</span>
       <span>Estepona, España</span>
     </div>
   </div>
@@ -421,13 +438,14 @@
     <section id="top" tabindex="-1" class="overflow-hidden border-b border-brand-primary/50 text-brand-primary" aria-labelledby="hero-heading">
       <div class="grid grid-cols-4 md:grid-cols-12">
         <div class="relative z-10 col-span-4 flex flex-col justify-end px-4 py-12 md:col-span-8 md:px-8 md:py-16">
-          <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] md:mb-4">Desarrollador web · Diseñador · Estratega digital</p>
+          <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] md:mb-4">Desarrollador web · Diseñador digital · Estratega</p>
           <h1 id="hero-heading" class="text-[clamp(2.5rem,8vw,8.5rem)] font-bold leading-[0.88] tracking-[-0.10em]">digital que funciona.</h1>
         </div>
         <div class="relative col-span-4 aspect-[4/5] overflow-hidden border-t border-brand-primary/50 md:col-span-4 md:aspect-auto md:min-h-[36rem] md:border-l md:border-t-0">
           <picture class="absolute inset-0 block h-full w-full">
-            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="(min-width: 768px) 34vw, 100vw">
-            <img class="hero-portrait h-full w-full" src="/images/welly-portrait.jpg" srcset="/images/welly-portrait-640.jpg 640w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Welly), desarrollador web y estratega digital" width="1024" height="1024" decoding="async" fetchpriority="high">
+            <source media="(max-width: 767px)" type="image/webp" srcset="/images/welly-portrait-480.webp 480w, /images/welly-portrait-768.webp 768w" sizes="100vw">
+            <source type="image/webp" srcset="/images/welly-portrait-640.webp 640w, /images/welly-portrait.webp 1024w" sizes="34vw">
+            <img class="hero-portrait h-full w-full" src="/images/welly-portrait-768.jpg" srcset="/images/welly-portrait-480.jpg 480w, /images/welly-portrait-768.jpg 768w, /images/welly-portrait.jpg 1024w" sizes="(min-width: 768px) 34vw, 100vw" alt="Wellington Almeida (Wellyington), desarrollador web, diseñador digital y estratega" width="768" height="768" decoding="async" fetchpriority="high">
           </picture>
           <div class="pointer-events-none absolute bottom-5 left-5 z-10 w-20 md:bottom-6 md:left-6 md:w-28">
             <svg viewBox="0 0 200 200" class="animate-vinyl h-auto w-full drop-shadow-md" role="img" aria-label="chapa de vinilo by me">
@@ -466,7 +484,19 @@
         <div class="col-span-4 border-x border-brand-primary/50 md:col-span-10 md:col-start-2">
           <div class="grid grid-cols-4 md:grid-cols-10">
             <div class="group relative col-span-4 aspect-[4/3] overflow-hidden border-b border-brand-primary/50 md:col-span-5 md:aspect-auto md:min-h-[44rem] md:border-b-0 md:border-r">
-              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Estructura de alambre del proyecto destacado. Arrastra en horizontal, o usa las flechas, para girarla."></div>
+              <div id="threeContainer" class="h-full w-full cursor-grab active:cursor-grabbing" role="img" tabindex="0" aria-label="Estructura de alambre del proyecto destacado. Arrastra en horizontal, o usa las flechas, para girarla.">
+                <svg class="three-poster" viewBox="0 0 200 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <g fill="none" stroke="currentColor" stroke-width="0.7">
+                    <ellipse cx="100" cy="75" rx="70" ry="24"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(28 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(58 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="70" ry="24" transform="rotate(92 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="46" ry="16" transform="rotate(14 100 75)"></ellipse>
+                    <ellipse cx="100" cy="75" rx="46" ry="16" transform="rotate(74 100 75)"></ellipse>
+                    <circle cx="100" cy="75" r="4" fill="currentColor" stroke="none"></circle>
+                  </g>
+                </svg>
+              </div>
               <div class="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 border border-brand-primary/40 bg-brand-cream/80 px-3 py-1 text-xs uppercase tracking-[0.18em] backdrop-blur">
                 <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-[#71c9ce]" aria-hidden="true"></span>
                 <span>Ideas digitales, hechas reales</span>
@@ -538,8 +568,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Equa Estates" data-category="Sitio inmobiliario" data-url="https://equaestates.com/" data-tags="real-estate,relocation,costa" data-tag-labels="Inmobiliaria, Relocalización, Costa del Sol" data-summary="EQUA Estates ayuda a clientes internacionales a comprar, alquilar y mudarse a Marbella y a la Costa del Sol. El sitio reúne la búsqueda de propiedades, colecciones elegidas, guías de la zona y apoyo para la relocalización, incluida la coordinación de la residencia y de la educación privada.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/equa-estates-800.webp" type="image/webp">
                   <source srcset="/images/projects/equa-estates.webp" type="image/webp">
-                  <img src="/images/projects/equa-estates.jpg" alt="Portada de EQUA Estates: una villa de Marbella al atardecer, con el titular Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/equa-estates.jpg" srcset="/images/projects/equa-estates-800.jpg 800w, /images/projects/equa-estates.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Portada de EQUA Estates: una villa de Marbella al atardecer, con el titular Luxury Property and Relocation in Marbella" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -554,8 +585,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mirela B Interiors" data-category="Sitio de interiorismo" data-url="https://mirelabinteriors.com/" data-tags="interior,renovation,costa" data-tag-labels="Interiorismo, Reforma, Costa del Sol" data-summary="Mirela B. Interiors es un estudio de reforma e interiorismo que trabaja en toda la Costa del Sol, de Mijas Costa a Casares. El sitio presenta reformas planteadas, consejo de materiales y color, pintura y un servicio de amueblamiento.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/mirela-b-interiors-800.webp" type="image/webp">
                   <source srcset="/images/projects/mirela-b-interiors.webp" type="image/webp">
-                  <img src="/images/projects/mirela-b-interiors.jpg" alt="Portada de Mirela B. Interiors, partida entre la estructura de un edificio en obra y un salón costero terminado" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/mirela-b-interiors.jpg" srcset="/images/projects/mirela-b-interiors-800.jpg 800w, /images/projects/mirela-b-interiors.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Portada de Mirela B. Interiors, partida entre la estructura de un edificio en obra y un salón costero terminado" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -570,8 +602,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-4 md:border-r" data-title="Mistral &amp; Marea" data-category="Sitio editorial" data-url="https://mistralmarea.com/" data-tags="editorial,culture,costa" data-tag-labels="Editorial, Cultura, Costa del Sol" data-summary="Mistral &amp; Marea es un medio diario de negocio y cultura en la Costa del Sol. La portada ordena señales breves, reportajes más largos, un directorio de salones y una agenda de negocios locales.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/mistral-marea-800.webp" type="image/webp">
                   <source srcset="/images/projects/mistral-marea.webp" type="image/webp">
-                  <img src="/images/projects/mistral-marea.jpg" alt="Portada de Mistral &amp; Marea, un medio de la Costa del Sol, con el titular The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/mistral-marea.jpg" srcset="/images/projects/mistral-marea-800.jpg 800w, /images/projects/mistral-marea.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Portada de Mistral &amp; Marea, un medio de la Costa del Sol, con el titular The daily coast, in full" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -586,8 +619,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-6 md:border-r" data-title="Chill and Heal Hub" data-category="Sitio de consulta de bienestar" data-url="https://www.chillandhealhub.com/" data-tags="wellness,health" data-tag-labels="Bienestar, Salud" data-summary="Chill and Heal Hub es una consulta de naturopatía y medicina tradicional china en Londres y Marbella. El sitio presenta terapias como la acupuntura, los tratamientos manuales y la nutrición, y lista tipos de sesión y precios.">
               <div class="relative z-0 aspect-16/9 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/chill-and-heal-hub-800.webp" type="image/webp">
                   <source srcset="/images/projects/chill-and-heal-hub.webp" type="image/webp">
-                  <img src="/images/projects/chill-and-heal-hub.jpg" alt="Portada de Chill and Heal Hub, con el titular Find Your Path to Natural Healing y una profesional trabajando" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/chill-and-heal-hub.jpg" srcset="/images/projects/chill-and-heal-hub-800.jpg 800w, /images/projects/chill-and-heal-hub.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Portada de Chill and Heal Hub, con el titular Find Your Path to Natural Healing y una profesional trabajando" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -602,8 +636,9 @@
             <article class="work-card group relative col-span-4 flex flex-col overflow-hidden border-b border-brand-primary/50 md:col-span-10" data-title="Your New Life in Spain" data-category="Sitio de coaching de relocalización" data-url="https://www.yournewlifeinspain.com/" data-tags="relocation,coaching" data-tag-labels="Relocalización, Coaching" data-summary="Your New Life in Spain es la consulta de coaching de relocalización de Natasha Horner, con base en Málaga. El sitio explica el acompañamiento individual para quien planea mudarse a España, desde una llamada breve para orientar el servicio hasta un coaching más largo.">
               <div class="relative z-0 aspect-2/1 w-full grow overflow-hidden bg-brand-dark">
                 <picture class="absolute inset-0 block h-full w-full">
+                  <source media="(max-width: 767px)" srcset="/images/projects/your-new-life-in-spain-800.webp" type="image/webp">
                   <source srcset="/images/projects/your-new-life-in-spain.webp" type="image/webp">
-                  <img src="/images/projects/your-new-life-in-spain.jpg" alt="Portada de Your New Life in Spain, con Natasha Horner y el titular Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
+                  <img src="/images/projects/your-new-life-in-spain.jpg" srcset="/images/projects/your-new-life-in-spain-800.jpg 800w, /images/projects/your-new-life-in-spain.jpg 1440w" sizes="(min-width: 768px) 46vw, 100vw" alt="Portada de Your New Life in Spain, con Natasha Horner y el titular Move to Spain with Clarity, Not Chaos" width="1440" height="900" loading="lazy" decoding="async" class="hover-zoom h-full w-full object-cover object-top contrast-110 grayscale transition-transform duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105">
                 </picture>
                 <div class="pointer-events-none absolute inset-0 bg-brand-primary/10 transition-opacity group-hover:opacity-0"></div>
               </div>
@@ -631,19 +666,19 @@
           <div class="grid grid-cols-4 md:grid-cols-10">
             <div class="col-span-4 flex flex-col justify-center gap-6 border-b border-brand-primary/50 p-6 md:col-span-6 md:border-b-0 md:border-r md:p-10">
               <p class="max-w-[48ch] text-lg font-light leading-relaxed md:text-xl">
-                Soy Welly — Wellington Almeida —, desarrollador web, diseñador y estratega digital. Nací en Brasil, crecí en Londres y vivo en Estepona, en la Costa del Sol. Aquí en casa estamos mi hijo y yo. Tiene tres años y lo crío solo.
+                Soy Wellington Almeida (Wellyington) — desarrollador web, diseñador digital y estratega, con base en Estepona, en la Costa del Sol, donde vivo con mi hijo pequeño.
               </p>
               <p class="max-w-[48ch] text-lg font-light leading-relaxed md:text-xl">
-                Estudié publicidad, cine y fotografía en la School of Visual Arts de Nueva York. Justo al terminar me metí de lleno en la marca digital y el desarrollo, y desde entonces ese es mi trabajo. En unos quince años he hecho sitios y productos digitales para negocios en Brasil, luego en Barcelona e Ibiza, y ahora aquí en la costa.
+                Me formé con una base en publicidad, cine y medios visuales, y enseguida me pasé por completo a los sistemas digitales y al diseño de interfaces. A lo largo de más de 15 años he entregado plataformas web a medida y soluciones digitales a clientes de distintos países, de Brasil a Barcelona, Ibiza y la costa sur de España.
               </p>
               <p class="max-w-[48ch] text-lg font-light leading-relaxed md:text-xl">
-                Trabajo mejor cerca de las personas. Escucho, me quedo en el proyecto y quiero entender el negocio antes de que la web tome forma. Digital que funciona, para mí, es algo claro y útil, hecho con las personas para las que es.
+                Creo que la tecnología debe servir a objetivos comerciales claros, sin ruido innecesario. Trabajo de cerca con fundadores y equipos para entender cómo funciona su negocio antes de escribir código o definir interfaces. Un digital que funciona es simple, rápido y está pensado para impulsar un avance que se pueda medir.
               </p>
             </div>
             <div class="col-span-4 md:col-span-4">
               <picture class="block">
                 <source srcset="/images/welly-about.webp" type="image/webp">
-                <img src="/images/welly-about.jpg" alt="Wellington Almeida con su hijo en un parque" width="576" height="1024" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
+                <img src="/images/welly-about.jpg" alt="Wellington Almeida con su hijo en un parque" width="576" height="1024" sizes="(min-width: 768px) 28vw, 92vw" loading="lazy" decoding="async" class="h-auto w-full object-cover object-center">
               </picture>
             </div>
           </div>
@@ -812,7 +847,7 @@
               </div>
             </div>
             <div class="group relative col-span-4 flex min-h-[380px] items-center justify-center overflow-hidden bg-brand-dark md:col-span-6 md:min-h-[520px]">
-              <img src="/images/contact-workspace.webp" alt="Interior de un café con lámparas de techo y un rótulo iluminado" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
+              <img src="/images/contact-workspace.webp" sizes="(min-width: 768px) 50vw, 100vw" alt="Interior de un café con lámparas de techo y un rótulo iluminado" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
               <div class="absolute inset-0 bg-brand-primary/30 mix-blend-multiply"></div>
               <div class="relative z-10 px-6 text-center">
                 <span class="inline-block border border-[#e3fdfd]/85 bg-[#12383c]/75 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#e3fdfd] backdrop-blur-sm">
@@ -828,7 +863,7 @@
 
   <footer class="border-t border-brand-cream/40 bg-brand-primary text-brand-cream">
     <div class="relative h-36 overflow-hidden border-b border-brand-cream/40 md:h-52">
-      <img src="/images/footer-city.webp" alt="Luces de la ciudad de noche, a lo largo de una calle de rótulos iluminados" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
+      <img src="/images/footer-city.webp" sizes="100vw" alt="Luces de la ciudad de noche, a lo largo de una calle de rótulos iluminados" width="1600" height="608" loading="lazy" decoding="async" class="h-full w-full object-cover brightness-90 contrast-125 motion-safe:animate-pulse">
       <div class="absolute inset-0 bg-gradient-to-t from-brand-primary via-transparent to-transparent opacity-80"></div>
       <div class="absolute bottom-4 left-6 right-6 text-xs font-semibold uppercase tracking-[0.25em] opacity-75">
         Independiente por decisión · Cerca del negocio
@@ -910,7 +945,7 @@
                 <a href="https://wa.me/34604286691" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center text-sm uppercase tracking-[0.12em] underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100">WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
               </li>
             </ul>
-            <p class="text-xs uppercase tracking-[0.18em] opacity-70">© 2026 Welly. Todos los derechos reservados.</p>
+            <p class="text-xs uppercase tracking-[0.18em] opacity-70">© 2026 Wellyington. Todos los derechos reservados.</p>
           </div>
         </div>
       </div>
@@ -918,7 +953,7 @@
 
     <div class="grid select-none grid-cols-4 overflow-hidden md:grid-cols-12">
       <div class="col-span-4 overflow-hidden border-x border-brand-cream/40 md:col-span-10 md:col-start-2">
-        <p class="-mb-[0.12em] px-4 text-center text-[18vw] font-bold leading-[0.8] tracking-[-0.10em] text-brand-cream opacity-95 md:text-[20vw]" aria-hidden="true">Welly</p>
+        <p class="site-wordmark-xl -mb-[0.12em] px-2 text-center font-bold leading-[0.82] text-brand-cream opacity-95" aria-hidden="true">Wellyington</p>
       </div>
     </div>
   </footer>
@@ -940,7 +975,7 @@
         <div id="modalTags" class="mb-6 flex flex-wrap gap-2"></div>
       </div>
       <div class="sticky bottom-0 z-10 -mx-6 mt-2 flex items-center justify-between gap-4 border-t border-brand-primary/40 bg-brand-cream/95 px-6 py-3 backdrop-blur-sm md:-mx-8 md:px-8">
-        <span class="text-xs uppercase tracking-widest opacity-60">Archivo de proyectos de Welly</span>
+        <span class="text-xs uppercase tracking-widest opacity-60">Archivo de proyectos de Wellyington</span>
         <div class="flex flex-wrap items-center justify-end gap-2">
           <a id="modalVisitLink" href="https://equaestates.com/" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center border border-brand-primary/50 px-4 text-xs font-semibold uppercase tracking-widest hover:bg-brand-primary hover:text-brand-cream">Visitar el sitio<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
           <button id="modalActionBtn" type="button" class="inline-flex min-h-11 items-center bg-brand-primary px-5 py-2 text-xs font-semibold uppercase tracking-widest text-brand-cream hover:opacity-90">Cerrar</button>
@@ -949,6 +984,6 @@
     </div>
   </div>
 
-  <script src="/js/main.js" defer></script>
+  <script src="/js/main.min.js" defer></script>
 </body>
 </html>
