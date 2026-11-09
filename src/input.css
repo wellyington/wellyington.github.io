@@ -143,6 +143,23 @@ body {
   transform-origin: center;
 }
 
+.site-wordmark {
+  font-size: clamp(1.05rem, 5.5vw, 1.45rem);
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .site-wordmark {
+    font-size: 1.875rem;
+  }
+}
+
+.site-wordmark-xl {
+  font-size: clamp(1.55rem, 8.15vw, 7.25rem);
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+}
+
 .theme-word {
   font-size: 0;
   line-height: 0;

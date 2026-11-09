@@ -226,7 +226,7 @@ function jsonLd(locale) {
         "@type": "Person",
         "@id": origin + "/#person",
         name: "Wellington Almeida",
-        alternateName: "Welly",
+        alternateName: "Wellyington",
         jobTitle: locale.schemaJobTitle,
         description: locale.schemaPerson,
         url: url,
@@ -263,7 +263,7 @@ function jsonLd(locale) {
       {
         "@type": ["ProfessionalService", "LocalBusiness"],
         "@id": origin + "/#business",
-        name: "Welly",
+        name: "Wellyington",
         url: url,
         email: "welly.almeida@gmail.com",
         telephone: "+34604286691",

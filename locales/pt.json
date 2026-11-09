@@ -5,8 +5,8 @@
   "path": "/pt/",
   "code": "pt",
   "label": "PT",
-  "title": "Welly — Criação de sites e desenvolvimento na Costa del Sol",
-  "description": "Criação de sites, desenvolvimento e aplicativos para negócios em Estepona, Marbella e Málaga, e também em Torremolinos, Nerja, Gibraltar e Algeciras. Welly — digital que funciona.",
+  "title": "Wellyington — Criação de sites e desenvolvimento na Costa del Sol",
+  "description": "Criação de sites, desenvolvimento e aplicativos para negócios em Estepona, Marbella e Málaga, e também em Torremolinos, Nerja, Gibraltar e Algeciras. Wellyington — digital que funciona.",
   "skip": "Pular para o conteúdo",
   "clocksLabel": "Horários de Estepona, Londres, Nova York e Dubai.",
   "menuOpen": "Abrir menu",
@@ -27,14 +27,15 @@
   "navProcess": "da ideia ao resultado.",
   "navContact": "contato.",
   "menuAboutLabel": "Sobre",
-  "menuIntro": "Eu sou o Welly, desenvolvedor web, designer e estrategista digital em Estepona, na Costa del Sol. Primeiro eu escuto, e depois ajudo a dar forma a um digital que funciona para o negócio.",
+  "menuIntro": "Eu sou o Wellyington, desenvolvedor web, designer e estrategista digital em Estepona, na Costa del Sol. Primeiro eu escuto, e depois ajudo a dar forma a um digital que funciona para o negócio.",
   "socialsLabel": "Redes",
   "cv": "CV",
   "website": "Site",
   "newTab": "(abre em uma nova aba)",
   "placeLine": "Estepona, Espanha",
   "heroEyebrow": "Desenvolvedor web · Designer · Estrategista digital",
-  "portraitAlt": "Wellington Almeida (Welly), desenvolvedor web e estrategista digital",
+  "portraitAlt": "Wellington Almeida (Wellyington), desenvolvedor web e estrategista digital",
+  "ogImageAlt": "Wellyington. Desenvolvedor web, designer e estrategista digital. Digital que funciona. Em Estepona, Espanha, e trabalha no mundo todo.",
   "vinylLabel": "selo de vinil by me",
   "threeLabel": "Estrutura de arame do projeto em destaque. Arraste na horizontal, ou use as setas, para girar.",
   "threeCaption": "Ideias digitais, feitas de verdade",
@@ -84,7 +85,7 @@
   "p0tags": "Imobiliária, Mudança, Costa del Sol",
   "equaAlt": "Página inicial da EQUA Estates: uma villa em Marbella ao pôr do sol, com o título Luxury Property and Relocation in Marbella",
   "aboutEyebrow": "Um pouco sobre mim",
-  "aboutP1": "Eu sou o Welly — Wellington Almeida —, desenvolvedor web, designer e estrategista digital. Nasci no Brasil, cresci em Londres e moro em Estepona, na Costa del Sol. Aqui em casa somos eu e meu filho. Ele tem três anos e eu o crio sozinho.",
+  "aboutP1": "Eu sou o Wellyington — Wellington Almeida —, desenvolvedor web, designer e estrategista digital. Nasci no Brasil, cresci em Londres e moro em Estepona, na Costa del Sol. Aqui em casa somos eu e meu filho. Ele tem três anos e eu o crio sozinho.",
   "aboutP2": "Estudei publicidade, cinema e fotografia na School of Visual Arts, em Nova York. Logo depois de me formar entrei de vez em marca digital e desenvolvimento, e esse é o meu trabalho desde então. Em cerca de quinze anos fiz sites e produtos digitais para negócios no Brasil, depois em Barcelona e Ibiza, e agora aqui nesta costa.",
   "aboutP3": "Trabalho melhor perto das pessoas. Eu escuto, fico no projeto e quero entender o negócio antes de o site tomar forma. Digital que funciona, para mim, é algo claro e útil, feito com as pessoas para quem ele existe.",
   "aboutPhotoAlt": "Wellington Almeida com o filho em um parque",
@@ -147,22 +148,37 @@
   "colophon": "colofão",
   "colophonLine1": "Em Estepona, na Costa del Sol, Espanha.",
   "colophonLine2": "Trabalho em qualquer lugar · Feito com curiosidade e propósito.",
-  "rights": "© 2026 Welly. Todos os direitos reservados.",
+  "rights": "© 2026 Wellyington. Todos os direitos reservados.",
   "modalCloseLabel": "Fechar a ficha do projeto",
-  "archiveLabel": "Arquivo de projetos do Welly",
+  "archiveLabel": "Arquivo de projetos do Wellyington",
   "visitLabel": "Visitar o site",
   "closeLabel": "Fechar",
   "schemaJobTitle": "Desenvolvedor web, designer e estrategista digital",
-  "schemaPerson": "Wellington Almeida (Welly) é um desenvolvedor web, designer e estrategista digital nascido no Brasil. Cresceu em Londres, mora em Estepona, na Costa del Sol, e estudou publicidade, cinema e fotografia na School of Visual Arts, em Nova York.",
+  "schemaPerson": "Wellington Almeida (Wellyington) é um desenvolvedor web, designer e estrategista digital nascido no Brasil. Cresceu em Londres, mora em Estepona, na Costa del Sol, e estudou publicidade, cinema e fotografia na School of Visual Arts, em Nova York.",
   "schemaHome": "Estepona, Costa del Sol, Espanha",
   "schemaBusiness": "Criação de sites, desenvolvimento web, aplicativos e marca digital a partir de Estepona, Málaga, para negócios da Costa del Sol.",
   "schemaCatalog": "Serviços",
   "schemaArea": "Costa del Sol",
   "schemaOffers": [
-    {"name": "Criação de sites", "description": "Sistemas visuais claros e páginas fáceis de entender e de usar."},
-    {"name": "Desenvolvimento web", "description": "Sites construídos em volta de um negócio real, com cuidado por velocidade, uso e manutenção."},
-    {"name": "Desenvolvimento de aplicativos", "description": "Aplicativos para quando um negócio precisa de algo que as pessoas usam no celular, e não só de um site."},
-    {"name": "SEO e AEO", "description": "Ajuda para um negócio ser encontrado na busca e nos motores de resposta, com páginas claras e linguagem simples."},
-    {"name": "Marca digital", "description": "Uma voz e um visual que parecem do negócio, e que seguem no site e no resto da presença."}
+    {
+      "name": "Criação de sites",
+      "description": "Sistemas visuais claros e páginas fáceis de entender e de usar."
+    },
+    {
+      "name": "Desenvolvimento web",
+      "description": "Sites construídos em volta de um negócio real, com cuidado por velocidade, uso e manutenção."
+    },
+    {
+      "name": "Desenvolvimento de aplicativos",
+      "description": "Aplicativos para quando um negócio precisa de algo que as pessoas usam no celular, e não só de um site."
+    },
+    {
+      "name": "SEO e AEO",
+      "description": "Ajuda para um negócio ser encontrado na busca e nos motores de resposta, com páginas claras e linguagem simples."
+    },
+    {
+      "name": "Marca digital",
+      "description": "Uma voz e um visual que parecem do negócio, e que seguem no site e no resto da presença."
+    }
   ]
 }

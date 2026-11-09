@@ -1,6 +1,6 @@
-# Welly
+# Wellyington
 
-Personal site of Wellington Almeida (Welly), an independent web developer, designer and digital strategist based on the Costa del Sol. GitHub Pages serves this repository from the root of `main`:
+Personal site of Wellington Almeida (Wellyington), an independent web developer, designer and digital strategist based on the Costa del Sol. GitHub Pages serves this repository from the root of `main`:
 
 https://wellyington.github.io/
 

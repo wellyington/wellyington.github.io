@@ -5,8 +5,8 @@
   "path": "/",
   "code": "en",
   "label": "EN",
-  "title": "Welly — Web Design & Development on the Costa del Sol",
-  "description": "Web design, development and apps for businesses in Estepona, Marbella and Málaga, and across Torremolinos, Nerja, Gibraltar and Algeciras. Welly — digital that works.",
+  "title": "Wellyington — Web Design & Development on the Costa del Sol",
+  "description": "Web design, development and apps for businesses in Estepona, Marbella and Málaga, and across Torremolinos, Nerja, Gibraltar and Algeciras. Wellyington — digital that works.",
   "skip": "Skip to content",
   "clocksLabel": "Times for Estepona, London, New York and Dubai.",
   "menuOpen": "Open menu",
@@ -27,14 +27,15 @@
   "navProcess": "from idea to impact.",
   "navContact": "contact.",
   "menuAboutLabel": "About",
-  "menuIntro": "I’m Welly, a web developer, designer and digital strategist in Estepona, on the Costa del Sol. I listen first, then help shape digital that works for the business.",
+  "menuIntro": "I’m Wellyington, a web developer, designer and digital strategist in Estepona, on the Costa del Sol. I listen first, then help shape digital that works for the business.",
   "socialsLabel": "Socials",
   "cv": "CV",
   "website": "Website",
   "newTab": "(opens in a new tab)",
   "placeLine": "Estepona, Spain",
   "heroEyebrow": "Web Developer · Designer · Digital Strategist",
-  "portraitAlt": "Wellington Almeida (Welly), web developer and digital strategist",
+  "portraitAlt": "Wellington Almeida (Wellyington), web developer and digital strategist",
+  "ogImageAlt": "Wellyington. Web developer, designer and digital strategist. Digital that works. Based in Estepona, Spain, working worldwide.",
   "vinylLabel": "by me vinyl badge",
   "threeLabel": "Abstract wireframe for the featured project. Drag horizontally, or use the arrow keys, to rotate.",
   "threeCaption": "Digital ideas, made real",
@@ -84,7 +85,7 @@
   "p0tags": "Real Estate, Relocation, Costa del Sol",
   "equaAlt": "EQUA Estates homepage: a Marbella villa at sunset with the heading Luxury Property and Relocation in Marbella",
   "aboutEyebrow": "A little about me",
-  "aboutP1": "I’m Welly — Wellington Almeida — a web developer, designer and digital strategist. I was born in Brazil, raised in London, and I live in Estepona, on the Costa del Sol. Home here is me and my son. He is three, and I am raising him on my own.",
+  "aboutP1": "I’m Wellyington — Wellington Almeida — a web developer, designer and digital strategist. I was born in Brazil, raised in London, and I live in Estepona, on the Costa del Sol. Home here is me and my son. He is three, and I am raising him on my own.",
   "aboutP2": "I studied advertising, film and photography at the School of Visual Arts in New York. Right after graduating I moved fully into digital branding and development, and that has been my work ever since. Across about fifteen years I have built websites and digital products for businesses in Brazil, then in Barcelona and Ibiza, and now along this coast.",
   "aboutP3": "I work best close to people. I listen, I stay with a project, and I want to understand the business before the website takes shape. Digital that works, for me, means something clear and useful, made with the people it is for.",
   "aboutPhotoAlt": "Wellington Almeida with his son in a park",
@@ -147,22 +148,37 @@
   "colophon": "colophon",
   "colophonLine1": "Based in Estepona, on the Costa del Sol, Spain.",
   "colophonLine2": "Working worldwide · Built with curiosity and purpose.",
-  "rights": "© 2026 Welly. All rights reserved.",
+  "rights": "© 2026 Wellyington. All rights reserved.",
   "modalCloseLabel": "Close project details",
-  "archiveLabel": "Welly Project Archive",
+  "archiveLabel": "Wellyington Project Archive",
   "visitLabel": "Visit site",
   "closeLabel": "Close",
   "schemaJobTitle": "Web Developer, Designer and Digital Strategist",
-  "schemaPerson": "Wellington Almeida (Welly) is a Brazilian-born web developer, designer and digital strategist. Raised in London, he lives in Estepona, on the Costa del Sol, and studied advertising, film and photography at the School of Visual Arts in New York.",
+  "schemaPerson": "Wellington Almeida (Wellyington) is a Brazilian-born web developer, designer and digital strategist. Raised in London, he lives in Estepona, on the Costa del Sol, and studied advertising, film and photography at the School of Visual Arts in New York.",
   "schemaHome": "Estepona, Costa del Sol, Spain",
   "schemaBusiness": "Web design, web development, app development and digital branding from Estepona, Málaga, for businesses on the Costa del Sol.",
   "schemaCatalog": "Services",
   "schemaArea": "Costa del Sol",
   "schemaOffers": [
-    {"name": "Web design", "description": "Clear visual systems and pages that are easy to understand and use."},
-    {"name": "Web development", "description": "Websites built around a real business, with care for speed, usability and upkeep."},
-    {"name": "App development", "description": "Apps for when a business needs something people use on a phone, not only a website."},
-    {"name": "SEO and AEO", "description": "Help for a business to be found in search and in answer engines, with clear pages and plain language."},
-    {"name": "Digital branding", "description": "A voice and a look that feel like the business, carried through the site and the wider presence."}
+    {
+      "name": "Web design",
+      "description": "Clear visual systems and pages that are easy to understand and use."
+    },
+    {
+      "name": "Web development",
+      "description": "Websites built around a real business, with care for speed, usability and upkeep."
+    },
+    {
+      "name": "App development",
+      "description": "Apps for when a business needs something people use on a phone, not only a website."
+    },
+    {
+      "name": "SEO and AEO",
+      "description": "Help for a business to be found in search and in answer engines, with clear pages and plain language."
+    },
+    {
+      "name": "Digital branding",
+      "description": "A voice and a look that feel like the business, carried through the site and the wider presence."
+    }
   ]
 }

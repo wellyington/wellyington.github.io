@@ -15,21 +15,22 @@
   <link rel="me" href="https://www.linkedin.com/in/wellyington/">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Welly">
+  <meta property="og:site_name" content="Wellyington">
   <meta property="og:locale" content="{{ogLocale}}">
 {{ogAlternates}}
   <meta property="og:url" content="{{pageUrl}}">
   <meta property="og:title" content="{{title}}">
   <meta property="og:description" content="{{description}}">
-  <meta property="og:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="1024">
-  <meta property="og:image:alt" content="{{portraitAlt}}">
+  <meta property="og:image" content="https://wellyington.github.io/images/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="{{ogImageAlt}}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{title}}">
   <meta name="twitter:description" content="{{description}}">
-  <meta name="twitter:image" content="https://wellyington.github.io/images/welly-portrait.jpg">
-  <meta name="twitter:image:alt" content="{{portraitAlt}}">
+  <meta name="twitter:image" content="https://wellyington.github.io/images/og-card.jpg">
+  <meta name="twitter:image:alt" content="{{ogImageAlt}}">
 
   <meta name="theme-color" content="#e3fdfd">
   <script>
@@ -84,15 +85,15 @@
     <span class="hidden h-full md:block"></span>
   </div>
 
-  <header class="fixed inset-x-0 top-0 z-40 grid h-14 grid-cols-4 border-b border-brand-primary/50 bg-brand-cream transition-colors md:h-16 md:grid-cols-12">
-    <a href="#top" class="group col-span-2 flex min-w-0 items-center border-r border-brand-primary/50 px-4 text-2xl font-bold tracking-[-0.06em] text-brand-primary md:col-span-2 md:px-6 md:text-3xl">
-      <span class="flex min-w-0 items-center gap-1.5">
-        <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1">Welly</span>
+  <header class="fixed inset-x-0 top-0 z-40 flex h-14 items-stretch border-b border-brand-primary/50 bg-brand-cream transition-colors md:h-16">
+    <a href="#top" class="group flex shrink-0 items-center border-r border-brand-primary/50 px-3 text-brand-primary md:px-5">
+      <span class="flex items-center gap-1.5">
+        <span class="site-wordmark inline-block whitespace-nowrap font-bold tracking-[-0.06em] transition-transform duration-300 group-hover:-translate-x-1">Wellyington</span>
         <span class="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-primary opacity-75" aria-hidden="true"></span>
       </span>
     </a>
 
-    <div class="hidden min-w-0 border-r border-brand-primary/50 md:col-span-6 md:block">
+    <div class="hidden min-w-0 flex-1 border-r border-brand-primary/50 md:block">
       <p class="sr-only">{{clocksLabel}}</p>
       <div class="flex h-full w-full items-center overflow-hidden" aria-hidden="true">
         <div class="animate-marquee select-none text-xs font-medium uppercase tracking-[0.18em]">
@@ -134,7 +135,7 @@
       </div>
     </div>
 
-    <div class="col-span-2 flex items-stretch justify-end md:col-span-4">
+    <div class="ml-auto flex shrink-0 items-stretch">
       {{langSwitcherHeader}}
       <button id="themeToggleBtn" type="button" class="group group-roll mr-14 flex h-full shrink-0 cursor-pointer items-center gap-2.5 border-l border-brand-primary/50 px-3 text-brand-primary transition-colors hover:bg-brand-primary hover:text-brand-cream md:mr-16 md:px-5" aria-label="{{themeToDark}}" aria-pressed="false">
         <span class="roll-text text-xs font-semibold uppercase tracking-[0.18em]">
@@ -206,7 +207,7 @@
       </div>
     </div>
     <div class="flex items-center justify-between gap-4 pt-4 text-xs uppercase tracking-widest opacity-60">
-      <span>© 2026 Welly</span>
+      <span>© 2026 Wellyington</span>
       <span>{{placeLine}}</span>
     </div>
   </div>
@@ -712,7 +713,7 @@
 
     <div class="grid select-none grid-cols-4 overflow-hidden md:grid-cols-12">
       <div class="col-span-4 overflow-hidden border-x border-brand-cream/40 md:col-span-10 md:col-start-2">
-        <p class="-mb-[0.12em] px-4 text-center text-[18vw] font-bold leading-[0.8] tracking-[-0.10em] text-brand-cream opacity-95 md:text-[20vw]" aria-hidden="true">Welly</p>
+        <p class="site-wordmark-xl -mb-[0.12em] px-2 text-center font-bold leading-[0.82] text-brand-cream opacity-95" aria-hidden="true">Wellyington</p>
       </div>
     </div>
   </footer>
