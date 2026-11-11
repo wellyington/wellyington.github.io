@@ -556,10 +556,18 @@ function writeSitemap() {
       );
     })
     .join("\n");
+  const cv =
+    "  <url>\n" +
+    "    <loc>" + origin + "/cv/</loc>\n" +
+    "    <lastmod>2026-11-11</lastmod>\n" +
+    "    <changefreq>monthly</changefreq>\n" +
+    "    <priority>0.8</priority>\n" +
+    "  </url>";
   const xml =
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
     "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">\n" +
     urls + "\n" +
+    cv + "\n" +
     "</urlset>\n";
   fs.writeFileSync(path.join(root, "sitemap.xml"), xml);
 }
