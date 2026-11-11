@@ -338,12 +338,26 @@ body{cursor:default}
 .faq details[open] summary:after{content:"–"}
 .faq details p{margin:0 0 18px;max-width:540px;font-size:14px;line-height:1.6}
 @media(max-width:760px){.faq{grid-template-columns:1fr;gap:28px;padding:75px 7vw}}
+.nav-cta{white-space:nowrap;flex-shrink:0}
+@media(max-width:760px){
+ .nav{gap:12px}
+ .nav-cta{margin-left:auto}
+ .nav-toggle{margin-left:14px;flex-shrink:0}
+ .hero-copy{padding-bottom:96px}
+ .hero-copy .cta{align-self:center;white-space:nowrap}
+}
+.navlinks .nav-menu-cta{display:none}
+@media(max-width:520px){
+ .nav>.nav-cta{display:none}
+ .nav-toggle{margin-left:auto}
+ .nav.is-open .nav-menu-cta{display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:14px;padding:0 18px;border:0;border-radius:99px;background:var(--ink);color:var(--cream);white-space:nowrap}
+}
 .stack-card{align-content:start;padding-top:calc(var(--nav-h) + 16px)}
 
 </style></head>
 <body>
 <div class="announcement">A better first impression is always in season · Your business, served properly</div>
-<nav class="nav"><a class="brand-lockup" href="#top"><span class="logo">BRINE<br>CLUB®</span><span class="byline">By <b>Wellyington</b></span></a><div class="navlinks" id="nav-menu"><a href="#why">The difference</a><a href="#menu">The menu</a><a href="#how">How it works</a><a href="#pricing">Pricing</a></div><a class="nav-cta" href="#contact">Get on the menu ↗</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button></nav>
+<nav class="nav"><a class="brand-lockup" href="#top"><span class="logo">BRINE<br>CLUB®</span><span class="byline">By <b>Wellyington</b></span></a><div class="navlinks" id="nav-menu"><a href="#why">The difference</a><a href="#menu">The menu</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a class="nav-menu-cta" href="#contact">Get on the menu ↗</a></div><a class="nav-cta" href="#contact">Get on the menu ↗</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><span class="nav-toggle-bars" aria-hidden="true"></span></button></nav>
 <main id="top">
 <section class="hero"><div class="hero-copy"><div class="eyebrow">A one-person studio with a taste for impact</div><h1>GET YOUR<br>BUSINESS<br><span>SEEN.</span></h1><p class="hero-sub">I turn good products, services and people into hard-to-ignore online destinations. Landing page design for the UK and Europe, with a little more bite — built to make the right people stop, look and act.</p><a class="cta" href="#menu">Find your flavour <span>↘</span></a></div>
 <div class="hero-art"><div class="jar-frame"><picture><source type="image/avif" srcset="brine-club-jar-640.avif 640w, brine-club-jar-960.avif 960w, brine-club-jar-1280.avif 1280w" sizes="(min-width: 900px) 40vw, 78vw"><source type="image/webp" srcset="brine-club-jar-640.webp 640w, brine-club-jar-960.webp 960w, brine-club-jar-1280.webp 1280w" sizes="(min-width: 900px) 40vw, 78vw"><img src="brine-club-jar.jpg" width="1509" height="2048" alt="A glass jar of cherry tomatoes in brine, labelled Brine Club, the mark for Wellyington's landing page studio" decoding="async" fetchpriority="high"></picture><div class="jar-label"><small>BRINE CLUB® PRESENTS</small><strong>VISIBILITY<br>IN A JAR.</strong><span>LESS SCROLLING. MORE YES.</span></div></div><div class="seal">Small page.<br>Big main<br>character<br>energy.</div></div></section>
