@@ -7,9 +7,18 @@
   "keywords": "落地页设计, 着陆页制作, 网站开发, 落地页制作, Brine Club",
   "imageAlt": "Brine Club：为你的生意设计和搭建落地页。方案€99起。到 wellyington.github.io/brineclub 上菜单。",
   "extraHead": "<meta name=\"applicable-device\" content=\"pc,mobile\">\n<meta http-equiv=\"Cache-Control\" content=\"no-transform\">\n<!-- baidu-site-verification: paste-your-code-here -->",
-  "areas": ["中国"],
-  "areaTypes": ["Country"],
-  "serviceTypes": ["落地页设计", "着陆页制作", "网站开发", "网页设计"],
+  "areas": [
+    "中国"
+  ],
+  "areaTypes": [
+    "Country"
+  ],
+  "serviceTypes": [
+    "落地页设计",
+    "着陆页制作",
+    "网站开发",
+    "网页设计"
+  ],
   "offerGherkin": "入门方案。落地页由我设计和搭建。不含托管。24–48小时交付。开工前需付清全款。",
   "offerFull": "推荐方案。含托管、专业数据追踪、一个子域名，以及多轮修改。24–48小时交付。开工前需付清全款。",
   "announcement": "好的第一印象永远当季 · 把你的生意好好端上来",
@@ -103,13 +112,34 @@
   "faqH": "直话<br>直说。",
   "faqIntro": "中国客户在委托落地页之前，通常会问这些。",
   "faq": [
-    ["The Gherkin 和 The Full Jar 各有什么？", "The Gherkin 是€99。这是为产品、服务或个人品牌做的定制落地页：文案、结构、设计和搭建，照顾手机、速度和搜索基础。不含托管。The Full Jar 是€249，也是我推荐的方案。包含托管、专业数据追踪、一个子域名，以及多轮修改。"],
-    ["一页要多久？", "每个项目都在24–48小时内交付。我们仍会先弄清你的卖点、受众，以及你希望访客做的那一步。"],
-    ["你接中国和欧洲的客户吗？", "接。我在西班牙埃斯特波纳远程工作，服务中国以及英国和欧洲的客户。西班牙使用中欧时间。"],
-    ["我们可以用哪些语言沟通？", "英语、西班牙语和葡萄牙语。这一页是中文。落地页本身用什么语言，我们谈的时候再定。"],
-    ["怎么付款，什么时候付？", "价格是欧元：€99或€249。我接受 Stripe 信用卡、欧盟 SEPA 银行转账，以及带 sort code 和账号的英国银行转账。项目开始前需付清全款。"],
-    ["搜索和速度包括在内吗？", "包括。我会按手机、速度和搜索基础来做。这是页面的一部分。这不是保证排到第一。"],
-    ["托管包括什么，页面归谁？", "The Gherkin 不含托管。页面需要一个自己的住处。The Full Jar 含托管，以及一个子域名和专业数据追踪。页面是为你做的。"]
+    [
+      "The Gherkin 和 The Full Jar 各有什么？",
+      "The Gherkin 是€99。这是为产品、服务或个人品牌做的定制落地页：文案、结构、设计和搭建，照顾手机、速度和搜索基础。不含托管。The Full Jar 是€249，也是我推荐的方案。包含托管、专业数据追踪、一个子域名，以及多轮修改。"
+    ],
+    [
+      "一页要多久？",
+      "每个项目都在24–48小时内交付。我们仍会先弄清你的卖点、受众，以及你希望访客做的那一步。"
+    ],
+    [
+      "你接中国和欧洲的客户吗？",
+      "接。我在西班牙埃斯特波纳远程工作，服务中国以及英国和欧洲的客户。西班牙使用中欧时间。"
+    ],
+    [
+      "我们可以用哪些语言沟通？",
+      "英语、西班牙语和葡萄牙语。这一页是中文。落地页本身用什么语言，我们谈的时候再定。"
+    ],
+    [
+      "怎么付款，什么时候付？",
+      "价格是欧元：€99或€249。我接受 Stripe 信用卡、欧盟 SEPA 银行转账，以及带 sort code 和账号的英国银行转账。项目开始前需付清全款。"
+    ],
+    [
+      "搜索和速度包括在内吗？",
+      "包括。我会按手机、速度和搜索基础来做。这是页面的一部分。这不是保证排到第一。"
+    ],
+    [
+      "托管包括什么，页面归谁？",
+      "The Gherkin 不含托管。页面需要一个自己的住处。The Full Jar 含托管，以及一个子域名和专业数据追踪。页面是为你做的。"
+    ]
   ],
   "contactNo": "07 / 坐下来",
   "contactH": "我们<br>做哪<br>一道？",
@@ -127,5 +157,25 @@
   "footerNote": "我给产品、服务<br>和有计划的人<br>做数字酱汁。",
   "footerCopy": "© 2026 BRINE CLUB® · WELLYINGTON",
   "footerMid": "被人看见。被人看懂。被人选中。",
-  "footerEnd": "味道再冲一点。"
+  "footerEnd": "味道再冲一点。",
+  "formSubject": "Brine Club 新咨询 (ZH)",
+  "phoneDefault": "+86",
+  "formName": "姓名",
+  "formNamePh": "你的名字",
+  "formEmailPh": "you@email.com",
+  "formPhone": "电话",
+  "formPhonePh": "138 0000 0000",
+  "phoneCodeLabel": "国家区号",
+  "formPlan": "哪个方案",
+  "planPick": "选择方案",
+  "planGherkin": "The Gherkin · €99",
+  "planFull": "The Full Jar · €249",
+  "planUnsure": "还没想好",
+  "formMessage": "留言",
+  "formMessagePh": "想做什么？",
+  "formSubmit": "发送",
+  "formSending": "发送中…",
+  "formSuccess": "收到了。我会尽快回复。",
+  "formError": "没有发出去。请发邮件到 welly.almeida@gmail.com，我来接。",
+  "formAlt": "想直接写信或打电话？用下面的方式。"
 }

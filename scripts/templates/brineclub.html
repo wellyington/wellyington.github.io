@@ -209,7 +209,7 @@ body{cursor:default}
 .stack-card{align-content:start;padding-top:calc(var(--nav-h) + 16px)}
 .stack-card.pricing{height:auto;min-height:0;overflow:visible}
 .pricing{display:block}
-@media(min-width:761px){.pricing{margin-top:84svh}}
+@media(min-width:761px){.pricing,.contact{margin-top:84svh}}
 .pricing-head{max-width:760px;margin-bottom:34px}
 .delivery-flag{display:inline-block;margin:8px 0 0;background:var(--ink);color:var(--cream);padding:12px 16px;font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase}
 .plan-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
@@ -248,6 +248,25 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .plan-name{letter
 html[lang="ru"] h1{font-size:clamp(52px,7.4vw,108px)}
 html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 .hero-sub,.price-copy,.price-detail,.plan-features li,.faq details p,.contact p{overflow-wrap:anywhere}
+
+.brine-form{background:var(--cream);color:var(--ink);border:1px solid var(--ink);padding:22px;display:grid;gap:8px;align-content:start}
+.brine-form label,.phone-field legend{font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.brine-form input,.brine-form select,.brine-form textarea{font:16px var(--sans);color:var(--ink);background:#fff;border:1px solid var(--ink);min-height:44px;padding:10px 12px;width:100%;border-radius:0}
+.brine-form textarea{min-height:110px;resize:vertical}
+.brine-form input:focus,.brine-form select:focus,.brine-form textarea:focus{outline:2px solid var(--deep);outline-offset:2px}
+.phone-field{border:0;margin:0;padding:0;display:grid;gap:6px}
+.phone-row{display:grid;grid-template-columns:minmax(7.2rem,10rem) minmax(0,1fr);gap:8px}
+.botcheck{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.brine-form button[type=submit]{min-height:48px;margin-top:6px;background:var(--ink);color:var(--cream);border:1px solid var(--ink);font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.brine-form button[type=submit]:disabled{opacity:.65;cursor:progress}
+.brine-form button[type=submit]:focus-visible{outline:2px solid var(--deep);outline-offset:3px}
+.form-status{min-height:1.4em;margin:0;font-size:14px;line-height:1.5}
+.form-status.is-error{color:var(--deep)}
+.contact{align-items:start}
+.contact-alts,.contact-panel{grid-column:1 / -1}
+@media(min-width:761px){.brine-form{grid-column:2;grid-row:1}}
+@media(max-width:760px){.contact{margin-top:72svh}.brine-form{grid-column:1;padding:18px}.phone-row{grid-template-columns:minmax(6.6rem,8.5rem) minmax(0,1fr)}}
+html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html[lang="zh-CN"] .brine-form button{letter-spacing:.04em}
 </style></head>
 <body>
 <div class="announcement">{{announcement}}</div>
@@ -282,7 +301,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
     <li>{{gherkin2}}</li>
     <li>{{gherkin3}}</li>
    </ul>
-   <a class="price-cta" href="#contact">{{ctaMenu}} <span>↗</span></a>
+   <a class="price-cta" href="#contact" data-plan="The Gherkin €99">{{ctaMenu}} <span>↗</span></a>
   </article>
   <article class="price-ticket is-featured" data-brand="{{ticketBrand}}">
    <div class="plan-badge">{{popular}}</div>
@@ -296,7 +315,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
     <li>{{full3}}</li>
     <li>{{full4}}</li>
    </ul>
-   <a class="price-cta" href="#contact">{{ctaMenu}} <span>↗</span></a>
+   <a class="price-cta" href="#contact" data-plan="The Full Jar €249">{{ctaMenu}} <span>↗</span></a>
   </article>
  </div>
  <div class="plan-notes">
@@ -311,7 +330,29 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 </section>
 <section class="promise"><div class="eyebrow">{{promiseNo}}</div><blockquote>{{promiseQ}}</blockquote><p>{{promiseP}}</p><a class="cta" href="#contact">{{promiseCta}} <span>↗</span></a></section>
 <section class="faq" id="faq"><div><div class="eyebrow">{{faqNo}}</div><h2>{{faqH}}</h2><p class="faq-intro">{{faqIntro}}</p></div><div class="faq-list">{{faqItems}}</div></section>
-<section class="contact" id="contact"><div><div class="eyebrow">{{contactNo}}</div><h2>{{contactH}}</h2><p>{{contactP}}</p></div><div class="contact-panel"><div class="label">BRINE CLUB® / {{contactBy}}</div><div class="big">{{contactBig}}</div><p class="fine">{{contactFine}}</p><div class="contact-links"><div class="contact-link"><span>{{emailLabel}}</span><a href="mailto:welly.almeida@gmail.com?subject={{mailSubject}}">welly.almeida@gmail.com ↗</a></div><div class="contact-link"><span>{{phoneLabel}}</span><a href="https://wa.me/34604286691" target="_blank" rel="noopener noreferrer">+34 604 286 691 ↗</a></div><div class="contact-link"><span>{{portfolioLabel}}</span><a href="https://wellyington.github.io/" target="_blank" rel="noopener noreferrer">wellyington.github.io ↗</a></div></div><div class="contact-socials"><a href="https://x.com/wellyington" target="_blank" rel="noopener noreferrer">{{xLabel}}</a><a href="https://instagram.com/wellyington" target="_blank" rel="noopener noreferrer">{{igLabel}}</a></div></div></section>
+<section class="contact" id="contact"><div class="contact-copy"><div class="eyebrow">{{contactNo}}</div><h2>{{contactH}}</h2><p>{{contactP}}</p></div><form class="brine-form" id="brine-form" action="https://api.web3forms.com/submit" method="POST" data-sending="{{formSending}}" data-success="{{formSuccess}}" data-error="{{formError}}">
+<input type="hidden" name="access_key" value="e64ab1b2-7fb7-47fd-91b7-e0d5e67222b0">
+<input type="hidden" name="subject" value="{{formSubject}}">
+<input type="hidden" name="from_name" value="Brine Club">
+<input type="hidden" name="redirect" value="{{canonical}}#contact">
+<label class="botcheck"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">bot</label>
+<label for="brine-name">{{formName}}</label>
+<input id="brine-name" name="name" type="text" autocomplete="name" required placeholder="{{formNamePh}}">
+<label for="brine-email">{{emailLabel}}</label>
+<input id="brine-email" name="email" type="email" autocomplete="email" required placeholder="{{formEmailPh}}">
+<fieldset class="phone-field"><legend>{{formPhone}}</legend><div class="phone-row"><select id="phone-code" name="phone_code" aria-label="{{phoneCodeLabel}}" autocomplete="tel-country-code" required>{{phoneOptions}}</select><input id="brine-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="{{formPhonePh}}"></div></fieldset>
+<label for="plan">{{formPlan}}</label>
+<select id="plan" name="plan" required>
+<option value="" selected disabled>{{planPick}}</option>
+<option value="The Gherkin €99">{{planGherkin}}</option>
+<option value="The Full Jar €249">{{planFull}}</option>
+<option value="Not sure yet">{{planUnsure}}</option>
+</select>
+<label for="brine-message">{{formMessage}}</label>
+<textarea id="brine-message" name="message" rows="4" required placeholder="{{formMessagePh}}"></textarea>
+<button type="submit">{{formSubmit}}</button>
+<p class="form-status" aria-live="polite"></p>
+</form><div class="contact-panel"><div class="label">BRINE CLUB® / {{contactBy}}</div><div class="big">{{contactBig}}</div><p class="fine">{{formAlt}}</p><div class="contact-links"><div class="contact-link"><span>{{emailLabel}}</span><a href="mailto:welly.almeida@gmail.com?subject={{mailSubject}}">welly.almeida@gmail.com ↗</a></div><div class="contact-link"><span>{{phoneLabel}}</span><a href="https://wa.me/34604286691" target="_blank" rel="noopener noreferrer">+34 604 286 691 ↗</a></div><div class="contact-link"><span>{{portfolioLabel}}</span><a href="https://wellyington.github.io/" target="_blank" rel="noopener noreferrer">wellyington.github.io ↗</a></div></div><div class="contact-socials"><a href="https://x.com/wellyington" target="_blank" rel="noopener noreferrer">{{xLabel}}</a><a href="https://instagram.com/wellyington" target="_blank" rel="noopener noreferrer">{{igLabel}}</a></div></div></section>
 </main>
 <footer class="footer"><div class="footer-top"><div class="footer-brand"><div class="footer-logo">BRINE<br>CLUB®</div><div class="footer-byline">{{footerByline}}</div></div><div class="footer-note">{{footerNote}}</div></div><div class="footer-bottom"><span>{{footerCopy}}</span><span>{{footerMid}}</span><span>{{footerEnd}}</span></div></footer>
 
@@ -322,7 +363,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
  const nav=document.querySelector('.nav'),bar=document.querySelector('.scroll-progress');
  const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%';nav.classList.toggle('scrolled',scrollY>24)};
  addEventListener('scroll',update,{passive:true});update();
- const stackSelectors=['.intro','.problem','.menu','.process','.promise','.faq','.contact'];
+ const stackSelectors=['.intro','.problem','.menu','.process','.promise','.faq'];
  if(!reduce){
    stackSelectors.forEach((selector,index)=>{
      const section=document.querySelector(selector);
@@ -364,6 +405,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
   const id=a.getAttribute('href').slice(1);
   if(id&&id!=='top'&&!document.getElementById(id))return;
   e.preventDefault();
+  if(a.dataset.plan){const sel=document.getElementById('plan');if(sel)sel.value=a.dataset.plan}
   if(nav.classList.contains('is-open'))setMenu(false);
   if(location.hash!=='#'+id)history.pushState(null,'','#'+(id||'top'));
   scrollToId(id,reduce?'instant':'smooth');
@@ -390,6 +432,48 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
   else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
  });
  document.addEventListener('click',e=>{if(nav.classList.contains('is-open')&&!nav.contains(e.target))setMenu(false)});
+ const form=document.getElementById('brine-form');
+ if(form){
+  form.addEventListener('submit',async e=>{
+   if(!window.fetch)return;
+   e.preventDefault();
+   const status=form.querySelector('.form-status');
+   const btn=form.querySelector('[type=submit]');
+   const code=form.phone_code.value;
+   const local=form.phone.value.trim();
+   const fd=new FormData(form);
+   fd.set('phone',(code+' '+local).replace(/\s+/g,' ').trim());
+   fd.delete('phone_code');
+   fd.delete('redirect');
+   status.className='form-status';
+   status.textContent='';
+   if(fd.get('botcheck')){status.textContent=form.dataset.success;status.className='form-status is-ok';return}
+   const label=btn.textContent;
+   btn.disabled=true;
+   form.setAttribute('aria-busy','true');
+   btn.textContent=form.dataset.sending;
+   try{
+    const res=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(fd.entries()))});
+    const data=await res.json();
+    if(!res.ok||!data.success)throw new Error('fail');
+    status.textContent=form.dataset.success;
+    status.className='form-status is-ok';
+    status.setAttribute('role','status');
+    form.reset();
+    const plan=fd.get('plan')||'';
+    const value=plan.indexOf('249')>-1?249:plan.indexOf('99')>-1?99:undefined;
+    if(window.gtag)gtag('event','generate_lead',value?{currency:'EUR',value:value}:{});
+   }catch(err){
+    status.textContent=form.dataset.error;
+    status.className='form-status is-error';
+    status.setAttribute('role','alert');
+   }finally{
+    btn.disabled=false;
+    form.removeAttribute('aria-busy');
+    btn.textContent=label;
+   }
+  });
+ }
 })();
 </script>
 

@@ -393,7 +393,7 @@ body{cursor:default}
 .stack-card{align-content:start;padding-top:calc(var(--nav-h) + 16px)}
 .stack-card.pricing{height:auto;min-height:0;overflow:visible}
 .pricing{display:block}
-@media(min-width:761px){.pricing{margin-top:84svh}}
+@media(min-width:761px){.pricing,.contact{margin-top:84svh}}
 .pricing-head{max-width:760px;margin-bottom:34px}
 .delivery-flag{display:inline-block;margin:8px 0 0;background:var(--ink);color:var(--cream);padding:12px 16px;font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase}
 .plan-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
@@ -432,6 +432,25 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .plan-name{letter
 html[lang="ru"] h1{font-size:clamp(52px,7.4vw,108px)}
 html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 .hero-sub,.price-copy,.price-detail,.plan-features li,.faq details p,.contact p{overflow-wrap:anywhere}
+
+.brine-form{background:var(--cream);color:var(--ink);border:1px solid var(--ink);padding:22px;display:grid;gap:8px;align-content:start}
+.brine-form label,.phone-field legend{font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.brine-form input,.brine-form select,.brine-form textarea{font:16px var(--sans);color:var(--ink);background:#fff;border:1px solid var(--ink);min-height:44px;padding:10px 12px;width:100%;border-radius:0}
+.brine-form textarea{min-height:110px;resize:vertical}
+.brine-form input:focus,.brine-form select:focus,.brine-form textarea:focus{outline:2px solid var(--deep);outline-offset:2px}
+.phone-field{border:0;margin:0;padding:0;display:grid;gap:6px}
+.phone-row{display:grid;grid-template-columns:minmax(7.2rem,10rem) minmax(0,1fr);gap:8px}
+.botcheck{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.brine-form button[type=submit]{min-height:48px;margin-top:6px;background:var(--ink);color:var(--cream);border:1px solid var(--ink);font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.brine-form button[type=submit]:disabled{opacity:.65;cursor:progress}
+.brine-form button[type=submit]:focus-visible{outline:2px solid var(--deep);outline-offset:3px}
+.form-status{min-height:1.4em;margin:0;font-size:14px;line-height:1.5}
+.form-status.is-error{color:var(--deep)}
+.contact{align-items:start}
+.contact-alts,.contact-panel{grid-column:1 / -1}
+@media(min-width:761px){.brine-form{grid-column:2;grid-row:1}}
+@media(max-width:760px){.contact{margin-top:72svh}.brine-form{grid-column:1;padding:18px}.phone-row{grid-template-columns:minmax(6.6rem,8.5rem) minmax(0,1fr)}}
+html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html[lang="zh-CN"] .brine-form button{letter-spacing:.04em}
 </style></head>
 <body>
 <div class="announcement">Una buena primera impresión siempre está de temporada · Tu negocio, bien servido</div>
@@ -466,7 +485,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
     <li>Base de móvil, velocidad y búsqueda</li>
     <li>El alojamiento no está incluido</li>
    </ul>
-   <a class="price-cta" href="#contact">Súbete al menú <span>↗</span></a>
+   <a class="price-cta" href="#contact" data-plan="The Gherkin €99">Súbete al menú <span>↗</span></a>
   </article>
   <article class="price-ticket is-featured" data-brand="BRINE CLUB® · POR WELLYINGTON">
    <div class="plan-badge">La más pedida</div>
@@ -480,7 +499,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
     <li>Un subdominio</li>
     <li>Varias rondas de revisión</li>
    </ul>
-   <a class="price-cta" href="#contact">Súbete al menú <span>↗</span></a>
+   <a class="price-cta" href="#contact" data-plan="The Full Jar €249">Súbete al menú <span>↗</span></a>
   </article>
  </div>
  <div class="plan-notes">
@@ -495,7 +514,29 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 </section>
 <section class="promise"><div class="eyebrow">Una verdad de la casa</div><blockquote>No te prometo <span>internet.</span> Te construyo un sitio mejor para encontrarte con él.</blockquote><p>Posicionamiento claro · Buena primera impresión · Base lista para buscadores · Un solo siguiente paso</p><a class="cta" href="#contact">Hagamos tu página <span>↗</span></a></section>
 <section class="faq" id="faq"><div><div class="eyebrow">06 / Antes de pedir</div><h2>RESPUESTAS<br>CLARAS.</h2><p class="faq-intro">Lo que suele preguntar quien encarga una landing page desde España, Latinoamérica o Europa.</p></div><div class="faq-list"><details><summary>¿Qué incluyen The Gherkin y The Full Jar?</summary><p>The Gherkin cuesta 99 €. Es una landing page a medida para un producto, un servicio o una marca personal: mensaje, estructura, diseño y desarrollo, lista para móvil, velocidad y una base de búsqueda. El alojamiento no está incluido. The Full Jar cuesta 249 € y es el que recomiendo. Incluye alojamiento, medición profesional, un subdominio y varias rondas de revisión.</p></details><details><summary>¿Cuánto tarda una página?</summary><p>Cada proyecto se entrega en 24–48 horas. Aun así, empezamos entendiendo tu oferta, tu público y la acción que quieres que tomen.</p></details><details><summary>¿Trabajas con clientes en España, Latinoamérica y Europa?</summary><p>Sí. Trabajo en remoto desde Estepona, en España, con gente en España, Latinoamérica y Europa. España está en la hora central europea.</p></details><details><summary>¿En qué idiomas podemos trabajar?</summary><p>Inglés, español y portugués. Esta página está en español. El idioma de tu landing lo decidimos cuando hablamos.</p></details><details><summary>¿Cómo se paga, y cuándo?</summary><p>Los precios están en euros: 99 € o 249 €. Acepto tarjeta a través de Stripe, transferencia SEPA de la UE, o transferencia bancaria del Reino Unido con sort code y número de cuenta. El pago completo se hace antes de empezar el proyecto.</p></details><details><summary>¿La búsqueda y la velocidad van incluidas?</summary><p>Sí. La construyo para móvil, velocidad y una base de búsqueda. Eso forma parte de la página. No es una promesa de quedar primero.</p></details><details><summary>¿Qué incluye el alojamiento, y de quién es la página?</summary><p>En The Gherkin el alojamiento no está incluido. Tu página necesita una casa propia. En The Full Jar el alojamiento va incluido, junto con un subdominio y medición profesional. La página se construye para ti.</p></details></div></section>
-<section class="contact" id="contact"><div><div class="eyebrow">07 / Siéntate</div><h2>¿QUÉ<br>COCINAMOS?</h2><p>Cuéntame qué vendes, a quién quieres llegar y hacia dónde vas. Montamos juntos la receta de la landing page.</p></div><div class="contact-panel"><div class="label">BRINE CLUB® / POR WELLYINGTON</div><div class="big">Tu oferta tiene una historia. Démosle un aterrizaje en condiciones.</div><p class="fine">¿Hablamos de una landing para un producto, un servicio o un perfil profesional? Elige cómo prefieres escribirme.</p><div class="contact-links"><div class="contact-link"><span>Email</span><a href="mailto:welly.almeida@gmail.com?subject=Hablemos%20de%20tu%20landing%20page">welly.almeida@gmail.com ↗</a></div><div class="contact-link"><span>Llamada / WhatsApp</span><a href="https://wa.me/34604286691" target="_blank" rel="noopener noreferrer">+34 604 286 691 ↗</a></div><div class="contact-link"><span>Portfolio</span><a href="https://wellyington.github.io/" target="_blank" rel="noopener noreferrer">wellyington.github.io ↗</a></div></div><div class="contact-socials"><a href="https://x.com/wellyington" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a><a href="https://instagram.com/wellyington" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div></section>
+<section class="contact" id="contact"><div class="contact-copy"><div class="eyebrow">07 / Siéntate</div><h2>¿QUÉ<br>COCINAMOS?</h2><p>Cuéntame qué vendes, a quién quieres llegar y hacia dónde vas. Montamos juntos la receta de la landing page.</p></div><form class="brine-form" id="brine-form" action="https://api.web3forms.com/submit" method="POST" data-sending="Enviando…" data-success="Recibido. Te respondo pronto." data-error="No se envió. Escríbeme a welly.almeida@gmail.com y lo recojo.">
+<input type="hidden" name="access_key" value="e64ab1b2-7fb7-47fd-91b7-e0d5e67222b0">
+<input type="hidden" name="subject" value="Nueva consulta de Brine Club (ES)">
+<input type="hidden" name="from_name" value="Brine Club">
+<input type="hidden" name="redirect" value="https://wellyington.github.io/brineclub/es/#contact">
+<label class="botcheck"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">bot</label>
+<label for="brine-name">Nombre</label>
+<input id="brine-name" name="name" type="text" autocomplete="name" required placeholder="Tu nombre">
+<label for="brine-email">Email</label>
+<input id="brine-email" name="email" type="email" autocomplete="email" required placeholder="tu@email.com">
+<fieldset class="phone-field"><legend>Teléfono</legend><div class="phone-row"><select id="phone-code" name="phone_code" aria-label="Prefijo" autocomplete="tel-country-code" required><option value="+44" title="Reino Unido">+44 UK</option><option value="+34" selected title="España">+34 ES</option><option value="+55" title="Brasil">+55 BR</option><option value="+7" title="Rusia / Kazajistán">+7 RU</option><option value="+86" title="China">+86 CN</option><option value="+1" title="EE. UU. / Canadá">+1 US</option><option value="+351" title="Portugal">+351 PT</option><option value="+33" title="Francia">+33 FR</option><option value="+49" title="Alemania">+49 DE</option><option value="+39" title="Italia">+39 IT</option><option value="+31" title="Países Bajos">+31 NL</option><option value="+353" title="Irlanda">+353 IE</option><option value="+32" title="Bélgica">+32 BE</option><option value="+52" title="México">+52 MX</option><option value="+54" title="Argentina">+54 AR</option><option value="+57" title="Colombia">+57 CO</option><option value="+56" title="Chile">+56 CL</option><option value="+380" title="Ucrania">+380 UA</option><option value="+375" title="Bielorrusia">+375 BY</option><option value="+998" title="Uzbekistán">+998 UZ</option><option value="+996" title="Kirguistán">+996 KG</option><option value="+971" title="EAU">+971 AE</option><option value="+61" title="Australia">+61 AU</option><option value="+91" title="India">+91 IN</option></select><input id="brine-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="600 000 000"></div></fieldset>
+<label for="plan">Qué plan</label>
+<select id="plan" name="plan" required>
+<option value="" selected disabled>Elige un plan</option>
+<option value="The Gherkin €99">The Gherkin · 99 €</option>
+<option value="The Full Jar €249">The Full Jar · 249 €</option>
+<option value="Not sure yet">Aún no lo sé</option>
+</select>
+<label for="brine-message">Mensaje</label>
+<textarea id="brine-message" name="message" rows="4" required placeholder="¿Qué estás cocinando?"></textarea>
+<button type="submit">Enviar</button>
+<p class="form-status" aria-live="polite"></p>
+</form><div class="contact-panel"><div class="label">BRINE CLUB® / POR WELLYINGTON</div><div class="big">Tu oferta tiene una historia. Démosle un aterrizaje en condiciones.</div><p class="fine">¿Prefieres escribir o llamar? Usa una de estas.</p><div class="contact-links"><div class="contact-link"><span>Email</span><a href="mailto:welly.almeida@gmail.com?subject=Hablemos%20de%20tu%20landing%20page">welly.almeida@gmail.com ↗</a></div><div class="contact-link"><span>Llamada / WhatsApp</span><a href="https://wa.me/34604286691" target="_blank" rel="noopener noreferrer">+34 604 286 691 ↗</a></div><div class="contact-link"><span>Portfolio</span><a href="https://wellyington.github.io/" target="_blank" rel="noopener noreferrer">wellyington.github.io ↗</a></div></div><div class="contact-socials"><a href="https://x.com/wellyington" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a><a href="https://instagram.com/wellyington" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div></section>
 </main>
 <footer class="footer"><div class="footer-top"><div class="footer-brand"><div class="footer-logo">BRINE<br>CLUB®</div><div class="footer-byline">Un proyecto personal <span>de Wellyington.</span></div></div><div class="footer-note">Hago salsa digital<br>para productos, servicios<br>y gente con planes.</div></div><div class="footer-bottom"><span>© 2026 BRINE CLUB® · POR WELLYINGTON</span><span>Que te vean. Que te entiendan. Que te elijan.</span><span>Hecho con un poco más de mordida.</span></div></footer>
 
@@ -506,7 +547,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
  const nav=document.querySelector('.nav'),bar=document.querySelector('.scroll-progress');
  const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%';nav.classList.toggle('scrolled',scrollY>24)};
  addEventListener('scroll',update,{passive:true});update();
- const stackSelectors=['.intro','.problem','.menu','.process','.promise','.faq','.contact'];
+ const stackSelectors=['.intro','.problem','.menu','.process','.promise','.faq'];
  if(!reduce){
    stackSelectors.forEach((selector,index)=>{
      const section=document.querySelector(selector);
@@ -548,6 +589,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
   const id=a.getAttribute('href').slice(1);
   if(id&&id!=='top'&&!document.getElementById(id))return;
   e.preventDefault();
+  if(a.dataset.plan){const sel=document.getElementById('plan');if(sel)sel.value=a.dataset.plan}
   if(nav.classList.contains('is-open'))setMenu(false);
   if(location.hash!=='#'+id)history.pushState(null,'','#'+(id||'top'));
   scrollToId(id,reduce?'instant':'smooth');
@@ -574,6 +616,48 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
   else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
  });
  document.addEventListener('click',e=>{if(nav.classList.contains('is-open')&&!nav.contains(e.target))setMenu(false)});
+ const form=document.getElementById('brine-form');
+ if(form){
+  form.addEventListener('submit',async e=>{
+   if(!window.fetch)return;
+   e.preventDefault();
+   const status=form.querySelector('.form-status');
+   const btn=form.querySelector('[type=submit]');
+   const code=form.phone_code.value;
+   const local=form.phone.value.trim();
+   const fd=new FormData(form);
+   fd.set('phone',(code+' '+local).replace(/\s+/g,' ').trim());
+   fd.delete('phone_code');
+   fd.delete('redirect');
+   status.className='form-status';
+   status.textContent='';
+   if(fd.get('botcheck')){status.textContent=form.dataset.success;status.className='form-status is-ok';return}
+   const label=btn.textContent;
+   btn.disabled=true;
+   form.setAttribute('aria-busy','true');
+   btn.textContent=form.dataset.sending;
+   try{
+    const res=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(fd.entries()))});
+    const data=await res.json();
+    if(!res.ok||!data.success)throw new Error('fail');
+    status.textContent=form.dataset.success;
+    status.className='form-status is-ok';
+    status.setAttribute('role','status');
+    form.reset();
+    const plan=fd.get('plan')||'';
+    const value=plan.indexOf('249')>-1?249:plan.indexOf('99')>-1?99:undefined;
+    if(window.gtag)gtag('event','generate_lead',value?{currency:'EUR',value:value}:{});
+   }catch(err){
+    status.textContent=form.dataset.error;
+    status.className='form-status is-error';
+    status.setAttribute('role','alert');
+   }finally{
+    btn.disabled=false;
+    form.removeAttribute('aria-busy');
+    btn.textContent=label;
+   }
+  });
+ }
 })();
 </script>
 

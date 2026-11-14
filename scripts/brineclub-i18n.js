@@ -34,7 +34,7 @@ const LINK_LANG = { en: "en", es: "es", pt: "pt-BR", ru: "ru", zh: "zh-CN" };
 const RAW = new Set([
   "byline", "h1", "seal", "jarTitle", "introH", "whyH", "card1H", "card2H", "card3H",
   "howH", "priceH", "promiseQ", "faqH", "contactH", "footerNote", "footerByline", "extraHead",
-  "jsonLd", "hreflang", "ogAlternates", "langSwitch", "langSwitchMenu", "faqItems"
+  "jsonLd", "hreflang", "ogAlternates", "langSwitch", "langSwitchMenu", "faqItems", "phoneOptions"
 ]);
 
 function esc(value) {
@@ -180,9 +180,46 @@ function brineclubSitemap() {
   }).join("\n");
 }
 
+const DIAL_CODES = [
+  ["+44", "United Kingdom", "Reino Unido", "Reino Unido", "Великобритания", "英国", "UK"],
+  ["+34", "Spain", "España", "Espanha", "Испания", "西班牙", "ES"],
+  ["+55", "Brazil", "Brasil", "Brasil", "Бразилия", "巴西", "BR"],
+  ["+7", "Russia / Kazakhstan", "Rusia / Kazajistán", "Rússia / Cazaquistão", "Россия / Казахстан", "俄罗斯 / 哈萨克斯坦", "RU"],
+  ["+86", "China", "China", "China", "Китай", "中国", "CN"],
+  ["+1", "USA / Canada", "EE. UU. / Canadá", "EUA / Canadá", "США / Канада", "美国 / 加拿大", "US"],
+  ["+351", "Portugal", "Portugal", "Portugal", "Португалия", "葡萄牙", "PT"],
+  ["+33", "France", "Francia", "França", "Франция", "法国", "FR"],
+  ["+49", "Germany", "Alemania", "Alemanha", "Германия", "德国", "DE"],
+  ["+39", "Italy", "Italia", "Itália", "Италия", "意大利", "IT"],
+  ["+31", "Netherlands", "Países Bajos", "Países Baixos", "Нидерланды", "荷兰", "NL"],
+  ["+353", "Ireland", "Irlanda", "Irlanda", "Ирландия", "爱尔兰", "IE"],
+  ["+32", "Belgium", "Bélgica", "Bélgica", "Бельгия", "比利时", "BE"],
+  ["+52", "Mexico", "México", "México", "Мексика", "墨西哥", "MX"],
+  ["+54", "Argentina", "Argentina", "Argentina", "Аргентина", "阿根廷", "AR"],
+  ["+57", "Colombia", "Colombia", "Colômbia", "Колумбия", "哥伦比亚", "CO"],
+  ["+56", "Chile", "Chile", "Chile", "Чили", "智利", "CL"],
+  ["+380", "Ukraine", "Ucrania", "Ucrânia", "Украина", "乌克兰", "UA"],
+  ["+375", "Belarus", "Bielorrusia", "Bielorrússia", "Беларусь", "白俄罗斯", "BY"],
+  ["+998", "Uzbekistan", "Uzbekistán", "Uzbequistão", "Узбекистан", "乌兹别克斯坦", "UZ"],
+  ["+996", "Kyrgyzstan", "Kirguistán", "Quirguistão", "Кыргызстан", "吉尔吉斯斯坦", "KG"],
+  ["+971", "UAE", "EAU", "EAU", "ОАЭ", "阿联酋", "AE"],
+  ["+61", "Australia", "Australia", "Austrália", "Австралия", "澳大利亚", "AU"],
+  ["+91", "India", "India", "Índia", "Индия", "印度", "IN"]
+];
+const DIAL_INDEX = { en: 1, es: 2, pt: 3, ru: 4, zh: 5 };
+
+function phoneOptions(locale, code) {
+  const index = DIAL_INDEX[code];
+  return DIAL_CODES.map(function (row) {
+    const selected = row[0] === locale.phoneDefault ? " selected" : "";
+    return '<option value="' + row[0] + '"' + selected + ' title="' + esc(row[index]) + '">' + esc(row[0] + " " + row[6]) + "</option>";
+  }).join("");
+}
+
 function renderPage(template, locale, page) {
   const values = Object.assign({}, locale, {
     assets: page.code === "en" ? "" : "../",
+    phoneOptions: phoneOptions(locale, page.code),
     canonical: page.url,
     hreflang: hreflangLinks(),
     ogAlternates: ogAlternates(page.code),
