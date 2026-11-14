@@ -563,13 +563,7 @@ function writeSitemap() {
     "    <changefreq>monthly</changefreq>\n" +
     "    <priority>0.8</priority>\n" +
     "  </url>";
-  const brine =
-    "  <url>\n" +
-    "    <loc>" + origin + "/brineclub/</loc>\n" +
-    "    <lastmod>2026-11-11</lastmod>\n" +
-    "    <changefreq>monthly</changefreq>\n" +
-    "    <priority>0.8</priority>\n" +
-    "  </url>";
+  const brine = require("./brineclub-i18n").brineclubSitemap();
   const xml =
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
     "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">\n" +

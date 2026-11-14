@@ -52,7 +52,86 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/brineclub/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/brineclub/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/brineclub/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-KZ" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-BY" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/brineclub/"/>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/brineclub/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/brineclub/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/brineclub/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-KZ" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-BY" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/brineclub/"/>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/brineclub/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/brineclub/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/brineclub/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-KZ" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-BY" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/brineclub/"/>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/brineclub/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/brineclub/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/brineclub/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-KZ" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-BY" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/brineclub/"/>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/brineclub/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/brineclub/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://wellyington.github.io/brineclub/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/brineclub/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-KZ" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ru-BY" href="https://wellyington.github.io/brineclub/ru/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wellyington.github.io/brineclub/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/brineclub/"/>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
