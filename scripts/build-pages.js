@@ -518,6 +518,7 @@ function render(template, locale) {
     langHint: hint(locale),
     filterButtons: filterButtons(locale),
     pageUrl: pageUrl(locale),
+    phoneOptions: require("./brineclub-i18n").phoneOptions(locale, locale.code),
   };
   return template.replace(/\{\{([a-zA-Z0-9]+)\}\}/g, function (_, key) {
     if (Object.prototype.hasOwnProperty.call(raw, key)) return raw[key];

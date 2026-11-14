@@ -257,6 +257,6 @@ function buildBrineclub() {
   console.log("Built Brine Club pages: en, es, pt, ru, zh.");
 }
 
-module.exports = { brineclubSitemap, HREFLANGS, PAGES, buildBrineclub };
+module.exports = { brineclubSitemap, HREFLANGS, PAGES, buildBrineclub, phoneOptions };
 
 if (require.main === module) buildBrineclub();

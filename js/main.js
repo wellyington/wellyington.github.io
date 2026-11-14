@@ -960,4 +960,55 @@
       else if (visible && !reduceMotion && api) loop();
     });
   });
+
+  safe("enquiry", function initEnquiry() {
+    const form = document.getElementById("enquiry-form");
+    if (!form || !window.fetch) return;
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const status = form.querySelector(".form-status");
+      const button = form.querySelector("[type=submit]");
+      const code = form.phone_code.value;
+      const local = form.phone.value.trim();
+      const data = new FormData(form);
+      data.set("phone", (code + " " + local).replace(/\s+/g, " ").trim());
+      data.delete("phone_code");
+      data.delete("redirect");
+      status.className = "form-status min-h-[1.4em] text-sm leading-relaxed";
+      status.textContent = "";
+      status.removeAttribute("role");
+      if (data.get("botcheck")) {
+        status.textContent = form.dataset.success;
+        status.classList.add("is-ok");
+        status.setAttribute("role", "status");
+        return;
+      }
+      const label = button.textContent;
+      button.disabled = true;
+      form.setAttribute("aria-busy", "true");
+      button.textContent = form.dataset.sending;
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(Object.fromEntries(data.entries())),
+        });
+        const payload = await response.json();
+        if (!response.ok || !payload.success) throw new Error("fail");
+        status.textContent = form.dataset.success;
+        status.classList.add("is-ok");
+        status.setAttribute("role", "status");
+        form.reset();
+        if (window.gtag) window.gtag("event", "generate_lead", {});
+      } catch (error) {
+        status.textContent = form.dataset.error;
+        status.classList.add("is-error");
+        status.setAttribute("role", "alert");
+      } finally {
+        button.disabled = false;
+        form.removeAttribute("aria-busy");
+        button.textContent = label;
+      }
+    });
+  });
 })();
