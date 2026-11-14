@@ -3,7 +3,7 @@
   "private": true,
   "description": "Personal site of Wellington Almeida, published with GitHub Pages.",
   "scripts": {
-    "build:pages": "node scripts/build-pages.js",
+    "build:pages": "node scripts/brineclub-i18n.js && node scripts/build-pages.js",
     "build:css": "tailwindcss -i ./src/input.css -o ./css/site.css --minify",
     "build:js": "terser js/main.js -c -m -o js/main.min.js",
     "build": "npm run build:pages && npm run build:css && npm run build:js"
