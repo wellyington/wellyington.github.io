@@ -365,7 +365,7 @@ body{cursor:default}
 .stack-card{align-content:start;padding-top:calc(var(--nav-h) + 16px)}
 .stack-card.pricing{height:auto;min-height:0;overflow:visible}
 .pricing{display:block}
-@media(min-width:761px){.pricing,.contact{margin-top:84svh}}
+@media(min-width:761px){.pricing{margin-top:84svh}}
 .pricing-head{max-width:760px;margin-bottom:34px}
 .delivery-flag{display:inline-block;margin:8px 0 0;background:var(--ink);color:var(--cream);padding:12px 16px;font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase}
 .plan-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
@@ -421,7 +421,8 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 .contact{align-items:start}
 .contact-alts,.contact-panel{grid-column:1 / -1}
 @media(min-width:761px){.brine-form{grid-column:2;grid-row:1}}
-@media(max-width:760px){.contact{margin-top:72svh}.brine-form{grid-column:1;padding:18px}.phone-row{grid-template-columns:minmax(6.6rem,8.5rem) minmax(0,1fr)}}
+@media(max-width:760px){.brine-form{grid-column:1;padding:18px}.phone-row{grid-template-columns:minmax(6.6rem,8.5rem) minmax(0,1fr)}}
+.stack-stage.is-last{height:auto;margin-bottom:0;padding-bottom:0}
 html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html[lang="zh-CN"] .brine-form button{letter-spacing:.04em}
 </style></head>
 <body>
@@ -525,7 +526,7 @@ html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html
      const section=document.querySelector(selector);
      if(!section||section.parentElement.classList.contains('stack-stage'))return;
      const stage=document.createElement('div');
-     stage.className='stack-stage';
+     stage.className='stack-stage'+(index===stackSelectors.length-1?' is-last':'');
      stage.style.zIndex=String(index+1);
      section.parentNode.insertBefore(stage,section);
      stage.appendChild(section);
