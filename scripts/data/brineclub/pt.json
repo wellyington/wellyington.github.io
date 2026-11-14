@@ -7,9 +7,18 @@
   "keywords": "criação de landing page, landing page profissional, desenvolvimento de sites, Brine Club, Wellyington",
   "imageAlt": "Brine Club: uma landing page profissional, criada e desenvolvida para o seu negócio no Brasil. Planos a partir de € 99. Entre no cardápio em wellyington.github.io/brineclub.",
   "extraHead": "",
-  "areas": ["Brasil"],
-  "areaTypes": ["Country"],
-  "serviceTypes": ["Criação de landing page", "Landing page profissional", "Desenvolvimento de sites", "Design de landing page"],
+  "areas": [
+    "Brasil"
+  ],
+  "areaTypes": [
+    "Country"
+  ],
+  "serviceTypes": [
+    "Criação de landing page",
+    "Landing page profissional",
+    "Desenvolvimento de sites",
+    "Design de landing page"
+  ],
   "offerGherkin": "Plano de entrada. Landing page criada e desenvolvida. Hospedagem não inclusa. Entrega em 24–48 horas. Pagamento integral antes de começar.",
   "offerFull": "Plano recomendado. Hospedagem inclusa, rastreamento profissional, um subdomínio e várias rodadas de revisão. Entrega em 24–48 horas. Pagamento integral antes de começar.",
   "announcement": "Uma boa primeira impressão está sempre na estação · Seu negócio, bem servido",
@@ -103,13 +112,34 @@
   "faqH": "RESPOSTAS<br>DIRETAS.",
   "faqIntro": "O que quem encomenda uma landing page no Brasil e na Europa costuma perguntar.",
   "faq": [
-    ["O que vem no The Gherkin e no The Full Jar?", "O The Gherkin custa € 99. É uma landing page sob medida para um produto, um serviço ou uma marca pessoal: mensagem, estrutura, design e desenvolvimento, pronta para celular, velocidade e uma base de busca. A hospedagem não está inclusa. O The Full Jar custa € 249 e é o que eu recomendo. Inclui hospedagem, rastreamento profissional, um subdomínio e várias rodadas de revisão."],
-    ["Quanto tempo leva uma página?", "Todo projeto é entregue em 24–48 horas. Mesmo assim, a gente começa entendendo a sua oferta, o público e a ação que você quer que as pessoas tomem."],
-    ["Você trabalha com clientes no Brasil e na Europa?", "Sim. Eu trabalho remoto de Estepona, na Espanha, com gente no Brasil e na Europa. A Espanha fica no horário da Europa Central."],
-    ["Em quais idiomas a gente pode trabalhar?", "Inglês, espanhol e português. Esta página está em português. O idioma da sua landing a gente decide na conversa."],
-    ["Como se paga, e quando?", "Os preços são em euros: € 99 ou € 249. Eu aceito cartão de crédito pelo Stripe, transferência SEPA da UE, ou transferência bancária do Reino Unido com sort code e número da conta. O pagamento integral é feito antes de o projeto começar."],
-    ["Busca e velocidade estão inclusas?", "Sim. Eu desenvolvo para celular, velocidade e uma base de busca. Isso faz parte da página. Não é promessa de ficar em primeiro."],
-    ["O que a hospedagem inclui, e de quem é a página?", "No The Gherkin a hospedagem não está inclusa. Sua página precisa de uma casa própria. No The Full Jar a hospedagem vem inclusa, junto com um subdomínio e rastreamento profissional. A página é feita para você."]
+    [
+      "O que vem no The Gherkin e no The Full Jar?",
+      "O The Gherkin custa € 99. É uma landing page sob medida para um produto, um serviço ou uma marca pessoal: mensagem, estrutura, design e desenvolvimento, pronta para celular, velocidade e uma base de busca. A hospedagem não está inclusa. O The Full Jar custa € 249 e é o que eu recomendo. Inclui hospedagem, rastreamento profissional, um subdomínio e várias rodadas de revisão."
+    ],
+    [
+      "Quanto tempo leva uma página?",
+      "Todo projeto é entregue em 24–48 horas. Mesmo assim, a gente começa entendendo a sua oferta, o público e a ação que você quer que as pessoas tomem."
+    ],
+    [
+      "Você trabalha com clientes no Brasil e na Europa?",
+      "Sim. Eu trabalho remoto de Estepona, na Espanha, com gente no Brasil e na Europa. A Espanha fica no horário da Europa Central."
+    ],
+    [
+      "Em quais idiomas a gente pode trabalhar?",
+      "Inglês, espanhol e português. Esta página está em português. O idioma da sua landing a gente decide na conversa."
+    ],
+    [
+      "Como se paga, e quando?",
+      "Os preços são em euros: € 99 ou € 249. Eu aceito cartão de crédito pelo Stripe, transferência SEPA da UE, ou transferência bancária do Reino Unido com sort code e número da conta. O pagamento integral é feito antes de o projeto começar."
+    ],
+    [
+      "Busca e velocidade estão inclusas?",
+      "Sim. Eu desenvolvo para celular, velocidade e uma base de busca. Isso faz parte da página. Não é promessa de ficar em primeiro."
+    ],
+    [
+      "O que a hospedagem inclui, e de quem é a página?",
+      "No The Gherkin a hospedagem não está inclusa. Sua página precisa de uma casa própria. No The Full Jar a hospedagem vem inclusa, junto com um subdomínio e rastreamento profissional. A página é feita para você."
+    ]
   ],
   "contactNo": "07 / Puxa uma cadeira",
   "contactH": "O QUE<br>VAMOS<br>COZINHAR?",
@@ -127,5 +157,25 @@
   "footerNote": "Eu faço molho digital<br>para produtos, serviços<br>e gente com planos.",
   "footerCopy": "© 2026 BRINE CLUB® · POR WELLYINGTON",
   "footerMid": "Apareça. Seja entendido. Seja escolhido.",
-  "footerEnd": "Feito com um pouco mais de mordida."
+  "footerEnd": "Feito com um pouco mais de mordida.",
+  "formSubject": "Nova mensagem do Brine Club (PT)",
+  "phoneDefault": "+55",
+  "formName": "Nome",
+  "formNamePh": "Seu nome",
+  "formEmailPh": "voce@email.com",
+  "formPhone": "Telefone",
+  "formPhonePh": "11 90000 0000",
+  "phoneCodeLabel": "Código do país",
+  "formPlan": "Qual plano",
+  "planPick": "Escolha um plano",
+  "planGherkin": "The Gherkin · € 99",
+  "planFull": "The Full Jar · € 249",
+  "planUnsure": "Ainda não sei",
+  "formMessage": "Mensagem",
+  "formMessagePh": "O que vamos cozinhar?",
+  "formSubmit": "Enviar",
+  "formSending": "Enviando…",
+  "formSuccess": "Recebi. Respondo em breve.",
+  "formError": "Não foi enviado. Escreva para welly.almeida@gmail.com que eu pego daí.",
+  "formAlt": "Prefere escrever ou ligar? Use um destes."
 }

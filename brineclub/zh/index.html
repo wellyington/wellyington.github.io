@@ -367,7 +367,7 @@ body{cursor:default}
 .stack-card{align-content:start;padding-top:calc(var(--nav-h) + 16px)}
 .stack-card.pricing{height:auto;min-height:0;overflow:visible}
 .pricing{display:block}
-@media(min-width:761px){.pricing{margin-top:84svh}}
+@media(min-width:761px){.pricing,.contact{margin-top:84svh}}
 .pricing-head{max-width:760px;margin-bottom:34px}
 .delivery-flag{display:inline-block;margin:8px 0 0;background:var(--ink);color:var(--cream);padding:12px 16px;font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase}
 .plan-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
@@ -406,6 +406,25 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .plan-name{letter
 html[lang="ru"] h1{font-size:clamp(52px,7.4vw,108px)}
 html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 .hero-sub,.price-copy,.price-detail,.plan-features li,.faq details p,.contact p{overflow-wrap:anywhere}
+
+.brine-form{background:var(--cream);color:var(--ink);border:1px solid var(--ink);padding:22px;display:grid;gap:8px;align-content:start}
+.brine-form label,.phone-field legend{font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.brine-form input,.brine-form select,.brine-form textarea{font:16px var(--sans);color:var(--ink);background:#fff;border:1px solid var(--ink);min-height:44px;padding:10px 12px;width:100%;border-radius:0}
+.brine-form textarea{min-height:110px;resize:vertical}
+.brine-form input:focus,.brine-form select:focus,.brine-form textarea:focus{outline:2px solid var(--deep);outline-offset:2px}
+.phone-field{border:0;margin:0;padding:0;display:grid;gap:6px}
+.phone-row{display:grid;grid-template-columns:minmax(7.2rem,10rem) minmax(0,1fr);gap:8px}
+.botcheck{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.brine-form button[type=submit]{min-height:48px;margin-top:6px;background:var(--ink);color:var(--cream);border:1px solid var(--ink);font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.brine-form button[type=submit]:disabled{opacity:.65;cursor:progress}
+.brine-form button[type=submit]:focus-visible{outline:2px solid var(--deep);outline-offset:3px}
+.form-status{min-height:1.4em;margin:0;font-size:14px;line-height:1.5}
+.form-status.is-error{color:var(--deep)}
+.contact{align-items:start}
+.contact-alts,.contact-panel{grid-column:1 / -1}
+@media(min-width:761px){.brine-form{grid-column:2;grid-row:1}}
+@media(max-width:760px){.contact{margin-top:72svh}.brine-form{grid-column:1;padding:18px}.phone-row{grid-template-columns:minmax(6.6rem,8.5rem) minmax(0,1fr)}}
+html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html[lang="zh-CN"] .brine-form button{letter-spacing:.04em}
 </style></head>
 <body>
 <div class="announcement">好的第一印象永远当季 · 把你的生意好好端上来</div>
@@ -440,7 +459,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
     <li>手机、速度和搜索基础</li>
     <li>不含托管</li>
    </ul>
-   <a class="price-cta" href="#contact">上菜单 <span>↗</span></a>
+   <a class="price-cta" href="#contact" data-plan="The Gherkin €99">上菜单 <span>↗</span></a>
   </article>
   <article class="price-ticket is-featured" data-brand="BRINE CLUB® · WELLYINGTON">
    <div class="plan-badge">最多人选</div>
@@ -454,7 +473,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
     <li>一个子域名</li>
     <li>多轮修改</li>
    </ul>
-   <a class="price-cta" href="#contact">上菜单 <span>↗</span></a>
+   <a class="price-cta" href="#contact" data-plan="The Full Jar €249">上菜单 <span>↗</span></a>
   </article>
  </div>
  <div class="plan-notes">
@@ -469,7 +488,29 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 </section>
 <section class="promise"><div class="eyebrow">店里的一句实话</div><blockquote>我不会许你整个<span>互联网。</span>我给你一个更好的地方去遇见它。</blockquote><p>定位清楚 · 第一眼够强 · 搜索有基础 · 下一步只有一个</p><a class="cta" href="#contact">来做你的页面 <span>↗</span></a></section>
 <section class="faq" id="faq"><div><div class="eyebrow">06 / 下单之前</div><h2>直话<br>直说。</h2><p class="faq-intro">中国客户在委托落地页之前，通常会问这些。</p></div><div class="faq-list"><details><summary>The Gherkin 和 The Full Jar 各有什么？</summary><p>The Gherkin 是€99。这是为产品、服务或个人品牌做的定制落地页：文案、结构、设计和搭建，照顾手机、速度和搜索基础。不含托管。The Full Jar 是€249，也是我推荐的方案。包含托管、专业数据追踪、一个子域名，以及多轮修改。</p></details><details><summary>一页要多久？</summary><p>每个项目都在24–48小时内交付。我们仍会先弄清你的卖点、受众，以及你希望访客做的那一步。</p></details><details><summary>你接中国和欧洲的客户吗？</summary><p>接。我在西班牙埃斯特波纳远程工作，服务中国以及英国和欧洲的客户。西班牙使用中欧时间。</p></details><details><summary>我们可以用哪些语言沟通？</summary><p>英语、西班牙语和葡萄牙语。这一页是中文。落地页本身用什么语言，我们谈的时候再定。</p></details><details><summary>怎么付款，什么时候付？</summary><p>价格是欧元：€99或€249。我接受 Stripe 信用卡、欧盟 SEPA 银行转账，以及带 sort code 和账号的英国银行转账。项目开始前需付清全款。</p></details><details><summary>搜索和速度包括在内吗？</summary><p>包括。我会按手机、速度和搜索基础来做。这是页面的一部分。这不是保证排到第一。</p></details><details><summary>托管包括什么，页面归谁？</summary><p>The Gherkin 不含托管。页面需要一个自己的住处。The Full Jar 含托管，以及一个子域名和专业数据追踪。页面是为你做的。</p></details></div></section>
-<section class="contact" id="contact"><div><div class="eyebrow">07 / 坐下来</div><h2>我们<br>做哪<br>一道？</h2><p>告诉我你卖什么、想找到谁、要去哪里。我们一起定落地页的配方。</p></div><div class="contact-panel"><div class="label">BRINE CLUB® / 来自 WELLYINGTON</div><div class="big">你的卖点有故事。我们给它一个像样的落点。</div><p class="fine">想谈产品、服务或个人品牌的落地页？选一种你方便的联系方式。</p><div class="contact-links"><div class="contact-link"><span>邮箱</span><a href="mailto:welly.almeida@gmail.com?subject=%E6%83%B3%E5%81%9A%E8%90%BD%E5%9C%B0%E9%A1%B5">welly.almeida@gmail.com ↗</a></div><div class="contact-link"><span>电话 / WhatsApp</span><a href="https://wa.me/34604286691" target="_blank" rel="noopener noreferrer">+34 604 286 691 ↗</a></div><div class="contact-link"><span>作品集</span><a href="https://wellyington.github.io/" target="_blank" rel="noopener noreferrer">wellyington.github.io ↗</a></div></div><div class="contact-socials"><a href="https://x.com/wellyington" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a><a href="https://instagram.com/wellyington" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div></section>
+<section class="contact" id="contact"><div class="contact-copy"><div class="eyebrow">07 / 坐下来</div><h2>我们<br>做哪<br>一道？</h2><p>告诉我你卖什么、想找到谁、要去哪里。我们一起定落地页的配方。</p></div><form class="brine-form" id="brine-form" action="https://api.web3forms.com/submit" method="POST" data-sending="发送中…" data-success="收到了。我会尽快回复。" data-error="没有发出去。请发邮件到 welly.almeida@gmail.com，我来接。">
+<input type="hidden" name="access_key" value="e64ab1b2-7fb7-47fd-91b7-e0d5e67222b0">
+<input type="hidden" name="subject" value="Brine Club 新咨询 (ZH)">
+<input type="hidden" name="from_name" value="Brine Club">
+<input type="hidden" name="redirect" value="https://wellyington.github.io/brineclub/zh/#contact">
+<label class="botcheck"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">bot</label>
+<label for="brine-name">姓名</label>
+<input id="brine-name" name="name" type="text" autocomplete="name" required placeholder="你的名字">
+<label for="brine-email">邮箱</label>
+<input id="brine-email" name="email" type="email" autocomplete="email" required placeholder="you@email.com">
+<fieldset class="phone-field"><legend>电话</legend><div class="phone-row"><select id="phone-code" name="phone_code" aria-label="国家区号" autocomplete="tel-country-code" required><option value="+44" title="英国">+44 UK</option><option value="+34" title="西班牙">+34 ES</option><option value="+55" title="巴西">+55 BR</option><option value="+7" title="俄罗斯 / 哈萨克斯坦">+7 RU</option><option value="+86" selected title="中国">+86 CN</option><option value="+1" title="美国 / 加拿大">+1 US</option><option value="+351" title="葡萄牙">+351 PT</option><option value="+33" title="法国">+33 FR</option><option value="+49" title="德国">+49 DE</option><option value="+39" title="意大利">+39 IT</option><option value="+31" title="荷兰">+31 NL</option><option value="+353" title="爱尔兰">+353 IE</option><option value="+32" title="比利时">+32 BE</option><option value="+52" title="墨西哥">+52 MX</option><option value="+54" title="阿根廷">+54 AR</option><option value="+57" title="哥伦比亚">+57 CO</option><option value="+56" title="智利">+56 CL</option><option value="+380" title="乌克兰">+380 UA</option><option value="+375" title="白俄罗斯">+375 BY</option><option value="+998" title="乌兹别克斯坦">+998 UZ</option><option value="+996" title="吉尔吉斯斯坦">+996 KG</option><option value="+971" title="阿联酋">+971 AE</option><option value="+61" title="澳大利亚">+61 AU</option><option value="+91" title="印度">+91 IN</option></select><input id="brine-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="138 0000 0000"></div></fieldset>
+<label for="plan">哪个方案</label>
+<select id="plan" name="plan" required>
+<option value="" selected disabled>选择方案</option>
+<option value="The Gherkin €99">The Gherkin · €99</option>
+<option value="The Full Jar €249">The Full Jar · €249</option>
+<option value="Not sure yet">还没想好</option>
+</select>
+<label for="brine-message">留言</label>
+<textarea id="brine-message" name="message" rows="4" required placeholder="想做什么？"></textarea>
+<button type="submit">发送</button>
+<p class="form-status" aria-live="polite"></p>
+</form><div class="contact-panel"><div class="label">BRINE CLUB® / 来自 WELLYINGTON</div><div class="big">你的卖点有故事。我们给它一个像样的落点。</div><p class="fine">想直接写信或打电话？用下面的方式。</p><div class="contact-links"><div class="contact-link"><span>邮箱</span><a href="mailto:welly.almeida@gmail.com?subject=%E6%83%B3%E5%81%9A%E8%90%BD%E5%9C%B0%E9%A1%B5">welly.almeida@gmail.com ↗</a></div><div class="contact-link"><span>电话 / WhatsApp</span><a href="https://wa.me/34604286691" target="_blank" rel="noopener noreferrer">+34 604 286 691 ↗</a></div><div class="contact-link"><span>作品集</span><a href="https://wellyington.github.io/" target="_blank" rel="noopener noreferrer">wellyington.github.io ↗</a></div></div><div class="contact-socials"><a href="https://x.com/wellyington" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a><a href="https://instagram.com/wellyington" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div></section>
 </main>
 <footer class="footer"><div class="footer-top"><div class="footer-brand"><div class="footer-logo">BRINE<br>CLUB®</div><div class="footer-byline">Wellyington <span>的个人项目。</span></div></div><div class="footer-note">我给产品、服务<br>和有计划的人<br>做数字酱汁。</div></div><div class="footer-bottom"><span>© 2026 BRINE CLUB® · WELLYINGTON</span><span>被人看见。被人看懂。被人选中。</span><span>味道再冲一点。</span></div></footer>
 
@@ -480,7 +521,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
  const nav=document.querySelector('.nav'),bar=document.querySelector('.scroll-progress');
  const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%';nav.classList.toggle('scrolled',scrollY>24)};
  addEventListener('scroll',update,{passive:true});update();
- const stackSelectors=['.intro','.problem','.menu','.process','.promise','.faq','.contact'];
+ const stackSelectors=['.intro','.problem','.menu','.process','.promise','.faq'];
  if(!reduce){
    stackSelectors.forEach((selector,index)=>{
      const section=document.querySelector(selector);
@@ -522,6 +563,7 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
   const id=a.getAttribute('href').slice(1);
   if(id&&id!=='top'&&!document.getElementById(id))return;
   e.preventDefault();
+  if(a.dataset.plan){const sel=document.getElementById('plan');if(sel)sel.value=a.dataset.plan}
   if(nav.classList.contains('is-open'))setMenu(false);
   if(location.hash!=='#'+id)history.pushState(null,'','#'+(id||'top'));
   scrollToId(id,reduce?'instant':'smooth');
@@ -548,6 +590,48 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
   else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
  });
  document.addEventListener('click',e=>{if(nav.classList.contains('is-open')&&!nav.contains(e.target))setMenu(false)});
+ const form=document.getElementById('brine-form');
+ if(form){
+  form.addEventListener('submit',async e=>{
+   if(!window.fetch)return;
+   e.preventDefault();
+   const status=form.querySelector('.form-status');
+   const btn=form.querySelector('[type=submit]');
+   const code=form.phone_code.value;
+   const local=form.phone.value.trim();
+   const fd=new FormData(form);
+   fd.set('phone',(code+' '+local).replace(/\s+/g,' ').trim());
+   fd.delete('phone_code');
+   fd.delete('redirect');
+   status.className='form-status';
+   status.textContent='';
+   if(fd.get('botcheck')){status.textContent=form.dataset.success;status.className='form-status is-ok';return}
+   const label=btn.textContent;
+   btn.disabled=true;
+   form.setAttribute('aria-busy','true');
+   btn.textContent=form.dataset.sending;
+   try{
+    const res=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(fd.entries()))});
+    const data=await res.json();
+    if(!res.ok||!data.success)throw new Error('fail');
+    status.textContent=form.dataset.success;
+    status.className='form-status is-ok';
+    status.setAttribute('role','status');
+    form.reset();
+    const plan=fd.get('plan')||'';
+    const value=plan.indexOf('249')>-1?249:plan.indexOf('99')>-1?99:undefined;
+    if(window.gtag)gtag('event','generate_lead',value?{currency:'EUR',value:value}:{});
+   }catch(err){
+    status.textContent=form.dataset.error;
+    status.className='form-status is-error';
+    status.setAttribute('role','alert');
+   }finally{
+    btn.disabled=false;
+    form.removeAttribute('aria-busy');
+    btn.textContent=label;
+   }
+  });
+ }
 })();
 </script>
 

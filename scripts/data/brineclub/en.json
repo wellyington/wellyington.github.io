@@ -7,9 +7,36 @@
   "keywords": "landing page design, web development, landing page UK, landing page Europe, Brine Club, Wellyington",
   "imageAlt": "Brine Club: a landing page designed and built for your business in the UK and Europe, €99 a page. Get on the menu at wellyington.github.io/brineclub.",
   "extraHead": "",
-  "areas": ["United Kingdom", "Europe", "Ireland", "France", "Germany", "Spain", "Portugal", "Netherlands", "Italy", "Belgium"],
-  "areaTypes": ["Country", "Continent", "Country", "Country", "Country", "Country", "Country", "Country", "Country", "Country"],
-  "serviceTypes": ["Web design", "Web development", "Landing page design", "Landing page development"],
+  "areas": [
+    "United Kingdom",
+    "Europe",
+    "Ireland",
+    "France",
+    "Germany",
+    "Spain",
+    "Portugal",
+    "Netherlands",
+    "Italy",
+    "Belgium"
+  ],
+  "areaTypes": [
+    "Country",
+    "Continent",
+    "Country",
+    "Country",
+    "Country",
+    "Country",
+    "Country",
+    "Country",
+    "Country",
+    "Country"
+  ],
+  "serviceTypes": [
+    "Web design",
+    "Web development",
+    "Landing page design",
+    "Landing page development"
+  ],
   "offerGherkin": "Entry-level landing page, designed and built. Hosting is not included. Delivered within 24–48 hours. Full payment is required before the project starts.",
   "offerFull": "Recommended plan. Hosting included, professional tracking, a sub-domain, and multiple rounds of revisions. Delivered within 24–48 hours. Full payment is required before the project starts.",
   "announcement": "A better first impression is always in season · Your business, served properly",
@@ -103,13 +130,34 @@
   "faqH": "STRAIGHT<br>ANSWERS.",
   "faqIntro": "A few things people in the UK and Europe ask before they commission a landing page.",
   "faq": [
-    ["What's in The Gherkin and The Full Jar?", "The Gherkin is €99. It is a custom-designed landing page for a product, a service, or a personal brand: message, structure, design and build, ready for mobile, speed, and search foundations. Hosting is not included. The Full Jar is €249, and it is the one I recommend. It includes hosting, professional tracking, a sub-domain, and multiple rounds of revisions."],
-    ["How long does a page take?", "Every project is delivered within 24–48 hours. We still start by getting to grips with your offer, audience, and the action you want visitors to take."],
-    ["Can you work with clients in the UK and Europe?", "Yes. I work remotely from Estepona, in Spain, with people across the UK and Europe. Spain is on Central European Time."],
-    ["Which languages can we work in?", "English, Spanish, and Portuguese. This page is in English. We decide the language of your page when we talk."],
-    ["How do I pay, and when?", "Prices are in euros: €99 or €249. I take a credit card through Stripe, an EU SEPA bank transfer, or a UK bank transfer with a sort code and account number. Full payment is required before the project starts."],
-    ["Are search and speed included?", "Yes. I build for mobile, speed, and search foundations. That is part of the page. It is not a promise that you will rank first."],
-    ["What does hosting include, and who owns the page?", "On The Gherkin, hosting is not included. Your page needs a home of its own. On The Full Jar, hosting is included, along with a sub-domain and professional tracking. The page is built for you."]
+    [
+      "What's in The Gherkin and The Full Jar?",
+      "The Gherkin is €99. It is a custom-designed landing page for a product, a service, or a personal brand: message, structure, design and build, ready for mobile, speed, and search foundations. Hosting is not included. The Full Jar is €249, and it is the one I recommend. It includes hosting, professional tracking, a sub-domain, and multiple rounds of revisions."
+    ],
+    [
+      "How long does a page take?",
+      "Every project is delivered within 24–48 hours. We still start by getting to grips with your offer, audience, and the action you want visitors to take."
+    ],
+    [
+      "Can you work with clients in the UK and Europe?",
+      "Yes. I work remotely from Estepona, in Spain, with people across the UK and Europe. Spain is on Central European Time."
+    ],
+    [
+      "Which languages can we work in?",
+      "English, Spanish, and Portuguese. This page is in English. We decide the language of your page when we talk."
+    ],
+    [
+      "How do I pay, and when?",
+      "Prices are in euros: €99 or €249. I take a credit card through Stripe, an EU SEPA bank transfer, or a UK bank transfer with a sort code and account number. Full payment is required before the project starts."
+    ],
+    [
+      "Are search and speed included?",
+      "Yes. I build for mobile, speed, and search foundations. That is part of the page. It is not a promise that you will rank first."
+    ],
+    [
+      "What does hosting include, and who owns the page?",
+      "On The Gherkin, hosting is not included. Your page needs a home of its own. On The Full Jar, hosting is included, along with a sub-domain and professional tracking. The page is built for you."
+    ]
   ],
   "contactNo": "07 / Pull up a chair",
   "contactH": "WHAT ARE<br>WE COOKING<br>UP?",
@@ -127,5 +175,25 @@
   "footerNote": "I make digital salsa<br>for products, services<br>and people with plans.",
   "footerCopy": "© 2026 BRINE CLUB® · BY WELLYINGTON",
   "footerMid": "Get seen. Get understood. Get chosen.",
-  "footerEnd": "Made with a little more bite."
+  "footerEnd": "Made with a little more bite.",
+  "formSubject": "New Brine Club enquiry (EN)",
+  "phoneDefault": "+44",
+  "formName": "Name",
+  "formNamePh": "Your name",
+  "formEmailPh": "you@email.com",
+  "formPhone": "Phone",
+  "formPhonePh": "7700 900123",
+  "phoneCodeLabel": "Country code",
+  "formPlan": "Which plan",
+  "planPick": "Choose a plan",
+  "planGherkin": "The Gherkin · €99",
+  "planFull": "The Full Jar · €249",
+  "planUnsure": "Not sure yet",
+  "formMessage": "Message",
+  "formMessagePh": "What are you cooking up?",
+  "formSubmit": "Send the brief",
+  "formSending": "Sending…",
+  "formSuccess": "Got it. I'll reply soon.",
+  "formError": "That didn't send. Email welly.almeida@gmail.com and I'll pick it up.",
+  "formAlt": "Prefer to write or call? Use one of these."
 }
