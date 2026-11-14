@@ -191,5 +191,6 @@
   "formSending": "Enviando…",
   "formSuccess": "Recibido. Te respondo pronto.",
   "formError": "No se envió. Escríbeme a welly.almeida@gmail.com y lo recojo.",
+  "formInvalid": "Completa todos los campos.",
   "formAlt": "¿Prefieres escribir o llamar? Usa una de estas."
 }

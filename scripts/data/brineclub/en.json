@@ -195,5 +195,6 @@
   "formSending": "Sending…",
   "formSuccess": "Got it. I'll reply soon.",
   "formError": "That didn't send. Email welly.almeida@gmail.com and I'll pick it up.",
+  "formInvalid": "Please fill in every field.",
   "formAlt": "Prefer to write or call? Use one of these."
 }

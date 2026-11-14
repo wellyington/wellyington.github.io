@@ -409,7 +409,9 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 
 .brine-form{background:var(--cream);color:var(--ink);border:1px solid var(--ink);padding:22px;display:grid;gap:8px;align-content:start}
 .brine-form label,.phone-field legend{font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.brine-form input,.brine-form select,.brine-form textarea{font:16px var(--sans);color:var(--ink);background:#fff;border:1px solid var(--ink);min-height:44px;padding:10px 12px;width:100%;border-radius:0}
+.brine-form input,.brine-form select,.brine-form textarea{font:16px var(--sans);color:var(--ink);background:#fff;border:1px solid var(--ink);min-height:44px;padding:10px 12px;width:100%;border-radius:0;color-scheme:light}
+.brine-form select option{background:#fff;color:#171312}
+.brine-form select option:checked{background:#171312;color:#f5e9d5}
 .brine-form textarea{min-height:110px;resize:vertical}
 .brine-form input:focus,.brine-form select:focus,.brine-form textarea:focus{outline:2px solid var(--deep);outline-offset:2px}
 .phone-field{border:0;margin:0;padding:0;display:grid;gap:6px}
@@ -489,7 +491,7 @@ html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html
 </section>
 <section class="promise"><div class="eyebrow">店里的一句实话</div><blockquote>我不会许你整个<span>互联网。</span>我给你一个更好的地方去遇见它。</blockquote><p>定位清楚 · 第一眼够强 · 搜索有基础 · 下一步只有一个</p><a class="cta" href="#contact">来做你的页面 <span>↗</span></a></section>
 <section class="faq" id="faq"><div><div class="eyebrow">06 / 下单之前</div><h2>直话<br>直说。</h2><p class="faq-intro">中国客户在委托落地页之前，通常会问这些。</p></div><div class="faq-list"><details><summary>The Gherkin 和 The Full Jar 各有什么？</summary><p>The Gherkin 是€99。这是为产品、服务或个人品牌做的定制落地页：文案、结构、设计和搭建，照顾手机、速度和搜索基础。不含托管。The Full Jar 是€249，也是我推荐的方案。包含托管、专业数据追踪、一个子域名，以及多轮修改。</p></details><details><summary>一页要多久？</summary><p>每个项目都在24–48小时内交付。我们仍会先弄清你的卖点、受众，以及你希望访客做的那一步。</p></details><details><summary>你接中国和欧洲的客户吗？</summary><p>接。我在西班牙埃斯特波纳远程工作，服务中国以及英国和欧洲的客户。西班牙使用中欧时间。</p></details><details><summary>我们可以用哪些语言沟通？</summary><p>英语、西班牙语和葡萄牙语。这一页是中文。落地页本身用什么语言，我们谈的时候再定。</p></details><details><summary>怎么付款，什么时候付？</summary><p>价格是欧元：€99或€249。我接受 Stripe 信用卡、欧盟 SEPA 银行转账，以及带 sort code 和账号的英国银行转账。项目开始前需付清全款。</p></details><details><summary>搜索和速度包括在内吗？</summary><p>包括。我会按手机、速度和搜索基础来做。这是页面的一部分。这不是保证排到第一。</p></details><details><summary>托管包括什么，页面归谁？</summary><p>The Gherkin 不含托管。页面需要一个自己的住处。The Full Jar 含托管，以及一个子域名和专业数据追踪。页面是为你做的。</p></details></div></section>
-<section class="contact" id="contact"><div class="contact-copy"><div class="eyebrow">07 / 坐下来</div><h2>我们<br>做哪<br>一道？</h2><p>告诉我你卖什么、想找到谁、要去哪里。我们一起定落地页的配方。</p></div><form class="brine-form" id="brine-form" action="https://api.web3forms.com/submit" method="POST" data-sending="发送中…" data-success="收到了。我会尽快回复。" data-error="没有发出去。请发邮件到 welly.almeida@gmail.com，我来接。">
+<section class="contact" id="contact"><div class="contact-copy"><div class="eyebrow">07 / 坐下来</div><h2>我们<br>做哪<br>一道？</h2><p>告诉我你卖什么、想找到谁、要去哪里。我们一起定落地页的配方。</p></div><form class="brine-form" id="brine-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-sending="发送中…" data-success="收到了。我会尽快回复。" data-error="没有发出去。请发邮件到 welly.almeida@gmail.com，我来接。" data-invalid="请填完每一项。">
 <input type="hidden" name="access_key" value="e64ab1b2-7fb7-47fd-91b7-e0d5e67222b0">
 <input type="hidden" name="subject" value="Brine Club 新咨询 (ZH)">
 <input type="hidden" name="from_name" value="Brine Club">
@@ -598,6 +600,14 @@ html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html
    e.preventDefault();
    const status=form.querySelector('.form-status');
    const btn=form.querySelector('[type=submit]');
+   if(!form.checkValidity()){
+    const field=form.querySelector(':invalid');
+    status.textContent=form.dataset.invalid;
+    status.className='form-status is-error';
+    status.setAttribute('role','alert');
+    if(field)field.focus();
+    return;
+   }
    const code=form.phone_code.value;
    const local=form.phone.value.trim();
    const fd=new FormData(form);

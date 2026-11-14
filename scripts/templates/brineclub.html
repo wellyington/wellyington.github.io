@@ -251,7 +251,9 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 
 .brine-form{background:var(--cream);color:var(--ink);border:1px solid var(--ink);padding:22px;display:grid;gap:8px;align-content:start}
 .brine-form label,.phone-field legend{font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.brine-form input,.brine-form select,.brine-form textarea{font:16px var(--sans);color:var(--ink);background:#fff;border:1px solid var(--ink);min-height:44px;padding:10px 12px;width:100%;border-radius:0}
+.brine-form input,.brine-form select,.brine-form textarea{font:16px var(--sans);color:var(--ink);background:#fff;border:1px solid var(--ink);min-height:44px;padding:10px 12px;width:100%;border-radius:0;color-scheme:light}
+.brine-form select option{background:#fff;color:#171312}
+.brine-form select option:checked{background:#171312;color:#f5e9d5}
 .brine-form textarea{min-height:110px;resize:vertical}
 .brine-form input:focus,.brine-form select:focus,.brine-form textarea:focus{outline:2px solid var(--deep);outline-offset:2px}
 .phone-field{border:0;margin:0;padding:0;display:grid;gap:6px}
@@ -331,7 +333,7 @@ html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html
 </section>
 <section class="promise"><div class="eyebrow">{{promiseNo}}</div><blockquote>{{promiseQ}}</blockquote><p>{{promiseP}}</p><a class="cta" href="#contact">{{promiseCta}} <span>↗</span></a></section>
 <section class="faq" id="faq"><div><div class="eyebrow">{{faqNo}}</div><h2>{{faqH}}</h2><p class="faq-intro">{{faqIntro}}</p></div><div class="faq-list">{{faqItems}}</div></section>
-<section class="contact" id="contact"><div class="contact-copy"><div class="eyebrow">{{contactNo}}</div><h2>{{contactH}}</h2><p>{{contactP}}</p></div><form class="brine-form" id="brine-form" action="https://api.web3forms.com/submit" method="POST" data-sending="{{formSending}}" data-success="{{formSuccess}}" data-error="{{formError}}">
+<section class="contact" id="contact"><div class="contact-copy"><div class="eyebrow">{{contactNo}}</div><h2>{{contactH}}</h2><p>{{contactP}}</p></div><form class="brine-form" id="brine-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-sending="{{formSending}}" data-success="{{formSuccess}}" data-error="{{formError}}" data-invalid="{{formInvalid}}">
 <input type="hidden" name="access_key" value="e64ab1b2-7fb7-47fd-91b7-e0d5e67222b0">
 <input type="hidden" name="subject" value="{{formSubject}}">
 <input type="hidden" name="from_name" value="Brine Club">
@@ -440,6 +442,14 @@ html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html
    e.preventDefault();
    const status=form.querySelector('.form-status');
    const btn=form.querySelector('[type=submit]');
+   if(!form.checkValidity()){
+    const field=form.querySelector(':invalid');
+    status.textContent=form.dataset.invalid;
+    status.className='form-status is-error';
+    status.setAttribute('role','alert');
+    if(field)field.focus();
+    return;
+   }
    const code=form.phone_code.value;
    const local=form.phone.value.trim();
    const fd=new FormData(form);
