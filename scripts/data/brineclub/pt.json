@@ -177,5 +177,6 @@
   "formSending": "Enviando…",
   "formSuccess": "Recebi. Respondo em breve.",
   "formError": "Não foi enviado. Escreva para welly.almeida@gmail.com que eu pego daí.",
+  "formInvalid": "Preencha todos os campos.",
   "formAlt": "Prefere escrever ou ligar? Use um destes."
 }

@@ -463,13 +463,6 @@
 
   onIdle(function () {
   safe("language", function initLanguage() {
-    const hintCopy = {
-      en: { href: "/", text: "Continue in English", lang: "en" },
-      es: { href: "/es/", text: "Continuar en español", lang: "es" },
-      pt: { href: "/pt/", text: "Continuar em português", lang: "pt-BR" },
-      ru: { href: "/ru/", text: "Продолжить на русском", lang: "ru" },
-    };
-
     document.querySelectorAll("[data-lang-switcher]").forEach(function (rootEl) {
       const button = rootEl.querySelector("button");
       const menu = rootEl.querySelector("[data-lang-menu]");
@@ -553,28 +546,9 @@
     });
 
     const hint = document.getElementById("langHint");
-    const current = root.getAttribute("data-lang");
-    let saved = null;
-    try {
-      saved = localStorage.getItem("welly-lang");
-    } catch (error) {
-      saved = null;
-    }
-    if (hint && saved && hintCopy[saved] && saved !== current && sessionStorage.getItem("welly-lang-hint") !== "off") {
-      const link = document.getElementById("langHintLink");
-      const hash = window.location.hash;
-      link.href = hintCopy[saved].href + (/^#[A-Za-z0-9-]+$/.test(hash) ? hash : "");
-      link.textContent = hintCopy[saved].text;
-      link.hreflang = hintCopy[saved].lang;
-      link.addEventListener("click", function () {
-        try {
-          localStorage.setItem("welly-lang", saved);
-        } catch (error) {
-          /* ignore */
-        }
-      });
-      hint.hidden = false;
-    }
+    // A saved language used to unhide this bar on load, so the English page
+    // opened with "Продолжить на русском". Leave it hidden.
+    if (hint) hint.hidden = true;
     const dismiss = document.getElementById("langHintDismiss");
     if (dismiss && hint) {
       dismiss.addEventListener("click", function () {
@@ -968,6 +942,14 @@
       event.preventDefault();
       const status = form.querySelector(".form-status");
       const button = form.querySelector("[type=submit]");
+      if (!form.checkValidity()) {
+        const field = form.querySelector(":invalid");
+        status.textContent = form.dataset.invalid;
+        status.className = "form-status min-h-[1.4em] text-sm leading-relaxed is-error";
+        status.setAttribute("role", "alert");
+        if (field && typeof field.focus === "function") field.focus();
+        return;
+      }
       const code = form.phone_code.value;
       const local = form.phone.value.trim();
       const data = new FormData(form);

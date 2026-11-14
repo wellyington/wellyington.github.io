@@ -68,6 +68,19 @@ html {
 .form-status.is-error { color: #9f1239; }
 [data-theme="dark"] .form-status.is-error { color: #fecdd3; }
 
+/* Windows Chrome paints the open list white while inheriting the page's light text. */
+select {
+  color-scheme: light;
+}
+select option {
+  background-color: #ffffff;
+  color: #12383c;
+}
+select option:checked {
+  background-color: #17484d;
+  color: #e3fdfd;
+}
+
 body {
   background-color: var(--color-brand-cream);
   color: var(--color-brand-primary);

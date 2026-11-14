@@ -177,5 +177,6 @@
   "formSending": "发送中…",
   "formSuccess": "收到了。我会尽快回复。",
   "formError": "没有发出去。请发邮件到 welly.almeida@gmail.com，我来接。",
+  "formInvalid": "请填完每一项。",
   "formAlt": "想直接写信或打电话？用下面的方式。"
 }
