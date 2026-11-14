@@ -649,15 +649,31 @@
                 </a>
               </div>
             </div>
-            <div class="group relative col-span-4 flex min-h-[380px] items-center justify-center overflow-hidden bg-brand-dark md:col-span-6 md:min-h-[520px]">
-              <img src="/images/contact-workspace.webp" sizes="(min-width: 768px) 50vw, 100vw" alt="{{contactPhotoAlt}}" width="1600" height="1057" loading="lazy" decoding="async" class="hover-zoom absolute inset-0 h-full w-full object-cover grayscale transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0">
-              <div class="absolute inset-0 bg-brand-primary/30 mix-blend-multiply"></div>
-              <div class="relative z-10 px-6 text-center">
-                <span class="inline-block border border-[#e3fdfd]/85 bg-[#12383c]/75 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#e3fdfd] backdrop-blur-sm">
-                  {{contactBadge}}
-                </span>
-              </div>
-            </div>
+            <form id="enquiry-form" class="col-span-4 flex flex-col gap-3 border-b border-brand-primary/50 p-6 md:col-span-6 md:border-b-0 md:p-8" action="https://api.web3forms.com/submit" method="POST" data-sending="{{formSending}}" data-success="{{formSuccess}}" data-error="{{formError}}">
+              <input type="hidden" name="access_key" value="e64ab1b2-7fb7-47fd-91b7-e0d5e67222b0">
+              <input type="hidden" name="subject" value="{{formSubject}}">
+              <input type="hidden" name="from_name" value="Wellyington">
+              <input type="hidden" name="redirect" value="{{pageUrl}}#contact">
+              <label class="absolute -left-[9999px] h-px w-px overflow-hidden"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">bot</label>
+              <label class="grid gap-1.5 text-xs font-bold uppercase tracking-[0.16em]" for="enquiry-name">{{formName}}
+                <input id="enquiry-name" name="name" type="text" autocomplete="name" required placeholder="{{formNamePh}}" class="min-h-11 border border-brand-primary bg-transparent px-3 text-base font-normal normal-case tracking-normal text-brand-primary placeholder:text-brand-primary/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary">
+              </label>
+              <label class="grid gap-1.5 text-xs font-bold uppercase tracking-[0.16em]" for="enquiry-email">{{formEmail}}
+                <input id="enquiry-email" name="email" type="email" autocomplete="email" required placeholder="{{formEmailPh}}" class="min-h-11 border border-brand-primary bg-transparent px-3 text-base font-normal normal-case tracking-normal text-brand-primary placeholder:text-brand-primary/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary">
+              </label>
+              <fieldset class="grid gap-1.5 border-0 p-0">
+                <legend class="text-xs font-bold uppercase tracking-[0.16em]">{{formPhone}}</legend>
+                <div class="grid grid-cols-[7.5rem_minmax(0,1fr)] gap-2">
+                  <select id="enquiry-code" name="phone_code" aria-label="{{phoneCodeLabel}}" autocomplete="tel-country-code" required class="min-h-11 min-w-0 border border-brand-primary bg-transparent px-2 text-base text-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary">{{phoneOptions}}</select>
+                  <input id="enquiry-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="{{formPhonePh}}" class="min-h-11 min-w-0 border border-brand-primary bg-transparent px-3 text-base text-brand-primary placeholder:text-brand-primary/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary">
+                </div>
+              </fieldset>
+              <label class="grid gap-1.5 text-xs font-bold uppercase tracking-[0.16em]" for="enquiry-message">{{formMessage}}
+                <textarea id="enquiry-message" name="message" rows="4" required placeholder="{{formMessagePh}}" class="min-h-28 resize-y border border-brand-primary bg-transparent px-3 py-2 text-base font-normal normal-case tracking-normal text-brand-primary placeholder:text-brand-primary/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"></textarea>
+              </label>
+              <button type="submit" class="mt-1 inline-flex min-h-12 items-center justify-center border border-brand-primary bg-brand-primary px-4 text-xs font-bold uppercase tracking-[0.16em] text-brand-cream transition-colors hover:bg-brand-cream hover:text-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary disabled:opacity-60">{{formSubmit}}</button>
+              <p class="form-status min-h-[1.4em] text-sm leading-relaxed" aria-live="polite"></p>
+            </form>
           </div>
         </div>
       </div>

@@ -65,6 +65,9 @@ html {
   }
 }
 
+.form-status.is-error { color: #9f1239; }
+[data-theme="dark"] .form-status.is-error { color: #fecdd3; }
+
 body {
   background-color: var(--color-brand-cream);
   color: var(--color-brand-primary);
