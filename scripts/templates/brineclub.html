@@ -269,6 +269,10 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 @media(min-width:761px){.brine-form{grid-column:2;grid-row:1}}
 @media(max-width:760px){.brine-form{grid-column:1;padding:18px}.phone-row{grid-template-columns:minmax(6.6rem,8.5rem) minmax(0,1fr)}}
 .stack-stage.is-last{height:auto;margin-bottom:0;padding-bottom:0}
+/* The promise card is a full-viewport sticky red panel, and its stage still
+   extends past a short FAQ. That stage paints over the contact block and
+   hides the top of the form. Keep contact and the footer above the deck. */
+.contact,.footer{position:relative;z-index:20}
 html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html[lang="zh-CN"] .brine-form button{letter-spacing:.04em}
 </style></head>
 <body>
