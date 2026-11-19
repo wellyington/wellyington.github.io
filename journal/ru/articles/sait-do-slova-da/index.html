@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">
+<!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="сайт до слова «да»" />
+<meta name="author" content="Wellyington" />
+<meta property="og:locale" content="ru" />
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/" />
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/" />
+<meta property="og:site_name" content="Journal" />
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-19T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-19T00:00:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" />
+<meta name="twitter:title" content="сайт до слова «да»" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wellyington"},"dateModified":"2026-11-19T00:00:00+01:00","datePublished":"2026-11-19T00:00:00+01:00","headline":"сайт до слова «да»","image":"https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/"},"url":"https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>сайт до слова «да» — Журнал · Wellyington</title>
+<meta name="description" content="Первый день из ста: одностраничный сайт фирмы Pedro Sánchez Construcción уже открыт, чтобы Педро увидел свою готовую страницу до подписания любого договора.">
+<meta property="og:description" content="Первый день из ста: одностраничный сайт фирмы Pedro Sánchez Construcción уже открыт, чтобы Педро увидел свою готовую страницу до подписания любого договора.">
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/built-before-the-yes/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-web-antes-del-si/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/o-site-antes-do-sim/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/sait-do-slova-da/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/sait-do-slova-da/" class="menu-entry">
+            <span class="mono dim">№ 001</span>
+            <span>сайт до слова «да»<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/built-before-the-yes/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-web-antes-del-si/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/o-site-antes-do-sim/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/sait-do-slova-da/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 001</span>
+    <span class="entry-cell label">100 дней</span>
+    <time class="entry-cell" datetime="2026-11-19T00:00:00+01:00">19 ноября 2026</time>
+    <span class="entry-cell">7 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">сайт до слова «да»<span class="dot">.</span></h1><p class="entry-lede">Первый день из ста: одностраничный сайт фирмы Pedro Sánchez Construcción уже открыт, чтобы Педро увидел свою готовую страницу до подписания любого договора.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" alt="Обложка кейса: сайт Pedro Sánchez Construcción на компьютере и на телефоне, со строкой Más de 25 años construyendo hogares." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 001</span>
+</div>
+<p class="caption label">День первый. Страница строительной фирмы в Марина-Альте, на большом экране и на телефоне.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fsait-do-slova-da%2F&text=%D1%81%D0%B0%D0%B9%D1%82+%D0%B4%D0%BE+%D1%81%D0%BB%D0%BE%D0%B2%D0%B0+%C2%AB%D0%B4%D0%B0%C2%BB"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fsait-do-slova-da%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>17 ноября я выложил короткую заметку. Первый день дела, которое веду открыто: сто дней, сто дел, сто сайтов. Первый — одна страница для Pedro Sánchez Construcción, семейной строительной фирмы в Марина-Альте. Она уже открывается.</p>
+
+<p>Я работаю из Эстепоны. Обычная неделя — сайт для магазина, мастерской или ремесла, такой, чтобы он вёл себя как само дело: было понятно, что предлагают, и чтобы до него можно было дозвониться обычным днём. Этот я собрал до того, как кто-то меня нанял.</p>
+
+<p>Его можно открыть здесь: <a href="https://wellyington.github.io/challenge/day1/">Pedro Sánchez Construcción, день первый</a>. Пока он лежит на моём адресе. Так честнее, пока хозяин его не забрал.</p>
+
+<h2 id="сто-дней-по-одному-делу">сто дней, по одному делу</h2>
+
+<p>Одно дело в день, и каждый раз настоящий сайт, а не картинка, припасённая для встречи, которой может не случиться. К концу ста дней мне нужны сто страниц, которые человек откроет и узнает. Эта фирма — первая. Впереди ещё девяносто девять.</p>
+
+<p>Идея Рамайи Траска. Он считает, что такая полоса дней — здравый способ собрать дело по сайтам, и причина на стороне клиента. Нанять кого-то обычно значит воображать страницу, которой нет: чужие сайты, предложение, своё имя всё ещё на пустом месте. Готовая страница решается проще. Вы её открываете, видите свои города и свою работу и передаёте телефон через стол. Да, или нет, или поправьте вот это.</p>
+
+<p>С Педро я не говорил. Насколько мне известно, страницу он не видел, и я не стану писать так, будто видел. Она лежит здесь, чтобы он смотрел на готовую вещь, а не на обещание, что страница когда-нибудь появится. Пока он ничего мне не подтвердил, и я не собираюсь дописывать за него согласие.</p>
+
+<h2 id="что-нужно-клиенту-строителя">что нужно клиенту строителя</h2>
+
+<p>Страница представляет семейную фирму, которая больше двадцати пяти лет строит дома в Марина-Альте. Названы Хавеа, Дения и Кальпе и берег вокруг, на Коста-Бланке, в Аликанте. Верхняя строка — та, с которой они начинают: больше двадцати пяти лет строим дома. Новые дома, полные ремонты, близкий разговор с людьми и внимание к мелочи.</p>
+
+<p>Эту историю я не выдумал, чтобы фирма звучала старше. Её и слушает клиент. Двадцать пять лет на одном берегу значат, что компания была здесь до модных кухонь этого года и, скорее всего, ещё возьмёт трубку, если стройка затянется. «Семейная» на странице расписана как trato directo. Вы говорите с ними, а не с коммутатором.</p>
+
+<p>Работа стоит двумя частями, рядом. Новые дома: одни они строят как свои, другие рисуют под конкретного человека, и дом можно жить, а не только показывать. Полные ремонты, где сначала слушают, потом предлагают путь. Электрика, сантехника и столярка входят в работу. Последняя строка важна, если вы уже ремонтировали. В таких делах бывает скверная середина, когда электрика «это чужая забота», а тот чужой ещё не нанят. Я передаю то, что написано на странице. На их объектах я не стоял.</p>
+
+<p>Посетитель, которого я держал в голове, живёт конкретную неделю. Участок. Дом, который больше не вмещает. Кухня, которая не нравится уже годы. Он сравнивает две-три фирмы и хочет простых ответов. Можно ли доверить этим людям дом. Можно ли увидеть работу. Как написать им на этой неделе, не заводя учётную запись.</p>
+
+<h2 id="первый-экран">первый экран</h2>
+
+<p>Первые слова крупные: «Más de 25 años construyendo hogares». Больше двадцати пяти лет строим дома. За ними линейный рисунок дома, светлый на тёмно-синем. Под заголовком: новые дома и полные ремонты в Хавеа, Дении, Кальпе и остальной Марина-Альте. Семейная фирма, прямой разговор, каждая мелочь на месте.</p>
+
+<p>Две кнопки. Расскажите о проекте или посмотрите проекты. Говорить сейчас или сначала увидеть дома.</p>
+
+<p>Внизу четыре коротких факта. Больше двадцати пяти лет. Семейная фирма, близко и лично. Весь путь от проекта до дня, когда отдают ключи. Само место: Марина-Альта, Коста-Бланка, Аликанте. Они стоят там, куда глаз падает ещё до прокрутки.</p>
+
+<p>На телефоне тот же экран складывается стопкой. Заголовок, несколько строк, кнопка. Рисунок остаётся, меньше, и страница всё ещё их.</p>
+
+<p><img src="/images/journal/100-days-day-1/01-hero.webp" alt="Главный экран Pedro Sánchez Construcción на компьютере и на телефоне, с заголовком Más de 25 años construyendo hogares и кнопкой, чтобы рассказать о проекте." />
+<em>Начало страницы, на большом экране и на телефоне.</em></p>
+
+<h2 id="история-и-два-вида-работ">история и два вида работ</h2>
+
+<p>Ниже несколько абзацев о том, кто они. Больше двадцати пяти лет строят и ведут дома в Марина-Альте. Свои объекты и новые дома разных характеров, доведённые до того, что в них можно жить. Люди, которых они нанимают, ведут стройку и бумаги сдачи дома. Заголовок называет их уважаемым именем в строительстве жилья. Это их фраза. Страница её не перекрикивает.</p>
+
+<p>Знак — монограмма PS, имя и слова construcción и Marina Alta. Он говорит, чья это страница, наверху и снова внизу.</p>
+
+<p>Дальше услуги, под заголовком, который обещает работу от начала до конца. Рядом: электрика, сантехника и столярка включены. Объясняют две фотографии. Одна — одноэтажный дом, черепичная крыша, бассейн и стол под деревьями: новое строительство, свои объекты и дома под размер. Другая — длинная крытая комната, арки по одной стороне, большая плетёная лампа, сад в дальнем конце: ремонты, где слушают и потом предлагают. На снимках мелкие подписи для того, кто спешит. Новый дом, своя застройка, бумаги и сдача. Полный ремонт, восстановление, кухни и фасады.</p>
+
+<p>Под фотографиями порядок, в котором это проживает клиент. Сначала слушают, потому что каждый проект свой. Потом предлагают. Потом делают, от плана до последнего дня на объекте.</p>
+
+<p>Дальше короткий кусок о жизни в Марина-Альте. Бухты, мягкие зимы, тёплое лето, еда и немного тишины. Дения, Хавеа и Кальпе названы сами по себе. Многие, кто заказывает здесь дом, выбирают город не меньше, чем фирму, поэтому страница говорит об этом коротко и возвращается к работе.</p>
+
+<p><img src="/images/journal/100-days-day-1/02-trust.webp" alt="История и услуги: знак PS, новый дом у бассейна, крытый ремонт с арками и плетёной лампой и строка, что электрика, сантехника и столярка включены." />
+<em>Кто они и два вида работ: новые дома и полные ремонты.</em></p>
+
+<h2 id="сами-дома">сами дома</h2>
+
+<p>Строителю верят, когда видно дома. На странице три недавних проекта: фотография, название и одна строка.</p>
+
+<p>Белая вилла с террасой, арками и садом. Гостиная после ремонта в природных тонах: светлые шторы, низкое кресло, дерево, лампа. Терраса и наружная лестница ещё в работе, за ними берег. Третья важна. Незаконченное дело говорит, что ремонт здесь своя работа, а не придаток к готовым виллам.</p>
+
+<p>Есть ход ко всем проектам. На телефоне фотография идёт раньше подписи. Я не ходил по этим комнатам и не стану выдумывать, каковы они. Их показывают крупно, обычным испанским. Слова «портфолио» нет. За кухонным столом клиент и так говорит «проекты».</p>
+
+<p><img src="/images/journal/100-days-day-1/03-projects.webp" alt="Три карточки проектов: белая вилла с арками и садом, гостиная в природных тонах и терраса с лестницей ещё в ремонте." />
+<em>Недавняя работа: фотографии с названием и одной строкой.</em></p>
+
+<h2 id="как-с-ними-связаться">как с ними связаться</h2>
+
+<p>Конец страницы делает полезным всё остальное. Можно написать в WhatsApp или заполнить короткую форму: имя, телефон, почта и в чём проект. Вы отмечаете, что прочитали заметку о конфиденциальности. Кнопка говорит: отправить через WhatsApp. Тогда открывается WhatsApp, сообщение уже написано, и отправляете его вы сами. Оно не пропадает в ящике, который никто не открывает. Следующий шаг виден.</p>
+
+<p>Под номером одна строка: напишите в WhatsApp или заполните форму, и вам ответят. Заголовок над этим: «оставьте проект в руках тех, кто этим занимается». На этом берегу многое из настоящих договорённостей уже идёт через WhatsApp. Другой номер потом — маленькая правка.</p>
+
+<h2 id="та-же-страница-на-телефоне">та же страница на телефоне</h2>
+
+<p>Пара выходит с просмотра. Кто-то посылает кухню, которую хочет снести, человеку, без чьего согласия нельзя. Имя, услышанное в Дении, открытое на стоянке. Экран узкий, момент короткий.</p>
+
+<p>Телефон показывает тот же сайт. Первая строка, оба вида работ со своими фотографиями, электрика, сантехника и столярка названы сверху, проекты по-прежнему читаются как дома. Кнопка там, куда достаёт большой палец. Меню уходит, как только вы выбрали. Не нужно щипать экран. Не нужно поворачивать телефон, чтобы фраза поместилась.</p>
+
+<p><img src="/images/journal/100-days-day-1/04-phones.webp" alt="Три телефона с сайтом Педро Санчеса: первый заголовок, услуги с фотографиями домов и карточки проектов одна под другой." />
+<em>Тот же сайт на телефоне: начало, услуги и проекты.</em></p>
+
+<h2 id="что-дальше-с-этим-сайтом">что дальше с этим сайтом</h2>
+
+<p>Его можно отдавать. Ради этого я и собрал его до разговора. Кто-то в фирме может открыть страницу сегодня и сказать да, или нет, или да, если сдвинуть несколько вещей.</p>
+
+<p>Если она им нужна, дальше работа обычная, без второго проекта «с нуля». Свой адрес, чтобы людей приводили к фирме, а не в папку на моём сайте. Фраза, которую они лучше напишут сами. Фотография, которая им ближе. Проект, который стоит добавить или снять. Там, где сейчас мои слова стоят вместо разговора, которого не было, появятся их слова и их снимки. Потом страница выходит под их именем, на их телефоне, и отвечают на неё так, как отвечают они.</p>
+
+<p>До того она остаётся там, куда я её положил. Открытый адрес, первый день задания, без притворства, будто они уже согласились. Мне не сказали, что они смотрели. Если вы Педро или работаете там, я лучше услышу «поменяйте эту террасу», чем не услышу ничего.</p>
+
+<h2 id="если-у-вас-небольшое-дело">если у вас небольшое дело</h2>
+
+<p>Вы можете не строить дома. Из Эстепоны я почти каждый месяц вижу ту же связку, у людей выше и ниже по берегу. Делу нужен сайт или сайт лучше той страницы, которую наспех собрали годы назад. Вам показывают чужие ремёсла и просят представить своё. Часто цена приходит раньше любой страницы, и решение будто должно выйти из встречи, в которой самой страницы ещё не было.</p>
+
+<p>Можно наоборот. Страница есть сначала. На ней ваше имя, работа, которую вы и так делаете, города, где вы работаете, и способ до вас достучаться, похожий на то, как вы уже говорите с людьми. Вы открываете её на телефоне, который и так носите с собой. Показываете партнёру, брату или сестре, тому, кто смотрит за деньгами. Сначала смотрите вместе. Потом решаете, оставлять ли её.</p>
+
+<p>В этом толк этих ста дней, и так я предпочитаю работать, когда никакого вызова нет. Если вам нужна такая страница, напишите мне с <a href="https://wellyington.github.io/ru/">основного сайта</a>. Скажите, что вы делаете и где. Отвечу обычным языком.</p>
+
+<h2 id="небольшая-просьба">небольшая просьба</h2>
+
+<p>Этот первый сайт для фирмы, с которой я хотел бы работать, и чёрного хода у меня нет. Если вы знаете Педро Санчеса или кого-то в компании, перешлите им страницу. Об этом и была просьба в заметке, и она всё ещё стоит: <a href="https://x.com/wellyington/status/2122700118528872815">день первый, написанный открыто</a>.</p>
+
+<p>Я продолжаю. Одно дело, один сайт, следующий день. Если страница найдёт хозяина, хорошо. Если она только сделает вторую яснее, это тоже считается.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>100 дней</li><li>кейс</li><li>строительство</li><li>малый бизнес</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><span class="pager-cell pager-cell--empty"><span class="label">первая запись.</span></span><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diário" href="/journal/pt/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">
+<!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="o site antes do sim" />
+<meta name="author" content="Wellyington" />
+<meta property="og:locale" content="pt" />
+<link rel="canonical" href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/" />
+<meta property="og:url" content="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/" />
+<meta property="og:site_name" content="Journal" />
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-19T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-11-19T00:00:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" />
+<meta name="twitter:title" content="o site antes do sim" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wellyington"},"dateModified":"2026-11-19T00:00:00+01:00","datePublished":"2026-11-19T00:00:00+01:00","headline":"o site antes do sim","image":"https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/"},"url":"https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>o site antes do sim — Diário · Wellyington</title>
+<meta name="description" content="Dia um de cem: um site de uma página para a construtora Pedro Sánchez, já no ar, para que ele possa ver a página pronta antes de assinar qualquer contrato.">
+<meta property="og:description" content="Dia um de cem: um site de uma página para a construtora Pedro Sánchez, já no ar, para que ele possa ver a página pronta antes de assinar qualquer contrato.">
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/pt/" class="bar-cell bar-brand" aria-label="Wellyington Diário">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diário</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Horário local e no que estou trabalhando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escrevendo</span><span>notas sobre lançar pequeno</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Ouvindo</span><span>Wellyington — demos de estúdio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/built-before-the-yes/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-web-antes-del-si/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/o-site-antes-do-sim/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/sait-do-slova-da/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Mudar para o tema escuro" data-label-dark="Mudar para o tema escuro" data-label-light="Mudar para o tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Escuro"></span><span class="theme-word" data-light="Claro" data-dark="Escuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menu" data-label-open="Abrir menu" data-label-close="Fechar menu" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegação" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegação">
+      <p class="label">Navegação</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/pt/" class="rollable">
+            <span class="roll"><span>diário.</span><span aria-hidden="true">diário.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/archive/" class="rollable">
+            <span class="roll"><span>arquivo.</span><span aria-hidden="true">arquivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/about/" class="rollable">
+            <span class="roll"><span>sobre.</span><span aria-hidden="true">sobre.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>site principal.</span><span aria-hidden="true">site principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/pt/articles/o-site-antes-do-sim/" class="menu-entry">
+            <span class="mono dim">Nº 001</span>
+            <span>o site antes do sim<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/built-before-the-yes/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-web-antes-del-si/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/o-site-antes-do-sim/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/sait-do-slova-da/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/pt/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/pt/" class="entry-cell entry-back rollable"><span class="roll"><span>← diário</span><span aria-hidden="true">← diário</span></span></a>
+    <span class="entry-cell mono">Nº 001</span>
+    <span class="entry-cell label">100 dias</span>
+    <time class="entry-cell" datetime="2026-11-19T00:00:00+01:00">19 de novembro de 2026</time>
+    <span class="entry-cell">8 min de leitura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">o site antes do sim<span class="dot">.</span></h1><p class="entry-lede">Dia um de cem: um site de uma página para a construtora Pedro Sánchez, já no ar, para que ele possa ver a página pronta antes de assinar qualquer contrato.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" alt="Capa do caso: o site da Pedro Sánchez Construcción num computador e num celular, com a frase Más de 25 años construyendo hogares." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 001</span>
+</div>
+<p class="caption label">Dia um. A página de uma construtora na Marina Alta, na tela grande e no celular.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="nesta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">nesta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartilhar.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar link</span><span aria-hidden="true">copiar link</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fo-site-antes-do-sim%2F&text=o+site+antes+do+sim"><span class="roll"><span>publicar no X</span><span aria-hidden="true">publicar no X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fo-site-antes-do-sim%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>No dia 17 de novembro publiquei uma nota curta. Primeiro dia de um desafio que estou fazendo à vista de todo mundo: cem dias, cem negócios, cem sites. O primeiro é uma página só para a construtora Pedro Sánchez, uma empresa familiar da Marina Alta. Já está no ar.</p>
+
+<p>Trabalho em Estepona. A semana comum é um site para uma loja, um estúdio ou um ofício, feito para se comportar como o próprio negócio: claro sobre o que oferece e fácil de achar numa tarde qualquer. Este eu construí antes de alguém me contratar.</p>
+
+<p>Dá para abrir aqui: <a href="https://wellyington.github.io/challenge/day1/">Pedro Sánchez Construcción, dia um</a>. Por enquanto ele mora no meu endereço. É o lugar honesto até o dono assumir a página.</p>
+
+<h2 id="cem-dias-um-negócio-de-cada-vez">cem dias, um negócio de cada vez</h2>
+
+<p>Um negócio por dia, e a cada vez um site de verdade, não um desenho guardado para uma reunião que talvez não aconteça. No fim dos cem dias quero cem páginas que uma pessoa consiga abrir e reconhecer. Esta construtora é a primeira. Faltam noventa e nove.</p>
+
+<p>A ideia é do Ramiah Trask. Ele acha que uma sequência de dias assim é um jeito sólido de construir um negócio de sites, pelo que muda para o cliente. Contratar alguém costuma significar imaginar uma página que não existe: os sites dos outros, uma proposta, o seu nome ainda em branco. Uma página pronta é uma decisão menor. Você abre, vê as suas cidades e o seu trabalho, e passa o celular por cima da mesa. Sim, ou não, ou muda esta parte.</p>
+
+<p>Não falei com o Pedro. Até onde sei, ele não viu a página, e não vou escrever como se tivesse visto. Ela está lá para ele olhar uma coisa acabada.</p>
+
+<h2 id="o-que-procura-quem-vai-contratar-uma-construtora">o que procura quem vai contratar uma construtora</h2>
+
+<p>A página apresenta uma empresa familiar que constrói casas na Marina Alta há mais de vinte e cinco anos. Cita Jávea, Dénia e Calpe, e o litoral em volta, na Costa Blanca, em Alicante. A frase do alto é a que eles colocam na frente: mais de vinte e cinco anos construindo lares. Casas novas, reformas completas, um trato próximo e cuidado com o detalhe.</p>
+
+<p>Não inventei essa história para parecer antiga. É o que um cliente escuta. Vinte e cinco anos na mesma costa querem dizer que a empresa já estava ali antes das cozinhas da moda deste ano, e que provavelmente ainda atende o telefone se a obra atrasar. «Familiar», na página, aparece como trato directo. Você fala com eles, não com uma central.</p>
+
+<p>O trabalho fica em dois blocos, lado a lado. Casas novas: umas eles mesmos incorporam, outras são desenhadas para um cliente específico, terminadas para morar. Reformas completas, em que eles escutam e depois propõem um caminho. Elétrica, encanamento e carpintaria inclusos. Essa última frase pesa para quem já reformou. Existe um meio ruim nessas obras, quando a parte elétrica «é problema de outro» e esse outro não foi contratado. Estou repetindo o que a página diz. Não estive nos canteiros deles.</p>
+
+<p>O visitante que eu tinha em mente está numa semana concreta. Um terreno. Uma casa que não cabe mais. Uma cozinha de que ele não gosta há anos. Compara duas ou três empresas e quer respostas simples. Posso confiar nesta gente com uma casa? Consigo ver o trabalho? Como falo com eles esta semana, sem abrir uma conta?</p>
+
+<h2 id="a-primeira-tela">a primeira tela</h2>
+
+<p>As primeiras palavras vão grandes: «Más de 25 años construyendo hogares.» Atrás, um desenho de linhas de uma casa, claro sobre um azul escuro. Embaixo, obra nova e reformas completas em Jávea, Dénia, Calpe e o resto da Marina Alta. Empresa familiar, trato direto, cada detalhe cuidado.</p>
+
+<p>Dois botões. Conte o seu projeto, ou veja os projetos. Falar agora, ou olhar as casas primeiro.</p>
+
+<p>Embaixo correm quatro fatos curtos. Mais de vinte e cinco anos. Uma empresa familiar, próxima. O caminho inteiro, do projeto ao dia em que entregam as chaves. O lugar: Marina Alta, Costa Blanca, Alicante. Ficam onde o olho cai, antes de descer a página.</p>
+
+<p>No celular essa tela empilha. O título, algumas linhas, o botão. O desenho continua, menor, e a página segue sendo deles.</p>
+
+<p><img src="/images/journal/100-days-day-1/01-hero.webp" alt="A abertura do site da Pedro Sánchez Construcción no computador e no celular, com o título Más de 25 años construyendo hogares e o botão para contar o projeto." />
+<em>O começo da página, na tela grande e no celular.</em></p>
+
+<h2 id="a-história-e-os-dois-trabalhos">a história e os dois trabalhos</h2>
+
+<p>Mais abaixo, alguns parágrafos dizem quem eles são. Mais de vinte e cinco anos construindo e incorporando casas na Marina Alta. Incorporações próprias e casas novas de estilos diferentes, terminadas para morar. As pessoas que empregam cuidam da obra e também da papelada da entrega. O título os chama de um nome de prestígio na construção de moradias. A frase é deles. A página não grita por cima.</p>
+
+<p>A marca é um monograma PS, o nome, e as palavras construcción e Marina Alta. Diz de quem é a página, no alto, e de novo no rodapé.</p>
+
+<p>Depois vêm os serviços, sob um título que promete o trabalho do começo ao fim. Ao lado: elétrica, encanamento e carpintaria inclusos. Duas fotografias fazem a explicação. Uma é uma casa térrea, telhado de telha, piscina e uma mesa debaixo das árvores: construção nova, incorporações próprias e casas sob medida. A outra é um cômodo longo e coberto, arcos de um lado, uma luminária grande de fibra, o jardim no fundo: reformas, em que eles escutam e então propõem. Há etiquetas pequenas para quem está com pressa. Obra nova, incorporação, trâmites e entrega. Reforma completa, reabilitação, cozinhas e fachadas.</p>
+
+<p>Debaixo das fotos, a ordem em que o cliente vive isso. Primeiro eles escutam, porque cada projeto é o dele. Depois propõem. No fim executam, do planejamento ao último dia de obra.</p>
+
+<p>Segue um trecho curto sobre morar na Marina Alta. Enseadas, invernos amenos, verões quentes, comida e um pouco de silêncio. Dénia, Jávea e Calpe aparecem sozinhas, com o nome. Muita gente que encomenda uma casa aqui está escolhendo a cidade tanto quanto a empresa, então a página diz isso, breve, e volta ao trabalho.</p>
+
+<p><img src="/images/journal/100-days-day-1/02-trust.webp" alt="A história e os serviços: a marca PS, uma casa nova ao lado da piscina, uma reforma coberta com arcos e uma luminária de fibra, e a linha de elétrica, encanamento e carpintaria inclusos." />
+<em>Quem eles são, e os dois trabalhos: casas novas e reformas completas.</em></p>
+
+<h2 id="as-casas">as casas</h2>
+
+<p>A gente confia num construtor quando consegue ver casas. A página mostra três projetos recentes, cada um uma fotografia com título e uma linha.</p>
+
+<p>Uma vila branca com terraço, arcos e jardim. Uma sala reformada em tons naturais: cortinas claras, uma poltrona baixa, madeira, um abajur. Um terraço e uma escada externa ainda no meio da obra, com a costa atrás. Essa terceira importa. Uma obra pela metade diz que reforma faz parte da empresa, não só as vilas já prontas.</p>
+
+<p>Há um caminho para todos os projetos. No celular a fotografia vem antes do rótulo. Não andei por esses cômodos, então não vou inventar como eles são. Aparecem grandes, num espanhol comum. A palavra portfólio não entra. Na mesa da cozinha, o cliente já diz «projetos».</p>
+
+<p><img src="/images/journal/100-days-day-1/03-projects.webp" alt="Três cartões de projeto: uma vila branca com arcos e jardim, uma sala em tons naturais e um terraço com escada ainda em reforma." />
+<em>Trabalho recente, em fotografias com um título e uma linha.</em></p>
+
+<h2 id="como-falar-com-eles">como falar com eles</h2>
+
+<p>O fim da página é o que torna o resto útil. Dá para escrever no WhatsApp ou preencher um formulário curto: nome, telefone, e-mail e qual é o projeto. Você marca que leu a nota de privacidade. O botão diz enviar pelo WhatsApp. Aí o WhatsApp abre com a mensagem já escrita, e quem aperta enviar é você. Não some numa caixa que ninguém olha. O passo seguinte está à vista.</p>
+
+<p>Sob o número, uma linha: escreva no WhatsApp ou preencha o formulário, e eles respondem. O título acima é «deixe o seu projeto nas mãos de especialistas». Nesta costa, muito do que de fato se combina já acontece no WhatsApp. Trocar o número mais tarde é um ajuste pequeno.</p>
+
+<h2 id="o-mesmo-site-no-celular">o mesmo site no celular</h2>
+
+<p>Um casal saindo de uma visita. Alguém mandando a cozinha que quer derrubar para a pessoa que precisa concordar. Um nome ouvido em Dénia, aberto num estacionamento. A tela é estreita e o momento, curto.</p>
+
+<p>O celular mostra o mesmo site. A frase de abertura, os dois trabalhos com as fotografias, a elétrica, o encanamento e a carpintaria nomeados acima, os projetos que continuam sendo casas. O botão fica onde o polegar alcança. O menu sai assim que você escolhe. Sem pinçar a tela. Sem virar o celular para uma frase caber.</p>
+
+<p><img src="/images/journal/100-days-day-1/04-phones.webp" alt="Três celulares com o site da Pedro Sánchez: o título de abertura, os serviços com fotografias de casas e os cartões de projeto empilhados." />
+<em>O mesmo site no celular: a abertura, os serviços e os projetos.</em></p>
+
+<h2 id="o-que-acontece-agora-com-este-site">o que acontece agora com este site</h2>
+
+<p>Está pronto para ser entregue. Foi por isso que construí antes da conversa. Alguém da empresa pode abrir hoje e dizer sim, ou não, ou sim se algumas coisas mudarem.</p>
+
+<p>Se quiserem, o que resta é prático. Um endereço no nome deles, para não continuar pendurado no meu. Uma frase que prefiram escrever. Uma fotografia de que gostem mais. Um projeto para incluir, ou tirar. As palavras e as fotos deles, nos lugares em que esta página está no lugar de uma conversa que não tivemos. Aí vai ao ar com o nome deles, no telefone deles, respondido do jeito deles.</p>
+
+<p>Até lá fica onde eu coloquei. Um endereço aberto, dia um do desafio, sem fingir que eles concordaram. Não me disseram que olharam. Se você é o Pedro, ou trabalha lá, prefiro ouvir «muda aquele terraço» a não ouvir nada.</p>
+
+<h2 id="se-você-tem-um-pequeno-negócio">se você tem um pequeno negócio</h2>
+
+<p>Pode ser que você não construa casas. De Estepona eu vejo o mesmo aperto quase todo mês. O negócio precisa de um site, ou de um melhor do que a página montada às pressas anos atrás. Mostram outros ofícios e pedem que você imagine o seu. Muitas vezes o preço chega antes de qualquer página, e a decisão devia sair de uma reunião.</p>
+
+<p>Dá para inverter. A página existe primeiro: o seu nome, o trabalho que você faz de verdade, as cidades que atende, um jeito de ser encontrado que combina com o modo como você já fala com as pessoas. Você abre no próprio celular. Mostra para um parceiro, um irmão, quem cuida do dinheiro. Aí decide.</p>
+
+<p>Essa é a parte útil destes cem dias, e é como prefiro trabalhar quando não há desafio nenhum. Se quiser uma página assim, escreva para mim pelo <a href="https://wellyington.github.io/pt/">site principal</a>. Diga o que você faz e onde. Respondo em linguagem comum.</p>
+
+<h2 id="um-pedido-pequeno">um pedido pequeno</h2>
+
+<p>Este primeiro site é para uma empresa com a qual eu gostaria de trabalhar, e não tenho uma porta lateral. Se você conhece Pedro Sánchez, ou alguém da firma, mande a página. Era o pedido da nota, e continua sendo: <a href="https://x.com/wellyington/status/2122700118528872815">o dia um, escrito em público</a>.</p>
+
+<p>Sigo. Um negócio, um site, o dia seguinte. Se a página achar o dono, ótimo. Se só servir para a segunda ficar mais clara, também conta.</p>
+
+      <p class="fin" aria-label="Fim da entrada">fim.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">arquivado em</span>
+    <ul class="chips"><li>100 dias</li><li>caso real</li><li>construção</li><li>pequeno negócio</li></ul>
+  </div><nav class="rail pager" aria-label="mais entradas."><span class="pager-cell pager-cell--empty"><span class="label">a primeira entrada.</span></span><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">a entrada mais recente.</span></span></nav>
+</article>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independente por design · Escrito em público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/pt/" class="rollable"><span class="roll"><span>diário</span><span aria-hidden="true">diário</span></span>
+    </a><a href="/journal/pt/archive/" class="rollable"><span class="roll"><span>arquivo</span><span aria-hidden="true">arquivo</span></span>
+    </a><a href="/journal/pt/about/" class="rollable"><span class="roll"><span>sobre</span><span aria-hidden="true">sobre</span></span>
+    </a><a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>site principal</span><span aria-hidden="true">site principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">em outros lugares</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/pt/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escreva para mim</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Eu leio todas as respostas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Composto em Space Grotesk · Feito com Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
