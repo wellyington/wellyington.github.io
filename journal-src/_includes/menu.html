@@ -15,6 +15,7 @@
 
     <div class="menu-latest">
       <p class="label">{{ T.latest_entries }}</p>
+      {%- if total > 0 -%}
       <ol>
         {%- for post in articles limit: 4 -%}
         {%- assign no = total | minus: forloop.index0 -%}
@@ -26,6 +27,9 @@
         </li>
         {%- endfor -%}
       </ol>
+      {%- else -%}
+      <p class="dim">{{ T.empty }}</p>
+      {%- endif -%}
     </div>
   </div>
 
