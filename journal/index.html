@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Journal · Wellyington</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://wellyington.github.io/journal/en/">
+  <link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/">
+  <link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/">
+  <script>
+    /* Saved choice first, then the browser's language, then English. */
+    (function () {
+      var l = null;
+      try { l = localStorage.getItem("journal-lang"); } catch (e) {}
+      if (!l) l = ((navigator.languages && navigator.languages[0]) || navigator.language || "en").slice(0, 2).toLowerCase();
+      var supported = ["en","es","pt","ru"];
+      if (supported.indexOf(l) < 0) l = "en";
+      location.replace("/journal/" + l + "/");
+    })();
+  </script>
+  <meta http-equiv="refresh" content="1; url=/journal/en/">
+</head>
+<body><p><a href="/journal/en/">English</a> · <a href="/journal/es/">Español</a></p></body>
+</html>

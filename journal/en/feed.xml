@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Wellyington — Journal</title>
+  <subtitle>Field notes on building, design and strategy, written from the coast without the unnecessary noise.</subtitle>
+  <link href="https://wellyington.github.io/journal/en/feed.xml" rel="self"/>
+  <link href="https://wellyington.github.io/journal/en/"/>
+  <id>https://wellyington.github.io/journal/en/</id>
+  <updated>2026-11-12T00:00:00+01:00</updated>
+  <author><name>Wellyington</name></author>
+  <entry>
+    <title>Digital that works, written down</title>
+    <link href="https://wellyington.github.io/journal/en/articles/digital-that-works/"/>
+    <id>https://wellyington.github.io/journal/en/articles/digital-that-works/</id>
+    <updated>2026-11-12T00:00:00+01:00</updated><category term="strategy"/>
+    <summary>A short manifesto I keep coming back to — and the three questions every build has to answer before a single pixel moves.</summary>
+    <content type="html">&lt;p&gt;Every project I take on starts the same way: a long list of things the
+site &lt;em&gt;could&lt;/em&gt; do, and a much shorter list of things it &lt;em&gt;must&lt;/em&gt; do. The job
+is to get from the first list to the second without losing anything
+that matters.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-three-questions&quot;&gt;the three questions&lt;/h2&gt;
+
+&lt;p&gt;Before design, before code, I ask:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Who is this for?&lt;/strong&gt; Not “everyone”. One person, specifically.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What should they do next?&lt;/strong&gt; One action, measurable.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What can we remove?&lt;/strong&gt; Usually more than anyone expects.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Simple, fast, and engineered to drive measurable momentum. Everything
+else is decoration.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;speed-is-a-feature&quot;&gt;speed is a feature&lt;/h2&gt;
+
+&lt;p&gt;Nobody notices a fast site, but everyone notices a slow one. I treat
+performance as a design constraint from day one, not something to fix
+at the end.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;/* The whole palette. Four tones, one ink. */&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;:root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--ice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;#e3fdfd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--mist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;#cbf1f5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--aqua&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;#a6e3e9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--teal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;#71c9ce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--ink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;#17484d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Budget&lt;/th&gt;
+      &lt;th&gt;Target&lt;/th&gt;
+      &lt;th&gt;Why&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;First paint&lt;/td&gt;
+      &lt;td&gt;&amp;lt; 1.0 s&lt;/td&gt;
+      &lt;td&gt;Feels instant on 4G&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Total JS&lt;/td&gt;
+      &lt;td&gt;&amp;lt; 30 kB&lt;/td&gt;
+      &lt;td&gt;Less to parse, less to break&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Fonts&lt;/td&gt;
+      &lt;td&gt;1 file&lt;/td&gt;
+      &lt;td&gt;One variable woff2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;what-gets-removed&quot;&gt;what gets removed&lt;/h2&gt;
+
+&lt;p&gt;The carousel. The second call to action. The “welcome to our website”
+paragraph. The animation that plays on every scroll.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot; role=&quot;doc-noteref&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;What’s left is usually a site that loads fast, says one thing clearly and
+asks for one thing politely. That’s the job.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Motion is good when it explains something. Otherwise it’s a toll. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>A grid you can see</title>
+    <link href="https://wellyington.github.io/journal/en/articles/a-grid-you-can-see/"/>
+    <id>https://wellyington.github.io/journal/en/articles/a-grid-you-can-see/</id>
+    <updated>2026-10-28T00:00:00+01:00</updated><category term="design"/>
+    <summary>Why I leave the column lines visible, and what they do for the reader.</summary>
+    <content type="html">&lt;p&gt;Most grids hide. Mine stays on screen as a set of hairlines, because a
+visible structure makes the layout easy to read at a glance.&lt;/p&gt;
+
+&lt;h2 id=&quot;twelve-columns-one-rail&quot;&gt;twelve columns, one rail&lt;/h2&gt;
+
+&lt;p&gt;Content sits on a rail that spans ten of the twelve columns. The outer
+two act as margins and keep long lines from running wall to wall.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/contact-workspace.webp&quot; alt=&quot;Workspace&quot; /&gt;
+&lt;em&gt;The desk where most of these layouts start: paper first.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;lowercase-with-a-period&quot;&gt;lowercase, with a period&lt;/h2&gt;
+
+&lt;p&gt;Headings are written in lowercase and end with a period. It reads like a
+statement rather than a sign.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Notes from the studio</title>
+    <link href="https://wellyington.github.io/journal/en/articles/notes-from-the-studio/"/>
+    <id>https://wellyington.github.io/journal/en/articles/notes-from-the-studio/</id>
+    <updated>2026-09-15T00:00:00+02:00</updated><category term="music"/>
+    <summary>What making records teaches you about making websites.</summary>
+    <content type="html">&lt;p&gt;A track and a homepage have more in common than you’d think. Both need
+a hook in the first few seconds, and both get worse when you add one
+more layer.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-mix-is-the-edit&quot;&gt;the mix is the edit&lt;/h2&gt;
+
+&lt;p&gt;In the studio, most of the work is taking things out. The same goes for
+a layout: mute until it breaks, then bring back the last thing you muted.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Along the coast</title>
+    <link href="https://wellyington.github.io/journal/en/articles/along-the-coast/"/>
+    <id>https://wellyington.github.io/journal/en/articles/along-the-coast/</id>
+    <updated>2026-06-02T00:00:00+02:00</updated><category term="notes"/>
+    <summary>Working from the Costa del Sol, and why place still matters online.</summary>
+    <content type="html">&lt;p&gt;Clients on the coast want to see that you know the coast. Local context
+shapes every brief: the languages, the seasons, the way people search.&lt;/p&gt;
+
+&lt;h2 id=&quot;work-where-your-clients-are&quot;&gt;work where your clients are&lt;/h2&gt;
+
+&lt;p&gt;Being nearby still counts for something, even for work that ships online.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>What actually shipped this year?</title>
+    <link href="https://wellyington.github.io/journal/en/articles/the-year-in-builds/"/>
+    <id>https://wellyington.github.io/journal/en/articles/the-year-in-builds/</id>
+    <updated>2025-12-30T00:00:00+01:00</updated><category term="build"/>
+    <summary>A quick look back at what shipped, what stuck and what I&apos;d delete.</summary>
+    <content type="html">&lt;p&gt;Twelve months, a handful of launches and one lesson repeated in every
+project: ship the smallest useful version, then listen.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-stuck&quot;&gt;what stuck&lt;/h2&gt;
+
+&lt;p&gt;Static sites, one font file, and forms that work without JavaScript.&lt;/p&gt;
+</content>
+  </entry>
+</feed>

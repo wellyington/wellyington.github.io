@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diario" href="/journal/es/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/notes-from-the-studio/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/notes-from-the-studio/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/notas-desde-el-estudio/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/notas-do-estudio/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/zametki-iz-studii/">
+<!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Notas desde el estudio" />
+<meta name="author" content="Wellyington" />
+<meta property="og:locale" content="es" />
+<link rel="canonical" href="https://wellyington.github.io/journal/es/articles/notas-desde-el-estudio/" />
+<meta property="og:url" content="https://wellyington.github.io/journal/es/articles/notas-desde-el-estudio/" />
+<meta property="og:site_name" content="Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-15T00:00:00+02:00" />
+<meta property="article:modified_time" content="2026-09-15T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Notas desde el estudio" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wellyington"},"dateModified":"2026-09-15T00:00:00+02:00","datePublished":"2026-09-15T00:00:00+02:00","headline":"Notas desde el estudio","mainEntityOfPage":{"@type":"WebPage","@id":"https://wellyington.github.io/journal/es/articles/notas-desde-el-estudio/"},"url":"https://wellyington.github.io/journal/es/articles/notas-desde-el-estudio/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>Notas desde el estudio — Diario · Wellyington</title>
+<meta name="description" content="Lo que hacer discos te enseña sobre hacer webs.">
+<meta property="og:description" content="Lo que hacer discos te enseña sobre hacer webs.">
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/es/" class="bar-cell bar-brand" aria-label="Wellyington Diario">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diario</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Hora local y en qué estoy trabajando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escribiendo</span><span>notas sobre lanzar en pequeño</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escuchando</span><span>Wellyington — maquetas de estudio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/notes-from-the-studio/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/notas-desde-el-estudio/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/notas-do-estudio/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/zametki-iz-studii/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Cambiar a tema oscuro" data-label-dark="Cambiar a tema oscuro" data-label-light="Cambiar a tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Oscuro"></span><span class="theme-word" data-light="Claro" data-dark="Oscuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegación" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegación">
+      <p class="label">Navegación</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/es/" class="rollable">
+            <span class="roll"><span>diario.</span><span aria-hidden="true">diario.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/archive/" class="rollable">
+            <span class="roll"><span>archivo.</span><span aria-hidden="true">archivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/about/" class="rollable">
+            <span class="roll"><span>sobre mí.</span><span aria-hidden="true">sobre mí.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>web principal.</span><span aria-hidden="true">web principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p>
+      <ol><li>
+          <a href="/journal/es/articles/lo-digital-que-funciona/" class="menu-entry">
+            <span class="mono dim">N.º 005</span>
+            <span>Lo digital que funciona, por escrito<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/una-reticula-que-se-ve/" class="menu-entry">
+            <span class="mono dim">N.º 004</span>
+            <span>Una retícula que se ve<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/notas-desde-el-estudio/" class="menu-entry">
+            <span class="mono dim">N.º 003</span>
+            <span>Notas desde el estudio<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/a-lo-largo-de-la-costa/" class="menu-entry">
+            <span class="mono dim">N.º 002</span>
+            <span>A lo largo de la costa<span class="dot">.</span></span>
+          </a>
+        </li></ol>
+    </div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/notes-from-the-studio/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/notas-desde-el-estudio/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/notas-do-estudio/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/zametki-iz-studii/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/es/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/es/" class="entry-cell entry-back rollable"><span class="roll"><span>← diario</span><span aria-hidden="true">← diario</span></span></a>
+    <span class="entry-cell mono">N.º 003</span>
+    <span class="entry-cell label">música</span>
+    <time class="entry-cell" datetime="2026-09-15T00:00:00+02:00">15 de septiembre de 2026</time>
+    <span class="entry-cell">1 min de lectura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">Notas desde el estudio<span class="dot">.</span></h1><p class="entry-lede">Lo que hacer discos te enseña sobre hacer webs.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg cover--type tone-mist"><span class="cover-no" aria-hidden="true">003</span>
+    <span class="cover-rings" aria-hidden="true"></span><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 003</span>
+</div>
+</div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="en esta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">en esta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartir.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar enlace</span><span aria-hidden="true">copiar enlace</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fnotas-desde-el-estudio%2F&text=Notas+desde+el+estudio"><span class="roll"><span>publicar en X</span><span aria-hidden="true">publicar en X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fnotas-desde-el-estudio%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>Una canción y una página de inicio se parecen más de lo que crees. Las dos
+necesitan engancharte en los primeros segundos, y las dos empeoran cuando
+les añades una capa más.</p>
+
+<h2 id="la-mezcla-es-la-edición">la mezcla es la edición</h2>
+
+<p>En el estudio, casi todo el trabajo consiste en quitar cosas. Con una
+maqueta pasa lo mismo: silencia hasta que se rompa y recupera lo último que
+silenciaste.</p>
+
+      <p class="fin" aria-label="Fin de la entrada">fin.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">archivado en</span>
+    <ul class="chips"><li>estudio</li><li>lanzamiento</li></ul>
+  </div><nav class="rail pager" aria-label="más entradas."><a class="pager-cell rollable" href="/journal/es/articles/a-lo-largo-de-la-costa/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">A lo largo de la costa<span class="dot">.</span></span>
+    </a><a class="pager-cell pager-cell--next rollable" href="/journal/es/articles/una-reticula-que-se-ve/">
+      <span class="label">siguiente →</span>
+      <span class="pager-title">Una retícula que se ve<span class="dot">.</span></span>
+    </a></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Sigue leyendo</span>
+    <h2 id="more-title" class="h-section">más entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/es/articles/lo-digital-que-funciona/"><div class="cover cover--sm cover--type tone-teal"><span class="cover-no" aria-hidden="true">005</span>
+    <span class="cover-rings" aria-hidden="true"></span><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 005</span>
+</div>
+<span class="label">estrategia · 12.11.26</span><span class="card-title">Lo digital que funciona, por escrito<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/una-reticula-que-se-ve/"><div class="cover cover--sm cover--type tone-aqua"><span class="cover-no" aria-hidden="true">004</span>
+    <span class="cover-rings" aria-hidden="true"></span><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 004</span>
+</div>
+<span class="label">diseño · 28.10.26</span><span class="card-title">Una retícula que se ve<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/a-lo-largo-de-la-costa/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/footer-city.webp" alt="Luces de la ciudad en una calle llena de letreros iluminados" loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 002</span>
+</div>
+<span class="label">notas · 02.06.26</span><span class="card-title">A lo largo de la costa<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independiente por diseño · Escrito en público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/es/" class="rollable"><span class="roll"><span>diario</span><span aria-hidden="true">diario</span></span>
+    </a><a href="/journal/es/archive/" class="rollable"><span class="roll"><span>archivo</span><span aria-hidden="true">archivo</span></span>
+    </a><a href="/journal/es/about/" class="rollable"><span class="roll"><span>sobre mí</span><span aria-hidden="true">sobre mí</span></span>
+    </a><a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>web principal</span><span aria-hidden="true">web principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">en otros sitios</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/es/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escríbeme</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Leo todas las respuestas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Compuesto en Space Grotesk · Hecho con Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

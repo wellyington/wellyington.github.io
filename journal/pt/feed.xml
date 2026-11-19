@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt">
+  <title>Wellyington — Diário</title>
+  <subtitle>Notas de campo sobre desenvolvimento, design e estratégia, escritas no litoral e sem ruído desnecessário.</subtitle>
+  <link href="https://wellyington.github.io/journal/pt/feed.xml" rel="self"/>
+  <link href="https://wellyington.github.io/journal/pt/"/>
+  <id>https://wellyington.github.io/journal/pt/</id>
+  <updated>2026-11-12T00:00:00+01:00</updated>
+  <author><name>Wellyington</name></author>
+  <entry>
+    <title>O digital que funciona, por escrito</title>
+    <link href="https://wellyington.github.io/journal/pt/articles/o-digital-que-funciona/"/>
+    <id>https://wellyington.github.io/journal/pt/articles/o-digital-que-funciona/</id>
+    <updated>2026-11-12T00:00:00+01:00</updated><category term="estratégia"/>
+    <summary>Um breve manifesto ao qual sempre volto, e as três perguntas que todo projeto precisa responder antes de mexer em um único pixel.</summary>
+    <content type="html">&lt;p&gt;Todo projeto que eu pego começa do mesmo jeito: uma lista longa de coisas
+que o site &lt;em&gt;poderia&lt;/em&gt; fazer e outra bem mais curta do que ele &lt;em&gt;precisa&lt;/em&gt;
+fazer. O trabalho é ir da primeira à segunda sem perder nada que importe.&lt;/p&gt;
+
+&lt;h2 id=&quot;as-três-perguntas&quot;&gt;as três perguntas&lt;/h2&gt;
+
+&lt;p&gt;Antes do design e antes do código, eu pergunto:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Para quem é?&lt;/strong&gt; Não para “todo mundo”. Para uma pessoa específica.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;O que ela deve fazer em seguida?&lt;/strong&gt; Uma única ação, mensurável.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;O que podemos tirar?&lt;/strong&gt; Quase sempre, mais do que alguém imagina.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Simples, rápido e pensado para gerar resultados mensuráveis. Todo o
+resto é decoração.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;velocidade-é-uma-funcionalidade&quot;&gt;velocidade é uma funcionalidade&lt;/h2&gt;
+
+&lt;p&gt;Ninguém repara em um site rápido, mas todo mundo percebe um lento. Trato
+a performance como uma restrição de design desde o primeiro dia, não como
+algo para consertar no final.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;/* A paleta inteira. Quatro tons, uma tinta. */&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;:root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--ice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;#e3fdfd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--mist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;#cbf1f5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--aqua&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;#a6e3e9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--teal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;#71c9ce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;--ink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;#17484d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Orçamento&lt;/th&gt;
+      &lt;th&gt;Meta&lt;/th&gt;
+      &lt;th&gt;Por quê&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Primeira pintura&lt;/td&gt;
+      &lt;td&gt;&amp;lt; 1,0 s&lt;/td&gt;
+      &lt;td&gt;Parece instantâneo no 4G&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;JS total&lt;/td&gt;
+      &lt;td&gt;&amp;lt; 30 kB&lt;/td&gt;
+      &lt;td&gt;Menos para processar e para quebrar&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Fontes&lt;/td&gt;
+      &lt;td&gt;1 arquivo&lt;/td&gt;
+      &lt;td&gt;Um único woff2 variável&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;o-que-sai&quot;&gt;o que sai&lt;/h2&gt;
+
+&lt;p&gt;O carrossel. A segunda chamada para ação. O parágrafo de “bem-vindo ao
+nosso site”. A animação que dispara a cada rolagem.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot; role=&quot;doc-noteref&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;O que sobra costuma ser um site que carrega rápido, diz uma coisa com
+clareza e pede uma única coisa com educação. Esse é o trabalho.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Movimento é bom quando explica algo. Fora isso, é pedágio. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Um grid que se vê</title>
+    <link href="https://wellyington.github.io/journal/pt/articles/um-grid-que-se-ve/"/>
+    <id>https://wellyington.github.io/journal/pt/articles/um-grid-que-se-ve/</id>
+    <updated>2026-10-28T00:00:00+01:00</updated><category term="design"/>
+    <summary>Por que deixo as linhas das colunas visíveis e o que elas fazem por quem lê.</summary>
+    <content type="html">&lt;p&gt;A maioria dos grids se esconde. O meu fica na tela como um conjunto de
+linhas finas, porque uma estrutura visível torna o layout fácil de ler à
+primeira vista.&lt;/p&gt;
+
+&lt;h2 id=&quot;doze-colunas-um-trilho&quot;&gt;doze colunas, um trilho&lt;/h2&gt;
+
+&lt;p&gt;O conteúdo fica em um trilho que ocupa dez das doze colunas. As duas
+externas funcionam como margem e impedem que as linhas longas atravessem a
+tela de ponta a ponta.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/contact-workspace.webp&quot; alt=&quot;Espaço de trabalho&quot; /&gt;
+&lt;em&gt;A mesa onde começa quase todo layout: primeiro no papel.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;em-minúsculas-com-ponto&quot;&gt;em minúsculas, com ponto&lt;/h2&gt;
+
+&lt;p&gt;Os títulos são escritos em minúsculas e terminam com ponto. Soam como uma
+afirmação, não como uma placa.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Notas do estúdio</title>
+    <link href="https://wellyington.github.io/journal/pt/articles/notas-do-estudio/"/>
+    <id>https://wellyington.github.io/journal/pt/articles/notas-do-estudio/</id>
+    <updated>2026-09-15T00:00:00+02:00</updated><category term="música"/>
+    <summary>O que fazer discos ensina sobre fazer sites.</summary>
+    <content type="html">&lt;p&gt;Uma faixa e uma página inicial têm mais em comum do que parece. As duas
+precisam prender você nos primeiros segundos, e as duas pioram quando
+ganham mais uma camada.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-mixagem-é-a-edição&quot;&gt;a mixagem é a edição&lt;/h2&gt;
+
+&lt;p&gt;No estúdio, quase todo o trabalho é tirar coisas. Com um layout é igual:
+silencie até quebrar e depois traga de volta a última coisa que silenciou.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Ao longo da costa</title>
+    <link href="https://wellyington.github.io/journal/pt/articles/ao-longo-da-costa/"/>
+    <id>https://wellyington.github.io/journal/pt/articles/ao-longo-da-costa/</id>
+    <updated>2026-06-02T00:00:00+02:00</updated><category term="notas"/>
+    <summary>Trabalhar da Costa del Sol, e por que o lugar ainda importa na internet.</summary>
+    <content type="html">&lt;p&gt;Os clientes da costa querem ver que você conhece a costa. O contexto local
+molda cada briefing: os idiomas, as temporadas, o jeito como as pessoas
+pesquisam.&lt;/p&gt;
+
+&lt;h2 id=&quot;trabalhe-onde-estão-seus-clientes&quot;&gt;trabalhe onde estão seus clientes&lt;/h2&gt;
+
+&lt;p&gt;Estar perto ainda conta, mesmo quando o trabalho vai ao ar pela internet.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>O que foi lançado de verdade este ano?</title>
+    <link href="https://wellyington.github.io/journal/pt/articles/o-que-foi-lancado-este-ano/"/>
+    <id>https://wellyington.github.io/journal/pt/articles/o-que-foi-lancado-este-ano/</id>
+    <updated>2025-12-30T00:00:00+01:00</updated><category term="desenvolvimento"/>
+    <summary>Um olhar rápido sobre o que foi ao ar, o que ficou e o que eu apagaria.</summary>
+    <content type="html">&lt;p&gt;Doze meses, alguns lançamentos e uma lição repetida em todo projeto:
+publique a menor versão útil e depois escute.&lt;/p&gt;
+
+&lt;h2 id=&quot;o-que-ficou&quot;&gt;o que ficou&lt;/h2&gt;
+
+&lt;p&gt;Sites estáticos, um único arquivo de fonte e formulários que funcionam sem
+JavaScript.&lt;/p&gt;
+</content>
+  </entry>
+</feed>

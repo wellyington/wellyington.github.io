@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diário" href="/journal/pt/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/a-grid-you-can-see/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/a-grid-you-can-see/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/una-reticula-que-se-ve/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/um-grid-que-se-ve/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/vidimaya-setka/">
+<!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Um grid que se vê" />
+<meta name="author" content="Wellyington" />
+<meta property="og:locale" content="pt" />
+<link rel="canonical" href="https://wellyington.github.io/journal/pt/articles/um-grid-que-se-ve/" />
+<meta property="og:url" content="https://wellyington.github.io/journal/pt/articles/um-grid-que-se-ve/" />
+<meta property="og:site_name" content="Journal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-28T00:00:00+01:00" />
+<meta property="article:modified_time" content="2026-10-28T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Um grid que se vê" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wellyington"},"dateModified":"2026-10-28T00:00:00+01:00","datePublished":"2026-10-28T00:00:00+01:00","headline":"Um grid que se vê","mainEntityOfPage":{"@type":"WebPage","@id":"https://wellyington.github.io/journal/pt/articles/um-grid-que-se-ve/"},"url":"https://wellyington.github.io/journal/pt/articles/um-grid-que-se-ve/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>Um grid que se vê — Diário · Wellyington</title>
+<meta name="description" content="Por que deixo as linhas das colunas visíveis e o que elas fazem por quem lê.">
+<meta property="og:description" content="Por que deixo as linhas das colunas visíveis e o que elas fazem por quem lê.">
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/pt/" class="bar-cell bar-brand" aria-label="Wellyington Diário">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diário</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Horário local e no que estou trabalhando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escrevendo</span><span>notas sobre lançar pequeno</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Ouvindo</span><span>Wellyington — demos de estúdio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/a-grid-you-can-see/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/una-reticula-que-se-ve/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/um-grid-que-se-ve/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/vidimaya-setka/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Mudar para o tema escuro" data-label-dark="Mudar para o tema escuro" data-label-light="Mudar para o tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Escuro"></span><span class="theme-word" data-light="Claro" data-dark="Escuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menu" data-label-open="Abrir menu" data-label-close="Fechar menu" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegação" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegação">
+      <p class="label">Navegação</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/pt/" class="rollable">
+            <span class="roll"><span>diário.</span><span aria-hidden="true">diário.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/archive/" class="rollable">
+            <span class="roll"><span>arquivo.</span><span aria-hidden="true">arquivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/about/" class="rollable">
+            <span class="roll"><span>sobre.</span><span aria-hidden="true">sobre.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>site principal.</span><span aria-hidden="true">site principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p>
+      <ol><li>
+          <a href="/journal/pt/articles/o-digital-que-funciona/" class="menu-entry">
+            <span class="mono dim">Nº 005</span>
+            <span>O digital que funciona, por escrito<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/um-grid-que-se-ve/" class="menu-entry">
+            <span class="mono dim">Nº 004</span>
+            <span>Um grid que se vê<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/notas-do-estudio/" class="menu-entry">
+            <span class="mono dim">Nº 003</span>
+            <span>Notas do estúdio<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/ao-longo-da-costa/" class="menu-entry">
+            <span class="mono dim">Nº 002</span>
+            <span>Ao longo da costa<span class="dot">.</span></span>
+          </a>
+        </li></ol>
+    </div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/a-grid-you-can-see/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/una-reticula-que-se-ve/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/um-grid-que-se-ve/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/vidimaya-setka/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/pt/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/pt/" class="entry-cell entry-back rollable"><span class="roll"><span>← diário</span><span aria-hidden="true">← diário</span></span></a>
+    <span class="entry-cell mono">Nº 004</span>
+    <span class="entry-cell label">design</span>
+    <time class="entry-cell" datetime="2026-10-28T00:00:00+01:00">28 de outubro de 2026</time>
+    <span class="entry-cell">1 min de leitura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">Um grid que se vê<span class="dot">.</span></h1><p class="entry-lede">Por que deixo as linhas das colunas visíveis e o que elas fazem por quem lê.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg cover--type tone-aqua"><span class="cover-no" aria-hidden="true">004</span>
+    <span class="cover-rings" aria-hidden="true"></span><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 004</span>
+</div>
+</div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="nesta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">nesta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartilhar.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar link</span><span aria-hidden="true">copiar link</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fum-grid-que-se-ve%2F&text=Um+grid+que+se+v%C3%AA"><span class="roll"><span>publicar no X</span><span aria-hidden="true">publicar no X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fum-grid-que-se-ve%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>A maioria dos grids se esconde. O meu fica na tela como um conjunto de
+linhas finas, porque uma estrutura visível torna o layout fácil de ler à
+primeira vista.</p>
+
+<h2 id="doze-colunas-um-trilho">doze colunas, um trilho</h2>
+
+<p>O conteúdo fica em um trilho que ocupa dez das doze colunas. As duas
+externas funcionam como margem e impedem que as linhas longas atravessem a
+tela de ponta a ponta.</p>
+
+<p><img src="/images/contact-workspace.webp" alt="Espaço de trabalho" />
+<em>A mesa onde começa quase todo layout: primeiro no papel.</em></p>
+
+<h2 id="em-minúsculas-com-ponto">em minúsculas, com ponto</h2>
+
+<p>Os títulos são escritos em minúsculas e terminam com ponto. Soam como uma
+afirmação, não como uma placa.</p>
+
+      <p class="fin" aria-label="Fim da entrada">fim.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">arquivado em</span>
+    <ul class="chips"><li>grid</li><li>tipografia</li></ul>
+  </div><nav class="rail pager" aria-label="mais entradas."><a class="pager-cell rollable" href="/journal/pt/articles/notas-do-estudio/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">Notas do estúdio<span class="dot">.</span></span>
+    </a><a class="pager-cell pager-cell--next rollable" href="/journal/pt/articles/o-digital-que-funciona/">
+      <span class="label">próxima →</span>
+      <span class="pager-title">O digital que funciona, por escrito<span class="dot">.</span></span>
+    </a></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Continue lendo</span>
+    <h2 id="more-title" class="h-section">mais entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/pt/articles/o-digital-que-funciona/"><div class="cover cover--sm cover--type tone-teal"><span class="cover-no" aria-hidden="true">005</span>
+    <span class="cover-rings" aria-hidden="true"></span><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 005</span>
+</div>
+<span class="label">estratégia · 12.11.26</span><span class="card-title">O digital que funciona, por escrito<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/notas-do-estudio/"><div class="cover cover--sm cover--type tone-mist"><span class="cover-no" aria-hidden="true">003</span>
+    <span class="cover-rings" aria-hidden="true"></span><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 003</span>
+</div>
+<span class="label">música · 15.09.26</span><span class="card-title">Notas do estúdio<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/ao-longo-da-costa/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/footer-city.webp" alt="Luzes da cidade em uma rua cheia de letreiros iluminados" loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 002</span>
+</div>
+<span class="label">notas · 02.06.26</span><span class="card-title">Ao longo da costa<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independente por design · Escrito em público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/pt/" class="rollable"><span class="roll"><span>diário</span><span aria-hidden="true">diário</span></span>
+    </a><a href="/journal/pt/archive/" class="rollable"><span class="roll"><span>arquivo</span><span aria-hidden="true">arquivo</span></span>
+    </a><a href="/journal/pt/about/" class="rollable"><span class="roll"><span>sobre</span><span aria-hidden="true">sobre</span></span>
+    </a><a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>site principal</span><span aria-hidden="true">site principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">em outros lugares</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/pt/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escreva para mim</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Eu leio todas as respostas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Composto em Space Grotesk · Feito com Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
