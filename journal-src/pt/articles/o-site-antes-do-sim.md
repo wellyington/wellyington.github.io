@@ -1,0 +1,111 @@
+---
+date: 2026-11-19
+ref: built-before-the-yes
+title: "o site antes do sim"
+category: "100 dias"
+tags: [100 dias, caso real, construção, pequeno negócio]
+lede: "Dia um de cem: um site de uma página para a construtora Pedro Sánchez, já no ar, para que ele possa ver a página pronta antes de assinar qualquer contrato."
+image: https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp
+image_alt: "Capa do caso: o site da Pedro Sánchez Construcción num computador e num celular, com a frase Más de 25 años construyendo hogares."
+image_caption: "Dia um. A página de uma construtora na Marina Alta, na tela grande e no celular."
+---
+
+No dia 17 de novembro publiquei uma nota curta. Primeiro dia de um desafio que estou fazendo à vista de todo mundo: cem dias, cem negócios, cem sites. O primeiro é uma página só para a construtora Pedro Sánchez, uma empresa familiar da Marina Alta. Já está no ar.
+
+Trabalho em Estepona. A semana comum é um site para uma loja, um estúdio ou um ofício, feito para se comportar como o próprio negócio: claro sobre o que oferece e fácil de achar numa tarde qualquer. Este eu construí antes de alguém me contratar.
+
+Dá para abrir aqui: [Pedro Sánchez Construcción, dia um](https://wellyington.github.io/challenge/day1/). Por enquanto ele mora no meu endereço. É o lugar honesto até o dono assumir a página.
+
+## cem dias, um negócio de cada vez
+
+Um negócio por dia, e a cada vez um site de verdade, não um desenho guardado para uma reunião que talvez não aconteça. No fim dos cem dias quero cem páginas que uma pessoa consiga abrir e reconhecer. Esta construtora é a primeira. Faltam noventa e nove.
+
+A ideia é do Ramiah Trask. Ele acha que uma sequência de dias assim é um jeito sólido de construir um negócio de sites, pelo que muda para o cliente. Contratar alguém costuma significar imaginar uma página que não existe: os sites dos outros, uma proposta, o seu nome ainda em branco. Uma página pronta é uma decisão menor. Você abre, vê as suas cidades e o seu trabalho, e passa o celular por cima da mesa. Sim, ou não, ou muda esta parte.
+
+Não falei com o Pedro. Até onde sei, ele não viu a página, e não vou escrever como se tivesse visto. Ela está lá para ele olhar uma coisa acabada.
+
+## o que procura quem vai contratar uma construtora
+
+A página apresenta uma empresa familiar que constrói casas na Marina Alta há mais de vinte e cinco anos. Cita Jávea, Dénia e Calpe, e o litoral em volta, na Costa Blanca, em Alicante. A frase do alto é a que eles colocam na frente: mais de vinte e cinco anos construindo lares. Casas novas, reformas completas, um trato próximo e cuidado com o detalhe.
+
+Não inventei essa história para parecer antiga. É o que um cliente escuta. Vinte e cinco anos na mesma costa querem dizer que a empresa já estava ali antes das cozinhas da moda deste ano, e que provavelmente ainda atende o telefone se a obra atrasar. «Familiar», na página, aparece como trato directo. Você fala com eles, não com uma central.
+
+O trabalho fica em dois blocos, lado a lado. Casas novas: umas eles mesmos incorporam, outras são desenhadas para um cliente específico, terminadas para morar. Reformas completas, em que eles escutam e depois propõem um caminho. Elétrica, encanamento e carpintaria inclusos. Essa última frase pesa para quem já reformou. Existe um meio ruim nessas obras, quando a parte elétrica «é problema de outro» e esse outro não foi contratado. Estou repetindo o que a página diz. Não estive nos canteiros deles.
+
+O visitante que eu tinha em mente está numa semana concreta. Um terreno. Uma casa que não cabe mais. Uma cozinha de que ele não gosta há anos. Compara duas ou três empresas e quer respostas simples. Posso confiar nesta gente com uma casa? Consigo ver o trabalho? Como falo com eles esta semana, sem abrir uma conta?
+
+## a primeira tela
+
+As primeiras palavras vão grandes: «Más de 25 años construyendo hogares.» Atrás, um desenho de linhas de uma casa, claro sobre um azul escuro. Embaixo, obra nova e reformas completas em Jávea, Dénia, Calpe e o resto da Marina Alta. Empresa familiar, trato direto, cada detalhe cuidado.
+
+Dois botões. Conte o seu projeto, ou veja os projetos. Falar agora, ou olhar as casas primeiro.
+
+Embaixo correm quatro fatos curtos. Mais de vinte e cinco anos. Uma empresa familiar, próxima. O caminho inteiro, do projeto ao dia em que entregam as chaves. O lugar: Marina Alta, Costa Blanca, Alicante. Ficam onde o olho cai, antes de descer a página.
+
+No celular essa tela empilha. O título, algumas linhas, o botão. O desenho continua, menor, e a página segue sendo deles.
+
+![A abertura do site da Pedro Sánchez Construcción no computador e no celular, com o título Más de 25 años construyendo hogares e o botão para contar o projeto.](/images/journal/100-days-day-1/01-hero.webp)
+*O começo da página, na tela grande e no celular.*
+
+## a história e os dois trabalhos
+
+Mais abaixo, alguns parágrafos dizem quem eles são. Mais de vinte e cinco anos construindo e incorporando casas na Marina Alta. Incorporações próprias e casas novas de estilos diferentes, terminadas para morar. As pessoas que empregam cuidam da obra e também da papelada da entrega. O título os chama de um nome de prestígio na construção de moradias. A frase é deles. A página não grita por cima.
+
+A marca é um monograma PS, o nome, e as palavras construcción e Marina Alta. Diz de quem é a página, no alto, e de novo no rodapé.
+
+Depois vêm os serviços, sob um título que promete o trabalho do começo ao fim. Ao lado: elétrica, encanamento e carpintaria inclusos. Duas fotografias fazem a explicação. Uma é uma casa térrea, telhado de telha, piscina e uma mesa debaixo das árvores: construção nova, incorporações próprias e casas sob medida. A outra é um cômodo longo e coberto, arcos de um lado, uma luminária grande de fibra, o jardim no fundo: reformas, em que eles escutam e então propõem. Há etiquetas pequenas para quem está com pressa. Obra nova, incorporação, trâmites e entrega. Reforma completa, reabilitação, cozinhas e fachadas.
+
+Debaixo das fotos, a ordem em que o cliente vive isso. Primeiro eles escutam, porque cada projeto é o dele. Depois propõem. No fim executam, do planejamento ao último dia de obra.
+
+Segue um trecho curto sobre morar na Marina Alta. Enseadas, invernos amenos, verões quentes, comida e um pouco de silêncio. Dénia, Jávea e Calpe aparecem sozinhas, com o nome. Muita gente que encomenda uma casa aqui está escolhendo a cidade tanto quanto a empresa, então a página diz isso, breve, e volta ao trabalho.
+
+![A história e os serviços: a marca PS, uma casa nova ao lado da piscina, uma reforma coberta com arcos e uma luminária de fibra, e a linha de elétrica, encanamento e carpintaria inclusos.](/images/journal/100-days-day-1/02-trust.webp)
+*Quem eles são, e os dois trabalhos: casas novas e reformas completas.*
+
+## as casas
+
+A gente confia num construtor quando consegue ver casas. A página mostra três projetos recentes, cada um uma fotografia com título e uma linha.
+
+Uma vila branca com terraço, arcos e jardim. Uma sala reformada em tons naturais: cortinas claras, uma poltrona baixa, madeira, um abajur. Um terraço e uma escada externa ainda no meio da obra, com a costa atrás. Essa terceira importa. Uma obra pela metade diz que reforma faz parte da empresa, não só as vilas já prontas.
+
+Há um caminho para todos os projetos. No celular a fotografia vem antes do rótulo. Não andei por esses cômodos, então não vou inventar como eles são. Aparecem grandes, num espanhol comum. A palavra portfólio não entra. Na mesa da cozinha, o cliente já diz «projetos».
+
+![Três cartões de projeto: uma vila branca com arcos e jardim, uma sala em tons naturais e um terraço com escada ainda em reforma.](/images/journal/100-days-day-1/03-projects.webp)
+*Trabalho recente, em fotografias com um título e uma linha.*
+
+## como falar com eles
+
+O fim da página é o que torna o resto útil. Dá para escrever no WhatsApp ou preencher um formulário curto: nome, telefone, e-mail e qual é o projeto. Você marca que leu a nota de privacidade. O botão diz enviar pelo WhatsApp. Aí o WhatsApp abre com a mensagem já escrita, e quem aperta enviar é você. Não some numa caixa que ninguém olha. O passo seguinte está à vista.
+
+Sob o número, uma linha: escreva no WhatsApp ou preencha o formulário, e eles respondem. O título acima é «deixe o seu projeto nas mãos de especialistas». Nesta costa, muito do que de fato se combina já acontece no WhatsApp. Trocar o número mais tarde é um ajuste pequeno.
+
+## o mesmo site no celular
+
+Um casal saindo de uma visita. Alguém mandando a cozinha que quer derrubar para a pessoa que precisa concordar. Um nome ouvido em Dénia, aberto num estacionamento. A tela é estreita e o momento, curto.
+
+O celular mostra o mesmo site. A frase de abertura, os dois trabalhos com as fotografias, a elétrica, o encanamento e a carpintaria nomeados acima, os projetos que continuam sendo casas. O botão fica onde o polegar alcança. O menu sai assim que você escolhe. Sem pinçar a tela. Sem virar o celular para uma frase caber.
+
+![Três celulares com o site da Pedro Sánchez: o título de abertura, os serviços com fotografias de casas e os cartões de projeto empilhados.](/images/journal/100-days-day-1/04-phones.webp)
+*O mesmo site no celular: a abertura, os serviços e os projetos.*
+
+## o que acontece agora com este site
+
+Está pronto para ser entregue. Foi por isso que construí antes da conversa. Alguém da empresa pode abrir hoje e dizer sim, ou não, ou sim se algumas coisas mudarem.
+
+Se quiserem, o que resta é prático. Um endereço no nome deles, para não continuar pendurado no meu. Uma frase que prefiram escrever. Uma fotografia de que gostem mais. Um projeto para incluir, ou tirar. As palavras e as fotos deles, nos lugares em que esta página está no lugar de uma conversa que não tivemos. Aí vai ao ar com o nome deles, no telefone deles, respondido do jeito deles.
+
+Até lá fica onde eu coloquei. Um endereço aberto, dia um do desafio, sem fingir que eles concordaram. Não me disseram que olharam. Se você é o Pedro, ou trabalha lá, prefiro ouvir «muda aquele terraço» a não ouvir nada.
+
+## se você tem um pequeno negócio
+
+Pode ser que você não construa casas. De Estepona eu vejo o mesmo aperto quase todo mês. O negócio precisa de um site, ou de um melhor do que a página montada às pressas anos atrás. Mostram outros ofícios e pedem que você imagine o seu. Muitas vezes o preço chega antes de qualquer página, e a decisão devia sair de uma reunião.
+
+Dá para inverter. A página existe primeiro: o seu nome, o trabalho que você faz de verdade, as cidades que atende, um jeito de ser encontrado que combina com o modo como você já fala com as pessoas. Você abre no próprio celular. Mostra para um parceiro, um irmão, quem cuida do dinheiro. Aí decide.
+
+Essa é a parte útil destes cem dias, e é como prefiro trabalhar quando não há desafio nenhum. Se quiser uma página assim, escreva para mim pelo [site principal](https://wellyington.github.io/pt/). Diga o que você faz e onde. Respondo em linguagem comum.
+
+## um pedido pequeno
+
+Este primeiro site é para uma empresa com a qual eu gostaria de trabalhar, e não tenho uma porta lateral. Se você conhece Pedro Sánchez, ou alguém da firma, mande a página. Era o pedido da nota, e continua sendo: [o dia um, escrito em público](https://x.com/wellyington/status/2122700118528872815).
+
+Sigo. Um negócio, um site, o dia seguinte. Se a página achar o dono, ótimo. Se só servir para a segunda ficar mais clara, também conta.
