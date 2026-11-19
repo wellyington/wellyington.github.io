@@ -2,8 +2,7 @@ node_modules/
 .DS_Store
 *.log
 
-# Jekyll (journal/)
-journal/_site/
-journal/.jekyll-cache/
-journal/vendor/
-_journal/
+# Jekyll source (journal-src/); journal/ is built output and IS committed
+journal-src/_site/
+journal-src/.jekyll-cache/
+journal-src/vendor/

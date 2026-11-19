@@ -5,12 +5,14 @@ https://wellyington.github.io/journal/. It uses the main site's design
 system: ice + ink, Space Grotesk, a visible grid, and lowercase titles
 that end with a period.
 
-This folder is the only part of the repo that Jekyll builds.
-`.github/workflows/pages.yml` builds it and publishes it next to the
-static site, which is copied as-is.
+This folder is the **source**. `.github/workflows/pages.yml` builds it on
+every push to `main` and commits the finished HTML into `../journal/`.
+GitHub Pages then serves that folder like the rest of the static site, with
+no Pages settings involved. Don't edit `journal/` by hand: the next build
+overwrites it.
 
 ```
-journal/
+journal-src/
 ├── _config.yml          site settings + front-matter defaults per folder
 ├── _data/
 │   ├── languages.yml    every UI string, month names, headline… per language
@@ -26,7 +28,7 @@ journal/
 
 ## Write an article
 
-Add `en/articles/my-slug.md` (and/or `es/articles/mi-slug.md`):
+Add `journal-src/en/articles/my-slug.md` (and/or `es/articles/mi-slug.md`):
 
 ```yaml
 ---
@@ -54,7 +56,7 @@ image_caption: …
 ## Run locally
 
 ```bash
-cd journal
+cd journal-src
 bundle install
 bundle exec jekyll serve --baseurl /journal
 ```

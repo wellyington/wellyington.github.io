@@ -1,28 +1,34 @@
-# Publishes the whole site with GitHub Actions.
+# Builds the journal and commits the finished pages.
 #
-#  • Everything at the repo root is copied as-is (same as the old
-#    "deploy from branch" setup: the static site is not rebuilt).
-#  • /journal is a Jekyll site. It is built here and published at
-#    https://wellyington.github.io/journal/
+#  Source:  journal-src/   (Jekyll: _config.yml, _layouts, _sass, en/, es/, pt/, ru/ …)
+#  Output:  journal/       (plain HTML, committed by this workflow)
 #
-# Requires: Settings → Pages → Build and deployment → Source: "GitHub Actions".
-# Pull requests run the build only, so a broken journal never reaches the live site.
+# GitHub Pages keeps deploying from the branch as before (".nojekyll", no
+# Jekyll build). It simply publishes journal/ like any other folder, so no
+# Pages setting has to change.
+#
+# Pull requests: build + smoke test only, nothing is committed.
+# Pushes to main: build, test, then commit journal/ if anything changed.
 
-name: Deploy site
+name: Build journal
 
 on:
   push:
     branches: [main]
+    paths:
+      - "journal-src/**"
+      - ".github/workflows/pages.yml"
   pull_request:
+    paths:
+      - "journal-src/**"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages-${{ github.ref }}
+  group: journal-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -35,55 +41,46 @@ jobs:
         with:
           ruby-version: "3.3"
           bundler-cache: true
-          working-directory: journal
+          working-directory: journal-src
 
       - name: Build journal
-        working-directory: journal
+        working-directory: journal-src
         env:
           JEKYLL_ENV: production
-        run: bundle exec jekyll build --destination ../_journal
+        run: bundle exec jekyll build --destination ../journal
 
       - name: Smoke-test journal
         run: |
           set -e
           for l in en es pt ru; do
-            n=$(ls _journal/$l/articles | wc -l)
-            rows=$(grep -o 'class="row"' _journal/$l/index.html | wc -l)
+            n=$(ls journal-src/$l/articles | wc -l)
+            rows=$(grep -o 'class="row"' journal/$l/index.html | wc -l)
             echo "$l: $n articles, $rows rows on the index"
+            grep -qi '<!doctype html>' journal/$l/index.html || { echo "::error::$l index is not rendered HTML"; exit 1; }
+            if grep -q '{%' journal/$l/index.html; then echo "::error::$l index contains raw Liquid"; exit 1; fi
             [ "$n" -gt 0 ] || continue
             [ "$rows" -eq "$n" ] || { echo "::error::$l index lists $rows of $n articles"; exit 1; }
             for h in en es pt-BR ru; do
-              grep -q "hreflang=\"$h\"" _journal/$l/index.html || { echo "::error::$l index missing hreflang $h"; exit 1; }
+              grep -q "hreflang=\"$h\"" journal/$l/index.html || { echo "::error::$l index missing hreflang $h"; exit 1; }
             done
+            grep -q '<entry>' journal/$l/feed.xml || { echo "::error::empty $l feed"; exit 1; }
           done
-          for l in en es pt ru; do
-            grep -q '<entry>' _journal/$l/feed.xml || { echo "::error::empty $l feed"; exit 1; }
-          done
-          test -s _journal/assets/css/journal.css
-          echo "Translation links:" && grep -ho 'hreflang="\(pt-BR\|ru\)" href="[^"]*articles[^"]*"' _journal/en/articles/*/index.html || true
+          test -s journal/assets/css/journal.css
+          echo "Built pages:" && find journal -name '*.html' | sort
 
-      - name: Assemble site
+      - name: Commit built journal
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
-          mkdir _site
-          rsync -a \
-            --exclude '.git' --exclude '.github' --exclude 'node_modules' \
-            --exclude 'journal' --exclude '_journal' --exclude '_site' \
-            ./ _site/
-          mkdir -p _site/journal
-          cp -a _journal/. _site/journal/
-          echo "Journal pages:" && find _site/journal -name '*.html' | sort
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-  deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A journal
+          if git diff --cached --quiet; then
+            echo "journal/ is already up to date."
+            exit 0
+          fi
+          git commit -m "Build journal from ${GITHUB_SHA::7}"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
