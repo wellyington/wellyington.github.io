@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diario" href="/journal/es/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/">
+<!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="sitio para toda la temporada" />
+<meta name="author" content="Wellyington" />
+<meta property="og:locale" content="es" />
+<link rel="canonical" href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/" />
+<meta property="og:url" content="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/" />
+<meta property="og:site_name" content="Journal" />
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-19T21:45:00+01:00" />
+<meta property="article:modified_time" content="2026-11-19T21:45:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" />
+<meta name="twitter:title" content="sitio para toda la temporada" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wellyington"},"dateModified":"2026-11-19T21:45:00+01:00","datePublished":"2026-11-19T21:45:00+01:00","headline":"sitio para toda la temporada","image":"https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/"},"url":"https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>sitio para toda la temporada — Diario · Wellyington</title>
+<meta name="description" content="Día dos de cien: un concepto de portada para el Teatro Soho CaixaBank en Málaga, con la temporada, las entradas y una lectura fácil de día o al salir.">
+<meta property="og:description" content="Día dos de cien: un concepto de portada para el Teatro Soho CaixaBank en Málaga, con la temporada, las entradas y una lectura fácil de día o al salir.">
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/es/" class="bar-cell bar-brand" aria-label="Wellyington Diario">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diario</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Hora local y en qué estoy trabajando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escribiendo</span><span>notas sobre lanzar en pequeño</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escuchando</span><span>Wellyington — maquetas de estudio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/room-for-a-whole-season/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/sitio-para-toda-la-temporada/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/espaco-para-a-temporada-inteira/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/mesto-dlya-tselogo-sezona/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Cambiar a tema oscuro" data-label-dark="Cambiar a tema oscuro" data-label-light="Cambiar a tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Oscuro"></span><span class="theme-word" data-light="Claro" data-dark="Oscuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegación" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegación">
+      <p class="label">Navegación</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/es/" class="rollable">
+            <span class="roll"><span>diario.</span><span aria-hidden="true">diario.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/archive/" class="rollable">
+            <span class="roll"><span>archivo.</span><span aria-hidden="true">archivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/about/" class="rollable">
+            <span class="roll"><span>sobre mí.</span><span aria-hidden="true">sobre mí.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>web principal.</span><span aria-hidden="true">web principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/es/articles/sitio-para-toda-la-temporada/" class="menu-entry">
+            <span class="mono dim">N.º 002</span>
+            <span>sitio para toda la temporada<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/la-web-antes-del-si/" class="menu-entry">
+            <span class="mono dim">N.º 001</span>
+            <span>la web antes del sí<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/room-for-a-whole-season/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/sitio-para-toda-la-temporada/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/espaco-para-a-temporada-inteira/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/mesto-dlya-tselogo-sezona/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/es/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/es/" class="entry-cell entry-back rollable"><span class="roll"><span>← diario</span><span aria-hidden="true">← diario</span></span></a>
+    <span class="entry-cell mono">N.º 002</span>
+    <span class="entry-cell label">100 días</span>
+    <time class="entry-cell" datetime="2026-11-19T21:45:00+01:00">19 de noviembre de 2026</time>
+    <span class="entry-cell">11 min de lectura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">sitio para toda la temporada<span class="dot">.</span></h1><p class="entry-lede">Día dos de cien: un concepto de portada para el Teatro Soho CaixaBank en Málaga, con la temporada, las entradas y una lectura fácil de día o al salir.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" alt="Portada del caso: un concepto de portada del Teatro Soho, con la versión clara y la oscura juntas en un ordenador y la misma página en un móvil, sobre el cartel de El Gran Gatsby." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 002</span>
+</div>
+<p class="caption label">Día dos. Un concepto de portada para el Teatro Soho CaixaBank, en las dos luces, en pantalla grande y en el móvil.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="en esta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">en esta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartir.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar enlace</span><span aria-hidden="true">copiar enlace</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fsitio-para-toda-la-temporada%2F&text=sitio+para+toda+la+temporada"><span class="roll"><span>publicar en X</span><span aria-hidden="true">publicar en X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fsitio-para-toda-la-temporada%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>El 18 de noviembre publiqué la segunda nota de esta serie: cien días, cien negocios, cien webs, donde cualquiera puede abrirlas. El día anterior fue una constructora familiar de la Marina Alta que necesitaba una primera página clara, algo terminado que pudiera mirar antes de un contrato. <a href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/">Esa página está aquí.</a> Hoy el lugar es otro, y el trabajo cambia con él.</p>
+
+<p>El Teatro Soho CaixaBank está en la calle Córdoba, en Málaga. Yo trabajo desde Estepona, en la misma costa, lo bastante cerca como para no tener que presentar Málaga como si hubiera venido de viaje. El teatro ya tiene temporada, un edificio al que la gente va andando, un nombre que pesa y varias cosas viviendo bajo el mismo techo. No está esperando su primera frase en internet. Lo que he hecho es una portada para la vida que ya tiene. El concepto se abre aquí: <a href="https://wellyington.github.io/challenge/day2/">Teatro Soho, día dos</a>.</p>
+
+<p>Nadie del teatro me lo pidió. No es un encargo, y no tiene vínculo con el teatro ni con CaixaBank. El nombre de la página es suyo. El concepto es mío, y de momento vive en mi propia dirección, que es el sitio honesto para un trabajo que nadie ha recogido. No me han dicho que alguien de allí lo haya mirado, y no voy a escribir como si lo hubiera hecho.</p>
+
+<h2 id="una-casa-que-ya-está-llena">una casa que ya está llena</h2>
+
+<p>Quien visitaba la página del día anterior quería saber si podía fiarse de una empresa para una casa. Quien abre la de un teatro suele querer una respuesta más pequeña, y la quiere pronto: qué hay este sábado, si hay danza, si queda alguna butaca y quién está en el escenario. La temporada es lo que se ofrece, y se mueve mientras la persona todavía está decidiendo.</p>
+
+<p>El edificio guarda más que un calendario. Junto al teatro están Larios Pop del Soho, Soho Sounds Records, Teatro Soho televisión y la Fundación Teatral Antonio Banderas, y además los patrocinadores, las noticias de la semana, un teléfono y una calle a la que llega un taxi. Si todo eso se amontona en una sola pantalla, nadie termina de leer. Si se esconde, el cartel no lleva a ninguna parte. El trabajo es un orden que una persona pueda usar, y un primer minuto que se parezca a llegar. Después, la página tiene que decir qué hay y cómo se saca una entrada.</p>
+
+<p>Los nombres, las fechas y los socios no me los he inventado. Son públicos, y son lo que enseña el concepto. No he visto estos espectáculos desde una butaca, así que esto es un relato de la página, no de la noche.</p>
+
+<h2 id="el-primer-minuto">el primer minuto</h2>
+
+<p>La apertura es esta temporada. Arriba, en pequeño, se lee Temporada 26/27 · Málaga. Debajo, el nombre va grande, Teatro Soho, y las letras llegan una a una, como llega un título cuando la sala ya se ha quedado en silencio. Detrás está el cartel de El Gran Gatsby – El Show: letras doradas, dos bailarines, una línea en la que Enrique Gasa Valga Dance Company presenta la noche, y un sello redondo en oro que dice música en directo. Junto a una línea fina de color rosa, un párrafo corto dice que la casa presenta la temporada 26/27: teatro, música, danza y circo, en el corazón de Málaga.</p>
+
+<p>Debajo corre una cinta de palabras: Circo, Teatro, Música, Danza, y otra vez las mismas cuatro. Si bajas por la página, la cinta se anima un poco. Si te paras, se serena. Lo entiendo como el telón que sube, un cambio pequeño en la sala. También hay una luz lenta detrás del cartel, más cerca de la luz de un escenario que de una fila de diapositivas.</p>
+
+<p><img src="/images/journal/100-days-day-2/04-hero.webp" alt="La apertura del concepto del Teatro Soho: el nombre en grande sobre el cartel de El Gran Gatsby – El Show, un sello dorado que dice música en directo y una cinta con Circo, Teatro, Música y Danza." />
+<em>La primera pantalla. La temporada, el cartel y el nombre de la casa.</em></p>
+
+<p>Esa misma apertura existe en dos luces, porque no todo el mundo lee en el mismo sitio. Una es un verde menta suave, con el rosa reservado para los acentos pequeños, cómoda en una cafetería luminosa o en una acera al sol. La otra es un verde oscuro, más cerca de un patio de butacas a oscuras, con el rosa usado como se usa la luz de sala. Si el móvil ya está en oscuro, la página abre en oscuro. Un toque la cambia, y la elección se queda guardada. El cartel y el nombre no se mueven. De noche la página no deslumbra, y a la hora de comer no te pone delante una pantalla negra con la que pelearte.</p>
+
+<p><img src="/images/journal/100-days-day-2/01-split.webp" alt="La portada del Teatro Soho partida entre un tema menta y un tema verde oscuro, con Temporada 26/27 · Málaga, el cartel de Gatsby y los espectáculos a la venta debajo." />
+<em>Una portada, dos luces. La temporada se queda, y cambia la sala que la rodea.</em></p>
+
+<h2 id="encontrar-el-sábado">encontrar el sábado</h2>
+
+<p>Bajo la cinta, el título es llano a propósito: Espectáculos a la venta. Debajo hay cinco pastillas: Todos, Teatro, Música, Danza, Circo. Si quieres danza el sábado, pulsas Danza y el resto se aparta. Esa es toda la maniobra, dos toques, en lugar de rebuscar en una lista pensada para la taquilla y no para quien lleva el móvil en la mano.</p>
+
+<p>Cada espectáculo es un cartel, luego el nombre, luego las fechas. El Gran Gatsby – El Show va del 17 al 22 de noviembre, archivado en danza y música, que concuerda con el sello de oro. La Cubana, La cuisine de ma cousine, va del 25 de noviembre al 15 de diciembre, en teatro, sobre una ficha rosa fuerte con un gorro de cocinera que es de esa compañía y no del cartel de Gatsby. Los dos pueden estar juntos. Una casa que programa circo, flamenco, musicales y teatro de texto queda descuidada si todas las fichas se meten en el mismo marco.</p>
+
+<p>Alrededor de esos dos, la parrilla sostiene una temporada. Navidad en el Soho, con Antonio Banderas, está del 25 al 28 de diciembre. Duck Pond, de Circa, cae el 19 y el 20 de diciembre. Enero trae Mujer en cinta de correr sobre fondo negro, Hija de la Luna, y Flamenco en el Soho 2027 del 8 de enero al 19 de marzo, con Rancapino Chico y, a la noche siguiente, Farru con Duquende en Natural. Estoy enumerando lo que enumera la página. Aquí no hay crítica, ni una cifra de ventas, porque no tengo ninguna de las dos cosas.</p>
+
+<p><img src="/images/journal/100-days-day-2/06-mobile.webp" alt="Dos móviles con los espectáculos a la venta, en el tema claro y en el oscuro, con filtros de teatro, música, danza y circo, y la ficha de El Gran Gatsby – El Show, del 17 al 22 de noviembre." />
+<em>Espectáculos a la venta, en el móvil. Eliges danza, y las otras fichas se apartan.</em></p>
+
+<p>Al abrir una ficha, el espectáculo pasa delante con dos caminos: comprar entrada o saber más. Más abajo, en un cuerpo de letra que no se puede pasar por alto, la línea dice Compra de entradas. A mitad de página, quien visita no debería tener que adivinar si ahí se venden entradas. Comprar lleva a los canales que la casa ya usa. Saber más lleva a la página del propio teatro para ese espectáculo. No estoy abriendo una segunda taquilla.</p>
+
+<p>En el móvil, la misma visita ocurre en un momento corto. Alguien en la cena está mirando el sábado, o alguien a unas calles de Córdoba le manda un cartel a la persona que tiene que decir que sí. El menú se recoge en un solo control: programación, noticias, contacto, patrocinadores, discografía. Los filtros siguen siendo lo bastante grandes para el pulgar, y los carteles se apilan en imagen, nombre y fechas. No hace falta pellizcar la pantalla, ni girar el móvil para leer el nombre de la casa. El teléfono además se mueve, de una calle luminosa a mediodía a una butaca a oscuras después del telón, y por eso las dos luces tienen sentido aquí.</p>
+
+<h2 id="el-resto-de-la-casa">el resto de la casa</h2>
+
+<p>La calle Córdoba guarda más que fechas. Una fila llamada Destacados recorre tres fichas. Larios Pop del Soho, con Contrátanos y una fotografía de una orquesta bajo luz de colores. Soho Sounds Records, una mesa de mezclas, bastante para decir que en el edificio vive un sello. La Fundación Teatral Antonio Banderas, en una ficha propia. Cada una dice saber más y enlaza con las páginas del teatro. Dejé los nombres separados, porque un único rótulo blando habría hecho la casa más pequeña de lo que es.</p>
+
+<p>Después van las noticias, bajo Últimas noticias, con un camino hacia el resto. Tres notas, con fecha y con fotografía. El 17 de noviembre, el estreno de El Gran Gatsby – El Show, danza, música y voz en directo. El 16 de noviembre, flamenco: Rancapino Chico, Farru, Águeda Saavedra, Juan Tomás de la Molía, Pedro el Granaíno y Daniel Casares. El 13 de noviembre, el Premio Andalucía Excelente, por la proyección cultural del teatro. Estoy repitiendo la página, no una noche a la que yo haya ido. Una noticia con fecha es la manera de que la portada enseñe que la semana está pasando, en vez de dejar el lugar aparcado en un logo de una temporada ya cerrada.</p>
+
+<p><img src="/images/journal/100-days-day-2/02-light.webp" alt="El tema claro: fichas de Larios Pop del Soho y Soho Sounds Records, tres noticias con fecha y los logotipos de patrocinadores en un móvil." />
+<em>Destacados y últimas noticias, en el tema menta. El fondo se queda quieto para que se lean las fotos.</em></p>
+
+<p>Luego la página baja el ritmo a propósito. El teatro es una sola frase, en grande: un teatro vivo en la calle Córdoba de Málaga, con Larios Pop del Soho, Soho Sounds Records, Teatro Soho televisión y la Fundación Teatral Antonio Banderas. Las palabras se adelantan según llegas a ellas. Es corta porque la temporada de arriba ya ha presentado la casa, y sirve tanto a quien no conoce el lugar como a quien sí lo conoce.</p>
+
+<p>El pie es donde la visita se vuelve práctica. C/ Córdoba 13, 29001 Málaga, el teléfono 952 42 91 73, info@teatrodelsoho.com, y un enlace para llegar. Los proyectos artísticos escriben a direccion@teatrodelsoho.com. El aviso legal, la privacidad, las cookies, el acceso a prensa y un canal de alertas, denuncias y reclamaciones quedan en una fila que se puede recorrer con la vista. Una línea pequeña dice que la web es mía. La dejé a la vista para que la página no tome prestada la autoridad de una casa que no ha pedido el trabajo.</p>
+
+<p><img src="/images/journal/100-days-day-2/05-details.webp" alt="Una frase grande sobre el teatro de la calle Córdoba, un enlace destacado que dice Compra de entradas y un pie con la dirección, el teléfono y el correo en Málaga." />
+<em>La casa en una frase, las entradas en grande y una dirección a la que puede ir un taxi.</em></p>
+
+<h2 id="un-sitio-digno-para-quien-sostiene-la-casa">un sitio digno para quien sostiene la casa</h2>
+
+<p>Un local así vive con quienes lo sostienen. Los patrocinadores tienen una parrilla propia: logotipos en fichas blancas, con aire suficiente para distinguirlos, no una tira gris debajo del texto legal. Entre ellos están San Miguel, El Corte Inglés, Larios, Fundación Starlite, la fundación, Sierra Blanca e Iberia. Bajo Amigos del teatro, la línea nombra a CEMAT, el club de empresarios malagueños amigos del teatro, y las fichas siguen con nombres de la ciudad: un hotel, El Pimpi, un grupo hospitalario, el parque tecnológico.</p>
+
+<p>No conozco los acuerdos que hay detrás de esas marcas, y no voy a inventarlos. Un sitio digno, en esta página, quiere decir lo bastante grande para leerse, todavía pulsable cuando los logotipos caen en dos columnas en el móvil, y sin quedarse con la temporada. Los espectáculos siguen arriba. En el tema oscuro, ese mismo tramo se apoya en un verde profundo, con el rosa reservado a las etiquetas pequeñas. Un móvil que ya está en oscuro lo abre así. Un toque devuelve el menta, y la elección se recuerda.</p>
+
+<p><img src="/images/journal/100-days-day-2/03-dark.webp" alt="Destacados, noticias y logotipos de patrocinadores en el tema oscuro, verde profundo con etiquetas rosas, y los mismos patrocinadores en un móvil." />
+<em>El tema oscuro. Un toque lo cambia, y la elección se guarda para la próxima visita.</em></p>
+
+<h2 id="una-oferta-no-un-anuncio">una oferta, no un anuncio</h2>
+
+<p>El teatro no me contrató, y CaixaBank tampoco. Esto no es una página oficial, y nada de lo que hay aquí significa que la casa haya aprobado el trabajo. La gente ya compra entradas por los caminos que usa la casa. He trabajado con nombres públicos, fechas públicas y la manera en que el teatro se describe, una casa viva en la calle Córdoba con esas cuatro actividades al lado, para que alguien de Málaga pudiera reconocer el lugar.</p>
+
+<p>No hay ninguna cita, porque nadie de allí me la dio, y no me han dicho que lo hayan visto. No hay una cifra de butacas ni de taquilla. Si abren el concepto y no quieren nada de mí, ese es un final completo. La página del día anterior existía para que un constructor pudiera decir que sí, que no, o que cambiara una parte. Esta es la misma clase de oferta, hecha a una casa que ya tiene público.</p>
+
+<h2 id="si-tu-sitio-ya-va-lleno">si tu sitio ya va lleno</h2>
+
+<p>Puede que tú no lleves un teatro. Desde Estepona, la mayoría de los meses se parecen más a este día que al primero. Aquella constructora necesitaba una página clara que todavía no existía: el nombre, el trabajo, los pueblos, una forma de escribirle que se pareciera a cómo la gente ya se pone en contacto. Muchos negocios ya han pasado de ahí. La gente ya viene. La temporada, la carta o la lista de trabajos es real, y la web ha crecido por acumulación: un bloque nuevo cada vez que empezaba algo, una tira para cada socio, y el motivo de la visita debajo de todo eso.</p>
+
+<p>Un rediseño puede conservar lo que a la gente ya le gusta: el nombre de la puerta, el trabajo en sí, y los socios en un sitio decente, sin tapar lo que vendes. La dirección y el teléfono se quedan donde una persona puede usarlos. Lo que cambia es el orden. El sábado cabe en dos toques, la entrada queda donde ya está la mano, y la luz sigue al móvil, fácil después de una función y fácil a mediodía. Una página nueva puede hacer más fácil recorrer un negocio que ya está lleno, y dejar el carácter donde la gente ya lo encontró.</p>
+
+<p>Si ese es tu caso, escríbeme desde <a href="https://wellyington.github.io/es/">la web principal</a>. Dime a qué te dedicas y dónde, y contestaré en lenguaje llano. La versión corta de hoy es la nota del día 18: día dos de cien, una portada para este teatro, claro u oscuro, elige quien visita. <a href="https://x.com/wellyington/status/2123056661220733019">La nota está aquí.</a> Mañana es otro negocio, y otra página terminada.</p>
+
+      <p class="fin" aria-label="Fin de la entrada">fin.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">archivado en</span>
+    <ul class="chips"><li>100 días</li><li>caso real</li><li>teatro</li><li>rediseño</li></ul>
+  </div><nav class="rail pager" aria-label="más entradas."><a class="pager-cell rollable" href="/journal/es/articles/la-web-antes-del-si/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">la web antes del sí<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">la última entrada.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Sigue leyendo</span>
+    <h2 id="more-title" class="h-section">más entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/es/articles/la-web-antes-del-si/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" alt="Portada del caso: la web de Pedro Sánchez Construcción en un ordenador y en un móvil, con la frase Más de 25 años construyendo hogares." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 001</span>
+</div>
+<span class="label">100 días · 19.11.26</span><span class="card-title">la web antes del sí<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independiente por diseño · Escrito en público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/es/" class="rollable"><span class="roll"><span>diario</span><span aria-hidden="true">diario</span></span>
+    </a><a href="/journal/es/archive/" class="rollable"><span class="roll"><span>archivo</span><span aria-hidden="true">archivo</span></span>
+    </a><a href="/journal/es/about/" class="rollable"><span class="roll"><span>sobre mí</span><span aria-hidden="true">sobre mí</span></span>
+    </a><a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>web principal</span><span aria-hidden="true">web principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">en otros sitios</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/es/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escríbeme</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Leo todas las respuestas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Compuesto en Space Grotesk · Hecho con Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
