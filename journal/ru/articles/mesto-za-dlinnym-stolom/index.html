@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/">
+<!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="место за длинным столом" />
+<meta name="author" content="Wellyington" />
+<meta property="og:locale" content="ru" />
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/" />
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/" />
+<meta property="og:site_name" content="Journal" />
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-19T22:30:00+01:00" />
+<meta property="article:modified_time" content="2026-11-19T22:30:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" />
+<meta name="twitter:title" content="место за длинным столом" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wellyington"},"dateModified":"2026-11-19T22:30:00+01:00","datePublished":"2026-11-19T22:30:00+01:00","headline":"место за длинным столом","image":"https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/"},"url":"https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>место за длинным столом — Журнал · Wellyington</title>
+<meta name="description" content="Третий день из ста: концепт главной страницы для Los Arcos, семейного бара-ресторана в Эстепоне: меню, неделя, заявка на бронь и два света, для обеда и для позднего вечера.">
+<meta property="og:description" content="Третий день из ста: концепт главной страницы для Los Arcos, семейного бара-ресторана в Эстепоне: меню, неделя, заявка на бронь и два света, для обеда и для позднего вечера.">
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/a-seat-at-the-long-table/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/un-sitio-en-la-mesa-larga/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/um-lugar-na-mesa-comprida/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/mesto-za-dlinnym-stolom/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/mesto-za-dlinnym-stolom/" class="menu-entry">
+            <span class="mono dim">№ 003</span>
+            <span>место за длинным столом<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/mesto-dlya-tselogo-sezona/" class="menu-entry">
+            <span class="mono dim">№ 002</span>
+            <span>место для целого сезона<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/sait-do-slova-da/" class="menu-entry">
+            <span class="mono dim">№ 001</span>
+            <span>сайт до слова «да»<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/a-seat-at-the-long-table/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/un-sitio-en-la-mesa-larga/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/um-lugar-na-mesa-comprida/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/mesto-za-dlinnym-stolom/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 003</span>
+    <span class="entry-cell label">100 дней</span>
+    <time class="entry-cell" datetime="2026-11-19T22:30:00+01:00">19 ноября 2026</time>
+    <span class="entry-cell">9 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">место за длинным столом<span class="dot">.</span></h1><p class="entry-lede">Третий день из ста: концепт главной страницы для Los Arcos, семейного бара-ресторана в Эстепоне: меню, неделя, заявка на бронь и два света, для обеда и для позднего вечера.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Обложка кейса с концептом сайта Los Arcos Estepona: первый экран на компьютере разделён между кремовой и угольной темой, рядом та же страница на телефоне." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 003</span>
+</div>
+<p class="caption label">День третий. Концепт главной страницы Los Arcos, в обоих светах, на большом экране и на телефоне.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fmesto-za-dlinnym-stolom%2F&text=%D0%BC%D0%B5%D1%81%D1%82%D0%BE+%D0%B7%D0%B0+%D0%B4%D0%BB%D0%B8%D0%BD%D0%BD%D1%8B%D0%BC+%D1%81%D1%82%D0%BE%D0%BB%D0%BE%D0%BC"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fmesto-za-dlinnym-stolom%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>19 ноября я выложил третью заметку этого ряда: сто дней, сто дел, сто сайтов, и каждый открыт для любого. Первым днём была семейная строительная фирма в Марина-Альте: ей нужна была первая ясная страница, на которую можно посмотреть до договора. <a href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">Та страница здесь.</a> Вторым был театр в Малаге, у которого уже есть полный сезон, и ему нужен был порядок, которым человеку удобно пользоваться. <a href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/">Он здесь.</a> Сегодня идти ближе.</p>
+
+<p>Los Arcos — бар и ресторан на улице Бенависта, у съезда 1057, в Эстепоне. Я работаю из Эстепоны, так что это первое дело в ряду в моём собственном городе. Для работы это почти ничего не меняет, а для внимания к деталям меняет многое. Здесь люди откроют страницу и сразу поймут, похожа она на это место или нет. Концепт открывается здесь: <a href="https://wellyington.github.io/challenge/day3/">Los Arcos, день третий</a>.</p>
+
+<p>Никто в Los Arcos меня об этом не просил. Это не заказ и не их официальный сайт. На странице их имя, их блюда и их неделя. Концепт мой, и пока он живёт на моём собственном адресе: это честное место для работы, которую ещё никто не принял. Мне никто не говорил, что там его уже видели.</p>
+
+<h2 id="место-куда-ходят-по-разным-причинам">место, куда ходят по разным причинам</h2>
+
+<p>У строителя была одна работа, которую нужно объяснить, у театра был сезон. У семейного бара-ресторана всё не так аккуратно. Люди приходят по разным причинам, в разное время и часто одной компанией.</p>
+
+<p>Кто-то хочет воскресное жаркое. Кто-то хочет посмотреть матч на большом экране. Пара хочет коктейль и живую группу. Родитель хочет час посидеть, пока дети бегают там, где безопасно. В будний день утром кому-то нужны просто кофе и панкейки перед работой. Los Arcos делает всё это под одной крышей: открытая кухня, Sunday Carvery, утреннее кафе, спорт в прямом эфире, живая музыка, игровые площадки и еда навынос.</p>
+
+<p>Главная, где обо всём говорится одинаково громко, не говорит ничего. Главная, которая выбирает одну причину, теряет половину людей, которые уже сюда ходят. Поэтому работа была в порядке. Сначала, что это за место. Потом, что здесь едят. Потом, что происходит на этой неделе. Потом, когда открыто, почему здесь хорошо с детьми и как получить столик. Всё, что постоянный гость уже знает, в том порядке, в каком это нужно тому, кто пришёл впервые.</p>
+
+<h2 id="хорошая-еда-собирает-людей-вместе">хорошая еда собирает людей вместе</h2>
+
+<p>Первый экран сохраняет их собственную фразу, потому что она хорошая: good food brings people together, хорошая еда собирает людей вместе. Она набрана высокой узкой антиквой, вторая половина курсивом и в фирменном красном. Над ней логотип, арки с маленькими играющими фигурками. Под ней один абзац: семейный бар-ресторан, домашняя еда с открытой кухни, традиционный Sunday Carvery, свежие коктейли, живая группа, под которую можно петь, и много места, где играть детям.</p>
+
+<p>Дальше две кнопки: забронировать столик или посмотреть, что происходит. Под ними три факта, о которых иначе пришлось бы спрашивать: Sunday Carvery за 15,95 €, утреннее кафе с 8 утра с понедельника по субботу и бар-ресторан со среды по воскресенье. Внизу экрана идёт красная лента с причинами, по которым сюда приходят, одна за другой: живая музыка, свежие коктейли, игровые площадки, еда навынос и та самая фраза про хорошую еду.</p>
+
+<p>Справа большая фотография блюда: нарезанная курица, рёбрышки, колбаски, луковые кольца, горшочек фасоли, соусник. Мне хотелось, чтобы первый экран выглядел как стол, а не как буклет.</p>
+
+<p><img src="/images/journal/100-days-day-3/01-split.webp" alt="Первый экран Los Arcos, разрезанный по диагонали между светлой кремовой и тёмной угольной темой: логотип, фраза Good food brings people together и блюдо с мясом на гриле." />
+<em>Первый экран, разрезанный надвое. Одно и то же начало днём и вечером.</em></p>
+
+<h2 id="два-света-один-ресторан">два света, один ресторан</h2>
+
+<p>Этот диагональный разрез и есть суть концепта. У страницы две темы, и один и тот же ресторан должен хорошо выглядеть в обеих.</p>
+
+<p>Светлая тема тёплого кремового цвета, как скатерть, с фирменным красным для всего, на что можно нажать, и для слов курсивом. Её легко читать в полдень на террасе, когда на экран падает солнце. Тёмная угольная, почти чёрная, с тем же красным. Она удобнее в десять вечера, когда кто-то проверяет, работает ли ещё кухня, или отправляет страницу другу с дивана.</p>
+
+<p>Если телефон уже в тёмном режиме, страница открывается тёмной. Если в светлом, то светлой. Маленькая кнопка в навигации переключает тему, и страница запоминает выбор до следующего раза. Карточки, фотографии и красный цвет остаются на месте. Меняется только комната вокруг них.</p>
+
+<p><img src="/images/journal/100-days-day-3/02-light.webp" alt="Сетка What's on в светлой теме: Sunday Carvery на красной карточке, новое утреннее кафе за полцены, детская рождественская вечеринка на чёрной карточке и телефон с семейным разделом." />
+<em>Светлая тема: тёплый крем, фирменный красный и неделя в сетке.</em></p>
+
+<p><img src="/images/journal/100-days-day-3/03-dark.webp" alt="Та же сетка What's on в тёмной теме, угольный цвет с красным, рядом телефон в тёмном режиме." />
+<em>Тёмная тема. Она следует настройке устройства, пока вы не выберете сами, и кнопка запоминает выбор.</em></p>
+
+<h2 id="с-открытой-кухни">с открытой кухни</h2>
+
+<p>Сайт ресторана открывают, чтобы посмотреть на еду, поэтому еда идёт второй, сразу после приветствия. Заголовок говорит прямо: from the open kitchen, с открытой кухни. Строка под ним объясняет, что это традиционные любимые блюда, домашние и приготовленные свежими там, где их видно.</p>
+
+<p>Потом короткий список из шести блюд, пронумерованных, как в меню: стейк T-Bone, куриная грудка «бабочкой», стейк из лосося с острым запечённым картофелем, чили кон карне, колбаски с пюре и шоколадный торт. У каждого маленькая подпись: гриль, рыба, фирменное, классика, десерт. Выбираешь блюдо, и его фотография появляется рядом со списком. T-Bone приезжает на деревянной доске, с кружком тающего травяного масла сверху.</p>
+
+<p>Под списком одна фраза называет остальное меню, чтобы никто не подумал, что эти шесть блюд и есть всё: легендарные рёбрышки, треска в пивном кляре, стейк из филейной части, бургеры, пицца, салаты, включая «Цезарь», детское меню, доска с блюдами дня в баре и еда навынос. Я не перепробовал всё меню, поэтому не буду описывать вкус. Страница рассказывает о блюдах так, как рассказывает о них сам Los Arcos, и ставит фотографии туда, куда смотрит голодный человек.</p>
+
+<h2 id="что-происходит-и-когда-нас-найти">что происходит и когда нас найти</h2>
+
+<p>Дальше идёт неделя, потому что такой бар ею и живёт. Заголовок What’s on, что происходит, и сетка честно говорит о бронировании: где-то оно желательно, а где-то обязательно.</p>
+
+<p>Sunday Carvery получает красную карточку: каждое воскресенье, 15,95 €, традиционный воскресный обед, нарезанный прямо для стола. Рядом новое утреннее кафе: к открытию меню кафе за полцены до воскресенья, 22 ноября, с понедельника по субботу с 8 до 14, по воскресеньям с 8 до 12. Детская рождественская вечеринка в субботу, 19 декабря, с 14 до 17: грот Санты, аниматоры и шведский стол с 15 до 16, 15 € за ребёнка, бронь обязательна. На Рождество четыре блюда за 60 €, один длинный стол, бронь обязательна. Потом экраны: матч с друзьями, семьёй или коллегами и бесплатный Wi-Fi за столиками. Потом бар: живая группа, свежие коктейли и приписка, что свадьбы, дни рождения и встречи старых друзей здесь тоже рады принять.</p>
+
+<p>Каждая карточка заканчивается одним действием: забронировать воскресенье, забронировать места, зарезервировать Рождество, спланировать праздник. Никому не нужно гадать, что делать дальше.</p>
+
+<p>Следом часы работы, под заголовком When to find us, когда нас найти. Три вкладки, потому что у Los Arcos три расписания: ресторан, бар и кафе. Выбираешь одну, и крупная строка слева говорит то, что важно прямо сейчас, по времени Эстепоны: открыто или откроется в 14:00, сегодня позже. Справа вся неделя, сегодняшний день отмечен красным. Ресторан закрыт в понедельник и вторник, работает с 14:00 до 21:00 со среды по пятницу, с 12:00 до 21:00 в субботу и с 12:00 до 20:00 в воскресенье. Маленькая зелёная точка в навигации делает то же самое с одного взгляда: пишет «кафе открыто», когда кафе открыто.</p>
+
+<p><img src="/images/journal/100-days-day-3/04-kitchen-hours.webp" alt="Раздел открытой кухни в светлой теме со стейком T-Bone и шестью пронумерованными блюдами, над часами работы в тёмной теме с вкладками ресторана, бара и кафе." />
+<em>Выберите блюдо, чтобы его увидеть. Выберите ресторан, бар или кафе, чтобы узнать, открыто ли сегодня.</em></p>
+
+<h2 id="место-для-игр-время-для-отдыха">место для игр, время для отдыха</h2>
+
+<p>Есть раздел для семей, потому что это немалая часть причины, по которой люди выбирают Los Arcos, а не соседнее заведение. Room to play. Time to relax. Место для игр, время для отдыха. Большие игровые площадки с горками и лазалками занимают детей, пока взрослые устраиваются поудобнее. Шесть коротких пунктов в две колонки: игровые площадки, детское меню, бесплатный Wi-Fi, еда навынос, блюда дня и частные мероприятия. Остальное рассказывают две фотографии: игровой комплекс с зелёными горками и ряд коктейлей, один ярко-голубой. Один и тот же день глазами двух поколений.</p>
+
+<p>Ниже одна фраза гостьи, Паулы Паркер: какое отличное место для семей или просто чтобы посидеть и отдохнуть. Я оставил одну цитату, крупно, без звёзд и без счётчика. Одна настоящая фраза работает лучше карусели.</p>
+
+<h2 id="оставьте-нам-место">оставьте нам место</h2>
+
+<p>Раздел бронирования называется Save us a seat, оставьте нам место. Слева три способа связаться с рестораном, и каждый нажимается: телефон +34 618 254 622, почта info@losarcosestepona.com и адрес, съезд 1057, улица Бенависта. Короткая строка говорит то, что сказал бы любой, кто держит ресторан: если нужно сегодня, быстрее всего позвонить.</p>
+
+<p>Справа форма заявки. Сначала повод, пятью кнопками: обед или ужин, Sunday Carvery, Рождество, детский праздник, торжество. Потом дата, время, которое предлагается только после выбора даты, и число гостей. Потом имя, телефон, почта и всё, что стоит знать кухне. Нажимаете кнопку, и открывается ваше почтовое приложение с уже написанной заявкой, остаётся только отправить.</p>
+
+<p>Концепт не притворяется системой бронирования. Аккаунт создавать не нужно, и форма прямо говорит, что бронь подтверждена, когда ресторан ответит. На этом побережье о столике до сих пор часто договариваются по телефону или ответом хозяина, и страница, которая обещала бы больше, говорила бы неправду.</p>
+
+<p><img src="/images/journal/100-days-day-3/05-booking.webp" alt="Раздел бронирования в тёмной теме: телефон, почта и адрес слева, форма заявки справа, рядом тот же раздел на телефоне в светлой теме." />
+<em>Выберите повод, дату, время и число гостей. Заявка открывается в вашей почте, готовая к отправке.</em></p>
+
+<h2 id="тот-же-вечер-на-телефоне">тот же вечер на телефоне</h2>
+
+<p>Большинство людей встретит эту страницу на телефоне. Кто-то припарковался у входа и хочет знать, работает ли кухня. Общий чат решает, где смотреть матч. Мама бронирует детскую рождественскую вечеринку за те пять минут, что у неё есть между двумя другими делами.</p>
+
+<p>На телефоне всё выстраивается в том же порядке. Заголовок, строка, фотография и название блюда на маленькой плашке поверх снимка. Кнопка бронирования остаётся в верхней панели, рядом с переключателем темы, там, куда большой палец дотягивается из любого места страницы.</p>
+
+<p>Меню открывается на весь экран. Семь ссылок, пронумерованных, как блюда: главная, о нас, меню, удобства, спорт в эфире, события, контакты. Внизу две вещи, которые нужны спешащему человеку: кнопка «забронировать столик» и номер телефона. В обоих светах всё работает одинаково.</p>
+
+<p><img src="/images/journal/100-days-day-3/06-mobile.webp" alt="Два телефона с разделом открытой кухни и стейком T-Bone, один в светлой теме, другой в тёмной." />
+<em>Открытая кухня на телефоне, в обеих темах.</em></p>
+
+<p><img src="/images/journal/100-days-day-3/07-menu.webp" alt="Три телефона: главная с закрытым меню, меню на весь экран в светлой теме и то же меню в тёмной, с кнопкой бронирования и номером телефона." />
+<em>Меню на весь экран: семь пронумерованных ссылок, кнопка бронирования и телефон, светлое или тёмное.</em></p>
+
+<h2 id="предложение-а-не-захват">предложение, а не захват</h2>
+
+<p>Los Arcos меня не нанимал. Это не их сайт, и ничто здесь не значит, что они его одобрили. У них уже есть сайт, телефон, который звонит, постоянные гости и воскресенье, когда всё занято. Блюда, цены, даты и слова гостьи на странице принадлежат им, а не мне. Я добавил порядок, два света и заявку на бронь, которая честно говорит, как подтверждается столик.</p>
+
+<p>У меня нет цифр ни по гостям, ни по выручке, и я не стану их выдумывать. Если кто-то в Los Arcos откроет концепт и ничего от меня не захочет, это полноценный финал. Если захотят, остальное практично: их собственные фотографии, их слова там, где сейчас стоят мои, актуальные часы работы, форма, которая уходит тому, кто отвечает за брони, и домен на их имя.</p>
+
+<p><img src="/images/journal/100-days-day-3/08-toggle.webp" alt="Раздел Los Arcos, разделённый между светлой и тёмной темой, с игровой площадкой, коктейлями и крупно набранной цитатой гостьи." />
+<em>Следует настройке системы, или выбираете вы. Одно касание, и выбор запоминается.</em></p>
+
+<h2 id="если-у-вашего-дела-много-дверей">если у вашего дела много дверей</h2>
+
+<p>Вы можете не держать ресторан. Многие дела на этом побережье больше похожи на Los Arcos, чем на компанию, которую можно описать одной фразой. Спортзал с кафе. Пляжный клуб с магазином. Школа с летними лагерями. Люди входят через разные двери, в разное время, по разным причинам, а сайт обычно пытается держать открытыми все двери сразу.</p>
+
+<p>Помогает порядок, а не новые блоки. Скажите в одной строке, что это за место. Покажите то, ради чего люди на самом деле приходят. Поставьте неделю туда, где её можно прочитать, а часы туда, где они отвечают на вопрос «а сейчас?». Пусть способ попасть к вам, телефон, форма, столик, честно говорит, что будет дальше. И пусть страница следует тому свету, в котором находится человек.</p>
+
+<p>Если это похоже на ваше дело, напишите мне с <a href="https://wellyington.github.io/ru/">основного сайта</a>. Скажите, что вы делаете и где, и я отвечу обычным языком. Короткая публичная версия сегодняшнего дня — это заметка: день третий из ста, главная для семейного ресторана в моём собственном городе, светлая или тёмная, выбирает гость. <a href="https://x.com/wellyington/status/2123056661220733019">Заметка здесь.</a> Завтра другое дело и ещё одна готовая страница.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>100 дней</li><li>кейс</li><li>ресторан</li><li>гостеприимство</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><a class="pager-cell rollable" href="/journal/ru/articles/mesto-dlya-tselogo-sezona/">
+      <span class="label">← предыдущая</span>
+      <span class="pager-title">место для целого сезона<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Читайте дальше</span>
+    <h2 id="more-title" class="h-section">ещё записи.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/ru/articles/mesto-dlya-tselogo-sezona/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" alt="Обложка кейса: концепт главной страницы Teatro Soho, светлая и тёмная версии рядом на компьютере и та же страница на телефоне, поверх афиши El Gran Gatsby." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 002</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">место для целого сезона<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/sait-do-slova-da/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" alt="Обложка кейса: сайт Pedro Sánchez Construcción на компьютере и на телефоне, со строкой Más de 25 años construyendo hogares." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 001</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">сайт до слова «да»<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

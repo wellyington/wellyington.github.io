@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/</loc>
+</url>
+<url>
 <loc>https://wellyington.github.io/journal/ru/about/</loc>
 </url>
 <url>
@@ -49,6 +52,9 @@
 <loc>https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/</loc>
 </url>
 <url>
+<loc>https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/</loc>
+</url>
+<url>
 <loc>https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/</loc>
 </url>
 <url>
@@ -59,5 +65,11 @@
 </url>
 <url>
 <loc>https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/</loc>
+</url>
+<url>
+<loc>https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/</loc>
+</url>
+<url>
+<loc>https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/</loc>
 </url>
 </urlset>

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diário" href="/journal/pt/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/">
+<!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="um lugar na mesa comprida" />
+<meta name="author" content="Wellyington" />
+<meta property="og:locale" content="pt" />
+<link rel="canonical" href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/" />
+<meta property="og:url" content="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/" />
+<meta property="og:site_name" content="Journal" />
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-19T22:30:00+01:00" />
+<meta property="article:modified_time" content="2026-11-19T22:30:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" />
+<meta name="twitter:title" content="um lugar na mesa comprida" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wellyington"},"dateModified":"2026-11-19T22:30:00+01:00","datePublished":"2026-11-19T22:30:00+01:00","headline":"um lugar na mesa comprida","image":"https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/"},"url":"https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>um lugar na mesa comprida — Diário · Wellyington</title>
+<meta name="description" content="Dia três de cem: um conceito de página inicial para o Los Arcos, um bar e restaurante familiar em Estepona, com o cardápio, a semana, um pedido de reserva e uma luz para o almoço e outra para a noite.">
+<meta property="og:description" content="Dia três de cem: um conceito de página inicial para o Los Arcos, um bar e restaurante familiar em Estepona, com o cardápio, a semana, um pedido de reserva e uma luz para o almoço e outra para a noite.">
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/pt/" class="bar-cell bar-brand" aria-label="Wellyington Diário">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diário</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Horário local e no que estou trabalhando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escrevendo</span><span>notas sobre lançar pequeno</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Ouvindo</span><span>Wellyington — demos de estúdio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/a-seat-at-the-long-table/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/un-sitio-en-la-mesa-larga/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/um-lugar-na-mesa-comprida/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/mesto-za-dlinnym-stolom/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Mudar para o tema escuro" data-label-dark="Mudar para o tema escuro" data-label-light="Mudar para o tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Escuro"></span><span class="theme-word" data-light="Claro" data-dark="Escuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menu" data-label-open="Abrir menu" data-label-close="Fechar menu" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegação" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegação">
+      <p class="label">Navegação</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/pt/" class="rollable">
+            <span class="roll"><span>diário.</span><span aria-hidden="true">diário.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/archive/" class="rollable">
+            <span class="roll"><span>arquivo.</span><span aria-hidden="true">arquivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/about/" class="rollable">
+            <span class="roll"><span>sobre.</span><span aria-hidden="true">sobre.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>site principal.</span><span aria-hidden="true">site principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/pt/articles/um-lugar-na-mesa-comprida/" class="menu-entry">
+            <span class="mono dim">Nº 003</span>
+            <span>um lugar na mesa comprida<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/espaco-para-a-temporada-inteira/" class="menu-entry">
+            <span class="mono dim">Nº 002</span>
+            <span>espaço para a temporada inteira<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/o-site-antes-do-sim/" class="menu-entry">
+            <span class="mono dim">Nº 001</span>
+            <span>o site antes do sim<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/a-seat-at-the-long-table/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/un-sitio-en-la-mesa-larga/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/um-lugar-na-mesa-comprida/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/mesto-za-dlinnym-stolom/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/pt/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/pt/" class="entry-cell entry-back rollable"><span class="roll"><span>← diário</span><span aria-hidden="true">← diário</span></span></a>
+    <span class="entry-cell mono">Nº 003</span>
+    <span class="entry-cell label">100 dias</span>
+    <time class="entry-cell" datetime="2026-11-19T22:30:00+01:00">19 de novembro de 2026</time>
+    <span class="entry-cell">11 min de leitura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">um lugar na mesa comprida<span class="dot">.</span></h1><p class="entry-lede">Dia três de cem: um conceito de página inicial para o Los Arcos, um bar e restaurante familiar em Estepona, com o cardápio, a semana, um pedido de reserva e uma luz para o almoço e outra para a noite.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Capa do caso de um conceito de site para o Los Arcos Estepona: a abertura dividida entre um tema creme e um tema carvão num computador, com a mesma página num celular." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 003</span>
+</div>
+<p class="caption label">Dia três. Um conceito de página inicial para o Los Arcos, nas duas luzes, em tela grande e no celular.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="nesta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">nesta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartilhar.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar link</span><span aria-hidden="true">copiar link</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fum-lugar-na-mesa-comprida%2F&text=um+lugar+na+mesa+comprida"><span class="roll"><span>publicar no X</span><span aria-hidden="true">publicar no X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fum-lugar-na-mesa-comprida%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>No dia 19 de novembro publiquei a terceira nota desta série: cem dias, cem negócios, cem sites, cada um aberto para quem quiser ver. O primeiro dia foi uma construtora familiar da Marina Alta que precisava de uma primeira página clara, alguma coisa para olhar antes de um contrato. <a href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/">Essa página está aqui.</a> O segundo, um teatro em Málaga que já tinha uma temporada cheia e precisava de uma ordem que uma pessoa conseguisse usar. <a href="https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/">Esse está aqui.</a> Hoje a caminhada é mais curta.</p>
+
+<p>O Los Arcos é um bar e restaurante na Calle Benavista, perto da saída 1057, em Estepona. Eu trabalho em Estepona, então este é o primeiro negócio da série na minha própria cidade. Isso muda muito pouco o trabalho e bastante o cuidado. Aqui as pessoas vão abrir a página e saber na hora se ela soa como o lugar. O conceito abre aqui: <a href="https://wellyington.github.io/challenge/day3/">Los Arcos, dia três</a>.</p>
+
+<p>Ninguém no Los Arcos me pediu isso. Não é uma encomenda e não é o site oficial deles. Na página estão o nome, os pratos e a semana deles. O conceito é meu, e por enquanto mora no meu próprio endereço, que é o lugar honesto para um trabalho que ninguém adotou ainda. Ninguém me disse que alguém de lá já viu.</p>
+
+<h2 id="um-lugar-com-mais-de-um-motivo-para-ir">um lugar com mais de um motivo para ir</h2>
+
+<p>A construtora tinha um único trabalho para explicar, e o teatro tinha uma temporada. Um bar e restaurante familiar tem algo menos arrumado. As pessoas vêm por motivos diferentes, em horários diferentes, muitas vezes no mesmo grupo.</p>
+
+<p>Alguém quer o assado de domingo. Outra pessoa quer ver o jogo numa tela grande. Um casal quer um coquetel e a banda. Um pai quer sentar por uma hora enquanto as crianças correm num lugar seguro. Numa manhã de semana, alguém só quer café e panquecas antes do trabalho. O Los Arcos faz tudo isso debaixo do mesmo teto: cozinha aberta, o Sunday Carvery, café da manhã, esporte ao vivo, música ao vivo, áreas de brincar e comida para viagem.</p>
+
+<p>Uma página inicial que fala de tudo no mesmo volume não diz nada. Uma que escolhe um único motivo deixa de fora metade das pessoas que já frequentam. Então o trabalho era uma ordem. Primeiro, que tipo de lugar é. Depois, o que se come. Em seguida, o que tem nesta semana. Depois, quando está aberto, por que funciona para famílias e como conseguir uma mesa. Tudo o que um cliente fiel já sabe, na ordem em que alguém que chega pela primeira vez precisa.</p>
+
+<h2 id="comida-boa-junta-as-pessoas">comida boa junta as pessoas</h2>
+
+<p>A abertura mantém a frase da casa, porque é boa: good food brings people together, comida boa junta as pessoas. Ela aparece numa serifa alta e estreita, com a segunda metade em itálico e no vermelho da casa. Em cima fica o logotipo, os arcos com as figurinhas brincando. Embaixo, um único parágrafo: um bar e restaurante de estilo familiar, comida caseira de uma cozinha aberta, um Sunday Carvery tradicional, coquetéis feitos na hora, uma banda ao vivo para cantar junto e muito espaço para as crianças brincarem.</p>
+
+<p>Depois, dois botões: reservar uma mesa ou ver a programação. Abaixo deles, três informações que de outro jeito você teria que perguntar: o Sunday Carvery a € 15,95, o café da manhã a partir das 8h de segunda a sábado, e o bar e restaurante de quarta a domingo. Uma faixa vermelha atravessa o pé da tela com os motivos que levam as pessoas até lá, um depois do outro: música ao vivo, coquetéis, áreas de brincar, comida para viagem e a frase sobre comida boa.</p>
+
+<p>À direita, uma foto grande de uma travessa: frango fatiado, costela, linguiças, anéis de cebola, um pote de feijão, um potinho de molho. Eu queria que a primeira tela parecesse uma mesa, não um folheto.</p>
+
+<p><img src="/images/journal/100-days-day-3/01-split.webp" alt="A abertura do Los Arcos dividida na diagonal entre um tema claro creme e um tema escuro carvão, com o logotipo, a frase Good food brings people together e uma travessa de carnes grelhadas." />
+<em>A primeira tela, cortada em duas. A mesma abertura de dia e de noite.</em></p>
+
+<h2 id="duas-luzes-um-restaurante">duas luzes, um restaurante</h2>
+
+<p>Esse corte na diagonal é o centro do conceito. A página tem dois temas, e o mesmo restaurante precisa parecer certo nos dois.</p>
+
+<p>O claro é creme quente, parecido com uma toalha de mesa, com o vermelho da marca para tudo o que dá para tocar e para as palavras em itálico. Ele se lê fácil ao meio-dia num terraço, com sol na tela. O escuro é carvão, quase preto, com o mesmo vermelho. Fica mais confortável às dez da noite, quando alguém confere se a cozinha ainda está aberta ou manda a página para um amigo do sofá.</p>
+
+<p>Se o seu celular já está no modo escuro, a página abre escura. Se está no claro, abre clara. Um botãozinho na navegação troca o tema, e a página lembra da sua escolha na próxima visita. Os cartões, as fotos e o vermelho não mudam. Só muda a sala em volta.</p>
+
+<p><img src="/images/journal/100-days-day-3/02-light.webp" alt="A grade de What's on no tema claro: o Sunday Carvery num cartão vermelho, o novo café da manhã pela metade do preço, a festa de Natal das crianças num cartão preto e um celular com a área para famílias." />
+<em>O tema claro: creme quente, vermelho da marca e a semana numa grade.</em></p>
+
+<p><img src="/images/journal/100-days-day-3/03-dark.webp" alt="A mesma grade de What's on no tema escuro, carvão com vermelho, ao lado de um celular no modo escuro." />
+<em>O tema escuro. Ele segue o aparelho até você escolher, e o botão lembra da escolha.</em></p>
+
+<h2 id="direto-da-cozinha-aberta">direto da cozinha aberta</h2>
+
+<p>Um site de restaurante é aberto para ver a comida, então a comida vem em segundo lugar, logo depois das boas-vindas. O título diz isso sem rodeio: from the open kitchen, direto da cozinha aberta. Uma linha embaixo explica que são pratos tradicionais, caseiros e preparados na hora, onde dá para ver.</p>
+
+<p>Depois, uma lista curta de seis pratos, numerados como num cardápio: T-Bone Steak, peito de frango aberto, salmão com batatas assadas com pimenta, chili com carne, linguiça com purê e bolo de chocolate. Cada um tem uma etiqueta pequena: grelha, peixe, da casa, clássico, sobremesa. Você escolhe um e a foto aparece ao lado da lista. O T-Bone chega numa tábua de madeira, com uma rodela de manteiga de ervas derretendo por cima.</p>
+
+<p>Embaixo da lista, uma frase cita o resto do cardápio, para ninguém achar que esses seis são tudo: as costelas lendárias, o bacalhau empanado na cerveja, o contrafilé, hambúrgueres, pizza, saladas da casa e Caesar, um cardápio infantil, um quadro de sugestões no bar e comida para viagem. Eu não comi o cardápio inteiro, então não vou descrever sabores. A página descreve os pratos do jeito que o Los Arcos descreve, e coloca as fotos onde uma pessoa com fome vai olhar.</p>
+
+<h2 id="a-programação-e-quando-nos-encontrar">a programação, e quando nos encontrar</h2>
+
+<p>Depois vem a semana, porque um bar assim vive dela. O título é What’s on, a programação, e a grade é sincera sobre reservas: recomendadas para algumas coisas, indispensáveis para outras.</p>
+
+<p>O Sunday Carvery fica com o cartão vermelho: todo domingo, € 15,95, um almoço de domingo tradicional, fatiado para a mesa. Ao lado, o novo café da manhã, com metade do preço no cardápio do café até domingo, 22 de novembro, por causa da inauguração, de segunda a sábado das 8h às 14h e aos domingos das 8h ao meio-dia. A festa de Natal das crianças, no sábado, 19 de dezembro, das 14h às 17h, tem a gruta do Papai Noel, recreação e um bufê das 15h às 16h, a € 15 por criança, com reserva indispensável. O dia de Natal tem quatro pratos por € 60, uma mesa comprida, com reserva obrigatória. Depois, as telas, para ver o jogo com amigos, família ou colegas, e wi-fi grátis nas mesas. Depois, o bar, com banda ao vivo, coquetéis feitos na hora e um aviso de que casamentos, aniversários e reencontros são bem-vindos.</p>
+
+<p>Cada cartão termina numa única ação: reservar o domingo, reservar vagas, reservar o Natal, planejar uma comemoração. Ninguém precisa adivinhar o que fazer em seguida.</p>
+
+<p>O horário vem logo depois, sob When to find us, quando nos encontrar. Três abas, porque o Los Arcos tem três horários: restaurante, bar e café. Você escolhe uma e a linha grande à esquerda diz o que importa agora, no horário de Estepona: aberto, ou abre às 14:00, mais tarde hoje. À direita fica a semana inteira, com o dia de hoje marcado em vermelho. O restaurante fecha segunda e terça, abre das 14:00 às 21:00 de quarta a sexta, das 12:00 às 21:00 no sábado e das 12:00 às 20:00 no domingo. O pontinho verde na navegação faz o mesmo num relance: diz café aberto quando o café está aberto.</p>
+
+<p><img src="/images/journal/100-days-day-3/04-kitchen-hours.webp" alt="A seção da cozinha aberta no tema claro, com um T-Bone e seis pratos numerados, acima do horário no tema escuro com abas para restaurante, bar e café." />
+<em>Escolha um prato para ver. Escolha restaurante, bar ou café para saber se abre hoje.</em></p>
+
+<h2 id="espaço-para-brincar-tempo-para-relaxar">espaço para brincar, tempo para relaxar</h2>
+
+<p>Tem uma seção para famílias, porque esse é um bom pedaço do motivo pelo qual as pessoas escolhem o Los Arcos e não o lugar ao lado. Room to play. Time to relax. Espaço para brincar, tempo para relaxar. Áreas de brincar grandes, com brinquedos, mantêm as crianças ocupadas enquanto os adultos se acomodam. Seis pontos curtos em duas colunas: áreas de brincar, cardápio infantil, wi-fi grátis, comida para viagem, sugestões do dia e eventos privados. Duas fotos contam o resto: o parquinho com seus escorregadores verdes e uma fileira de coquetéis, um deles azul forte. É a mesma tarde vista por duas gerações.</p>
+
+<p>Embaixo, uma frase de uma cliente, Paula Parker: que lugar ótimo para famílias, ou até só para sentar e relaxar. Deixei uma única citação, grande, sem estrelas e sem contador. Uma frase de verdade faz mais do que um carrossel.</p>
+
+<h2 id="guarde-um-lugar-para-nós">guarde um lugar para nós</h2>
+
+<p>A seção de reservas se chama Save us a seat, guarde um lugar para nós. À esquerda, os três jeitos de falar com o restaurante, todos tocáveis: o telefone, +34 618 254 622; o e-mail, info@losarcosestepona.com; e o endereço, saída 1057, Calle Benavista. Uma linha curta diz o que qualquer pessoa que tem restaurante diria: para hoje, o mais rápido é ligar.</p>
+
+<p>À direita, o formulário de pedido. Primeiro a ocasião, em cinco botões: almoço ou jantar, Sunday Carvery, dia de Natal, festa infantil, comemoração. Depois a data, um horário que só aparece quando já existe uma data, e o número de pessoas. Depois nome, telefone, e-mail e qualquer coisa que a cozinha precise saber. Você toca no botão e o seu aplicativo de e-mail abre com o pedido já escrito, pronto para enviar.</p>
+
+<p>O conceito não finge ser um sistema de reservas. Não tem conta para criar, e o formulário diz com todas as letras que a reserva está confirmada quando o restaurante responde. Nesta costa, uma mesa ainda é combinada muitas vezes por telefone ou por uma resposta do dono, e uma página que prometesse mais do que isso estaria mentindo.</p>
+
+<p><img src="/images/journal/100-days-day-3/05-booking.webp" alt="A seção de reservas no tema escuro, com telefone, e-mail e endereço à esquerda e o formulário à direita, ao lado da mesma seção num celular no tema claro." />
+<em>Escolha a ocasião, a data, o horário e o número de pessoas. O pedido abre no seu e-mail, pronto para enviar.</em></p>
+
+<h2 id="a-mesma-noite-no-celular">a mesma noite no celular</h2>
+
+<p>A maioria das pessoas vai conhecer esta página pelo celular. Alguém estacionado na porta quer saber se a cozinha está aberta. Um grupo de WhatsApp está decidindo onde assistir ao jogo. Uma mãe reserva a festa de Natal das crianças nos cinco minutos que tem entre duas outras coisas.</p>
+
+<p>No celular tudo se empilha na mesma ordem. O título, a frase, a foto, e o nome do prato numa etiqueta pequena sobre a imagem. O botão de reservar fica na barra de cima, ao lado da troca de tema, onde o polegar alcança de qualquer ponto da página.</p>
+
+<p>O menu abre em tela cheia. Sete links, numerados como os pratos: início, sobre, cardápio, estrutura, esporte ao vivo, eventos, contato. Embaixo, as duas coisas que alguém com pressa quer: um botão de reservar mesa e o número de telefone. Funciona igual nas duas luzes.</p>
+
+<p><img src="/images/journal/100-days-day-3/06-mobile.webp" alt="Dois celulares com a seção da cozinha aberta e o T-Bone, um no tema claro e outro no escuro." />
+<em>A cozinha aberta no celular, nos dois temas.</em></p>
+
+<p><img src="/images/journal/100-days-day-3/07-menu.webp" alt="Três celulares: a página inicial com o menu fechado, o menu em tela cheia no tema claro e o mesmo menu no escuro, com um botão de reservar mesa e o telefone." />
+<em>O menu em tela cheia: sete links numerados, um botão de reserva e o telefone, claro ou escuro.</em></p>
+
+<h2 id="uma-proposta-não-uma-tomada-de-controle">uma proposta, não uma tomada de controle</h2>
+
+<p>O Los Arcos não me contratou. Este não é o site deles, e nada aqui quer dizer que eles aprovaram. Eles já têm um site, um telefone que toca, clientes fiéis e um domingo que lota. Os pratos, os preços, as datas e as palavras da cliente são deles, não meus. O que eu acrescentei foi uma ordem, duas luzes e um pedido de reserva que diz a verdade sobre como uma mesa é confirmada.</p>
+
+<p>Não tenho números de couverts nem de faturamento, e não vou inventar nenhum. Se alguém do Los Arcos abrir o conceito e não quiser nada de mim, esse é um final completo. Se quiserem, o resto é prático: as fotos deles, as palavras deles onde hoje estão as minhas, o horário sempre atualizado, o formulário enviado para quem cuida das reservas e um domínio no nome deles.</p>
+
+<p><img src="/images/journal/100-days-day-3/08-toggle.webp" alt="Uma seção do Los Arcos dividida entre o tema claro e o escuro, com a área de brincar, coquetéis e a citação de uma cliente em letras grandes." />
+<em>Segue a configuração do seu sistema, ou você escolhe. Um toque, e a escolha fica guardada.</em></p>
+
+<h2 id="se-o-seu-negócio-tem-muitas-portas">se o seu negócio tem muitas portas</h2>
+
+<p>Pode ser que você não tenha um restaurante. Muitos negócios desta costa se parecem mais com o Los Arcos do que com uma empresa de uma frase só. Uma academia com café. Um beach club com loja. Uma escola com colônia de férias. As pessoas entram por portas diferentes, em horários diferentes, por motivos diferentes, e o site normalmente tenta manter todas as portas abertas ao mesmo tempo.</p>
+
+<p>O que ajuda é uma ordem, não mais blocos. Diga o que o lugar é numa linha. Mostre aquilo que faz as pessoas virem de verdade. Coloque a semana onde dá para ler e o horário onde ele responde “agora?”. Faça com que o jeito de entrar, um telefone, um formulário, uma mesa, seja honesto sobre o que acontece depois. E deixe a página seguir a luz em que a pessoa está.</p>
+
+<p>Se isso parece com o seu negócio, escreva para mim pelo <a href="https://wellyington.github.io/pt/">site principal</a>. Diga o que você faz e onde, e eu respondo em linguagem comum. A versão curta de hoje é a nota: dia três de cem, uma página inicial para um restaurante familiar na minha própria cidade, claro ou escuro, quem visita é que escolhe. <a href="https://x.com/wellyington/status/2123056661220733019">A nota está aqui.</a> Amanhã é outro negócio, e outra página pronta.</p>
+
+      <p class="fin" aria-label="Fim da entrada">fim.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">arquivado em</span>
+    <ul class="chips"><li>100 dias</li><li>caso real</li><li>restaurante</li><li>hospitalidade</li></ul>
+  </div><nav class="rail pager" aria-label="mais entradas."><a class="pager-cell rollable" href="/journal/pt/articles/espaco-para-a-temporada-inteira/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">espaço para a temporada inteira<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">a entrada mais recente.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Continue lendo</span>
+    <h2 id="more-title" class="h-section">mais entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/pt/articles/espaco-para-a-temporada-inteira/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" alt="Capa do caso: um conceito de página inicial do Teatro Soho, com o tema claro e o escuro lado a lado num computador e a mesma página num celular, sobre o cartaz de El Gran Gatsby." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 002</span>
+</div>
+<span class="label">100 dias · 19.11.26</span><span class="card-title">espaço para a temporada inteira<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/o-site-antes-do-sim/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" alt="Capa do caso: o site da Pedro Sánchez Construcción num computador e num celular, com a frase Más de 25 años construyendo hogares." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 001</span>
+</div>
+<span class="label">100 dias · 19.11.26</span><span class="card-title">o site antes do sim<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independente por design · Escrito em público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/pt/" class="rollable"><span class="roll"><span>diário</span><span aria-hidden="true">diário</span></span>
+    </a><a href="/journal/pt/archive/" class="rollable"><span class="roll"><span>arquivo</span><span aria-hidden="true">arquivo</span></span>
+    </a><a href="/journal/pt/about/" class="rollable"><span class="roll"><span>sobre</span><span aria-hidden="true">sobre</span></span>
+    </a><a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>site principal</span><span aria-hidden="true">site principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">em outros lugares</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/pt/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escreva para mim</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Eu leio todas as respostas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Composto em Space Grotesk · Feito com Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
