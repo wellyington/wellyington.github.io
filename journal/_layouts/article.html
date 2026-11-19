@@ -20,7 +20,7 @@ layout: default
 
   <div class="rail entry-bar">
     <a href="{{ home_url | relative_url }}" class="entry-cell entry-back rollable">{% include roll.html text=T.back %}</a>
-    <span class="entry-cell mono">No. {% include entry-no.html n=no %}</span>
+    <span class="entry-cell mono">{{ T.col_no }} {% include entry-no.html n=no %}</span>
     <span class="entry-cell label">{{ page.category | default: "notes" }}</span>
     <time class="entry-cell" datetime="{{ page.date | date_to_xmlschema }}">{% include date.html d=page.date %}</time>
     <span class="entry-cell">{% include read-time.html content=content %} {{ T.read }}</span>

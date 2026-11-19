@@ -1,4 +1,5 @@
 # Every string the theme prints, per language.
+# `hreflang` (optional) overrides the code in <html lang> and hreflang tags.
 # Add a language: copy a block, translate it, add the code to
 # `languages:` in _config.yml and create a matching folder.
 
@@ -160,3 +161,163 @@ es:
     colophon: Compuesto en Space Grotesk · Hecho con Jekyll
     clocks_sr: Hora local y en qué estoy trabajando.
     also_in: También en
+
+pt:
+  code: pt
+  hreflang: pt-BR
+  label: PT
+  name: Português
+  locale: pt_BR
+  title: Diário
+  description: >-
+    Notas de campo sobre desenvolvimento, design e estratégia, escritas no
+    litoral e sem ruído desnecessário.
+  headline: "notas que funcionam"
+  kicker: "Notas de campo"
+  intro: >-
+    Notas de campo sobre desenvolvimento, design e estratégia. Escritas no
+    litoral e publicadas quando são úteis: **simples, rápidas e sem ruído
+    desnecessário.**
+  written_from: "Estepona, ES"
+  strip_text: "escrito por mim"
+  badge_text: "DIÁRIO &nbsp;•&nbsp; POR MIM &nbsp;•&nbsp; DIÁRIO &nbsp;•&nbsp; POR MIM &nbsp;•&nbsp;"
+  footer_tagline: "Independente por design · Escrito em público"
+  of: "de"                 # "12 de novembro de 2026"
+  months: [janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro]
+  months_short: [jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez]
+  ui:
+    skip: Pular para o conteúdo
+    menu_open: Abrir menu
+    menu_close: Fechar menu
+    navigation: Navegação
+    latest_entries: Últimas entradas
+    rss: Feed RSS →
+    theme_light: Claro
+    theme_dark: Escuro
+    theme_to_dark: Mudar para o tema escuro
+    theme_to_light: Mudar para o tema claro
+    language: Idioma
+    entries: Entradas
+    last_entry: Última entrada
+    written_from: Escrito em
+    latest_label: "01 / Mais recente"
+    latest_title: "mais recente."
+    index_label: "02 / Índice"
+    index_title: "todas as entradas."
+    all: Todas
+    filter_label: Filtrar entradas por categoria
+    col_no: "Nº"
+    col_date: Data
+    col_title: Título
+    col_category: Categoria
+    col_read: Leitura
+    empty: Ainda não há nada aqui.
+    sub_label: "03 / Assine"
+    sub_title: "quer a próxima?"
+    by_email: por e-mail
+    email_subject: Assinatura
+    read_entry: ler entrada
+    min: min
+    read: de leitura
+    back: "← diário"
+    on_this_page: "nesta página."
+    share: "compartilhar."
+    copy_link: copiar link
+    copied: "copiado."
+    post_on_x: publicar no X
+    fin: "fim."
+    fin_label: Fim da entrada
+    filed_under: arquivado em
+    previous: "← anterior"
+    next: "próxima →"
+    first_entry: "a primeira entrada."
+    latest_entry: "a entrada mais recente."
+    keep_reading: Continue lendo
+    more_entries: "mais entradas."
+    archive_title: "arquivo."
+    archive_meta: "entradas · desde"
+    elsewhere: em outros lugares
+    write_back: escreva para mim
+    replies: Eu leio todas as respostas. Todas.
+    colophon: Composto em Space Grotesk · Feito com Jekyll
+    clocks_sr: Horário local e no que estou trabalhando.
+    also_in: Também em
+
+ru:
+  code: ru
+  label: RU
+  name: Русский
+  locale: ru_RU
+  title: Журнал
+  description: >-
+    Рабочие заметки о разработке, дизайне и стратегии — написанные на
+    побережье и без лишнего шума.
+  headline: "заметки, которые работают"
+  kicker: "Рабочие заметки"
+  intro: >-
+    Рабочие заметки о разработке, дизайне и стратегии. Пишу на побережье и
+    публикую, когда есть польза: **просто, быстро и без лишнего шума.**
+  written_from: "Эстепона, Испания"
+  strip_text: "написано мной"
+  badge_text: "ЖУРНАЛ &nbsp;•&nbsp; МОЙ &nbsp;•&nbsp; ЖУРНАЛ &nbsp;•&nbsp; МОЙ &nbsp;•&nbsp;"
+  footer_tagline: "Независимый дизайн · Пишу открыто"
+  # Genitive month names: "12 ноября 2026"
+  months: [января, февраля, марта, апреля, мая, июня, июля, августа, сентября, октября, ноября, декабря]
+  months_short: [янв., февр., марта, апр., мая, июня, июля, авг., сент., окт., нояб., дек.]
+  ui:
+    skip: Перейти к содержанию
+    menu_open: Открыть меню
+    menu_close: Закрыть меню
+    navigation: Навигация
+    latest_entries: Последние записи
+    rss: RSS-лента →
+    theme_light: Светлая
+    theme_dark: Тёмная
+    theme_to_dark: Включить тёмную тему
+    theme_to_light: Включить светлую тему
+    language: Язык
+    entries: Записи
+    last_entry: Последняя запись
+    written_from: Откуда пишу
+    latest_label: "01 / Новое"
+    latest_title: "новое."
+    index_label: "02 / Указатель"
+    index_title: "все записи."
+    all: Все
+    filter_label: Фильтр записей по рубрике
+    col_no: "№"
+    col_date: Дата
+    col_title: Заголовок
+    col_category: Рубрика
+    col_read: Чтение
+    empty: Здесь пока ничего нет.
+    sub_label: "03 / Подписка"
+    sub_title: "хотите следующую?"
+    by_email: по почте
+    email_subject: Подписка
+    read_entry: читать запись
+    min: мин
+    read: чтения
+    back: "← журнал"
+    on_this_page: "на этой странице."
+    share: "поделиться."
+    copy_link: скопировать ссылку
+    copied: "скопировано."
+    post_on_x: опубликовать в X
+    fin: "конец."
+    fin_label: Конец записи
+    filed_under: рубрики
+    previous: "← предыдущая"
+    next: "следующая →"
+    first_entry: "первая запись."
+    latest_entry: "последняя запись."
+    keep_reading: Читайте дальше
+    more_entries: "ещё записи."
+    archive_title: "архив."
+    archive_meta: "записей · с"
+    elsewhere: в других местах
+    write_back: напишите мне
+    replies: Я читаю все ответы. Каждый.
+    colophon: Набрано Space Grotesk · Собрано на Jekyll
+    clocks_sr: Местное время и над чем я сейчас работаю.
+    also_in: Также на

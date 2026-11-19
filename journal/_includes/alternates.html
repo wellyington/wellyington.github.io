@@ -18,12 +18,12 @@
   {%- assign A = site.data.languages[code] -%}
   {%- if include.mode == "head" -%}
     {%- if has_alt %}
-<link rel="alternate" hreflang="{{ code }}" href="{{ alt_url | absolute_url }}">
+<link rel="alternate" hreflang="{{ A.hreflang | default: code }}" href="{{ alt_url | absolute_url }}">
     {%- if code == site.default_lang %}
 <link rel="alternate" hreflang="x-default" href="{{ alt_url | absolute_url }}">
     {%- endif -%}
     {%- endif -%}
   {%- else -%}
-  <a href="{{ alt_url | relative_url }}" hreflang="{{ code }}" lang="{{ code }}" data-set-lang="{{ code }}"{% if code == lang %} aria-current="true"{% endif %} title="{{ A.name }}">{{ A.label }}</a>
+  <a href="{{ alt_url | relative_url }}" hreflang="{{ A.hreflang | default: code }}" lang="{{ A.hreflang | default: code }}" data-set-lang="{{ code }}"{% if code == lang %} aria-current="true"{% endif %} title="{{ A.name }}">{{ A.label }}</a>
   {%- endif -%}
 {%- endfor -%}

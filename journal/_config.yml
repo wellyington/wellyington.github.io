@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────────────────────
-#  Wellyington — Journal  (EN / ES)
+#  Wellyington — Journal  (EN / ES / PT / RU)
 #  Built by .github/workflows/pages.yml and served at /journal/.
 #  The rest of the repo stays a static site; this folder is the
 #  only part that Jekyll touches.
@@ -13,7 +13,7 @@ timezone: Europe/Madrid
 permalink: pretty            # /en/articles/slug/  instead of slug.html
 
 default_lang: en
-languages: [en, es]          # strings live in _data/languages.yml
+languages: [en, es, pt, ru]          # strings live in _data/languages.yml
 
 markdown: kramdown
 kramdown:
@@ -49,9 +49,17 @@ defaults:
     values: { lang: en, layout: page }
   - scope: { path: "es" }
     values: { lang: es, layout: page }
+  - scope: { path: "pt" }
+    values: { lang: pt, layout: page }
+  - scope: { path: "ru" }
+    values: { lang: ru, layout: page }
   - scope: { path: "en/articles" }
     values: { layout: article }
   - scope: { path: "es/articles" }
+    values: { layout: article }
+  - scope: { path: "pt/articles" }
+    values: { layout: article }
+  - scope: { path: "ru/articles" }
     values: { layout: article }
 
 exclude:

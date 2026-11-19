@@ -1,6 +1,6 @@
 {%- include setup.html -%}
 <!doctype html>
-<html lang="{{ lang }}" data-theme="light">
+<html lang="{{ L.hreflang | default: lang }}" data-theme="light">
 <head>
   {% include head.html %}
 </head>

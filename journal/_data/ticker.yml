@@ -12,3 +12,9 @@ now:
   es:
     - { label: "Escribiendo",  value: "notas sobre lanzar en pequeño" }
     - { label: "Escuchando",   value: "Wellyington — maquetas de estudio" }
+  pt:
+    - { label: "Escrevendo",  value: "notas sobre lançar pequeno" }
+    - { label: "Ouvindo",     value: "Wellyington — demos de estúdio" }
+  ru:
+    - { label: "Пишу",    value: "заметки о маленьких запусках" }
+    - { label: "Слушаю",  value: "Wellyington — студийные черновики" }

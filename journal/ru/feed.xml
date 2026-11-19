@@ -1,0 +1,27 @@
+---
+layout: null
+ref: feed
+permalink: /ru/feed.xml
+---
+{%- include setup.html -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ lang }}">
+  <title>{{ site.author }} — {{ L.title }}</title>
+  <subtitle>{{ L.description | strip | xml_escape }}</subtitle>
+  <link href="{{ page.url | absolute_url }}" rel="self"/>
+  <link href="{{ home_url | absolute_url }}"/>
+  <id>{{ home_url | absolute_url }}</id>
+  <updated>{% if articles.first %}{{ articles.first.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}</updated>
+  <author><name>{{ site.author }}</name></author>
+  {%- for a in articles limit: 20 %}
+  <entry>
+    <title>{{ a.title | xml_escape }}</title>
+    <link href="{{ a.url | absolute_url }}"/>
+    <id>{{ a.url | absolute_url }}</id>
+    <updated>{{ a.date | date_to_xmlschema }}</updated>
+    {%- if a.category %}<category term="{{ a.category | xml_escape }}"/>{% endif %}
+    <summary>{{ a.lede | default: a.description | strip_html | xml_escape }}</summary>
+    <content type="html">{{ a.content | markdownify | xml_escape }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

@@ -1,6 +1,6 @@
 # Journal · /journal/
 
-Bilingual (EN / ES) Jekyll journal, published at
+Multilingual (EN / ES / PT / RU) Jekyll journal, published at
 https://wellyington.github.io/journal/. It uses the main site's design
 system: ice + ink, Space Grotesk, a visible grid, and lowercase titles
 that end with a period.
@@ -17,9 +17,11 @@ journal/
 │   ├── navigation.yml   menu + footer links per language
 │   └── ticker.yml       header clocks + "now writing" lines
 ├── _includes/  _layouts/  _sass/  assets/
-├── index.html           /journal/ → redirects to /en/ or /es/
+├── index.html           /journal/ → redirects to the reader's language
 ├── en/  index.html · archive.md · about.md · feed.xml · articles/*.md
-└── es/  index.html · archive.md · about.md · feed.xml · articles/*.md
+├── es/  …same
+├── pt/  …same (Brazilian Portuguese, hreflang pt-BR, like the main site)
+└── ru/  …same (Cyrillic falls back to Manrope from /fonts/)
 ```
 
 ## Write an article
@@ -46,7 +48,8 @@ image_caption: …
   language when the `ref` matches. Otherwise it goes to that language's home page.
   Matching pairs also get `hreflang` tags for search engines.
 - Entries are numbered per language: the oldest is 001.
-- Each language has an Atom feed: `/journal/en/feed.xml`, `/journal/es/feed.xml`.
+- Each language has an Atom feed at `/journal/<lang>/feed.xml`.
+- Russian slugs are transliterated (`vidimaya-setka`) to keep URLs readable.
 
 ## Run locally
 
