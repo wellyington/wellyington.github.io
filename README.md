@@ -1,6 +1,6 @@
 # Wellyington
 
-Personal site of Wellington Almeida (Wellyington), an independent web developer, designer and digital strategist based on the Costa del Sol. GitHub Pages publishes this repository from `main` through `.github/workflows/pages.yml`:
+Personal site of Wellington Almeida (Wellyington), an independent web developer, designer and digital strategist based on the Costa del Sol. GitHub Pages serves this repository from the root of `main`:
 
 https://wellyington.github.io/
 
@@ -14,7 +14,7 @@ python3 -m http.server 4173
 
 Then open http://localhost:4173/.
 
-The pages are generated. English stays at `/`. Spanish, Brazilian Portuguese and Russian are static pages at `/es/`, `/pt/` and `/ru/`. Copy lives in `locales/*.json`. Layout lives in `templates/index.html`. The workflow copies the static site as-is (it does not run `npm run build`), so the generated HTML is still committed.
+The pages are generated. English stays at `/`. Spanish, Brazilian Portuguese and Russian are static pages at `/es/`, `/pt/` and `/ru/`. Copy lives in `locales/*.json`. Layout lives in `templates/index.html`. GitHub Pages does not run a build, so the generated HTML is committed.
 
 ```bash
 npm install
@@ -29,4 +29,4 @@ Space Grotesk (Latin) and Manrope (Cyrillic, only downloaded when Cyrillic is on
 
 ## Journal
 
-`/journal/` is a multilingual (EN / ES / PT / RU) Jekyll site in `journal/`. The workflow builds it and publishes it next to the static pages. See `journal/README.md`.
+`/journal/` is a multilingual (EN / ES / PT / RU) Jekyll site. Edit the source in `journal-src/`. On every push to `main`, `.github/workflows/pages.yml` builds it and commits the finished pages into `journal/`. Don't edit `journal/` by hand: the next build overwrites it. See `journal-src/README.md`.
