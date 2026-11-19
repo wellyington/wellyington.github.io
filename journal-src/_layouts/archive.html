@@ -4,10 +4,16 @@ layout: default
 {%- include setup.html -%}
 <section class="page" aria-labelledby="archive-title">
   <header class="rail entry-head entry-head--page">
+    {%- if total > 0 -%}
     <p class="label">{{ total }} {{ T.archive_meta }} {{ articles.last.date | date: "%Y" }}</p>
+    {%- endif -%}
     <h1 id="archive-title" class="display">{{ T.archive_title }}</h1>
+    {%- if total == 0 -%}
+    <p class="entry-lede">{{ T.empty }}</p>
+    {%- endif -%}
   </header>
 
+  {%- if total > 0 -%}
   {%- assign years = articles | group_by_exp: "p", "p.date | date: '%Y'" -%}
   {%- assign offset = 0 -%}
   {%- for y in years -%}
@@ -22,4 +28,5 @@ layout: default
   </div>
   {%- assign offset = offset | plus: y.size -%}
   {%- endfor -%}
+  {%- endif -%}
 </section>

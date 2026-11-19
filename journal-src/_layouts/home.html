@@ -96,6 +96,16 @@ layout: default
     <p class="index-empty" hidden data-empty>{{ T.empty }}</p>
   </div>
 </section>
+{%- else -%}
+<section class="section" aria-labelledby="index-title">
+  <div class="rail section-head">
+    <span class="label">{{ T.index_label }}</span>
+    <h2 id="index-title" class="h-section">{{ T.index_title }}</h2>
+  </div>
+  <div class="rail">
+    <p class="index-empty">{{ T.empty }}</p>
+  </div>
+</section>
 {%- endif -%}
 
 <!-- ── 05 · subscribe ────────────────────────────────────────── -->

@@ -53,17 +53,33 @@ jobs:
         run: |
           set -e
           for l in en es pt ru; do
-            n=$(ls journal-src/$l/articles | wc -l)
+            # An empty journal has no articles directory (git does not keep it).
+            if [ -d "journal-src/$l/articles" ]; then
+              n=$(find "journal-src/$l/articles" -maxdepth 1 -type f -name '*.md' | wc -l)
+            else
+              n=0
+            fi
+            n=$((n))
             rows=$(grep -o 'class="row"' journal/$l/index.html | wc -l)
+            rows=$((rows))
             echo "$l: $n articles, $rows rows on the index"
             grep -qi '<!doctype html>' journal/$l/index.html || { echo "::error::$l index is not rendered HTML"; exit 1; }
             if grep -q '{%' journal/$l/index.html; then echo "::error::$l index contains raw Liquid"; exit 1; fi
-            [ "$n" -gt 0 ] || continue
-            [ "$rows" -eq "$n" ] || { echo "::error::$l index lists $rows of $n articles"; exit 1; }
+            # Homes always list the four locales. This does not depend on articles.
             for h in en es pt-BR ru; do
               grep -q "hreflang=\"$h\"" journal/$l/index.html || { echo "::error::$l index missing hreflang $h"; exit 1; }
             done
-            grep -q '<entry>' journal/$l/feed.xml || { echo "::error::empty $l feed"; exit 1; }
+            # The index lists exactly the articles that exist. Zero is a valid count.
+            [ "$rows" -eq "$n" ] || { echo "::error::$l index lists $rows of $n articles"; exit 1; }
+            # Atom feed stays valid with no entries, and lists them once articles exist.
+            grep -q '<feed' journal/$l/feed.xml || { echo "::error::$l feed is not Atom"; exit 1; }
+            entries=$(grep -c '<entry>' journal/$l/feed.xml || true)
+            entries=$((entries))
+            if [ "$n" -gt 0 ]; then
+              [ "$entries" -gt 0 ] || { echo "::error::empty $l feed"; exit 1; }
+            else
+              [ "$entries" -eq 0 ] || { echo "::error::$l feed has entries but no articles"; exit 1; }
+            fi
           done
           test -s journal/assets/css/journal.css
           echo "Built pages:" && find journal -name '*.html' | sort
