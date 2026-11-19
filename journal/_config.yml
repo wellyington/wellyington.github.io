@@ -34,7 +34,7 @@ journal:
   title_period: true
   badge_text: "JOURNAL &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; JOURNAL &nbsp;•&nbsp; BY ME &nbsp;•&nbsp;"
   footer_image: /images/footer-city.webp    # served by the main site
-  contact_email: "hello@example.com"        # ← replace
+  contact_email: "welly.almeida@gmail.com"        # ← replace
   main_site: "https://wellyington.github.io/"
 
 social:
