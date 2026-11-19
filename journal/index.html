@@ -1,0 +1,29 @@
+---
+layout: null
+permalink: /
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Journal · Wellyington</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ '/en/' | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ '/en/' | absolute_url }}">
+  <link rel="alternate" hreflang="es" href="{{ '/es/' | absolute_url }}">
+  <script>
+    /* Saved choice first, then the browser's language, then English. */
+    (function () {
+      var l = null;
+      try { l = localStorage.getItem("journal-lang"); } catch (e) {}
+      if (!l) l = ((navigator.languages && navigator.languages[0]) || navigator.language || "en").slice(0, 2).toLowerCase();
+      var supported = {{ site.languages | jsonify }};
+      if (supported.indexOf(l) < 0) l = "{{ site.default_lang }}";
+      location.replace("{{ site.baseurl }}/" + l + "/");
+    })();
+  </script>
+  <meta http-equiv="refresh" content="1; url={{ '/en/' | relative_url }}">
+</head>
+<body><p><a href="{{ '/en/' | relative_url }}">English</a> · <a href="{{ '/es/' | relative_url }}">Español</a></p></body>
+</html>

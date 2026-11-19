@@ -1,0 +1,111 @@
+---
+layout: default
+---
+{%- include setup.html -%}
+{%- comment -%} Articles are pages, so find number + neighbours by hand. {%- endcomment -%}
+{%- assign no = 1 -%}
+{%- assign newer = nil -%}
+{%- assign older = nil -%}
+{%- for p in articles -%}
+  {%- if p.url == page.url -%}
+    {%- assign no = total | minus: forloop.index0 -%}
+    {%- assign i_newer = forloop.index0 | minus: 1 -%}
+    {%- assign i_older = forloop.index0 | plus: 1 -%}
+    {%- if forloop.first == false -%}{%- assign newer = articles[i_newer] -%}{%- endif -%}
+    {%- if forloop.last == false -%}{%- assign older = articles[i_older] -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="{{ home_url | relative_url }}" class="entry-cell entry-back rollable">{% include roll.html text=T.back %}</a>
+    <span class="entry-cell mono">No. {% include entry-no.html n=no %}</span>
+    <span class="entry-cell label">{{ page.category | default: "notes" }}</span>
+    <time class="entry-cell" datetime="{{ page.date | date_to_xmlschema }}">{% include date.html d=page.date %}</time>
+    <span class="entry-cell">{% include read-time.html content=content %} {{ T.read }}</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">{% include title.html t=page.title %}</h1>
+    {%- if page.lede or page.description -%}
+    <p class="entry-lede">{{ page.lede | default: page.description }}</p>
+    {%- endif -%}
+  </header>
+
+  <div class="rail entry-cover">
+    {% include cover.html post=page no=no size="lg" eager=true %}
+    {%- if page.image_caption -%}<p class="caption label">{{ page.image_caption }}</p>{%- endif -%}
+  </div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="{{ T.on_this_page }}">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">{{ T.on_this_page }}</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">{{ T.share }}</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="{{ T.copied }}">{% include roll.html text=T.copy_link %}</button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}">{% include roll.html text=T.post_on_x %}</a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}">{% include roll.html text="LinkedIn" %}</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      {{ content }}
+      <p class="fin" aria-label="{{ T.fin_label }}">{{ T.fin }}</p>
+    </div>
+  </div>
+
+  {%- if page.tags.size > 0 -%}
+  <div class="rail entry-tags">
+    <span class="label">{{ T.filed_under }}</span>
+    <ul class="chips">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+  </div>
+  {%- endif -%}
+
+  <nav class="rail pager" aria-label="{{ T.more_entries }}">
+    {%- if older -%}
+    <a class="pager-cell rollable" href="{{ older.url | relative_url }}">
+      <span class="label">{{ T.previous }}</span>
+      <span class="pager-title">{% include title.html t=older.title %}</span>
+    </a>
+    {%- else -%}<span class="pager-cell pager-cell--empty"><span class="label">{{ T.first_entry }}</span></span>{%- endif -%}
+    {%- if newer -%}
+    <a class="pager-cell pager-cell--next rollable" href="{{ newer.url | relative_url }}">
+      <span class="label">{{ T.next }}</span>
+      <span class="pager-title">{% include title.html t=newer.title %}</span>
+    </a>
+    {%- else -%}<span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">{{ T.latest_entry }}</span></span>{%- endif -%}
+  </nav>
+</article>
+
+{%- if total > 1 -%}
+<section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">{{ T.keep_reading }}</span>
+    <h2 id="more-title" class="h-section">{{ T.more_entries }}</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards">
+      {%- assign shown = 0 -%}
+      {%- for pass in (1..2) -%}
+      {%- for p in articles -%}
+        {%- assign same = false -%}{%- if p.category == page.category -%}{%- assign same = true -%}{%- endif -%}
+        {%- assign want = false -%}
+        {%- if pass == 1 and same -%}{%- assign want = true -%}{%- endif -%}
+        {%- if pass == 2 and same == false -%}{%- assign want = true -%}{%- endif -%}
+        {%- if want and shown < 3 and p.url != page.url -%}
+          {%- assign pno = total | minus: forloop.index0 -%}
+          <li class="card"><a href="{{ p.url | relative_url }}">{% include cover.html post=p no=pno size="sm" %}<span class="label">{{ p.category | default: "notes" }} · {% include date.html d=p.date style="num" %}</span><span class="card-title">{% include title.html t=p.title %}</span></a></li>
+          {%- assign shown = shown | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+{%- endif -%}

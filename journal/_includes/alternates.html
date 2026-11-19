@@ -1,0 +1,29 @@
+{%- comment -%}
+  Finds this page in the other languages by its shared `ref`.
+  Pages without a translation fall back to that language's home.
+  mode: "head" → hreflang <link>s   |   "switch" → language menu
+{%- endcomment -%}
+{%- for code in site.languages -%}
+  {%- assign alt_url = "/" | append: code | append: "/" -%}
+  {%- assign has_alt = false -%}
+  {%- if code == lang -%}
+    {%- assign alt_url = page.url -%}{%- assign has_alt = true -%}
+  {%- elsif page.ref -%}
+    {%- assign pfx = code | append: "/" -%}
+    {%- for p in site.pages -%}
+      {%- assign p_pfx = p.path | slice: 0, 3 -%}
+      {%- if p.ref == page.ref and p_pfx == pfx -%}{%- assign alt_url = p.url -%}{%- assign has_alt = true -%}{%- break -%}{%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+  {%- assign A = site.data.languages[code] -%}
+  {%- if include.mode == "head" -%}
+    {%- if has_alt %}
+<link rel="alternate" hreflang="{{ code }}" href="{{ alt_url | absolute_url }}">
+    {%- if code == site.default_lang %}
+<link rel="alternate" hreflang="x-default" href="{{ alt_url | absolute_url }}">
+    {%- endif -%}
+    {%- endif -%}
+  {%- else -%}
+  <a href="{{ alt_url | relative_url }}" hreflang="{{ code }}" lang="{{ code }}" data-set-lang="{{ code }}"{% if code == lang %} aria-current="true"{% endif %} title="{{ A.name }}">{{ A.label }}</a>
+  {%- endif -%}
+{%- endfor -%}

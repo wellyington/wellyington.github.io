@@ -1,0 +1,4 @@
+{%- assign wpm = site.journal.words_per_minute | default: 200 -%}
+{%- assign words = include.content | strip_html | number_of_words -%}
+{%- assign mins = words | divided_by: wpm | floor | at_least: 1 -%}
+{{- mins }} {{ T.min }}

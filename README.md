@@ -1,6 +1,6 @@
 # Wellyington
 
-Personal site of Wellington Almeida (Wellyington), an independent web developer, designer and digital strategist based on the Costa del Sol. GitHub Pages serves this repository from the root of `main`:
+Personal site of Wellington Almeida (Wellyington), an independent web developer, designer and digital strategist based on the Costa del Sol. GitHub Pages publishes this repository from `main` through `.github/workflows/pages.yml`:
 
 https://wellyington.github.io/
 
@@ -14,7 +14,7 @@ python3 -m http.server 4173
 
 Then open http://localhost:4173/.
 
-The pages are generated. English stays at `/`. Spanish, Brazilian Portuguese and Russian are static pages at `/es/`, `/pt/` and `/ru/`. Copy lives in `locales/*.json`. Layout lives in `templates/index.html`. GitHub Pages does not run a build, so the generated HTML is committed.
+The pages are generated. English stays at `/`. Spanish, Brazilian Portuguese and Russian are static pages at `/es/`, `/pt/` and `/ru/`. Copy lives in `locales/*.json`. Layout lives in `templates/index.html`. The workflow copies the static site as-is (it does not run `npm run build`), so the generated HTML is still committed.
 
 ```bash
 npm install
@@ -26,3 +26,7 @@ npm run build
 Space Grotesk (Latin) and Manrope (Cyrillic, only downloaded when Cyrillic is on the page) are self-hosted under the SIL Open Font License. See `fonts/OFL.txt` and `fonts/OFL-Manrope.txt`. Three.js r128 is self-hosted and loads only when the featured visual is near the viewport. Project screenshots live in `images/projects/` as WebP with a JPEG fallback. The contact and footer photographs in `images/` are optimized WebP.
 
 `/cv/` and `/blog/` are published from other repositories. Do not add folders with those names here.
+
+## Journal
+
+`/journal/` is a bilingual (EN / ES) Jekyll site in `journal/`. The workflow builds it and publishes it next to the static pages. See `journal/README.md`.

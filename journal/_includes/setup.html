@@ -1,0 +1,17 @@
+{%- comment -%}
+  Sets the variables every layout needs. Included at the top of each
+  layout; Jekyll includes share scope, so these stay available.
+    lang      current language code ("en" | "es")
+    L         _data/languages.yml block for that language
+    T         its UI strings
+    articles  this language's articles, newest first
+    total     how many there are (entry numbers count up from 001)
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- assign L = site.data.languages[lang] -%}
+{%- assign T = L.ui -%}
+{%- assign lang_dir = lang | append: "/articles/" -%}
+{%- assign articles = site.pages | where_exp: "p", "p.path contains lang_dir" | sort: "date" | reverse -%}
+{%- assign total = articles | size -%}
+{%- assign nav = site.data.navigation[lang] -%}
+{%- assign home_url = "/" | append: lang | append: "/" -%}

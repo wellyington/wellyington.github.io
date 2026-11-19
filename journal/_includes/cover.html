@@ -1,0 +1,17 @@
+{%- comment -%}
+  Entry cover. Uses `image:` from front matter when present;
+  otherwise the entry number becomes the cover — a typographic
+  plate in one of four palette tones (set `tone: ice|mist|aqua|teal`).
+  Params: post, no, size ("lg" | "sm"), eager
+{%- endcomment -%}
+{%- assign cp = include.post -%}
+{%- assign tone = cp.tone | default: "teal" -%}
+<div class="cover cover--{{ include.size | default: 'lg' }}{% unless cp.image %} cover--type tone-{{ tone }}{% endunless %}">
+  {%- if cp.image -%}
+    <img src="{{ cp.image | relative_url }}" alt="{{ cp.image_alt | default: '' }}" {% if include.eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+  {%- else -%}
+    <span class="cover-no" aria-hidden="true">{% include entry-no.html n=include.no %}</span>
+    <span class="cover-rings" aria-hidden="true"></span>
+  {%- endif -%}
+  <span class="cover-tag"><span class="pulse" aria-hidden="true"></span>No. {% include entry-no.html n=include.no %}</span>
+</div>

@@ -1,0 +1,11 @@
+/* ── 14 · motion & print ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+@media print {
+  .bar, .menu-btn, .menu, .grid-lines, .entry-aside, .pager, .foot, .section:not(.entry) { display: none !important; }
+  .rail { border: 0; margin: 0; }
+  body { background: #fff; color: #000; }
+}

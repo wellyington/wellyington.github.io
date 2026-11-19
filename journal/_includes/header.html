@@ -1,0 +1,45 @@
+<header class="bar" data-header>
+  <a href="{{ home_url | relative_url }}" class="bar-cell bar-brand" aria-label="{{ site.author }} {{ L.title }}">
+    <span class="wordmark">{{ site.author }}</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ {{ L.title | downcase }}</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">{{ T.clocks_sr }}</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee>
+        {%- for c in site.data.ticker.clocks -%}
+        <span class="tick{% if c.home %} tick--home{% endif %}">
+          <span>{{ c.city }}</span>
+          <span class="mono" data-clock="{{ c.tz }}">--:--:--</span>
+          <span class="dim">{{ c.abbr }}</span>
+        </span>
+        <span class="tick-sep">/</span>
+        {%- endfor -%}
+        {%- for n in site.data.ticker.now[lang] -%}
+        <span class="tick"><span class="dim">{{ n.label }}</span><span>{{ n.value }}</span></span>
+        <span class="tick-sep">/</span>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="{{ T.language }}">
+    {% include alternates.html mode="switch" %}
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="{{ T.theme_to_dark }}" data-label-dark="{{ T.theme_to_dark }}" data-label-light="{{ T.theme_to_light }}">
+    <span class="roll label"><span class="theme-word" data-light="{{ T.theme_light }}" data-dark="{{ T.theme_dark }}"></span><span class="theme-word" data-light="{{ T.theme_light }}" data-dark="{{ T.theme_dark }}" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button>
+
+  {%- if page.layout == "article" -%}
+  <span class="progress" aria-hidden="true"><span data-progress></span></span>
+  {%- endif -%}
+</header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="{{ T.menu_open }}" data-label-open="{{ T.menu_open }}" data-label-close="{{ T.menu_close }}" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>

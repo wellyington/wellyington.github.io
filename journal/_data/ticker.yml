@@ -1,0 +1,14 @@
+# Header ticker. Clocks tick live; "now" items are per language.
+clocks:
+  - { city: Estepona, tz: Europe/Madrid,    abbr: CET, home: true }
+  - { city: London,   tz: Europe/London,    abbr: GMT }
+  - { city: New York, tz: America/New_York, abbr: ET }
+  - { city: Dubai,    tz: Asia/Dubai,       abbr: GST }
+
+now:
+  en:
+    - { label: "Now writing",   value: "notes on shipping small" }
+    - { label: "Now listening", value: "Wellyington — studio drafts" }
+  es:
+    - { label: "Escribiendo",  value: "notas sobre lanzar en pequeño" }
+    - { label: "Escuchando",   value: "Wellyington — maquetas de estudio" }

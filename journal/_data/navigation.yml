@@ -1,0 +1,12 @@
+# Menu + footer links, per language. Internal URLs are relative to /journal.
+en:
+  - { title: "journal.",   url: "/en/" }
+  - { title: "archive.",   url: "/en/archive/" }
+  - { title: "about.",     url: "/en/about/" }
+  - { title: "main site.", url: "https://wellyington.github.io/", external: true }
+
+es:
+  - { title: "diario.",       url: "/es/" }
+  - { title: "archivo.",      url: "/es/archive/" }
+  - { title: "sobre mí.",     url: "/es/about/" }
+  - { title: "web principal.", url: "https://wellyington.github.io/es/", external: true }

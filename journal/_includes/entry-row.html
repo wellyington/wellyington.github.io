@@ -1,0 +1,11 @@
+{%- assign rp = include.post -%}
+<li class="row" data-cat="{{ rp.category | default: 'notes' | slugify }}"{% if rp.image %} data-img="{{ rp.image | relative_url }}"{% endif %}>
+  <a href="{{ rp.url | relative_url }}" class="row-link">
+    <span class="row-no mono">{% include entry-no.html n=include.no %}</span>
+    <span class="row-date">{% include date.html d=rp.date style="num" %}</span>
+    <span class="row-title">{% include title.html t=rp.title %}</span>
+    <span class="row-cat label">{{ rp.category | default: "notes" }}</span>
+    <span class="row-time">{% include read-time.html content=rp.content %}</span>
+    <span class="row-arrow" aria-hidden="true">→</span>
+  </a>
+</li>

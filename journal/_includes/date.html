@@ -1,0 +1,7 @@
+{%- comment -%} Localised dates. style: long (default) | short | num {%- endcomment -%}
+{%- assign _m = include.d | date: "%-m" | minus: 1 -%}
+{%- case include.style -%}
+{%- when "num" -%}{{ include.d | date: "%d.%m.%y" }}
+{%- when "short" -%}{{ include.d | date: "%-d" }} {{ L.months_short[_m] }} {{ include.d | date: "%Y" }}
+{%- else -%}{{ include.d | date: "%-d" }}{% if L.of %} {{ L.of }}{% endif %} {{ L.months[_m] }}{% if L.of %} {{ L.of }}{% endif %} {{ include.d | date: "%Y" }}
+{%- endcase -%}

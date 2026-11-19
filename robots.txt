@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://wellyington.github.io/sitemap.xml
+Sitemap: https://wellyington.github.io/journal/sitemap.xml

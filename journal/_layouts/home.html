@@ -1,0 +1,115 @@
+---
+layout: default
+---
+{%- include setup.html -%}
+{%- assign latest = articles.first -%}
+{%- assign cats = articles | map: "category" | compact | uniq | sort -%}
+
+<!-- ── 01 · masthead ─────────────────────────────────────────── -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="rail">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="label">{{ L.kicker }} — Vol. {{ site.time | date: "%Y" }}</p>
+        <h1 id="hero-title" class="display">{% include title.html t=L.headline %}</h1>
+        <div class="hero-intro">{{ L.intro | markdownify }}</div>
+      </div>
+
+      <dl class="hero-meta">
+        <div><dt class="label">{{ T.entries }}</dt><dd class="mono">{% include entry-no.html n=total %}</dd></div>
+        <div><dt class="label">{{ T.last_entry }}</dt><dd>{% if latest %}{% include date.html d=latest.date style="short" %}{% else %}—{% endif %}</dd></div>
+        <div><dt class="label">{{ T.written_from }}</dt><dd>{{ L.written_from }}</dd></div>
+        <div class="hero-badge">{% include vinyl.html id="hero" %}</div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ── 02 · strip ────────────────────────────────────────────── -->
+<div class="strip" aria-hidden="true">
+  <div class="marquee marquee--slow">
+    <div class="marquee-track" data-marquee>
+      {%- for i in (1..4) -%}
+      <span>{{ L.strip_text }}</span><span class="strip-star">✺</span>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{%- if latest -%}
+<!-- ── 03 · latest ───────────────────────────────────────────── -->
+<section class="section" aria-labelledby="latest-title">
+  <div class="rail section-head">
+    <span class="label">{{ T.latest_label }}</span>
+    <h2 id="latest-title" class="h-section">{{ T.latest_title }}</h2>
+  </div>
+
+  <div class="rail">
+    <article class="feature">
+      <a href="{{ latest.url | relative_url }}" class="feature-media" tabindex="-1" aria-hidden="true">
+        {% include cover.html post=latest no=total size="lg" eager=true %}
+      </a>
+      <div class="feature-body">
+        <div>
+          <p class="label">{{ latest.category | default: "notes" }} · {% include date.html d=latest.date %}</p>
+          <h3 class="feature-title"><a href="{{ latest.url | relative_url }}">{% include title.html t=latest.title %}</a></h3>
+        </div>
+        <p class="feature-excerpt">{{ latest.lede | default: latest.description | strip_html | normalize_whitespace | truncate: 220 }}</p>
+        {%- if latest.tags.size > 0 -%}
+        <ul class="chips">{% for t in latest.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+        {%- endif -%}
+        <a href="{{ latest.url | relative_url }}" class="btn rollable">
+          {% include roll.html text=T.read_entry %}
+          <span class="btn-meta">{% include read-time.html content=latest.content %}</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ── 04 · index ────────────────────────────────────────────── -->
+<section class="section" aria-labelledby="index-title">
+  <div class="rail section-head">
+    <span class="label">{{ T.index_label }}</span>
+    <h2 id="index-title" class="h-section">{{ T.index_title }}</h2>
+  </div>
+
+  <div class="rail">
+    <div class="filters" role="group" aria-label="{{ T.filter_label }}" data-filters>
+      <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">{{ T.all }} <sup>{{ total }}</sup></button>
+      {%- for c in cats -%}
+      {%- assign in_cat = articles | where: "category", c | size -%}
+      <button type="button" class="filter" data-filter="{{ c | slugify }}" aria-pressed="false">{{ c }} <sup>{{ in_cat }}</sup></button>
+      {%- endfor -%}
+    </div>
+
+    <div class="index-head label" aria-hidden="true">
+      <span>{{ T.col_no }}</span><span>{{ T.col_date }}</span><span>{{ T.col_title }}</span><span>{{ T.col_category }}</span><span>{{ T.col_read }}</span><span></span>
+    </div>
+    <ol class="index" data-index>
+      {%- for post in articles -%}
+      {%- assign no = total | minus: forloop.index0 -%}
+      {% include entry-row.html post=post no=no %}
+      {%- endfor -%}
+    </ol>
+    <p class="index-empty" hidden data-empty>{{ T.empty }}</p>
+  </div>
+</section>
+{%- endif -%}
+
+<!-- ── 05 · subscribe ────────────────────────────────────────── -->
+<section class="section section--last" aria-labelledby="sub-title">
+  <div class="rail">
+    <div class="cta">
+      <div>
+        <span class="label">{{ T.sub_label }}</span>
+        <h2 id="sub-title" class="h-section">{{ T.sub_title }}</h2>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn--solid rollable" href="{{ home_url | append: 'feed.xml' | relative_url }}">{% include roll.html text="RSS" %}<span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn rollable" href="mailto:{{ site.journal.contact_email }}?subject={{ T.email_subject | url_encode }}">{% include roll.html text=T.by_email %}<span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>

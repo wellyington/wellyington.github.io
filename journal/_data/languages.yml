@@ -1,0 +1,162 @@
+# Every string the theme prints, per language.
+# Add a language: copy a block, translate it, add the code to
+# `languages:` in _config.yml and create a matching folder.
+
+en:
+  code: en
+  label: EN
+  name: English
+  locale: en_GB
+  title: Journal
+  description: >-
+    Field notes on building, design and strategy, written from the
+    coast without the unnecessary noise.
+  headline: "notes that work"
+  kicker: "Field notes"
+  intro: >-
+    Field notes on building, design and strategy. Written from the coast,
+    shipped when they're useful: **simple, fast, and without the
+    unnecessary noise.**
+  written_from: "Estepona, ES"
+  strip_text: "written by me"
+  badge_text: "JOURNAL &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; JOURNAL &nbsp;•&nbsp; BY ME &nbsp;•&nbsp;"
+  footer_tagline: "Independent by design · Written in public"
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
+  months_short: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+  ui:
+    skip: Skip to content
+    menu_open: Open menu
+    menu_close: Close menu
+    navigation: Navigation
+    latest_entries: Latest entries
+    rss: RSS feed →
+    theme_light: Light
+    theme_dark: Dark
+    theme_to_dark: Switch to dark theme
+    theme_to_light: Switch to light theme
+    language: Language
+    entries: Entries
+    last_entry: Last entry
+    written_from: Written from
+    latest_label: "01 / Latest"
+    latest_title: "latest."
+    index_label: "02 / Index"
+    index_title: "all entries."
+    all: All
+    filter_label: Filter entries by category
+    col_no: "No."
+    col_date: Date
+    col_title: Title
+    col_category: Category
+    col_read: Read
+    empty: Nothing filed here yet.
+    sub_label: "03 / Subscribe"
+    sub_title: "want the next one?"
+    by_email: by email
+    email_subject: Subscribe
+    read_entry: read entry
+    min: min
+    read: read
+    back: "← journal"
+    on_this_page: "on this page."
+    share: "share."
+    copy_link: copy link
+    copied: "copied."
+    post_on_x: post on X
+    fin: "fin."
+    fin_label: End of entry
+    filed_under: filed under
+    previous: "← previous"
+    next: "next →"
+    first_entry: "the first entry."
+    latest_entry: "latest entry."
+    keep_reading: Keep reading
+    more_entries: "more entries."
+    archive_title: "archive."
+    archive_meta: "entries · since"
+    elsewhere: elsewhere
+    write_back: write back
+    replies: Replies are read. Every one.
+    colophon: Set in Space Grotesk · Built with Jekyll
+    clocks_sr: Local times and what I'm working on.
+    also_in: Also in
+
+es:
+  code: es
+  label: ES
+  name: Español
+  locale: es_ES
+  title: Diario
+  description: >-
+    Notas de campo sobre desarrollo, diseño y estrategia, escritas desde
+    la costa y sin ruido innecesario.
+  headline: "notas que funcionan"
+  kicker: "Notas de campo"
+  intro: >-
+    Notas de campo sobre desarrollo, diseño y estrategia. Escritas desde la
+    costa y publicadas cuando son útiles: **simples, rápidas y sin ruido
+    innecesario.**
+  written_from: "Estepona, ES"
+  strip_text: "escrito por mí"
+  badge_text: "DIARIO &nbsp;•&nbsp; POR MÍ &nbsp;•&nbsp; DIARIO &nbsp;•&nbsp; POR MÍ &nbsp;•&nbsp;"
+  footer_tagline: "Independiente por diseño · Escrito en público"
+  of: "de"                 # "12 de noviembre de 2026"
+  months: [enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre]
+  months_short: [ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov, dic]
+  ui:
+    skip: Saltar al contenido
+    menu_open: Abrir menú
+    menu_close: Cerrar menú
+    navigation: Navegación
+    latest_entries: Últimas entradas
+    rss: Feed RSS →
+    theme_light: Claro
+    theme_dark: Oscuro
+    theme_to_dark: Cambiar a tema oscuro
+    theme_to_light: Cambiar a tema claro
+    language: Idioma
+    entries: Entradas
+    last_entry: Última entrada
+    written_from: Escrito desde
+    latest_label: "01 / Lo último"
+    latest_title: "lo último."
+    index_label: "02 / Índice"
+    index_title: "todas las entradas."
+    all: Todas
+    filter_label: Filtrar entradas por categoría
+    col_no: "N.º"
+    col_date: Fecha
+    col_title: Título
+    col_category: Categoría
+    col_read: Lectura
+    empty: Aún no hay nada aquí.
+    sub_label: "03 / Suscríbete"
+    sub_title: "¿quieres la próxima?"
+    by_email: por email
+    email_subject: Suscripción
+    read_entry: leer entrada
+    min: min
+    read: de lectura
+    back: "← diario"
+    on_this_page: "en esta página."
+    share: "compartir."
+    copy_link: copiar enlace
+    copied: "copiado."
+    post_on_x: publicar en X
+    fin: "fin."
+    fin_label: Fin de la entrada
+    filed_under: archivado en
+    previous: "← anterior"
+    next: "siguiente →"
+    first_entry: "la primera entrada."
+    latest_entry: "la última entrada."
+    keep_reading: Sigue leyendo
+    more_entries: "más entradas."
+    archive_title: "archivo."
+    archive_meta: "entradas · desde"
+    elsewhere: en otros sitios
+    write_back: escríbeme
+    replies: Leo todas las respuestas. Todas.
+    colophon: Compuesto en Space Grotesk · Hecho con Jekyll
+    clocks_sr: Hora local y en qué estoy trabajando.
+    also_in: También en

@@ -1,0 +1,3 @@
+{%- comment -%} Zero-pads an entry number: 7 → 007 {%- endcomment -%}
+{%- assign n = include.n | plus: 0 -%}
+{%- if n < 10 -%}00{%- elsif n < 100 -%}0{%- endif -%}{{ n }}

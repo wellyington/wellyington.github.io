@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/journal.css' | relative_url }}">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="{{ site.author }} — {{ L.title }}" href="{{ home_url | append: 'feed.xml' | relative_url }}">
+{%- include alternates.html mode="head" %}
+{% seo title=false %}
+<title>{% if page.layout == "home" %}{{ L.title }} · {{ site.author }}{% else %}{{ page.title }} — {{ L.title }} · {{ site.author }}{% endif %}</title>
+{%- unless page.description %}
+<meta name="description" content="{{ page.lede | default: L.description | strip_html | normalize_whitespace | escape }}">
+<meta property="og:description" content="{{ page.lede | default: L.description | strip_html | normalize_whitespace | escape }}">
+{%- endunless %}

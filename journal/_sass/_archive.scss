@@ -1,0 +1,14 @@
+/* ── 11 · archive ───────────────────────────────────────────────── */
+.year { display: grid; border-bottom: 1px solid var(--line); }
+.year-no {
+  padding: 2rem var(--pad) 1rem;
+  font-size: clamp(4rem, 10vw, 8rem); font-weight: 700; line-height: .85; letter-spacing: -.07em;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 900px) {
+  .year { grid-template-columns: 3fr 7fr; }
+  .year-no { border-bottom: 0; border-right: 1px solid var(--line); align-self: stretch; }
+  .year-no { position: sticky; top: var(--bar-h); align-self: start; height: auto; }
+  .year .row-link { grid-template-columns: 3.5rem 5.5rem 1fr 4rem 1.5rem; }
+  .year .row-cat { display: none; }
+}

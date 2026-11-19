@@ -1,0 +1,10 @@
+{%- comment -%}
+  The signature move: every title closes with a period —
+  unless it already ends in punctuation.
+{%- endcomment -%}
+{%- assign t = include.t | strip -%}
+{%- assign last = t | slice: -1 -%}
+{{- t -}}
+{%- if site.journal.title_period != false -%}
+  {%- unless last == "." or last == "?" or last == "!" -%}<span class="dot">.</span>{%- endunless -%}
+{%- endif -%}
