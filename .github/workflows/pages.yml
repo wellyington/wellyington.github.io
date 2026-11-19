@@ -43,6 +43,22 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --destination ../_journal
 
+      - name: Smoke-test journal
+        run: |
+          set -e
+          for l in en es; do
+            n=$(ls _journal/$l/articles | wc -l)
+            rows=$(grep -o 'class="row"' _journal/$l/index.html | wc -l)
+            echo "$l: $n articles, $rows rows on the index"
+            [ "$n" -gt 0 ] || continue
+            [ "$rows" -eq "$n" ] || { echo "::error::$l index lists $rows of $n articles"; exit 1; }
+            grep -q 'hreflang="en"' _journal/$l/index.html || { echo "::error::$l missing hreflang"; exit 1; }
+            grep -q 'hreflang="es"' _journal/$l/index.html || { echo "::error::$l missing hreflang"; exit 1; }
+          done
+          grep -q '<entry>' _journal/en/feed.xml || { echo "::error::empty EN feed"; exit 1; }
+          test -s _journal/assets/css/journal.css
+          echo "Translation links:" && grep -ho 'hreflang="es" href="[^"]*articles[^"]*"' _journal/en/articles/*/index.html || true
+
       - name: Assemble site
         run: |
           mkdir _site
