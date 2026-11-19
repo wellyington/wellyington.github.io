@@ -1,0 +1,44 @@
+<footer class="foot">
+  {%- if site.journal.footer_image -%}
+  <div class="foot-banner">
+    <img src="{{ site.journal.footer_image }}" alt="" loading="lazy" decoding="async">
+    <p class="label">{{ L.footer_tagline }}</p>
+  </div>
+  {%- endif -%}
+
+  <nav class="foot-nav" aria-label="Footer">
+    {%- for item in nav -%}
+    <a href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"{% if item.external %} target="_blank" rel="noopener"{% endif %} class="rollable">
+      {%- assign label = item.title | remove: "." -%}
+      {% include roll.html text=label %}
+    </a>
+    {%- endfor -%}
+  </nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">{{ T.elsewhere }}</p>
+        <ul class="foot-social">
+          {%- for s in site.social -%}
+          <li><a href="{{ s.url }}" target="_blank" rel="noopener me" class="rollable">{% include roll.html text=s.name %}<span class="arrow" aria-hidden="true">→</span></a></li>
+          {%- endfor -%}
+          <li><a href="{{ home_url | append: 'feed.xml' | relative_url }}" class="rollable">{% include roll.html text="RSS" %}<span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">{{ T.write_back }}</p>
+        <a class="foot-mail" href="mailto:{{ site.journal.contact_email }}">{{ site.journal.contact_email }}</a>
+        <p class="foot-small">{{ T.replies }}</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">{{ site.author }}</p>
+
+  <div class="foot-colophon">
+    <span>© {{ site.time | date: "%Y" }} {{ site.author }}</span>
+    <span>{{ T.colophon }}</span>
+    <a href="{{ site.journal.main_site }}" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>

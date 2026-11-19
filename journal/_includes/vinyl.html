@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 200" class="vinyl" role="img" aria-label="Journal, by me">
+  <defs><path id="vinyl-path-{{ include.id | default: 'a' }}" fill="none" d="M 100,100 m -76,0 a 76,76 0 1,1 152,0 a 76,76 0 1,1 -152,0"/></defs>
+  <circle cx="100" cy="100" r="100" class="vinyl-disc"/>
+  <g class="vinyl-grooves">
+    <circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="88"/>
+    <circle cx="100" cy="100" r="62"/><circle cx="100" cy="100" r="56"/><circle cx="100" cy="100" r="50"/><circle cx="100" cy="100" r="44"/>
+  </g>
+  <text class="vinyl-text" font-size="9" font-weight="700" letter-spacing="1.6">
+    <textPath href="#vinyl-path-{{ include.id | default: 'a' }}">{{ L.badge_text | default: site.journal.badge_text }}</textPath>
+  </text>
+  <circle cx="100" cy="100" r="32" class="vinyl-label"/>
+  <circle cx="100" cy="100" r="4" class="vinyl-hole"/>
+</svg>

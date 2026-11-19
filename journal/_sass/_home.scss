@@ -1,0 +1,40 @@
+/* ── 07 · home: masthead ────────────────────────────────────────── */
+.hero { border-bottom: 1px solid var(--line); }
+.hero-grid { display: grid; }
+.hero-copy { padding: 4rem var(--pad) 2.5rem; display: flex; flex-direction: column; gap: 1.75rem; }
+.hero-intro p { max-width: 40ch; font-size: clamp(1.125rem, 1.6vw, 1.375rem); font-weight: 300; line-height: 1.5; }
+.hero-intro strong { font-weight: 600; }
+.hero-meta { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+.hero-meta > div { padding: 1.25rem var(--pad); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: .5rem; justify-content: space-between; }
+.hero-meta > div:nth-child(odd) { border-right: 1px solid var(--line); }
+.hero-meta dd { font-size: 1.5rem; font-weight: 600; letter-spacing: -.03em; }
+.hero-meta dd.mono { font-size: 2rem; }
+.hero-badge { align-items: center; justify-content: center !important; }
+.hero-badge .vinyl { width: 6.5rem; }
+@media (min-width: 768px) {
+  .hero-grid { grid-template-columns: 7fr 3fr; min-height: calc(88vh - var(--bar-h)); }
+  .hero-copy { padding: 8rem var(--pad) 3rem; justify-content: flex-end; }
+  .hero-meta { grid-template-columns: 1fr; border-top: 0; border-left: 1px solid var(--line); grid-auto-rows: 1fr; }
+  .hero-meta > div:nth-child(odd) { border-right: 0; }
+  .hero-meta > div:last-child { border-bottom: 0; }
+  .hero-badge .vinyl { width: 8.5rem; }
+}
+
+/* vinyl badge — spins like the one on the main site */
+.vinyl { animation: spin 18s linear infinite; filter: drop-shadow(0 4px 10px rgb(0 0 0 / .12)); }
+@keyframes spin { to { transform: rotate(360deg); } }
+.vinyl-disc { fill: rgb(var(--bg)); fill-opacity: .95; }
+.vinyl-grooves circle { fill: none; stroke: rgb(var(--fg)); stroke-opacity: .22; stroke-width: .8; }
+.vinyl-text { fill: rgb(var(--fg)); }
+.vinyl-label { fill: rgb(var(--fg)); }
+.vinyl-hole { fill: rgb(var(--bg)); }
+
+/* the strip */
+.strip {
+  height: 5.5rem; background: rgb(var(--fg)); color: rgb(var(--bg));
+  border-bottom: 1px solid var(--line); overflow: hidden;
+}
+.strip .marquee-track { font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 700; letter-spacing: -.04em; text-transform: lowercase; }
+.strip .marquee-track > span { padding: 0 1.5rem; }
+.strip-star { font-size: .6em; opacity: .7; }
+@media (min-width: 768px) { .strip { height: 8rem; } }

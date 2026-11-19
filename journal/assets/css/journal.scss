@@ -1,0 +1,27 @@
+---
+# Jekyll compiles this file; partials live in /_sass.
+---
+
+/* ════════════════════════════════════════════════════════════════
+   Wellyington — Journal
+   Design system lifted from wellyington.github.io:
+   ice + ink, one grotesk, a grid you can see, lowercase with a period.
+   Compiled by Jekyll (dart-sass) in the Pages workflow.
+   ════════════════════════════════════════════════════════════════ */
+
+@use "fonts";
+@use "tokens";
+@use "base";
+@use "grid";
+@use "roll";
+@use "header";
+@use "menu";
+@use "home";
+@use "sections";
+@use "entry";
+@use "prose";
+@use "archive";
+@use "footer";
+@use "reveal";
+@use "motion";
+@use "i18n";

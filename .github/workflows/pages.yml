@@ -1,0 +1,86 @@
+# Publishes the whole site with GitHub Actions.
+#
+#  • Everything at the repo root is copied as-is (same as the old
+#    "deploy from branch" setup: the static site is not rebuilt).
+#  • /journal is a Jekyll site. It is built here and published at
+#    https://wellyington.github.io/journal/
+#
+# Requires: Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# Pull requests run the build only, so a broken journal never reaches the live site.
+
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+          working-directory: journal
+
+      - name: Build journal
+        working-directory: journal
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --destination ../_journal
+
+      - name: Smoke-test journal
+        run: |
+          set -e
+          for l in en es; do
+            n=$(ls _journal/$l/articles | wc -l)
+            rows=$(grep -o 'class="row"' _journal/$l/index.html | wc -l)
+            echo "$l: $n articles, $rows rows on the index"
+            [ "$n" -gt 0 ] || continue
+            [ "$rows" -eq "$n" ] || { echo "::error::$l index lists $rows of $n articles"; exit 1; }
+            grep -q 'hreflang="en"' _journal/$l/index.html || { echo "::error::$l missing hreflang"; exit 1; }
+            grep -q 'hreflang="es"' _journal/$l/index.html || { echo "::error::$l missing hreflang"; exit 1; }
+          done
+          grep -q '<entry>' _journal/en/feed.xml || { echo "::error::empty EN feed"; exit 1; }
+          test -s _journal/assets/css/journal.css
+          echo "Translation links:" && grep -ho 'hreflang="es" href="[^"]*articles[^"]*"' _journal/en/articles/*/index.html || true
+
+      - name: Assemble site
+        run: |
+          mkdir _site
+          rsync -a \
+            --exclude '.git' --exclude '.github' --exclude 'node_modules' \
+            --exclude 'journal' --exclude '_journal' --exclude '_site' \
+            ./ _site/
+          mkdir -p _site/journal
+          cp -a _journal/. _site/journal/
+          echo "Journal pages:" && find _site/journal -name '*.html' | sort
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

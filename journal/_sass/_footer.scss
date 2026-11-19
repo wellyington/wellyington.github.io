@@ -1,0 +1,44 @@
+/* ── 12 · footer ────────────────────────────────────────────────── */
+.foot { background: var(--ink); color: var(--ice); border-top: 1px solid rgb(227 253 253 / .4); --line: rgb(227 253 253 / .4); }
+[data-theme="dark"] .foot { background: rgb(var(--deep)); }
+.foot-banner { position: relative; height: 9rem; overflow: hidden; border-bottom: 1px solid var(--line); }
+.foot-banner img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.9) contrast(1.25); }
+.foot-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--ink), transparent 70%); }
+.foot-banner .label { position: absolute; left: 1.5rem; right: 1.5rem; bottom: 1rem; z-index: 1; opacity: .8; letter-spacing: .25em; }
+.foot-nav { display: flex; border-bottom: 1px solid var(--line); }
+.foot-nav a {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 2.5rem .5rem; border-right: 1px solid var(--line);
+  font-size: clamp(.85rem, 2vw, 1.5rem); letter-spacing: .06em; text-transform: uppercase;
+  transition: background-color .3s, color .3s;
+}
+.foot-nav a:last-child { border-right: 0; }
+.foot-nav a:hover { background: var(--ice); color: var(--ink); }
+.foot .rail { background: transparent; }
+.foot-cols { display: grid; border-bottom: 1px solid var(--line); }
+.foot-col { padding: 2.5rem var(--pad); display: flex; flex-direction: column; gap: 1.5rem; }
+.foot-col .label { opacity: .75; }
+.foot-social a { display: inline-flex; align-items: center; gap: .75rem; min-height: 2.75rem; font-size: 1.15rem; letter-spacing: .06em; text-transform: uppercase; opacity: .85; transition: opacity .25s; }
+.foot-social a:hover { opacity: 1; }
+.foot-mail { font-size: clamp(1.25rem, 2.6vw, 2rem); font-weight: 600; letter-spacing: -.03em; word-break: break-all; }
+.foot-mail:hover { text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+.foot-small { font-size: .9rem; opacity: .6; }
+@media (min-width: 768px) {
+  .foot-banner { height: 13rem; }
+  .foot-nav a { padding: 3.5rem .5rem; }
+  .foot-cols { grid-template-columns: 6fr 4fr; }
+  .foot-col { padding: 3.5rem 2rem; min-height: 18rem; justify-content: space-between; }
+  .foot-col--right { border-left: 1px solid var(--line); }
+}
+.wordmark-xl {
+  padding: 0 .5rem; margin-bottom: -.04em; text-align: center;
+  font-size: clamp(1.55rem, 15.5vw, 15rem); font-weight: 700; line-height: 1; letter-spacing: -.065em;
+  white-space: nowrap; opacity: .95; overflow: hidden;
+}
+.foot-colophon {
+  display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between;
+  padding: 1.25rem 1.5rem; border-top: 1px solid var(--line);
+  font-size: .7rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; opacity: .7;
+  position: relative; background: inherit;
+}
+.foot-colophon a:hover { text-decoration: underline; }

@@ -1,0 +1,22 @@
+/* ── 03 · the visible grid ──────────────────────────────────────── */
+.grid-lines {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.grid-lines span { border-left: 1px solid var(--line-s); }
+.grid-lines span:nth-child(n+5) { display: none; }
+@media (min-width: 768px) {
+  .grid-lines { grid-template-columns: repeat(12, 1fr); }
+  .grid-lines span:nth-child(n+5) { display: block; }
+}
+
+/* The rail: content spans columns 2–11, bordered left & right,
+   so its edges land exactly on the background hairlines. */
+.rail {
+  position: relative;
+  border-inline: 1px solid var(--line);
+  background: rgb(var(--bg) / .86);   /* the grid stays faintly visible underneath */
+}
+@media (min-width: 768px) {
+  .rail { margin-inline: calc(100% / 12); }
+}

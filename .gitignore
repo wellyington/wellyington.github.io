@@ -1,3 +1,9 @@
 node_modules/
 .DS_Store
 *.log
+
+# Jekyll (journal/)
+journal/_site/
+journal/.jekyll-cache/
+journal/vendor/
+_journal/

@@ -1,0 +1,24 @@
+/* ── 15 · language switcher ─────────────────────────────────────── */
+.lang-switch {
+  margin-left: auto;                 /* pushes switcher + theme toggle right */
+  border-left: 1px solid var(--line);
+  padding: 0;
+  gap: 0;
+}
+.lang-switch a {
+  display: flex; align-items: center; height: 100%;
+  padding: 0 .7rem;
+  font-size: .75rem; font-weight: 600; letter-spacing: .18em;
+  opacity: .5;
+  transition: opacity .25s, background-color .25s, color .25s;
+}
+.lang-switch a:hover { opacity: 1; background: rgb(var(--fg) / .08); }
+.lang-switch a[aria-current] {
+  opacity: 1;
+  background: rgb(var(--fg)); color: rgb(var(--bg));
+}
+@media (min-width: 768px) { .lang-switch a { padding: 0 1rem; } }
+
+.lang-switch--menu { display: flex; border: 1px solid var(--line); height: 2.5rem; margin: 0; }
+.lang-switch--menu a + a { border-left: 1px solid var(--line); }
+.menu-foot { align-items: center; }

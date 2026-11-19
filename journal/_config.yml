@@ -1,0 +1,62 @@
+# ─────────────────────────────────────────────────────────────
+#  Wellyington — Journal  (EN / ES)
+#  Built by .github/workflows/pages.yml and served at /journal/.
+#  The rest of the repo stays a static site; this folder is the
+#  only part that Jekyll touches.
+# ─────────────────────────────────────────────────────────────
+
+title: Journal
+author: Wellyington
+url: "https://wellyington.github.io"
+baseurl: "/journal"
+timezone: Europe/Madrid
+permalink: pretty            # /en/articles/slug/  instead of slug.html
+
+default_lang: en
+languages: [en, es]          # strings live in _data/languages.yml
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# ── Journal settings shared by both languages ────────────────
+journal:
+  words_per_minute: 200
+  title_period: true
+  badge_text: "JOURNAL &nbsp;•&nbsp; BY ME &nbsp;•&nbsp; JOURNAL &nbsp;•&nbsp; BY ME &nbsp;•&nbsp;"
+  footer_image: /images/footer-city.webp    # served by the main site
+  contact_email: "welly.almeida@gmail.com"        # ← replace
+  main_site: "https://wellyington.github.io/"
+
+social:
+  - { name: X,         url: "https://x.com/wellyington" }
+  - { name: Instagram, url: "https://instagram.com/wellyington" }
+  - { name: LinkedIn,  url: "https://www.linkedin.com/in/wellyington/" }
+
+# Language and layout are set by folder, so articles only need
+# title, date, category and ref in their front matter.
+defaults:
+  - scope: { path: "en" }
+    values: { lang: en, layout: page }
+  - scope: { path: "es" }
+    values: { lang: es, layout: page }
+  - scope: { path: "en/articles" }
+    values: { layout: article }
+  - scope: { path: "es/articles" }
+    values: { layout: article }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache

@@ -1,0 +1,3 @@
+/* ── 13 · reveal on scroll ──────────────────────────────────────── */
+.js .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+.js .reveal.is-in { opacity: 1; transform: none; }

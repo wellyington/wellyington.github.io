@@ -1,0 +1,33 @@
+/* ── 01 · tokens ────────────────────────────────────────────────── */
+:root {
+  --ice:  #e3fdfd;
+  --mist: #cbf1f5;
+  --aqua: #a6e3e9;
+  --teal: #71c9ce;
+  --ink:  #17484d;
+
+  --bg: 227 253 253;           /* rgb triplets so we can alpha them */
+  --fg: 23 72 77;
+  --deep: 23 72 77;
+
+  --line:   rgb(var(--fg) / .38);
+  --line-s: rgb(var(--fg) / .2);
+
+  --font: "Space Grotesk", "Space Grotesk Fallback", "Manrope", system-ui, sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --bar-h: 3.5rem;
+  --pad: 1rem;
+  --ease: cubic-bezier(.65, 0, .35, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --bg: 23 72 77;
+  --fg: 227 253 253;
+  --deep: 18 56 60;
+  color-scheme: dark;
+}
+@media (min-width: 768px) {
+  :root { --bar-h: 4rem; --pad: 1.5rem; }
+}

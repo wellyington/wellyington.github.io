@@ -1,0 +1,60 @@
+/* ── 02 · base ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--bar-h) + 1rem);
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  transition: background-color .3s ease, color .3s ease;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+::selection { background: rgb(var(--fg)); color: rgb(var(--bg)); }
+:where(a, button, [tabindex]):focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px rgb(var(--bg)), inset 0 0 0 4px rgb(var(--fg));
+}
+main { padding-top: var(--bar-h); outline: none; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; left: 1rem; top: -4rem; z-index: 100;
+  background: rgb(var(--fg)); color: rgb(var(--bg));
+  padding: .75rem 1rem; font-weight: 600; transition: top .2s;
+}
+.skip-link:focus { top: 1rem; }
+
+/* typographic atoms */
+.label {
+  font-size: .75rem; font-weight: 600; line-height: 1.3;
+  letter-spacing: .18em; text-transform: uppercase;
+}
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; letter-spacing: 0; }
+.dim  { opacity: .55; }
+.dot  { color: var(--teal); }
+[data-theme="dark"] .dot { color: var(--aqua); }
+
+.display {
+  font-size: clamp(3.25rem, 11.5vw, 10.5rem);
+  font-weight: 700; line-height: .85; letter-spacing: -.06em;
+}
+.h-section {
+  font-size: clamp(3rem, 7.5vw, 6.5rem);
+  font-weight: 700; line-height: .85; letter-spacing: -.06em;
+}

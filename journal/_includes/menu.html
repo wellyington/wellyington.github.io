@@ -1,0 +1,36 @@
+<div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="{{ T.navigation }}" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="{{ T.navigation }}">
+      <p class="label">{{ T.navigation }}</p>
+      <ul class="menu-links">
+        {%- for item in nav -%}
+        <li>
+          <a href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"{% if item.external %} target="_blank" rel="noopener"{% endif %} class="rollable">
+            {% include roll.html text=item.title %}
+          </a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">{{ T.latest_entries }}</p>
+      <ol>
+        {%- for post in articles limit: 4 -%}
+        {%- assign no = total | minus: forloop.index0 -%}
+        <li>
+          <a href="{{ post.url | relative_url }}" class="menu-entry">
+            <span class="mono dim">No. {% include entry-no.html n=no %}</span>
+            <span>{% include title.html t=post.title %}</span>
+          </a>
+        </li>
+        {%- endfor -%}
+      </ol>
+    </div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="{{ T.language }}">{% include alternates.html mode="switch" %}</nav>
+    <a class="label rollable" href="{{ home_url | append: 'feed.xml' | relative_url }}">{% include roll.html text=T.rss %}</a>
+  </div>
+</div>
