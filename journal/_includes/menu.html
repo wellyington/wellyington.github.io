@@ -20,7 +20,7 @@
         {%- assign no = total | minus: forloop.index0 -%}
         <li>
           <a href="{{ post.url | relative_url }}" class="menu-entry">
-            <span class="mono dim">No. {% include entry-no.html n=no %}</span>
+            <span class="mono dim">{{ T.col_no }} {% include entry-no.html n=no %}</span>
             <span>{% include title.html t=post.title %}</span>
           </a>
         </li>

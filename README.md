@@ -29,4 +29,4 @@ Space Grotesk (Latin) and Manrope (Cyrillic, only downloaded when Cyrillic is on
 
 ## Journal
 
-`/journal/` is a bilingual (EN / ES) Jekyll site in `journal/`. The workflow builds it and publishes it next to the static pages. See `journal/README.md`.
+`/journal/` is a multilingual (EN / ES / PT / RU) Jekyll site in `journal/`. The workflow builds it and publishes it next to the static pages. See `journal/README.md`.

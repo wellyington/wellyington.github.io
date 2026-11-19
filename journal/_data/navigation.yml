@@ -10,3 +10,15 @@ es:
   - { title: "archivo.",      url: "/es/archive/" }
   - { title: "sobre mí.",     url: "/es/about/" }
   - { title: "web principal.", url: "https://wellyington.github.io/es/", external: true }
+
+pt:
+  - { title: "diário.",       url: "/pt/" }
+  - { title: "arquivo.",      url: "/pt/archive/" }
+  - { title: "sobre.",        url: "/pt/about/" }
+  - { title: "site principal.", url: "https://wellyington.github.io/pt/", external: true }
+
+ru:
+  - { title: "журнал.",       url: "/ru/" }
+  - { title: "архив.",        url: "/ru/archive/" }
+  - { title: "обо мне.",      url: "/ru/about/" }
+  - { title: "основной сайт.", url: "https://wellyington.github.io/ru/", external: true }
