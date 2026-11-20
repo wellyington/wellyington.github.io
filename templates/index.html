@@ -200,6 +200,11 @@
             </a>
           </li>
           <li>
+            <a href="{{journalHref}}" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
+              <span class="roll-text"><span>{{navJournal}}</span><span aria-hidden="true">{{navJournal}}</span></span>
+            </a>
+          </li>
+          <li>
             <a href="#contact" class="group-roll inline-flex min-h-11 max-w-full items-center menu-link">
               <span class="roll-text"><span>{{navContact}}</span><span aria-hidden="true">{{navContact}}</span></span>
             </a>
@@ -544,6 +549,29 @@
                 <li class="border border-brand-primary/40 px-2 py-1">{{s3c}}</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journal" tabindex="-1" class="text-brand-primary" aria-labelledby="journal-heading">
+      <div class="grid grid-cols-4 border-b border-brand-primary/50 md:grid-cols-12">
+        <div class="col-span-4 border-x border-brand-primary/50 pt-16 md:col-span-10 md:col-start-2 md:pt-32">
+          <div class="flex flex-col gap-6 p-4 md:flex-row md:items-end md:justify-between md:p-6">
+            <div>
+              <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em]">{{journalEyebrow}}</p>
+              <h2 id="journal-heading" class="text-5xl font-bold leading-[0.85] tracking-[-0.06em] md:text-7xl lg:text-8xl">{{journalHeading}}</h2>
+            </div>
+            <p class="max-w-[40ch] text-base font-light leading-relaxed md:text-right md:text-lg">{{journalIntro}}</p>
+          </div>
+          <div class="grid grid-cols-4 border-t border-brand-primary/50 md:grid-cols-3">
+            {{journalEntries}}
+          </div>
+          <div class="flex flex-wrap items-center justify-between gap-4 border-t border-brand-primary/50 p-4 md:p-6">
+            <a href="{{journalHref}}" class="group-roll inline-flex min-h-11 items-center gap-3 border border-brand-primary px-5 text-xs font-semibold uppercase tracking-widest transition-colors hover:bg-brand-primary hover:text-brand-cream">
+              <span class="roll-text"><span>{{journalAll}}</span><span aria-hidden="true">{{journalAll}}</span></span><span aria-hidden="true">→</span>
+            </a>
+            <a href="{{journalFeed}}" class="inline-flex min-h-11 items-center px-1 text-xs font-semibold uppercase tracking-widest underline underline-offset-4">RSS</a>
           </div>
         </div>
       </div>

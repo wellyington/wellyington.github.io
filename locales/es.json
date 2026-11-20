@@ -201,5 +201,12 @@
       "name": "Marca digital",
       "description": "Una voz y un aspecto que se sienten del negocio, y que se notan en el sitio y en el resto de su presencia."
     }
-  ]
+  ],
+  "navJournal": "diario.",
+  "journalEyebrow": "Del diario",
+  "journalHeading": "últimas entradas.",
+  "journalIntro": "Notas de trabajo, incluido el reto 100 días: cien negocios y cien webs terminadas, uno detrás de otro.",
+  "journalAll": "todas las entradas",
+  "journalRead": "leer entrada",
+  "journalNo": "N.º"
 }

@@ -201,5 +201,12 @@
       "name": "Digital branding",
       "description": "A voice and a look that feel like the business, carried through the site and the wider presence."
     }
-  ]
+  ],
+  "navJournal": "journal.",
+  "journalEyebrow": "From the journal",
+  "journalHeading": "latest entries.",
+  "journalIntro": "Working notes, including 100 Days: a hundred businesses and a hundred finished websites, one at a time.",
+  "journalAll": "all entries",
+  "journalRead": "read entry",
+  "journalNo": "No."
 }

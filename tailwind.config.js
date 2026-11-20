@@ -8,6 +8,7 @@ module.exports = {
     "./pt/**/*.html",
     "./ru/**/*.html",
     "./js/**/*.js",
+    "./scripts/journal-entries.js",
   ],
   theme: {
     extend: {
