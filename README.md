@@ -30,3 +30,5 @@ Space Grotesk (Latin) and Manrope (Cyrillic, only downloaded when Cyrillic is on
 ## Journal
 
 `/journal/` is a multilingual (EN / ES / PT / RU) Jekyll site. Edit the source in `journal-src/`. On every push to `main`, `.github/workflows/pages.yml` builds it and commits the finished pages into `journal/`. Don't edit `journal/` by hand: the next build overwrites it. See `journal-src/README.md`.
+
+Each homepage (`/`, `/es/`, `/pt/`, `/ru/`) has a "latest entries" section with the three newest articles in its language, plus a journal link in the menu. `scripts/journal-entries.js` reads them from `journal-src/<lang>/articles/` when the pages are built, so they are plain HTML links. The journal workflow reruns `scripts/build-pages.js` after every article change and commits the four homepages with the journal, so new entries show up without running `npm run build` by hand. If you change the card markup in `scripts/journal-entries.js`, run `npm run build` once so Tailwind picks up any new classes.

@@ -519,6 +519,9 @@ function render(template, locale) {
     filterButtons: filterButtons(locale),
     pageUrl: pageUrl(locale),
     phoneOptions: require("./brineclub-i18n").phoneOptions(locale, locale.code),
+    journalEntries: require("./journal-entries").latestEntries(locale),
+    journalHref: "/journal/" + locale.code + "/",
+    journalFeed: "/journal/" + locale.code + "/feed.xml",
   };
   return template.replace(/\{\{([a-zA-Z0-9]+)\}\}/g, function (_, key) {
     if (Object.prototype.hasOwnProperty.call(raw, key)) return raw[key];
@@ -621,6 +624,10 @@ function validate(locale, html) {
   assert(html.includes("+34 604 286 691"), locale.code + " phone");
   assert(html.includes("data-cat=\"real-estate\""), locale.code + " filters");
   assert((html.match(/data-set-lang="ru"/g) || []).length === 2, locale.code + " switcher links");
+  const journal = require("./journal-entries");
+  const expected = Math.min(journal.SHOW, journal.articles(locale.code).length);
+  assert((html.match(/href="\/journal\/[a-z]{2}\/articles\//g) || []).length === expected, locale.code + " journal cards");
+  assert(!html.includes('href="/journal/' + (locale.code === "en" ? "es" : "en") + '/articles/'), locale.code + " journal cards in the wrong language");
 }
 
 function sameKeys(locales) {

@@ -17,10 +17,12 @@ on:
     branches: [main]
     paths:
       - "journal-src/**"
+      - "scripts/journal-entries.js"
       - ".github/workflows/pages.yml"
   pull_request:
     paths:
       - "journal-src/**"
+      - "scripts/journal-entries.js"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -91,14 +93,20 @@ jobs:
           done
           echo "Built pages:" && find journal -name '*.html' | sort
 
+      # The homepages (/, /es/, /pt/, /ru/) show the three latest entries in
+      # their language. Rebuild them so a new article appears there too.
+      # build-pages.js validates each page and fails on a missing card.
+      - name: Refresh latest entries on the homepages
+        run: node scripts/build-pages.js
+
       - name: Commit built journal
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A journal
+          git add -A journal index.html es/index.html pt/index.html ru/index.html
           if git diff --cached --quiet; then
-            echo "journal/ is already up to date."
+            echo "journal/ and the homepages are already up to date."
             exit 0
           fi
           git commit -m "Build journal from ${GITHUB_SHA::7}"
