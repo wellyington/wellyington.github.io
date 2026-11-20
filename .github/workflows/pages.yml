@@ -82,6 +82,8 @@ jobs:
             fi
           done
           test -s journal/assets/css/journal.css
+          missing=$(grep -L "gtag('config', 'G-" $(find journal -name '*.html' ! -path 'journal/index.html') || true)
+          [ -z "$missing" ] || { echo "::error::Google tag missing from: $missing"; exit 1; }
           echo "Built pages:" && find journal -name '*.html' | sort
 
       - name: Commit built journal

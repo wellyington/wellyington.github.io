@@ -21,6 +21,10 @@ kramdown:
   auto_ids: true
   syntax_highlighter: rouge
 
+# Google tag (GA4), the same property as the main site. Loaded on every
+# page in every language; production builds only. Remove to switch off.
+google_analytics: G-4XBY16BPLY
+
 sass:
   style: compressed
 
