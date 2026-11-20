@@ -17,6 +17,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="alternate" type="application/atom+xml" title="{{ site.author }} — {{ L.title }}" href="{{ home_url | append: 'feed.xml' | relative_url }}">
 {%- include alternates.html mode="head" %}
+{% include analytics.html %}
 {% seo title=false %}
 <title>{% if page.layout == "home" %}{{ L.title }} · {{ site.author }}{% else %}{{ page.title }} — {{ L.title }} · {{ site.author }}{% endif %}</title>
 {%- unless page.description %}
