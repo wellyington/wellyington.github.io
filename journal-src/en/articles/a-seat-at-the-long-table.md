@@ -5,6 +5,22 @@ title: "a seat at the long table"
 category: "100 Days"
 tags: [100 days, case study, restaurant, hospitality]
 lede: "Day three of a hundred: a homepage concept for Los Arcos, a family bar and restaurant in Estepona, with the menu, the week, a booking request, and a light for lunch and one for late."
+seo_title: "Restaurant Website Concept: Los Arcos, Estepona"
+description: "A homepage concept for Los Arcos, a family bar and restaurant in Estepona: menu, what's on, opening hours and a booking request, in light and dark. Day 3."
+keywords:
+  - "restaurant website design in Estepona"
+  - "bar and restaurant website concept"
+  - "family restaurant website on the Costa del Sol"
+  - "restaurant website with a booking form"
+  - "restaurant opening hours on the website"
+  - "Sunday carvery restaurant in Estepona"
+  - "restaurant menu on a phone"
+  - "web designer in Estepona"
+  - "100 days 100 websites challenge"
+about:
+  type: "Restaurant"
+  name: "Los Arcos Bar & Restaurant"
+  locality: "Estepona"
 image: https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp
 image_alt: "Case study cover of a Los Arcos Estepona homepage concept: the opening split between a cream theme and a charcoal theme on a desktop, with the same page on a phone."
 image_caption: "Day three. A homepage concept for Los Arcos, in both lights, on a large screen and on a phone."
@@ -116,4 +132,4 @@ You may not run a restaurant. A lot of businesses on this coast look more like L
 
 What helps is an order, not more blocks. Say what the place is in one line. Show the thing people actually come for. Put the week where it can be read and the hours where they answer "now". Make the way in, a phone, a form, a table, honest about what happens next. Then let the page follow the light the person is in.
 
-If that sounds like your business, write to me from [the main site](https://wellyington.github.io/). Tell me what you do and where, and I will answer in plain language. The short public version of today is the note: day three of a hundred, a homepage for a family restaurant in my own town, light or dark, the guest choosing. [The note is here.](https://x.com/wellyington/status/2123056661220733019) Tomorrow is another business, and another finished page.
+I am a web designer in Estepona, on the Costa del Sol, and I build websites like this one for businesses across Spain. If that sounds like your business, write to me from [the main site](https://wellyington.github.io/). Tell me what you do and where, and I will answer in plain language. The short public version of today is the note: day three of a hundred, a homepage for a family restaurant in my own town, light or dark, the guest choosing. [The note is here.](https://x.com/wellyington/status/2123056661220733019) Tomorrow is another business, and another finished page.

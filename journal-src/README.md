@@ -71,3 +71,25 @@ Copy a block in `_data/languages.yml` and `_data/navigation.yml`, add the
 code to `languages:` in `_config.yml`, add two `defaults:` entries for the
 new folder, and create the folder with `index.html`, `archive.md`,
 `about.md` and `feed.xml`.
+
+## SEO fields for articles
+
+Each article also carries search metadata in its front matter. The visible
+title stays poetic; these are what search engines and link previews show:
+
+```yaml
+seo_title: "Real Estate Website Concept: Nina Estate, Málaga"   # ≈ 45–62 chars, keyword first
+description: "One or two sentences, ≈ 140–160 chars, with the main phrase."
+keywords:                                  # 8–10 long-tail phrases in the article's language
+  - "real estate website design in Málaga"
+  - "web designer on the Costa del Sol"
+about:                                     # the business the article features
+  type: "RealEstateAgent"                  # schema.org type
+  name: "Nina Estate"
+  url: "https://ninaestate.com/"           # only if the article links it
+  locality: "Málaga"
+```
+
+Write keywords the way people search in that language, not as translations,
+and make sure the article's text actually supports each phrase. The build
+fails if an article has no keywords.

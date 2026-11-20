@@ -5,6 +5,22 @@ title: "sitio para toda la temporada"
 category: "100 días"
 tags: [100 días, caso real, teatro, rediseño]
 lede: "Día dos de cien: un concepto de portada para el Teatro Soho CaixaBank en Málaga, con la temporada, las entradas y una lectura fácil de día o al salir."
+seo_title: "Rediseño de web para teatro: Teatro Soho CaixaBank, Málaga"
+description: "Un concepto de portada para el Teatro Soho CaixaBank de Málaga: la temporada, las entradas y los patrocinadores en un orden claro, en modo claro y oscuro. Día 2."
+keywords:
+  - "rediseño web para teatro"
+  - "diseño de página web para teatros"
+  - "concepto web Teatro Soho CaixaBank"
+  - "web de teatro en Málaga"
+  - "web para programación y venta de entradas"
+  - "diseño web para teatros en España"
+  - "web con tema claro y oscuro"
+  - "diseñador web en Málaga"
+  - "reto 100 días 100 webs"
+about:
+  type: "PerformingArtsTheater"
+  name: "Teatro Soho CaixaBank"
+  locality: "Málaga"
 image: https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp
 image_alt: "Portada del caso: un concepto de portada del Teatro Soho, con la versión clara y la oscura juntas en un ordenador y la misma página en un móvil, sobre el cartel de El Gran Gatsby."
 image_caption: "Día dos. Un concepto de portada para el Teatro Soho CaixaBank, en las dos luces, en pantalla grande y en el móvil."
@@ -90,4 +106,4 @@ Puede que tú no lleves un teatro. Desde Estepona, la mayoría de los meses se p
 
 Un rediseño puede conservar lo que a la gente ya le gusta: el nombre de la puerta, el trabajo en sí, y los socios en un sitio decente, sin tapar lo que vendes. La dirección y el teléfono se quedan donde una persona puede usarlos. Lo que cambia es el orden. El sábado cabe en dos toques, la entrada queda donde ya está la mano, y la luz sigue al móvil, fácil después de una función y fácil a mediodía. Una página nueva puede hacer más fácil recorrer un negocio que ya está lleno, y dejar el carácter donde la gente ya lo encontró.
 
-Si ese es tu caso, escríbeme desde [la web principal](https://wellyington.github.io/es/). Dime a qué te dedicas y dónde, y contestaré en lenguaje llano. La versión corta de hoy es la nota del día 18: día dos de cien, una portada para este teatro, claro u oscuro, elige quien visita. [La nota está aquí.](https://x.com/wellyington/status/2123056661220733019) Mañana es otro negocio, y otra página terminada.
+Soy diseñador web en Estepona, en la Costa del Sol, y hago webs como esta para negocios de toda España. Si ese es tu caso, escríbeme desde [la web principal](https://wellyington.github.io/es/). Dime a qué te dedicas y dónde, y contestaré en lenguaje llano. La versión corta de hoy es la nota del día 18: día dos de cien, una portada para este teatro, claro u oscuro, elige quien visita. [La nota está aquí.](https://x.com/wellyington/status/2123056661220733019) Mañana es otro negocio, y otra página terminada.

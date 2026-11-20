@@ -5,6 +5,22 @@ title: "espaço para a temporada inteira"
 category: "100 dias"
 tags: [100 dias, caso real, teatro, redesenho]
 lede: "Dia dois de cem: um conceito de página inicial para o Teatro Soho CaixaBank em Málaga, com a temporada, os ingressos e uma leitura boa de dia ou à noite."
+seo_title: "Redesign de site para teatro: Teatro Soho CaixaBank, Málaga"
+description: "Um conceito de página inicial para o Teatro Soho CaixaBank, em Málaga: temporada, ingressos e patrocinadores em ordem clara, nos modos claro e escuro. Dia 2."
+keywords:
+  - "redesign de site para teatro"
+  - "design de página inicial para teatro"
+  - "conceito de site Teatro Soho CaixaBank"
+  - "site de teatro em Málaga"
+  - "site para programação e venda de ingressos"
+  - "web design para teatros na Espanha"
+  - "site com modo claro e escuro"
+  - "web designer em Málaga"
+  - "desafio 100 dias 100 sites"
+about:
+  type: "PerformingArtsTheater"
+  name: "Teatro Soho CaixaBank"
+  locality: "Málaga"
 image: https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp
 image_alt: "Capa do caso: um conceito de página inicial do Teatro Soho, com o tema claro e o escuro lado a lado num computador e a mesma página num celular, sobre o cartaz de El Gran Gatsby."
 image_caption: "Dia dois. Um conceito de página inicial para o Teatro Soho CaixaBank, nas duas luzes, na tela grande e no celular."
@@ -90,4 +106,4 @@ Pode ser que você não dirija um teatro. De Estepona, a maior parte dos meses s
 
 Um redesenho pode guardar o que as pessoas já gostam: o nome na porta, o trabalho em si, e os parceiros num lugar decente, sem cobrir o que você vende. O endereço e o telefone ficam onde uma pessoa pode usá-los. O que muda é a ordem. O sábado cabe em dois toques, o ingresso fica onde a mão já está, e a luz segue o celular, fácil depois do espetáculo e fácil ao meio-dia. Uma página nova pode tornar mais simples percorrer um negócio que já está cheio, e deixar o caráter onde as pessoas já o encontraram.
 
-Se esse é o seu caso, escreva para mim pelo [site principal](https://wellyington.github.io/pt/). Diga o que você faz e onde, e eu respondo em linguagem comum. A versão curta de hoje é a nota do dia 18: dia dois de cem, uma página inicial para este teatro, claro ou escuro, quem visita é que escolhe. [A nota está aqui.](https://x.com/wellyington/status/2123056661220733019) Amanhã é outro negócio, e outra página pronta.
+Sou web designer em Estepona, na Costa del Sol, e faço sites como este para negócios de toda a Espanha. Se esse é o seu caso, escreva para mim pelo [site principal](https://wellyington.github.io/pt/). Diga o que você faz e onde, e eu respondo em linguagem comum. A versão curta de hoje é a nota do dia 18: dia dois de cem, uma página inicial para este teatro, claro ou escuro, quem visita é que escolhe. [A nota está aqui.](https://x.com/wellyington/status/2123056661220733019) Amanhã é outro negócio, e outra página pronta.

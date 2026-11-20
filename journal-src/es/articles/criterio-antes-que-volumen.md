@@ -5,6 +5,23 @@ title: "criterio antes que volumen"
 category: "100 días"
 tags: [100 días, caso real, inmobiliaria, málaga]
 lede: "Día cuatro de cien: un concepto de web para Nina Estate, en Málaga, que se lee menos como un portal inmobiliario y más como un despacho privado, con la directora, el método y cuatro residencias en primer plano."
+seo_title: "Web para inmobiliaria en Málaga: Nina Estate"
+description: "Un concepto de web para Nina Estate en Málaga: un despacho inmobiliario privado con residencias, cuatro servicios, un proceso claro y la directora delante. Día 4."
+keywords:
+  - "diseño web para inmobiliarias en Málaga"
+  - "web inmobiliaria de lujo"
+  - "página web para agencia inmobiliaria en Marbella"
+  - "rediseño de web inmobiliaria en la Costa del Sol"
+  - "web para despacho inmobiliario privado"
+  - "inmuebles fuera de mercado"
+  - "web inmobiliaria con contacto por WhatsApp"
+  - "diseñador web en la Costa del Sol"
+  - "reto 100 días 100 webs"
+about:
+  type: "RealEstateAgent"
+  name: "Nina Estate"
+  url: "https://ninaestate.com/"
+  locality: "Málaga"
 image: https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp
 image_alt: "Portada del caso de un concepto de web para Nina Estate: la apertura dividida entre un tema claro color piedra y un tema oscuro casi negro, con una villa con piscina al atardecer, y la misma web en un móvil."
 image_caption: "Día cuatro. Un concepto para Nina Estate, con las dos luces, en pantalla grande y en el móvil."
@@ -20,7 +37,7 @@ Es un rediseño independiente. No es una colaboración con Nina Estate, nadie al
 
 La mayoría de las webs inmobiliarias están hechas como escaparates. Un buscador arriba, una rejilla de anuncios, un precio en cada tarjeta, un teléfono en una esquina. Funciona para una agencia que gana por volumen, con cientos de viviendas y un comprador que quiere ir pasando fotos.
 
-Nina Estate tiene otra forma. Pocos inmuebles, varios de ellos edificios completos. Precios a consultar. Una persona, la directora, que atiende ella misma a cada cliente. Quien compra o vende a ese nivel no está eligiendo sobre todo un anuncio. Está eligiendo en quién confía para que elija por él.
+Nina Estate tiene otra forma. Pocos inmuebles, varios de ellos edificios completos. Precios a consultar. Una persona, la directora, que atiende ella misma a cada cliente. Quien compra o vende a ese nivel del mercado de lujo no está eligiendo sobre todo un anuncio. Está eligiendo en quién confía para que elija por él.
 
 Así que tomé un camino distinto al de la web actual. Menos agencia tradicional y más despacho privado, donde la forma de presentar las cosas, el trato personal y el cuidado en los detalles son parte de lo que recibe el cliente. La web actual empieza por la experiencia, los inmuebles y los servicios. El concepto empieza por la relación: con quién vas a tratar, cómo será la búsqueda y qué pasa desde la primera llamada hasta las llaves.
 
@@ -70,7 +87,7 @@ La sección II es la cartera, con el título sencillo de Residences, residencias
 
 En el concepto hay cuatro inmuebles. N.º 1, una villa en Marbella, de 400 metros cuadrados. N.º 2, un edificio junto a la Catedral de Málaga, que se vende entero. N.º 3, otro edificio en el Centro Histórico. N.º 4, una residencia en El Limonar, de 329 metros cuadrados. Todos dicen precio a consultar. Las tarjetas son grandes, colocadas a alturas distintas en lugar de en una rejilla apretada, y cada una tiene una flechita para abrirla.
 
-Cuatro no es mucho para una web inmobiliaria, y lo dejé en cuatro. Una rejilla larga haría que el negocio pareciera un portal, y no lo es. Bajo las tarjetas hay una línea en cursiva: some of our finest homes are never published, algunas de nuestras mejores casas nunca se publican. Al lado, un botón: solicitar acceso privado. En esta parte del mercado, buena parte de lo mejor cambia de manos sin anuncio público. La página lo dice con claridad y ofrece la forma de entrar.
+Cuatro no es mucho para una web inmobiliaria, y lo dejé en cuatro. Una rejilla larga haría que el negocio pareciera un portal, y no lo es. Bajo las tarjetas hay una línea en cursiva: some of our finest homes are never published, algunas de nuestras mejores casas nunca se publican. Al lado, un botón: solicitar acceso privado. En esta parte del mercado, buena parte de lo mejor cambia de manos fuera de mercado, sin anuncio público. La página lo dice con claridad y ofrece la forma de entrar.
 
 Más abajo, una segunda foto a todo el ancho, la lámina II, con una frase sobre la parte tranquila de la imagen: la discreción no es un servicio, es el estándar.
 
@@ -142,4 +159,4 @@ Puede que tú no vendas casas. Muchos negocios venden algo que se decide despaci
 
 Para una decisión lenta ayuda hacer lo contrario. Di con quién va a tratar el cliente, y enséñalo. Escribe el proceso en unos pocos pasos. Enseña poco trabajo, a un tamaño en el que se pueda mirar bien. Da una forma directa de llegar a una persona. Y deja que el diseño sea lo bastante tranquilo como para que quien visita lea en lugar de pasar de largo.
 
-Si eso suena a tu negocio, escríbeme desde [la web principal](https://wellyington.github.io/es/). Dime a qué te dedicas y dónde, y te contestaré en lenguaje llano. El concepto está [aquí](https://wellyington.github.io/challenge/day4/), y la web de Nina Estate está [aquí](https://ninaestate.com/), por si quieres compararlas. Cuatro hechos, quedan noventa y seis.
+Soy diseñador web en Estepona, en la Costa del Sol, y hago webs como esta para negocios de toda España. Si eso suena a tu negocio, escríbeme desde [la web principal](https://wellyington.github.io/es/). Dime a qué te dedicas y dónde, y te contestaré en lenguaje llano. El concepto está [aquí](https://wellyington.github.io/challenge/day4/), y la web de Nina Estate está [aquí](https://ninaestate.com/), por si quieres compararlas. Cuatro hechos, quedan noventa y seis.

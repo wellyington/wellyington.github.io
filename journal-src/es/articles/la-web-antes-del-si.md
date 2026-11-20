@@ -5,6 +5,22 @@ title: "la web antes del sí"
 category: "100 días"
 tags: [100 días, caso real, construcción, pequeño negocio]
 lede: "Día uno de cien: una web de una página para Pedro Sánchez Construcción, ya en línea, para que pueda verla terminada antes de firmar cualquier contrato."
+seo_title: "Web para constructora en la Marina Alta: Pedro Sánchez"
+description: "Una web de una página para Pedro Sánchez Construction, constructora familiar en Jávea, Dénia y Calpe, hecha y publicada antes de firmar. Día 1 de 100."
+keywords:
+  - "página web para constructora"
+  - "diseño web para constructoras en la Costa Blanca"
+  - "web para empresa de construcción en Jávea"
+  - "diseño web para constructores en Dénia y Calpe"
+  - "web de una página para pequeña empresa"
+  - "constructora familiar en la Marina Alta"
+  - "web hecha antes de firmar el contrato"
+  - "diseño web para pequeñas empresas en Alicante"
+  - "reto 100 días 100 webs"
+about:
+  type: "HomeAndConstructionBusiness"
+  name: "Pedro Sánchez Construction"
+  locality: "Marina Alta, Alicante"
 image: https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp
 image_alt: "Portada del caso: la web de Pedro Sánchez Construcción en un ordenador y en un móvil, con la frase Más de 25 años construyendo hogares."
 image_caption: "Día uno. La página de una constructora en la Marina Alta, en pantalla grande y en el móvil."
@@ -102,7 +118,7 @@ Puede que tú no construyas casas. Desde Estepona veo el mismo apuro casi todos 
 
 Se puede hacer al revés. La página existe primero: tu nombre, el trabajo que haces de verdad, los pueblos a los que llegas, una forma de escribirte que se parece a cómo ya hablas con la gente. La abres en tu móvil. Se la enseñas a tu pareja, a un hermano, a quien lleva el dinero. Luego decides.
 
-Eso es lo útil de estos cien días, y es como prefiero trabajar cuando no hay ningún reto de por medio. Si quieres una página así, escríbeme desde [la web principal](https://wellyington.github.io/es/). Dime a qué te dedicas y dónde. Contestaré en lenguaje normal.
+Eso es lo útil de estos cien días, y es como prefiero trabajar cuando no hay ningún reto de por medio. Soy diseñador web en Estepona, en la Costa del Sol, y hago webs como esta para negocios de toda España. Si quieres una página así, escríbeme desde [la web principal](https://wellyington.github.io/es/). Dime a qué te dedicas y dónde. Contestaré en lenguaje normal.
 
 ## un favor pequeño
 

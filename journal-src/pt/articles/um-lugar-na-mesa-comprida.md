@@ -5,6 +5,22 @@ title: "um lugar na mesa comprida"
 category: "100 dias"
 tags: [100 dias, caso real, restaurante, hospitalidade]
 lede: "Dia três de cem: um conceito de página inicial para o Los Arcos, um bar e restaurante familiar em Estepona, com o cardápio, a semana, um pedido de reserva e uma luz para o almoço e outra para a noite."
+seo_title: "Site para restaurante em Estepona: Los Arcos"
+description: "Um conceito de página inicial para o Los Arcos, bar e restaurante familiar em Estepona: cardápio, programação, horários e pedido de reserva, claro e escuro. Dia 3."
+keywords:
+  - "criação de site para restaurante"
+  - "site para bar e restaurante"
+  - "site de restaurante familiar na Costa del Sol"
+  - "site de restaurante com formulário de reserva"
+  - "cardápio do restaurante no celular"
+  - "horário do restaurante no site"
+  - "restaurante em Estepona"
+  - "web designer em Estepona"
+  - "desafio 100 dias 100 sites"
+about:
+  type: "Restaurant"
+  name: "Los Arcos Bar & Restaurant"
+  locality: "Estepona"
 image: https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp
 image_alt: "Capa do caso de um conceito de site para o Los Arcos Estepona: a abertura dividida entre um tema creme e um tema carvão num computador, com a mesma página num celular."
 image_caption: "Dia três. Um conceito de página inicial para o Los Arcos, nas duas luzes, em tela grande e no celular."
@@ -116,4 +132,4 @@ Pode ser que você não tenha um restaurante. Muitos negócios desta costa se pa
 
 O que ajuda é uma ordem, não mais blocos. Diga o que o lugar é numa linha. Mostre aquilo que faz as pessoas virem de verdade. Coloque a semana onde dá para ler e o horário onde ele responde "agora?". Faça com que o jeito de entrar, um telefone, um formulário, uma mesa, seja honesto sobre o que acontece depois. E deixe a página seguir a luz em que a pessoa está.
 
-Se isso parece com o seu negócio, escreva para mim pelo [site principal](https://wellyington.github.io/pt/). Diga o que você faz e onde, e eu respondo em linguagem comum. A versão curta de hoje é a nota: dia três de cem, uma página inicial para um restaurante familiar na minha própria cidade, claro ou escuro, quem visita é que escolhe. [A nota está aqui.](https://x.com/wellyington/status/2123056661220733019) Amanhã é outro negócio, e outra página pronta.
+Sou web designer em Estepona, na Costa del Sol, e faço sites como este para negócios de toda a Espanha. Se isso parece com o seu negócio, escreva para mim pelo [site principal](https://wellyington.github.io/pt/). Diga o que você faz e onde, e eu respondo em linguagem comum. A versão curta de hoje é a nota: dia três de cem, uma página inicial para um restaurante familiar na minha própria cidade, claro ou escuro, quem visita é que escolhe. [A nota está aqui.](https://x.com/wellyington/status/2123056661220733019) Amanhã é outro negócio, e outra página pronta.

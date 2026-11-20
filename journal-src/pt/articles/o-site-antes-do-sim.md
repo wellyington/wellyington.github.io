@@ -5,6 +5,22 @@ title: "o site antes do sim"
 category: "100 dias"
 tags: [100 dias, caso real, construção, pequeno negócio]
 lede: "Dia um de cem: um site de uma página para a construtora Pedro Sánchez, já no ar, para que ele possa ver a página pronta antes de assinar qualquer contrato."
+seo_title: "Site para construtora na Marina Alta: Pedro Sánchez"
+description: "Um site de uma página para a Pedro Sánchez Construction, construtora familiar em Jávea, Dénia e Calpe, feito e no ar antes do contrato. Dia 1 de 100."
+keywords:
+  - "site para construtora"
+  - "site para empresa de construção"
+  - "site de construtora na Costa Blanca"
+  - "web design para construtoras na Espanha"
+  - "site de uma página para pequena empresa"
+  - "construtora familiar na Marina Alta"
+  - "site pronto antes do contrato"
+  - "site para construtora em Jávea, Dénia e Calpe"
+  - "desafio 100 dias 100 sites"
+about:
+  type: "HomeAndConstructionBusiness"
+  name: "Pedro Sánchez Construction"
+  locality: "Marina Alta, Alicante"
 image: https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp
 image_alt: "Capa do caso: o site da Pedro Sánchez Construcción num computador e num celular, com a frase Más de 25 años construyendo hogares."
 image_caption: "Dia um. A página de uma construtora na Marina Alta, na tela grande e no celular."
@@ -102,7 +118,7 @@ Pode ser que você não construa casas. De Estepona eu vejo o mesmo aperto quase
 
 Dá para inverter. A página existe primeiro: o seu nome, o trabalho que você faz de verdade, as cidades que atende, um jeito de ser encontrado que combina com o modo como você já fala com as pessoas. Você abre no próprio celular. Mostra para um parceiro, um irmão, quem cuida do dinheiro. Aí decide.
 
-Essa é a parte útil destes cem dias, e é como prefiro trabalhar quando não há desafio nenhum. Se quiser uma página assim, escreva para mim pelo [site principal](https://wellyington.github.io/pt/). Diga o que você faz e onde. Respondo em linguagem comum.
+Essa é a parte útil destes cem dias, e é como prefiro trabalhar quando não há desafio nenhum. Sou web designer em Estepona, na Costa del Sol, e faço sites como este para negócios de toda a Espanha. Se quiser uma página assim, escreva para mim pelo [site principal](https://wellyington.github.io/pt/). Diga o que você faz e onde. Respondo em linguagem comum.
 
 ## um pedido pequeno
 

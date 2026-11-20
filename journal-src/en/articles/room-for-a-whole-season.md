@@ -5,6 +5,22 @@ title: "room for a whole season"
 category: "100 Days"
 tags: [100 days, case study, theatre, redesign]
 lede: "Day two of a hundred: a homepage concept for Teatro Soho CaixaBank in Málaga, with the season, the tickets and a page you can read by day or after the show."
+seo_title: "Theatre Website Redesign: Teatro Soho CaixaBank, Málaga"
+description: "A homepage concept for Teatro Soho CaixaBank in Málaga: the season, tickets and partners in a clear order, with light and dark themes. Day 2 of 100 Days."
+keywords:
+  - "theatre website redesign"
+  - "theatre homepage design"
+  - "Teatro Soho CaixaBank website concept"
+  - "Málaga theatre website"
+  - "website for a theatre season and tickets"
+  - "website design for a theatre in Spain"
+  - "website with light and dark themes"
+  - "web designer in Málaga"
+  - "100 days 100 websites challenge"
+about:
+  type: "PerformingArtsTheater"
+  name: "Teatro Soho CaixaBank"
+  locality: "Málaga"
 image: https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp
 image_alt: "Case study cover of a Teatro Soho homepage concept, with the light and dark opening side by side on a desktop and the same page on a phone, over the poster for El Gran Gatsby."
 image_caption: "Day two. A homepage concept for Teatro Soho CaixaBank, in both lights, on a large screen and on a phone."
@@ -90,4 +106,4 @@ You may not run a theatre. From Estepona, most months look more like this day th
 
 A redesign can keep what people already like: the name on the door, the work itself, and the partners in a decent place instead of covering what you sell. The address and the phone stay where a person can act. What changes is the order. Saturday takes two taps, the ticket sits where the hand already is, and the light follows the phone, easy after a show and easy at noon. A new page can make a full business easier to move through, and leave the character where people already found it.
 
-If that is your situation, write to me from [the main site](https://wellyington.github.io/). Say what you do, and where, and I will answer in plain language. The short public version of today is the note from the 18th: day two of a hundred, a homepage for this theatre, light or dark, the visitor choosing. [The note is here.](https://x.com/wellyington/status/2123056661220733019) Tomorrow is another business, and another finished page.
+I am a web designer in Estepona, on the Costa del Sol, and I build websites like this one for businesses across Spain. If that is your situation, write to me from [the main site](https://wellyington.github.io/). Say what you do, and where, and I will answer in plain language. The short public version of today is the note from the 18th: day two of a hundred, a homepage for this theatre, light or dark, the visitor choosing. [The note is here.](https://x.com/wellyington/status/2123056661220733019) Tomorrow is another business, and another finished page.

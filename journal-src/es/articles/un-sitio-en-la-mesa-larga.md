@@ -5,6 +5,22 @@ title: "un sitio en la mesa larga"
 category: "100 días"
 tags: [100 días, caso real, restaurante, hostelería]
 lede: "Día tres de cien: un concepto de portada para Los Arcos, un bar restaurante familiar en Estepona, con la carta, la semana, una solicitud de reserva y una luz para el mediodía y otra para la noche."
+seo_title: "Web para restaurante en Estepona: Los Arcos"
+description: "Un concepto de portada para Los Arcos, bar restaurante familiar en Estepona: carta, agenda, horarios y solicitud de reserva, en modo claro y oscuro. Día 3."
+keywords:
+  - "diseño web para restaurantes en Estepona"
+  - "página web para bar restaurante"
+  - "web para restaurante familiar en la Costa del Sol"
+  - "web de restaurante con formulario de reservas"
+  - "horarios del restaurante en la web"
+  - "carta del restaurante en el móvil"
+  - "Sunday Carvery en Estepona"
+  - "diseñador web en Estepona"
+  - "reto 100 días 100 webs"
+about:
+  type: "Restaurant"
+  name: "Los Arcos Bar & Restaurant"
+  locality: "Estepona"
 image: https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp
 image_alt: "Portada del caso de un concepto de web para Los Arcos Estepona: la apertura dividida entre un tema crema y un tema carbón en un ordenador, con la misma página en un móvil."
 image_caption: "Día tres. Un concepto de portada para Los Arcos, con las dos luces, en pantalla grande y en el móvil."
@@ -116,4 +132,4 @@ Puede que tú no lleves un restaurante. Muchos negocios de esta costa se parecen
 
 Lo que ayuda es un orden, no más bloques. Di qué es el sitio en una línea. Enseña aquello por lo que la gente viene de verdad. Pon la semana donde se pueda leer y el horario donde responda a la pregunta de "¿ahora?". Haz que la forma de entrar, un teléfono, un formulario, una mesa, sea honesta sobre lo que pasa después. Y deja que la página siga la luz en la que está la persona.
 
-Si eso suena a tu negocio, escríbeme desde [la web principal](https://wellyington.github.io/es/). Dime a qué te dedicas y dónde, y contestaré en lenguaje llano. La versión corta de hoy es la nota: día tres de cien, una portada para un restaurante familiar de mi propio pueblo, claro u oscuro, elige quien visita. [La nota está aquí.](https://x.com/wellyington/status/2123056661220733019) Mañana es otro negocio, y otra página terminada.
+Soy diseñador web en Estepona, en la Costa del Sol, y hago webs como esta para negocios de toda España. Si eso suena a tu negocio, escríbeme desde [la web principal](https://wellyington.github.io/es/). Dime a qué te dedicas y dónde, y contestaré en lenguaje llano. La versión corta de hoy es la nota: día tres de cien, una portada para un restaurante familiar de mi propio pueblo, claro u oscuro, elige quien visita. [La nota está aquí.](https://x.com/wellyington/status/2123056661220733019) Mañana es otro negocio, y otra página terminada.

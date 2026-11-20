@@ -5,6 +5,22 @@ title: "built before the yes"
 category: "100 Days"
 tags: [100 days, case study, construction, small business]
 lede: "Day one of a hundred: a one-page website for Pedro Sánchez Construction, already live, so he can see his own finished site before any contract is signed."
+seo_title: "Builder Website in the Marina Alta: Pedro Sánchez Construction"
+description: "A one-page website for Pedro Sánchez Construction, a family builder in Jávea, Dénia and Calpe, built and live before any contract. Day 1 of 100 Days."
+keywords:
+  - "website for a construction company"
+  - "builder website design on the Costa Blanca"
+  - "construction company website in Jávea"
+  - "web design for builders in Dénia and Calpe"
+  - "one-page website for a small business"
+  - "family builder website in the Marina Alta"
+  - "website built before signing a contract"
+  - "small business web design in Alicante"
+  - "100 days 100 websites challenge"
+about:
+  type: "HomeAndConstructionBusiness"
+  name: "Pedro Sánchez Construction"
+  locality: "Marina Alta, Alicante"
 image: https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp
 image_alt: "Case study cover of the Pedro Sánchez Construction website on a desktop screen and a phone, with the line Más de 25 años construyendo hogares."
 image_caption: "Day one. The page for a builder in the Marina Alta, on a large screen and on a phone."
@@ -102,7 +118,7 @@ You may not build houses. From Estepona I see the same bind most months. The bus
 
 It can go the other way. The page exists first: your name, the work you do, the towns you serve, a way to be reached that matches how you already talk to people. You open it on your phone. You show a partner, a sibling, the person who looks after the money. Then you decide.
 
-That is the useful part of these hundred days, and it is how I prefer to work when no challenge is running. If you want a page like that, write to me from [the main site](https://wellyington.github.io/). Say what you do, and where. I will answer in ordinary language.
+That is the useful part of these hundred days, and it is how I prefer to work when no challenge is running. I am a web designer in Estepona, on the Costa del Sol, and I build websites like this one for businesses across Spain. If you want a page like that, write to me from [the main site](https://wellyington.github.io/). Say what you do, and where. I will answer in ordinary language.
 
 ## a small favour
 
