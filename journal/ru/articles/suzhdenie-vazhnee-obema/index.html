@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="суждение важнее объёма" />
+<meta name="author" content="Wellyington" />
+<meta property="og:locale" content="ru" />
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/" />
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/" />
+<meta property="og:site_name" content="Journal" />
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-20T11:30:00+01:00" />
+<meta property="article:modified_time" content="2026-11-20T11:30:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" />
+<meta name="twitter:title" content="суждение важнее объёма" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wellyington"},"dateModified":"2026-11-20T11:30:00+01:00","datePublished":"2026-11-20T11:30:00+01:00","headline":"суждение важнее объёма","image":"https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/"},"url":"https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>суждение важнее объёма — Журнал · Wellyington</title>
+<meta name="description" content="Четвёртый день из ста: концепт сайта для Nina Estate в Малаге, который читается не как портал недвижимости, а как частная практика: впереди директор, метод и четыре объекта.">
+<meta property="og:description" content="Четвёртый день из ста: концепт сайта для Nina Estate в Малаге, который читается не как портал недвижимости, а как частная практика: впереди директор, метод и четыре объекта.">
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/judgement-over-volume/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/criterio-antes-que-volumen/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/criterio-antes-de-volume/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/suzhdenie-vazhnee-obema/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/suzhdenie-vazhnee-obema/" class="menu-entry">
+            <span class="mono dim">№ 004</span>
+            <span>суждение важнее объёма<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/mesto-za-dlinnym-stolom/" class="menu-entry">
+            <span class="mono dim">№ 003</span>
+            <span>место за длинным столом<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/mesto-dlya-tselogo-sezona/" class="menu-entry">
+            <span class="mono dim">№ 002</span>
+            <span>место для целого сезона<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/sait-do-slova-da/" class="menu-entry">
+            <span class="mono dim">№ 001</span>
+            <span>сайт до слова «да»<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/judgement-over-volume/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/criterio-antes-que-volumen/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/criterio-antes-de-volume/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/suzhdenie-vazhnee-obema/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 004</span>
+    <span class="entry-cell label">100 дней</span>
+    <time class="entry-cell" datetime="2026-11-20T11:30:00+01:00">20 ноября 2026</time>
+    <span class="entry-cell">10 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">суждение важнее объёма<span class="dot">.</span></h1><p class="entry-lede">Четвёртый день из ста: концепт сайта для Nina Estate в Малаге, который читается не как портал недвижимости, а как частная практика: впереди директор, метод и четыре объекта.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Обложка кейса с концептом сайта Nina Estate: первый экран разделён между светлой каменной и почти чёрной тёмной темой, вилла с бассейном в сумерках, рядом тот же сайт на телефоне." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 004</span>
+</div>
+<p class="caption label">День четвёртый. Концепт для Nina Estate, в обоих светах, на большом экране и на телефоне.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fsuzhdenie-vazhnee-obema%2F&text=%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B2%D0%B0%D0%B6%D0%BD%D0%B5%D0%B5+%D0%BE%D0%B1%D1%8A%D1%91%D0%BC%D0%B0"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fsuzhdenie-vazhnee-obema%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>20 ноября я выложил четвёртую заметку этого ряда, челленджа, который придумал Рамайя Траск: сто дней, сто дел, сто сайтов. Первым днём была семейная строительная фирма в Марина-Альте, которой нужна была первая ясная страница. <a href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">Та страница здесь.</a> Вторым был театр в Малаге с полным сезоном и без порядка. <a href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/">Он здесь.</a> Третьим был семейный ресторан в моём собственном городе, куда заходят по многим причинам. <a href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/">Он здесь.</a> Сегодня дело продаёт то, о чём люди думают месяцами.</p>
+
+<p>Nina Estate — агентство недвижимости в Малаге, с офисом на проспекте Кановас-дель-Кастильо. Оно работает в городе и на Коста-дель-Соль: дома, целые здания, инвестиции и долгосрочная аренда. Сайт у него уже есть, <a href="https://ninaestate.com/">ninaestate.com</a>: там рассказано об опыте, объектах и услугах. Мой концепт здесь: <a href="https://wellyington.github.io/challenge/day4/">Nina Estate, день четвёртый</a>.</p>
+
+<p>Это независимый редизайн. Это не сотрудничество с Nina Estate, никто оттуда меня не просил, и ничто на странице не означает, что они его одобрили. Пока он живёт на моём собственном адресе, как и три предыдущих.</p>
+
+<h2 id="другая-страница-для-агентства">другая страница для агентства</h2>
+
+<p>Большинство сайтов недвижимости устроены как витрина. Поиск наверху, сетка объявлений, цена на каждой карточке, телефон в углу. Это работает для агентства, которое берёт объёмом: сотни объектов и покупатель, который хочет листать.</p>
+
+<p>У Nina Estate другая форма. Немного объектов, часть из них — здания целиком. Цены по запросу. Один человек, директор, который сам ведёт каждого клиента. Тот, кто покупает или продаёт на этом уровне, в первую очередь выбирает не объявление. Он выбирает, кому доверить выбор.</p>
+
+<p>Поэтому я пошёл другим путём, чем нынешний сайт. Меньше похоже на обычное агентство, больше на частную практику, где подача, личное обслуживание и внимание к деталям — часть того, что получает клиент. Нынешний сайт начинает с опыта, объектов и услуг. Концепт начинает с отношений: с кем вы будете иметь дело, как пройдёт поиск и что происходит от первого звонка до ключей.</p>
+
+<p>Мысль короткая. Сайт должен быть ближе к той услуге, которую он продаёт.</p>
+
+<h2 id="дома-тихого-достоинства">дома тихого достоинства</h2>
+
+<p>Первый экран почти пустой, и это сделано намеренно. Заголовок крупной тонкой антиквой: residences of quiet distinction, дома тихого достоинства, вторая строка курсивом. Под ним маленькая строка цвета бычьей крови: Малага, Марбелья, Коста-дель-Соль. Справа одна фраза, которая работает вместо миссии: частная практика в недвижимости для покупателей, продавцов и инвесторов, которые ценят суждение выше объёма.</p>
+
+<p>Ниже одна широкая фотография с подписью Plate I, таблица I, как в книге: вилла в сумерках, подсвеченный бассейн, бугенвиллея над террасой, фонари на низкой стенке. Страница держит снимок в этом размере и ничего на него не кладёт.</p>
+
+<p>Под фотографией, там, где большинство агентств поставили бы форму поиска с десятком полей, стоит фраза, которую нужно закончить. I would like to buy a villa in Marbella: я хотел бы купить виллу в Марбелье. Каждое из трёх слов курсивом — выпадающий список. «Купить» можно поменять на «снять», «вложиться в» или «продать». «Виллу» — на дом, квартиру или здание. «Марбелью» — на центр Малаги, Эль-Лимонар или Коста-дель-Соль. И одна кнопка: смотреть объекты.</p>
+
+<p>Мелочь, но она меняет тон. Форма поиска просит вас отфильтровать. Фраза спрашивает, чего вы хотите, так, как спросил бы агент по телефону. В концепте фраза ведёт к объектам. Она не притворяется поиском, который этому делу не нужен.</p>
+
+<p><img src="/images/journal/100-days-day-4/01-split.webp" alt="Первый экран Nina Estate, разрезанный по диагонали между светлой каменной и почти чёрной темой: заголовок Residences of quiet distinction, вилла с бассейном в сумерках и фраза I would like to buy a villa in Marbella." />
+<em>Первый экран, разрезанный надвое. Одно и то же приветствие днём и вечером.</em></p>
+
+<h2 id="камень-чернила-и-бычья-кровь">камень, чернила и бычья кровь</h2>
+
+<p>Цвета взяты из того, как этот рынок выглядит, когда всё сделано хорошо: штукатурка, старая бумага, тёмное дерево, бокал красного на столе.</p>
+
+<p>Светлая тема — тёплый камень, #DEDBD5, почти чёрные чернила, #141312, для текста и цвет бычьей крови, #6E2323, для мелочей, которые важны: номеров, активного фильтра, слов курсивом во фразе. Тёмная тема почти чёрная, #121110, с текстом цвета слоновой кости, #ECE7E0, и приглушённым розовым, #D9A79B, на месте тёмно-красного. Ни одна из них не главная. Это два полноценных сайта, и один и тот же объект должен хорошо смотреться в обоих.</p>
+
+<p>Почти всю работу делает шрифт. Cormorant Garamond, тонкая контрастная антиква, для заголовков и названий объектов. Jost, простой гротеск, очень мелкий и разреженный, для подписей. Разделы пронумерованы римскими цифрами, от I до VI, а фотографии называются таблицами. Всё это читается скорее как печатный каталог галереи, чем как приложение, и так ближе к тому, как эти дома продают вживую.</p>
+
+<p>Как и в предыдущие дни, страница следует настройке телефона или компьютера. Если включена тёмная тема, сайт открывается тёмным. Круглая кнопка в шапке переключает тему, и сайт запоминает выбор до следующего раза.</p>
+
+<p><img src="/images/journal/100-days-day-4/02-light.webp" alt="Раздел объектов в светлой теме: камень, тёмный текст и детали цвета бычьей крови, Villa, Marbella под номером 1, рядом телефон с разделом The House в той же теме." />
+<em>Светлая тема: тёплый камень, чернила и бычья кровь, с журнальной антиквой.</em></p>
+
+<p><img src="/images/journal/100-days-day-4/03-dark.webp" alt="Тот же раздел объектов в тёмной теме: почти чёрный фон, текст цвета слоновой кости и розовые акценты, рядом телефон в тёмном режиме." />
+<em>Тёмная тема. Она следует настройке устройства, пока вы не выберете сами, и кнопка в шапке запоминает выбор.</em></p>
+
+<h2 id="дом">дом</h2>
+
+<p>Раздел I называется The House, дом, и состоит из одного абзаца. Больше десяти лет Nina Estate представляет дома, здания и инвестиции в Малаге и на Коста-дель-Соль, лично и без лишнего шума.</p>
+
+<p>Под ним три числа, у каждого маленькая подпись. 10+, лет на побережье. Один, контакт. Четыре, направления. Мне хотелось чисел, которые клиент может проверить, а не сумм проданных квадратных метров или счётчика счастливых семей. Второе — самая важная строка на странице. На этом уровне покупателю нужно знать, что человек, который ответил на первый звонок, будет рядом и у нотариуса.</p>
+
+<p><img src="/images/journal/100-days-day-4/08-toggle.webp" alt="Раздел The House, разделённый между светлой и тёмной темой, с абзацем о десятилетии на побережье и числами 10+, One и Four." />
+<em>Следует настройке системы, или выбираете вы, кнопкой.</em></p>
+
+<h2 id="четыре-объекта-а-не-четыреста">четыре объекта, а не четыреста</h2>
+
+<p>Раздел II — портфолио, под простым заголовком Residences, объекты. Справа четыре фильтра: все, Малага, Марбелья, инвестиции. При выборе фильтра карточки перестраиваются без перезагрузки страницы.</p>
+
+<p>В концепте четыре объекта. № 1 — вилла в Марбелье, 400 квадратных метров. № 2 — здание у собора в Малаге, продаётся целиком. № 3 — ещё одно здание в историческом центре. № 4 — резиденция в Эль-Лимонаре, 329 квадратных метров. У всех цена по запросу. Карточки крупные, стоят на разной высоте, а не плотной сеткой, и у каждой маленькая стрелка, чтобы открыть объект.</p>
+
+<p>Четыре — это немного для сайта недвижимости, и я оставил четыре. Длинная сетка сделала бы дело похожим на портал, а это не портал. Под карточками строка курсивом: some of our finest homes are never published, некоторые из наших лучших домов никогда не публикуются. Рядом кнопка: запросить закрытый доступ. В этом сегменте рынка многие лучшие объекты переходят из рук в руки без публичного объявления. Страница говорит об этом прямо и показывает, как туда попасть.</p>
+
+<p>Ниже вторая фотография на всю ширину, таблица II, с одной фразой поверх спокойной части снимка: конфиденциальность — не услуга, а стандарт.</p>
+
+<h2 id="четыре-направления-по-одному">четыре направления, по одному</h2>
+
+<p>Раздел III делит работу на четыре части: покупка, продажа, инвестиции и аренда. На нынешнем сайте услуги читаются как список. Здесь каждая — строка, которая раскрывается на месте, так что продавцу не нужно читать процесс покупателя, чтобы найти свой.</p>
+
+<p>Покупка: поиск, построенный вокруг того, как вы хотите жить, и каждый объект проверен до того, как попадёт к вам. Дальше задание и шорт-лист, показы с сопровождением, переговоры, вплоть до нотариуса, и кнопка «начать поиск». Продажа: ваш объект подан так, как ждут покупатели этого уровня, и показан нужным людям: оценка, журнальная фотосъёмка, проверенные покупатели и деликатный маркетинг. Инвестиции: здания, активы и доходная недвижимость в историческом центре и на побережье: здания целиком, анализ доходности, предложения вне порталов и сопровождение актива. Аренда: долгосрочная аренда, в которой заботятся и о владельцах, и о жильцах: подбор арендаторов, договоры и опись, представительство владельца и переезд.</p>
+
+<p>Каждое направление заканчивается своим следующим шагом: начать поиск, запросить оценку, обсудить инвестицию, спросить про аренду. Тому, кто пришёл только продать, никогда не придётся читать про доходность.</p>
+
+<p><img src="/images/journal/100-days-day-4/05-disciplines.webp" alt="Раздел Disciplines в тёмной теме с открытым пунктом Acquisition, четырьмя услугами и кнопкой Begin a search, рядом тот же аккордеон на телефоне." />
+<em>Каждое направление раскрывается на месте, со своими услугами и следующим шагом.</em></p>
+
+<h2 id="метод">метод</h2>
+
+<p>Раздел IV отвечает на вопрос, который рано или поздно задаёт каждый, кто впервые покупает в Испании: что именно происходит и в каком порядке? Четыре шага, пронумерованные маленькими римскими цифрами и стоящие рядом.</p>
+
+<p>Разговор: как вы живёте, что вам нужно и в какие сроки. Отбор: короткий продуманный список, и каждый объект агентство видело до вас. Показ: с сопровождением вживую или частным видео под ваш график, что важно, когда покупатель живёт в Лондоне или Дубае. Сделка: переговоры, документы и нотариус, всё от вашего имени, до передачи ключей.</p>
+
+<p>Ничего нового для того, кто уже покупал здесь. Но, записанный в четыре короткие строки, процесс кажется знакомым ещё до начала, а в дорогом и долгом решении это немалая часть того, за что платит клиент.</p>
+
+<h2 id="человек-за-делом">человек за делом</h2>
+
+<p>Раздел V — изменение, которое для меня важнее всего. На многих сайтах агентств люди — это маленькие фотографии на странице «о нас», если они вообще есть. Здесь у директора свой раздел, того же размера, что и объекты.</p>
+
+<p>Йована Докич. Имя набрано крупно, фамилия курсивом, рядом портрет на террасе над портом в сумерках. Текст короткий: специалист в бизнесе и недвижимости, она руководит Nina Estate больше десяти лет на Коста-дель-Соль, и каждый клиент работает с ней напрямую, в комплексном и личном сопровождении, построенном так, чтобы добиться лучших условий. Под текстом две кнопки: написать в WhatsApp и номер телефона, +34 664 149 638.</p>
+
+<p>Причина практическая. В фирме такого размера человек и есть услуга. Клиенты будут говорить с ней, смотреть объекты с ней и подписывать документы, когда она рядом. Сайт, который прячет это за стоковыми фото ключей и рукопожатий, недооценивает единственное, что большому агентству трудно скопировать.</p>
+
+<p><img src="/images/journal/100-days-day-4/04-method-director.webp" alt="Метод в четыре шага, Conversation, Selection, Viewing и Completion, на светлой каменной панели, над разделом директора в тёмной теме с портретом Йованы Докич и кнопками WhatsApp и телефона." />
+<em>Метод в четыре шага и директор, с прямой связью с ней.</em></p>
+
+<h2 id="по-предварительной-записи">по предварительной записи</h2>
+
+<p>Последний раздел, VI, называется «частные запросы», а заголовок гласит by appointment, по предварительной записи. Слева три способа связаться: телефон, почта jovana@ninaestate.com и офис, проспект Кановас-дель-Кастильо, 8, Малага.</p>
+
+<p>Справа короткая форма. Имя, почта, телефон, выбор темы запроса, совпадающий с четырьмя направлениями, и сообщение. При отправке открывается почтовое приложение посетителя, где всё уже написано и адресовано Йоване. Строка под кнопкой говорит, что на каждый запрос отвечают лично и конфиденциально. Нет ни личного кабинета, ни автоответа, который делает вид, что он человек. Частная практика сама отвечает на свою почту.</p>
+
+<h2 id="на-телефоне">на телефоне</h2>
+
+<p>Многие первые контакты с таким агентством происходят на телефоне, в странное время, из другой страны. Покупатель в лобби отеля ищет агента, которого посоветовал друг. Продавец за границей проверяет, кому он сейчас позвонит.</p>
+
+<p>На телефоне объекты идут один под другим, у каждого номер, название, район, площадь и цена по запросу, и квадратная стрелка, чтобы открыть. Фильтры переносятся на две строки, а не сжимаются. Обе темы работают одинаково.</p>
+
+<p>Меню открывается на весь экран. Пять разделов, пронумерованных, как на странице: объекты, услуги, дом, директор, связаться. Под ними две кнопки, которыми человек с телефоном в руке пользуется на самом деле: написать в WhatsApp и номер телефона, а дальше выбор языка и переключатель темы. Всё, что нужно, чтобы связаться, помещается на первом экране меню.</p>
+
+<p><img src="/images/journal/100-days-day-4/06-mobile.webp" alt="Два телефона с объектами в светлой и тёмной теме: Villa, Marbella под номером 1, 400 м², цена по запросу." />
+<em>Объекты на телефоне, в обеих темах.</em></p>
+
+<p><img src="/images/journal/100-days-day-4/07-menu.webp" alt="Три телефона: главная с закрытым меню и меню на весь экран в светлой и тёмной теме, с пятью пронумерованными разделами и кнопками WhatsApp и телефона." />
+<em>Меню на весь экран: пронумерованные разделы, WhatsApp и телефон, выбор языка и переключатель темы.</em></p>
+
+<h2 id="английский-и-испанский">английский и испанский</h2>
+
+<p>Покупатели на этом побережье приезжают отовсюду, а продавцы часто испанцы. В концепте EN и ES стоят в шапке и в мобильном меню с самого начала, потому что такой практике оба языка нужны с первого дня.</p>
+
+<p>Чтобы было ясно, что уже есть: концепт написан по-английски, переключатель на испанский стоит на месте, но испанские страницы ещё не написаны. Я лучше напишу их вместе с агентством, чем буду угадывать, как Йована говорит со своими испанскими клиентами.</p>
+
+<h2 id="независимый-концепт">независимый концепт</h2>
+
+<p>Nina Estate меня не нанимала, и это не их сайт. Объекты, имя и слова директора, телефон, почта и офис взяты из того, что Nina Estate уже публикует. Факты я не менял. Я поменял порядок, тон и внешний вид: частная практика вместо каталога, человек на первом плане и процесс, записанный словами.</p>
+
+<p>У меня нет цифр ни по запросам, ни по продажам, и я не стану их выдумывать. Если в Nina Estate это никому не нужно, концепт останется там, где есть, как день четвёртый. Если нужно, остальное практично: их собственные слова там, где я заполнил своими, испанские страницы, отдельная страница для каждого объекта, форма, которая уходит туда, куда скажут, и перенос сайта на ninaestate.com.</p>
+
+<h2 id="если-ваши-клиенты-решают-месяцами">если ваши клиенты решают месяцами</h2>
+
+<p>Вы можете не продавать недвижимость. Многие дела продают то, о чём решают медленно: школа, клиника, архитектор, юрист, яхтенный брокер. И всё равно сайт часто сделан для быстрых решений: сетки, цены, счётчики и спешка.</p>
+
+<p>Для медленного решения помогает обратное. Скажите, с кем клиент будет иметь дело, и покажите этого человека. Запишите процесс в несколько шагов. Покажите немного работы, но в таком размере, чтобы её можно было как следует рассмотреть. Дайте один прямой способ добраться до человека. И пусть дизайн будет достаточно спокойным, чтобы посетитель читал, а не пролистывал.</p>
+
+<p>Если это похоже на ваше дело, напишите мне с <a href="https://wellyington.github.io/ru/">основного сайта</a>. Скажите, что вы делаете и где, и я отвечу обычным языком. Концепт <a href="https://wellyington.github.io/challenge/day4/">здесь</a>, а сайт самой Nina Estate <a href="https://ninaestate.com/">здесь</a>, если захотите сравнить. Четыре готово, осталось девяносто шесть.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>100 дней</li><li>кейс</li><li>недвижимость</li><li>малага</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><a class="pager-cell rollable" href="/journal/ru/articles/mesto-za-dlinnym-stolom/">
+      <span class="label">← предыдущая</span>
+      <span class="pager-title">место за длинным столом<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Читайте дальше</span>
+    <h2 id="more-title" class="h-section">ещё записи.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/ru/articles/mesto-za-dlinnym-stolom/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Обложка кейса с концептом сайта Los Arcos Estepona: первый экран на компьютере разделён между кремовой и угольной темой, рядом та же страница на телефоне." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 003</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">место за длинным столом<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/mesto-dlya-tselogo-sezona/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" alt="Обложка кейса: концепт главной страницы Teatro Soho, светлая и тёмная версии рядом на компьютере и та же страница на телефоне, поверх афиши El Gran Gatsby." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 002</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">место для целого сезона<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/sait-do-slova-da/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" alt="Обложка кейса: сайт Pedro Sánchez Construcción на компьютере и на телефоне, со строкой Más de 25 años construyendo hogares." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 001</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">сайт до слова «да»<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

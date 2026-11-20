@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diario" href="/journal/es/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<!-- Begin Jekyll SEO tag v2.9.1 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="criterio antes que volumen" />
+<meta name="author" content="Wellyington" />
+<meta property="og:locale" content="es" />
+<link rel="canonical" href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/" />
+<meta property="og:url" content="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/" />
+<meta property="og:site_name" content="Journal" />
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-20T11:30:00+01:00" />
+<meta property="article:modified_time" content="2026-11-20T11:30:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" />
+<meta name="twitter:title" content="criterio antes que volumen" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Wellyington"},"dateModified":"2026-11-20T11:30:00+01:00","datePublished":"2026-11-20T11:30:00+01:00","headline":"criterio antes que volumen","image":"https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/"},"url":"https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>criterio antes que volumen — Diario · Wellyington</title>
+<meta name="description" content="Día cuatro de cien: un concepto de web para Nina Estate, en Málaga, que se lee menos como un portal inmobiliario y más como un despacho privado, con la directora, el método y cuatro residencias en primer plano.">
+<meta property="og:description" content="Día cuatro de cien: un concepto de web para Nina Estate, en Málaga, que se lee menos como un portal inmobiliario y más como un despacho privado, con la directora, el método y cuatro residencias en primer plano.">
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/es/" class="bar-cell bar-brand" aria-label="Wellyington Diario">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diario</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Hora local y en qué estoy trabajando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escribiendo</span><span>notas sobre lanzar en pequeño</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escuchando</span><span>Wellyington — maquetas de estudio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/judgement-over-volume/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/criterio-antes-que-volumen/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/criterio-antes-de-volume/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/suzhdenie-vazhnee-obema/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Cambiar a tema oscuro" data-label-dark="Cambiar a tema oscuro" data-label-light="Cambiar a tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Oscuro"></span><span class="theme-word" data-light="Claro" data-dark="Oscuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegación" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegación">
+      <p class="label">Navegación</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/es/" class="rollable">
+            <span class="roll"><span>diario.</span><span aria-hidden="true">diario.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/archive/" class="rollable">
+            <span class="roll"><span>archivo.</span><span aria-hidden="true">archivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/about/" class="rollable">
+            <span class="roll"><span>sobre mí.</span><span aria-hidden="true">sobre mí.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>web principal.</span><span aria-hidden="true">web principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/es/articles/criterio-antes-que-volumen/" class="menu-entry">
+            <span class="mono dim">N.º 004</span>
+            <span>criterio antes que volumen<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/un-sitio-en-la-mesa-larga/" class="menu-entry">
+            <span class="mono dim">N.º 003</span>
+            <span>un sitio en la mesa larga<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/sitio-para-toda-la-temporada/" class="menu-entry">
+            <span class="mono dim">N.º 002</span>
+            <span>sitio para toda la temporada<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/la-web-antes-del-si/" class="menu-entry">
+            <span class="mono dim">N.º 001</span>
+            <span>la web antes del sí<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/judgement-over-volume/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/criterio-antes-que-volumen/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/criterio-antes-de-volume/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/suzhdenie-vazhnee-obema/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/es/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/es/" class="entry-cell entry-back rollable"><span class="roll"><span>← diario</span><span aria-hidden="true">← diario</span></span></a>
+    <span class="entry-cell mono">N.º 004</span>
+    <span class="entry-cell label">100 días</span>
+    <time class="entry-cell" datetime="2026-11-20T11:30:00+01:00">20 de noviembre de 2026</time>
+    <span class="entry-cell">12 min de lectura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">criterio antes que volumen<span class="dot">.</span></h1><p class="entry-lede">Día cuatro de cien: un concepto de web para Nina Estate, en Málaga, que se lee menos como un portal inmobiliario y más como un despacho privado, con la directora, el método y cuatro residencias en primer plano.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Portada del caso de un concepto de web para Nina Estate: la apertura dividida entre un tema claro color piedra y un tema oscuro casi negro, con una villa con piscina al atardecer, y la misma web en un móvil." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 004</span>
+</div>
+<p class="caption label">Día cuatro. Un concepto para Nina Estate, con las dos luces, en pantalla grande y en el móvil.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="en esta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">en esta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartir.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar enlace</span><span aria-hidden="true">copiar enlace</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fcriterio-antes-que-volumen%2F&text=criterio+antes+que+volumen"><span class="roll"><span>publicar en X</span><span aria-hidden="true">publicar en X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fcriterio-antes-que-volumen%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>El 20 de noviembre publiqué la cuarta nota de esta serie, el reto que propuso Ramiah Trask: cien días, cien negocios, cien webs. El primer día fue una constructora familiar de la Marina Alta que necesitaba una primera página clara. <a href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/">Esa página está aquí.</a> El segundo, un teatro en Málaga con una temporada llena y sin orden. <a href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/">Ese está aquí.</a> El tercero, un restaurante familiar en mi propio pueblo, con muchos motivos para entrar. <a href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/">Ese está aquí.</a> Hoy el negocio vende algo que la gente tarda meses en decidir.</p>
+
+<p>Nina Estate es una inmobiliaria de Málaga, con oficina en la avenida de Cánovas del Castillo. Trabaja en la ciudad y en la Costa del Sol: viviendas, edificios enteros, inversiones y alquileres de larga duración. Ya tiene web, en <a href="https://ninaestate.com/">ninaestate.com</a>, donde cuenta su experiencia, sus inmuebles y sus servicios. Mi concepto está aquí: <a href="https://wellyington.github.io/challenge/day4/">Nina Estate, día cuatro</a>.</p>
+
+<p>Es un rediseño independiente. No es una colaboración con Nina Estate, nadie allí me lo ha pedido y nada en la página significa que lo aprueben. Por ahora vive en mi propia dirección, como los tres anteriores.</p>
+
+<h2 id="otra-forma-de-página-inmobiliaria">otra forma de página inmobiliaria</h2>
+
+<p>La mayoría de las webs inmobiliarias están hechas como escaparates. Un buscador arriba, una rejilla de anuncios, un precio en cada tarjeta, un teléfono en una esquina. Funciona para una agencia que gana por volumen, con cientos de viviendas y un comprador que quiere ir pasando fotos.</p>
+
+<p>Nina Estate tiene otra forma. Pocos inmuebles, varios de ellos edificios completos. Precios a consultar. Una persona, la directora, que atiende ella misma a cada cliente. Quien compra o vende a ese nivel no está eligiendo sobre todo un anuncio. Está eligiendo en quién confía para que elija por él.</p>
+
+<p>Así que tomé un camino distinto al de la web actual. Menos agencia tradicional y más despacho privado, donde la forma de presentar las cosas, el trato personal y el cuidado en los detalles son parte de lo que recibe el cliente. La web actual empieza por la experiencia, los inmuebles y los servicios. El concepto empieza por la relación: con quién vas a tratar, cómo será la búsqueda y qué pasa desde la primera llamada hasta las llaves.</p>
+
+<p>La idea se dice rápido. La web debería parecerse más al servicio que vende.</p>
+
+<h2 id="residencias-de-discreta-distinción">residencias de discreta distinción</h2>
+
+<p>La apertura está casi vacía, a propósito. Un titular en una serif grande y fina: residences of quiet distinction, residencias de discreta distinción, con la segunda línea en cursiva. Debajo, una línea pequeña en granate: Málaga, Marbella, Costa del Sol. A la derecha, una sola frase que hace el trabajo de una declaración de intenciones: un despacho inmobiliario privado para compradores, vendedores e inversores que valoran el criterio antes que el volumen.</p>
+
+<p>Después, una foto ancha, con el rótulo Plate I, lámina I, como en un libro: una villa al atardecer, la piscina iluminada, buganvillas sobre la terraza, farolillos en el murete. La página la mantiene a ese tamaño y no pone nada encima.</p>
+
+<p>Bajo la foto, donde casi todas las inmobiliarias pondrían un buscador con doce campos, hay una frase para completar. I would like to buy a villa in Marbella: me gustaría comprar una villa en Marbella. Cada una de las tres palabras en cursiva es un desplegable. Comprar puede ser alquilar, invertir en o vender. Villa puede ser casa, piso o edificio. Marbella puede ser Málaga Centro, El Limonar o la Costa del Sol. Y un solo botón: ver residencias.</p>
+
+<p>Es un detalle pequeño, y cambia el tono. Un buscador te pide que filtres. Una frase te pregunta qué quieres, como lo haría un agente por teléfono. En el concepto, la frase lleva a las residencias. No finge hacer una búsqueda que el negocio no necesita.</p>
+
+<p><img src="/images/journal/100-days-day-4/01-split.webp" alt="La apertura de Nina Estate partida en diagonal entre un tema claro color piedra y un tema oscuro casi negro, con el titular Residences of quiet distinction, una villa con piscina al atardecer y la frase I would like to buy a villa in Marbella." />
+<em>La apertura, partida en dos. La misma bienvenida de día y de noche.</em></p>
+
+<h2 id="piedra-tinta-y-granate">piedra, tinta y granate</h2>
+
+<p>Los colores salen de cómo se ve este mercado cuando se hace bien: yeso, papel antiguo, madera oscura, una copa de tinto en una mesa.</p>
+
+<p>El tema claro es piedra cálida, #DEDBD5, con tinta casi negra, #141312, para el texto, y granate, #6E2323, para las cosas pequeñas que importan: los números, el filtro activo, las palabras en cursiva de la frase. El tema oscuro es casi negro, #121110, con texto blanco roto, #ECE7E0, y un rosa apagado, #D9A79B, donde antes estaba el granate. Ninguno es la versión principal. Son dos webs completas, y la misma residencia tiene que verse bien en las dos.</p>
+
+<p>La tipografía hace casi todo el trabajo. Cormorant Garamond, una serif fina y de mucho contraste, para los titulares y los nombres de las propiedades. Jost, una sans sencilla, muy pequeña y espaciada, para las etiquetas. Las secciones van numeradas en romanos, de la I a la VI, y las fotos se llaman láminas. Se lee más como un catálogo impreso de galería que como una aplicación, y eso se parece más a cómo se venden estas casas en persona.</p>
+
+<p>Como en los días anteriores, la página sigue a tu móvil o a tu ordenador. Si está en modo oscuro, la web se abre oscura. Un botón redondo en la cabecera lo cambia, y la web recuerda tu elección para la próxima vez.</p>
+
+<p><img src="/images/journal/100-days-day-4/02-light.webp" alt="La sección de residencias en el tema claro, color piedra con texto oscuro y detalles en granate, con Villa, Marbella como N.º 1, junto a un móvil con The House en el mismo tema." />
+<em>El tema claro: piedra cálida, tinta y granate, con una serif editorial.</em></p>
+
+<p><img src="/images/journal/100-days-day-4/03-dark.webp" alt="La misma sección de residencias en el tema oscuro, casi negro con texto blanco roto y acentos rosados, junto a un móvil en modo oscuro." />
+<em>El tema oscuro. Sigue al dispositivo hasta que eliges, y el botón de la cabecera lo recuerda.</em></p>
+
+<h2 id="la-casa">la casa</h2>
+
+<p>La sección I se llama The House, la casa, y ocupa un párrafo. Desde hace más de una década, Nina Estate representa viviendas, edificios e inversiones en Málaga y la Costa del Sol, de forma personal y con discreción.</p>
+
+<p>Debajo, tres cifras, cada una con una etiqueta pequeña. 10+, años en la costa. Una, persona de contacto. Cuatro, disciplinas. Quería cifras que un cliente pueda comprobar, no totales de metros vendidos ni un contador de familias felices. La segunda es la línea más importante de la página. A este nivel, un comprador quiere saber que la persona que contesta la primera llamada seguirá ahí en la notaría.</p>
+
+<p><img src="/images/journal/100-days-day-4/08-toggle.webp" alt="La sección The House partida entre el tema claro y el oscuro, con el párrafo sobre más de una década en la costa y las cifras 10+, One y Four." />
+<em>Sigue la configuración de tu sistema, o eliges tú con el botón.</em></p>
+
+<h2 id="cuatro-residencias-no-cuatrocientas">cuatro residencias, no cuatrocientas</h2>
+
+<p>La sección II es la cartera, con el título sencillo de Residences, residencias. A la derecha, cuatro filtros: todas, Málaga, Marbella, inversión. Al elegir uno, las tarjetas se reordenan sin recargar la página.</p>
+
+<p>En el concepto hay cuatro inmuebles. N.º 1, una villa en Marbella, de 400 metros cuadrados. N.º 2, un edificio junto a la Catedral de Málaga, que se vende entero. N.º 3, otro edificio en el Centro Histórico. N.º 4, una residencia en El Limonar, de 329 metros cuadrados. Todos dicen precio a consultar. Las tarjetas son grandes, colocadas a alturas distintas en lugar de en una rejilla apretada, y cada una tiene una flechita para abrirla.</p>
+
+<p>Cuatro no es mucho para una web inmobiliaria, y lo dejé en cuatro. Una rejilla larga haría que el negocio pareciera un portal, y no lo es. Bajo las tarjetas hay una línea en cursiva: some of our finest homes are never published, algunas de nuestras mejores casas nunca se publican. Al lado, un botón: solicitar acceso privado. En esta parte del mercado, buena parte de lo mejor cambia de manos sin anuncio público. La página lo dice con claridad y ofrece la forma de entrar.</p>
+
+<p>Más abajo, una segunda foto a todo el ancho, la lámina II, con una frase sobre la parte tranquila de la imagen: la discreción no es un servicio, es el estándar.</p>
+
+<h2 id="cuatro-disciplinas-de-una-en-una">cuatro disciplinas, de una en una</h2>
+
+<p>La sección III ordena el trabajo en cuatro partes: compra, venta, inversión y alquiler. En la web actual, los servicios se leen como una lista. Aquí cada uno es una fila que se abre en su sitio, así que quien vende no tiene que leer el proceso del comprador para encontrar el suyo.</p>
+
+<p>Compra: una búsqueda pensada según cómo quieres vivir, con cada inmueble revisado antes de que llegue a ti. Luego encargo y preselección, visitas acompañadas, negociación, hasta la notaría, y un botón, empezar una búsqueda. Venta: tu propiedad presentada como esperan los compradores de este nivel, y puesta delante de las personas adecuadas, con valoración, fotografía editorial, compradores cualificados y marketing discreto. Inversión: edificios, activos e inmuebles de renta en el centro histórico y en la costa, con edificios completos, análisis de rentabilidad, oportunidades fuera de los portales y gestión del activo. Alquiler: alquileres de larga duración gestionados para propietarios e inquilinos por igual, con selección de inquilinos, contratos e inventario, representación del propietario y reubicación.</p>
+
+<p>Cada disciplina termina en su propio siguiente paso: empezar una búsqueda, pedir una valoración, hablar de una inversión, preguntar por alquileres. Quien solo viene a vender nunca tiene que leer sobre rentabilidades.</p>
+
+<p><img src="/images/journal/100-days-day-4/05-disciplines.webp" alt="La sección Disciplines en el tema oscuro, con Acquisition abierta, sus cuatro servicios y un botón Begin a search, junto al mismo acordeón en un móvil." />
+<em>Cada disciplina se abre en su sitio, con sus servicios y su siguiente paso.</em></p>
+
+<h2 id="el-método">el método</h2>
+
+<p>La sección IV responde a la pregunta que todo comprador que llega por primera vez a España acaba haciendo: ¿qué pasa exactamente, y en qué orden? Cuatro pasos, numerados en romanos pequeños y colocados uno al lado del otro.</p>
+
+<p>Conversación: cómo vives, qué necesitas y con qué plazos trabajas. Selección: una lista corta y pensada, con cada inmueble visto por la agencia antes de que lo veas tú. Visita: acompañada en persona, o con un vídeo privado según tu agenda, algo que importa cuando el comprador vive en Londres o en Dubái. Cierre: negociación, papeleo y notaría, gestionados en tu nombre hasta la entrega de llaves.</p>
+
+<p>Nada de esto es nuevo para quien ya ha comprado aquí. Escrito en cuatro líneas cortas, hace que el proceso se sienta conocido antes de empezar, y en una decisión cara y lenta eso es buena parte de lo que paga el cliente.</p>
+
+<h2 id="la-persona-detrás-del-negocio">la persona detrás del negocio</h2>
+
+<p>La sección V es el cambio que más me importa. En muchas webs inmobiliarias las personas son fotos pequeñas en una página de quiénes somos, si es que aparecen. Aquí la directora tiene una sección propia, al mismo tamaño que las propiedades.</p>
+
+<p>Jovana Dokic. Su nombre va en grande, con el apellido en cursiva, junto a un retrato suyo en una terraza sobre el puerto al atardecer. El texto es corto: experta en negocios e inmobiliaria, dirige Nina Estate con más de una década en la Costa del Sol, y cada cliente trabaja directamente con ella, en un servicio integral y personal pensado para conseguir las mejores condiciones posibles. Debajo, dos botones: escribir por WhatsApp y el número de teléfono, +34 664 149 638.</p>
+
+<p>El motivo es práctico. En una firma de este tamaño, la persona es el servicio. Los clientes hablarán con ella, visitarán con ella y firmarán con ella al lado. Una web que esconde eso detrás de fotos de banco de llaves y apretones de manos vende por debajo lo único que a una agencia grande le cuesta copiar.</p>
+
+<p><img src="/images/journal/100-days-day-4/04-method-director.webp" alt="El método en cuatro pasos, Conversation, Selection, Viewing y Completion, en un panel claro color piedra, sobre la sección de la directora en el tema oscuro, con un retrato de Jovana Dokic y botones de WhatsApp y teléfono." />
+<em>El método en cuatro pasos, y la directora, con línea directa con ella.</em></p>
+
+<h2 id="con-cita-previa">con cita previa</h2>
+
+<p>La última sección, la VI, se llama consultas privadas, y el titular dice by appointment, con cita previa. A la izquierda, tres formas de llegar: el teléfono, el correo, jovana@ninaestate.com, y la oficina, en la avenida de Cánovas del Castillo 8, Málaga.</p>
+
+<p>A la derecha, un formulario corto. Nombre, correo, teléfono, una elección del motivo de la consulta, que coincide con las cuatro disciplinas, y un mensaje. Al enviarlo se abre la aplicación de correo de quien visita, con todo ya escrito y dirigido a Jovana. Una línea bajo el botón dice que cada consulta se contesta personalmente y con confidencialidad. No hay área de clientes ni respuesta automática que finja ser una persona. Un despacho privado contesta su propio correo.</p>
+
+<h2 id="en-el-móvil">en el móvil</h2>
+
+<p>Muchos primeros contactos con una agencia así pasan en el móvil, a horas raras, desde otro país. Un comprador en el vestíbulo de un hotel busca a la agente que le recomendó un amigo. Un vendedor en el extranjero mira con quién está a punto de hablar.</p>
+
+<p>En el móvil las residencias se apilan una debajo de otra, cada una con su número, nombre, zona, superficie y precio a consultar, y una flecha cuadrada para abrirla. Los filtros pasan a dos líneas en lugar de encogerse. Los dos temas funcionan igual.</p>
+
+<p>El menú se abre a pantalla completa. Cinco secciones, numeradas como en la página: residencias, servicios, la casa, directora, contacto. Debajo, los dos botones que de verdad usa alguien con el móvil en la mano: escribir por WhatsApp y el número de teléfono, y después el idioma y el cambio de tema. Todo lo necesario para contactar cabe en la primera pantalla del menú.</p>
+
+<p><img src="/images/journal/100-days-day-4/06-mobile.webp" alt="Dos móviles con las residencias en el tema claro y en el oscuro, con Villa, Marbella como N.º 1, 400 m², precio a consultar." />
+<em>Las residencias en el móvil, con los dos temas.</em></p>
+
+<p><img src="/images/journal/100-days-day-4/07-menu.webp" alt="Tres móviles: la portada con el menú cerrado y el menú a pantalla completa abierto en el tema claro y en el oscuro, con cinco secciones numeradas y botones de WhatsApp y teléfono." />
+<em>El menú a pantalla completa: secciones numeradas, WhatsApp y teléfono, el idioma y el cambio de tema.</em></p>
+
+<h2 id="inglés-y-español">inglés y español</h2>
+
+<p>Quien compra en esta costa viene de todas partes, y quien vende muchas veces es de aquí. El concepto tiene EN y ES en la cabecera y en el menú del móvil desde el principio, porque un despacho así necesita los dos idiomas desde el primer día.</p>
+
+<p>Para ser claro con lo que existe: el concepto está escrito en inglés, y el selector de español está en su sitio, pero las páginas en español todavía no están escritas. Prefiero escribirlas con el negocio que adivinar cómo habla Jovana con sus clientes españoles.</p>
+
+<h2 id="un-concepto-independiente">un concepto independiente</h2>
+
+<p>Nina Estate no me ha contratado, y esta no es su web. Los inmuebles, el nombre y las palabras de la directora, el teléfono, el correo y la oficina salen de lo que Nina Estate ya publica. No he cambiado los datos. Lo que he cambiado es el orden, el tono y el aspecto: un despacho privado en lugar de un catálogo, la persona delante y el proceso por escrito.</p>
+
+<p>No tengo cifras de consultas ni de ventas, y no me las voy a inventar. Si nadie en Nina Estate lo quiere, el concepto se queda donde está, como día cuatro. Si lo quieren, lo demás es práctico: sus propias palabras donde yo he rellenado, las páginas en español, una página para cada residencia, el formulario enviado adonde ellos digan y la web trasladada a ninaestate.com.</p>
+
+<h2 id="si-tus-clientes-tardan-meses-en-decidir">si tus clientes tardan meses en decidir</h2>
+
+<p>Puede que tú no vendas casas. Muchos negocios venden algo que se decide despacio: un colegio, una clínica, un arquitecto, un abogado, un bróker de barcos. Y aun así la web suele estar hecha para decisiones rápidas, con rejillas, precios, contadores y prisa.</p>
+
+<p>Para una decisión lenta ayuda hacer lo contrario. Di con quién va a tratar el cliente, y enséñalo. Escribe el proceso en unos pocos pasos. Enseña poco trabajo, a un tamaño en el que se pueda mirar bien. Da una forma directa de llegar a una persona. Y deja que el diseño sea lo bastante tranquilo como para que quien visita lea en lugar de pasar de largo.</p>
+
+<p>Si eso suena a tu negocio, escríbeme desde <a href="https://wellyington.github.io/es/">la web principal</a>. Dime a qué te dedicas y dónde, y te contestaré en lenguaje llano. El concepto está <a href="https://wellyington.github.io/challenge/day4/">aquí</a>, y la web de Nina Estate está <a href="https://ninaestate.com/">aquí</a>, por si quieres compararlas. Cuatro hechos, quedan noventa y seis.</p>
+
+      <p class="fin" aria-label="Fin de la entrada">fin.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">archivado en</span>
+    <ul class="chips"><li>100 días</li><li>caso real</li><li>inmobiliaria</li><li>málaga</li></ul>
+  </div><nav class="rail pager" aria-label="más entradas."><a class="pager-cell rollable" href="/journal/es/articles/un-sitio-en-la-mesa-larga/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">un sitio en la mesa larga<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">la última entrada.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Sigue leyendo</span>
+    <h2 id="more-title" class="h-section">más entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/es/articles/un-sitio-en-la-mesa-larga/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Portada del caso de un concepto de web para Los Arcos Estepona: la apertura dividida entre un tema crema y un tema carbón en un ordenador, con la misma página en un móvil." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 003</span>
+</div>
+<span class="label">100 días · 19.11.26</span><span class="card-title">un sitio en la mesa larga<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/sitio-para-toda-la-temporada/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" alt="Portada del caso: un concepto de portada del Teatro Soho, con la versión clara y la oscura juntas en un ordenador y la misma página en un móvil, sobre el cartel de El Gran Gatsby." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 002</span>
+</div>
+<span class="label">100 días · 19.11.26</span><span class="card-title">sitio para toda la temporada<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/la-web-antes-del-si/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-1/05-cover.webp" alt="Portada del caso: la web de Pedro Sánchez Construcción en un ordenador y en un móvil, con la frase Más de 25 años construyendo hogares." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 001</span>
+</div>
+<span class="label">100 días · 19.11.26</span><span class="card-title">la web antes del sí<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independiente por diseño · Escrito en público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/es/" class="rollable"><span class="roll"><span>diario</span><span aria-hidden="true">diario</span></span>
+    </a><a href="/journal/es/archive/" class="rollable"><span class="roll"><span>archivo</span><span aria-hidden="true">archivo</span></span>
+    </a><a href="/journal/es/about/" class="rollable"><span class="roll"><span>sobre mí</span><span aria-hidden="true">sobre mí</span></span>
+    </a><a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>web principal</span><span aria-hidden="true">web principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">en otros sitios</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/es/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escríbeme</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Leo todas las respuestas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Compuesto en Space Grotesk · Hecho con Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
