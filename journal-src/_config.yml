@@ -50,13 +50,13 @@ social:
 # title, date, category and ref in their front matter.
 defaults:
   - scope: { path: "en" }
-    values: { lang: en, layout: page }
+    values: { lang: en, layout: page, locale: en_GB }
   - scope: { path: "es" }
-    values: { lang: es, layout: page }
+    values: { lang: es, layout: page, locale: es_ES }
   - scope: { path: "pt" }
-    values: { lang: pt, layout: page }
+    values: { lang: pt, layout: page, locale: pt_BR }
   - scope: { path: "ru" }
-    values: { lang: ru, layout: page }
+    values: { lang: ru, layout: page, locale: ru_RU }
   - scope: { path: "en/articles" }
     values: { layout: article }
   - scope: { path: "es/articles" }

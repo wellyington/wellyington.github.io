@@ -18,9 +18,13 @@
 <link rel="alternate" type="application/atom+xml" title="{{ site.author }} — {{ L.title }}" href="{{ home_url | append: 'feed.xml' | relative_url }}">
 {%- include alternates.html mode="head" %}
 {% include analytics.html %}
+{%- if page.layout == "article" %}
+{% include seo-article.html %}
+{%- else %}
 {% seo title=false %}
 <title>{% if page.layout == "home" %}{{ L.title }} · {{ site.author }}{% else %}{{ page.title }} — {{ L.title }} · {{ site.author }}{% endif %}</title>
 {%- unless page.description %}
 <meta name="description" content="{{ page.lede | default: L.description | strip_html | normalize_whitespace | escape }}">
 <meta property="og:description" content="{{ page.lede | default: L.description | strip_html | normalize_whitespace | escape }}">
 {%- endunless %}
+{%- endif %}

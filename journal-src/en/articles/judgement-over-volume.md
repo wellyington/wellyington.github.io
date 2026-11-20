@@ -5,6 +5,23 @@ title: "judgement over volume"
 category: "100 Days"
 tags: [100 days, case study, real estate, málaga]
 lede: "Day four of a hundred: a website concept for Nina Estate in Málaga that reads less like a property portal and more like a private practice, with the director, the method and four residences up front."
+seo_title: "Real Estate Website Concept: Nina Estate, Málaga"
+description: "A website concept for Nina Estate in Málaga: a private real estate practice with residences, four services, a clear buying process and the director up front."
+keywords:
+  - "real estate website design in Málaga"
+  - "luxury real estate website concept"
+  - "real estate agency website in Marbella"
+  - "property website redesign on the Costa del Sol"
+  - "private real estate practice website"
+  - "off-market property website"
+  - "real estate website with WhatsApp contact"
+  - "web designer on the Costa del Sol"
+  - "100 days 100 websites challenge"
+about:
+  type: "RealEstateAgent"
+  name: "Nina Estate"
+  url: "https://ninaestate.com/"
+  locality: "Málaga"
 image: https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp
 image_alt: "Case study cover of a Nina Estate website concept: the opening split between a stone light theme and a near-black dark theme, with a pool villa at dusk, and the same site on a phone."
 image_caption: "Day four. A concept for Nina Estate, in both lights, on a large screen and on a phone."
@@ -20,7 +37,7 @@ This is an independent redesign. It is not a collaboration with Nina Estate, nob
 
 Most property websites are built like shop windows. A search bar at the top, a grid of listings, a price on every card, a phone number in the corner. That works for an agency that wins on volume, with hundreds of homes and a buyer who wants to scroll.
 
-Nina Estate is a different shape of business. A small number of properties, several of them whole buildings. Prices on request. One person, the director, who deals with every client herself. Somebody buying or selling at that level is not mainly choosing a listing. They are choosing who they trust to choose for them.
+Nina Estate is a different shape of business. A small number of properties, several of them whole buildings. Prices on request. One person, the director, who deals with every client herself. Somebody buying or selling at that level of the luxury market is not mainly choosing a listing. They are choosing who they trust to choose for them.
 
 So I took a different approach from the existing site. Less like a traditional agency, more like a private practice, where the way things are presented, the personal service and the attention to detail are part of what the client gets. The existing site leads with experience, properties and services. The concept leads with the relationship: who you will deal with, how the search will go, and what happens from the first call to the keys.
 
@@ -70,7 +87,7 @@ Section II is the portfolio, under the plain heading Residences. Four filters si
 
 There are four properties in the concept. N°1, a villa in Marbella, 400 square metres. N°2, a building by the Cathedral in Málaga, sold whole. N°3, another building in the Centro Histórico. N°4, a residence in El Limonar, 329 square metres. Every one says price on request. The cards are large, set at different heights rather than in a tight grid, and each has one small arrow to open it.
 
-Four is not many for a property website, and I left it at four. A long grid would make the business look like a portal, and it is not one. Under the cards is one line in italic: some of our finest homes are never published. Next to it is a button, request private access. In this part of the market, a lot of the best stock changes hands without a public listing. The page says so plainly and offers the way in.
+Four is not many for a property website, and I left it at four. A long grid would make the business look like a portal, and it is not one. Under the cards is one line in italic: some of our finest homes are never published. Next to it is a button, request private access. In this part of the market, a lot of the best stock changes hands off-market, without a public listing. The page says so plainly and offers the way in.
 
 Below that is a second full-width photograph, Plate II, with one line set over the quiet part of the image: discretion is not a service, it is the standard.
 
@@ -142,4 +159,4 @@ You may not sell property. Plenty of businesses sell something people decide on 
 
 For a slow decision it helps to do the opposite. Say who the client will deal with, and show them. Write the process down in a few steps. Show a small amount of work at a size where it can be looked at properly. Give one direct way to reach a person. Let the design be calm enough that the visitor reads instead of scrolls.
 
-If that sounds like your business, write to me from [the main site](https://wellyington.github.io/). Tell me what you do and where, and I will reply in plain language. The concept is [here](https://wellyington.github.io/challenge/day4/), and Nina Estate's own site is [here](https://ninaestate.com/), so you can compare the two. Four down, ninety-six to go.
+I am a web designer in Estepona, on the Costa del Sol, and I build websites like this one for businesses across Spain. If that sounds like your business, write to me from [the main site](https://wellyington.github.io/). Tell me what you do and where, and I will reply in plain language. The concept is [here](https://wellyington.github.io/challenge/day4/), and Nina Estate's own site is [here](https://ninaestate.com/), so you can compare the two. Four down, ninety-six to go.

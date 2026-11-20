@@ -5,6 +5,23 @@ title: "critério antes de volume"
 category: "100 dias"
 tags: [100 dias, caso real, imobiliária, málaga]
 lede: "Dia quatro de cem: um conceito de site para a Nina Estate, em Málaga, que se lê menos como um portal imobiliário e mais como um escritório particular, com a diretora, o método e quatro residências em primeiro plano."
+seo_title: "Site para imobiliária em Málaga: Nina Estate"
+description: "Um conceito de site para a Nina Estate, em Málaga: um escritório imobiliário particular com residências, quatro serviços, um processo claro e a diretora à frente."
+keywords:
+  - "site para corretora de imóveis"
+  - "site para imobiliária de luxo"
+  - "site de imobiliária em Málaga e Marbella"
+  - "redesign de site imobiliário na Costa del Sol"
+  - "site para escritório imobiliário particular"
+  - "imóveis fora do mercado"
+  - "site imobiliário com contato por WhatsApp"
+  - "web designer na Costa del Sol"
+  - "desafio 100 dias 100 sites"
+about:
+  type: "RealEstateAgent"
+  name: "Nina Estate"
+  url: "https://ninaestate.com/"
+  locality: "Málaga"
 image: https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp
 image_alt: "Capa do caso de um conceito de site para a Nina Estate: a abertura dividida entre um tema claro cor de pedra e um tema escuro quase preto, com uma villa com piscina ao entardecer, e o mesmo site num celular."
 image_caption: "Dia quatro. Um conceito para a Nina Estate, nas duas luzes, em tela grande e no celular."
@@ -20,7 +37,7 @@ A Nina Estate é uma imobiliária de Málaga, com escritório na Avenida de Cán
 
 A maioria dos sites imobiliários é feita como vitrine. Uma busca no topo, uma grade de anúncios, um preço em cada cartão, um telefone num canto. Isso funciona para uma imobiliária que ganha no volume, com centenas de imóveis e um comprador que quer ir rolando a tela.
 
-A Nina Estate tem outro formato. Poucos imóveis, vários deles prédios inteiros. Preço sob consulta. Uma pessoa, a diretora, que atende cada cliente pessoalmente. Quem compra ou vende nesse nível não está escolhendo principalmente um anúncio. Está escolhendo em quem confia para escolher por ele.
+A Nina Estate tem outro formato. Poucos imóveis, vários deles prédios inteiros. Preço sob consulta. Uma pessoa, a diretora, que atende cada cliente pessoalmente. Quem compra ou vende nesse nível do mercado de luxo não está escolhendo principalmente um anúncio. Está escolhendo em quem confia para escolher por ele.
 
 Por isso tomei um caminho diferente do site atual. Menos imobiliária tradicional e mais escritório particular, onde a forma de apresentar, o atendimento pessoal e o cuidado com os detalhes fazem parte do que o cliente recebe. O site atual começa pela experiência, pelos imóveis e pelos serviços. O conceito começa pela relação: com quem você vai tratar, como vai ser a busca e o que acontece da primeira ligação até as chaves.
 
@@ -70,7 +87,7 @@ A seção II é o portfólio, com o título simples de Residences, residências.
 
 O conceito tem quatro imóveis. Nº 1, uma villa em Marbella, com 400 metros quadrados. Nº 2, um prédio ao lado da Catedral de Málaga, vendido inteiro. Nº 3, outro prédio no Centro Histórico. Nº 4, uma residência em El Limonar, com 329 metros quadrados. Todos dizem preço sob consulta. Os cartões são grandes, colocados em alturas diferentes em vez de numa grade apertada, e cada um tem uma setinha para abrir.
 
-Quatro é pouco para um site imobiliário, e eu deixei em quatro. Uma grade comprida faria o negócio parecer um portal, e ele não é. Embaixo dos cartões há uma linha em itálico: some of our finest homes are never published, algumas das nossas melhores casas nunca são anunciadas. Ao lado, um botão: pedir acesso particular. Nessa faixa do mercado, boa parte dos melhores imóveis troca de mãos sem anúncio público. A página diz isso com clareza e mostra como entrar.
+Quatro é pouco para um site imobiliário, e eu deixei em quatro. Uma grade comprida faria o negócio parecer um portal, e ele não é. Embaixo dos cartões há uma linha em itálico: some of our finest homes are never published, algumas das nossas melhores casas nunca são anunciadas. Ao lado, um botão: pedir acesso particular. Nessa faixa do mercado, boa parte dos melhores imóveis troca de mãos fora do mercado, sem anúncio público. A página diz isso com clareza e mostra como entrar.
 
 Mais abaixo vem uma segunda foto na largura toda, a prancha II, com uma frase sobre a parte tranquila da imagem: discrição não é um serviço, é o padrão.
 
@@ -142,4 +159,4 @@ Pode ser que você não venda imóveis. Muitos negócios vendem algo que se deci
 
 Para uma decisão lenta, ajuda fazer o contrário. Diga com quem o cliente vai tratar, e mostre. Escreva o processo em poucos passos. Mostre pouco trabalho, num tamanho em que dê para olhar direito. Dê um jeito direto de chegar a uma pessoa. E deixe o design calmo o bastante para que quem visita leia em vez de passar reto.
 
-Se isso parece com o seu negócio, escreva para mim pelo [site principal](https://wellyington.github.io/pt/). Diga o que você faz e onde, e eu respondo em linguagem comum. O conceito está [aqui](https://wellyington.github.io/challenge/day4/), e o site da Nina Estate está [aqui](https://ninaestate.com/), se você quiser comparar os dois. Quatro feitos, faltam noventa e seis.
+Sou web designer em Estepona, na Costa del Sol, e faço sites como este para negócios de toda a Espanha. Se isso parece com o seu negócio, escreva para mim pelo [site principal](https://wellyington.github.io/pt/). Diga o que você faz e onde, e eu respondo em linguagem comum. O conceito está [aqui](https://wellyington.github.io/challenge/day4/), e o site da Nina Estate está [aqui](https://ninaestate.com/), se você quiser comparar os dois. Quatro feitos, faltam noventa e seis.
