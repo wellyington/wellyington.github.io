@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<title>Статичный сайт или сайт, который обновляется сам · Wellyington</title>
+<meta name="description" content="Простое объяснение для владельцев малого бизнеса: почему сайты-буклеты устаревают, что такое API и «автономный» сайт и за что действительно стоит платить.">
+<meta name="keywords" content="нужен ли малому бизнесу сайт, почему мой сайт устарел, статичный и динамический сайт простыми словами, что такое API простыми словами, сайт, который обновляется сам, поддержка сайта с искусственным интеллектом для малого бизнеса, как держать часы работы на сайте актуальными, что спросить у веб-дизайнера перед оплатой, техническая поддержка сайта для малого бизнеса, веб-дизайнер на Коста-дель-Соль">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Журнал">
+<meta property="og:title" content="Статичный сайт или сайт, который обновляется сам">
+<meta property="og:description" content="Простое объяснение для владельцев малого бизнеса: почему сайты-буклеты устаревают, что такое API и «автономный» сайт и за что действительно стоит платить.">
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/living-website/ru/01-cover.webp">
+<meta property="og:image:alt" content="Иллюстрация: слева печатный буклет с зачёркнутыми часами работы, справа телефон с сайтом, где написано «открыто сейчас» и блюда дня обновлены утром.">
+<meta property="article:published_time" content="2026-11-21T10:00:00+01:00">
+<meta property="article:modified_time" content="2026-11-21T10:00:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="Заметки">
+<meta property="article:tag" content="нужен ли малому бизнесу сайт">
+<meta property="article:tag" content="почему мой сайт устарел">
+<meta property="article:tag" content="статичный и динамический сайт простыми словами">
+<meta property="article:tag" content="что такое API простыми словами">
+<meta property="article:tag" content="сайт, который обновляется сам">
+<meta property="article:tag" content="поддержка сайта с искусственным интеллектом для малого бизнеса">
+<meta property="article:tag" content="как держать часы работы на сайте актуальными">
+<meta property="article:tag" content="что спросить у веб-дизайнера перед оплатой">
+<meta property="article:tag" content="техническая поддержка сайта для малого бизнеса">
+<meta property="article:tag" content="веб-дизайнер на Коста-дель-Соль">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Статичный сайт или сайт, который обновляется сам">
+<meta name="twitter:description" content="Простое объяснение для владельцев малого бизнеса: почему сайты-буклеты устаревают, что такое API и «автономный» сайт и за что действительно стоит платить.">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/living-website/ru/01-cover.webp">
+<meta name="twitter:image:alt" content="Иллюстрация: слева печатный буклет с зачёркнутыми часами работы, справа телефон с сайтом, где написано «открыто сейчас» и блюда дня обновлены утром.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/#article",
+      "url": "https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/",
+      "headline": "Статичный сайт или сайт, который обновляется сам",
+      "alternativeHeadline": "сайт, который следит за собой",
+      "description": "Простое объяснение для владельцев малого бизнеса: почему сайты-буклеты устаревают, что такое API и «автономный» сайт и за что действительно стоит платить.",
+      "inLanguage": "ru",
+      "datePublished": "2026-11-21T10:00:00+01:00",
+      "dateModified": "2026-11-21T10:00:00+01:00",
+      "articleSection": "Заметки",
+      "keywords": "нужен ли малому бизнесу сайт, почему мой сайт устарел, статичный и динамический сайт простыми словами, что такое API простыми словами, сайт, который обновляется сам, поддержка сайта с искусственным интеллектом для малого бизнеса, как держать часы работы на сайте актуальными, что спросить у веб-дизайнера перед оплатой, техническая поддержка сайта для малого бизнеса, веб-дизайнер на Коста-дель-Соль",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/living-website/ru/01-cover.webp", "caption": "Иллюстрация: слева печатный буклет с зачёркнутыми часами работы, справа телефон с сайтом, где написано «открыто сейчас» и блюда дня обновлены утром." },
+      "about": {
+        "@type": "Thing",
+        "name": "Сайты для малого бизнеса"
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "Заметки", "url": "https://wellyington.github.io/journal/ru/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Журнал", "item": "https://wellyington.github.io/journal/ru/" },
+        { "@type": "ListItem", "position": 2, "name": "сайт, который следит за собой", "item": "https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/the-website-that-looks-after-itself/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-web-que-se-cuida-sola/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/o-site-que-cuida-de-si-mesmo/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/sait-kotoryi-sledit-za-soboi/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/sait-kotoryi-sledit-za-soboi/" class="menu-entry">
+            <span class="mono dim">№ 005</span>
+            <span>сайт, который следит за собой<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/suzhdenie-vazhnee-obema/" class="menu-entry">
+            <span class="mono dim">№ 004</span>
+            <span>суждение важнее объёма<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/mesto-za-dlinnym-stolom/" class="menu-entry">
+            <span class="mono dim">№ 003</span>
+            <span>место за длинным столом<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/mesto-dlya-tselogo-sezona/" class="menu-entry">
+            <span class="mono dim">№ 002</span>
+            <span>место для целого сезона<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/the-website-that-looks-after-itself/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-web-que-se-cuida-sola/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/o-site-que-cuida-de-si-mesmo/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/sait-kotoryi-sledit-za-soboi/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 005</span>
+    <span class="entry-cell label">Заметки</span>
+    <time class="entry-cell" datetime="2026-11-21T10:00:00+01:00">21 ноября 2026</time>
+    <span class="entry-cell">12 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">сайт, который следит за собой<span class="dot">.</span></h1><p class="entry-lede">Почему сайт-буклет уходит в прошлое, что значит «сайт, который следит за собой» и за что стоит платить, объяснено без технических терминов.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/living-website/ru/01-cover.webp" alt="Иллюстрация: слева печатный буклет с зачёркнутыми часами работы, справа телефон с сайтом, где написано «открыто сейчас» и блюда дня обновлены утром." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 005</span>
+</div>
+<p class="caption label">От буклета в ящике стола к странице, которая знает, какой сегодня день.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fsait-kotoryi-sledit-za-soboi%2F&text=%D1%81%D0%B0%D0%B9%D1%82%2C+%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B9+%D1%81%D0%BB%D0%B5%D0%B4%D0%B8%D1%82+%D0%B7%D0%B0+%D1%81%D0%BE%D0%B1%D0%BE%D0%B9"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fsait-kotoryi-sledit-za-soboi%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>Вопрос, который мне задаёт почти каждый клиент, обычно в конце первого разговора: «Когда сайт будет готов, на этом всё, да? Платить дальше не нужно?»</p>
+
+<p>Вопрос честный. Двадцать лет ответ был, в общем, «да». Вы платили кому-то за сайт, вам его передавали, и он так и стоял, как печатный буклет. Иногда его обновляли. Чаще о нём забывали.</p>
+
+<p>На этой неделе я прочитал в DataDrivenInvestor статью <a href="https://medium.datadriveninvestor.com/the-slow-death-of-the-static-website-why-autonomous-apis-are-finally-fixing-the-small-business-web-4b79db5da819">The Slow Death of the Static Website</a>, «Медленная смерть статичного сайта». Её мысль, если коротко: сайт малого бизнеса перестаёт быть буклетом, которому постоянно нужен ручной уход, и становится ближе к системе, которая может сама поддерживать себя в актуальном состоянии, потому что теперь он связан с другими инструментами, которыми бизнес уже пользуется. Статья написана для тех, кто делает сайты, и полна слов вроде API, системы управления контентом и автономных агентов.</p>
+
+<p>Эта заметка — версия, которую я рассказал бы клиенту за столом. Без кода, без аббревиатур без объяснения, и с честной границей между тем, что работает уже сегодня, тем, что пока в основном слова продавцов, и тем, что вам по-прежнему стоит делать самим.</p>
+
+<h2 id="буклет-в-ящике-стола">буклет в ящике стола</h2>
+
+<p>Вспомните последний печатный буклет вашего бизнеса. В день, когда его привезли из типографии, он был идеальным. Цены верные, фотографии свежие, часы работы правильные.</p>
+
+<p>Через полгода одна цена выросла. Через год на фото команды был человек, который уже ушёл. Через два года коробка с буклетами лежала в ящике, и их никто не раздавал, потому что в них было три мелкие ошибки, и все об этом знали.</p>
+
+<p>У большинства сайтов малого бизнеса такая же жизнь. Разница в том, что сайт никто не убирает в ящик. Он остаётся в интернете, на виду, отвечает за вас на вопросы в три часа ночи, и отвечает неправильно.</p>
+
+<p>Сайт, сделанный так, в моей профессии называют статичным. Это технический термин, и я ещё к нему вернусь, потому что из-за него бывает путаница. Пока понимайте «статичный» в обычном смысле: он остаётся таким, каким был в день сдачи, пока человек не сядет и не изменит его.</p>
+
+<h2 id="как-сайт-незаметно-устаревает">как сайт незаметно устаревает</h2>
+
+<p>Никто не решает дать своему сайту устареть. Это происходит постепенно, по одной мелочи, и почти всегда клиенты замечают это раньше владельца.</p>
+
+<p>В первые месяцы на лето меняются часы работы, а на сайте их никто не обновляет. Кто-то приходит к закрытой двери. Потом цены в меню или на странице услуг расходятся с ценами на кассе. Потом вы переходите на новую систему бронирования, а старая кнопка «забронировать» по-прежнему ведёт на прежнюю. Потом пропадает фотография или ломается ссылка на партнёра, потому что он поменял свой сайт.</p>
+
+<p>Под поверхностью происходят вещи, которых не видно. Программам, на которых держится сайт, нужны обновления, и без них сайт легче взломать. Копятся дополнения: окошко чата, баннер про cookies, три системы аналитики от трёх разных маркетологов. Каждое немного замедляет страницу на телефоне, а медленные страницы теряют посетителей и позиции в Google. Автор исходной статьи называет это тихим техническим гниением, и название подходит. Ни в какой конкретный день ничего не ломается. Просто каждый месяц становится чуть хуже.</p>
+
+<p>Сюда же относится поиск. Представление Google о хорошей странице всё время меняется. Сайт, который хорошо шёл в первый год, может съезжать вниз, даже если его никто не трогал, просто потому что другие сайты продолжали улучшаться, а этот нет. Раньше работу с поиском считали списком, который проходят перед запуском. На деле она не заканчивается никогда.</p>
+
+<p>Самое неприятное в том, что владелец почти никогда не видит свой сайт глазами клиента. Вы знаете правильные часы работы, поэтому взгляд просто скользит мимо неправильных на странице. А у клиента есть только страница. Для него написанное там и есть правда о вашем бизнесе, пока он не окажется перед закрытой дверью или не начнёт спорить о цене у прилавка. К этому моменту сайт уже чего-то вам стоил, и никто не может сказать, в какой день это началось.</p>
+
+<p>Никто в этом не виноват. Владелец малого бизнеса занят тем, что ведёт бизнес. Сайт — единственный сотрудник, который ничего не просит, поэтому о нём и забывают.</p>
+
+<p><img src="/images/journal/living-website/ru/02-slow-rot.webp" alt="Иллюстрация: жизнь сайта после запуска. При запуске всё верно. Через три месяца часы работы неверные, через шесть цены не совпадают, через девять не работает ссылка на бронь, а через год сайт медленный на телефоне и без обновлений безопасности." />
+<em>Как сайт устаревает: никогда сразу, всегда понемногу.</em></p>
+
+<h2 id="что-такое-api-без-технических-слов">что такое API без технических слов</h2>
+
+<p>Вся статья держится на одном слове, которое большинству владельцев бизнеса знать не нужно, поэтому вот короткая версия.</p>
+
+<p>API — это способ, которым две программы разговаривают друг с другом без человека, который переносит данные из одной в другую. Проще всего представить официанта. Кухня не выходит к вашему столу, и вы не заходите на кухню. Официант относит понятный заказ в одну сторону и приносит понятный ответ в другую.</p>
+
+<p>Вы уже пользуетесь сервисами, у которых есть такой официант, даже если никогда его не видели. Он есть у вашего календаря бронирования. Он есть у вашего профиля компании в Google, того блока на Google Картах с часами работы и отзывами. Он есть у интернет-магазинов, складских списков, сайтов отзывов, сервисов рассылок и платёжных систем. Даже у прогноза погоды он есть.</p>
+
+<p>Когда сайт подключён к таким сервисам, он перестаёт быть копией вашей информации и начинает читать её из первоисточника. Вы меняете часы в одном месте, и сайт показывает новые. Последний столик на субботу занят в системе бронирования, и сайт перестаёт его предлагать. Продана последняя квартира в доме, и она исчезает из списка.</p>
+
+<p>Это первая и самая полезная половина перемен, о которых пишет статья. Искусственный интеллект для неё вообще не нужен. Это в основном аккуратная сантехника.</p>
+
+<p><img src="/images/journal/living-website/ru/03-connections.webp" alt="Иллюстрация: сайт в центре, соединённый линиями с инструментами, которыми малый бизнес уже пользуется: календарь брони, профиль Google, часы работы, меню и цены, отзывы, объекты и склад, визиты и заявки." />
+<em>Сайт читает данные оттуда, где ваша информация уже живёт, вместо того чтобы хранить свою копию.</em></p>
+
+<h2 id="одно-место-для-изменений">одно место для изменений</h2>
+
+<p>Цель, к которой я стремлюсь с клиентами, звучит просто: каждую единицу информации нужно вводить только в одном месте.</p>
+
+<p>На третий день моего стодневного челленджа я сделал концепт главной страницы для Los Arcos, семейного бара-ресторана здесь, в Эстепоне. У такого ресторана три разных расписания: у ресторана, у бара и у утреннего кафе. На странице они на вкладках, а крупная строка слева отвечает на единственный вопрос, который есть почти у всех: открыто ли сейчас. Маленькая зелёная отметка в навигации пишет «кафе открыто», когда кафе открыто.</p>
+
+<p>Честно о том, где сейчас этот концепт: часы там один раз записаны в самой странице, а остальное страница считает по часам на устройстве. Следующим шагом, если Los Arcos этого захочет, было бы читать эти часы оттуда же, где они уже ведут их для Google, чтобы изменение к Рождеству делалось один раз и появлялось везде. Вот о таких связях я и говорю. В них нет ничего эффектного, зато они избавляют живых людей от напрасной поездки.</p>
+
+<p><img src="/images/journal/100-days-day-3/04-kitchen-hours.webp" alt="Раздел часов работы в концепте Los Arcos: вкладки ресторана, бара и кафе, строка о том, когда откроется сегодня, и неделя с отмеченным сегодняшним днём." />
+<em>Из концепта Los Arcos: три расписания и один простой ответ на вопрос «открыто ли сейчас?».</em></p>
+
+<p>Есть пример поменьше прямо на этом сайте. Главная страница wellyington.github.io теперь показывает последние записи этого журнала на каждом из четырёх языков. Этот раздел никто не обновляет руками. Когда я публикую статью, главная через минуту пересобирается сама, и новая запись оказывается наверху. Мелочь, но это ровно та идея: написать один раз, а остальное подтянется.</p>
+
+<p><img src="/images/journal/living-website/ru/06-homepage-entries.webp" alt="Раздел последних записей на главной странице wellyington.github.io: три недавние статьи журнала с обложками, датами и заголовками." />
+<em>Главная этого сайта сама показывает свежие записи журнала. Опубликовал один раз, и запись появилась и там.</em></p>
+
+<h2 id="от-подключённого-к-автономному">от подключённого к «автономному»</h2>
+
+<p>Вторая половина статьи идёт дальше, и здесь появляются громкие слова. Идея в том, что программа, обычно построенная на том же искусственном интеллекте, что и чат-боты, которыми многие уже пользуются, работает поверх всех этих связей и действует сама. Не только читает ваши часы работы, но замечает проблемы и исправляет их, пишет новые страницы и публикует их.</p>
+
+<p>Статья перечисляет, к чему подключена такая система: к части сайта, где редактируется текст, к Google Search Console, к статистике посещений, к системе бронирования или складу и к хранилищу всего, что бизнес знает о себе: его тона, продуктов, правил.</p>
+
+<p>Про Google Search Console нужна одна фраза, потому что он всплывает в каждом разговоре на эту тему. Это бесплатный отчёт Google, который показывает, по каким запросам находят ваш сайт, какие страницы Google может прочитать, а какие нет, и что идёт не так. Считайте его табелем, который ваш сайт получает от Google. Большинство малых бизнесов ни разу его не открывали, а многие даже не подключили.</p>
+
+<p>Система с доступом к этому отчёту, к вашей статистике и к броням теоретически может увидеть, что страница на прошлой неделе перестала появляться в поиске, понять почему и предложить исправление раньше, чем вы бы вообще заметили. Это обещание. Часть его уже работает. Часть пока остаётся демонстрацией.</p>
+
+<h2 id="что-это-уже-умеет-хорошо">что это уже умеет хорошо</h2>
+
+<p>Вот что я сегодня доверил бы программе на сайте малого бизнеса почти без риска.</p>
+
+<p>Каждую неделю проверять, что все ссылки на сайте куда-то ведут, и сообщать обычными словами, когда какая-то сломалась. Измерять, как быстро главные страницы открываются на телефоне, и предупреждать, когда новое дополнение их замедлило. Следить за отчётом Search Console и раз в месяц присылать короткую сводку, написанную для человека, а не для программиста: по каким запросам приходили люди, какие страницы проседают, что стоит исправить.</p>
+
+<p>Держать списки в согласии с источником: события из календаря, номера или столики из системы бронирования, объекты из файла с объявлениями, часы работы из профиля Google. Готовить первый черновик новости или страницы события по вашим собственным заметкам, чтобы вы прочитали и поправили. Делать первую версию перевода, чтобы англоязычные, испаноязычные или русскоязычные посетители не оставались в стороне, опять же с проверкой человеком. Предлагать заголовки и описания получше для страниц, которые люди находят в поиске, но почти не открывают.</p>
+
+<p>Ни одна из этих задач не гениальна. Все они из тех, что выпадают из списка занятого человека и, выпав, тихо стоят денег.</p>
+
+<h2 id="чего-ей-не-стоит-делать-самой">чего ей не стоит делать самой</h2>
+
+<p>Та же программа, которая чинит сломанную ссылку, может за секунды и с полной уверенностью показать всем посетителям неправильную цену. Эту часть истории восторженные статьи обычно пропускают.</p>
+
+<p>Об этом хорошо рассказали те, кто такие системы строит. Недавно в журнале о дизайне вышла статья создателей платформы автономных сайтов. Они хотели, чтобы сайты работали полностью сами, считая, что именно этого хотят владельцы. Когда платформой начали пользоваться настоящие владельцы, те засомневались. Оказалось, что почти никто не хочет сайт, который целиком меняет себя сам, ни о чём не спрашивая.</p>
+
+<p>Это совпадает с тем, что вижу я. Владелец бизнеса не против, чтобы программа ночью починила ссылку. Но он совсем не рад проснуться и обнаружить новый абзац про свои цены, гарантии или работу в праздник, который он никогда не писал. И он прав. Некоторые вещи на сайте — это обещания, а обещания должен давать человек.</p>
+
+<p>Поэтому моё правило простое. Программа может замечать, измерять и готовить. Человек одобряет всё, что меняет то, что говорит бизнес: цены, предложения, обещания, работу в особые дни, всё, что касается здоровья, денег или закона, всё, что касается других людей, и всё, что написано голосом бизнеса. Одобрение может быть одним касанием на телефоне. Важно, чтобы оно было.</p>
+
+<p><img src="/images/journal/living-website/ru/04-loop.webp" alt="Иллюстрация: цикл из нескольких шагов. Сайт что-то замечает, готовит предложение, вы его одобряете, и оно публикуется. Потом он проверяет, помогло ли изменение, и цикл начинается снова." />
+<em>Программа замечает и готовит. Вы одобряете. Потом она публикует и проверяет, помогло ли изменение.</em></p>
+
+<h2 id="статичный--не-значит-плохой">статичный — не значит плохой</h2>
+
+<p>Теперь слово, к которому я обещал вернуться. В моей профессии у слова «статичный» есть технический смысл, помимо обычного. Технически статичный сайт — это сайт, где каждая страница готовится заранее и отдаётся посетителю готовым файлом, а не собирается из базы данных каждый раз, когда кто-то её открывает.</p>
+
+<p>Такой статичный сайт не умирает. Он быстрый, дешёвый в размещении, его трудно взломать, и он хорошо работает на телефоне со слабым сигналом. Этот журнал сделан именно так. Как и концепты из ста дней. Быть статичным в этом смысле и быть устаревшим — разные вещи.</p>
+
+<p>Умирает брошенный буклет: сделанный один раз, больше ни разу не проверенный, понемногу уходящий от правды. Избежать этого можно с помощью простых быстрых страниц, подключённых к местам, где живёт ваша информация, пересобирающихся при каждом изменении и регулярно проверяемых кем-то или чем-то. Технология за кулисами значит гораздо меньше, чем то, обращает ли кто-нибудь или что-нибудь на сайт внимание.</p>
+
+<h2 id="что-это-значит-для-денег">что это значит для денег</h2>
+
+<p>Вот честный ответ на вопрос из начала.</p>
+
+<p>Старая модель — большая сумма за разработку, а потом ничего. Или ежемесячный платёж, который покрывал хостинг и почти ничего больше. Ни то ни другое не оплачивало то, что действительно держит сайт полезным: чтобы кто-то заметил, когда он начал расходиться с реальностью.</p>
+
+<p>Сейчас разумнее обычно разработка поскромнее, потому что простые быстрые страницы не обязаны стоить целое состояние, а потом умеренная ежемесячная сумма за реальную работу, которую вы видите. Проверки идут каждую неделю. Связи с системой бронирования, профилем Google и вашими списками поддерживаются в рабочем состоянии. Вы получаете короткий отчёт обычными словами. И есть человек, которому можно позвонить, когда нужно изменение, которое не стоит доверять машине.</p>
+
+<p>Когда вам предлагают ежемесячный тариф, спросите, что происходит в обычный месяц. Если ответ «мы держим сайт онлайн», вы платите за буклет в ящике. Если ответ — список того, что проверяется, обновляется и о чём вам сообщают, вы платите за сайт, о котором заботятся.</p>
+
+<p>И ещё про деньги: убедитесь, что то, за что вы платите, принадлежит вам. Адрес сайта, тексты, фотографии и список обращений ваших клиентов должны быть вашими, и вы должны иметь возможность забрать их с собой, если уйдёте. Сайт, который следит за собой, — хорошая новость, только если он по-прежнему ваш.</p>
+
+<h2 id="что-спросить-прежде-чем-кому-то-платить">что спросить, прежде чем кому-то платить</h2>
+
+<p>Если вы собираетесь заказать сайт или недовольны тем, что есть, эти вопросы скажут вам почти всё, что нужно знать. Понимать технические ответы не обязательно. Достаточно услышать, понятные ли они.</p>
+
+<p>Кому принадлежит адрес сайта, и оформлен ли он на меня? Когда я меняю часы работы или цены, где я это делаю и в скольких местах? Подключён ли сайт к системе бронирования, магазину или календарю, которыми я уже пользуюсь, или хранит свою копию? Что сайт делает сам, а о чём спрашивает меня перед изменением? Буду ли я получать понятный отчёт, и как часто? Как он работает на телефоне со слабым сигналом? Есть ли на нём языки, на которых говорят мои клиенты? И если я перестану с вами работать, что я заберу с собой?</p>
+
+<p>Хороший ответ на вопрос об одобрении стоит больше, чем всё остальное в этом списке.</p>
+
+<p><img src="/images/journal/living-website/ru/05-checklist.webp" alt="Иллюстрация: карточка с восемью вопросами, которые стоит задать, прежде чем платить за сайт: о владении, о том, где меняются данные, о связях, об одобрении, об отчётах, о скорости на телефоне, о языках и о том, что останется у вас, если вы уйдёте." />
+<em>Восемь вопросов. Следить за техническими ответами не нужно, достаточно услышать, понятные ли они.</em></p>
+
+<h2 id="как-это-делаю-я">как это делаю я</h2>
+
+<p>Для бизнесов, с которыми я работаю на этом побережье, практическая версия выглядит так.</p>
+
+<p>Страницы быстрые и простые, подготовленные заранее, чтобы открываться сразу на телефоне на автобусной остановке. Информация, которая меняется, — часы работы, события, меню, объекты, цены — берётся из одного места, лучше всего из того, которым бизнес уже пользуется. Каждое изменение этой информации пересобирает сайт за минуты. Каждую неделю идут небольшие проверки, которые сообщают мне, а важные — и владельцу. Всё, что меняет обещания бизнеса, перед публикацией показывают человеку.</p>
+
+<p>Слово «автономный» для этого не нужно. Это больше похоже на хорошо устроенный магазин: полки пополняются со склада, кто-то каждое утро обходит зал, а цены утверждает хозяин.</p>
+
+<h2 id="так-умирает-ли-статичный-сайт">так умирает ли статичный сайт?</h2>
+
+<p>Сайт-буклет, о котором никто не заботится, уходит в прошлое, и я не буду по нему скучать. Он отправляет клиентов к закрытым дверям и называет прошлогодние цены, и всё это время выглядит прекрасно в глазах владельца, который почти никогда на него не заходит.</p>
+
+<p>То, что приходит ему на смену, не обязано быть загадочной системой, которая ведёт ваш бизнес за вас. Для большинства малых бизнесов это нечто скромнее и полезнее: быстрый сайт, который берёт данные оттуда же, где вы их уже храните, предупреждает, когда что-то не так, готовит скучную работу и ждёт вашего «да», прежде чем сказать что-то новое от вашего имени.</p>
+
+<p>Программы научились ждать и замечать. Говорить «да» — по-прежнему ваша работа, и я думаю, так и должно оставаться.</p>
+
+<p>Я веб-дизайнер из Эстепоны, с Коста-дель-Соль, и делаю такие сайты для бизнеса по всей Испании. Если хотите узнать, что нужно вашему нынешнему сайту, чтобы перестать устаревать, напишите мне с <a href="https://wellyington.github.io/ru/">основного сайта</a>. Расскажите, чем вы занимаетесь и где, и я отвечу обычным языком. Статья, с которой началась эта заметка, — <a href="https://medium.datadriveninvestor.com/the-slow-death-of-the-static-website-why-autonomous-apis-are-finally-fixing-the-small-business-web-4b79db5da819">The Slow Death of the Static Website</a> в DataDrivenInvestor, если хотите техническую версию на английском.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>заметки</li><li>малый бизнес</li><li>сайты</li><li>поддержка</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><a class="pager-cell rollable" href="/journal/ru/articles/suzhdenie-vazhnee-obema/">
+      <span class="label">← предыдущая</span>
+      <span class="pager-title">суждение важнее объёма<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Читайте дальше</span>
+    <h2 id="more-title" class="h-section">ещё записи.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/ru/articles/suzhdenie-vazhnee-obema/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Обложка кейса с концептом сайта Nina Estate: первый экран разделён между светлой каменной и почти чёрной тёмной темой, вилла с бассейном в сумерках, рядом тот же сайт на телефоне." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 004</span>
+</div>
+<span class="label">100 дней · 20.11.26</span><span class="card-title">суждение важнее объёма<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/mesto-za-dlinnym-stolom/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Обложка кейса с концептом сайта Los Arcos Estepona: первый экран на компьютере разделён между кремовой и угольной темой, рядом та же страница на телефоне." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 003</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">место за длинным столом<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/mesto-dlya-tselogo-sezona/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" alt="Обложка кейса: концепт главной страницы Teatro Soho, светлая и тёмная версии рядом на компьютере и та же страница на телефоне, поверх афиши El Gran Gatsby." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 002</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">место для целого сезона<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
