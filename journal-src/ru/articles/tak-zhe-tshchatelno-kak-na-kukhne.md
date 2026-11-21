@@ -23,9 +23,9 @@ about:
   name: "Espacio IME"
   url: "https://www.espacioime.es/"
   locality: "Motril"
-image: https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp
-image_alt: "Обложка кейса с концептом сайта Espacio IME: тёмная главная на компьютере с заголовком Un viaje por los sabores de la Costa Tropical, рядом два телефона в светлой и тёмной теме."
-image_caption: "День пятый. Концепт для Espacio IME в Мотриле, на большом экране и на двух телефонах."
+image: https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp
+image_alt: "Обложка кейса с концептом сайта Espacio IME: Design Challenge, день 5, тёмная главная на компьютере с заголовком Un viaje por los sabores de la Costa Tropical и телефон в светлой теме с местными продуктами."
+image_caption: "День пятый. Концепт для Espacio IME в Мотриле: тёмный на компьютере и светлый на телефоне."
 ---
 
 21 ноября я выложил пятую заметку этого ряда, челленджа, который придумал Рамайя Траск: сто дней, сто дел, сто сайтов. Первым днём была семейная строительная фирма в Марина-Альте. [Та страница здесь.](https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/) Вторым был театр в Малаге. [Он здесь.](https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/) Третьим был семейный ресторан в моём собственном городе, Эстепоне. [Он здесь.](https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/) Четвёртым была частная практика в недвижимости в Малаге. [Она здесь.](https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/) Сегодня снова ресторан, но совсем другой.

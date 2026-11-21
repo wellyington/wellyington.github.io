@@ -23,9 +23,9 @@ about:
   name: "Espacio IME"
   url: "https://www.espacioime.es/"
   locality: "Motril"
-image: https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp
-image_alt: "Case study cover of an Espacio IME website concept: the dark homepage on a desktop with the headline Un viaje por los sabores de la Costa Tropical, beside two phones in the light and dark themes."
-image_caption: "Day five. A concept for Espacio IME in Motril, on a large screen and on two phones."
+image: https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp
+image_alt: "Case study cover of the Espacio IME website concept: Design Challenge Day 5, the dark homepage on a desktop with the headline Un viaje por los sabores de la Costa Tropical, and a phone in the light theme showing the local produce."
+image_caption: "Day five. A concept for Espacio IME in Motril, dark on the desktop and light on the phone."
 ---
 
 On 21 November I posted the fifth note of this run, the challenge Ramiah Trask set: a hundred days, a hundred businesses, a hundred websites. Day one was a family builder in the Marina Alta. [That page is here.](https://wellyington.github.io/journal/en/articles/built-before-the-yes/) Day two was a theatre in Málaga. [That one is here.](https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/) Day three was a family restaurant in my own town, Estepona. [That one is here.](https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/) Day four was a private property practice in Málaga. [That one is here.](https://wellyington.github.io/journal/en/articles/judgement-over-volume/) Today is a restaurant again, but a very different one.
