@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<title>Сайт для ресторана высокой кухни: Espacio IME, Мотриль · Wellyington</title>
+<meta name="description" content="Концепт сайта для Espacio IME в Мотриле: дегустационные сеты с ценами, местные продукты, вина, подарочные сертификаты и бронь, в светлой и тёмной теме.">
+<meta name="keywords" content="дизайн сайта для ресторана высокой кухни, сайт ресторана с дегустационным сетом, сайт для ресторана в Гранаде, сайт Espacio IME в Мотриле, сайт ресторана на Коста-Тропикаль, сайт ресторана с меню и ценами, сайт ресторана с подарочными сертификатами и винной картой, сайт ресторана на испанском и английском, веб-дизайнер на Коста-дель-Соль, челлендж 100 дней 100 сайтов">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Журнал">
+<meta property="og:title" content="Сайт для ресторана высокой кухни: Espacio IME, Мотриль">
+<meta property="og:description" content="Концепт сайта для Espacio IME в Мотриле: дегустационные сеты с ценами, местные продукты, вина, подарочные сертификаты и бронь, в светлой и тёмной теме.">
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp">
+<meta property="og:image:alt" content="Обложка кейса с концептом сайта Espacio IME: тёмная главная на компьютере с заголовком Un viaje por los sabores de la Costa Tropical, рядом два телефона в светлой и тёмной теме.">
+<meta property="article:published_time" content="2026-11-21T16:30:00+01:00">
+<meta property="article:modified_time" content="2026-11-21T16:30:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 дней">
+<meta property="article:tag" content="дизайн сайта для ресторана высокой кухни">
+<meta property="article:tag" content="сайт ресторана с дегустационным сетом">
+<meta property="article:tag" content="сайт для ресторана в Гранаде">
+<meta property="article:tag" content="сайт Espacio IME в Мотриле">
+<meta property="article:tag" content="сайт ресторана на Коста-Тропикаль">
+<meta property="article:tag" content="сайт ресторана с меню и ценами">
+<meta property="article:tag" content="сайт ресторана с подарочными сертификатами и винной картой">
+<meta property="article:tag" content="сайт ресторана на испанском и английском">
+<meta property="article:tag" content="веб-дизайнер на Коста-дель-Соль">
+<meta property="article:tag" content="челлендж 100 дней 100 сайтов">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Сайт для ресторана высокой кухни: Espacio IME, Мотриль">
+<meta name="twitter:description" content="Концепт сайта для Espacio IME в Мотриле: дегустационные сеты с ценами, местные продукты, вина, подарочные сертификаты и бронь, в светлой и тёмной теме.">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp">
+<meta name="twitter:image:alt" content="Обложка кейса с концептом сайта Espacio IME: тёмная главная на компьютере с заголовком Un viaje por los sabores de la Costa Tropical, рядом два телефона в светлой и тёмной теме.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/#article",
+      "url": "https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/",
+      "headline": "Сайт для ресторана высокой кухни: Espacio IME, Мотриль",
+      "alternativeHeadline": "так же тщательно, как на кухне",
+      "description": "Концепт сайта для Espacio IME в Мотриле: дегустационные сеты с ценами, местные продукты, вина, подарочные сертификаты и бронь, в светлой и тёмной теме.",
+      "inLanguage": "ru",
+      "datePublished": "2026-11-21T16:30:00+01:00",
+      "dateModified": "2026-11-21T16:30:00+01:00",
+      "articleSection": "100 дней",
+      "keywords": "дизайн сайта для ресторана высокой кухни, сайт ресторана с дегустационным сетом, сайт для ресторана в Гранаде, сайт Espacio IME в Мотриле, сайт ресторана на Коста-Тропикаль, сайт ресторана с меню и ценами, сайт ресторана с подарочными сертификатами и винной картой, сайт ресторана на испанском и английском, веб-дизайнер на Коста-дель-Соль, челлендж 100 дней 100 сайтов",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp", "caption": "Обложка кейса с концептом сайта Espacio IME: тёмная главная на компьютере с заголовком Un viaje por los sabores de la Costa Tropical, рядом два телефона в светлой и тёмной теме." },
+      "about": {
+        "@type": "Restaurant",
+        "name": "Espacio IME", "url": "https://www.espacioime.es/", "address": { "@type": "PostalAddress", "addressLocality": "Motril", "addressCountry": "ES" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 дней", "url": "https://wellyington.github.io/journal/ru/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Журнал", "item": "https://wellyington.github.io/journal/ru/" },
+        { "@type": "ListItem", "position": 2, "name": "так же тщательно, как на кухне", "item": "https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/as-careful-as-the-kitchen/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/tan-cuidada-como-la-cocina/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/" class="menu-entry">
+            <span class="mono dim">№ 006</span>
+            <span>так же тщательно, как на кухне<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/sait-kotoryi-sledit-za-soboi/" class="menu-entry">
+            <span class="mono dim">№ 005</span>
+            <span>сайт, который следит за собой<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/suzhdenie-vazhnee-obema/" class="menu-entry">
+            <span class="mono dim">№ 004</span>
+            <span>суждение важнее объёма<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/mesto-za-dlinnym-stolom/" class="menu-entry">
+            <span class="mono dim">№ 003</span>
+            <span>место за длинным столом<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/as-careful-as-the-kitchen/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/tan-cuidada-como-la-cocina/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 006</span>
+    <span class="entry-cell label">100 дней</span>
+    <time class="entry-cell" datetime="2026-11-21T16:30:00+01:00">21 ноября 2026</time>
+    <span class="entry-cell">11 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">так же тщательно, как на кухне<span class="dot">.</span></h1><p class="entry-lede">Пятый день из ста: концепт сайта для Espacio IME, ресторана дегустационных сетов Ивана Матео в Мотриле, сделанный так, чтобы он не терялся рядом с гидами, которые его рекомендуют.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp" alt="Обложка кейса с концептом сайта Espacio IME: тёмная главная на компьютере с заголовком Un viaje por los sabores de la Costa Tropical, рядом два телефона в светлой и тёмной теме." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 006</span>
+</div>
+<p class="caption label">День пятый. Концепт для Espacio IME в Мотриле, на большом экране и на двух телефонах.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Ftak-zhe-tshchatelno-kak-na-kukhne%2F&text=%D1%82%D0%B0%D0%BA+%D0%B6%D0%B5+%D1%82%D1%89%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%2C+%D0%BA%D0%B0%D0%BA+%D0%BD%D0%B0+%D0%BA%D1%83%D1%85%D0%BD%D0%B5"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Ftak-zhe-tshchatelno-kak-na-kukhne%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>21 ноября я выложил пятую заметку этого ряда, челленджа, который придумал Рамайя Траск: сто дней, сто дел, сто сайтов. Первым днём была семейная строительная фирма в Марина-Альте. <a href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">Та страница здесь.</a> Вторым был театр в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/">Он здесь.</a> Третьим был семейный ресторан в моём собственном городе, Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/">Он здесь.</a> Четвёртым была частная практика в недвижимости в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/">Она здесь.</a> Сегодня снова ресторан, но совсем другой.</p>
+
+<p>Espacio IME — маленький ресторан дегустационных сетов в Мотриле, на Коста-Тропикаль, том отрезке побережья Гранады, где манго, авокадо и черимойя растут в нескольких минутах от моря. Шеф — Иван Матео. Он вернулся в Мотриль после одиннадцати лет работы на кухнях ресторанов по всей Испании и руководит IME с декабря 2021 года. Его кухня держится на местных продуктах: рыба с мотрильского рыбного рынка, субтропические фрукты побережья, вина Гранады.</p>
+
+<p>Гиды это заметили. Espacio IME — рекомендованный ресторан Гида Repsol 2026 года. Он отобран в Гид Michelin. Macarfi, гид, который оценивает кухню, интерьер и сервис, посвящает ему отдельную карточку и выделяет рис с мотрильскими креветками кискилья как блюдо, ради которого уже стоит приехать.</p>
+
+<p>Некоторые рестораны заслуживают сайта не хуже своей еды. Концепт здесь: <a href="https://wellyington.github.io/challenge/day5/">Espacio IME, день пятый</a>. Сайт самого ресторана — <a href="https://www.espacioime.es/">espacioime.es</a>, его Instagram — <a href="https://www.instagram.com/espacioime/">@espacioime</a>.</p>
+
+<p>Это независимый дизайнерский концепт. Это не сотрудничество с Espacio IME, никто оттуда меня не просил, и ничто на странице не означает, что они его одобрили. Как и четыре предыдущих, пока он живёт на моём собственном адресе.</p>
+
+<h2 id="сайт-достойный-наград">сайт, достойный наград</h2>
+
+<p>Подумайте, как люди попадают в такой ресторан. Почти никто не находит дегустационный сет в Мотриле, проходя мимо двери. О нём читают в гиде, видят тарелку в Instagram, слышат от друга, который приезжал из Гранады. Потом ищут в интернете. Сайт — это второе впечатление, и оно приходит сразу после того, как гид сказал, что ради этого места стоит специально ехать.</p>
+
+<p>Если после этого сайт выглядит как шаблон, со стоковыми фото и формой обратной связи в углу, посетитель чувствует разрыв. Не потому, что шаблон — преступление, а потому, что всё остальное в этом месте говорит о заботе: продукты, подача, короткая винная карта, маленький зал. Сайт — единственная часть впечатления, которую ресторан отдаёт бесплатно, всем, ещё до того, как кто-то что-то попробовал.</p>
+
+<p>Поэтому я поставил себе простую задачу. Сайт должен быть таким же внимательным к деталям, как кухня. Ясный порядок, продукт впереди, сеты с ценами, вино, подарок и спокойный способ попросить столик. Ничего, что кричит.</p>
+
+<h2 id="путешествие-по-вкусам-побережья">путешествие по вкусам побережья</h2>
+
+<p>Сайт открывается в зале. Широкая фотография зала занимает экран, затемнённая так, чтобы текст удобно лежал поверх: деревянные столы, горчичные стулья, ваза с сухоцветами.</p>
+
+<p>Заголовок набран высокой узкой антиквой: un viaje por los sabores de la Costa Tropical, путешествие по вкусам Коста-Тропикаль. Последние два слова курсивом и мягким золотом. Над ним маленькая строка, cocina de autor, Motril, Granada, авторская кухня, Мотриль, Гранада, — так описал бы это место гид. Под ним одна фраза: камерный ресторан Ивана Матео, где искусство и гастрономия живут вместе, с рыбой с рынка, субтропическими фруктами и морем в каждой подаче.</p>
+
+<p>Дальше две кнопки: забронировать столик или посмотреть сеты. Внизу экрана поднимается белая тарелка, и по её краю идёт строка текста, как клеймо на керамике: Costa Tropical, Motril, авторская кухня, Иван Матео.</p>
+
+<p>Сразу под первым экраном стоит тихая строка с тремя признаниями: Гид Michelin 2026, Гид Repsol 2026 и Macarfi. Они небольшие и набраны тем же шрифтом, что и всё остальное, а в подвале страницы есть ссылки на страницы ресторана в гидах Michelin и Repsol. Награды работают лучше, когда их легко проверить и о них не кричат.</p>
+
+<p><img src="/images/journal/100-days-day-5/01-split.webp" alt="Концепт Espacio IME на компьютере: заголовок Un viaje por los sabores de la Costa Tropical поверх фотографии зала и два телефона с разделом об опыте в светлой и тёмной теме." />
+<em>Первый экран на большом экране и раздел об опыте на двух телефонах.</em></p>
+
+<h2 id="каждое-блюдо-рождается-из-земли">каждое блюдо рождается из земли</h2>
+
+<p>Первый раздел после первого экрана рассказывает о поваре, а не о меню. Его заголовок: cada plato nace de la tierra, la estación y el amor por el oficio. Каждое блюдо рождается из земли, сезона и любви к ремеслу.</p>
+
+<p>Рядом одна цитата с кухни, крупно, курсивом, с тонкой золотой линией сбоку: наша кухня — это не только техника, это образ жизни. Потом короткий абзац. После одиннадцати лет на кухнях ресторанов по всей Испании Иван Матео вернулся в родной Мотриль. Здесь он работает со свежими, местными, сезонными продуктами от проверенных поставщиков поблизости, с точностью, порядком и максимальным уважением к продукту.</p>
+
+<p>Раздел закрывают три числа. 2021, открыт с декабря. 4, новых меню в год. 11, лет на кухнях Испании. Такие числа я предпочитаю прилагательным. Гость может проверить каждое, и вместе они говорят о месте больше, чем слово «исключительный».</p>
+
+<h2 id="продукт-по-имени">продукт по имени</h2>
+
+<p>Дегустационный сет трудно описать заранее, потому что он меняется. Не меняется то, откуда он берётся. Поэтому между историей и меню проходит полоса ингредиентов, с маленьким рисунком для каждого и строкой под ним.</p>
+
+<p>Кискилья из Мотриля, местная креветка, жемчужина побережья. Рыба с рынка, из порта Мотриля. Манго, выращенное на Коста-Тропикаль. Авокадо, субтропическое и местное. Черимойя, сладкий плод Гранады. И вина Гранады, короткая и личная карта.</p>
+
+<p>Те же названия проплывают по экрану выше медленной лентой, золотым курсивом, одно за другим. Гость из Мадрида или Лондона может не знать, что такое кискилья. После этой страницы ему захочется её попробовать.</p>
+
+<h2 id="два-путешествия-одно-побережье">два путешествия, одно побережье</h2>
+
+<p>Дальше идут сеты, под заголовком dos viajes, una misma costa: два путешествия, одно побережье. Одна строка объясняет, как работает кухня. Меню полностью меняется четыре раза в год и частично каждый раз, когда рынок приносит что-то новое.</p>
+
+<p>Сетов два, рядом друг с другом, каждый на своей карточке, с ценой крупно в углу, как в печатном меню.</p>
+
+<p>Aromas de la Costa за 35 евро — короткий маршрут: ароматы моря и тропических фруктов, суть IME в более коротком пути. В нём рыба с рынка и продукты Коста-Тропикаль, хлеб из соседней пекарни и варианты для людей с целиакией.</p>
+
+<p>Senda за 80 евро — длинный сет: полный опыт IME, подача за подачей, от берега до огорода. Он включает весь сезонный маршрут, сопровождение винами Гранады и ту же заботу о гостях с целиакией. В светлой теме эта карточка тёмная, а в тёмной у неё золотая рамка, так что глаз сам понимает, где полный опыт, без подсказок.</p>
+
+<p>Каждая карточка заканчивается одной кнопкой: забронировать этот сет. Строка под обеими говорит, что цены указаны за человека, напитки не включены, а об аллергиях и непереносимостях лучше сообщить при бронировании.</p>
+
+<p>Показать цены было решением. Некоторые рестораны этого уровня их прячут, и чтобы узнать, нужно писать. Это отпугивает как раз тех, кто планирует день рождения или годовщину и хочет понимать, чего ждать. Понятные цены — тоже гостеприимство.</p>
+
+<p><img src="/images/journal/100-days-day-5/02-light.webp" alt="Раздел дегустационных сетов в светлой теме: Aromas de la Costa за 35 евро на белой карточке и Senda за 80 евро на тёмной карточке, рядом телефон со входом в ресторан ночью." />
+<em>Светлая тема: лён, чернила и золото для сетов, продуктов и формы бронирования.</em></p>
+
+<h2 id="при-свечах-по-умолчанию">при свечах по умолчанию</h2>
+
+<p>У всех сайтов этого ряда до сих пор были светлая и тёмная темы. Этот первый, где отправная точка — тёмная.</p>
+
+<p>Дегустационный сет — это чаще всего ужин, а свет в зале приглушён. Поэтому сайт открывается в тёмной версии: почти чёрный, #0B0A09, тёплый белый текст, #F2ECE4, и приглушённое золото, #C49664, для всего, на что можно нажать. Светлая тема — лён и чернила, #FAF8F4 и #17130F, с более глубоким золотом, #A0733F. Маленькая кнопка с солнцем и луной в шапке переключает их, и сайт запоминает ваш выбор до следующего визита.</p>
+
+<p>Шрифты — пара, которую я давно хотел использовать: Instrument Serif, узкая антиква с красивым курсивом, для заголовков, меню и цен, и Manrope, чистый гротеск, для всего остального. Логотип — тонкое рукописное ime золотом.</p>
+
+<p><img src="/images/journal/100-days-day-5/03-dark.webp" alt="Раздел дегустационных сетов в тёмной теме, почти чёрный с золотыми деталями, рядом телефон в тёмном режиме со входом в ресторан." />
+<em>Тёмная тема — по умолчанию. Кнопка с луной и солнцем переключает тему и запоминает выбор.</em></p>
+
+<h2 id="винная-карта-и-подарок">винная карта и подарок</h2>
+
+<p>Дальше идут два небольших раздела, и оба важнее, чем кажется по их размеру.</p>
+
+<p>Первый — винный, bodega. Заголовок: una carta breve, elegida con intención, короткая карта, выбранная с умыслом. Текст объясняет, что карта — плод многолетнего опыта в виноделии: вина с характером, где главные — виноградники Гранады, выбранные под каждую подачу. Рядом фотография бокала красного среди лоз. Никакой длинной таблицы бутылок и годов. Короткая карта и есть идея, а кнопка просто говорит: спросите о сочетании вин.</p>
+
+<p>Второй — подарок. Regala IME, подарите IME. Заголовок: regala una noche para recordar, подарите вечер, который запомнится. Любой из дегустационных сетов можно превратить в подарок, на день рождения, годовщину или просто чтобы сказать спасибо. Слева подарочный сертификат, нарисованный как предмет: тёмный, с золотой подписью IME и словами un viaje para regalar, путешествие в подарок. Кнопка «купить подарочный сертификат» ведёт прямо на страницу подарков, которая у ресторана уже есть. Новый магазин я не строил. Существующий работает, а задача концепта — сделать так, чтобы его было легче найти.</p>
+
+<p>Подарочные сертификаты — тихая часть бизнеса многих хороших ресторанов. Тот, кто поел в особенном месте, хочет отправить туда родителей, друзей, лучшего клиента. Заметный и хорошо оформленный раздел подарков даёт им для этого повод.</p>
+
+<p><img src="/images/journal/100-days-day-5/04-produce-cellar-gift.webp" alt="Три раздела концепта Espacio IME: полоса местных продуктов в светлой теме, винная карта в тёмной теме с бокалом красного среди лоз и раздел подарочного сертификата в светлой теме." />
+<em>Продукты, винная карта и подарочный сертификат, у каждого своё место.</em></p>
+
+<h2 id="сначала-часы-работы-потом-столик">сначала часы работы, потом столик</h2>
+
+<p>Последний раздел страницы называется visítanos, приходите к нам, и первыми в нём идут часы работы. С понедельника по среду закрыто. С четверга по субботу обед с 13:30 до 16:00 и ужин с 20:30 до 23:00. В воскресенье только обед, с 13:30 до 16:00. В воскресенье в июле и августе ужин с 20:30 до 23:00. Под часами адрес, улица Франсиско Диас Кардона, 2, Мотриль, который открывается на карте, телефон и почта.</p>
+
+<p>Рядом с часами — заявка на бронь, reserva tu mesa. Сначала дата и число гостей. Когда дата выбрана, форма предлагает только то время, когда кухня в этот день действительно работает, с шагом в полчаса, на обед, на ужин или на то и другое. Выберите понедельник, вторник или среду, и она вежливо сообщит, что ресторан закрыт, и предложит четверг — воскресенье. Выберите воскресенье в августе, и она предложит ужин вместо обеда. Дальше сет: Aromas de la Costa, Senda или «решим за столом». Потом имя, телефон и поле для аллергий, праздников и всего, что стоит знать кухне.</p>
+
+<p>На кнопке написано «отправить заявку», и именно это она и делает. Она готовит письмо в ресторан, где всё уже заполнено, остаётся только отправить. Ресторан подтверждает. Я не стал притворяться, что концепт — полноценная система бронирования. Маленький ресторан с несколькими столиками обычно предпочитает видеть каждую заявку и отвечать на неё лично, и страница это уважает.</p>
+
+<p><img src="/images/journal/100-days-day-5/05-booking.webp" alt="Раздел визита и бронирования в тёмной теме: часы работы, адрес и телефон слева, форма заявки справа, рядом тот же раздел на телефоне в светлой теме." />
+<em>Сначала часы работы. Форма предлагает только то время, когда кухня в выбранный день открыта.</em></p>
+
+<h2 id="на-телефоне">на телефоне</h2>
+
+<p>Большинство людей увидят этот сайт на телефоне, часто в тот же день, когда хотят забронировать. На маленьком экране всё идёт в том же порядке: история, продукты, сеты, вина, подарок, часы работы.</p>
+
+<p>Две кнопки всё время закреплены внизу экрана: позвонить и забронировать столик. Они под большим пальцем в любом месте страницы. Тому, кто уже решил, не нужно листать до конца, чтобы найти форму.</p>
+
+<p>Меню открывается на весь экран кругом, который расходится от кнопки в углу, будто штору отдёргивают с одной стороны. Внутри пять разделов, крупно, антиквой: опыт, сеты, вина, подарите IME, приходите к нам. Ниже кнопка бронирования, часы работы одной короткой строкой, телефон и Instagram. Всё, что нужно гостю, чтобы решиться, помещается на этом экране.</p>
+
+<p><img src="/images/journal/100-days-day-5/06-mobile.webp" alt="Два телефона с разделом дегустационных сетов, один в светлой теме, другой в тёмной, с закреплёнными внизу кнопками «позвонить» и «забронировать»." />
+<em>Сеты на телефоне, в обеих темах, а позвонить и забронировать всегда под рукой.</em></p>
+
+<p><img src="/images/journal/100-days-day-5/07-menu.webp" alt="Три телефона: главная с закрытым меню и меню на весь экран в светлой и тёмной теме, с пятью разделами, кнопкой бронирования, часами работы и телефоном." />
+<em>Меню на весь экран открывается кругом: разделы, бронирование, часы работы и контакты.</em></p>
+
+<h2 id="сначала-испанский-английский-в-одно-касание">сначала испанский, английский в одно касание</h2>
+
+<p>Собственный сайт IME на испанском, и концепт тоже в первую очередь на испанском. Но на Коста-Тропикаль приезжают и гости из-за границы, а многие из тех, кто живёт на этом побережье, читают по-английски легче, чем по-испански.</p>
+
+<p>Поэтому в шапке есть кнопка EN. Нажимаете — и весь текст страницы переходит на английский: заголовки, меню, часы работы, подписи формы, кнопки. Это не машинный перевод, наложенный сверху. У каждой строки есть английская версия, написанная рядом с испанской, чтобы обе читались нормально.</p>
+
+<h2 id="почему-по-моему-этот-стоит-внимания">почему, по-моему, этот стоит внимания</h2>
+
+<p>У каждого дня этого ряда своя задача. Строительной фирме нужна была первая ясная страница. Театру — порядок. Семейному ресторану — показать много причин зайти. Практике в недвижимости — поставить человека впереди.</p>
+
+<p>Espacio IME нужно было то, что ближе к самой кухне: сдержанность, хорошие материалы и внимание к мелочам. Золотая линия рядом с цитатой. Тарелка, поднимающаяся внизу первого экрана. Цены, набранные как в печатном меню. Форма бронирования, которая знает, что по вторникам кухня закрыта.</p>
+
+<p>Скажу прямо: по-моему, этот концепт заслуживает внимания Awwwards. Если оно будет, хорошо. Если нет, страница всё равно делает то, ради чего её сделали: стоит рядом с карточкой в Гиде Michelin и не выглядит чужой.</p>
+
+<p><img src="/images/journal/100-days-day-5/08-toggle.webp" alt="Раздел винной карты, разделённый между светлой и тёмной темой, с заголовком Una carta breve, elegida con intención и бокалом красного среди лоз." />
+<em>Одна кнопка в шапке, и сайт помнит выбор при следующем визите.</em></p>
+
+<h2 id="независимый-концепт">независимый концепт</h2>
+
+<p>Espacio IME меня не нанимал, и это не их сайт. История шефа, сеты и цены, продукты, часы работы, адрес и карточки в гидах взяты из того, что уже публикуют ресторан и гиды. Ни одного факта я не менял. Я поменял порядок, шрифты, тон и то, как страница ведёт себя на телефоне.</p>
+
+<p>У меня нет цифр ни по броням, ни по посещениям, и я не стану их выдумывать. Если в IME это никому не нужно, концепт останется там, где есть, как день пятый. Если нужно, остальное практично: их собственные слова там, где я заполнил своими, новые фотографии под меню каждого сезона, заявки на бронь, которые уходят туда, куда скажут, и перенос сайта на espacioime.es.</p>
+
+<h2 id="если-ваша-кухня-лучше-вашего-сайта">если ваша кухня лучше вашего сайта</h2>
+
+<p>Вы можете не держать ресторан дегустационных сетов. Но многие небольшие дела на этом побережье в том же положении: то, что они делают, лучше того, как они выглядят в интернете. Пекарня с наградами и сайтом в две строки. Винодельня с красивым погребом и страницей, на которой почти один телефон. Отель с десятью идеальными номерами и модулем бронирования из 2015 года.</p>
+
+<p>Помогает то же, что и здесь. Поставьте вперёд людей и продукт. Покажите цены, если можете. Дайте гостю спокойный способ попросить то, что он хочет. И пусть дизайн будет таким же тщательным, как сама работа.</p>
+
+<p>Я веб-дизайнер из Эстепоны, с Коста-дель-Соль, и делаю такие сайты для бизнеса по всей Испании. Если это похоже на ваше дело, напишите мне с <a href="https://wellyington.github.io/ru/">основного сайта</a>. Расскажите, чем вы занимаетесь и где, и я отвечу обычным языком. Концепт <a href="https://wellyington.github.io/challenge/day5/">здесь</a>, а сайт самого Espacio IME <a href="https://www.espacioime.es/">здесь</a>, если захотите сравнить. Пять готово, осталось девяносто пять.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>100 дней</li><li>кейс</li><li>ресторан</li><li>высокая кухня</li><li>мотриль</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><a class="pager-cell rollable" href="/journal/ru/articles/sait-kotoryi-sledit-za-soboi/">
+      <span class="label">← предыдущая</span>
+      <span class="pager-title">сайт, который следит за собой<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Читайте дальше</span>
+    <h2 id="more-title" class="h-section">ещё записи.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/ru/articles/suzhdenie-vazhnee-obema/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Обложка кейса с концептом сайта Nina Estate: первый экран разделён между светлой каменной и почти чёрной тёмной темой, вилла с бассейном в сумерках, рядом тот же сайт на телефоне." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 004</span>
+</div>
+<span class="label">100 дней · 20.11.26</span><span class="card-title">суждение важнее объёма<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/mesto-za-dlinnym-stolom/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Обложка кейса с концептом сайта Los Arcos Estepona: первый экран на компьютере разделён между кремовой и угольной темой, рядом та же страница на телефоне." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 003</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">место за длинным столом<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/mesto-dlya-tselogo-sezona/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" alt="Обложка кейса: концепт главной страницы Teatro Soho, светлая и тёмная версии рядом на компьютере и та же страница на телефоне, поверх афиши El Gran Gatsby." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 002</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">место для целого сезона<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

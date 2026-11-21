@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diário" href="/journal/pt/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<title>Site para restaurante de alta gastronomia: Espacio IME, Motril · Wellyington</title>
+<meta name="description" content="Um conceito de site para o Espacio IME, em Motril: menus degustação com preços, produto local, adega, vale-presente e pedido de reserva, no claro e no escuro.">
+<meta name="keywords" content="site para restaurante de alta gastronomia, site para restaurante de menu degustação, criação de site para restaurante em Granada, site do Espacio IME em Motril, site para restaurante na Costa Tropical, site de restaurante com menus e preços, site de restaurante com vale-presente e carta de vinhos, site de restaurante em espanhol e inglês, web designer na Costa del Sol, desafio 100 dias 100 sites">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Diário">
+<meta property="og:title" content="Site para restaurante de alta gastronomia: Espacio IME, Motril">
+<meta property="og:description" content="Um conceito de site para o Espacio IME, em Motril: menus degustação com preços, produto local, adega, vale-presente e pedido de reserva, no claro e no escuro.">
+<meta property="og:url" content="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp">
+<meta property="og:image:alt" content="Capa do caso de um conceito de site para o Espacio IME: a página inicial escura num computador com o título Un viaje por los sabores de la Costa Tropical, ao lado de dois celulares nos temas claro e escuro.">
+<meta property="article:published_time" content="2026-11-21T16:30:00+01:00">
+<meta property="article:modified_time" content="2026-11-21T16:30:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 dias">
+<meta property="article:tag" content="site para restaurante de alta gastronomia">
+<meta property="article:tag" content="site para restaurante de menu degustação">
+<meta property="article:tag" content="criação de site para restaurante em Granada">
+<meta property="article:tag" content="site do Espacio IME em Motril">
+<meta property="article:tag" content="site para restaurante na Costa Tropical">
+<meta property="article:tag" content="site de restaurante com menus e preços">
+<meta property="article:tag" content="site de restaurante com vale-presente e carta de vinhos">
+<meta property="article:tag" content="site de restaurante em espanhol e inglês">
+<meta property="article:tag" content="web designer na Costa del Sol">
+<meta property="article:tag" content="desafio 100 dias 100 sites">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Site para restaurante de alta gastronomia: Espacio IME, Motril">
+<meta name="twitter:description" content="Um conceito de site para o Espacio IME, em Motril: menus degustação com preços, produto local, adega, vale-presente e pedido de reserva, no claro e no escuro.">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp">
+<meta name="twitter:image:alt" content="Capa do caso de um conceito de site para o Espacio IME: a página inicial escura num computador com o título Un viaje por los sabores de la Costa Tropical, ao lado de dois celulares nos temas claro e escuro.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/#article",
+      "url": "https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/",
+      "headline": "Site para restaurante de alta gastronomia: Espacio IME, Motril",
+      "alternativeHeadline": "tão cuidadoso quanto a cozinha",
+      "description": "Um conceito de site para o Espacio IME, em Motril: menus degustação com preços, produto local, adega, vale-presente e pedido de reserva, no claro e no escuro.",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-11-21T16:30:00+01:00",
+      "dateModified": "2026-11-21T16:30:00+01:00",
+      "articleSection": "100 dias",
+      "keywords": "site para restaurante de alta gastronomia, site para restaurante de menu degustação, criação de site para restaurante em Granada, site do Espacio IME em Motril, site para restaurante na Costa Tropical, site de restaurante com menus e preços, site de restaurante com vale-presente e carta de vinhos, site de restaurante em espanhol e inglês, web designer na Costa del Sol, desafio 100 dias 100 sites",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp", "caption": "Capa do caso de um conceito de site para o Espacio IME: a página inicial escura num computador com o título Un viaje por los sabores de la Costa Tropical, ao lado de dois celulares nos temas claro e escuro." },
+      "about": {
+        "@type": "Restaurant",
+        "name": "Espacio IME", "url": "https://www.espacioime.es/", "address": { "@type": "PostalAddress", "addressLocality": "Motril", "addressCountry": "ES" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 dias", "url": "https://wellyington.github.io/journal/pt/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Diário", "item": "https://wellyington.github.io/journal/pt/" },
+        { "@type": "ListItem", "position": 2, "name": "tão cuidadoso quanto a cozinha", "item": "https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/pt/" class="bar-cell bar-brand" aria-label="Wellyington Diário">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diário</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Horário local e no que estou trabalhando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escrevendo</span><span>notas sobre lançar pequeno</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Ouvindo</span><span>Wellyington — demos de estúdio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/as-careful-as-the-kitchen/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/tan-cuidada-como-la-cocina/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Mudar para o tema escuro" data-label-dark="Mudar para o tema escuro" data-label-light="Mudar para o tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Escuro"></span><span class="theme-word" data-light="Claro" data-dark="Escuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menu" data-label-open="Abrir menu" data-label-close="Fechar menu" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegação" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegação">
+      <p class="label">Navegação</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/pt/" class="rollable">
+            <span class="roll"><span>diário.</span><span aria-hidden="true">diário.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/archive/" class="rollable">
+            <span class="roll"><span>arquivo.</span><span aria-hidden="true">arquivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/about/" class="rollable">
+            <span class="roll"><span>sobre.</span><span aria-hidden="true">sobre.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>site principal.</span><span aria-hidden="true">site principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/" class="menu-entry">
+            <span class="mono dim">Nº 006</span>
+            <span>tão cuidadoso quanto a cozinha<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/o-site-que-cuida-de-si-mesmo/" class="menu-entry">
+            <span class="mono dim">Nº 005</span>
+            <span>o site que cuida de si mesmo<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/criterio-antes-de-volume/" class="menu-entry">
+            <span class="mono dim">Nº 004</span>
+            <span>critério antes de volume<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/um-lugar-na-mesa-comprida/" class="menu-entry">
+            <span class="mono dim">Nº 003</span>
+            <span>um lugar na mesa comprida<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/as-careful-as-the-kitchen/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/tan-cuidada-como-la-cocina/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/pt/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/pt/" class="entry-cell entry-back rollable"><span class="roll"><span>← diário</span><span aria-hidden="true">← diário</span></span></a>
+    <span class="entry-cell mono">Nº 006</span>
+    <span class="entry-cell label">100 dias</span>
+    <time class="entry-cell" datetime="2026-11-21T16:30:00+01:00">21 de novembro de 2026</time>
+    <span class="entry-cell">13 min de leitura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">tão cuidadoso quanto a cozinha<span class="dot">.</span></h1><p class="entry-lede">Dia cinco de cem: um conceito de site para o Espacio IME, o restaurante de menu degustação de Iván Mateo em Motril, feito para ficar à altura dos guias que o recomendam.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp" alt="Capa do caso de um conceito de site para o Espacio IME: a página inicial escura num computador com o título Un viaje por los sabores de la Costa Tropical, ao lado de dois celulares nos temas claro e escuro." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 006</span>
+</div>
+<p class="caption label">Dia cinco. Um conceito para o Espacio IME, em Motril, em tela grande e em dois celulares.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="nesta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">nesta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartilhar.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar link</span><span aria-hidden="true">copiar link</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Ftao-cuidadoso-quanto-a-cozinha%2F&text=t%C3%A3o+cuidadoso+quanto+a+cozinha"><span class="roll"><span>publicar no X</span><span aria-hidden="true">publicar no X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Ftao-cuidadoso-quanto-a-cozinha%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>No dia 21 de novembro publiquei a quinta nota desta série, o desafio proposto por Ramiah Trask: cem dias, cem negócios, cem sites. O primeiro dia foi uma construtora familiar da Marina Alta. <a href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/">Essa página está aqui.</a> O segundo, um teatro em Málaga. <a href="https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/">Esse está aqui.</a> O terceiro, um restaurante familiar na minha própria cidade, Estepona. <a href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/">Esse está aqui.</a> O quarto, um escritório imobiliário particular em Málaga. <a href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/">Esse está aqui.</a> Hoje é de novo um restaurante, mas bem diferente.</p>
+
+<p>O Espacio IME é um pequeno restaurante de menu degustação em Motril, na Costa Tropical, o trecho do litoral de Granada onde mangas, abacates e cherimólias crescem a poucos minutos do mar. O chef é Iván Mateo. Ele voltou para Motril depois de onze anos cozinhando em restaurantes por toda a Espanha, e comanda o IME desde dezembro de 2021. A cozinha dele se apoia no produto local: peixe do mercado de Motril, as frutas subtropicais da costa, vinhos de Granada.</p>
+
+<p>Os guias perceberam. O Espacio IME é restaurante recomendado do Guia Repsol 2026. Está selecionado no Guia Michelin. A Macarfi, o guia que dá notas para cozinha, ambiente e serviço, dedica a ele uma ficha própria e destaca um arroz com quisquilla de Motril, o camarão da região, como motivo suficiente para a viagem.</p>
+
+<p>Alguns restaurantes merecem um site tão bom quanto a comida que servem. O conceito está aqui: <a href="https://wellyington.github.io/challenge/day5/">Espacio IME, dia cinco</a>. O site do restaurante está em <a href="https://www.espacioime.es/">espacioime.es</a>, e o Instagram é <a href="https://www.instagram.com/espacioime/">@espacioime</a>.</p>
+
+<p>É um conceito de design independente. Não é uma colaboração com o Espacio IME, ninguém de lá me pediu e nada na página quer dizer que eles aprovam. Como os quatro anteriores, por enquanto ele mora no meu próprio endereço.</p>
+
+<h2 id="um-site-à-altura-dos-reconhecimentos">um site à altura dos reconhecimentos</h2>
+
+<p>Pense em como as pessoas chegam a um restaurante assim. Quase ninguém descobre um menu degustação em Motril passando na frente. Leem num guia, veem um prato no Instagram, ouvem de um amigo que desceu de Granada. Depois pesquisam. O site é a segunda impressão, e ela vem logo depois de um guia dizer que o lugar vale uma viagem especial.</p>
+
+<p>Se aí o site parece um modelo pronto, com fotos de banco de imagens e um formulário de contato num canto, quem visita sente o descompasso. Não porque um modelo seja um crime, mas porque todo o resto do lugar fala de cuidado: o produto, a montagem dos pratos, a carta curta de vinhos, o salão pequeno. O site é a única parte da experiência que o restaurante oferece de graça, para todo mundo, antes de alguém provar qualquer coisa.</p>
+
+<p>Então me dei uma tarefa simples. O site deveria ter o mesmo cuidado com os detalhes que a cozinha. Uma ordem clara, o produto na frente, os menus com os preços, o vinho, o presente e um jeito tranquilo de pedir uma mesa. Nada que grite.</p>
+
+<h2 id="uma-viagem-pelos-sabores-da-costa">uma viagem pelos sabores da costa</h2>
+
+<p>O site abre no salão. Uma foto larga do salão ocupa a tela, escurecida para o texto ficar confortável por cima: mesas de madeira, cadeiras cor de mostarda, um vaso de flores secas.</p>
+
+<p>O título está numa serifa alta e estreita: un viaje por los sabores de la Costa Tropical, uma viagem pelos sabores da Costa Tropical. As duas últimas palavras ficam em itálico e num dourado suave. Em cima, uma linha pequena, cocina de autor, Motril, Granada, que é como um guia descreveria o lugar. Embaixo, uma frase: o restaurante intimista de Iván Mateo, onde convivem a arte e a gastronomia, com peixe do mercado, fruta subtropical e o mar em cada etapa.</p>
+
+<p>Depois, dois botões: reservar mesa ou conhecer os menus. No pé da tela aparece um prato branco, com uma linha de texto correndo pela borda como o carimbo de uma cerâmica: Costa Tropical, Motril, cozinha autoral, Iván Mateo.</p>
+
+<p>Logo abaixo da abertura há uma fileira discreta com os três reconhecimentos: Guia Michelin 2026, Guia Repsol 2026 e Macarfi. Eles são pequenos e usam a mesma tipografia de todo o resto, e o rodapé leva às páginas do restaurante nos guias Michelin e Repsol. Prêmios funcionam melhor quando são fáceis de conferir e não são gritados.</p>
+
+<p><img src="/images/journal/100-days-day-5/01-split.webp" alt="O conceito do Espacio IME num computador, com o título Un viaje por los sabores de la Costa Tropical sobre uma foto do salão, e dois celulares com a seção da experiência nos temas claro e escuro." />
+<em>A abertura em tela grande, e a seção da experiência em dois celulares.</em></p>
+
+<h2 id="cada-prato-nasce-da-terra">cada prato nasce da terra</h2>
+
+<p>A primeira seção depois da abertura fala do cozinheiro, não do menu. O título diz: cada plato nace de la tierra, la estación y el amor por el oficio. Cada prato nasce da terra, da estação e do amor pelo ofício.</p>
+
+<p>Ao lado, uma única citação da cozinha, grande, em itálico, com uma linha dourada fina do lado: a nossa cozinha não é só técnica, é um jeito de viver. Depois, um parágrafo curto. Depois de onze anos cozinhando em restaurantes pela Espanha, Iván Mateo voltou para a sua Motril natal. Aqui ele trabalha com produto fresco, local e da estação, de fornecedores próximos e de confiança, com precisão, ordem e o máximo respeito pelo ingrediente.</p>
+
+<p>Três números fecham a seção. 2021, aberto desde dezembro. 4, menus novos a cada ano. 11, anos em cozinhas da Espanha. Prefiro números assim a adjetivos. Um cliente pode conferir cada um, e juntos eles dizem mais sobre o lugar do que “excepcional” jamais diria.</p>
+
+<h2 id="o-produto-pelo-nome">o produto, pelo nome</h2>
+
+<p>Um menu degustação é difícil de descrever com antecedência, porque ele muda. O que não muda é de onde ele vem. Por isso, entre a história e os menus há uma faixa de ingredientes, com um pequeno desenho para cada um e uma linha embaixo.</p>
+
+<p>Quisquilla de Motril, o camarão local, a joia da costa. Peixe do mercado, do porto de Motril. Manga, cultivada na Costa Tropical. Abacate, subtropical e local. Cherimólia, a fruta doce de Granada. E os vinhos de Granada, uma carta curta e pessoal.</p>
+
+<p>Os mesmos nomes passam pela tela mais acima, como uma faixa lenta, em itálico dourado, um atrás do outro. Pode ser que um visitante de Madri ou de Londres não saiba o que é uma quisquilla. Depois dessa página, vai querer provar.</p>
+
+<h2 id="duas-viagens-uma-mesma-costa">duas viagens, uma mesma costa</h2>
+
+<p>Depois vêm os menus, sob o título dos viajes, una misma costa: duas viagens, uma mesma costa. Uma linha explica como a cozinha funciona. O menu muda completamente quatro vezes por ano, e em parte toda vez que o mercado traz alguma novidade.</p>
+
+<p>São dois menus, lado a lado, cada um no seu cartão, com o preço grande no canto, do jeito que um cardápio impresso mostraria.</p>
+
+<p>Aromas de la Costa, por 35 euros, é o percurso curto: aromas de mar e frutas tropicais, a essência do IME num percurso mais breve. Inclui peixe do mercado e produto da Costa Tropical, pão de uma padaria próxima e opções para celíacos.</p>
+
+<p>Senda, por 80 euros, é o menu longo: a experiência IME completa, etapa por etapa, da beira do mar à horta. Cobre todo o percurso da estação, uma harmonização com vinhos de Granada e o mesmo cuidado com os celíacos. No tema claro, esse cartão é escuro, e no tema escuro ele ganha uma borda dourada, então o olho sabe qual é a experiência completa sem precisar de aviso.</p>
+
+<p>Cada cartão termina com um único botão: reservar este menu. Uma linha embaixo dos dois diz que os preços são por pessoa, que as bebidas não estão incluídas e que alergias ou intolerâncias devem ser informadas na reserva.</p>
+
+<p>Mostrar os preços foi uma escolha. Alguns restaurantes desse nível escondem os valores, e é preciso mandar mensagem para descobrir. Isso afasta justamente quem está planejando um aniversário ou uma data especial e quer saber o que esperar. Preço claro também é hospitalidade.</p>
+
+<p><img src="/images/journal/100-days-day-5/02-light.webp" alt="A seção de menus degustação no tema claro, com Aromas de la Costa a 35 euros num cartão branco e Senda a 80 euros num cartão escuro, ao lado de um celular com a entrada do restaurante à noite." />
+<em>O tema claro: linho, tinta e dourado, para os menus, o produto e o formulário de reserva.</em></p>
+
+<h2 id="à-luz-de-velas-por-padrão">à luz de velas por padrão</h2>
+
+<p>Todos os sites desta série até agora tiveram um tema claro e um escuro. Este é o primeiro em que o escuro é o ponto de partida.</p>
+
+<p>Um menu degustação é, na maior parte das vezes, um jantar, e o salão tem luz baixa. Por isso o site abre na versão escura: quase preto, #0B0A09, texto off-white quente, #F2ECE4, e um dourado discreto, #C49664, para tudo o que dá para tocar. O tema claro é linho e tinta, #FAF8F4 e #17130F, com um dourado mais fechado, #A0733F. Um botãozinho de sol e lua no cabeçalho troca entre os dois, e o site lembra da sua escolha na próxima visita.</p>
+
+<p>A tipografia é uma dupla que eu queria usar havia tempo: Instrument Serif, uma serifa estreita com um itálico lindo, para títulos, menus e preços, e Manrope, uma sem serifa limpa, para todo o resto. O logotipo é um ime fino, escrito à mão, em dourado.</p>
+
+<p><img src="/images/journal/100-days-day-5/03-dark.webp" alt="A seção de menus degustação no tema escuro, quase preto com detalhes dourados, ao lado de um celular no modo escuro com a entrada do restaurante." />
+<em>O escuro é o padrão. O botão de lua e sol troca o tema e lembra da escolha.</em></p>
+
+<h2 id="a-adega-e-o-presente">a adega e o presente</h2>
+
+<p>Depois vêm duas seções menores, e as duas importam mais do que o tamanho sugere.</p>
+
+<p>A primeira é a adega, a bodega. Título: una carta breve, elegida con intención, uma carta curta, escolhida com intenção. O texto conta que a carta vem de anos de experiência em viticultura: vinhos com personalidade, com os vinhedos de Granada como protagonistas, escolhidos para acompanhar cada etapa do menu. Ao lado, uma foto de uma taça de tinto entre as videiras. Não há uma tabela longa de garrafas e safras. A carta curta é a ideia, e o botão diz simplesmente pergunte pela harmonização.</p>
+
+<p>A segunda é o presente. Regala IME, presenteie IME. O título é regala una noche para recordar, dê de presente uma noite para lembrar. Qualquer um dos menus degustação pode virar presente, para aniversários, datas especiais ou simplesmente para agradecer. À esquerda, um vale-presente desenhado como um objeto, escuro, com a assinatura dourada do IME e as palavras un viaje para regalar, uma viagem para presentear. O botão, comprar vale-presente, leva direto à página de presentes que o restaurante já tem. Não construí uma loja nova. A que existe funciona, e o trabalho do conceito é fazer com que seja mais fácil de achar.</p>
+
+<p>Vales-presente são uma parte silenciosa do negócio de muitos bons restaurantes. Quem comeu num lugar especial quer mandar os pais, os amigos, o melhor cliente. Uma seção de presente visível e bem apresentada dá a essas pessoas um motivo.</p>
+
+<p><img src="/images/journal/100-days-day-5/04-produce-cellar-gift.webp" alt="Três seções do conceito do Espacio IME: a faixa do produto local no tema claro, a adega no tema escuro com uma taça de tinto entre as videiras, e a seção do vale-presente no tema claro." />
+<em>O produto, a adega e o vale-presente, cada um com o seu espaço.</em></p>
+
+<h2 id="primeiro-o-horário-depois-a-mesa">primeiro o horário, depois a mesa</h2>
+
+<p>A última seção da página se chama visítanos, visite-nos, e coloca o horário primeiro. De segunda a quarta, fechado. De quinta a sábado, almoço das 13:30 às 16:00 e jantar das 20:30 às 23:00. Domingo, só almoço, das 13:30 às 16:00. Domingo em julho e agosto, jantar das 20:30 às 23:00. Embaixo do horário, o endereço, Calle Francisco Díaz Cardona 2, em Motril, que abre no mapa, o telefone e o e-mail.</p>
+
+<p>Ao lado do horário fica o pedido de reserva, reserva tu mesa. Primeiro a data e o número de pessoas. Depois que você escolhe a data, o formulário só oferece os horários em que a cozinha serve naquele dia, de meia em meia hora, para almoço, jantar ou os dois. Se você escolher uma segunda, terça ou quarta, ele avisa com gentileza que o restaurante está fechado e sugere de quinta a domingo. Se escolher um domingo de agosto, ele oferece jantar em vez de almoço. Depois vem o menu: Aromas de la Costa, Senda ou decidimos na mesa. Depois nome, telefone e um campo para alergias, comemorações ou qualquer coisa que a cozinha precise saber.</p>
+
+<p>O botão diz solicitar reserva, e é exatamente isso que ele faz. Ele prepara um e-mail para o restaurante com tudo preenchido, pronto para enviar. O restaurante confirma. Não quis fingir que o conceito fosse um sistema completo de reservas. Um restaurante pequeno, com poucas mesas, costuma preferir ver cada pedido e responder pessoalmente, e a página respeita isso.</p>
+
+<p><img src="/images/journal/100-days-day-5/05-booking.webp" alt="A seção de visita e reserva no tema escuro, com o horário, o endereço e o telefone à esquerda e o formulário de reserva à direita, ao lado da mesma seção num celular no tema claro." />
+<em>O horário vem primeiro. O formulário só oferece horários em que a cozinha abre no dia escolhido.</em></p>
+
+<h2 id="no-celular">no celular</h2>
+
+<p>A maioria das pessoas vai ver este site no celular, muitas vezes no mesmo dia em que quer reservar. Numa tela pequena, tudo se empilha na mesma ordem: a história, o produto, os menus, a adega, o presente, o horário.</p>
+
+<p>Dois botões ficam fixos na parte de baixo o tempo todo: ligar e reservar mesa. Eles ficam ao alcance do polegar em qualquer ponto da página. Quem já se decidiu não precisa descer até o fim para achar o formulário.</p>
+
+<p>O menu abre em tela cheia com um círculo que se expande a partir do botão no canto, como uma cortina puxada de um lado. Dentro estão as cinco seções, grandes, na serifa: experiência, menus, adega, presenteie IME, visite-nos. Embaixo, o botão de reservar mesa, o horário numa linha curta, o telefone e o Instagram. Tudo o que alguém precisa para se decidir cabe nessa tela.</p>
+
+<p><img src="/images/journal/100-days-day-5/06-mobile.webp" alt="Dois celulares com a seção de menus degustação, um no tema claro e outro no escuro, com os botões de ligar e reservar mesa fixos embaixo." />
+<em>Os menus no celular, nos dois temas, com ligar e reservar sempre à mão.</em></p>
+
+<p><img src="/images/journal/100-days-day-5/07-menu.webp" alt="Três celulares: a página inicial com o menu fechado e o menu em tela cheia aberto no tema claro e no escuro, com cinco seções, um botão de reservar mesa, o horário e o telefone." />
+<em>O menu em tela cheia abre com um círculo: seções, reserva, horário e contato.</em></p>
+
+<h2 id="espanhol-primeiro-inglês-a-um-toque">espanhol primeiro, inglês a um toque</h2>
+
+<p>O site do próprio IME é em espanhol, e o conceito também, em primeiro lugar. Mas a Costa Tropical recebe visitantes de fora, e muita gente que mora neste litoral lê inglês com mais facilidade do que espanhol.</p>
+
+<p>Por isso há um botão EN no cabeçalho. Você toca e todo o texto da página passa para o inglês: os títulos, os menus, o horário, os rótulos do formulário, os botões. Não é uma tradução automática colocada por cima. Cada linha tem a sua versão em inglês escrita ao lado da espanhola, para que as duas se leiam bem.</p>
+
+<h2 id="por-que-acho-que-este-merece-uma-olhada">por que acho que este merece uma olhada</h2>
+
+<p>Cada dia desta série tem o seu próprio trabalho. Uma construtora precisava de uma primeira página clara. Um teatro precisava de ordem. Um restaurante familiar precisava mostrar muitos motivos para entrar. Um escritório imobiliário precisava colocar uma pessoa na frente.</p>
+
+<p>O Espacio IME precisava de algo mais perto da própria cozinha: contenção, bons materiais e atenção às pequenas coisas. Uma linha dourada ao lado de uma citação. Um prato surgindo no pé da primeira tela. Preços compostos como num cardápio impresso. Um formulário de reserva que sabe que a cozinha fecha às terças.</p>
+
+<p>Vou dizer com todas as letras: acho que este merece uma olhada do Awwwards. Se ela vier, ótimo. Se não vier, a página continua fazendo aquilo para que foi feita, que é ficar ao lado de uma ficha do Guia Michelin sem destoar.</p>
+
+<p><img src="/images/journal/100-days-day-5/08-toggle.webp" alt="A seção da adega dividida entre o tema claro e o escuro, com o título Una carta breve, elegida con intención e uma taça de tinto entre as videiras." />
+<em>Um botão no cabeçalho, lembrado na sua próxima visita.</em></p>
+
+<h2 id="um-conceito-independente">um conceito independente</h2>
+
+<p>O Espacio IME não me contratou, e este não é o site deles. A história do chef, os menus e preços, o produto, o horário, o endereço e as fichas dos guias vêm do que o restaurante e os guias já publicam. Não mudei nenhum fato. O que mudei foi a ordem, a tipografia, o tom e o jeito como a página se comporta no celular.</p>
+
+<p>Não tenho números de reservas nem de visitas, e não vou inventar nenhum. Se ninguém no IME quiser, o conceito fica onde está, como dia cinco. Se quiserem, o resto é prático: as palavras deles onde eu preenchi, fotos novas para o menu de cada estação, os pedidos de reserva enviados para onde eles quiserem e o site levado para espacioime.es.</p>
+
+<h2 id="se-a-sua-cozinha-é-melhor-que-o-seu-site">se a sua cozinha é melhor que o seu site</h2>
+
+<p>Pode ser que você não tenha um restaurante de menu degustação. Mas muitos pequenos negócios deste litoral estão na mesma situação: o que eles fazem é melhor do que a forma como aparecem na internet. Uma padaria premiada com um site de duas linhas. Uma vinícola com uma adega linda e uma página que é quase só um telefone. Um hotel com dez quartos perfeitos e um sistema de reservas de 2015.</p>
+
+<p>O que ajuda é o mesmo que aqui. Coloque as pessoas e o produto na frente. Mostre os preços, se puder. Dê ao cliente um jeito tranquilo de pedir o que ele quer. E deixe o design ser tão cuidadoso quanto o trabalho.</p>
+
+<p>Sou web designer em Estepona, na Costa del Sol, e faço sites como este para negócios de toda a Espanha. Se isso parece com o seu negócio, escreva para mim pelo <a href="https://wellyington.github.io/pt/">site principal</a>. Diga o que você faz e onde, e eu respondo em linguagem comum. O conceito está <a href="https://wellyington.github.io/challenge/day5/">aqui</a>, e o site do Espacio IME está <a href="https://www.espacioime.es/">aqui</a>, se você quiser comparar os dois. Cinco feitos, faltam noventa e cinco.</p>
+
+      <p class="fin" aria-label="Fim da entrada">fim.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">arquivado em</span>
+    <ul class="chips"><li>100 dias</li><li>caso real</li><li>restaurante</li><li>alta gastronomia</li><li>motril</li></ul>
+  </div><nav class="rail pager" aria-label="mais entradas."><a class="pager-cell rollable" href="/journal/pt/articles/o-site-que-cuida-de-si-mesmo/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">o site que cuida de si mesmo<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">a entrada mais recente.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Continue lendo</span>
+    <h2 id="more-title" class="h-section">mais entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/pt/articles/criterio-antes-de-volume/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Capa do caso de um conceito de site para a Nina Estate: a abertura dividida entre um tema claro cor de pedra e um tema escuro quase preto, com uma villa com piscina ao entardecer, e o mesmo site num celular." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 004</span>
+</div>
+<span class="label">100 dias · 20.11.26</span><span class="card-title">critério antes de volume<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/um-lugar-na-mesa-comprida/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Capa do caso de um conceito de site para o Los Arcos Estepona: a abertura dividida entre um tema creme e um tema carvão num computador, com a mesma página num celular." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 003</span>
+</div>
+<span class="label">100 dias · 19.11.26</span><span class="card-title">um lugar na mesa comprida<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/espaco-para-a-temporada-inteira/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-2/08-cover.webp" alt="Capa do caso: um conceito de página inicial do Teatro Soho, com o tema claro e o escuro lado a lado num computador e a mesma página num celular, sobre o cartaz de El Gran Gatsby." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 002</span>
+</div>
+<span class="label">100 dias · 19.11.26</span><span class="card-title">espaço para a temporada inteira<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independente por design · Escrito em público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/pt/" class="rollable"><span class="roll"><span>diário</span><span aria-hidden="true">diário</span></span>
+    </a><a href="/journal/pt/archive/" class="rollable"><span class="roll"><span>arquivo</span><span aria-hidden="true">arquivo</span></span>
+    </a><a href="/journal/pt/about/" class="rollable"><span class="roll"><span>sobre</span><span aria-hidden="true">sobre</span></span>
+    </a><a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>site principal</span><span aria-hidden="true">site principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">em outros lugares</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/pt/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escreva para mim</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Eu leio todas as respostas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Composto em Space Grotesk · Feito com Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
