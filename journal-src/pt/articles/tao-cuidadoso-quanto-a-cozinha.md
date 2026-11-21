@@ -23,9 +23,9 @@ about:
   name: "Espacio IME"
   url: "https://www.espacioime.es/"
   locality: "Motril"
-image: https://wellyington.github.io/images/journal/100-days-day-5/09-cover.webp
-image_alt: "Capa do caso de um conceito de site para o Espacio IME: a página inicial escura num computador com o título Un viaje por los sabores de la Costa Tropical, ao lado de dois celulares nos temas claro e escuro."
-image_caption: "Dia cinco. Um conceito para o Espacio IME, em Motril, em tela grande e em dois celulares."
+image: https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp
+image_alt: "Capa do caso do conceito de site para o Espacio IME: Design Challenge dia 5, a página inicial escura num computador com o título Un viaje por los sabores de la Costa Tropical e um celular no tema claro com o produto local."
+image_caption: "Dia cinco. Um conceito para o Espacio IME, em Motril, escuro no computador e claro no celular."
 ---
 
 No dia 21 de novembro publiquei a quinta nota desta série, o desafio proposto por Ramiah Trask: cem dias, cem negócios, cem sites. O primeiro dia foi uma construtora familiar da Marina Alta. [Essa página está aqui.](https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/) O segundo, um teatro em Málaga. [Esse está aqui.](https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/) O terceiro, um restaurante familiar na minha própria cidade, Estepona. [Esse está aqui.](https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/) O quarto, um escritório imobiliário particular em Málaga. [Esse está aqui.](https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/) Hoje é de novo um restaurante, mas bem diferente.
