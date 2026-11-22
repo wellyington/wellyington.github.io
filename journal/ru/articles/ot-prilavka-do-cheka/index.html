@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<title>Сайт заказов для курицы-гриль: El Dorado, Эстепона · Wellyington</title>
+<meta name="description" content="Концепт сайта для El Dorado, курица-гриль в Эстепоне: всё меню с ценами, живой чек заказа, время доставки или самовывоза и статус «открыто сейчас».">
+<meta name="keywords" content="дизайн сайта для ресторана еды навынос, сайт онлайн-заказов для небольшого ресторана, концепт сайта для курицы-гриль, курица-гриль с доставкой в Эстепоне, сайт ресторана с временем доставки и самовывоза, сайт ресторана, который показывает, открыт ли он сейчас, сайт заказа еды, сделанный сначала для телефона, сайт ресторана в его привычном фирменном стиле и цветах, веб-дизайнер в Эстепоне, челлендж 100 дней 100 сайтов">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Журнал">
+<meta property="og:title" content="Сайт заказов для курицы-гриль: El Dorado, Эстепона">
+<meta property="og:description" content="Концепт сайта для El Dorado, курица-гриль в Эстепоне: всё меню с ценами, живой чек заказа, время доставки или самовывоза и статус «открыто сейчас».">
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp">
+<meta property="og:image:alt" content="Обложка кейса концепта сайта El Dorado: меню Haz tu comanda на компьютере с напитками, бумажный чек заказа справа и телефон с меню и панелью Mi comanda.">
+<meta property="article:published_time" content="2026-11-22T15:45:00+01:00">
+<meta property="article:modified_time" content="2026-11-22T15:45:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 дней">
+<meta property="article:tag" content="дизайн сайта для ресторана еды навынос">
+<meta property="article:tag" content="сайт онлайн-заказов для небольшого ресторана">
+<meta property="article:tag" content="концепт сайта для курицы-гриль">
+<meta property="article:tag" content="курица-гриль с доставкой в Эстепоне">
+<meta property="article:tag" content="сайт ресторана с временем доставки и самовывоза">
+<meta property="article:tag" content="сайт ресторана, который показывает, открыт ли он сейчас">
+<meta property="article:tag" content="сайт заказа еды, сделанный сначала для телефона">
+<meta property="article:tag" content="сайт ресторана в его привычном фирменном стиле и цветах">
+<meta property="article:tag" content="веб-дизайнер в Эстепоне">
+<meta property="article:tag" content="челлендж 100 дней 100 сайтов">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Сайт заказов для курицы-гриль: El Dorado, Эстепона">
+<meta name="twitter:description" content="Концепт сайта для El Dorado, курица-гриль в Эстепоне: всё меню с ценами, живой чек заказа, время доставки или самовывоза и статус «открыто сейчас».">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp">
+<meta name="twitter:image:alt" content="Обложка кейса концепта сайта El Dorado: меню Haz tu comanda на компьютере с напитками, бумажный чек заказа справа и телефон с меню и панелью Mi comanda.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/#article",
+      "url": "https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/",
+      "headline": "Сайт заказов для курицы-гриль: El Dorado, Эстепона",
+      "alternativeHeadline": "от прилавка до чека",
+      "description": "Концепт сайта для El Dorado, курица-гриль в Эстепоне: всё меню с ценами, живой чек заказа, время доставки или самовывоза и статус «открыто сейчас».",
+      "inLanguage": "ru",
+      "datePublished": "2026-11-22T15:45:00+01:00",
+      "dateModified": "2026-11-22T15:45:00+01:00",
+      "articleSection": "100 дней",
+      "keywords": "дизайн сайта для ресторана еды навынос, сайт онлайн-заказов для небольшого ресторана, концепт сайта для курицы-гриль, курица-гриль с доставкой в Эстепоне, сайт ресторана с временем доставки и самовывоза, сайт ресторана, который показывает, открыт ли он сейчас, сайт заказа еды, сделанный сначала для телефона, сайт ресторана в его привычном фирменном стиле и цветах, веб-дизайнер в Эстепоне, челлендж 100 дней 100 сайтов",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp", "caption": "Обложка кейса концепта сайта El Dorado: меню Haz tu comanda на компьютере с напитками, бумажный чек заказа справа и телефон с меню и панелью Mi comanda." },
+      "about": {
+        "@type": "Restaurant",
+        "name": "Asador de Pollos El Dorado", "url": "https://pollosasadosadomicilioestepona.es/", "address": { "@type": "PostalAddress", "addressLocality": "Estepona", "addressCountry": "ES" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 дней", "url": "https://wellyington.github.io/journal/ru/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Журнал", "item": "https://wellyington.github.io/journal/ru/" },
+        { "@type": "ListItem", "position": 2, "name": "от прилавка до чека", "item": "https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/from-the-counter-to-the-ticket/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/del-mostrador-a-la-comanda/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/do-balcao-a-comanda/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/ot-prilavka-do-cheka/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/ot-prilavka-do-cheka/" class="menu-entry">
+            <span class="mono dim">№ 007</span>
+            <span>от прилавка до чека<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/" class="menu-entry">
+            <span class="mono dim">№ 006</span>
+            <span>так же тщательно, как на кухне<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/sait-kotoryi-sledit-za-soboi/" class="menu-entry">
+            <span class="mono dim">№ 005</span>
+            <span>сайт, который следит за собой<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/suzhdenie-vazhnee-obema/" class="menu-entry">
+            <span class="mono dim">№ 004</span>
+            <span>суждение важнее объёма<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/from-the-counter-to-the-ticket/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/del-mostrador-a-la-comanda/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/do-balcao-a-comanda/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/ot-prilavka-do-cheka/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 007</span>
+    <span class="entry-cell label">100 дней</span>
+    <time class="entry-cell" datetime="2026-11-22T15:45:00+01:00">22 ноября 2026</time>
+    <span class="entry-cell">10 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">от прилавка до чека<span class="dot">.</span></h1><p class="entry-lede">Шестой день из ста: концепт сайта для El Dorado, заведения с курицей-гриль в Эстепоне, где заказываешь так же, как у прилавка, и видишь, как печатается твой чек, пока выбираешь.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp" alt="Обложка кейса концепта сайта El Dorado: меню Haz tu comanda на компьютере с напитками, бумажный чек заказа справа и телефон с меню и панелью Mi comanda." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 007</span>
+</div>
+<p class="caption label">Шестой день. Концепт для El Dorado в Эстепоне: меню, чек и телефон.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fot-prilavka-do-cheka%2F&text=%D0%BE%D1%82+%D0%BF%D1%80%D0%B8%D0%BB%D0%B0%D0%B2%D0%BA%D0%B0+%D0%B4%D0%BE+%D1%87%D0%B5%D0%BA%D0%B0"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fot-prilavka-do-cheka%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>22 ноября я опубликовал шестую заметку этой серии, челленджа, который придумал Рамайя Траск: сто дней, сто компаний, сто сайтов. Первым днём была семейная строительная компания в Марина-Альте. <a href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">Та страница здесь.</a> Вторым — театр в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/">Она здесь.</a> Третьим — семейный ресторан в Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/">Она здесь.</a> Четвёртым — частная консалтинговая практика по недвижимости в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/">Она здесь.</a> Пятым — ресторан дегустационных сетов в Мотриле. <a href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">Она здесь.</a></p>
+
+<p>Сегодня самое будничное дело из шести, и, может быть, то, чьим сайтом пользуются чаще всего. El Dorado — это заведение с курицей-гриль на авениде Пуэрта-дель-Мар в Эстепоне, моём родном городе. Курица-гриль, картошка фри, домашние крокеты, бургеры, бутерброды, аргентинские эмпанадас, соусы и напитки. Заказать можно с доставкой или на самовывоз, каждый день, днём и вечером. Сайт и интернет-магазин у них уже есть, на <a href="https://pollosasadosadomicilioestepona.es/">pollosasadosadomicilioestepona.es</a>.</p>
+
+<p>У сайта такого заведения две задачи. Он должен вызывать аппетит, и он должен делать заказ простым. Большинство сайтов еды навынос справляются с одной из двух. Концепт здесь: <a href="https://wellyington.github.io/challenge/day6/">El Dorado, шестой день</a>.</p>
+
+<h2 id="прилавок-а-не-каталог">прилавок, а не каталог</h2>
+
+<p>Вспомните, как заказывают у прилавка в таком месте. Вы не начинаете с разглядывания товаров. Человек за прилавком сначала задаёт два вопроса: с собой или доставить домой? И к какому времени? Только потом вы говорите, что хотите. Целую курицу, большую картошку, крокеты, бутылку колы. Он записывает это в чек, повторяет вам и называет сумму.</p>
+
+<p>Большинство онлайн-заказов устроены наоборот. Вам показывают магазин, полный товаров, дают наполнить корзину, и только в самом конце, при оплате, спрашивают, нужна ли доставка и к какому часу. Именно там люди узнают, что нужного времени уже нет или что доставка не доходит до их улицы, и бросают заказ.</p>
+
+<p>Поэтому концепт повторяет прилавок. Первое на странице, под заголовком, — небольшая панель с двумя вопросами. 01: как вы хотите?, a domicilio или para recoger, доставка или самовывоз. 02: к какому времени?, lo antes posible, как можно скорее, или конкретный час из ряда кнопок, 13:30, 14:30, 20:00, 21:00, или другое время. Затем одна тёмная кнопка: 03, elegir mi pedido, выбрать заказ. Она ведёт к меню.</p>
+
+<p>Вы говорите заведению, как хотите получить заказ, ещё до того, как увидели меню. Так поступил бы человек за прилавком, и это значит, что остальная страница уже знает, что вы задумали.</p>
+
+<p><img src="/images/journal/100-days-day-6/01-hero-ordering.webp" alt="Концепт El Dorado на компьютере: заголовок Pollo asado al fuego, directo a tu puerta, вырезанная курица-гриль и панель с вопросами «как» и «когда», рядом телефон с меню и панелью Mi comanda." />
+<em>Начало: заголовок, курица и два вопроса, которые первым делом задали бы у прилавка.</em></p>
+
+<p><img src="/images/journal/100-days-day-6/02-ordering-flow.webp" alt="Панель заказа крупно на компьютере и телефоне: 01 как вы хотите, 02 к какому времени и 03 выбрать заказ." />
+<em>Как, когда, а потом меню. Как у прилавка.</em></p>
+
+<h2 id="курица-на-странице">курица на странице</h2>
+
+<p>Заголовок — самая простая фраза, какую я смог написать: pollo asado al fuego, directo a tu puerta. Курица, запечённая на огне, прямо к вашей двери. Он набран очень крупно, тяжёлым, слегка сжатым гротеском, кремовым и золотым, а «al fuego» посередине — тонкой курсивной антиквой. Читается как вывеска на фасаде.</p>
+
+<p>Рядом — то, ради чего сюда приходят: курица-гриль, золотистая, блестящая, с травами на коже. Я вырезал её из фотографии, чтобы она лежала прямо на тёмно-коричневой странице, без рамки. Вокруг неё медленно вращается кольцо текста, un sabor único, pollos asados, Estepona — собственная фраза El Dorado. Сзади тёплое свечение, несколько поднимающихся искр, а на компьютере она едва заметно наклоняется к курсору.</p>
+
+<p>Я понимаю, как это звучит на бумаге. На экране это спокойно. Смысл в том, чтобы первым, что вы видите, была еда, причём такого размера, что почти чувствуешь запах.</p>
+
+<p><img src="/images/journal/100-days-day-6/06-hero-chicken.webp" alt="Вырезанная курица-гриль на тёмно-коричневом фоне, вокруг неё кольцо текста Un sabor único, pollos asados, Estepona." />
+<em>Вырезана из фона, чтобы лежать прямо на странице. Тёплое свечение, несколько искр и медленно вращающееся кольцо текста.</em></p>
+
+<h2 id="настоящее-меню-все-цены">настоящее меню, все цены</h2>
+
+<p>Второй раздел называется haz tu comanda, составь свой заказ. Comanda по-испански — это бумажный чек, по которому работает кухня, и вся идея концепта держится на нём.</p>
+
+<p>Слева девять категорий из меню El Dorado, у каждой — число блюд: курица и жареное, бургеры, бутерброды, багеты, домашние крокеты, эмпанадас, закуски, соусы и напитки. В центре — блюда выбранной категории, пронумерованные, как на меловой доске, у каждого короткое описание и цена. Справа — чек.</p>
+
+<p>Я не упрощал меню ради удобства дизайна. У настоящего заведения есть размеры порций, и именно на размерах онлайн-заказы обычно ломаются. Половина курицы стоит 7 евро, целая — 12. Картошка — 2,50 маленькая и 4 большая. Крокеты — по пять или по десять. Бутылка колы — литр или два. Поэтому у каждого размера своя цена и своя кнопка «плюс». Вы не выбираете размер в выпадающем списке, чтобы потом нажать «добавить». Вы нажимаете плюс рядом с нужным размером. Сумма всегда сходится, потому что нет промежуточного шага, где можно ошибиться.</p>
+
+<p>У крылышек перечислены девять соусов, от чеснока с пармезаном до Carolina Reaper. У бургеров написано, из чего они: 100% говядина. А под категориями — небольшая ссылка на полное меню в PDF, которое El Dorado уже публикует, для тех, кто предпочитает прочитать всё сразу.</p>
+
+<p><img src="/images/journal/100-days-day-6/04-full-menu.webp" alt="Раздел Haz tu comanda на компьютере: девять категорий слева, курица-гриль, крылышки и картошка в центре с размерами и ценами, чек справа, рядом телефон с тем же меню." />
+<em>Все девять категорий из меню El Dorado. У каждого размера своя цена и своя кнопка, поэтому сумма всегда сходится.</em></p>
+
+<h2 id="чек-печатается-пока-вы-заказываете">чек печатается, пока вы заказываете</h2>
+
+<p>Эта часть понравилась мне больше всего. Когда вы что-то добавляете, оно появляется в чеке справа на экране, нарисованном как бумажки из кухонного принтера: кремовая бумага, шрифт пишущей машинки, зубчатый оторванный край внизу.</p>
+
+<p>Сверху написано: comanda номер 981, или какой номер вам выпадет, и время. Затем asador de pollos El Dorado и адрес. Затем два ответа, которые вы дали в начале: a domicilio, lo antes posible. Затем каждая строка по мере добавления: 1 курица-гриль, целая, 12 евро. 1 картошка, большая, 4 евро. 1 крокеты с хамоном, 10 штук, 7 евро. 1 бутылка колы, 2 литра, 2,50. Число позиций и итог — 25,50 евро.</p>
+
+<p>Каждый раз, когда вы что-то добавляете, внизу всплывает короткое подтверждение: añadido, бутылка колы, 2 литра, со ссылкой на чек. Передумали — плюс превращается в минус и цифру.</p>
+
+<p>Под итогом — строка об условиях доставки, поле для адреса и кнопка finalizar pedido online, оформить заказ онлайн. Ниже мелким шрифтом альтернатива: o pídelo por teléfono, или закажите по телефону, 952 63 33 18.</p>
+
+<p>Чтобы было ясно, что концепт делает в этот момент: кнопка ведёт в уже существующий интернет-магазин El Dorado, где заказ и оформляется. Позиции из чека в концепте туда не передаются. В настоящей версии чек — это ровно то, что получит кухня: либо в магазин, которым они уже пользуются, либо прямо на принтер за прилавком. Дизайн — это та часть, которая важна клиенту: вы всё время видите свой заказ в том виде, в каком его увидит кухня.</p>
+
+<p><img src="/images/journal/100-days-day-6/03-live-comanda.webp" alt="Чек на компьютере: название и адрес El Dorado, способ и время, четыре позиции с размерами и ценами и итог 25,50 евро, над полем адреса и кнопкой Finalizar pedido online." />
+<em>Каждое блюдо печатается в бумажном чеке с зубчатым краем, номером заказа, временем и нарастающей суммой.</em></p>
+
+<h2 id="всегда-видно-открыто-ли">всегда видно, открыто ли</h2>
+
+<p>Нет ничего досаднее, чем заказать еду и узнать, что заведение закрыто. El Dorado работает каждый день с 10:30 до 16:00 и с 19:00 до 22:00, и концепт говорит об этом везде, где это важно.</p>
+
+<p>По самому верху страницы идёт золотая полоса. Когда открыто, на ней написано abierto ahora, pedidos hasta las 16:00, открыто сейчас, заказы до 16:00, или до 22:00 вечером. Когда закрыто, она говорит, когда откроются снова, в 10:30 или в 19:00, и добавляет programa tu pedido, запланируйте заказ. Никому не отказывают. Человеку говорят, когда вернуться, и что можно заказать заранее.</p>
+
+<p>Ниже, в разделе с часами работы, — 24-часовой циферблат. Две смены нарисованы дугами по краю, обед — золотом, вечер — карамельным, а стрелка показывает реальное время в Эстепоне. В 13:42 она внутри обеденной дуги, а в центре написано abierto ahora. Рядом: открыты каждый день, два промежутка времени, адрес на авениде Пуэрта-дель-Мар, кнопка «как добраться» и телефон.</p>
+
+<p>Часы читают время Эстепоны, а не вашего телефона, поэтому они верны даже для того, кто заказывает родителям из Лондона.</p>
+
+<p><img src="/images/journal/100-days-day-6/05-live-status.webp" alt="Раздел часов работы: 24-часовой циферблат показывает 13:42 внутри обеденной дуги и слова abierto ahora, заголовок Abiertos todos los días, два промежутка времени и адрес, рядом телефон с теми же часами." />
+<em>Золотая полоса и 24-часовые часы читают реальное время Эстепоны. Стрелка проходит по дугам обеда и вечера.</em></p>
+
+<h2 id="сделано-для-одного-большого-пальца">сделано для одного большого пальца</h2>
+
+<p>Большинство заказов в такое место делают с телефона, одной рукой, часто между делом. Поэтому сначала я сделал версию для телефона, а уже потом для большого экрана.</p>
+
+<p>Внизу экрана — неподвижная панель: mi comanda, с числом позиций, и llamar, позвонить. Нажмёте первую — перейдёте к своему чеку. Нажмёте вторую — телефон наберёт заведение. Что бы вы ни смотрели, заказ или звонок — в одном касании.</p>
+
+<p>На телефоне категории — это не ряд, который нужно листать вбок и который легко не заметить. Это сетка крупных кнопок, по две в ряд, так что все девять видны сразу, и каждая достаточно большая для пальца. Подтверждение появляется прямо над нижней панелью, там, где уже ваш взгляд.</p>
+
+<p>Меню открывается на весь экран: золотая полоса со статусом сверху, пять разделов сайта, большая кнопка звонка на 952 63 33 18 и снова курица внизу.</p>
+
+<p><img src="/images/journal/100-days-day-6/08-phones-first.webp" alt="Три телефона: меню с закреплённой панелью Mi comanda и Llamar и подтверждением, полноэкранное меню с кнопкой звонка и сетка из девяти категорий." />
+<em>Закреплённая панель с чеком и кнопкой звонка. Категории — крупные кнопки, без листания вбок.</em></p>
+
+<h2 id="их-бренд-как-есть">их бренд, как есть</h2>
+
+<p>У всех концептов этой серии до сих пор был новый облик. У этого — нет, и это сознательно.</p>
+
+<p>У El Dorado уже есть бренд, который в Эстепоне знают: логотип с курицей на фоне пламени и лентой с надписью asador de pollos El Dorado. Это не минималистичный логотип, и он не обязан им быть. Это вывеска над входом. Поэтому я его сохранил, очистив и увеличив, чтобы он оставался чётким на современных экранах, и построил всё остальное вокруг него.</p>
+
+<p>Цвета тоже взяты из логотипа. Эспрессо, #24190F, для фона. Коричневый, #876445. Карамельный, #CA965C. Золотой, #EEC373, для кнопок и верхней полосы. Кремовый, #F4DFBA, для чека и светлых разделов. На тёмной странице они выглядят как внутренность гриля, в этом и смысл.</p>
+
+<p>Шрифты новые. Bricolage Grotesque, тяжёлый и плотный, для больших заголовков, чтобы они читались как вывеска. Instrument Serif курсивом для более тёплых слов. Space Mono, шрифт пишущей машинки, для чека и мелких подписей. Inter для всего, что нужно прочитать быстро.</p>
+
+<p>Есть и раздел о заведении: un sabor único, sin atajos, неповторимый вкус, без коротких путей. Здесь жарят каждый день и делают сами то, что можно сделать самим: крокеты с курицей, хамоном и шпинатом и бургеры из 100% говядины. Рядом три настоящих отзыва клиентов, приклеенных полосками бумажного скотча, как записки на холодильнике. В одном El Dorado называют лучшим местом с курицей-гриль на всём Коста-дель-Соль. В другом отмечают, что это одно из немногих мест, где заказываешь навынос к определённому часу и его соблюдают.</p>
+
+<p><img src="/images/journal/100-days-day-6/09-brand.webp" alt="Логотип El Dorado, курица на фоне пламени с лентой Asador de Pollos El Dorado, рядом телефон с тремя отзывами клиентов на записках со скотчем, над пятью цветами палитры." />
+<em>Собственный логотип El Dorado, три настоящих отзыва клиентов и палитра из пяти цветов, взятая из бренда.</em></p>
+
+<h2 id="движение-в-меру">движение в меру</h2>
+
+<p>На этой странице двигается немного, и у каждого движения есть задача. Строки заголовка поднимаются одна за другой при загрузке. Разделы плавно появляются, когда вы до них доходите. Фото гриля в разделе о заведении слегка смещается. Тонкая золотая линия вверху шапки показывает, насколько далеко вы прокрутили.</p>
+
+<p>Между разделами — короткая история в трёх словах, так, как заведение написало бы на стене. Pides. Asamos. Disfrutas. Вы заказываете, онлайн или по телефону. Мы жарим, каждый день, днём и вечером, здесь, в Эстепоне. Вы наслаждаетесь, готово к условленному времени, ещё горячее. В самом низу страницы, в подвале, очень крупно написано El Dorado, и по надписи медленно проходит блик.</p>
+
+<p>Всё движение отключается для тех, кто попросил свой телефон или компьютер уменьшить анимацию. Без него страница работает точно так же.</p>
+
+<p><img src="/images/journal/100-days-day-6/07-editorial-motion.webp" alt="Редакционные детали: слова Pides, Asamos и Disfrutas, раздел о заведении с фото гриля и отзывами на скотче и крупная надпись El Dorado в подвале." />
+<em>Жирный шрифт, курсивная антиква, отзывы, приклеенные как записки, и движение, которое отключается по просьбе.</em></p>
+
+<h2 id="что-такое-этот-концепт-и-что-дальше">что такое этот концепт и что дальше</h2>
+
+<p>Логотип, цвета, меню, цены, часы работы, адрес, телефон и отзывы клиентов на странице принадлежат El Dorado. Ничего из этого я не менял. Новое — порядок вещей, чек, часы и то, как страница ведёт себя на телефоне.</p>
+
+<p>Чтобы превратить концепт в работающий магазин, нужно две вещи. Во-первых, чек должен доходить до кухни: в интернет-магазин, который у El Dorado уже есть, или в виде распечатки за прилавком. Во-вторых, доступное время должно приходить от самой кухни, чтобы в загруженный воскресный обед можно было закрыть слот до того, как он переполнится. Ни то ни другое не сложно. И то и другое стоит сделать как следует.</p>
+
+<p>Цифр по заказам и выручке у меня нет, и придумывать их я не буду.</p>
+
+<h2 id="если-клиенты-заказывают-у-вас-с-телефона">если клиенты заказывают у вас с телефона</h2>
+
+<p>Возможно, вы не продаёте курицу-гриль. Но многие небольшие компании на этом побережье принимают заказы: кондитерская, которая печёт торты на заказ, пиццерия, цветочный магазин, прачечная, мясная лавка, которая собирает наборы для барбекю на выходные. Их клиенты обычно заказывают с телефона, на бегу, а сайт обычно требует от них думать как продавец.</p>
+
+<p>Помогает то же, что и здесь. Сначала спросите, как и когда. Покажите каждый вариант с его собственной ценой. Дайте людям всё время видеть свой заказ в том виде, в каком вы его получите. Ясно скажите, открыты ли вы, а если нет — когда откроетесь. И держите телефон в одном касании, потому что всегда найдётся тот, кто предпочтёт позвонить.</p>
+
+<p>Я веб-дизайнер в Эстепоне, на Коста-дель-Соль, и делаю такие сайты для компаний по всей Испании. Если это похоже на ваш бизнес, напишите мне через <a href="https://wellyington.github.io/ru/">основной сайт</a>. Расскажите, чем вы занимаетесь и где, и я отвечу простым языком. Концепт <a href="https://wellyington.github.io/challenge/day6/">здесь</a>, а нынешний сайт El Dorado <a href="https://pollosasadosadomicilioestepona.es/">здесь</a>, чтобы вы могли их сравнить. Шесть готово, осталось девяносто четыре.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>100 дней</li><li>кейс</li><li>еда навынос</li><li>онлайн-заказ</li><li>эстепона</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><a class="pager-cell rollable" href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">
+      <span class="label">← предыдущая</span>
+      <span class="pager-title">так же тщательно, как на кухне<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Читайте дальше</span>
+    <h2 id="more-title" class="h-section">ещё записи.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp" alt="Обложка кейса с концептом сайта Espacio IME: Design Challenge, день 5, тёмная главная на компьютере с заголовком Un viaje por los sabores de la Costa Tropical и телефон в светлой теме с местными продуктами." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 006</span>
+</div>
+<span class="label">100 дней · 21.11.26</span><span class="card-title">так же тщательно, как на кухне<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/suzhdenie-vazhnee-obema/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Обложка кейса с концептом сайта Nina Estate: первый экран разделён между светлой каменной и почти чёрной тёмной темой, вилла с бассейном в сумерках, рядом тот же сайт на телефоне." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 004</span>
+</div>
+<span class="label">100 дней · 20.11.26</span><span class="card-title">суждение важнее объёма<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/mesto-za-dlinnym-stolom/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Обложка кейса с концептом сайта Los Arcos Estepona: первый экран на компьютере разделён между кремовой и угольной темой, рядом та же страница на телефоне." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 003</span>
+</div>
+<span class="label">100 дней · 19.11.26</span><span class="card-title">место за длинным столом<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

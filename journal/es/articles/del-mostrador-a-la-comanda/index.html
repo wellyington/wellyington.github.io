@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diario" href="/journal/es/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<title>Web de pedidos para asador de pollos: El Dorado, Estepona · Wellyington</title>
+<meta name="description" content="Un concepto de web para El Dorado, asador de pollos en Estepona: la carta completa con precios, comanda en directo, horas de entrega o recogida y estado de a...">
+<meta name="keywords" content="diseño web para restaurante de comida para llevar, web de pedidos online para un restaurante pequeño, concepto de web para asador de pollos, pollos asados a domicilio en Estepona, web de restaurante con horas de entrega y recogida, web de restaurante que muestra si está abierto ahora, web de pedidos de comida pensada para el móvil, web de restaurante con su marca y colores de siempre, diseñador web en Estepona, reto 100 días 100 webs">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Diario">
+<meta property="og:title" content="Web de pedidos para asador de pollos: El Dorado, Estepona">
+<meta property="og:description" content="Un concepto de web para El Dorado, asador de pollos en Estepona: la carta completa con precios, comanda en directo, horas de entrega o recogida y estado de a...">
+<meta property="og:url" content="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp">
+<meta property="og:image:alt" content="Portada del caso del concepto de web de El Dorado: la carta Haz tu comanda en un ordenador con las bebidas, una comanda de papel a la derecha y un móvil con la carta y la barra Mi comanda.">
+<meta property="article:published_time" content="2026-11-22T15:45:00+01:00">
+<meta property="article:modified_time" content="2026-11-22T15:45:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 días">
+<meta property="article:tag" content="diseño web para restaurante de comida para llevar">
+<meta property="article:tag" content="web de pedidos online para un restaurante pequeño">
+<meta property="article:tag" content="concepto de web para asador de pollos">
+<meta property="article:tag" content="pollos asados a domicilio en Estepona">
+<meta property="article:tag" content="web de restaurante con horas de entrega y recogida">
+<meta property="article:tag" content="web de restaurante que muestra si está abierto ahora">
+<meta property="article:tag" content="web de pedidos de comida pensada para el móvil">
+<meta property="article:tag" content="web de restaurante con su marca y colores de siempre">
+<meta property="article:tag" content="diseñador web en Estepona">
+<meta property="article:tag" content="reto 100 días 100 webs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Web de pedidos para asador de pollos: El Dorado, Estepona">
+<meta name="twitter:description" content="Un concepto de web para El Dorado, asador de pollos en Estepona: la carta completa con precios, comanda en directo, horas de entrega o recogida y estado de a...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp">
+<meta name="twitter:image:alt" content="Portada del caso del concepto de web de El Dorado: la carta Haz tu comanda en un ordenador con las bebidas, una comanda de papel a la derecha y un móvil con la carta y la barra Mi comanda.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/#article",
+      "url": "https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/",
+      "headline": "Web de pedidos para asador de pollos: El Dorado, Estepona",
+      "alternativeHeadline": "del mostrador a la comanda",
+      "description": "Un concepto de web para El Dorado, asador de pollos en Estepona: la carta completa con precios, comanda en directo, horas de entrega o recogida y estado de a...",
+      "inLanguage": "es",
+      "datePublished": "2026-11-22T15:45:00+01:00",
+      "dateModified": "2026-11-22T15:45:00+01:00",
+      "articleSection": "100 días",
+      "keywords": "diseño web para restaurante de comida para llevar, web de pedidos online para un restaurante pequeño, concepto de web para asador de pollos, pollos asados a domicilio en Estepona, web de restaurante con horas de entrega y recogida, web de restaurante que muestra si está abierto ahora, web de pedidos de comida pensada para el móvil, web de restaurante con su marca y colores de siempre, diseñador web en Estepona, reto 100 días 100 webs",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp", "caption": "Portada del caso del concepto de web de El Dorado: la carta Haz tu comanda en un ordenador con las bebidas, una comanda de papel a la derecha y un móvil con la carta y la barra Mi comanda." },
+      "about": {
+        "@type": "Restaurant",
+        "name": "Asador de Pollos El Dorado", "url": "https://pollosasadosadomicilioestepona.es/", "address": { "@type": "PostalAddress", "addressLocality": "Estepona", "addressCountry": "ES" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 días", "url": "https://wellyington.github.io/journal/es/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Diario", "item": "https://wellyington.github.io/journal/es/" },
+        { "@type": "ListItem", "position": 2, "name": "del mostrador a la comanda", "item": "https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/es/" class="bar-cell bar-brand" aria-label="Wellyington Diario">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diario</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Hora local y en qué estoy trabajando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escribiendo</span><span>notas sobre lanzar en pequeño</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escuchando</span><span>Wellyington — maquetas de estudio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/from-the-counter-to-the-ticket/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/del-mostrador-a-la-comanda/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/do-balcao-a-comanda/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/ot-prilavka-do-cheka/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Cambiar a tema oscuro" data-label-dark="Cambiar a tema oscuro" data-label-light="Cambiar a tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Oscuro"></span><span class="theme-word" data-light="Claro" data-dark="Oscuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegación" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegación">
+      <p class="label">Navegación</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/es/" class="rollable">
+            <span class="roll"><span>diario.</span><span aria-hidden="true">diario.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/archive/" class="rollable">
+            <span class="roll"><span>archivo.</span><span aria-hidden="true">archivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/about/" class="rollable">
+            <span class="roll"><span>sobre mí.</span><span aria-hidden="true">sobre mí.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>web principal.</span><span aria-hidden="true">web principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/es/articles/del-mostrador-a-la-comanda/" class="menu-entry">
+            <span class="mono dim">N.º 007</span>
+            <span>del mostrador a la comanda<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/tan-cuidada-como-la-cocina/" class="menu-entry">
+            <span class="mono dim">N.º 006</span>
+            <span>tan cuidada como la cocina<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/la-web-que-se-cuida-sola/" class="menu-entry">
+            <span class="mono dim">N.º 005</span>
+            <span>la web que se cuida sola<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/criterio-antes-que-volumen/" class="menu-entry">
+            <span class="mono dim">N.º 004</span>
+            <span>criterio antes que volumen<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/from-the-counter-to-the-ticket/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/del-mostrador-a-la-comanda/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/do-balcao-a-comanda/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/ot-prilavka-do-cheka/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/es/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/es/" class="entry-cell entry-back rollable"><span class="roll"><span>← diario</span><span aria-hidden="true">← diario</span></span></a>
+    <span class="entry-cell mono">N.º 007</span>
+    <span class="entry-cell label">100 días</span>
+    <time class="entry-cell" datetime="2026-11-22T15:45:00+01:00">22 de noviembre de 2026</time>
+    <span class="entry-cell">12 min de lectura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">del mostrador a la comanda<span class="dot">.</span></h1><p class="entry-lede">Día seis de cien: un concepto de web para El Dorado, el asador de pollos de Estepona, donde pides como lo harías en el mostrador y ves cómo se imprime tu comanda mientras eliges.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp" alt="Portada del caso del concepto de web de El Dorado: la carta Haz tu comanda en un ordenador con las bebidas, una comanda de papel a la derecha y un móvil con la carta y la barra Mi comanda." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 007</span>
+</div>
+<p class="caption label">Día seis. Un concepto para El Dorado en Estepona: la carta, la comanda y el móvil.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="en esta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">en esta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartir.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar enlace</span><span aria-hidden="true">copiar enlace</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fdel-mostrador-a-la-comanda%2F&text=del+mostrador+a+la+comanda"><span class="roll"><span>publicar en X</span><span aria-hidden="true">publicar en X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fdel-mostrador-a-la-comanda%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>El 22 de noviembre publiqué la sexta nota de esta serie, el reto que planteó Ramiah Trask: cien días, cien negocios, cien webs. El día uno fue un constructor familiar de la Marina Alta. <a href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/">Esa página está aquí.</a> El día dos, un teatro de Málaga. <a href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/">Esa está aquí.</a> El día tres, un restaurante familiar de Estepona. <a href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/">Esa está aquí.</a> El día cuatro, una consultora inmobiliaria privada de Málaga. <a href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/">Esa está aquí.</a> El día cinco, un restaurante de menús degustación en Motril. <a href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/">Esa está aquí.</a></p>
+
+<p>Hoy toca el negocio más cotidiano de los seis, y quizá aquel cuya web se usa más a menudo. El Dorado es un asador de pollos en la avenida Puerta del Mar de Estepona, mi propio pueblo. Pollo asado, patatas, croquetas caseras, hamburguesas, bocadillos, empanadillas argentinas, salsas y bebidas. Se puede pedir a domicilio o para recoger, todos los días, a mediodía y por la noche. Ya tiene web y tienda online, en <a href="https://pollosasadosadomicilioestepona.es/">pollosasadosadomicilioestepona.es</a>.</p>
+
+<p>La web de un asador tiene dos trabajos. Tiene que abrirte el apetito, y tiene que hacer que pedir sea fácil. La mayoría de las webs de comida para llevar cumplen uno de los dos. El concepto está aquí: <a href="https://wellyington.github.io/challenge/day6/">El Dorado, día seis</a>.</p>
+
+<h2 id="el-mostrador-no-el-catálogo">el mostrador, no el catálogo</h2>
+
+<p>Piensa en cómo se pide en el mostrador de un asador. No empiezas mirando productos. La persona que atiende te hace primero dos preguntas: ¿es para llevar o te lo llevamos a casa?, y ¿para cuándo? Solo después dices lo que quieres. Un pollo entero, unas patatas grandes, unas croquetas, una botella de cola. Lo apunta en la comanda, te lo repite y te dice el total.</p>
+
+<p>La mayoría de los pedidos online lo hacen al revés. Te enseñan una tienda llena de productos, te dejan llenar la cesta, y solo al final, al pagar, te preguntan si lo quieres a domicilio y a qué hora. Ahí es donde la gente descubre que la hora que quería ya no está, o que el reparto no llega a su calle, y lo deja.</p>
+
+<p>Así que el concepto copia el mostrador. Lo primero de la página, debajo del titular, es un pequeño panel con dos preguntas. 01: ¿cómo lo quieres?, a domicilio o para recoger. 02: ¿para cuándo?, lo antes posible o una hora concreta en una fila de botones, 13:30, 14:30, 20:00, 21:00, u otra hora. Después, un botón oscuro: 03, elegir mi pedido. Te lleva a la carta.</p>
+
+<p>Le dices al asador cómo lo quieres antes de ver la carta. Es lo que haría la persona del mostrador, y significa que el resto de la página ya sabe lo que tienes en mente.</p>
+
+<p><img src="/images/journal/100-days-day-6/01-hero-ordering.webp" alt="El concepto de El Dorado en un ordenador, con el titular Pollo asado al fuego, directo a tu puerta, un pollo asado recortado y el panel que pregunta cómo y cuándo, junto a un móvil con la carta y la barra Mi comanda." />
+<em>La apertura: el titular, el pollo y las dos preguntas que haría primero el mostrador.</em></p>
+
+<p><img src="/images/journal/100-days-day-6/02-ordering-flow.webp" alt="El panel de pedido de cerca en un ordenador y un móvil: 01 cómo lo quieres, 02 para cuándo y 03 elegir mi pedido." />
+<em>Cómo, cuándo y luego la carta. Como en el mostrador.</em></p>
+
+<h2 id="un-pollo-en-la-página">un pollo en la página</h2>
+
+<p>El titular es la frase más sencilla que pude escribir: pollo asado al fuego, directo a tu puerta. Va muy grande, en una palo seco gruesa y algo estrecha, en crema y dorado, con «al fuego» en una serifa cursiva fina en medio. Se lee como el rótulo de una fachada.</p>
+
+<p>Al lado está lo que la gente viene a buscar: un pollo asado, dorado y brillante, con hierbas en la piel. Lo recorté de su fotografía para que quede directamente sobre la página marrón oscuro, sin caja alrededor. Un anillo de texto gira despacio a su alrededor, un sabor único, pollos asados, Estepona, que es la frase de El Dorado. Detrás hay un resplandor cálido, unas pocas brasas que suben, y en un ordenador se inclina muy ligeramente hacia el cursor.</p>
+
+<p>Sé cómo suena eso escrito. En la pantalla es tranquilo. Se trata de que lo primero que veas sea la comida, a un tamaño en el que casi puedas olerla.</p>
+
+<p><img src="/images/journal/100-days-day-6/06-hero-chicken.webp" alt="El pollo asado recortado sobre un fondo marrón oscuro, con un anillo de texto alrededor que dice Un sabor único, pollos asados, Estepona." />
+<em>Recortado de su fondo para que quede sobre la página. Un resplandor cálido, unas brasas y un anillo de texto que gira despacio.</em></p>
+
+<h2 id="la-carta-real-con-todos-los-precios">la carta real, con todos los precios</h2>
+
+<p>La segunda sección se llama haz tu comanda. La comanda es el papel con el que trabaja la cocina, y toda la idea de este concepto descansa en ella.</p>
+
+<p>A la izquierda están las nueve categorías de la carta de El Dorado, cada una con el número de platos que tiene: pollos y fritos, hamburguesas, bocadillos, baguetinas, croquetas caseras, empanadillas, para picar, salsas y bebidas. En el centro, los platos de la categoría elegida, numerados como en una pizarra, cada uno con una descripción breve y su precio. A la derecha, la comanda.</p>
+
+<p>No simplifiqué la carta para facilitar el diseño. Un asador de verdad tiene tamaños, y los tamaños son donde suelen fallar los pedidos online. Medio pollo cuesta 7 euros y uno entero 12. Las patatas, 2,50 la pequeña y 4 la grande. Las croquetas van de cinco en cinco o de diez en diez. Una botella de cola, de un litro o de dos. Así que cada tamaño tiene su precio y su propio botón de sumar. No eliges un tamaño en un desplegable y luego pulsas añadir. Pulsas el más junto al tamaño que quieres. El total siempre cuadra, porque no hay un paso intermedio donde pueda equivocarse.</p>
+
+<p>Las alitas enumeran sus nueve salsas, del ajo y parmesano a la Carolina Reaper. Las hamburguesas dicen de qué están hechas, 100% ternera. Y debajo de las categorías hay un enlace pequeño a la carta completa en PDF, la que El Dorado ya publica, para quien prefiera leerla entera de una vez.</p>
+
+<p><img src="/images/journal/100-days-day-6/04-full-menu.webp" alt="La sección Haz tu comanda en un ordenador, con las nueve categorías a la izquierda, el pollo asado, las alitas y las patatas en el centro con sus tamaños y precios, y la comanda a la derecha, junto a un móvil con la misma carta." />
+<em>Las nueve categorías de la carta de El Dorado. Cada tamaño tiene su precio y su propio botón, así que el total siempre cuadra.</em></p>
+
+<h2 id="la-comanda-se-imprime-mientras-pides">la comanda se imprime mientras pides</h2>
+
+<p>Esta es la parte que más disfruté. A medida que añades cosas, aparecen en una comanda a la derecha de la pantalla, dibujada como los papeles que salen de la impresora de una cocina: papel crema, letra de máquina de escribir y un borde rasgado en zigzag abajo.</p>
+
+<p>Arriba pone comanda número 981, o el número que te toque, con la hora. Luego asador de pollos El Dorado y la dirección. Luego las dos respuestas que diste al principio: a domicilio, lo antes posible. Luego cada línea según la añades: 1 pollo asado, entero, 12 euros. 1 patatas, grande, 4 euros. 1 croquetas de jamón, 10, 7 euros. 1 botella de cola, 2 litros, 2,50. El número de artículos, y el total, 25,50 euros.</p>
+
+<p>Cada vez que añades algo, aparece un pequeño aviso abajo para confirmarlo: añadido, botella de cola, 2 litros, con un enlace para ver la comanda. Si cambias de idea, el más se convierte en un menos y un número.</p>
+
+<p>Bajo el total hay una línea sobre las condiciones de envío, un campo para la dirección de entrega y un botón: finalizar pedido online. Debajo, en letra pequeña, la alternativa: o pídelo por teléfono, 952 63 33 18.</p>
+
+<p>Para ser claro sobre lo que hace el concepto en ese punto: el botón te lleva a la tienda online que El Dorado ya tiene para terminar el pedido allí. Los productos de la comanda no pasan de un sitio a otro en el concepto. En una versión real, la comanda es justo lo que recibiría la cocina, ya sea en la tienda que ya usan o directamente en una impresora detrás del mostrador. El diseño es la parte que le importa al cliente: ves tu pedido todo el tiempo, tal como lo verá la cocina.</p>
+
+<p><img src="/images/journal/100-days-day-6/03-live-comanda.webp" alt="La comanda en un ordenador, con el nombre y la dirección de El Dorado, el modo y la hora, cuatro productos con tamaños y precios y un total de 25,50 euros, sobre el campo de dirección y el botón Finalizar pedido online." />
+<em>Cada plato se imprime en una comanda de papel, con borde en zigzag, número de pedido, la hora y el total que se va sumando.</em></p>
+
+<h2 id="siempre-dice-si-está-abierto">siempre dice si está abierto</h2>
+
+<p>No hay nada más molesto que pedir a un sitio de comida para llevar y descubrir que está cerrado. El Dorado abre todos los días de 10:30 a 16:00 y de 19:00 a 22:00, y el concepto lo dice en todos los sitios donde importa.</p>
+
+<p>Una barra dorada recorre la parte de arriba de la página. Cuando está abierto dice abierto ahora, pedidos hasta las 16:00, o hasta las 22:00 por la noche. Cuando está cerrado, dice cuándo vuelve a abrir, a las 10:30 o a las 19:00, y añade programa tu pedido. A nadie se le da con la puerta en las narices. Se le dice cuándo volver, y que puede pedir con antelación.</p>
+
+<p>Más abajo, la sección de horarios tiene un reloj de 24 horas. Los dos turnos se dibujan como arcos en el borde, el mediodía en dorado y la noche en caramelo, y la aguja marca la hora real de Estepona. A las 13:42 está dentro del arco del mediodía y en el centro pone abierto ahora. Al lado: abiertos todos los días, los dos horarios, la dirección en la avenida Puerta del Mar, un botón para llegar y el teléfono.</p>
+
+<p>El reloj lee la hora de Estepona, no la de tu móvil, así que acierta incluso para quien pide para sus padres desde Londres.</p>
+
+<p><img src="/images/journal/100-days-day-6/05-live-status.webp" alt="La sección de horarios con un reloj de 24 horas que marca las 13:42 dentro del arco del mediodía y las palabras abierto ahora, el titular Abiertos todos los días, los dos horarios y la dirección, junto a un móvil con el mismo reloj." />
+<em>La barra dorada y el reloj de 24 horas leen la hora real de Estepona. La aguja recorre los arcos del mediodía y la noche.</em></p>
+
+<h2 id="hecho-para-un-pulgar">hecho para un pulgar</h2>
+
+<p>La mayoría de los pedidos a un sitio así se hacen desde el móvil, con una mano, muchas veces mientras haces otra cosa. Así que diseñé primero la versión para móvil y después la de pantalla grande.</p>
+
+<p>Abajo de la pantalla hay una barra que no se mueve: mi comanda, con el número de artículos, y llamar. Toca la primera y saltas a tu comanda. Toca la segunda y el móvil llama al asador. Mires lo que mires, pedir o llamar está a un toque.</p>
+
+<p>En el móvil, las categorías no son una fila que hay que deslizar de lado, que es fácil no ver. Son una cuadrícula de botones grandes, dos por fila, así que las nueve se ven a la vez y cada una es lo bastante grande para un pulgar. El aviso de confirmación aparece justo encima de la barra de abajo, donde ya están tus ojos.</p>
+
+<p>El menú se abre a pantalla completa, con la barra dorada del horario arriba, las cinco secciones de la web, un botón grande para llamar al 952 63 33 18 y el pollo otra vez abajo.</p>
+
+<p><img src="/images/journal/100-days-day-6/08-phones-first.webp" alt="Tres móviles: la carta con la barra fija Mi comanda y Llamar y un aviso de confirmación, el menú a pantalla completa con el botón de llamada, y la cuadrícula de nueve categorías." />
+<em>Una barra fija con la comanda y un botón de llamada. Categorías como botones grandes, sin deslizar de lado.</em></p>
+
+<h2 id="su-marca-tal-cual">su marca, tal cual</h2>
+
+<p>Todos los conceptos de esta serie hasta ahora han tenido una imagen nueva. Este no, y a propósito.</p>
+
+<p>El Dorado ya tiene una marca que la gente de Estepona conoce: un logotipo con un pollo delante de unas llamas y una cinta que dice asador de pollos El Dorado. No es un logotipo minimalista, ni tiene por qué serlo. Es el rótulo de la tienda. Así que lo mantuve, limpio y ampliado para que se vea nítido en las pantallas de hoy, y construí todo lo demás a su alrededor.</p>
+
+<p>Los colores también salen del logotipo. Espresso, #24190F, para el fondo. Marrón, #876445. Caramelo, #CA965C. Dorado, #EEC373, para los botones y la barra de arriba. Crema, #F4DFBA, para la comanda y las secciones claras. Sobre una página oscura parecen el interior de un asador, que es justo la idea.</p>
+
+<p>La tipografía sí es nueva. Bricolage Grotesque, gruesa y apretada, para los titulares grandes, para que se lean como un rótulo. Instrument Serif en cursiva para las palabras más cálidas. Space Mono, una letra de máquina de escribir, para la comanda y las etiquetas pequeñas. Inter para todo lo que hay que leer rápido.</p>
+
+<p>Hay también una sección sobre la casa: un sabor único, sin atajos. Asan cada día y hacen en casa lo que se puede hacer en casa: croquetas de pollo, de jamón y de espinacas, y hamburguesas 100% de ternera. Al lado, tres opiniones reales de clientes, sujetas con tiras de cinta de papel como notas en la nevera. Una dice que El Dorado es el mejor asador de pollos de toda la Costa del Sol. Otra destaca que es de los pocos sitios donde pides para llevar a una hora determinada y la cumplen.</p>
+
+<p><img src="/images/journal/100-days-day-6/09-brand.webp" alt="El logotipo de El Dorado, un pollo delante de unas llamas con una cinta que dice Asador de Pollos El Dorado, junto a un móvil con tres opiniones de clientes en notas con cinta de papel, sobre los cinco colores de la paleta." />
+<em>El logotipo de El Dorado, tres opiniones reales de clientes y la paleta de cinco colores sacada de la marca.</em></p>
+
+<h2 id="movimiento-con-mesura">movimiento con mesura</h2>
+
+<p>En esta página se mueven unas pocas cosas, y cada una tiene un motivo. Las líneas del titular suben una a una al cargar. Las secciones aparecen suavemente al llegar a ellas. La foto del asador en la sección de la casa se desplaza un poco. Una línea dorada fina en lo alto de la cabecera marca cuánto has bajado.</p>
+
+<p>Entre secciones hay una historia corta en tres palabras, como la pintaría un negocio en la pared. Pides. Asamos. Disfrutas. Pides, online o por teléfono. Asamos, cada día, a mediodía y por la noche, aquí en Estepona. Disfrutas, listo a la hora acordada, todavía caliente. Al final de la página, El Dorado aparece escrito muy grande en el pie, con un brillo lento que lo recorre.</p>
+
+<p>Todo el movimiento se apaga para quien ha pedido a su móvil u ordenador que reduzca las animaciones. La página funciona exactamente igual sin él.</p>
+
+<p><img src="/images/journal/100-days-day-6/07-editorial-motion.webp" alt="Detalles editoriales: las palabras Pides, Asamos y Disfrutas, la sección de la casa con una foto del asador y opiniones en cinta de papel, y el gran nombre de El Dorado en el pie." />
+<em>Tipografía gruesa, serifa cursiva, opiniones pegadas como notas y un movimiento que se apaga cuando se pide.</em></p>
+
+<h2 id="qué-es-el-concepto-y-qué-viene-después">qué es el concepto, y qué viene después</h2>
+
+<p>El logotipo, los colores, la carta, los precios, el horario, la dirección, el teléfono y las opiniones de clientes que aparecen en la página son de El Dorado. No he cambiado ninguno. Lo nuevo es el orden de las cosas, la comanda, el reloj y cómo se comporta la página en el móvil.</p>
+
+<p>Para convertir el concepto en una tienda que funcione harían falta dos cosas. Primero, que la comanda llegue a la cocina: a la tienda online que El Dorado ya tiene, o como un ticket impreso detrás del mostrador. Segundo, que las horas disponibles salgan de la propia cocina, para que un domingo a mediodía con mucho trabajo pueda cerrar una franja antes de que se llene. Ninguna de las dos es complicada. Las dos merecen hacerse bien.</p>
+
+<p>No tengo cifras de pedidos ni de ventas, y no me las voy a inventar.</p>
+
+<h2 id="si-tus-clientes-te-piden-desde-el-móvil">si tus clientes te piden desde el móvil</h2>
+
+<p>Puede que no vendas pollos asados. Pero muchos negocios pequeños de esta costa reciben pedidos: una pastelería que hace tartas por encargo, una pizzería, una floristería, una lavandería, una carnicería que prepara packs de barbacoa para el fin de semana. Sus clientes suelen pedir desde el móvil, con prisa, y la web suele pedirles que piensen como un dependiente.</p>
+
+<p>Lo que ayuda es lo mismo que aquí. Pregunta primero cómo y cuándo. Muestra cada opción con su propio precio. Deja que la gente vea su pedido todo el tiempo, tal como lo vas a recibir. Di claramente si estás abierto y, si no, cuándo. Y deja el teléfono a un toque, porque siempre habrá quien prefiera llamar.</p>
+
+<p>Soy diseñador web en Estepona, en la Costa del Sol, y hago webs como esta para negocios de toda España. Si esto se parece a tu negocio, escríbeme desde <a href="https://wellyington.github.io/es/">la web principal</a>. Cuéntame a qué te dedicas y dónde, y te contestaré en un lenguaje claro. El concepto está <a href="https://wellyington.github.io/challenge/day6/">aquí</a>, y la web actual de El Dorado <a href="https://pollosasadosadomicilioestepona.es/">aquí</a>, para que puedas compararlas. Seis hechas, quedan noventa y cuatro.</p>
+
+      <p class="fin" aria-label="Fin de la entrada">fin.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">archivado en</span>
+    <ul class="chips"><li>100 días</li><li>caso real</li><li>comida para llevar</li><li>pedidos online</li><li>estepona</li></ul>
+  </div><nav class="rail pager" aria-label="más entradas."><a class="pager-cell rollable" href="/journal/es/articles/tan-cuidada-como-la-cocina/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">tan cuidada como la cocina<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">la última entrada.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Sigue leyendo</span>
+    <h2 id="more-title" class="h-section">más entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/es/articles/tan-cuidada-como-la-cocina/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp" alt="Portada del caso del concepto de web para Espacio IME: Design Challenge día 5, la portada oscura en un ordenador con el titular Un viaje por los sabores de la Costa Tropical y un móvil en el tema claro con el producto local." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 006</span>
+</div>
+<span class="label">100 días · 21.11.26</span><span class="card-title">tan cuidada como la cocina<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/criterio-antes-que-volumen/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Portada del caso de un concepto de web para Nina Estate: la apertura dividida entre un tema claro color piedra y un tema oscuro casi negro, con una villa con piscina al atardecer, y la misma web en un móvil." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 004</span>
+</div>
+<span class="label">100 días · 20.11.26</span><span class="card-title">criterio antes que volumen<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/un-sitio-en-la-mesa-larga/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Portada del caso de un concepto de web para Los Arcos Estepona: la apertura dividida entre un tema crema y un tema carbón en un ordenador, con la misma página en un móvil." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 003</span>
+</div>
+<span class="label">100 días · 19.11.26</span><span class="card-title">un sitio en la mesa larga<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independiente por diseño · Escrito en público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/es/" class="rollable"><span class="roll"><span>diario</span><span aria-hidden="true">diario</span></span>
+    </a><a href="/journal/es/archive/" class="rollable"><span class="roll"><span>archivo</span><span aria-hidden="true">archivo</span></span>
+    </a><a href="/journal/es/about/" class="rollable"><span class="roll"><span>sobre mí</span><span aria-hidden="true">sobre mí</span></span>
+    </a><a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>web principal</span><span aria-hidden="true">web principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">en otros sitios</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/es/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escríbeme</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Leo todas las respuestas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Compuesto en Space Grotesk · Hecho con Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

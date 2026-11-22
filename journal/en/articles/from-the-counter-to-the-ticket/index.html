@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Journal" href="/journal/en/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<title>Takeaway Ordering Website Concept: El Dorado, Estepona · Wellyington</title>
+<meta name="description" content="A website concept for El Dorado, Estepona&#39;s rotisserie chicken house: the full menu with prices, a live order ticket, delivery or pick-up times and opening s...">
+<meta name="keywords" content="takeaway restaurant website design, online ordering website for a small restaurant, rotisserie chicken website concept, roast chicken delivery in Estepona, restaurant website with delivery and pick-up times, restaurant website that shows if it is open now, mobile-first food ordering website, restaurant website using the existing brand and colours, web designer in Estepona, 100 days 100 websites challenge">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Journal">
+<meta property="og:title" content="Takeaway Ordering Website Concept: El Dorado, Estepona">
+<meta property="og:description" content="A website concept for El Dorado, Estepona&#39;s rotisserie chicken house: the full menu with prices, a live order ticket, delivery or pick-up times and opening s...">
+<meta property="og:url" content="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp">
+<meta property="og:image:alt" content="Case study cover of the El Dorado website concept: the Haz tu comanda menu on a desktop with drinks, a paper order ticket on the right, and a phone showing the menu with the Mi comanda bar.">
+<meta property="article:published_time" content="2026-11-22T15:45:00+01:00">
+<meta property="article:modified_time" content="2026-11-22T15:45:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 Days">
+<meta property="article:tag" content="takeaway restaurant website design">
+<meta property="article:tag" content="online ordering website for a small restaurant">
+<meta property="article:tag" content="rotisserie chicken website concept">
+<meta property="article:tag" content="roast chicken delivery in Estepona">
+<meta property="article:tag" content="restaurant website with delivery and pick-up times">
+<meta property="article:tag" content="restaurant website that shows if it is open now">
+<meta property="article:tag" content="mobile-first food ordering website">
+<meta property="article:tag" content="restaurant website using the existing brand and colours">
+<meta property="article:tag" content="web designer in Estepona">
+<meta property="article:tag" content="100 days 100 websites challenge">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Takeaway Ordering Website Concept: El Dorado, Estepona">
+<meta name="twitter:description" content="A website concept for El Dorado, Estepona&#39;s rotisserie chicken house: the full menu with prices, a live order ticket, delivery or pick-up times and opening s...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp">
+<meta name="twitter:image:alt" content="Case study cover of the El Dorado website concept: the Haz tu comanda menu on a desktop with drinks, a paper order ticket on the right, and a phone showing the menu with the Mi comanda bar.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/#article",
+      "url": "https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/",
+      "headline": "Takeaway Ordering Website Concept: El Dorado, Estepona",
+      "alternativeHeadline": "from the counter to the ticket",
+      "description": "A website concept for El Dorado, Estepona's rotisserie chicken house: the full menu with prices, a live order ticket, delivery or pick-up times and opening s...",
+      "inLanguage": "en",
+      "datePublished": "2026-11-22T15:45:00+01:00",
+      "dateModified": "2026-11-22T15:45:00+01:00",
+      "articleSection": "100 Days",
+      "keywords": "takeaway restaurant website design, online ordering website for a small restaurant, rotisserie chicken website concept, roast chicken delivery in Estepona, restaurant website with delivery and pick-up times, restaurant website that shows if it is open now, mobile-first food ordering website, restaurant website using the existing brand and colours, web designer in Estepona, 100 days 100 websites challenge",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp", "caption": "Case study cover of the El Dorado website concept: the Haz tu comanda menu on a desktop with drinks, a paper order ticket on the right, and a phone showing the menu with the Mi comanda bar." },
+      "about": {
+        "@type": "Restaurant",
+        "name": "Asador de Pollos El Dorado", "url": "https://pollosasadosadomicilioestepona.es/", "address": { "@type": "PostalAddress", "addressLocality": "Estepona", "addressCountry": "ES" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 Days", "url": "https://wellyington.github.io/journal/en/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Journal", "item": "https://wellyington.github.io/journal/en/" },
+        { "@type": "ListItem", "position": 2, "name": "from the counter to the ticket", "item": "https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/en/" class="bar-cell bar-brand" aria-label="Wellyington Journal">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ journal</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Local times and what I'm working on.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Now writing</span><span>notes on shipping small</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Now listening</span><span>Wellyington — studio drafts</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Language">
+    <a href="/journal/en/articles/from-the-counter-to-the-ticket/" hreflang="en" lang="en" data-set-lang="en" aria-current="true" title="English">EN</a><a href="/journal/es/articles/del-mostrador-a-la-comanda/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/do-balcao-a-comanda/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/ot-prilavka-do-cheka/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Switch to dark theme" data-label-dark="Switch to dark theme" data-label-light="Switch to light theme">
+    <span class="roll label"><span class="theme-word" data-light="Light" data-dark="Dark"></span><span class="theme-word" data-light="Light" data-dark="Dark" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navigation" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navigation">
+      <p class="label">Navigation</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/en/" class="rollable">
+            <span class="roll"><span>journal.</span><span aria-hidden="true">journal.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/en/archive/" class="rollable">
+            <span class="roll"><span>archive.</span><span aria-hidden="true">archive.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/en/about/" class="rollable">
+            <span class="roll"><span>about.</span><span aria-hidden="true">about.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>main site.</span><span aria-hidden="true">main site.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Latest entries</p><ol><li>
+          <a href="/journal/en/articles/from-the-counter-to-the-ticket/" class="menu-entry">
+            <span class="mono dim">No. 007</span>
+            <span>from the counter to the ticket<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/en/articles/as-careful-as-the-kitchen/" class="menu-entry">
+            <span class="mono dim">No. 006</span>
+            <span>as careful as the kitchen<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/en/articles/the-website-that-looks-after-itself/" class="menu-entry">
+            <span class="mono dim">No. 005</span>
+            <span>the website that looks after itself<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/en/articles/judgement-over-volume/" class="menu-entry">
+            <span class="mono dim">No. 004</span>
+            <span>judgement over volume<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Language"><a href="/journal/en/articles/from-the-counter-to-the-ticket/" hreflang="en" lang="en" data-set-lang="en" aria-current="true" title="English">EN</a><a href="/journal/es/articles/del-mostrador-a-la-comanda/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/do-balcao-a-comanda/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/ot-prilavka-do-cheka/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/en/feed.xml"><span class="roll"><span>RSS feed →</span><span aria-hidden="true">RSS feed →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/en/" class="entry-cell entry-back rollable"><span class="roll"><span>← journal</span><span aria-hidden="true">← journal</span></span></a>
+    <span class="entry-cell mono">No. 007</span>
+    <span class="entry-cell label">100 Days</span>
+    <time class="entry-cell" datetime="2026-11-22T15:45:00+01:00">22 November 2026</time>
+    <span class="entry-cell">12 min read</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">from the counter to the ticket<span class="dot">.</span></h1><p class="entry-lede">Day six of a hundred: a website concept for El Dorado, a rotisserie chicken house in Estepona, where you order the way you would at the counter and watch your ticket print as you go.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp" alt="Case study cover of the El Dorado website concept: the Haz tu comanda menu on a desktop with drinks, a paper order ticket on the right, and a phone showing the menu with the Mi comanda bar." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>No. 007</span>
+</div>
+<p class="caption label">Day six. A concept for El Dorado in Estepona: the menu, the ticket and the phone.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="on this page.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">on this page.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">share.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copied."><span class="roll"><span>copy link</span><span aria-hidden="true">copy link</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fen%2Farticles%2Ffrom-the-counter-to-the-ticket%2F&text=from+the+counter+to+the+ticket"><span class="roll"><span>post on X</span><span aria-hidden="true">post on X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fen%2Farticles%2Ffrom-the-counter-to-the-ticket%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>On 22 November I posted the sixth note of this run, the challenge Ramiah Trask set: a hundred days, a hundred businesses, a hundred websites. Day one was a family builder in the Marina Alta. <a href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/">That page is here.</a> Day two was a theatre in Málaga. <a href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/">That one is here.</a> Day three was a family restaurant in Estepona. <a href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/">That one is here.</a> Day four was a private property practice in Málaga. <a href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/">That one is here.</a> Day five was a tasting-menu restaurant in Motril. <a href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/">That one is here.</a></p>
+
+<p>Today is the most everyday business of the six, and maybe the one whose website gets used most often. El Dorado is a rotisserie chicken house on Avenida Puerta del Mar in Estepona, my own town. Roast chicken, chips, home-made croquettes, burgers, sandwiches, Argentine empanadas, sauces, drinks. You can order for delivery or for pick-up, every day, at lunch and in the evening. It already has a website and an online shop, at <a href="https://pollosasadosadomicilioestepona.es/">pollosasadosadomicilioestepona.es</a>.</p>
+
+<p>A roast chicken website has two jobs. It should make you hungry, and it should make ordering easy. Most takeaway sites manage one of the two. The concept is here: <a href="https://wellyington.github.io/challenge/day6/">El Dorado, day six</a>.</p>
+
+<h2 id="the-counter-not-the-catalogue">the counter, not the catalogue</h2>
+
+<p>Think about how you order at the counter of a chicken shop. You do not start by browsing. The person behind the counter asks two questions first: is it to take away or to eat at home, and for when? Only then do you say what you want. A whole chicken, a large chips, some croquettes, a bottle of cola. They write it on a ticket, read it back to you, tell you the total.</p>
+
+<p>Most online ordering does this backwards. It shows you a shop full of products, lets you fill a basket, and only at the very end, at the checkout, asks whether you want delivery and at what time. That is where people find out the slot they wanted is gone, or that delivery does not reach their street, and they give up.</p>
+
+<p>So the concept copies the counter. The first thing on the page, under the headline, is a small panel with two questions. 01: how do you want it, a domicilio or para recoger, delivered or for pick-up. 02: for when, lo antes posible, as soon as possible, or a set time from a row of buttons, 13:30, 14:30, 20:00, 21:00, or another time. Then one dark button: 03, elegir mi pedido, choose my order. It takes you down to the menu.</p>
+
+<p>You tell the shop how you want it before you even see the menu. That is how the person at the counter would do it, and it means the rest of the page already knows what you are planning.</p>
+
+<p><img src="/images/journal/100-days-day-6/01-hero-ordering.webp" alt="The El Dorado concept on a desktop, with the headline Pollo asado al fuego, directo a tu puerta, a cut-out roast chicken, and the panel asking how and when, beside a phone showing the menu with the Mi comanda bar." />
+<em>The opening: the headline, the chicken, and the two questions the counter would ask first.</em></p>
+
+<p><img src="/images/journal/100-days-day-6/02-ordering-flow.webp" alt="The ordering panel close up on a desktop and a phone: 01 how do you want it, 02 for when, and 03 choose my order." />
+<em>How, when, then the menu. Like ordering at the counter.</em></p>
+
+<h2 id="a-chicken-on-the-page">a chicken on the page</h2>
+
+<p>The headline is the plainest sentence I could write: pollo asado al fuego, directo a tu puerta. Roast chicken from the fire, straight to your door. It is set very large in a heavy, slightly squashed sans, in cream and gold, with al fuego in a thin italic serif in between. It reads like the sign on a shopfront.</p>
+
+<p>Next to it is the thing people actually come for: a roast chicken, golden and glistening, herbs on the skin. I cut it out of its photograph so it sits directly on the dark brown page, without a box around it. A slow ring of text turns around it, un sabor único, pollos asados, Estepona, which is El Dorado’s own line. There is a warm glow behind it, a few embers rising, and on a computer it tilts very slightly towards your cursor.</p>
+
+<p>I know how that sounds on paper. On the screen it is quiet. The point is to make the first thing you see the food, at a size where you can almost smell it.</p>
+
+<p><img src="/images/journal/100-days-day-6/06-hero-chicken.webp" alt="The cut-out roast chicken on a dark brown background, with a ring of text around it reading Un sabor único, pollos asados, Estepona." />
+<em>Cut out from its backdrop, so it sits right on the page. A warm glow, a few embers, and a ring of text turning slowly.</em></p>
+
+<h2 id="the-real-menu-every-price">the real menu, every price</h2>
+
+<p>The second section is called haz tu comanda, make your order. A comanda is the Spanish word for the order ticket the kitchen works from, and the whole idea of this concept rests on it.</p>
+
+<p>On the left are the nine categories from El Dorado’s own menu, each with the number of dishes in it: chicken and fried sides, burgers, sandwiches, baguettes, home-made croquettes, empanadas, things to share, sauces and drinks. In the middle are the dishes of the chosen category, numbered like a menu board, each with a short description and its price. On the right is the ticket.</p>
+
+<p>I did not simplify the menu to make the design easier. A real chicken shop has sizes, and sizes are where online ordering usually goes wrong. Half a chicken is 7 euros and a whole one 12. Chips are 2.50 small and 4 large. Croquettes come in fives and tens. A bottle of cola is a litre or two. So every size has its own price and its own plus button. You do not choose a size from a menu and then press add. You press the plus next to the size you want. The total is always right, because there is no step in between where it can go wrong.</p>
+
+<p>The wings list their nine sauces, from garlic and parmesan to Carolina Reaper. The burgers say what they are made of, 100% beef. And under the categories there is a small link to the full menu as a PDF, the one El Dorado already publishes, for anyone who prefers to read it all at once.</p>
+
+<p><img src="/images/journal/100-days-day-6/04-full-menu.webp" alt="The Haz tu comanda section on a desktop, with the nine categories on the left, roast chicken, wings and chips in the middle with their sizes and prices, and the ticket on the right, beside a phone showing the same menu." />
+<em>All nine categories from El Dorado’s own menu. Each size has its own price and its own plus button, so the total is always right.</em></p>
+
+<h2 id="the-ticket-prints-as-you-order">the ticket prints as you order</h2>
+
+<p>This is the part I enjoyed most. As you add things, they appear on a ticket on the right of the screen, drawn like the paper slips that come out of a kitchen printer: cream paper, a typewriter typeface, a zigzag torn edge at the bottom.</p>
+
+<p>At the top it says comanda number 981, or whatever number it gives you, with the time. Then asador de pollos El Dorado, and the address. Then the two answers you gave at the start: a domicilio, lo antes posible. Then each line as you add it: 1 roast chicken, whole, 12 euros. 1 chips, large, 4 euros. 1 ham croquettes, 10, 7 euros. 1 bottle of cola, 2 litres, 2.50. A count of items, and the total, 25.50 euros.</p>
+
+<p>Every time you add something, a small message slides in at the bottom of the screen to confirm it: added, bottle of cola, 2 litres, with a link to see the ticket. If you change your mind, the plus turns into a minus and a number.</p>
+
+<p>Under the total there is a line about delivery terms, a field for the delivery address, and a button: finalizar pedido online, finish the order online. Below it, in small letters, the alternative: o pídelo por teléfono, or order by phone, 952 63 33 18.</p>
+
+<p>To be clear about what the concept does at that point: the button takes you to El Dorado’s existing online shop to complete the order there. The items on the ticket are not passed across in the concept. In a real build, the ticket is exactly what the kitchen would receive, either into the shop they already use or straight to a printer behind the counter. The design is the part that matters for the customer: you can see your order the whole time, in the same form the kitchen will.</p>
+
+<p><img src="/images/journal/100-days-day-6/03-live-comanda.webp" alt="The order ticket on a desktop, with El Dorado's name and address, the mode and time, four items with sizes and prices, and a total of 25.50 euros, above the delivery address field and the Finalizar pedido online button." />
+<em>Each dish prints onto a paper-style ticket, with a zigzag edge, an order number, the time and a running total.</em></p>
+
+<h2 id="always-shows-if-it-is-open">always shows if it is open</h2>
+
+<p>Nothing is more annoying than ordering from a takeaway that turns out to be closed. El Dorado opens every day from 10:30 to 16:00 and from 19:00 to 22:00, and the concept says so everywhere it matters.</p>
+
+<p>A gold bar runs across the very top of the page. When the shop is open it reads abierto ahora, pedidos hasta las 16:00, open now, orders until 16:00, or until 22:00 in the evening. When it is closed, it says when it opens again, at 10:30 or at 19:00, and adds programa tu pedido, schedule your order. Nobody is turned away. They are told when to come back, and that they can order ahead.</p>
+
+<p>Further down, the hours section has a 24-hour clock face. The two opening periods are drawn as arcs around the edge, lunch in gold and evening in caramel, and the hand shows the real time in Estepona. At 13:42 it sits inside the lunch arc and the centre says abierto ahora. Next to it: abiertos todos los días, open every day, the two time slots, the address on Avenida Puerta del Mar, a button for directions and the phone number.</p>
+
+<p>The clock reads the time in Estepona, not on your phone, so it is right even for someone ordering for their parents from London.</p>
+
+<p><img src="/images/journal/100-days-day-6/05-live-status.webp" alt="The opening hours section with a 24-hour clock showing 13:42 inside the lunch arc and the words abierto ahora, the headline Abiertos todos los días, the two time slots and the address, beside a phone showing the same clock." />
+<em>The gold top bar and the 24-hour clock read the real time in Estepona. The hand moves across the lunch and evening arcs.</em></p>
+
+<h2 id="made-for-one-thumb">made for one thumb</h2>
+
+<p>Most orders from a place like this happen on a phone, with one hand, often while doing something else. So I designed the phone version first and the large screen after.</p>
+
+<p>At the bottom of the screen there is a bar that never moves: mi comanda, with the number of items, and llamar, call. Tap the first and you jump to your ticket. Tap the second and your phone dials the shop. Whatever you are looking at, ordering or calling is one tap away.</p>
+
+<p>On a phone, the categories are not a row you have to scroll sideways, which is easy to miss. They are a grid of large buttons, two per row, so all nine are visible at once and each one is big enough for a thumb. The confirmation message appears just above the bottom bar, where your eyes already are.</p>
+
+<p>The menu opens over the whole screen, with the gold opening-status bar at the top, the five sections of the site, a large button to call the shop on 952 63 33 18, and the chicken again at the bottom.</p>
+
+<p><img src="/images/journal/100-days-day-6/08-phones-first.webp" alt="Three phones: the menu with the sticky Mi comanda and Llamar bar and a confirmation message, the full-screen menu with the call button, and the grid of nine categories." />
+<em>A sticky bar with the ticket and a call button. Categories as big tap targets, with no sideways scrolling.</em></p>
+
+<h2 id="their-brand-as-it-is">their brand, as it is</h2>
+
+<p>Every concept in this run so far has had a new look. This one does not, and on purpose.</p>
+
+<p>El Dorado already has a brand that people in Estepona know: a logo with a chicken in front of flames and a ribbon reading asador de pollos El Dorado. It is not a minimalist logo, and it does not need to be. It is the sign over the shop. So I kept it, cleaned up and enlarged to stay sharp on modern screens, and built everything else around it.</p>
+
+<p>The colours come from the logo as well. Espresso, #24190F, for the background. Brown, #876445. Caramel, #CA965C. Gold, #EEC373, for buttons and the top bar. Cream, #F4DFBA, for the ticket and the light sections. On a dark page they look like the inside of a rotisserie, which is the point.</p>
+
+<p>The type is new. Bricolage Grotesque, heavy and tightly spaced, for the big headlines, so they read like a shop sign. Instrument Serif in italic for the warmer words. Space Mono, a typewriter face, for the ticket and the small labels. Inter for everything you need to read quickly.</p>
+
+<p>There is also a section about the house: un sabor único, sin atajos, a unique flavour, no shortcuts. They roast every day and make at home what can be made at home: chicken, ham and spinach croquettes, and burgers with 100% beef. Next to it, three real customer reviews, held on with strips of paper tape like notes on a fridge. One customer calls El Dorado the best rotisserie on the whole Costa del Sol. Another praises one of the few places where you order for a set time and they keep it.</p>
+
+<p><img src="/images/journal/100-days-day-6/09-brand.webp" alt="El Dorado's own logo, a chicken in front of flames with a ribbon reading Asador de Pollos El Dorado, beside a phone showing three customer reviews on paper-tape notes, above the five colours of the palette." />
+<em>El Dorado’s own logo, three real customer reviews, and the five-colour palette taken from the brand.</em></p>
+
+<h2 id="motion-with-restraint">motion with restraint</h2>
+
+<p>A few small things move on this page, and each one has a job. The lines of the headline slide up one by one as the page loads. Sections fade in as you scroll to them. The rotisserie photo in the house section drifts slightly. A thin gold line along the top of the header shows how far down the page you are.</p>
+
+<p>Between the sections there is a short story in three words, the way a shop might paint it on the wall. Pides. Asamos. Disfrutas. You order, online or by phone. We roast, every day, lunch and evening, here in Estepona. You enjoy, ready at the agreed time, still hot. At the very bottom of the page, El Dorado is written very large in the footer, with a slow sheen across it.</p>
+
+<p>All of the motion switches off for visitors who have asked their phone or computer to reduce motion. The page works exactly the same without it.</p>
+
+<p><img src="/images/journal/100-days-day-6/07-editorial-motion.webp" alt="Editorial details: the words Pides, Asamos and Disfrutas, the house section with a rotisserie photo and customer reviews on paper tape, and the large El Dorado wordmark in the footer." />
+<em>Bold type, italic serif, reviews taped on like notes, and motion that switches off when asked.</em></p>
+
+<h2 id="what-the-concept-is-and-what-comes-next">what the concept is, and what comes next</h2>
+
+<p>El Dorado’s logo, colours, menu, prices, hours, address, phone number and customer reviews on the page are their own. I have not changed any of them. What is new is the order of things, the ticket, the clock and the way the page behaves on a phone.</p>
+
+<p>Two things would need to happen to turn the concept into a working shop. First, the ticket has to reach the kitchen: either into the online shop El Dorado already runs, or as a printed ticket behind the counter. Second, the time slots should come from the kitchen itself, so that a busy Sunday lunch can close a slot before it fills up. Neither is complicated. Both are worth doing properly.</p>
+
+<p>I have no figures for orders or takings, and I will not make any up.</p>
+
+<h2 id="if-people-order-from-you-on-their-phone">if people order from you on their phone</h2>
+
+<p>You may not sell roast chicken. A lot of small businesses on this coast take orders, though: a bakery that does cakes to order, a pizzeria, a florist, a laundry, a butcher who prepares barbecue packs for the weekend. Their customers usually order from a phone, in a hurry, and the website usually asks them to think like a shop assistant.</p>
+
+<p>What helps is the same as here. Ask how and when first. Show every option with its own price. Let people see their order the whole time, in the form you will receive it. Say clearly whether you are open, and if not, when. And keep the phone number one tap away, because some people will always prefer to call.</p>
+
+<p>I am a web designer in Estepona, on the Costa del Sol, and I build websites like this one for businesses across Spain. If that sounds like your business, write to me from <a href="https://wellyington.github.io/">the main site</a>. Tell me what you do and where, and I will reply in plain language. The concept is <a href="https://wellyington.github.io/challenge/day6/">here</a>, and El Dorado’s current site is <a href="https://pollosasadosadomicilioestepona.es/">here</a>, so you can compare the two. Six down, ninety-four to go.</p>
+
+      <p class="fin" aria-label="End of entry">fin.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">filed under</span>
+    <ul class="chips"><li>100 days</li><li>case study</li><li>takeaway</li><li>online ordering</li><li>estepona</li></ul>
+  </div><nav class="rail pager" aria-label="more entries."><a class="pager-cell rollable" href="/journal/en/articles/as-careful-as-the-kitchen/">
+      <span class="label">← previous</span>
+      <span class="pager-title">as careful as the kitchen<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">latest entry.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Keep reading</span>
+    <h2 id="more-title" class="h-section">more entries.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/en/articles/as-careful-as-the-kitchen/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp" alt="Case study cover of the Espacio IME website concept: Design Challenge Day 5, the dark homepage on a desktop with the headline Un viaje por los sabores de la Costa Tropical, and a phone in the light theme showing the local produce." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>No. 006</span>
+</div>
+<span class="label">100 Days · 21.11.26</span><span class="card-title">as careful as the kitchen<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/en/articles/judgement-over-volume/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Case study cover of a Nina Estate website concept: the opening split between a stone light theme and a near-black dark theme, with a pool villa at dusk, and the same site on a phone." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>No. 004</span>
+</div>
+<span class="label">100 Days · 20.11.26</span><span class="card-title">judgement over volume<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/en/articles/a-seat-at-the-long-table/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-3/09-cover.webp" alt="Case study cover of a Los Arcos Estepona homepage concept: the opening split between a cream theme and a charcoal theme on a desktop, with the same page on a phone." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>No. 003</span>
+</div>
+<span class="label">100 Days · 19.11.26</span><span class="card-title">a seat at the long table<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independent by design · Written in public</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/en/" class="rollable"><span class="roll"><span>journal</span><span aria-hidden="true">journal</span></span>
+    </a><a href="/journal/en/archive/" class="rollable"><span class="roll"><span>archive</span><span aria-hidden="true">archive</span></span>
+    </a><a href="/journal/en/about/" class="rollable"><span class="roll"><span>about</span><span aria-hidden="true">about</span></span>
+    </a><a href="https://wellyington.github.io/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>main site</span><span aria-hidden="true">main site</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">elsewhere</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/en/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">write back</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Replies are read. Every one.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Set in Space Grotesk · Built with Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
