@@ -537,6 +537,45 @@ function writePage(locale, html) {
   fs.writeFileSync(file, html);
 }
 
+// Newest journal entry in a language, as YYYY-MM-DD. The homepages list
+// the latest entries, so they change whenever an article is published.
+function newestEntry(code) {
+  const dir = path.join(root, "journal-src", code, "articles");
+  if (!fs.existsSync(dir)) return null;
+  let newest = null;
+  fs.readdirSync(dir).forEach(function (file) {
+    if (!file.endsWith(".md")) return;
+    const m = fs.readFileSync(path.join(dir, file), "utf8").match(/^date:\s*(\d{4}-\d{2}-\d{2})/m);
+    if (m && (!newest || m[1] > newest)) newest = m[1];
+  });
+  return newest;
+}
+
+// The 100 Days concept pages in /challenge/dayN/. A page whose canonical
+// points to another address, or that is marked noindex, is left out:
+// Google should only be given pages that stand as their own canonical.
+function challengeUrls() {
+  const dir = path.join(root, "challenge");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter(function (name) {
+      return /^day\d+$/.test(name) && fs.existsSync(path.join(dir, name, "index.html"));
+    })
+    .sort(function (a, b) {
+      return Number(a.slice(3)) - Number(b.slice(3));
+    })
+    .map(function (name) {
+      const url = origin + "/challenge/" + name + "/";
+      const html = fs.readFileSync(path.join(dir, name, "index.html"), "utf8");
+      const canonical = html.match(/<link[^>]+rel=["']canonical["'][^>]*href=["']([^"']+)["']/i);
+      const noindex = /<meta[^>]+name=["']robots["'][^>]*noindex/i.test(html);
+      if (noindex || (canonical && canonical[1] !== url)) return null;
+      return url;
+    })
+    .filter(Boolean);
+}
+
 function writeSitemap() {
   const locales = localesCached();
   const alternates = codes
@@ -553,8 +592,8 @@ function writeSitemap() {
         "  <url>\n" +
         "    <loc>" + pageUrl(item) + "</loc>\n" +
         alternates + "\n" +
-        "    <lastmod>2026-11-08</lastmod>\n" +
-        "    <changefreq>monthly</changefreq>\n" +
+        "    <lastmod>" + (newestEntry(code) || "2026-11-08") + "</lastmod>\n" +
+        "    <changefreq>weekly</changefreq>\n" +
         "    <priority>" + (code === "en" ? "1.0" : "0.8") + "</priority>\n" +
         "  </url>"
       );
@@ -567,12 +606,24 @@ function writeSitemap() {
     "    <changefreq>monthly</changefreq>\n" +
     "    <priority>0.8</priority>\n" +
     "  </url>";
+  const challenge = challengeUrls()
+    .map(function (url) {
+      return (
+        "  <url>\n" +
+        "    <loc>" + url + "</loc>\n" +
+        "    <changefreq>monthly</changefreq>\n" +
+        "    <priority>0.6</priority>\n" +
+        "  </url>"
+      );
+    })
+    .join("\n");
   const brine = require("./brineclub-i18n").brineclubSitemap();
   const xml =
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
     "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">\n" +
     urls + "\n" +
     cv + "\n" +
+    (challenge ? challenge + "\n" : "") +
     brine + "\n" +
     "</urlset>\n";
   fs.writeFileSync(path.join(root, "sitemap.xml"), xml);

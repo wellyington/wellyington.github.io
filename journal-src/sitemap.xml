@@ -1,0 +1,57 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+{%- comment -%}
+  Journal sitemap, served at /journal/sitemap.xml.
+  Replaces the jekyll-sitemap output (the plugin skips its own file when
+  this one exists). Every HTML page in each language, with:
+    lastmod     article: last_modified_at or date
+                home / archive: the newest article in that language
+    alternates  the same page in the other languages, found by `ref`
+  Pages with `sitemap: false` (the /journal/ language redirect) are left out.
+{%- endcomment -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for lang in site.languages -%}
+  {%- assign pfx = lang | append: "/" -%}
+  {%- assign lang_dir = lang | append: "/articles/" -%}
+  {%- assign articles = site.pages | where_exp: "p", "p.path contains lang_dir" | sort: "date" | reverse -%}
+  {%- assign newest = articles.first -%}
+  {%- for p in site.pages -%}
+    {%- assign p_pfx = p.path | slice: 0, 3 -%}
+    {%- if p_pfx != pfx or p.sitemap == false -%}{%- continue -%}{%- endif -%}
+    {%- assign last = p.url | slice: -1, 1 -%}
+    {%- if last != "/" -%}{%- continue -%}{%- endif %}
+  <url>
+    <loc>{{ p.url | absolute_url }}</loc>
+    {%- if p.last_modified_at %}
+    <lastmod>{{ p.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- elsif p.date %}
+    <lastmod>{{ p.date | date_to_xmlschema }}</lastmod>
+    {%- elsif p.ref == "home" or p.ref == "archive" %}
+    {%- if newest %}
+    <lastmod>{{ newest.date | date_to_xmlschema }}</lastmod>
+    {%- endif -%}
+    {%- endif -%}
+    {%- if p.ref -%}
+      {%- for code in site.languages -%}
+        {%- assign cpfx = code | append: "/" -%}
+        {%- for q in site.pages -%}
+          {%- assign q_pfx = q.path | slice: 0, 3 -%}
+          {%- if q.ref == p.ref and q_pfx == cpfx -%}
+            {%- assign A = site.data.languages[code] %}
+    <xhtml:link rel="alternate" hreflang="{{ A.hreflang | default: code }}" href="{{ q.url | absolute_url }}"/>
+            {%- if code == site.default_lang %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ q.url | absolute_url }}"/>
+            {%- endif -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    {%- endif %}
+  </url>
+  {%- endfor -%}
+{%- endfor %}
+</urlset>

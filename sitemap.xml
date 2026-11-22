@@ -7,8 +7,8 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/"/>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
@@ -18,8 +18,8 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/"/>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -29,8 +29,8 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/"/>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -40,8 +40,8 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/"/>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -49,6 +49,31 @@
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/challenge/day1/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/challenge/day2/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/challenge/day4/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/challenge/day5/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/challenge/day6/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://wellyington.github.io/brineclub/</loc>
