@@ -1,123 +1,359 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/about/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/about/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/about/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/en/about/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/archive/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/archive/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/archive/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/en/archive/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/en/articles/built-before-the-yes/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/en/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/en/articles/judgement-over-volume/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/</loc>
-</url>
-<url>
-<loc>https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/</loc>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/</loc>
+    <lastmod>2026-11-19T22:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/about/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/archive/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/archive/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/archive/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/</loc>
+    <lastmod>2026-11-21T16:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/articles/built-before-the-yes/</loc>
+    <lastmod>2026-11-19T00:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/articles/judgement-over-volume/</loc>
+    <lastmod>2026-11-20T11:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/</loc>
+    <lastmod>2026-11-19T21:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/</loc>
+    <lastmod>2026-11-21T10:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/about/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/archive/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/archive/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/archive/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/</loc>
+    <lastmod>2026-11-20T11:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/</loc>
+    <lastmod>2026-11-19T00:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/</loc>
+    <lastmod>2026-11-21T10:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/</loc>
+    <lastmod>2026-11-19T21:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/</loc>
+    <lastmod>2026-11-21T16:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/</loc>
+    <lastmod>2026-11-19T22:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/about/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/archive/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/archive/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/archive/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/</loc>
+    <lastmod>2026-11-20T11:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/</loc>
+    <lastmod>2026-11-19T21:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/</loc>
+    <lastmod>2026-11-19T00:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/</loc>
+    <lastmod>2026-11-21T10:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/</loc>
+    <lastmod>2026-11-21T16:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/</loc>
+    <lastmod>2026-11-19T22:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/about/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/archive/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/archive/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/archive/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/</loc>
+    <lastmod>2026-11-19T21:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/</loc>
+    <lastmod>2026-11-19T22:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/</loc>
+    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/</loc>
+    <lastmod>2026-11-19T00:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/built-before-the-yes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/</loc>
+    <lastmod>2026-11-21T10:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/</loc>
+    <lastmod>2026-11-20T11:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/judgement-over-volume/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/</loc>
+    <lastmod>2026-11-21T16:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/"/>
+  </url>
 </urlset>
