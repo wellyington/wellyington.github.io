@@ -91,6 +91,23 @@ jobs:
             [ "$(grep -c '<title>' "$f")" -eq 1 ] || { echo "::error::$f needs exactly one <title>"; exit 1; }
             grep -q '"@type": "BlogPosting"' "$f" || { echo "::error::$f has no BlogPosting data"; exit 1; }
           done
+          # Sitemap: well-formed XML, one <url> per article, page and language
+          # home, each with its language alternates. No raw Liquid.
+          python3 - <<'PY'
+          import glob, sys, xml.etree.ElementTree as ET
+          ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "x": "http://www.w3.org/1999/xhtml"}
+          raw = open("journal/sitemap.xml", encoding="utf-8").read()
+          if "{%" in raw or "{{" in raw: sys.exit("::error::journal sitemap contains raw Liquid")
+          urls = ET.fromstring(raw).findall("s:url", ns)
+          locs = {u.find("s:loc", ns).text for u in urls}
+          base = "https://wellyington.github.io/"
+          want = {base + f[:-len("index.html")] for f in glob.glob("journal/*/**/index.html", recursive=True)}
+          missing = sorted(want - locs)
+          if missing: sys.exit("::error::journal sitemap is missing " + ", ".join(missing))
+          bad = [u.find("s:loc", ns).text for u in urls if len(u.findall("x:link", ns)) < 2]
+          if bad: sys.exit("::error::no language alternates for " + ", ".join(bad))
+          print(f"journal sitemap: {len(urls)} URLs, all with alternates")
+          PY
           echo "Built pages:" && find journal -name '*.html' | sort
 
       # The homepages (/, /es/, /pt/, /ru/) show the three latest entries in
@@ -104,7 +121,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A journal index.html es/index.html pt/index.html ru/index.html
+          git add -A journal index.html es/index.html pt/index.html ru/index.html sitemap.xml
           if git diff --cached --quiet; then
             echo "journal/ and the homepages are already up to date."
             exit 0
