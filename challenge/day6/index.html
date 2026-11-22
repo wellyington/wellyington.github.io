@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>El Dorado · Pollos asados a domicilio en Estepona</title>
+<meta name="description" content="Asador de Pollos El Dorado, Estepona. Pollos asados, hamburguesas de la casa, croquetas caseras y empanadillas argentinas, a domicilio o para recoger. Pide online.">
+<meta name="theme-color" content="#24190F">
+<link rel="canonical" href="https://wellyington.github.io/challenge/day6/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="El Dorado — Pollo asado al fuego, directo a tu puerta">
+<meta property="og:description" content="Asador de pollos en Estepona. Pide online a domicilio o para recoger.">
+<meta property="og:image" content="https://wellyington.github.io/challenge/day6/img/og.jpg">
+<meta property="og:url" content="https://wellyington.github.io/challenge/day6/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" as="image" href="img/pollo-asado.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* El Dorado · Asador de Pollos, Estepona — 100 Days, 100 Websites · Day 6
+   IDEA: the page works like the shop counter — choose how and when, build the comanda, watch the ticket print.
+   COLOUR: espresso #24190F, brown #876445, caramel #CA965C, gold #EEC373, cream #F4DFBA.
+   TYPE: Bricolage Grotesque + Instrument Serif italic accents, Inter body, Space Mono for the ticket. */
+body{margin:0;background:#24190F}
+a{color:#EEC373}a:hover{color:#F4DFBA}
+.ed *{box-sizing:border-box}
+.ed{overflow-x:clip;max-width:100vw}
+html,body{overflow-x:clip}
+.ed img,.ed svg{max-width:100%}
+.wrap{width:100%;max-width:1320px;margin:0 auto;padding:0 40px}
+.disp{font-family:'Bricolage Grotesque',Inter,sans-serif}
+.mono{font-family:'Space Mono',ui-monospace,monospace}
+.outline{color:transparent;-webkit-text-stroke:1.5px #CA965C}
+
+html{scroll-behavior:smooth}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.02em}
+.grain{position:absolute;inset:0;z-index:70;pointer-events:none;background-image:url(img/grain.png);background-size:180px;opacity:.06;mix-blend-mode:overlay}
+.idx{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;align-items:center;gap:12px}
+.idx::before{content:'';width:36px;height:1px;background:currentColor;opacity:.6}
+
+/* hero line reveal */
+.line{display:block;overflow:hidden;padding:0 .08em .17em 0;margin-bottom:-.17em}
+.line>span{display:block;animation:lineup 1.2s cubic-bezier(.16,1,.3,1) both}
+.line:nth-child(2)>span{animation-delay:.08s}.line:nth-child(3)>span{animation-delay:.16s}.line:nth-child(4)>span{animation-delay:.24s}
+@keyframes lineup{from{transform:translateY(105%)}}
+
+/* hero interactivity */
+.spot{position:absolute;inset:0;pointer-events:none;background:radial-gradient(520px circle at var(--mx,72%) var(--my,35%),rgba(202,150,92,.16),transparent 65%);transition:background .2s}
+.tilt{transform:perspective(1000px) rotateX(var(--ry,0deg)) rotateY(var(--rx,0deg)) translate3d(var(--tx,0px),var(--ty,0px),0);transition:transform .7s cubic-bezier(.16,1,.3,1);will-change:transform}
+.ember{position:absolute;bottom:18%;width:5px;height:5px;border-radius:50%;background:#EEC373;box-shadow:0 0 10px 3px rgba(238,195,115,.55);opacity:0;animation:ember linear infinite}
+@keyframes ember{0%{opacity:0;transform:translate(0,0) scale(1)}12%{opacity:.95}100%{opacity:0;transform:translate(var(--dx,20px),-460px) scale(.2)}}
+
+/* nav */
+.nav-links{display:flex;gap:30px;align-items:center}
+.navlink{position:relative;color:#F4DFBA;text-decoration:none;font-size:15px;font-weight:500;padding:10px 0}
+.navlink:hover{color:#EEC373}
+.navlink::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:1.5px;background:#CA965C;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.navlink:hover::after,.navlink[aria-current=page]::after{transform:scaleX(1)}
+.menu-btn{display:none;width:48px;height:48px;align-items:center;justify-content:center;border-radius:50%;border:1px solid rgba(244,223,186,.28);background:transparent;color:#F4DFBA;cursor:pointer}
+.mlink{display:flex;align-items:center;min-height:56px;border-bottom:1px solid rgba(244,223,186,.1);color:#F4DFBA;text-decoration:none;font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:26px;font-weight:600}
+.mlink:hover{color:#EEC373}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 16px/1 Inter,sans-serif;text-decoration:none;cursor:pointer;border:0;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:#EEC373;color:#24190F;position:relative;overflow:hidden;isolation:isolate}
+.btn-gold::before{content:'';position:absolute;z-index:-1;top:0;left:-130%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);transition:left .75s cubic-bezier(.16,1,.3,1)}
+.btn-gold:hover::before{left:150%}
+.btn .arr{transition:transform .3s cubic-bezier(.16,1,.3,1)}.btn:hover .arr{transform:translateY(3px)}.btn-gold:hover{background:#F4DFBA;color:#24190F}
+.btn-dark{background:#24190F;color:#F4DFBA}.btn-dark:hover{background:#33251A;color:#EEC373}
+.btn-ghost{border:1px solid rgba(244,223,186,.3);color:#F4DFBA;background:transparent}.btn-ghost:hover{border-color:#EEC373;color:#EEC373}
+.btn:focus-visible,.seg:focus-visible,.chip:focus-visible,.rail:focus-visible,.qbtn:focus-visible,.menu-btn:focus-visible{outline:2px solid #EEC373;outline-offset:3px}
+.seg{position:relative;z-index:1;background:transparent;border:0;flex:1;min-height:52px;border-radius:999px;font:600 15px/1 Inter,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:background .2s,color .2s}
+.chip{min-height:44px;padding:0 16px;border-radius:999px;font:500 14px/1 Inter,sans-serif;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.rail{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:56px;padding:0 18px;border-radius:16px;font:600 16px/1.2 Inter,sans-serif;text-align:left;cursor:pointer;transition:background .2s,color .2s}
+.qbtn{width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,transform .15s}
+.qbtn:active{transform:scale(.92)}
+.item{transition:background .25s,border-color .25s}
+.item:hover{background:#33251A;border-color:rgba(202,150,92,.4) !important}
+.item .iname{transition:transform .4s cubic-bezier(.16,1,.3,1),color .3s}
+.item:hover .iname{transform:translateX(6px);color:#EEC373}
+.item .icode{transition:letter-spacing .4s}
+.item:hover .icode{letter-spacing:.08em}
+.thumb{position:absolute;z-index:0;top:6px;bottom:6px;left:6px;width:calc(50% - 9px);border-radius:999px;background:#24190F;transition:transform .55s cubic-bezier(.16,1,.3,1);box-shadow:0 6px 16px rgba(36,25,15,.3)}
+.tline{animation:print .5s cubic-bezier(.16,1,.3,1) both}
+@keyframes print{from{opacity:0;transform:translateY(-10px);clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+.toast{position:fixed;left:50%;bottom:28px;z-index:90;display:flex;align-items:center;gap:12px;padding:14px 20px 14px 14px;border-radius:999px;background:#F4DFBA;color:#24190F;font:600 15px/1.2 Inter,sans-serif;box-shadow:0 20px 50px rgba(0,0,0,.45);animation:toast 2.4s cubic-bezier(.16,1,.3,1) both;white-space:nowrap;max-width:calc(100vw - 32px)}
+@keyframes toast{0%{opacity:0;transform:translate(-50%,24px) scale(.96)}12%,82%{opacity:1;transform:translate(-50%,0) scale(1)}100%{opacity:0;transform:translate(-50%,10px)}}
+.marquee:hover{animation-play-state:paused}
+.sticker{position:relative}
+.sticker::before{content:'';position:absolute;top:-13px;left:50%;width:88px;height:26px;margin-left:-44px;background:rgba(251,241,222,.72);transform:rotate(-4deg);box-shadow:0 2px 6px rgba(36,25,15,.12)}
+.wordmark{background:linear-gradient(90deg,#33251A 0%,#33251A 40%,#876445 50%,#33251A 60%,#33251A 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent !important;animation:sheen 7s ease-in-out infinite}
+@keyframes sheen{0%{background-position:100% 0}60%,100%{background-position:0 0}}
+.ritual li{transition:opacity .4s}
+.ritual:hover li{opacity:.45}.ritual li:hover{opacity:1}
+.ritual li:hover .outline{color:#CA965C;-webkit-text-stroke-color:#CA965C}
+.outline{transition:color .45s}
+
+/* layout */
+.hero-img{position:absolute;top:-56px;right:0;width:min(600px,44vw);z-index:0;pointer-events:none}
+.hero-type{font-size:clamp(60px,9vw,138px);line-height:.86;letter-spacing:-.045em;font-weight:800;margin:0}
+.console{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1.3fr) auto;gap:28px;align-items:end}
+.order{display:grid;grid-template-columns:240px minmax(0,1fr) 380px;gap:32px;align-items:start}
+.sticky{position:sticky;top:104px}
+.rails{display:flex;flex-direction:column;gap:8px}
+.ritual{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.story{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.foot{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+
+/* ticket */
+.ticket{background:#F4DFBA;color:#24190F;border-radius:6px 6px 0 0;position:relative;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.ticket::after{content:'';position:absolute;left:0;right:0;bottom:-14px;height:14px;background:linear-gradient(-45deg,transparent 10px,#F4DFBA 0) 0 0/20px 14px repeat-x,linear-gradient(45deg,transparent 10px,#F4DFBA 0) 0 0/20px 14px repeat-x}
+.dash{border:0;border-top:1.5px dashed rgba(36,25,15,.35);margin:0}
+
+/* stickers */
+.sticker{transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s;will-change:transform}
+.sticker:hover{transform:rotate(0deg) scale(1.03) !important;box-shadow:0 30px 60px rgba(36,25,15,.3) !important}
+
+/* motion */
+.spin{animation:spin 30s linear infinite;transform-origin:50% 50%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.marquee{display:flex;width:max-content;animation:slide 40s linear infinite}
+.marquee.rev{animation-direction:reverse}
+@keyframes slide{to{transform:translateX(-50%)}}
+.pulse{animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.float{animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px) rotate(-2deg)}}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.rise2{animation:rise .9s .12s cubic-bezier(.2,.7,.2,1) both}
+.rise3{animation:rise .9s .24s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}}
+.mobilebar{display:none}
+.progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#EEC373;transform-origin:left;transform:scaleX(0)}
+@supports (animation-timeline: view()){
+.reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+@keyframes reveal{from{opacity:0;translate:0 64px}to{opacity:1;translate:0 0}}
+.par{animation:par linear both;animation-timeline:view()}
+@keyframes par{from{transform:translateY(70px) rotate(5deg)}to{transform:translateY(-50px) rotate(1deg)}}
+.progress{animation:prog linear both;animation-timeline:scroll(root)}
+@keyframes prog{to{transform:scaleX(1)}}
+.shrink{animation:shrink linear both;animation-timeline:scroll(root);animation-range:0 260px}
+@keyframes shrink{to{height:46px}}
+}
+@media (hover:none){.tilt{transform:none}}
+@media (prefers-reduced-motion:reduce){.spin,.marquee,.pulse,.float,.rise,.rise2,.rise3,.line>span,.ember,.reveal,.par,.wordmark,.tline,.shrink{animation:none !important}.tilt{transform:none !important}.toast{animation:none}}
+
+@media (max-width:1100px){
+.order{grid-template-columns:minmax(0,1fr)}
+.sticky{position:static}
+.rails{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.rail{min-height:52px;padding:0 16px;border-radius:999px;justify-content:center;gap:8px;text-align:center}
+.console{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:960px){
+.nav-links{display:none}
+.menu-btn{display:inline-flex}
+.hero-img{position:relative;top:auto;right:auto;width:min(440px,84vw);margin:-24px auto 8px}
+.ritual-word{font-size:clamp(48px,13vw,120px) !important}
+.ritual li{padding-right:0 !important}
+.ritual{grid-template-columns:minmax(0,1fr)}
+.story{grid-template-columns:minmax(0,1fr)}
+.story>*{grid-column:auto !important;margin-top:0 !important}
+.visit{grid-template-columns:minmax(0,1fr)}
+.foot{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+.wrap{padding:0 20px}
+.hide-sm{display:none !important}
+.h2{font-size:44px !important}
+.foot{grid-template-columns:minmax(0,1fr)}
+.rails{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rail{font-size:15px;padding:0 12px}
+.rail .mono{display:none}
+.rail{min-height:46px !important}
+.vars{width:100%;justify-content:flex-start !important}
+.mobilebar{display:flex;position:sticky;bottom:0;z-index:30}
+.toast{bottom:92px}
+.head-order{padding:0 14px !important;min-width:48px}
+.console-card{padding:18px !important;border-radius:24px !important}
+.console-cta{width:100%;padding:0 20px !important;font-size:16px !important}
+.seg{font-size:14px;gap:6px}
+.ritual-word{font-size:clamp(48px,15vw,120px) !important}
+.htime{font-size:28px !important}
+.addr{font-size:24px !important}
+.story-photo{min-height:0 !important;display:flex;flex-direction:column;gap:20px}
+.story-photo>div{position:relative !important;width:100% !important;transform:rotate(2deg) !important}
+.sticker-abs{position:relative !important;left:auto !important;bottom:auto !important;width:auto !important}
+.item{gap:12px !important;padding:16px !important}
+.item .mono{width:auto !important}
+.hero-type{font-size:clamp(48px,15vw,96px)}
+}
+
+[hidden]{display:none !important}
+.menu-btn .ic-close{display:none}
+.menu-btn[aria-expanded=true] .ic-open{display:none}
+.menu-btn[aria-expanded=true] .ic-close{display:block}
+.thumb.right{transform:translateX(calc(100% + 6px))}
+body.pickup .only-delivery{display:none !important}
+</style>
+</head>
+<body>
+<div class="ed" style="position: relative; width: 100%; background: #24190F; color: #F4DFBA; font-family: Inter, sans-serif; font-size: 17px; line-height: 1.6">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- STATUS STRIP -->
+<div style="background: #EEC373; color: #24190F; font-size: 14px; font-weight: 500">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 24px; min-height: 40px; text-align: center">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #24190F"></span><strong style="font-weight: 600" data-bind="statusLong">Abierto todos los días</strong></span>
+<span class="hide-sm">Pedidos online · a domicilio y para recoger en Estepona</span>
+</div>
+</div>
+
+<!-- NAV -->
+<header style="position: sticky; top: 0; z-index: 40; background: rgba(36,25,15,0.88); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(244,223,186,0.08)">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 84px">
+<a href="#inicio" aria-label="Asador de Pollos El Dorado, inicio" style="display: flex; align-items: center; text-decoration: none">
+<img class="shrink" src="img/eldorado-logo-sm.webp" alt="Asador de Pollos El Dorado" style="height: 62px; width: auto; display: block">
+</a>
+<nav class="nav-links" aria-label="Principal">
+<a class="navlink" href="#inicio" aria-current="page">Inicio</a>
+<a class="navlink" href="#el-dorado">El Dorado</a>
+<a class="navlink" href="#pedido">Nuestros Productos</a>
+<a class="navlink" href="#contactar">Contactar</a>
+<a class="navlink" href="#blog">Blog</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px">
+<a class="btn btn-gold head-order" href="#pedido" aria-label="Pedir online" style="min-height: 48px; padding: 0 20px; font-size: 15px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"></path></svg>
+<span class="hide-sm">Pedir online</span>
+<span id="hdrCount" class="mono" hidden style="min-width: 24px; height: 24px; padding: 0 6px; border-radius: 999px; background: #24190F; color: #EEC373; font-size: 13px; display: inline-flex; align-items: center; justify-content: center">0</span>
+</a>
+<button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil"><svg class="ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+</div>
+<div class="progress" aria-hidden="true"></div>
+<nav id="menu-movil" hidden aria-label="Menú móvil" style="border-top: 1px solid rgba(244,223,186,0.1); background: #24190F">
+<div class="wrap" style="display: flex; flex-direction: column; padding-top: 8px; padding-bottom: 24px">
+<a class="mlink" href="#inicio" data-close>Inicio</a>
+<a class="mlink" href="#el-dorado" data-close>El Dorado</a>
+<a class="mlink" href="#pedido" data-close>Nuestros Productos</a>
+<a class="mlink" href="#contactar" data-close>Contactar</a>
+<a class="mlink" href="#blog" data-close>Blog</a>
+<a class="btn btn-gold" href="tel:+34952633318" style="margin-top: 20px">Llamar al 952 63 33 18</a>
+</div>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="inicio" style="position: relative; overflow: hidden; padding: 72px 0 0">
+<div class="spot" aria-hidden="true"></div>
+<div class="wrap" style="position: relative">
+<div class="hero-img rise2"><div class="tilt" style="position: relative">
+<div aria-hidden="true" style="position: absolute; inset: 8% 4% 4% 4%; border-radius: 50%; background: radial-gradient(closest-side, rgba(202,150,92,0.42), rgba(135,100,69,0.18) 55%, rgba(36,25,15,0) 100%); filter: blur(24px)"></div>
+<svg class="spin" viewBox="0 0 200 200" aria-hidden="true" style="position: absolute; left: -2%; top: 4%; width: 104%; height: auto"><defs><path id="hring" d="M100,100 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0"></path></defs><text style="font-family: 'Space Mono', monospace; font-size: 7px; font-weight: 700; letter-spacing: 2.4px; fill: #CA965C"><textPath href="#hring">UN SABOR ÚNICO · POLLOS ASADOS · ESTEPONA · UN SABOR ÚNICO · POLLOS ASADOS · ESTEPONA · UN SABOR ÚNICO ·</textPath></text></svg>
+<img class="float" src="img/pollo-asado.webp" alt="Pollo asado dorado con tomillo, recién salido del asador" style="position: relative; width: 100%; height: auto; display: block; filter: drop-shadow(0 50px 60px rgba(0,0,0,0.6))">
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none">
+<span class="ember" style="left: 12%; animation-delay: 0s; animation-duration: 7s; --dx: 30px"></span><span class="ember" style="left: 22%; animation-delay: 1.4s; animation-duration: 9s; --dx: -20px"></span><span class="ember" style="left: 34%; animation-delay: 2.6s; animation-duration: 8s; --dx: 40px"></span><span class="ember" style="left: 46%; animation-delay: 0.7s; animation-duration: 10s; --dx: -30px"></span><span class="ember" style="left: 55%; animation-delay: 3.4s; animation-duration: 7.5s; --dx: 25px"></span><span class="ember" style="left: 63%; animation-delay: 1.9s; animation-duration: 9.5s; --dx: -45px"></span><span class="ember" style="left: 72%; animation-delay: 4.2s; animation-duration: 8s; --dx: 35px"></span><span class="ember" style="left: 80%; animation-delay: 0.3s; animation-duration: 10.5s; --dx: -15px"></span><span class="ember" style="left: 88%; animation-delay: 2.9s; animation-duration: 8.5s; --dx: 20px"></span><span class="ember" style="left: 40%; animation-delay: 5.1s; animation-duration: 9s; --dx: -35px"></span><span class="ember" style="left: 60%; animation-delay: 5.8s; animation-duration: 7s; --dx: 15px"></span><span class="ember" style="left: 28%; animation-delay: 4.6s; animation-duration: 10s; --dx: 30px"></span>
+</div>
+</div></div>
+<h1 class="disp hero-type" aria-label="Pollo asado al fuego, directo a tu puerta" style="position: relative; z-index: 1">
+<span class="line"><span>Pollo asado</span></span>
+<span class="line"><span class="serif" style="color: #CA965C; font-size: 1.08em; line-height: 0.82">al fuego,</span></span>
+<span class="line"><span style="color: #EEC373">directo a</span></span>
+<span class="line"><span style="color: #EEC373">tu puerta.</span></span>
+</h1>
+
+<!-- order console -->
+<div class="rise2 console-card" style="position: relative; z-index: 2; margin-top: 56px; padding: 28px; border-radius: 32px; background: #F4DFBA; color: #24190F; box-shadow: 0 40px 80px rgba(0,0,0,0.45)">
+<div class="console">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span class="mono" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E432C">01 · ¿Cómo lo quieres?</span>
+<div role="group" aria-label="Tipo de pedido" style="position: relative; display: flex; gap: 6px; padding: 6px; border-radius: 999px; background: rgba(135,100,69,0.18)">
+<span class="thumb" id="thumb" aria-hidden="true"></span>
+<button class="seg" type="button" data-mode="domicilio" aria-pressed="true" style="color: #F4DFBA">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7"></path><circle cx="7" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg>A domicilio</button>
+<button class="seg" type="button" data-mode="recoger" aria-pressed="false" style="color: #24190F">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"></path></svg>Para recoger</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<span class="mono" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E432C">02 · ¿Para cuándo?</span>
+<div role="group" aria-label="Hora del pedido" style="display: flex; flex-wrap: wrap; gap: 8px">
+<button class="chip" type="button" data-when="asap" data-label="Lo antes posible" aria-pressed="false">Lo antes posible</button>
+<button class="chip" type="button" data-when="1330" data-label="13:30" aria-pressed="false">13:30</button>
+<button class="chip" type="button" data-when="1430" data-label="14:30" aria-pressed="false">14:30</button>
+<button class="chip" type="button" data-when="2000" data-label="20:00" aria-pressed="false">20:00</button>
+<button class="chip" type="button" data-when="2100" data-label="21:00" aria-pressed="false">21:00</button>
+<button class="chip" type="button" data-when="otra" data-label="Otra hora" aria-pressed="false">Otra hora</button>
+</div>
+</div>
+<a class="btn btn-dark console-cta" href="#pedido" style="min-height: 64px; padding: 0 30px; font-size: 17px">
+<span>03 · Elegir mi pedido</span>
+<svg class="arr" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"></path></svg>
+</a>
+</div>
+</div>
+</div>
+
+<!-- crossing bands -->
+<div aria-hidden="true" style="position: relative; height: 200px; margin-top: -40px">
+<div style="position: absolute; left: -5%; right: -5%; top: 70px; transform: rotate(-2.5deg); background: #876445; color: #F4DFBA; overflow: hidden">
+<div class="marquee disp" style="padding: 16px 0; font-size: 28px; font-weight: 800; white-space: nowrap">
+<span style="padding-right: 40px">Pollos asados ✦ Hamburguesas de la casa ✦ Croquetas caseras ✦ Alitas ✦ Empanadillas argentinas ✦ Bocadillos ✦ </span>
+<span style="padding-right: 40px">Pollos asados ✦ Hamburguesas de la casa ✦ Croquetas caseras ✦ Alitas ✦ Empanadillas argentinas ✦ Bocadillos ✦ </span>
+</div>
+</div>
+<div style="position: absolute; left: -5%; right: -5%; top: 96px; transform: rotate(1.8deg); background: #CA965C; color: #24190F; overflow: hidden">
+<div class="marquee rev mono" style="padding: 12px 0; font-size: 16px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap">
+<span style="padding-right: 32px">Pide online ● Recoge a tu hora ● Te lo llevamos ● Todos los días ● Pide online ● Recoge a tu hora ● Te lo llevamos ● Todos los días ● </span>
+<span style="padding-right: 32px">Pide online ● Recoge a tu hora ● Te lo llevamos ● Todos los días ● Pide online ● Recoge a tu hora ● Te lo llevamos ● Todos los días ● </span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ORDER BUILDER -->
+<section id="pedido" style="padding: 72px 0 128px; scroll-margin-top: 84px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<span class="idx" style="color: #CA965C">(01) La comanda</span>
+<h2 class="disp h2" style="margin: 0; font-size: 80px; line-height: 0.92; font-weight: 800; letter-spacing: -0.04em">Haz tu <span class="serif" style="color: #EEC373; font-size: 1.1em">comanda.</span></h2>
+</div>
+<p style="margin: 0; max-width: 400px; color: #DCC6A2">Añade lo que te apetezca y lo tenemos listo a tu hora, en casa o en el mostrador.</p>
+</div>
+
+<div class="order">
+<!-- category rail -->
+<div class="sticky">
+<div class="rails" id="rails" role="group" aria-label="Categorías">
+<!-- categories: rendered by script -->
+</div>
+<a href="https://pollosasadosadomicilioestepona.es/wp-content/uploads/2026/10/CARTA-EL-DORADO.pdf" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 16px; padding-left: 18px; color: #DCC6A2; font-size: 14px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Carta completa (PDF)</a>
+</div>
+
+<!-- items -->
+<div style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+<p class="disp" id="catIntro" style="margin: 0 0 12px; font-size: 26px; font-weight: 600; color: #DCC6A2"></p>
+<ul id="items" style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px"></ul>
+</div>
+
+<!-- ticket -->
+<aside id="comanda" class="sticky" aria-label="Tu comanda" style="scroll-margin-top: 100px">
+<div class="ticket mono" style="padding: 28px 26px 30px; font-size: 14px; line-height: 1.5">
+<div style="display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 11px; color: #5E432C"><span>COMANDA Nº <span id="tNo">000</span></span><span id="tTime">--:--</span></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center">
+<span style="font-size: 12px; letter-spacing: 0.2em">ASADOR DE POLLOS</span>
+<span class="disp" style="font-size: 30px; font-weight: 800; letter-spacing: -0.01em; line-height: 1">EL DORADO</span>
+<span style="font-size: 12px; color: #5E432C">Av. Puerta del Mar, 53 · Estepona</span>
+</div>
+<hr class="dash" style="margin: 18px 0">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span style="color: #5E432C">MODO</span><strong id="tMode">A DOMICILIO</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span style="color: #5E432C">HORA</span><strong id="tWhen">LO ANTES POSIBLE</strong></div>
+<hr class="dash" style="margin: 18px 0">
+<p id="tEmpty" style="margin: 0; padding: 18px 0; text-align: center; color: #5E432C">Tu comanda está vacía.<br>Añade algo rico con el botón +</p>
+<ul id="tLines" hidden style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px"></ul>
+<hr class="dash" style="margin: 18px 0">
+<div style="display: flex; justify-content: space-between; gap: 12px; font-size: 16px"><strong>ARTÍCULOS</strong><strong id="tCount">0</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; font-size: 18px; margin-top: 4px"><strong>TOTAL</strong><strong id="tTotal">0,00 €</strong></div>
+<div class="only-delivery" style="font-size: 12px; color: #5E432C; margin-top: 2px">Envío a domicilio: consulta condiciones al hacer tu pedido.</div>
+<div class="only-delivery" style="display: flex; flex-direction: column; gap: 6px; margin-top: 18px">
+<label for="dir" style="font-size: 12px; letter-spacing: 0.1em; color: #5E432C">DIRECCIÓN DE ENTREGA</label>
+<input id="dir" type="text" autocomplete="street-address" placeholder="Calle, número, piso" style="min-height: 46px; padding: 0 14px; border-radius: 10px; border: 1.5px solid #876445; background: #FBF1DE; color: #24190F; font: 500 15px/1 Inter, sans-serif">
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px; font-family: Inter, sans-serif">
+<a class="btn btn-dark" id="tGo" hidden href="https://pollosasadosadomicilioestepona.es/carrito/" style="width: 100%; min-height: 58px">Finalizar pedido online</a>
+<button class="btn" id="tOff" type="button" disabled style="width: 100%; min-height: 58px; background: rgba(36,25,15,0.12); color: #5E432C; cursor: not-allowed">Finalizar pedido online</button>
+<a href="tel:+34952633318" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; color: #24190F; font-size: 14px; font-weight: 600">o pídelo por teléfono · 952 63 33 18</a>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+
+<!-- RITUAL -->
+<section style="padding: 0 0 128px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+<span class="idx reveal" style="color: #CA965C">(02) El ritual</span>
+<ol class="ritual reveal" style="list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(244,223,186,0.15)">
+<li style="display: flex; flex-direction: column; gap: 14px; padding: 40px 32px 0 0">
+<span class="disp outline ritual-word" style="font-size: 120px; line-height: 0.85; font-weight: 800; letter-spacing: -0.05em">Pides.</span>
+<p style="margin: 0; max-width: 320px; color: #DCC6A2">Online o por teléfono, eligiendo domicilio o recogida y la hora que mejor te venga.</p>
+</li>
+<li style="display: flex; flex-direction: column; gap: 14px; padding: 40px 32px 0 0">
+<span class="disp outline ritual-word" style="font-size: 120px; line-height: 0.85; font-weight: 800; letter-spacing: -0.05em">Asamos.</span>
+<p style="margin: 0; max-width: 320px; color: #DCC6A2">El asador trabaja cada día, mediodía y noche, aquí en Estepona.</p>
+</li>
+<li style="display: flex; flex-direction: column; gap: 14px; padding: 40px 0 0">
+<span class="serif ritual-word" style="font-size: 132px; line-height: 0.85; color: #EEC373">Disfrutas.</span>
+<p style="margin: 0; max-width: 320px; color: #DCC6A2">Listo a la hora acordada, calentito, en tu mesa.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<!-- STORY COLLAGE -->
+<section id="el-dorado" style="padding: 128px 0; background: #F4DFBA; color: #24190F; scroll-margin-top: 84px; overflow: hidden">
+<div class="wrap story">
+<div class="reveal" style="grid-column: 1 / span 6; display: flex; flex-direction: column; gap: 28px">
+<span class="idx" style="color: #5E432C">(03) La casa · Estepona</span>
+<h2 class="disp h2" style="margin: 0; font-size: 96px; line-height: 0.88; font-weight: 800; letter-spacing: -0.045em">Un sabor<br>único.<br><span class="serif" style="color: #876445; font-size: 1.1em">Sin atajos.</span></h2>
+<p style="margin: 0; max-width: 480px; font-size: 19px; color: #5E432C">Asamos cada día y hacemos en casa lo que se puede hacer en casa: croquetas de pollo, de jamón y de espinacas. Y para los días de antojo, hamburguesas de la casa con carne 100% vacuno.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn btn-dark" href="#pedido">Ver la carta</a>
+<a class="btn" href="tel:+34952633318" style="border: 1.5px solid #24190F; color: #24190F">952 63 33 18</a>
+</div>
+</div>
+<div class="story-photo" style="grid-column: 8 / span 5; position: relative; min-height: 560px">
+<div class="par" style="position: absolute; top: 0; right: 0; width: calc(100% - 40px); aspect-ratio: 1 / 1; border-radius: 28px; overflow: hidden; background: #876445; transform: rotate(3deg); box-shadow: 0 30px 60px rgba(36,25,15,0.35); border: 8px solid #876445">
+<img src="img/pollo-girando.webp" alt="Pollo girando en el asador sobre las brasas" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 20px">
+</div>
+<figure class="sticker sticker-abs reveal" style="position: absolute; left: -20px; bottom: 0; width: 300px; margin: 0; padding: 24px; border-radius: 20px; background: #EEC373; transform: rotate(-4deg); box-shadow: 0 20px 40px rgba(36,25,15,0.25)">
+<blockquote style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<p class="disp" style="margin: 0; font-size: 22px; line-height: 1.15; font-weight: 600">“El mejor asador de pollos de toda la costa del sol.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.45">El trato y el sabor es absolutamente increíble. No tengo nada más q decir.”</p>
+</blockquote>
+<figcaption class="mono" style="margin-top: 14px; font-size: 12px; letter-spacing: 0.08em; color: #5E432C">— ARANTXA TORRES</figcaption>
+</figure>
+</div>
+<figure class="sticker reveal" style="grid-column: 2 / span 4; margin: 40px 0 0; padding: 28px; border-radius: 20px; background: #24190F; color: #F4DFBA; transform: rotate(2deg)">
+<blockquote style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<p class="disp" style="margin: 0; font-size: 24px; line-height: 1.15; font-weight: 600">“Los Pollos y las croquetas riquísimos!!!</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #DCC6A2">Y una atención excelente y súper majos todo el equipo. Que pena que no haya 10 estrellas”</p>
+</blockquote>
+<figcaption class="mono" style="margin-top: 14px; font-size: 12px; letter-spacing: 0.08em; color: #B89A74">— MARINA YAIZA</figcaption>
+</figure>
+<figure class="sticker reveal" style="grid-column: 7 / span 4; margin: 96px 0 0; padding: 28px; border-radius: 20px; background: #CA965C; color: #24190F; transform: rotate(-2.5deg)">
+<blockquote style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<p class="disp" style="margin: 0; font-size: 24px; line-height: 1.15; font-weight: 600">“Relación calidad precio muy buena, gran servicio,</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.45">de los pocos sitios que pides para llevar a una hora determinada y lo cumplen!!”</p>
+</blockquote>
+<figcaption class="mono" style="margin-top: 14px; font-size: 12px; letter-spacing: 0.08em; color: #24190F">— SERGIO GIL</figcaption>
+</figure>
+</div>
+</section>
+
+<!-- VISIT: CLOCK + ADDRESS -->
+<section id="contactar" style="padding: 128px 0; scroll-margin-top: 84px">
+<div class="wrap visit">
+<div class="reveal" style="position: relative; width: 100%; max-width: 520px; justify-self: center">
+<svg viewBox="0 0 320 320" role="img" aria-label="Reloj de horario: abierto de 10:30 a 16:00 y de 19:00 a 22:00" style="width: 100%; height: auto; display: block">
+<circle cx="160" cy="160" r="130" fill="none" stroke="rgba(244,223,186,0.12)" stroke-width="22"></circle>
+<line x1="160.00" y1="56.00" x2="160.00" y2="66.00" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="166.80" y1="56.22" x2="166.47" y2="61.21" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="173.57" y1="56.89" x2="172.92" y2="61.85" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="180.29" y1="58.00" x2="179.31" y2="62.90" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="186.92" y1="59.54" x2="184.33" y2="69.20" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="193.43" y1="61.52" x2="191.82" y2="66.25" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="199.80" y1="63.92" x2="197.89" y2="68.54" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="206.00" y1="66.73" x2="203.79" y2="71.21" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="212.00" y1="69.93" x2="207.00" y2="78.59" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="217.78" y1="73.53" x2="215.00" y2="77.68" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="223.31" y1="77.49" x2="220.27" y2="81.46" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="228.57" y1="81.81" x2="225.28" y2="85.57" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="233.54" y1="86.46" x2="226.47" y2="93.53" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="238.19" y1="91.43" x2="234.43" y2="94.72" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="242.51" y1="96.69" x2="238.54" y2="99.73" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="246.47" y1="102.22" x2="242.32" y2="105.00" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="250.07" y1="108.00" x2="241.41" y2="113.00" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="253.27" y1="114.00" x2="248.79" y2="116.21" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="256.08" y1="120.20" x2="251.46" y2="122.11" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="258.48" y1="126.57" x2="253.75" y2="128.18" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="260.46" y1="133.08" x2="250.80" y2="135.67" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="262.00" y1="139.71" x2="257.10" y2="140.69" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="263.11" y1="146.43" x2="258.15" y2="147.08" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="263.78" y1="153.20" x2="258.79" y2="153.53" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="264.00" y1="160.00" x2="254.00" y2="160.00" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="263.78" y1="166.80" x2="258.79" y2="166.47" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="263.11" y1="173.57" x2="258.15" y2="172.92" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="262.00" y1="180.29" x2="257.10" y2="179.31" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="260.46" y1="186.92" x2="250.80" y2="184.33" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="258.48" y1="193.43" x2="253.75" y2="191.82" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="256.08" y1="199.80" x2="251.46" y2="197.89" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="253.27" y1="206.00" x2="248.79" y2="203.79" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="250.07" y1="212.00" x2="241.41" y2="207.00" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="246.47" y1="217.78" x2="242.32" y2="215.00" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="242.51" y1="223.31" x2="238.54" y2="220.27" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="238.19" y1="228.57" x2="234.43" y2="225.28" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="233.54" y1="233.54" x2="226.47" y2="226.47" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="228.57" y1="238.19" x2="225.28" y2="234.43" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="223.31" y1="242.51" x2="220.27" y2="238.54" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="217.78" y1="246.47" x2="215.00" y2="242.32" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="212.00" y1="250.07" x2="207.00" y2="241.41" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="206.00" y1="253.27" x2="203.79" y2="248.79" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="199.80" y1="256.08" x2="197.89" y2="251.46" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="193.43" y1="258.48" x2="191.82" y2="253.75" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="186.92" y1="260.46" x2="184.33" y2="250.80" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="180.29" y1="262.00" x2="179.31" y2="257.10" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="173.57" y1="263.11" x2="172.92" y2="258.15" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="166.80" y1="263.78" x2="166.47" y2="258.79" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="160.00" y1="264.00" x2="160.00" y2="254.00" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="153.20" y1="263.78" x2="153.53" y2="258.79" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="146.43" y1="263.11" x2="147.08" y2="258.15" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="139.71" y1="262.00" x2="140.69" y2="257.10" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="133.08" y1="260.46" x2="135.67" y2="250.80" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="126.57" y1="258.48" x2="128.18" y2="253.75" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="120.20" y1="256.08" x2="122.11" y2="251.46" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="114.00" y1="253.27" x2="116.21" y2="248.79" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="108.00" y1="250.07" x2="113.00" y2="241.41" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="102.22" y1="246.47" x2="105.00" y2="242.32" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="96.69" y1="242.51" x2="99.73" y2="238.54" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="91.43" y1="238.19" x2="94.72" y2="234.43" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="86.46" y1="233.54" x2="93.53" y2="226.47" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="81.81" y1="228.57" x2="85.57" y2="225.28" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="77.49" y1="223.31" x2="81.46" y2="220.27" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="73.53" y1="217.78" x2="77.68" y2="215.00" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="69.93" y1="212.00" x2="78.59" y2="207.00" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="66.73" y1="206.00" x2="71.21" y2="203.79" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="63.92" y1="199.80" x2="68.54" y2="197.89" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="61.52" y1="193.43" x2="66.25" y2="191.82" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="59.54" y1="186.92" x2="69.20" y2="184.33" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="58.00" y1="180.29" x2="62.90" y2="179.31" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="56.89" y1="173.57" x2="61.85" y2="172.92" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="56.22" y1="166.80" x2="61.21" y2="166.47" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="56.00" y1="160.00" x2="66.00" y2="160.00" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="56.22" y1="153.20" x2="61.21" y2="153.53" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="56.89" y1="146.43" x2="61.85" y2="147.08" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="58.00" y1="139.71" x2="62.90" y2="140.69" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="59.54" y1="133.08" x2="69.20" y2="135.67" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="61.52" y1="126.57" x2="66.25" y2="128.18" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="63.92" y1="120.20" x2="68.54" y2="122.11" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="66.73" y1="114.00" x2="71.21" y2="116.21" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="69.93" y1="108.00" x2="78.59" y2="113.00" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="73.53" y1="102.22" x2="77.68" y2="105.00" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="77.49" y1="96.69" x2="81.46" y2="99.73" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="81.81" y1="91.43" x2="85.57" y2="94.72" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="86.46" y1="86.46" x2="93.53" y2="93.53" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="91.43" y1="81.81" x2="94.72" y2="85.57" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="96.69" y1="77.49" x2="99.73" y2="81.46" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="102.22" y1="73.53" x2="105.00" y2="77.68" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="108.00" y1="69.93" x2="113.00" y2="78.59" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="114.00" y1="66.73" x2="116.21" y2="71.21" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="120.20" y1="63.92" x2="122.11" y2="68.54" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="126.57" y1="61.52" x2="128.18" y2="66.25" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="133.08" y1="59.54" x2="135.67" y2="69.20" stroke="rgba(244,223,186,0.45)" stroke-width="1.6" stroke-linecap="round"></line><line x1="139.71" y1="58.00" x2="140.69" y2="62.90" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="146.43" y1="56.89" x2="147.08" y2="61.85" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line><line x1="153.20" y1="56.22" x2="153.53" y2="61.21" stroke="rgba(244,223,186,0.16)" stroke-width="1" stroke-linecap="round"></line>
+<circle cx="160" cy="160" r="112" fill="none" stroke="rgba(244,223,186,0.06)" stroke-width="1"></circle>
+<path d="M 209.75 280.1 A 130 130 0 0 1 47.42 225.0" fill="none" stroke="#EEC373" stroke-width="22" stroke-linecap="round"></path>
+<path d="M 34.43 126.35 A 130 130 0 0 1 95.0 47.42" fill="none" stroke="#CA965C" stroke-width="22" stroke-linecap="round"></path>
+<text x="160" y="16" text-anchor="middle" style="font-family: 'Space Mono', monospace; font-size: 11px; fill: #B89A74">00</text>
+<text x="310" y="164" text-anchor="middle" style="font-family: 'Space Mono', monospace; font-size: 11px; fill: #B89A74">06</text>
+<text x="160" y="314" text-anchor="middle" style="font-family: 'Space Mono', monospace; font-size: 11px; fill: #B89A74">12</text>
+<text x="10" y="164" text-anchor="middle" style="font-family: 'Space Mono', monospace; font-size: 11px; fill: #B89A74">18</text>
+<line id="needle" x1="160" y1="160" x2="160" y2="56" stroke="#F4DFBA" stroke-width="3" stroke-linecap="round"></line>
+<circle class="needle-dot" cx="160" cy="56" r="14" fill="rgba(244,223,186,0.18)"><animate attributeName="r" values="9;16;9" dur="2.4s" repeatCount="indefinite"></animate></circle>
+<circle class="needle-dot" cx="160" cy="56" r="7" fill="#F4DFBA"></circle>
+<circle cx="160" cy="160" r="6" fill="#F4DFBA"></circle>
+<text x="160" y="150" text-anchor="middle" style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 34px; font-weight: 800; fill: #F4DFBA" id="clockNow">--:--</text>
+<text x="160" y="180" text-anchor="middle" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1.5px; fill: #EEC373" id="clockStatus"></text>
+</svg>
+</div>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 32px">
+<span class="idx" style="color: #CA965C">(04) Horario y dirección</span>
+<h2 class="disp h2" style="margin: 0; font-size: 80px; line-height: 0.9; font-weight: 800; letter-spacing: -0.04em">Abiertos<br><span class="serif" style="color: #EEC373; font-size: 1.1em">todos los días.</span></h2>
+<div style="display: flex; flex-direction: column">
+<div class="hrow" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; padding: 18px 0; border-top: 1px solid rgba(244,223,186,0.15)">
+<span style="display: inline-flex; align-items: center; gap: 12px; font-weight: 600"><span style="width: 14px; height: 14px; border-radius: 50%; background: #EEC373"></span>Mediodía</span>
+<span class="disp htime" style="font-size: 36px; font-weight: 800; letter-spacing: -0.02em">10:30 – 16:00</span>
+</div>
+<div class="hrow" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; padding: 18px 0; border-top: 1px solid rgba(244,223,186,0.15); border-bottom: 1px solid rgba(244,223,186,0.15)">
+<span style="display: inline-flex; align-items: center; gap: 12px; font-weight: 600"><span style="width: 14px; height: 14px; border-radius: 50%; background: #CA965C"></span>Noche</span>
+<span class="disp htime" style="font-size: 36px; font-weight: 800; letter-spacing: -0.02em">19:00 – 22:00</span>
+</div>
+</div>
+<address style="font-style: normal; display: flex; flex-direction: column; gap: 4px">
+<span class="mono" style="font-size: 12px; letter-spacing: 0.16em; color: #CA965C">DÓNDE ESTAMOS</span>
+<span class="disp addr" style="font-size: 30px; font-weight: 600; line-height: 1.15">Avenida Puerta del Mar, 53<br>29680 Estepona, Málaga</span>
+</address>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Puerta+del+Mar+53+Estepona">Cómo llegar</a>
+<a class="btn btn-ghost" href="tel:+34952633318">952 63 33 18</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="blog" style="border-top: 1px solid rgba(244,223,186,0.1); padding: 72px 0 32px; overflow: hidden">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="foot">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<img src="img/eldorado-logo-sm.webp" alt="Asador de Pollos El Dorado" style="width: 170px; height: auto; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span class="mono" style="font-size: 12px; letter-spacing: 0.16em; color: #CA965C">MENÚ</span>
+<a href="#inicio" style="color: #F4DFBA; text-decoration: none">Inicio</a>
+<a href="#el-dorado" style="color: #F4DFBA; text-decoration: none">El Dorado</a>
+<a href="#pedido" style="color: #F4DFBA; text-decoration: none">Nuestros Productos</a>
+<a href="#contactar" style="color: #F4DFBA; text-decoration: none">Contactar</a>
+<a href="#blog" style="color: #F4DFBA; text-decoration: none">Blog</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span class="mono" style="font-size: 12px; letter-spacing: 0.16em; color: #CA965C">PEDIDOS</span>
+<a href="#pedido" style="color: #F4DFBA; text-decoration: none">Pedir online</a>
+<a href="tel:+34952633318" style="color: #F4DFBA; text-decoration: none">952 63 33 18</a>
+<span style="color: #DCC6A2">10:30–16:00 · 19:00–22:00</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span class="mono" style="font-size: 12px; letter-spacing: 0.16em; color: #CA965C">SÍGUENOS</span>
+<a href="https://www.facebook.com/asadordepolloseldorado" style="color: #F4DFBA; text-decoration: none">Facebook</a>
+</div>
+</div>
+<div aria-hidden="true" class="disp wordmark" style="font-size: clamp(72px, 17vw, 250px); line-height: 0.8; font-weight: 800; letter-spacing: -0.06em; color: #33251A; white-space: nowrap; text-align: center">El Dorado</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: #B89A74">
+<span>© 2026 Asador de Pollos El Dorado</span>
+<span style="display: flex; flex-wrap: wrap; gap: 20px">
+<a href="#aviso-legal" style="color: #B89A74">Aviso legal</a>
+<a href="#privacidad" style="color: #B89A74">Privacidad</a>
+<a href="#cookies" style="color: #B89A74">Cookies</a>
+<a href="https://wellyington.github.io/" style="color: #B89A74">Website by Wellyington</a>
+</span>
+</div>
+</div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden>
+<span style="width: 30px; height: 30px; flex-shrink: 0; border-radius: 50%; background: #24190F; color: #EEC373; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>
+<span id="toastText" style="overflow: hidden; text-overflow: ellipsis"></span>
+<a href="#comanda" style="color: #5E432C; font-size: 14px; text-decoration: underline; text-underline-offset: 3px">Ver comanda</a>
+</div>
+
+<!-- MOBILE ORDER BAR -->
+<div class="mobilebar" style="gap: 10px; padding: 12px 16px; background: rgba(36,25,15,0.95); backdrop-filter: blur(12px); border-top: 1px solid rgba(244,223,186,0.12)">
+<a class="btn btn-gold" href="#comanda" style="flex: 2">Mi comanda · <span id="mbCount">0</span></a>
+<a class="btn btn-ghost" href="tel:+34952633318" aria-label="Llamar al 952 63 33 18" style="flex: 1">Llamar</a>
+</div>
+
+</div>
+<script>
+(function () {
+  'use strict';
+  var $ = function (q, el) { return (el || document).querySelector(q); };
+  var $$ = function (q, el) { return Array.prototype.slice.call((el || document).querySelectorAll(q)); };
+  var RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const B = 'carne 100% vacuno';
+    const F = (n, d, v) => ({ name: n, desc: d, v: v });
+    const CATS = [
+      { id: 'pollos', label: 'Pollos y fritos', intro: 'La estrella de la casa, recién salida del asador, y los fritos que la acompañan.', items: [
+        F('Pollo asado', 'Dorado al fuego, el de siempre.', [['Medio', 7], ['Entero', 12]]),
+        F('Alitas de pollo', '5 unidades. Salsa a elegir: ajo parmesano, BBQ, Carolina Reaper, mostaza y melocotón, teriyaki, sweet chili o búfalo. Con patatas o cebolla frita.', [['', 5]]),
+        F('Patatas fritas', 'Para acompañar.', [['Pequeña', 2.5], ['Grande', 4]]),
+        F('Bandidos de pollo', '6 unidades, con patatas fritas.', [['', 5]]),
+        F('Nuggets de pollo', '6 unidades, con patatas fritas.', [['', 5]]),
+        F('Fingers de pollo', '6 unidades, con patatas fritas.', [['', 5]]),
+        F('Flamenquín', 'Con patatas fritas.', [['', 6]]),
+        F('San Jacobo', 'Con patatas fritas.', [['', 6]]),
+        F('Lomito', 'Con patatas fritas.', [['', 6]]),
+        F('Fingers de queso', '6 unidades.', [['', 4]]),
+        F('Pimientos fritos', 'Ración.', [['', 3.5]]) ] },
+      { id: 'burgers', label: 'Hamburguesas', intro: 'Las de la casa, con carne 100% vacuno y mucho carácter.', items: [
+        F('La Dorada', 'Pan, mayo BBQ, lechuga, tomate, ' + B + ', queso, bacon y huevo a la plancha.', [['', 12]]),
+        F('Sin Perdón', 'Pan, mayo BBQ, ' + B + ', queso, huevo nube y bacon.', [['', 12]]),
+        F('Mafiosa', 'Pan, mermelada de tomate, rúcula, ' + B + ', provolone y mayo de pesto.', [['', 13.5]]),
+        F('Boluda', 'Pan, mostaza chimichurri, lechuga, tomate, ' + B + ', queso, jamón York y huevo a la plancha.', [['', 12.5]]),
+        F('Salvaje', 'Pan, crema de higo y queso, ' + B + ', rulo de cabra y cebolla caramelizada.', [['', 12]]),
+        F('Macarra', 'Pan, mermelada de bacon, ' + B + ', queso, huevo revuelto y cebolla caramelizada.', [['', 12]]),
+        F('Sin Vergüenza', 'Pan, mayonesa, lechuga, tomate y pollo empanado.', [['', 11.5]]),
+        F('Veggie', 'Pan, vinagreta de mango, hamburguesa de lentejas, queso y rúcula.', [['', 10]]),
+        F('Mexicana', 'Pan, ajo parmesano, nachos, ' + B + ', guacamole, tomate, jalapeños y Carolina Reaper.', [['', 13.5]]),
+        F('Doble Mundo', 'Pan, mayo BBQ ahumada, ' + B + ', queso, pulled pork, rúcula y almendras.', [['', 14.5]]),
+        F('Hereje', 'Pan, pepinillos, ' + B + ', queso, crema de cacahuete y cebolla morada encurtida.', [['', 12.5]]),
+        F('Doradita', 'Pan, ' + B + ' o pollo empanado, y queso.', [['', 7]]) ] },
+      { id: 'bocadillos', label: 'Bocadillos', intro: 'Hazlo menú por +2,50 € de 18:00 a 23:00.', items: [
+        F('Bacon', 'Pan, bacon, queso y huevo a la plancha.', [['', 7]]),
+        F('Serranito', 'Pan, lomo, pimiento verde y jamón serrano.', [['', 7]]),
+        F('Pollo', 'Pan, pollo asado, alioli y queso.', [['', 7]]),
+        F('Lomo adobado', 'Pan, lomo adobado, lechuga, tomate y cebolla caramelizada.', [['', 7]]),
+        F('Lomito', 'Pan, mostaza chimichurri, lechuga, tomate, ' + B + ', queso, jamón York y huevo a la plancha.', [['', 10.5]]),
+        F('Milanesa de ternera', 'Pan, mayonesa, lechuga, tomate y milanesa de ternera 100%.', [['', 10]]) ] },
+      { id: 'baguetinas', label: 'Baguetinas', intro: 'Pequeñas, rápidas y con salchicha.', items: [
+        F('Simple', 'Pan y salchicha con kétchup, mayonesa y mostaza.', [['', 4.5]]),
+        F('Mixta', 'Pan, salchicha, queso y jamón York.', [['', 5.5]]),
+        F('Completa', 'Pan, salchicha, guacamole, tomate y mayonesa.', [['', 6.5]]),
+        F('Pack de 6 unidades', 'Seis baguetinas.', [['', 7.5]]) ] },
+      { id: 'croquetas', label: 'Croquetas caseras', intro: 'Hechas en casa, por media docena larga o por docena corta.', items: [
+        F('Croquetas de pollo', 'Caseras.', [['5 uds', 4], ['10 uds', 7]]),
+        F('Croquetas de jamón', 'Caseras.', [['5 uds', 4], ['10 uds', 7]]),
+        F('Croquetas de espinacas', 'Caseras.', [['5 uds', 4], ['10 uds', 7]]) ] },
+      { id: 'empanadillas', label: 'Empanadillas', intro: 'Argentinas, a 2,50 € la unidad.', items: [
+        F('Empanadilla de pollo', 'Argentina, por unidad.', [['', 2.5]]),
+        F('Empanadilla de ternera', 'Argentina, por unidad.', [['', 2.5]]),
+        F('Empanadilla de atún', 'Argentina, por unidad.', [['', 2.5]]),
+        F('Empanadilla de verdura', 'Argentina, por unidad.', [['', 2.5]]) ] },
+      { id: 'picar', label: 'Para picar', intro: 'Para compartir, o no.', items: [
+        F('Patatas cheddar, bacon y jalapeños', 'Ración.', [['', 7.5]]),
+        F('Patatas cheddar, bacon, jalapeños, pulled pork y cebolleta', 'Ración.', [['', 9.5]]),
+        F('Aros de cebolla', 'Ración.', [['', 5.5]]),
+        F('Boniato frito', 'Ración.', [['', 5.5]]),
+        F('Sándwich de miga triple', '', [['', 3.5]]),
+        F('Extra de carne', 'Para tu hamburguesa o bocadillo.', [['', 3.5]]) ] },
+      { id: 'salsas', label: 'Salsas', intro: 'Para mojar, a 1,50 € cada una.', items: [
+        F('Alioli', '', [['', 1.5]]), F('Gaucha', '', [['', 1.5]]), F('Mostaza y miel', '', [['', 1.5]]),
+        F('Barbacoa', '', [['', 1.5]]), F('Brava', '', [['', 1.5]]), F('Brava picante', '', [['', 1.5]]),
+        F('Queso', '', [['', 1.5]]), F('Queso picante', '', [['', 1.5]]), F('La Dorada', 'La salsa de la casa.', [['', 1.5]]) ] },
+      { id: 'bebidas', label: 'Bebidas', intro: 'Para que no falte de nada.', items: [
+        F('Refresco en lata', '', [['', 1.5]]),
+        F('Refresco en botella', '', [['1 L', 2], ['2 L', 2.5]]),
+        F('Cerveza', 'Botella de 1 L.', [['', 2]]),
+        F('Vino', 'Botella.', [['Blanco', 5.5], ['Tinto', 5.5], ['Lambrusco', 5.5]]) ] }
+    ];
+
+  var eur = function (x) { return x.toFixed(2).replace('.', ',') + ' €'; };
+  var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+  var state = { cat: CATS[0].id, qty: {}, mode: 'domicilio', when: 'asap', whenLabel: 'Lo antes posible' };
+
+  /* ---------- live time + status ---------- */
+  function now() {
+    var h = 13, m = 0;
+    try {
+      var parts = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+      parts.forEach(function (p) { if (p.type === 'hour') h = parseInt(p.value, 10) % 24; if (p.type === 'minute') m = parseInt(p.value, 10); });
+    } catch (e) {}
+    return { h: h, m: m, t: h * 60 + m };
+  }
+  function status(t) {
+    if (t >= 630 && t < 960) return { open: true, short: 'Abierto ahora', long: 'Abierto ahora · pedidos hasta las 16:00' };
+    if (t >= 1140 && t < 1320) return { open: true, short: 'Abierto ahora', long: 'Abierto ahora · pedidos hasta las 22:00' };
+    if (t < 630) return { open: false, short: 'Abrimos 10:30', long: 'Cerrado · abrimos hoy a las 10:30 · programa tu pedido' };
+    if (t < 1140) return { open: false, short: 'Volvemos 19:00', long: 'Cerrado · volvemos a las 19:00 · programa tu pedido' };
+    return { open: false, short: 'Mañana 10:30', long: 'Cerrado · abrimos mañana a las 10:30 · programa tu pedido' };
+  }
+  function pt(min, r) {
+    var a = (min / 1440) * Math.PI * 2 - Math.PI / 2;
+    return { x: (160 + r * Math.cos(a)).toFixed(2), y: (160 + r * Math.sin(a)).toFixed(2) };
+  }
+  function tickClock() {
+    var n = now(), s = status(n.t), label = pad(n.h) + ':' + pad(n.m), p = pt(n.t, 104);
+    $$('[data-bind="statusLong"]').forEach(function (el) { el.textContent = s.long; });
+    var needle = $('#needle'); if (needle) { needle.setAttribute('x2', p.x); needle.setAttribute('y2', p.y); }
+    $$('.needle-dot').forEach(function (c) { c.setAttribute('cx', p.x); c.setAttribute('cy', p.y); });
+    var cn = $('#clockNow'); if (cn) cn.textContent = label;
+    var cs = $('#clockStatus'); if (cs) { cs.textContent = s.short.toUpperCase(); cs.setAttribute('fill', s.open ? '#7BD88F' : '#EEC373'); cs.style.fill = s.open ? '#7BD88F' : '#EEC373'; }
+    var tt = $('#tTime'); if (tt) tt.textContent = label;
+  }
+  tickClock();
+  setInterval(tickClock, 30000);
+  var tNo = $('#tNo'); if (tNo) tNo.textContent = String(100 + Math.floor(Math.random() * 900));
+
+  /* ---------- mobile menu ---------- */
+  var menuBtn = $('#menuBtn'), menu = $('#menu-movil');
+  function setMenu(open) {
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    menu.hidden = !open;
+  }
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', function () { setMenu(menu.hidden); });
+    $$('[data-close]', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); } });
+  }
+
+  /* ---------- delivery / pick-up + time ---------- */
+  function renderMode() {
+    var pick = state.mode === 'recoger';
+    $$('.seg[data-mode]').forEach(function (b) {
+      var on = b.getAttribute('data-mode') === state.mode;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.style.color = on ? '#F4DFBA' : '#24190F';
+    });
+    var th = $('#thumb'); if (th) th.classList.toggle('right', pick);
+    document.body.classList.toggle('pickup', pick);
+    $('#tMode').textContent = pick ? 'PARA RECOGER' : 'A DOMICILIO';
+  }
+  function renderWhen() {
+    $$('.chip[data-when]').forEach(function (b) {
+      var on = b.getAttribute('data-when') === state.when;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.style.cssText = on ? 'background: #876445; color: #F4DFBA; border: 1px solid #876445'
+                           : 'background: transparent; color: #24190F; border: 1px solid rgba(36,25,15,0.3)';
+    });
+    $('#tWhen').textContent = state.whenLabel.toUpperCase();
+  }
+  $$('.seg[data-mode]').forEach(function (b) { b.addEventListener('click', function () { state.mode = b.getAttribute('data-mode'); renderMode(); }); });
+  $$('.chip[data-when]').forEach(function (b) { b.addEventListener('click', function () { state.when = b.getAttribute('data-when'); state.whenLabel = b.getAttribute('data-label'); renderWhen(); }); });
+
+  /* ---------- menu (categories + items) ---------- */
+  var ICON_PLUS = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>';
+  var ICON_PLUS_S = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>';
+  var ICON_MINUS = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg>';
+
+  function findCat(id) { for (var i = 0; i < CATS.length; i++) if (CATS[i].id === id) return CATS[i]; return CATS[0]; }
+  function fullName(it, vv) { return it.name + (vv[0] ? ' · ' + vv[0] : ''); }
+
+  function renderRails() {
+    var rails = $('#rails');
+    rails.innerHTML = CATS.map(function (c) {
+      var on = c.id === state.cat;
+      return '<button class="rail" type="button" data-cat="' + c.id + '" aria-pressed="' + on + '" style="' +
+        (on ? 'background: #EEC373; color: #24190F; border: 0' : 'background: transparent; color: #F4DFBA; border: 1px solid rgba(244,223,186,0.14)') +
+        '"><span>' + esc(c.label) + '</span><span class="mono" style="font-size: 13px; opacity: 0.75">' + pad(c.items.length) + '</span></button>';
+    }).join('');
+  }
+
+  function variantHTML(cat, i, it, vv, vi) {
+    var key = cat.id + ':' + i + ':' + vi, q = state.qty[key] || 0, full = esc(fullName(it, vv));
+    var label = (vv[0] ? '<span style="color: #B89A74">' + esc(vv[0]) + ' · </span>' : '') + '<strong style="color: #F4DFBA">' + eur(vv[1]) + '</strong>';
+    var ctrl = q === 0
+      ? '<button class="qbtn" type="button" data-key="' + key + '" data-d="1" aria-label="Añadir ' + full + ', ' + eur(vv[1]) + '" style="background: #EEC373; color: #24190F; border: 0">' + ICON_PLUS + '</button>'
+      : '<span style="display: inline-flex; align-items: center; gap: 2px; border-radius: 999px; background: #EEC373; color: #24190F">' +
+          '<button class="qbtn" type="button" data-key="' + key + '" data-d="-1" aria-label="Quitar ' + full + '" style="background: transparent; color: #24190F; border: 0">' + ICON_MINUS + '</button>' +
+          '<span class="mono" style="min-width: 18px; text-align: center; font-weight: 700">' + q + '</span>' +
+          '<button class="qbtn" type="button" data-key="' + key + '" data-d="1" aria-label="Añadir ' + full + ', ' + eur(vv[1]) + '" style="background: transparent; color: #24190F; border: 0">' + ICON_PLUS_S + '</button>' +
+        '</span>';
+    return '<span style="display: inline-flex; align-items: center; gap: 10px; padding: 4px 4px 4px 16px; border-radius: 999px; border: 1px solid rgba(244,223,186,0.16); background: rgba(36,25,15,0.4)">' +
+      '<span class="mono" style="font-size: 13px; white-space: nowrap">' + label + '</span>' + ctrl + '</span>';
+  }
+
+  function renderItems() {
+    var cat = findCat(state.cat);
+    $('#catIntro').textContent = cat.intro;
+    $('#items').innerHTML = cat.items.map(function (it, i) {
+      return '<li class="item" style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; padding: 20px 20px 20px 24px; border-radius: 20px; border: 1px solid rgba(244,223,186,0.1); background: rgba(51,37,26,0.5)">' +
+        '<span class="mono icode" style="flex-shrink: 0; width: 56px; font-size: 13px; color: #CA965C">Nº ' + pad(i + 1) + '</span>' +
+        '<span style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px; min-width: 0">' +
+          '<span class="disp iname" style="font-size: 24px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2">' + esc(it.name) + '</span>' +
+          (it.desc ? '<span style="font-size: 15px; line-height: 1.45; color: #B89A74">' + esc(it.desc) + '</span>' : '') +
+        '</span>' +
+        '<span class="vars" style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px">' +
+          it.v.map(function (vv, vi) { return variantHTML(cat, i, it, vv, vi); }).join('') +
+        '</span></li>';
+    }).join('');
+  }
+
+  function renderTicket() {
+    var n = 0, total = 0, lines = [];
+    CATS.forEach(function (c) { c.items.forEach(function (it, i) { it.v.forEach(function (vv, vi) {
+      var q = state.qty[c.id + ':' + i + ':' + vi] || 0;
+      if (q) { n += q; total += q * vv[1]; lines.push('<li class="tline" style="display: flex; gap: 10px"><span style="flex-shrink: 0; font-weight: 700">' + q + '×</span><span style="flex: 1">' + esc(fullName(it, vv)) + '</span><span style="white-space: nowrap">' + eur(q * vv[1]) + '</span></li>'); }
+    }); }); });
+    var ul = $('#tLines'), had = ul.getAttribute('data-sig') || '', sig = lines.join('');
+    if (had !== sig) { ul.innerHTML = sig; ul.setAttribute('data-sig', sig); }
+    ul.hidden = n === 0; $('#tEmpty').hidden = n > 0;
+    $('#tCount').textContent = n; $('#tTotal').textContent = eur(total);
+    $('#tGo').hidden = n === 0; $('#tOff').hidden = n > 0;
+    var hc = $('#hdrCount'); hc.textContent = n; hc.hidden = n === 0;
+    $('#mbCount').textContent = n;
+  }
+
+  /* toast */
+  var toast = $('#toast'), toastText = $('#toastText'), tIn, tOut;
+  function notify(text) {
+    clearTimeout(tIn); clearTimeout(tOut);
+    toast.hidden = true;
+    tIn = setTimeout(function () { toastText.textContent = text; toast.hidden = false; }, 30);
+    tOut = setTimeout(function () { toast.hidden = true; }, 2430);
+  }
+
+  $('#rails').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-cat]'); if (!b) return;
+    state.cat = b.getAttribute('data-cat'); renderRails(); renderItems();
+  });
+  $('#items').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-key]'); if (!b) return;
+    var key = b.getAttribute('data-key'), d = parseInt(b.getAttribute('data-d'), 10);
+    var q = Math.max(0, (state.qty[key] || 0) + d);
+    if (q) state.qty[key] = q; else delete state.qty[key];
+    var parts = key.split(':'), cat = findCat(parts[0]), it = cat.items[+parts[1]], vv = it.v[+parts[2]];
+    renderItems(); renderTicket();
+    var again = document.querySelector('#items [data-key="' + key + '"][data-d="' + d + '"]') || document.querySelector('#items [data-key="' + key + '"]');
+    if (again) again.focus({ preventScroll: true });
+    if (d > 0) notify('Añadido: ' + fullName(it, vv));
+  });
+
+  renderRails(); renderItems(); renderTicket(); renderMode(); renderWhen();
+
+  /* ---------- hero: spotlight + tilt ---------- */
+  var hero = $('#inicio');
+  if (hero && !RM && window.matchMedia('(hover: hover)').matches) {
+    var raf = 0, last = null;
+    hero.addEventListener('mousemove', function (e) {
+      last = e; if (raf) return;
+      raf = requestAnimationFrame(function () {
+        raf = 0; var rc = hero.getBoundingClientRect();
+        var px = (last.clientX - rc.left) / rc.width, py = (last.clientY - rc.top) / rc.height;
+        hero.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+        hero.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+        hero.style.setProperty('--rx', ((px - 0.5) * 10).toFixed(2) + 'deg');
+        hero.style.setProperty('--ry', ((0.5 - py) * 8).toFixed(2) + 'deg');
+        hero.style.setProperty('--tx', ((px - 0.5) * 24).toFixed(1) + 'px');
+        hero.style.setProperty('--ty', ((py - 0.5) * 16).toFixed(1) + 'px');
+      });
+    });
+    hero.addEventListener('mouseleave', function () { ['--rx', '--ry', '--tx', '--ty'].forEach(function (k) { hero.style.removeProperty(k); }); });
+  }
+})();
+
+</script>
+</body>
+</html>
