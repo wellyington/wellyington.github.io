@@ -43,6 +43,7 @@ The journal is written in four languages with the same entries in each. The 100 
 ## Journal
 
 - [Journal home](https://wellyington.github.io/journal/en/): Working notes on websites, design and the 100 Days challenge
+- [the same pool after dark](https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/): 100 Days. An independent website concept for Morfeas Hotel in Kavos, Corfu: a day-to-night hero, light and dark themes, a day planner by mood, event posters and a booking drawer.
 - [from the counter to the ticket](https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/): 100 Days. A website concept for El Dorado, Estepona's rotisserie chicken house: the full menu with prices, a live order ticket, delivery or pick-up times and opening status.
 - [as careful as the kitchen](https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/): 100 Days. A website concept for Espacio IME in Motril: tasting menus with prices, local produce, a wine cellar, gift cards and a booking request, in light and dark.
 - [the website that looks after itself](https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/): Notes. A plain-language guide for small business owners: why brochure websites go out of date, what APIs and 'autonomous' websites are, and what to pay for.
@@ -58,17 +59,18 @@ The journal is written in four languages with the same entries in each. The 100 
 - [Day 4: Nina Estate — Private real estate in Málaga, Marbella & the Costa del Sol](https://wellyington.github.io/challenge/day4/): Nina Estate is a private real estate practice in Málaga led by Jovana Dokic: acquisition, sale, investment and rental across Málaga, Marbella and the Costa del Sol.
 - [Day 5: Espacio IME · Motril](https://wellyington.github.io/challenge/day5/): Espacio IME — cocina de autor de Iván Mateo en Motril, Granada. Menús degustación con producto de la Costa Tropical.
 - [Day 6: El Dorado · Pollos asados a domicilio en Estepona](https://wellyington.github.io/challenge/day6/): Asador de Pollos El Dorado, Estepona. Pollos asados, hamburguesas de la casa, croquetas caseras y empanadillas argentinas, a domicilio o para recoger. Pide online.
+- [Day 7: Morfeas Hotel Kavos](https://wellyington.github.io/challenge/day7/): Morfeas Hotel — a family-run hotel and apartments in Kavos, Corfu. A minute from the Ionian Sea, steps from the strip.
 
 ## Optional
 
 - [CV](https://wellyington.github.io/cv/): Wellington Almeida's CV
 - [Journal archive](https://wellyington.github.io/journal/en/archive/): Every entry, newest first
 - [Journal feed (Atom)](https://wellyington.github.io/journal/en/feed.xml): English entries with full text
-- [Journal in Spanish](https://wellyington.github.io/journal/es/): 7 entries, the same as the English journal
+- [Journal in Spanish](https://wellyington.github.io/journal/es/): 8 entries, the same as the English journal
 - [Journal feed in Spanish (Atom)](https://wellyington.github.io/journal/es/feed.xml): Full text of each entry
-- [Journal in Portuguese (Brazil)](https://wellyington.github.io/journal/pt/): 7 entries, the same as the English journal
+- [Journal in Portuguese (Brazil)](https://wellyington.github.io/journal/pt/): 8 entries, the same as the English journal
 - [Journal feed in Portuguese (Brazil) (Atom)](https://wellyington.github.io/journal/pt/feed.xml): Full text of each entry
-- [Journal in Russian](https://wellyington.github.io/journal/ru/): 7 entries, the same as the English journal
+- [Journal in Russian](https://wellyington.github.io/journal/ru/): 8 entries, the same as the English journal
 - [Journal feed in Russian (Atom)](https://wellyington.github.io/journal/ru/feed.xml): Full text of each entry
 - [Sitemap](https://wellyington.github.io/sitemap.xml): Main site pages
 - [Journal sitemap](https://wellyington.github.io/journal/sitemap.xml): Every journal page with its language versions

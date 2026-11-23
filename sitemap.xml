@@ -7,7 +7,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/"/>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -18,7 +18,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/"/>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -29,7 +29,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/"/>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -40,7 +40,7 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/"/>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -72,6 +72,11 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/challenge/day6/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/challenge/day7/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

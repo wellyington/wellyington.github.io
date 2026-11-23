@@ -82,7 +82,7 @@
         "@type": {{ page.about.type | default: "LocalBusiness" | jsonify }},
         "name": {{ page.about.name | jsonify }}
         {%- if page.about.url %}, "url": {{ page.about.url | jsonify }}{% endif %}
-        {%- if page.about.locality %}, "address": { "@type": "PostalAddress", "addressLocality": {{ page.about.locality | jsonify }}, "addressCountry": "ES" }{% endif %}
+        {%- if page.about.locality %}, "address": { "@type": "PostalAddress", "addressLocality": {{ page.about.locality | jsonify }}, "addressCountry": {{ page.about.country | default: "ES" | jsonify }} }{% endif %}
       },
       {%- endif %}
       "isPartOf": { "@type": "CreativeWorkSeries", "name": {{ page.category | default: "100 Days" | jsonify }}, "url": {{ home_url | absolute_url | jsonify }} },
