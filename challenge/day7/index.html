@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morfeas Hotel Kavos</title>
+<meta name="description" content="Morfeas Hotel — a family-run hotel and apartments in Kavos, Corfu. A minute from the Ionian Sea, steps from the strip.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Caveat:wght@600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a Greek travel magazine — elegant, sunny, a little playful.
+   IDEA: Morfeas, god of dreams: one hotel, two holidays. Drag the line between day and night.
+   PICTURE: an illustrated poster of the hotel, pool and Ionian Sea, split live into day and night.
+   COLOUR and TYPE: whitewash, Greek flag blue, lemon sun; midnight for night. DM Serif Display + Jost + Caveat (accents only).
+   LAYOUT: editorial bands with objects from a Greek summer — key fobs, posters, a taverna menu, a postcard. */
+:root{
+  --white:#fff;--paper:#f3f7fb;--blue:#0d5eaf;--blue-d:#0a3f78;--ink:#0b2140;--muted:#53657e;--lemon:#f4d03f;--night:#0a1a36;
+  --line:rgba(11,33,64,.14);--bg:#fff;--surface:#fff;--accent:#0d5eaf;--ease:cubic-bezier(.2,.8,.2,1);--max:1240px;
+  --serif:"DM Serif Display",Georgia,serif;--sans:Jost,system-ui,sans-serif;--hand:Caveat,cursive;
+}
+html[data-theme=dark]{color-scheme:dark;--bg:#081325;--paper:#0d1c37;--surface:#122649;--ink:#e8eff9;--muted:#a3b3cc;--line:rgba(232,239,249,.14);--accent:#7ab8ff;--night:#0f2549}
+.poster,.menu-card,.postcard{--ink:#0b2140;--muted:#53657e;--line:rgba(11,33,64,.14);--accent:#0d5eaf;--bg:#fff;color:var(--ink)}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 var(--sans);overflow-x:clip;transition:background-color .5s,color .5s}
+.mood,.fac,footer,.nav,.pill,.plan,.fac-list span{transition:background-color .5s,color .5s,border-color .5s}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.02;text-wrap:balance}
+h2{font-size:clamp(40px,6vw,80px);letter-spacing:-.02em}
+h2 i,h1 i{font-style:italic}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto}
+.band{padding:clamp(80px,11vw,160px) max(5vw,20px)}
+.eyebrow{font:500 16px var(--sans);letter-spacing:.01em;color:var(--accent);display:block;margin-bottom:18px}
+.lead{font-size:clamp(18px,1.5vw,20px);color:var(--muted);max-width:52ch;font-weight:400}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;z-index:200}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 30px;border-radius:999px;border:0;font:500 16px var(--sans);letter-spacing:.01em;cursor:pointer;text-decoration:none;transition:transform .35s var(--ease),background .3s,color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-d)}
+.btn-line{border:1px solid currentColor;background:transparent}
+.btn-white{background:#fff;color:var(--blue)}
+.btn svg{width:18px;height:18px}
+.meander{height:22px;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='22'%3E%3Cpath d='M0 19H20M14 19V3H4V13H10V7' fill='none' stroke='%230d5eaf' stroke-width='2'/%3E%3C/svg%3E") repeat-x center/auto 22px;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='22'%3E%3Cpath d='M0 19H20M14 19V3H4V13H10V7' fill='none' stroke='%230d5eaf' stroke-width='2'/%3E%3C/svg%3E") repeat-x center/auto 22px}
+
+/* NAV */
+.nav{position:fixed;top:16px;left:50%;translate:-50% 0;z-index:60;width:min(calc(100% - 28px),1240px);display:flex;align-items:center;gap:10px;padding:8px 8px 8px 24px;border-radius:999px;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 12px 40px -24px rgba(11,33,64,.5)}
+.logo{display:block;text-decoration:none;margin-right:auto;line-height:0}
+.logo img{height:52px;width:auto}
+.lg-dark,html[data-theme=dark] .lg-light{display:none}html[data-theme=dark] .lg-dark{display:block}
+@media(max-width:480px){.logo img{height:44px}}
+.nav ul{display:flex;list-style:none;margin:0;padding:0;gap:2px}
+.nav ul a{display:block;padding:12px 16px;border-radius:999px;text-decoration:none;font-size:16px}
+.nav ul a:hover{background:var(--paper)}
+.clock{font-size:15px;color:var(--muted);padding:0 14px;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.clock svg{width:18px;height:18px;color:var(--accent)}
+.nav .btn{min-height:48px;padding:0 24px}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:0;background:var(--paper);cursor:pointer}
+.burger span{display:block;width:18px;height:1.5px;background:var(--ink);margin:5px auto}
+.menu{position:fixed;inset:0;z-index:59;background:var(--bg);color:var(--ink);display:flex;flex-direction:column;justify-content:center;gap:4px;padding:100px 28px 40px;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.menu.open{opacity:1;visibility:visible}
+.menu a{font:italic 400 clamp(40px,11vw,60px)/1.15 var(--serif);text-decoration:none}
+.menu .meander{margin-top:30px}
+.nav .short{display:none}
+.theme{flex:none;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:transform .5s var(--ease),background .5s}
+.theme:hover{transform:rotate(-20deg)}
+.theme svg{width:20px;height:20px}
+@media(max-width:400px){.nav{gap:6px;padding-left:16px}.logo img{height:38px}}
+.nav ul a{padding:12px 13px;white-space:nowrap}
+@media(max-width:1560px){.clock{display:none}}
+.nav .btn{white-space:nowrap}
+@media(max-width:1180px){.nav ul{display:none}.burger{display:block}}
+@media(max-width:480px){.nav .long{display:none}.nav .short{display:inline}}
+.menu a{font-size:clamp(34px,9vw,52px)}
+@media(max-width:480px){.nav .btn{padding:0 18px}}
+
+/* HERO — day / night split */
+.hero{position:relative;height:100svh;min-height:600px;overflow:hidden;touch-action:pan-y;user-select:none;cursor:ew-resize}
+.layer{position:absolute;inset:0}
+.layer svg{position:absolute;inset:0;width:100%;height:100%}
+.layer.night{clip-path:inset(0 0 0 var(--x,50%))}
+.hero-text{position:absolute;left:0;right:0;top:clamp(110px,17vh,170px);text-align:center;padding:0 20px;pointer-events:none}
+.hero h1{font-size:clamp(84px,19vw,300px);letter-spacing:-.04em;line-height:.85;font-weight:400}
+.hero .tagline{font:italic 400 clamp(24px,3vw,40px) var(--serif);margin-top:clamp(10px,2vh,22px)}
+.day .hero-text{color:#0b2140}
+.night .hero-text{color:#fff}
+.handle{position:absolute;top:0;bottom:0;left:var(--x,50%);width:0;z-index:5}
+.handle::before{content:"";position:absolute;top:0;bottom:0;left:-1px;width:2px;background:rgba(255,255,255,.9);box-shadow:0 0 18px rgba(255,255,255,.6)}
+.knob{position:absolute;top:62%;left:0;translate:-50% -50%;width:84px;height:46px;border-radius:999px;background:#fff;border:0;display:flex;align-items:center;justify-content:space-between;padding:0 12px;box-shadow:0 12px 30px -10px rgba(0,0,0,.45);cursor:ew-resize}
+.knob svg{width:20px;height:20px}
+.knob .s{color:#d9a400}.knob .m{color:var(--night)}
+.hint{position:absolute;left:50%;bottom:28px;translate:-50% 0;z-index:6;color:#fff;font:500 15px var(--sans);background:rgba(10,26,54,.45);backdrop-filter:blur(10px);padding:10px 18px;border-radius:999px;transition:opacity .6s;pointer-events:none;white-space:nowrap}
+.hint.gone{opacity:0}
+.hero-facts{position:absolute;left:max(4vw,20px);bottom:28px;z-index:6;color:var(--ink);font-size:15px;line-height:1.4;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);padding:12px 18px;border-radius:16px;max-width:280px}
+.hero-facts b{font:600 16px var(--sans)}
+@media(max-width:760px){.hero-facts{display:none}.knob{top:74%}.hero-text{top:46%;transform:translateY(-50%)}}
+.caustic{animation:drift 9s linear infinite}
+.beam{transform-origin:1120px 780px;animation:sway 6s ease-in-out infinite alternate}
+.beam.b2{animation-delay:-3s}
+.bulb{animation:twinkle 2.4s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translateX(-120px)}}
+@keyframes sway{from{transform:rotate(-14deg)}to{transform:rotate(14deg)}}
+@keyframes twinkle{from{opacity:.55}to{opacity:1}}
+
+/* LETTER */
+.letter{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(40px,7vw,120px);align-items:start}
+.letter-body{font:400 clamp(18px,1.5vw,21px)/1.7 var(--sans);columns:1}
+.letter-body p+p{margin-top:1.1em}
+.letter-body p:first-child::first-letter{float:left;font:400 5.4em/.8 var(--serif);margin:.06em .12em 0 0;color:var(--accent)}
+.sign{font:700 40px var(--hand);color:var(--accent);margin-top:26px;transform:rotate(-3deg);display:inline-block}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:40px;padding-top:26px;border-top:1px solid var(--line);font-size:16px;color:var(--muted)}
+.facts b{font:400 28px var(--serif);color:var(--ink);margin-right:6px}
+@media(max-width:860px){.letter{grid-template-columns:1fr}}
+
+/* MOOD PICKER */
+.mood{background:var(--paper)}
+.mood-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,100px);align-items:start}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.pill{min-height:50px;padding:0 22px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font:500 16px var(--sans);color:var(--ink);cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.pill:hover{border-color:var(--accent)}
+.pill[aria-selected=true]{background:var(--blue);color:#fff;border-color:var(--blue)}
+.plan{background:var(--surface);border-radius:28px;padding:clamp(26px,4vw,52px);box-shadow:0 40px 80px -50px rgba(11,33,64,.35);min-height:440px}
+.plan h3{font:italic 400 clamp(30px,3vw,40px) var(--serif);margin-bottom:24px}
+.plan ol{list-style:none;margin:0;padding:0}
+.plan li{display:grid;grid-template-columns:5.2em minmax(0,1fr);gap:18px;padding:18px 0;border-top:1px solid var(--line);opacity:0;transform:translateY(14px);animation:in .6s var(--ease) forwards}
+.plan li time{font:400 30px/1 var(--serif);font-variant-numeric:lining-nums;color:var(--accent);white-space:nowrap}
+.plan li b{display:block;font-weight:500}
+.plan li span{color:var(--muted);font-size:16px}
+@keyframes in{to{opacity:1;transform:none}}
+@media(max-width:860px){.mood-grid{grid-template-columns:1fr}.plan{min-height:0}}
+@media(max-width:420px){.plan li{grid-template-columns:1fr;gap:6px}}
+
+/* ROOMS — key fobs */
+.rooms{display:grid;gap:clamp(60px,8vw,110px);margin-top:clamp(50px,7vw,90px)}
+.room{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(30px,5vw,80px);align-items:center}
+.room:nth-child(2){grid-template-columns:minmax(0,1fr) 240px}
+.room:nth-child(2) .fob-wrap{order:2}
+.fob-wrap{display:grid;place-items:center;padding-top:50px}
+.fob{position:relative;width:150px;height:250px;border-radius:75px 75px 34px 34px/70px 70px 34px 34px;background:linear-gradient(150deg,#2a7fd0,var(--blue) 45%,var(--blue-d));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;transform-origin:50% -34px;transition:transform 1s var(--ease);box-shadow:inset 0 2px 0 rgba(255,255,255,.35),0 30px 40px -24px rgba(11,33,64,.6)}
+.fob.lemon{background:linear-gradient(150deg,#fbe27a,var(--lemon) 45%,#d9b21c);color:#0b2140}
+.fob::before{content:"";position:absolute;top:22px;width:20px;height:20px;border-radius:50%;background:var(--bg);box-shadow:inset 0 2px 4px rgba(0,0,0,.3)}
+.fob::after{content:"";position:absolute;top:-34px;width:46px;height:46px;border-radius:50%;border:3px solid #b8c3d1;border-bottom-color:#8d9bae}
+.fob small{font:500 14px var(--sans);opacity:.9}
+.fob strong{font:400 40px/1 var(--serif)}
+.fob em{font:500 13px var(--sans);font-style:normal;opacity:.8}
+.room:hover .fob{animation:swing 1.6s var(--ease)}
+@keyframes swing{0%{transform:rotate(0)}20%{transform:rotate(9deg)}45%{transform:rotate(-6deg)}70%{transform:rotate(3deg)}100%{transform:rotate(0)}}
+.room h3{font-size:clamp(36px,4vw,54px);margin-bottom:16px}
+.room h3 i{color:var(--accent)}
+.feat{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}
+.feat li{padding:12px 0;border-top:1px solid var(--line);font-size:16px;display:flex;gap:10px;align-items:baseline}
+.feat li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;translate:0 -2px}
+@media(max-width:760px){.room,.room:nth-child(2){grid-template-columns:1fr}.room:nth-child(2) .fob-wrap{order:0}.feat{grid-template-columns:1fr}}
+
+/* EVENTS — posters */
+.events{background:var(--night);color:#fff;overflow:hidden}
+.events .eyebrow{color:var(--lemon)}
+.events .lead{color:#aebbd3}
+.posters{display:flex;justify-content:center;margin-top:clamp(50px,7vw,90px);padding:20px 0 40px}
+.poster{flex:0 0 clamp(250px,26vw,330px);aspect-ratio:3/4;border-radius:6px;padding:26px;display:flex;flex-direction:column;position:relative;box-shadow:0 40px 60px -30px rgba(0,0,0,.7);transition:transform .7s var(--ease);text-decoration:none;overflow:hidden}
+.poster:nth-child(1){transform:rotate(-7deg) translateY(20px);margin-right:-30px;z-index:1}
+.poster:nth-child(2){transform:rotate(1deg);z-index:2}
+.poster:nth-child(3){transform:rotate(8deg) translateY(26px);margin-left:-30px;z-index:1}
+.poster:hover,.poster:focus-visible{transform:rotate(0) translateY(-24px) scale(1.04);z-index:3}
+.poster h3{font-size:clamp(46px,4.6vw,64px);line-height:.92;margin-top:auto}
+.poster p{font-size:15px;margin-top:14px;line-height:1.45}
+.poster .top{display:flex;justify-content:space-between;font:500 14px var(--sans)}
+.p-pool{background:var(--lemon);color:var(--blue-d);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='24'%3E%3Cpath d='M0 12q10-10 20 0t20 0 20 0 20 0' fill='none' stroke='%230d5eaf' stroke-opacity='.35' stroke-width='2.5'/%3E%3C/svg%3E")}
+.p-pool h3{font-style:italic}
+.p-greek{--accent:#0d5eaf;background:#fff;color:var(--blue);border:14px solid #fff;outline:2px solid var(--blue);outline-offset:-10px}
+.p-greek .meander{position:absolute;left:0;right:0}
+.p-greek .meander.t{top:14px}.p-greek .meander.b{bottom:14px;transform:scaleY(-1)}
+.p-greek .opa{font:700 58px/1 var(--hand);color:var(--ink);transform:rotate(-8deg);margin-top:40px}
+.p-greek h3{margin-top:auto;margin-bottom:28px}
+.p-theme{background:radial-gradient(circle at 74% 24%,var(--lemon) 0 40px,rgba(244,208,63,.25) 41px 60px,transparent 61px),radial-gradient(1.5px 1.5px at 20% 30%,#fff 50%,transparent),radial-gradient(1.5px 1.5px at 40% 12%,#fff 50%,transparent),radial-gradient(1.5px 1.5px at 60% 44%,#fff 50%,transparent),radial-gradient(1.5px 1.5px at 12% 56%,#fff 50%,transparent),radial-gradient(1.5px 1.5px at 88% 52%,#fff 50%,transparent),linear-gradient(#183a78,#0a1a36);color:#fff}
+.p-theme h3{font-style:italic}
+.pager{display:none}
+@media(max-width:860px),(pointer:coarse){
+  .posters{justify-content:flex-start;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;gap:14px;padding:24px calc((100vw - min(76vw,340px))/2) 34px;margin-inline:calc(-1*max(5vw,20px));-webkit-overflow-scrolling:touch}
+  .posters::-webkit-scrollbar{display:none}
+  .poster,.poster:nth-child(n){flex:0 0 min(76vw,340px);margin:0;scroll-snap-align:center;scroll-snap-stop:always;transform:scale(.9) rotate(var(--tilt,0deg));opacity:.55;transition:transform .5s var(--ease),opacity .5s}
+  .poster:nth-child(1){--tilt:-3deg}.poster:nth-child(3){--tilt:3deg}
+  .poster.active,.poster.active:hover{transform:none;opacity:1}
+  .pager{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:4px}
+  .pager button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer}
+  .pager button:disabled{opacity:.3;cursor:default}
+  .pager button svg{width:18px;height:18px}
+  .pager .prev svg{transform:scaleX(-1)}
+  .dots{display:flex;gap:8px}
+  .dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.3);transition:width .4s var(--ease),background .4s}
+  .dots i.on{width:26px;background:var(--lemon)}
+}
+
+/* DINE — menu card */
+.dine{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,110px);align-items:center}
+.menu-card{background:#fff;padding:14px;box-shadow:0 50px 80px -50px rgba(11,33,64,.5);transform:rotate(-2deg);transition:transform .8s var(--ease)}
+.menu-card:hover{transform:rotate(0)}
+.menu-in{border:1px solid var(--blue);outline:1px solid var(--blue);outline-offset:-6px;padding:clamp(30px,4vw,52px) clamp(22px,3vw,44px);text-align:center;color:var(--blue-d)}
+.menu-in h3{font:italic 400 clamp(36px,3.6vw,48px) var(--serif)}
+.menu-in .sub{font-size:14px;margin:10px 0 30px;color:var(--muted)}
+.mi{display:flex;align-items:baseline;gap:10px;padding:10px 0;text-align:left}
+.mi b{font:600 17px var(--sans);color:var(--ink);white-space:nowrap}
+.mi i{flex:1;border-bottom:2px dotted rgba(13,94,175,.35);translate:0 -5px}
+.mi span{font-size:16px;color:var(--muted);text-align:right}
+.menu-in .meander{margin-top:30px}
+@media(max-width:860px){.dine{grid-template-columns:1fr}.mi{flex-wrap:wrap}.mi i{display:none}.mi span{text-align:left;width:100%}}
+
+/* FACILITIES — inline list */
+.fac{background:var(--paper)}
+.fac-list{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px}
+.fac-list span{display:inline-flex;align-items:center;gap:12px;padding:14px 22px;border-radius:999px;background:var(--surface);font-size:17px;border:1px solid var(--line)}
+.fac-list svg{width:22px;height:22px;color:var(--accent)}
+
+/* POSTCARD */
+.pc-stage{perspective:1400px;margin-top:clamp(50px,7vw,80px)}
+.postcard{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#fffdf8;border-radius:8px;box-shadow:0 60px 90px -50px rgba(11,33,64,.55);transform-style:preserve-3d;transition:transform .2s;max-width:1080px;margin:0 auto;overflow:hidden}
+.pc-map{position:relative;background:var(--blue);min-height:460px}
+.pc-map svg{position:absolute;inset:0;width:100%;height:100%}
+.pc-air{position:absolute;top:18px;left:18px;z-index:1;background:#fff;color:var(--blue-d);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px}
+.pc-back{position:relative;padding:clamp(26px,4vw,50px);border-left:1px dashed rgba(11,33,64,.25)}
+.stamp{position:absolute;top:26px;right:26px;width:86px;height:104px;background:var(--blue);padding:7px;-webkit-mask:radial-gradient(circle 5px at 5px 5px,transparent 98%,#000) -5px -5px/12px 12px;mask:radial-gradient(circle 5px at 5px 5px,transparent 98%,#000) -5px -5px/12px 12px}
+.stamp div{height:100%;background:radial-gradient(circle at 50% 42%,var(--lemon) 0 18px,transparent 19px),linear-gradient(#bfe3f5 0 62%,var(--blue) 62%);display:flex;align-items:flex-end;justify-content:center;font:600 11px var(--sans);color:#fff;padding-bottom:4px}
+.postmark{position:absolute;top:44px;right:92px;width:110px;height:110px;opacity:.55;transform:rotate(-14deg)}
+.note{font:italic 400 clamp(26px,2.4vw,32px)/1.25 var(--serif);color:var(--blue-d);margin-top:120px;max-width:22ch}
+.addr{margin-top:28px;display:grid}
+.addr div{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid rgba(11,33,64,.22);padding:10px 0;font-size:16px}
+.addr b{font:600 17px/1.4 var(--sans);color:var(--blue-d);white-space:nowrap}
+.pc-foot{margin-top:22px;font-size:15px;color:var(--muted)}
+@media(max-width:860px){.postcard{grid-template-columns:1fr}.pc-map{min-height:320px}.pc-back{border-left:0;border-top:1px dashed rgba(11,33,64,.25)}.note{margin-top:110px}}
+
+/* REVIEW */
+.review{background:var(--blue);color:#fff;text-align:center}
+.score{font:italic 400 clamp(110px,19vw,260px)/.85 var(--serif);letter-spacing:-.04em}
+.score small{font-size:.3em;font-style:normal;opacity:.7;letter-spacing:0}
+.review .src{opacity:.85;font-size:16px;margin-top:16px}
+.review blockquote{font:400 clamp(30px,4vw,54px)/1.12 var(--serif);margin:56px auto 14px;max-width:20ch}
+.review .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:46px}
+.review .btn-line{color:#fff}
+
+/* FOOTER */
+footer{padding:0 max(5vw,20px) 30px;background:var(--bg)}
+footer .meander{margin:0 calc(-1*max(5vw,20px))}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-top:clamp(60px,8vw,100px)}
+.foot .logo{margin-bottom:18px}.foot .logo img{height:clamp(84px,9vw,120px)}
+.foot h4{font:600 15px var(--sans);margin:0 0 14px;color:var(--accent)}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:16px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--accent)}
+.legal{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+@media(max-width:860px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
+
+/* BOOKING DRAWER */
+dialog.drawer{position:fixed;inset:0 0 0 auto;margin:0;height:100dvh;max-height:none;width:min(480px,100%);border:0;padding:0;background:var(--bg);color:var(--ink);box-shadow:-30px 0 80px -30px rgba(11,33,64,.4)}
+dialog.drawer[open]{animation:slide .5s var(--ease)}
+dialog::backdrop{background:rgba(10,26,54,.45);backdrop-filter:blur(4px)}
+@keyframes slide{from{transform:translateX(100%)}}
+.dr{padding:34px clamp(22px,5vw,40px);display:flex;flex-direction:column;gap:20px;min-height:100%}
+.dr-top{display:flex;justify-content:space-between;align-items:center}
+.dr h2{font-size:44px}
+.x{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-size:22px;cursor:pointer;color:var(--ink)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field span{font-size:14px;font-weight:500;color:var(--muted)}
+.field input,.field select{min-height:54px;border:1px solid var(--line);border-radius:14px;padding:0 16px;font:400 17px var(--sans);color:var(--ink);background:var(--surface);width:100%}
+.field input:focus,.field select:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px rgba(13,94,175,.15)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dr .btn{width:100%}
+.msg{font-size:15px;color:var(--muted);min-height:1.5em}
+.msg.err{color:#b3261e;font-weight:500}
+.dr-foot{margin-top:auto;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.dr-foot a{color:var(--accent);font-weight:500}
+
+/* MOBILE BAR */
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:none;gap:8px;transform:translateY(140%);transition:transform .5s var(--ease)}
+.mbar.on{transform:none}
+.mbar .btn{flex:1;min-height:56px;box-shadow:0 14px 30px -14px rgba(11,33,64,.6)}
+.mbar .call{flex:0 0 56px;padding:0;background:#fff;color:var(--blue)}
+@media(max-width:860px){.mbar{display:flex}footer{padding-bottom:100px}}
+
+[data-r]{opacity:0;transform:translateY(36px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+[data-r].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}[data-r],.plan li{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* ---------- POLISH LAYER ---------- */
+body::after{content:"";position:fixed;inset:0;z-index:300;pointer-events:none;opacity:.05;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+html[data-theme=dark] body::after{opacity:.07}
+.loader{position:fixed;inset:0;z-index:400;background:var(--bg);display:grid;place-items:center;align-content:center;gap:26px;transition:clip-path 1.1s cubic-bezier(.77,0,.18,1);clip-path:inset(0 0 0 0);animation:loaderSafe 0s 5s forwards}
+.loader img{width:min(260px,60vw);height:auto;animation:breathe 1.6s ease-in-out infinite alternate}
+.loader .bar{width:min(220px,50vw);height:2px;background:var(--line);overflow:hidden;border-radius:2px}
+.loader .bar i{display:block;height:100%;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.loader.done{clip-path:inset(0 0 100% 0)}
+@keyframes loaderSafe{to{visibility:hidden}}
+@keyframes breathe{from{opacity:.65;transform:scale(.985)}to{opacity:1;transform:scale(1)}}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
+.progress{position:fixed;top:0;left:0;right:0;height:2px;background:var(--accent);transform-origin:left;transform:scaleX(0);z-index:70}
+.split-t{display:block}
+.split-t .m{display:inline-block;overflow:hidden;padding:0 .02em .12em;margin-bottom:-.12em;vertical-align:top}
+.split-t .c{display:inline-block;transform:translateY(110%) rotate(6deg);transition:transform 1.3s cubic-bezier(.19,1,.22,1);transition-delay:calc(var(--i)*55ms + .1s)}
+.hero .tagline{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease) .75s,transform 1s var(--ease) .75s}
+body.ready .split-t .c{transform:none}
+body.ready .hero .tagline{opacity:1;transform:none}
+.hero-text{will-change:transform,opacity}
+.tw{animation:twinkle 2.6s ease-in-out infinite alternate}
+.sunc{transform-origin:1270px 200px;animation:sunpulse 5s ease-in-out infinite alternate}
+@keyframes sunpulse{to{transform:scale(1.06)}}
+.pl{transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+/* headline word reveal */
+.rw{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.rw>span{display:inline-block;transform:translateY(105%);transition:transform 1.1s cubic-bezier(.19,1,.22,1);transition-delay:calc(var(--i)*60ms)}
+.rv.in .rw>span{transform:none}
+/* nav link underline */
+.nav ul a{position:relative}
+.nav ul a::after{content:"";position:absolute;left:13px;right:13px;bottom:8px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav ul a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav ul a:hover{background:transparent}
+/* buttons: shine + arrow */
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn-blue::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s var(--ease)}
+.btn-blue:hover::before{transform:translateX(120%)}
+.btn svg{transition:transform .45s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-line::before{content:"";position:absolute;inset:0;z-index:-1;background:currentColor;opacity:.08;transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease)}
+.btn-line:hover::before{transform:scaleY(1)}
+.mag{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+/* cursor tip */
+.tip{position:fixed;left:0;top:0;z-index:250;pointer-events:none;display:flex;align-items:center;gap:8px;padding:10px 16px 10px 12px;border-radius:999px;background:var(--ink);color:var(--bg);font:500 14px var(--sans);opacity:0;transform:translate(-50%,-50%) scale(.6);transition:opacity .3s,transform .4s var(--ease)}
+.tip svg{width:16px;height:16px}
+.tip.drag svg{transform:scaleX(-1)}
+.tip.drag::after{content:"";width:16px;height:16px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center/contain no-repeat;order:3}
+.tip.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+@media(pointer:coarse),(max-width:760px){.tip{display:none}}
+@media(pointer:fine) and (min-width:761px){.hint{display:none}}
+/* poster glare */
+.poster .glare{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.35),transparent 55%);opacity:0;transition:opacity .4s;mix-blend-mode:soft-light}
+.poster:hover .glare{opacity:1}
+.fob{will-change:transform}
+.room:hover .fob{animation:none}
+/* facilities hover */
+.fac-list span{transition:transform .5s var(--ease),border-color .3s,background-color .5s}
+.fac-list span:hover{transform:translateY(-4px);border-color:var(--accent)}
+.fac-list span:hover svg{animation:wiggle .6s var(--ease)}
+@keyframes wiggle{30%{transform:rotate(-12deg) scale(1.1)}60%{transform:rotate(8deg)}}
+/* plan rows */
+.plan li{transition:background .3s}
+.plan li:hover time{font-style:italic}
+/* stamp wobble */
+.postcard:hover .stamp{transform:rotate(4deg)}
+.stamp{transition:transform .6s var(--ease)}
+@media(prefers-reduced-motion:reduce){.loader{display:none}.split-t .c,.rw>span{transform:none}.hero .tagline{opacity:1;transform:none}}
+</style>
+<script>try{const t=localStorage.getItem("morfeas-theme");document.documentElement.dataset.theme=t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="loader" id="loader" aria-hidden="true"><img class="lg-light" src="img/morfeas-logo.png" alt=""><img class="lg-dark" src="img/morfeas-logo-dark.png" alt=""><span class="bar"><i id="bar"></i></span></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="tip" id="tip" aria-hidden="true"><svg><use href="#i-arrow"/></svg><span id="tipT">Drag</span></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-pool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 17c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 21c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 14V5a2 2 0 0 1 4 0M16 14V5a2 2 0 0 1 4 0M8 8h8M8 11.5h8"/></symbol>
+  <symbol id="i-spa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 14h18v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4zM8 10c0-2 1.5-2 1.5-4S8 4 8 4M12 10c0-2 1.5-2 1.5-4S12 4 12 4M16 10c0-2 1.5-2 1.5-4S16 4 16 4"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3h16l-8 9zM12 12v9M8 21h8"/></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="13" r="7"/><circle cx="12" cy="13" r="3.5"/><path d="M2 3v6a2 2 0 0 0 2 2M4 3v18M22 3c-1.5 0-2.5 2-2.5 5s1 3 2.5 3v10"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2M5 12h14"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="15" r="5"/><path d="M11.5 11.5 21 2M17 6l3 3M15 8l2 2"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v20M4 7l16 10M20 7 4 17M9 4l3 2 3-2M9 20l3-2 3 2"/></symbol>
+</svg>
+
+<header class="nav">
+  <a class="logo" href="#top" aria-label="Morfeas Hotel, home"><img class="lg-light" src="img/morfeas-logo.png" alt="Morfeas Hotel — God of Dreams" width="695" height="250"><img class="lg-dark" src="img/morfeas-logo-dark.png" alt="Morfeas Hotel — God of Dreams" width="695" height="250"></a>
+  <nav aria-label="Main"><ul>
+    <li><a href="#top">Home</a></li><li><a href="#stay">Accommodations</a></li><li><a href="#dine">Food &amp; Drinks</a></li><li><a href="#events">Events</a></li><li><a href="#facilities">Facilities</a></li><li><a href="#contact">Contact us</a></li>
+  </ul></nav>
+  <span class="clock"><svg id="clockIcon"><use href="#i-sun"/></svg><span id="clock">Kavos</span></span>
+  <button class="theme" id="theme" type="button" aria-label="Switch to dark mode"><svg><use href="#i-moon"/></svg></button>
+  <button class="btn btn-blue" type="button" data-book><span class="long">Online Reservation</span><span class="short">Book</span></button>
+  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <a href="#top">Home</a><a href="#stay">Accommodations</a><a href="#dine">Food &amp; Drinks</a><a href="#events">Events</a><a href="#facilities">Facilities</a><a href="#contact">Contact us</a>
+  <button class="btn btn-blue" type="button" data-book style="align-self:flex-start;margin-top:22px">Online Reservation</button>
+  <div class="meander"></div>
+</div>
+
+<main id="main">
+<section class="hero" id="top" aria-label="Morfeas Hotel by day and by night">
+  <div class="layer day" id="dayL"><div class="hero-text"><h1 class="split-t" aria-label="Morfeas">Morfeas</h1><p class="tagline">Dream by day.</p></div></div>
+  <div class="layer night" id="nightL" aria-hidden="true"><div class="hero-text"><p class="h1" style="font:400 clamp(84px,19vw,300px)/.85 var(--serif);letter-spacing:-.04em" class="split-t">Morfeas</p><p class="tagline">Dance by night.</p></div></div>
+  <div class="handle" id="handle"><button class="knob" id="knob" role="slider" aria-label="Compare the hotel by day and by night" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><svg class="s"><use href="#i-sun"/></svg><svg class="m"><use href="#i-moon"/></svg></button></div>
+  <p class="hero-facts"><b>Kavos, Corfu</b><br>A family-run hotel &amp; apartments, a minute from the Ionian Sea.</p>
+  <p class="hint" id="hint">Drag to switch day and night</p>
+</section>
+
+<section class="band" aria-labelledby="l-t">
+  <div class="wrap letter">
+    <div>
+      <span class="eyebrow">A note from the family</span>
+      <h2 id="l-t" data-r>Named after the <i>god of dreams.</i></h2>
+    </div>
+    <div data-r>
+      <div class="letter-body">
+        <p>Morfeas is a family-run hotel at the southern tip of Corfu, a few minutes' walk from Kavos' famous main street and a minute from the Ionian Sea.</p>
+        <p>By day, it's the pool: loungers, cold drinks and our resident DJ. By night, it's dinner from our own kitchen, then the party — here or on the strip. Stay a week and you'll leave feeling like part of the family.</p>
+      </div>
+      <span class="sign">— The Morfeas family</span>
+      <div class="facts"><span><b>55</b>rooms &amp; apartments</span><span><b>1 min</b>to the sea</span><span><b>30 km</b>from the airport</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band mood" aria-labelledby="mo-t">
+  <div class="wrap mood-grid">
+    <div>
+      <span class="eyebrow">Plan your day</span>
+      <h2 id="mo-t" data-r>How do <i>you</i> holiday?</h2>
+      <p class="lead" style="margin-top:20px" data-r>Pick a mood and we'll sketch out a day at Morfeas.</p>
+      <div class="pills" role="tablist" aria-label="Holiday mood" id="pills"></div>
+    </div>
+    <div class="plan" id="plan" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="band" id="stay" aria-labelledby="s-t">
+  <div class="wrap">
+    <span class="eyebrow">Accommodations</span>
+    <h2 id="s-t" data-r>Your key to <i>Kavos.</i></h2>
+    <div class="rooms">
+      <article class="room" data-r>
+        <div class="fob-wrap"><div class="fob" aria-hidden="true"><small>Morfeas</small><strong>Rooms</strong><em>Kavos · Corfu</em></div></div>
+        <div>
+          <h3>Hotel <i>rooms</i></h3>
+          <p class="lead">Double or twin, bright and cool, each with its own balcony. A calm base for long pool days and longer nights.</p>
+          <ul class="feat"><li>Private balcony</li><li>Air conditioning</li><li>LED television</li><li>In-room safe</li><li>Hair dryer</li><li>Shower room</li></ul>
+          <button class="btn btn-blue" style="margin-top:34px" type="button" data-book>Check dates</button>
+        </div>
+      </article>
+      <article class="room" data-r>
+        <div class="fob-wrap"><div class="fob lemon" aria-hidden="true"><small>Morfeas</small><strong>Apts</strong><em>Kavos · Corfu</em></div></div>
+        <div>
+          <h3><i>Apartments</i></h3>
+          <p class="lead">More room to spread out — made for friends and families travelling together.</p>
+          <ul class="feat"><li>Private balcony</li><li>Air conditioning</li><li>Cots on request</li><li>Free parking on site</li></ul>
+          <button class="btn btn-blue" style="margin-top:34px" type="button" data-book>Check dates</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band events" id="events" aria-labelledby="e-t">
+  <div class="wrap">
+    <span class="eyebrow">Events</span>
+    <h2 id="e-t" data-r>Three nights <i>to remember.</i></h2>
+    <p class="lead" style="margin-top:20px" data-r>When the sun goes down, Morfeas turns up. Ask at reception what's on during your stay.</p>
+    <div class="posters">
+      <a class="poster p-pool" href="#" data-book><div class="top"><span>Morfeas</span><span>Kavos</span></div><h3>Pool<br>Party</h3><p>The biggest pool party in Kavos. Resident DJ, fresh cocktails, bring your friends.</p></a>
+      <a class="poster p-greek" href="#" data-book><div class="meander t"></div><span class="opa">Opa!</span><h3>Greek<br><i>Night</i></h3><div class="meander b"></div></a>
+      <a class="poster p-theme" href="#" data-book><div class="top"><span>Morfeas</span><span>Kavos</span></div><h3>Theme<br>Nights</h3><p>Dress up, turn up. A different theme, the same great crowd.</p></a>
+    </div>
+    <div class="pager" aria-label="Event posters"><button class="prev" type="button" aria-label="Previous event"><svg><use href="#i-arrow"/></svg></button><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><button class="next" type="button" aria-label="Next event"><svg><use href="#i-arrow"/></svg></button></div>
+  </div>
+</section>
+
+<section class="band" id="dine" aria-labelledby="d-t">
+  <div class="wrap dine">
+    <div>
+      <span class="eyebrow">Food &amp; Drinks</span>
+      <h2 id="d-t" data-r>Corfu, <i>on a plate.</i></h2>
+      <p class="lead" style="margin-top:20px" data-r>Our chef cooks with produce from Corfu and the surrounding area — proper Greek food to set you up for the night ahead.</p>
+      <a class="btn btn-line" style="margin-top:34px" id="menuLink" href="#">See our menus <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="menu-card" data-r>
+      <div class="menu-in">
+        <h3>Restaurant Morfeas</h3>
+        <p class="sub">Kavos · Corfu</p>
+        <div class="mi"><b>Breakfast</b><i></i><span>to start the day</span></div>
+        <div class="mi"><b>Pool bar</b><i></i><span>fresh cocktails, cold drinks</span></div>
+        <div class="mi"><b>Dinner</b><i></i><span>Greek cooking, local produce</span></div>
+        <div class="mi"><b>Music lounge</b><i></i><span>two bars, late</span></div>
+        <div class="meander"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band fac" id="facilities" aria-labelledby="f-t">
+  <div class="wrap">
+    <span class="eyebrow">Facilities</span>
+    <h2 id="f-t" data-r>Everything you need, <i>nothing you don't.</i></h2>
+    <div class="fac-list" id="fac"></div>
+  </div>
+</section>
+
+<section class="band" id="contact" aria-labelledby="p-t">
+  <div class="wrap">
+    <span class="eyebrow">Contact us</span>
+    <h2 id="p-t" data-r>Wish you <i>were here.</i></h2>
+    <div class="pc-stage">
+      <div class="postcard" id="postcard" data-r>
+        <div class="pc-map" role="img" aria-label="Map of southern Corfu showing Morfeas Hotel in Kavos">
+          <span class="pc-air">↑ Corfu airport · 30 km</span>
+          <svg viewBox="0 0 500 460" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+            <defs><pattern id="wv" width="26" height="13" patternUnits="userSpaceOnUse"><path d="M0 7q6.5-6 13 0t13 0" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.3"/></pattern></defs>
+            <rect width="500" height="460" fill="url(#wv)"/>
+            <path d="M-20 -20 L190 -20 C215 50 175 110 220 165 C258 215 315 238 375 280 C420 310 450 350 462 385 C470 410 445 418 420 405 C370 382 335 382 292 370 C238 353 188 312 138 290 C88 268 40 258 -20 252 Z" fill="#fffdf8"/>
+            <ellipse cx="258" cy="315" rx="22" ry="10" fill="#bfe3f5"/>
+            <path d="M70 40 C150 130 250 235 410 370" fill="none" stroke="#0b2140" stroke-opacity=".3" stroke-width="2" stroke-dasharray="5 7"/>
+            <g font-family="Jost,sans-serif" font-size="15" fill="#53657e"><text x="186" y="248">Lefkimmi</text><text x="236" y="344">Lake Tsilaria</text></g>
+            <circle cx="410" cy="370" r="14" fill="#f4d03f" stroke="#0a3f78" stroke-width="3"/>
+            <text x="300" y="440" font-family="DM Serif Display,serif" font-style="italic" font-size="26" fill="#fff">Ionian Sea</text>
+            <text x="352" y="350" font-family="Caveat,cursive" font-weight="700" font-size="30" fill="#0a3f78">we're here!</text>
+          </svg>
+        </div>
+        <div class="pc-back">
+          <div class="stamp" aria-hidden="true"><div>Kerkyra</div></div>
+          <svg class="postmark" viewBox="0 0 110 110" aria-hidden="true"><defs><path id="pm" d="M55 55m-40 0a40 40 0 1 1 80 0a40 40 0 1 1-80 0"/></defs><circle cx="55" cy="55" r="50" fill="none" stroke="#0a3f78" stroke-width="2"/><circle cx="55" cy="55" r="30" fill="none" stroke="#0a3f78" stroke-width="1.5"/><text font-family="Jost,sans-serif" font-size="11" fill="#0a3f78" letter-spacing="2"><textPath href="#pm">KAVOS · CORFU · 49080 ·</textPath></text><text x="55" y="60" text-anchor="middle" font-family="DM Serif Display,serif" font-style="italic" font-size="14" fill="#0a3f78">Greece</text></svg>
+          <p class="note">Sea's a minute away, the strip's round the corner. Come and stay!</p>
+          <div class="addr">
+            <div>Ionian Sea<b>1 min walk</b></div>
+            <div>Kavos centre &amp; the strip<b>0.2 km</b></div>
+            <div>Kavos Beach<b>1.2 km</b></div>
+            <div>Lefkimmi port<b>5 km</b></div>
+            <div>Corfu airport<b>30 km</b></div>
+          </div>
+          <p class="pc-foot">Morfeas Hotel · Kavos, Corfu 49080, Greece<br>Tel <a href="tel:+302662061300" style="color:var(--accent);font-weight:600">+30 26620 61300</a> · Fax +30 26620 61298</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px"><button class="btn btn-blue" type="button" data-book>Online Reservation</button><a class="btn btn-line" href="https://www.facebook.com/MorfeasHotelKavos">Facebook</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band review" aria-labelledby="r-t">
+  <div class="wrap">
+    <h2 class="score" id="r-t"><span aria-hidden="true">4.6</span><small>/5</small><span style="position:absolute;left:-9999px">Rated 4.6 out of 5</span></h2>
+    <p class="src">Average from 1,340 guest reviews on easyJet holidays</p>
+    <blockquote>“Quite simply the best place to go for a holiday.”</blockquote>
+    <p class="src">— The Morfeas family</p>
+    <div class="row">
+      <button class="btn btn-white" type="button" data-book>Check availability <svg><use href="#i-arrow"/></svg></button>
+      <a class="btn btn-line" href="tel:+302662061300"><svg><use href="#i-phone"/></svg>+30 26620 61300</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="meander"></div>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="#top" aria-label="Morfeas Hotel, back to top"><img class="lg-light" src="img/morfeas-logo.png" alt="Morfeas Hotel — God of Dreams" width="695" height="250"><img class="lg-dark" src="img/morfeas-logo-dark.png" alt="Morfeas Hotel — God of Dreams" width="695" height="250"></a><p style="color:var(--muted);max-width:32ch">Family-run hotel &amp; apartments in Kavos, Corfu. Dream by day, dance by night.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="#stay">Accommodations</a></li><li><a href="#dine">Food &amp; Drinks</a></li><li><a href="#events">Events</a></li><li><a href="#facilities">Facilities</a></li><li><a href="#contact">Contact us</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+302662061300">+30 26620 61300</a></li><li>Fax +30 26620 61298</li><li>Kavos, Corfu 49080, Greece</li><li><a href="#" data-book>Online Reservation</a></li></ul></div>
+      <div><h4>Follow</h4><ul><li><a href="https://www.facebook.com/MorfeasHotelKavos">Facebook</a></li><li><a href="https://youtu.be/7_6HNqQrepw">YouTube</a></li><li><a href="https://www.tripadvisor.com/Hotel_Review-d500098">Tripadvisor</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span id="yr">2026</span> Morfeas Hotel · <a href="#">Δημοσιεύσεις - Ισολογισμοί</a></span><a href="https://wellyington.github.io/">Website by Wellyington</a></div>
+  </div>
+</footer>
+
+<dialog class="drawer" id="drawer" aria-labelledby="b-t">
+  <form class="dr" id="bookForm" novalidate>
+    <div class="dr-top"><span class="eyebrow" style="margin:0">Book direct</span><button class="x" type="button" id="close" aria-label="Close">×</button></div>
+    <h2 id="b-t">Your <i>stay</i></h2>
+    <div class="two">
+      <label class="field"><span>Check in</span><input type="date" id="in" required></label>
+      <label class="field"><span>Check out</span><input type="date" id="out" required></label>
+    </div>
+    <label class="field"><span>Stay in</span><select id="type"><option>Hotel room</option><option>Apartment</option><option>No preference</option></select></label>
+    <label class="field"><span>Guests</span><select id="guests"><option>1 adult</option><option selected>2 adults</option><option>3 adults</option><option>4 adults</option><option>2 adults + 1 child</option><option>2 adults + 2 children</option></select></label>
+    <p class="msg" id="msg" role="status">Best rate guaranteed when you book with us directly.</p>
+    <button class="btn btn-blue" type="submit">Check availability <svg><use href="#i-arrow"/></svg></button>
+    <div class="dr-foot">Prefer to talk? Call reception on <a href="tel:+302662061300">+30 26620 61300</a></div>
+  </form>
+</dialog>
+
+<div class="mbar" id="mbar">
+  <button class="btn btn-blue" type="button" data-book>Check availability</button>
+  <a class="btn call" href="tel:+302662061300" aria-label="Call the hotel, +30 26620 61300"><svg><use href="#i-phone"/></svg></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+{
+/* ---- Point these at the live booking engine and menus page ---- */
+const RESERVATION_URL = 'https://www.morfeashotel.com/';
+const MENUS_URL = 'https://www.morfeashotel.com/';
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('#menuLink').href = MENUS_URL; $('#yr').textContent = new Date().getFullYear();
+
+/* ---------- Illustrated scene, drawn twice: day and night ---------- */
+function scene(n){
+  const c = n ? {s1:'#0a1a36',s2:'#24427a',sea:'#0c2a58',seaL:'#2d4f8a',h1:'#14295a',h2:'#1c3670',wall:'#dfe6f1',wallS:'#b9c5d9',shut:'#0d5eaf',win:'#ffd56b',p1:'#35d0f0',p2:'#0b6fb6',deck:'#25314f',deckL:'#2f3d60',palm:'#081428',lng:'#c7d2e6',umb:'#3b5a91'}
+              : {s1:'#a9d8f2',s2:'#eef8fc',sea:'#0d5eaf',seaL:'#5b9ee0',h1:'#a5c0da',h2:'#c4d7ea',wall:'#ffffff',wallS:'#e4ebf3',shut:'#0d5eaf',win:'#0a3f78',p1:'#7fe0f5',p2:'#1d93d4',deck:'#f4ead8',deckL:'#e6d7bb',palm:'#1e6a4f',lng:'#ffffff',umb:'#0d5eaf'};
+  let win = '';
+  for(let r=0;r<3;r++) for(let k=0;k<4;k++){
+    const x = 120+k*110, y = 470+r*82, lit = n && (r*4+k)%3!==1;
+    win += `<rect x="${x}" y="${y}" width="56" height="54" fill="${n?(lit?c.win:'#1b2c4f'):c.win}"/>
+      <rect x="${x-12}" y="${y}" width="12" height="54" fill="${c.shut}"/><rect x="${x+56}" y="${y}" width="12" height="54" fill="${c.shut}"/>
+      <rect x="${x-20}" y="${y+54}" width="96" height="6" fill="${c.wallS}"/>
+      <path d="M${x-16} ${y+32}h88${[0,1,2,3,4,5,6,7,8].map(i=>`M${x-16+i*11} ${y+32}v22`).join('')}" stroke="${n?'#7d8db0':'#9fb2c8'}" stroke-width="2.5" fill="none"/>`;
+  }
+  let stars = '';
+  if(n){ let s = 7; const rnd = ()=> (s = (s*9301+49297)%233280)/233280; for(let i=0;i<70;i++) stars += `<circle class="${i%3?'':'tw'}" style="animation-delay:${-(i%7)*.6}s" cx="${rnd()*1600}" cy="${rnd()*420}" r="${rnd()*1.6+.4}" fill="#fff" opacity="${.4+rnd()*.6}"/>`; }
+  const fronds = [[-150,-30],[-120,40],[-60,-80],[20,-95],[90,-60],[140,10],[120,60]].map(([dx,dy])=>`<path d="M1460 440 q${dx*.36} ${dy*.16-48} ${dx*.8} ${dy*.8+32}" stroke="${c.palm}" stroke-width="18" stroke-linecap="round" fill="none"/>`).join('');
+  const segs = [[[560,450],[760,540],[960,470]],[[960,470],[1210,560],[1460,460]],[[1460,460],[1540,500],[1620,470]]];
+  const bulbs = n ? segs.flatMap(([a,b,d],si)=>Array.from({length:si===2?2:8},(_,i)=>{ const t=(i+.5)/(si===2?2:8), u=1-t; return [u*u*a[0]+2*u*t*b[0]+t*t*d[0], u*u*a[1]+2*u*t*b[1]+t*t*d[1]+7]; }))
+    .map(([bx,by],i)=>`<circle class="bulb" style="animation-delay:${-i*.37}s" cx="${bx}" cy="${by}" r="5.5" fill="#ffe08a" filter="url(#glow${n})"/>`).join('') : '';
+  return `<svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky${n}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c.s1}"/><stop offset="1" stop-color="${c.s2}"/></linearGradient>
+    <linearGradient id="pool${n}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c.p1}"/><stop offset="1" stop-color="${c.p2}"/></linearGradient>
+    <radialGradient id="halo${n}"><stop offset="0" stop-color="${n?'#ffffff':'#fff6c8'}" stop-opacity=".8"/><stop offset="1" stop-color="${n?'#ffffff':'#fff6c8'}" stop-opacity="0"/></radialGradient>
+    <filter id="glow${n}" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="pc${n}"><path d="M560 770 H1640 L1760 1000 H420 Z"/></clipPath>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky${n})"/>
+  <g class="pl" data-d="5">${stars}
+  <circle cx="1270" cy="200" r="${n?170:230}" fill="url(#halo${n})"/>
+  ${n ? `<mask id="mm"><rect width="1600" height="1000" fill="#fff"/><circle cx="1300" cy="182" r="56" fill="#000"/></mask><circle cx="1270" cy="200" r="62" fill="#f6f1df" mask="url(#mm)"/>`
+      : `<circle class="sunc" cx="1270" cy="200" r="78" fill="#f4d03f"/>`}</g>
+  <g class="pl" data-d="12">
+  <path d="M-60 540 C180 470 320 500 470 480 C640 455 760 505 930 470 C1100 440 1260 500 1660 460 V580 H-60Z" fill="${c.h2}"/>
+  <path d="M700 560 C860 520 1000 545 1140 520 C1290 495 1420 540 1660 520 V580 H700Z" fill="${c.h1}"/>
+  <rect x="-60" y="570" width="1720" height="130" fill="${c.sea}"/>
+  <g stroke="${c.seaL}" stroke-width="3" stroke-linecap="round" opacity=".7"><path d="M720 600h120M1020 615h170M1330 598h90M860 640h200M1240 655h140M680 680h90M1420 690h120"/></g>
+  ${n?`<path d="M1200 585 h140 M1215 605 h110 M1230 625 h80 M1245 645 h50" stroke="#f6f1df" stroke-width="3" opacity=".5" stroke-linecap="round"/>`:''}</g>
+  <g class="pl" data-d="22">
+    <rect x="40" y="430" width="520" height="290" fill="${c.wall}"/>
+    <rect x="40" y="430" width="520" height="18" fill="${c.wallS}"/>
+    <rect x="510" y="448" width="50" height="272" fill="${c.wallS}" opacity=".7"/>
+    ${win}
+  </g>
+  <rect y="700" width="1600" height="300" fill="${c.deck}"/>
+  <g stroke="${c.deckL}" stroke-width="2"><path d="M0 760H1600M0 830H1600M0 910H1600"/></g>
+  <g class="pl" data-d="30">
+  <path d="M1450 760 C1460 640 1440 540 1460 440" stroke="${n?'#0d1b33':'#8a6a48'}" stroke-width="18" fill="none" stroke-linecap="round"/>
+  ${fronds}
+  ${n?`<path d="M560 450 Q760 540 960 470 Q1210 560 1460 460 Q1540 500 1620 470" fill="none" stroke="#3a4a6c" stroke-width="2"/>${bulbs}`:''}</g>
+  <path d="M560 770 H1640 L1760 1000 H420 Z" fill="url(#pool${n})"/>
+  <g clip-path="url(#pc${n})"><g class="caustic" stroke="#fff" stroke-opacity="${n?.35:.5}" stroke-width="3" fill="none">
+    ${[800,850,905,965].map((y,i)=>`<path d="M300 ${y} ${Array.from({length:16},(_,k)=>`q30 ${i%2?-14:14} 60 0 t60 0`).join(' ')}"/>`).join('')}
+  </g></g>
+  <path d="M560 770 H1640 L1760 1000 M560 770 L420 1000" fill="none" stroke="${n?'#cfd8ea':'#fff'}" stroke-width="12"/>
+  ${n?`<g opacity=".1"><path class="beam" d="M1120 780 L1060 380 L1180 380Z" fill="#9fe7ff"/><path class="beam b2" d="M1120 780 L1060 380 L1180 380Z" fill="#ffffff"/></g>
+       <ellipse cx="1120" cy="880" rx="420" ry="70" fill="#7fe8ff" opacity=".18" filter="url(#glow${n})"/>`:''}
+  ${[[90,860],[230,880],[370,900]].map(([x,y])=>`<g><path d="M${x} ${y} l130 0 l20 -40 l-24 -8 l-16 32 l-110 0z" fill="${c.lng}" stroke="${n?'#8a97b4':'#d7dee8'}" stroke-width="2"/><path d="M${x+10} ${y}v26M${x+120} ${y}v26" stroke="${n?'#8a97b4':'#b9c4d2'}" stroke-width="4"/></g>`).join('')}
+  <path d="M300 800 V720" stroke="${n?'#8a97b4':'#9aa8ba'}" stroke-width="5"/>
+  <path d="M190 730 Q300 650 410 730Z" fill="${c.umb}"/><path d="M190 730 Q245 720 300 730 Q355 720 410 730" fill="none" stroke="${n?'#24427a':'#fff'}" stroke-width="3"/>
+</svg>`;
+}
+$('#dayL').insertAdjacentHTML('afterbegin', scene(0));
+$('#nightL').insertAdjacentHTML('afterbegin', scene(1));
+
+/* ---------- Day / night split ---------- */
+const hero = $('#top'), knob = $('#knob'), hint = $('#hint');
+const athensHour = () => +new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Athens',hour:'2-digit',hour12:false}).format(new Date());
+const isNight = () => { const h = athensHour(); return h>=20 || h<7; };
+const side = () => (document.documentElement.dataset.theme==='dark' || isNight()) ? 28 : 72;
+let x = 50, target = side(), dragging = false, touched = false, raf;
+const apply = v => { hero.style.setProperty('--x', v+'%'); knob.setAttribute('aria-valuenow', Math.round(v)); knob.setAttribute('aria-valuetext', v>60 ? 'Mostly day' : v<40 ? 'Mostly night' : 'Half day, half night'); };
+const loop = () => { x += (target-x)*.12; apply(x); if(Math.abs(target-x)>.05) raf = requestAnimationFrame(loop); };
+const go = v => { target = Math.max(0, Math.min(100, v)); cancelAnimationFrame(raf); reduce ? apply(x=target) : loop(); };
+const fromEvent = e => { const r = hero.getBoundingClientRect(); return (e.clientX - r.left)/r.width*100; };
+const dismiss = () => { if(!touched){ touched = true; hint.classList.add('gone'); } };
+hero.addEventListener('pointermove', e => { if(e.pointerType==='mouse' || dragging){ go(fromEvent(e)); dismiss(); } });
+hero.addEventListener('pointerdown', e => { dragging = true; go(fromEvent(e)); dismiss(); });
+addEventListener('pointerup', () => dragging = false);
+knob.addEventListener('keydown', e => { const step = e.shiftKey ? 20 : 5; if(e.key==='ArrowLeft'){ go(target-step); e.preventDefault(); dismiss(); } if(e.key==='ArrowRight'){ go(target+step); e.preventDefault(); dismiss(); } if(e.key==='Home') go(0); if(e.key==='End') go(100); });
+apply(50);
+const intro = () => { if(reduce){ go(target); return; } go(15); setTimeout(()=>go(85), 850); setTimeout(()=>go(side()), 1700); };
+window.__intro = intro;
+
+/* ---------- Light / dark ---------- */
+const root = document.documentElement, themeBtn = $('#theme');
+const paintTheme = () => { const dark = root.dataset.theme==='dark'; themeBtn.querySelector('use').setAttribute('href', dark ? '#i-sun' : '#i-moon'); themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode'); themeBtn.setAttribute('aria-pressed', dark); };
+paintTheme();
+themeBtn.addEventListener('click', () => {
+  root.dataset.theme = root.dataset.theme==='dark' ? 'light' : 'dark';
+  try{ localStorage.setItem('morfeas-theme', root.dataset.theme); }catch(e){}
+  paintTheme(); dismiss(); go(root.dataset.theme==='dark' ? 15 : 85);
+});
+
+/* ---------- Clock ---------- */
+const fmt = new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Athens',hour:'2-digit',minute:'2-digit'});
+const tick = () => { $('#clock').textContent = `Kavos ${fmt.format(new Date())}`; $('#clockIcon use').setAttribute('href', isNight() ? '#i-moon' : '#i-sun'); };
+tick(); setInterval(tick, 30000);
+
+/* ---------- Menu + mobile bar ---------- */
+const burger = $('#burger'), menu = $('#menu');
+const toggleMenu = open => { menu.classList.toggle('open', open); menu.setAttribute('aria-hidden', !open); burger.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : ''; };
+burger.addEventListener('click', () => toggleMenu(!menu.classList.contains('open')));
+menu.addEventListener('click', e => { if(e.target.closest('a,button')) toggleMenu(false); });
+addEventListener('keydown', e => { if(e.key==='Escape') toggleMenu(false); });
+const mbar = $('#mbar');
+addEventListener('scroll', () => mbar.classList.toggle('on', scrollY > innerHeight*.8), {passive:true});
+
+/* ---------- Mood planner ---------- */
+const moods = {
+  'Sun-seeker': {t:'All about the pool', d:[['10:00','Breakfast, then first pick of the loungers','Under an umbrella, with the sea a minute away.'],['13:00','Pool & resident DJ','The soundtrack to your afternoon.'],['16:00','Hot tub & a fresh cocktail','Golden hour, done properly.'],['19:00','Sunset stroll','Down to the Ionian before dinner.']]},
+  'Night owl': {t:'Built for late nights', d:[['12:00','Slow start on your balcony','No alarm needed.'],['15:00','Pool party warm-up','DJ, cocktails, new friends.'],['21:00','Greek Night or a Theme Night','The hotel comes alive.'],['00:00','The Kavos strip','A few minutes’ walk from your room.']]},
+  'Foodie': {t:'Eat like you mean it', d:[['09:00','Breakfast','A proper start to the day.'],['14:00','Cold drinks at the pool bar','Fresh cocktails all afternoon.'],['20:00','Dinner at Restaurant Morfeas','Greek cooking with produce from Corfu.'],['22:00','Greek Night','Music, dancing and local flavours.']]},
+  'Friends & family': {t:'Room for everyone', d:[['09:00','Breakfast together','Then everyone does their own thing.'],['11:00','Pool day','Loungers for the grown-ups, splashing for the rest.'],['19:00','Dinner at Morfeas','One table, everyone fed.'],['21:00','Balcony time','Every room and apartment has one.']]}
+};
+const keys = Object.keys(moods);
+$('#pills').innerHTML = keys.map((k,i)=>`<button class="pill" role="tab" id="tab${i}" aria-selected="${i===0}" aria-controls="plan">${k}</button>`).join('');
+const show = i => {
+  const m = moods[keys[i]];
+  $$('.pill').forEach((p,j)=>p.setAttribute('aria-selected', i===j));
+  $('#plan').setAttribute('aria-labelledby','tab'+i);
+  $('#plan').innerHTML = `<h3>${m.t}</h3><ol>${m.d.map(([t,b,s],j)=>`<li style="animation-delay:${j*90}ms"><time>${t}</time><div><b>${b}</b><span>${s}</span></div></li>`).join('')}</ol>`;
+};
+$('#pills').addEventListener('click', e => { const b = e.target.closest('.pill'); if(b) show($$('.pill').indexOf(b)); });
+$('#pills').addEventListener('keydown', e => { const i = $$('.pill').indexOf(document.activeElement); if(i<0) return; const d = e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0; if(d){ const n=(i+d+keys.length)%keys.length; $$('.pill')[n].focus(); show(n); } });
+show(0);
+
+/* ---------- Facilities ---------- */
+$('#fac').innerHTML = [['i-pool','Outdoor pool'],['i-music','Resident DJ'],['i-spa','Hot tub'],['i-glass','Two bars'],['i-plate','Restaurant Morfeas'],['i-snow','Air conditioning'],['i-wifi','Free Wi-Fi'],['i-car','Free parking'],['i-key','24-hour reception']]
+  .map(([i,t])=>`<span data-r><svg aria-hidden="true"><use href="#${i}"/></svg>${t}</span>`).join('');
+
+/* ---------- Event posters carousel (mobile) ---------- */
+const track = $('.posters'), cards = $$('.poster'), dots = $$('.dots i'), prev = $('.pager .prev'), next = $('.pager .next');
+let cur = -1;
+const setActive = () => {
+  const mid = track.scrollLeft + track.clientWidth/2;
+  let best = 0, bd = Infinity;
+  cards.forEach((c,i) => { const d = Math.abs(c.offsetLeft + c.offsetWidth/2 - mid); if(d < bd){ bd = d; best = i; } });
+  if(best === cur) return; cur = best;
+  cards.forEach((c,i) => c.classList.toggle('active', i===best));
+  dots.forEach((d,i) => d.classList.toggle('on', i===best));
+  prev.disabled = best===0; next.disabled = best===cards.length-1;
+};
+const goTo = i => cards[Math.max(0,Math.min(cards.length-1,i))].scrollIntoView({behavior: reduce?'auto':'smooth', block:'nearest', inline:'center'});
+prev.addEventListener('click', () => goTo(cur-1));
+next.addEventListener('click', () => goTo(cur+1));
+track.addEventListener('keydown', e => { if(e.key==='ArrowRight'){ goTo(cur+1); e.preventDefault(); } if(e.key==='ArrowLeft'){ goTo(cur-1); e.preventDefault(); } });
+track.addEventListener('scroll', () => requestAnimationFrame(setActive), {passive:true});
+addEventListener('resize', () => { cur = -1; setActive(); });
+setActive();
+
+/* ---------- Postcard tilt ---------- */
+const pc = $('#postcard');
+if(!reduce && matchMedia('(pointer:fine)').matches){
+  pc.addEventListener('pointermove', e => { const r = pc.getBoundingClientRect(); const dx = (e.clientX-r.left)/r.width-.5, dy = (e.clientY-r.top)/r.height-.5; pc.style.transform = `rotateY(${dx*8}deg) rotateX(${-dy*8}deg)`; });
+  pc.addEventListener('pointerleave', () => pc.style.transform = '');
+}
+
+/* ---------- Booking drawer ---------- */
+const dlg = $('#drawer'), inEl = $('#in'), outEl = $('#out'), msg = $('#msg');
+const iso = d => d.toISOString().slice(0,10);
+const plus = (s,n) => { const d = new Date(s+'T12:00:00'); d.setDate(d.getDate()+n); return iso(d); };
+inEl.min = iso(new Date()); outEl.min = plus(inEl.min,1);
+inEl.addEventListener('change', () => { outEl.min = plus(inEl.value,1); if(!outEl.value || outEl.value <= inEl.value) outEl.value = plus(inEl.value,7); });
+const open = e => { e.preventDefault(); if(dlg.showModal){ dlg.showModal(); } else dlg.setAttribute('open',''); setTimeout(()=>inEl.focus(), 60); };
+$$('[data-book]').forEach(b => b.addEventListener('click', open));
+$('#close').addEventListener('click', () => dlg.close());
+dlg.addEventListener('click', e => { if(e.target === dlg) dlg.close(); });
+$('#bookForm').addEventListener('submit', e => {
+  e.preventDefault();
+  if(!inEl.value || !outEl.value || outEl.value <= inEl.value){ msg.className='msg err'; msg.textContent='Please choose your check-in and check-out dates.'; (inEl.value?outEl:inEl).focus(); return; }
+  const nights = Math.round((new Date(outEl.value)-new Date(inEl.value))/864e5);
+  msg.className='msg'; msg.innerHTML = `${nights} night${nights>1?'s':''} · ${$('#type').value} · ${$('#guests').value}. <a href="${RESERVATION_URL}" target="_blank" rel="noopener" style="color:var(--blue);font-weight:500">Continue to secure booking →</a>`;
+  msg.querySelector('a').focus();
+});
+
+
+/* ================= POLISH LAYER ================= */
+const fine = matchMedia('(pointer:fine)').matches;
+// split hero titles into masked letters
+$$('.split-t').forEach(t => { const w = t.textContent; t.innerHTML = '<span class="m">' + [...w].map((c,i)=>`<span class="c" style="--i:${i}" aria-hidden="true">${c}</span>`).join('') + '</span>'; });
+// split h2 headings into words
+const splitWords = (node, idx) => { [...node.childNodes].forEach(n => {
+  if(n.nodeType===3){ const f = document.createDocumentFragment(); n.textContent.split(/(\s+)/).forEach(w => { if(!w) return; if(/^\s+$/.test(w)){ f.append(w); return; } const o = document.createElement('span'); o.className='rw'; const i = document.createElement('span'); i.textContent = w; i.style.setProperty('--i', idx.n++); o.append(i); f.append(o); }); n.replaceWith(f); }
+  else if(n.nodeType===1 && n.tagName!=='SPAN') splitWords(n, idx);
+}); };
+$$('h2[data-r]').forEach(h => { h.removeAttribute('data-r'); h.classList.add('rv'); splitWords(h, {n:0}); });
+const hio = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); hio.unobserve(e.target); } }), {threshold:.3});
+$$('.rv').forEach(h => hio.observe(h));
+
+// loader → reveal
+const loader = $('#loader'), bar = $('#bar');
+let started = false;
+const start = () => { if(started) return; started = true; bar.style.transform='scaleX(1)'; setTimeout(()=>{ loader.classList.add('done'); document.body.classList.add('ready'); setTimeout(()=>window.__intro && window.__intro(), 500); setTimeout(()=>loader.remove(), 1300); }, reduce ? 0 : 450); };
+bar.style.transform = 'scaleX(.6)';
+if(document.readyState==='complete') start(); else addEventListener('load', start);
+setTimeout(start, 2500);
+
+// smooth scrolling (desktop) + anchors
+let lenis = null;
+if(window.Lenis && !reduce && fine){
+  lenis = new Lenis({lerp:.09, smoothWheel:true});
+  const raf = t => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf);
+}
+document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if(!a) return; const id = a.getAttribute('href'); if(id.length<2) return; const el = document.querySelector(id); if(!el) return; e.preventDefault(); lenis ? lenis.scrollTo(el,{offset:-80,duration:1.4}) : el.scrollIntoView({behavior: reduce?'auto':'smooth'}); });
+// pause smooth scroll when the booking drawer or menu is open
+new MutationObserver(() => { if(!lenis) return; (dlg.open || menu.classList.contains('open')) ? lenis.stop() : lenis.start(); }).observe(document.body,{subtree:true,attributes:true,attributeFilter:['open','class']});
+
+// scroll progress + hero text parallax
+const prog = $('#progress'), hts = $$('.hero-text');
+const onScrollFx = () => { const y = scrollY, max = document.documentElement.scrollHeight - innerHeight; prog.style.transform = `scaleX(${max>0?y/max:0})`;
+  if(y < innerHeight*1.2 && !reduce){ const k = y/innerHeight; hts.forEach(h => { h.style.transform = `${innerWidth<=760?'translateY(-50%) ':''}translateY(${k*-120}px)`; h.style.opacity = 1-k*1.3; }); } };
+addEventListener('scroll', onScrollFx, {passive:true}); onScrollFx();
+
+if(fine && !reduce){
+  // hero mouse parallax
+  const pls = $$('.pl');
+  hero.addEventListener('pointermove', e => { const r = hero.getBoundingClientRect(); const dx = (e.clientX-r.left)/r.width-.5, dy = (e.clientY-r.top)/r.height-.5; pls.forEach(g => { const d = +g.dataset.d; g.setAttribute('transform', `translate(${-dx*d} ${-dy*d*.35})`); }); });
+  hero.addEventListener('pointerleave', () => pls.forEach(g => g.setAttribute('transform','translate(0 0)')));
+
+  // contextual cursor tip
+  const tip = $('#tip'), tipT = $('#tipT'); let tx=0, ty=0, cx=0, cy=0;
+  const follow = () => { cx += (tx-cx)*.2; cy += (ty-cy)*.2; tip.style.left = cx+'px'; tip.style.top = cy+'px'; requestAnimationFrame(follow); }; follow();
+  addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY + 34; });
+  const tipOn = (el, label, cls) => { el.addEventListener('pointerenter', e => { tipT.textContent = label; tip.className = 'tip on ' + (cls||''); cx = tx = e.clientX; cy = ty = e.clientY + 34; }); el.addEventListener('pointerleave', () => tip.className = 'tip'); };
+  tipOn(hero, 'Drag', 'drag');
+  $$('.poster').forEach(p => tipOn(p, 'Book this night'));
+  $$('.nav, .knob').forEach(el => { el.addEventListener('pointerenter', () => tip.classList.remove('on')); el.addEventListener('pointerleave', e => { if(hero.contains(e.relatedTarget)) tip.classList.add('on'); }); });
+
+  // magnetic buttons
+  $$('.btn, .theme, .pill').forEach(b => { b.classList.add('mag');
+    b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX-r.left-r.width/2)*.18}px, ${(e.clientY-r.top-r.height/2)*.28}px)`; });
+    b.addEventListener('pointerleave', () => b.style.transform = ''); });
+
+  // poster 3D tilt + glare (desktop fan only)
+  $$('.poster').forEach(p => { p.insertAdjacentHTML('beforeend','<span class="glare"></span>');
+    p.addEventListener('pointermove', e => { if(innerWidth<=860) return; const r = p.getBoundingClientRect(); const dx = (e.clientX-r.left)/r.width, dy = (e.clientY-r.top)/r.height; p.style.transform = `perspective(900px) translateY(-24px) scale(1.04) rotateY(${(dx-.5)*14}deg) rotateX(${(.5-dy)*12}deg)`; p.style.setProperty('--gx', dx*100+'%'); p.style.setProperty('--gy', dy*100+'%'); });
+    p.addEventListener('pointerleave', () => p.style.transform = ''); });
+
+  // key fobs swing like a pendulum with the cursor
+  $$('.room').forEach(room => { const fob = room.querySelector('.fob'); let ang = 0, vel = 0, lastX = null, run = false;
+    const step = () => { vel += -ang*.06; vel *= .93; ang += vel; fob.style.transform = `rotate(${ang}deg)`; if(Math.abs(ang)>.05 || Math.abs(vel)>.05) requestAnimationFrame(step); else { run=false; fob.style.transform=''; } };
+    room.addEventListener('pointermove', e => { if(lastX!==null){ vel += Math.max(-3, Math.min(3, (e.clientX-lastX)*.12)); if(!run){ run = true; requestAnimationFrame(step); } } lastX = e.clientX; });
+    room.addEventListener('pointerleave', () => lastX = null); });
+}
+
+// count-ups
+const countIO = new IntersectionObserver(es => es.forEach(e => { if(!e.isIntersecting) return; countIO.unobserve(e.target);
+  const el = e.target, raw = el.textContent.trim(), m = raw.match(/^([\d.]+)(.*)$/); if(!m) return; const to = parseFloat(m[1]), dp = (m[1].split('.')[1]||'').length, t0 = performance.now();
+  const tick = now => { const k = reduce ? 1 : Math.min(1,(now-t0)/1500), v = to*(1-Math.pow(1-k,4)); el.textContent = v.toFixed(dp) + m[2]; if(k<1) requestAnimationFrame(tick); }; requestAnimationFrame(tick); }), {threshold:.6});
+$$('.facts b, .score > span[aria-hidden]').forEach(el => countIO.observe(el));
+
+/* ---------- Reveal ---------- */
+const rio = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); rio.unobserve(e.target); } }), {threshold:.12});
+$$('[data-r]').forEach((el,i) => { el.style.transitionDelay = (i%5)*70+'ms'; rio.observe(el); });
+}
+</script>
+</body>
+</html>
