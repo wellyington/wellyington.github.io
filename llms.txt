@@ -1,0 +1,78 @@
+# Wellyington
+
+> Wellyington is Wellington Almeida, a web developer, digital designer and strategist based in Estepona, on the Costa del Sol in Spain. He designs and builds websites and apps for businesses along the coast (Marbella, Málaga, Torremolinos, Nerja, Algeciras, Gibraltar) and further afield, working in English, Spanish and Portuguese.
+
+He has more than 15 years of experience, starting in advertising, film and visual media before moving full-time into web platforms and interface design, for clients from Brazil to Barcelona, Ibiza and the south of Spain. He works directly with founders and small teams, and starts from how the business makes money before designing or writing code.
+
+Key facts:
+
+- Name: Wellington Almeida, who works as Wellyington.
+- Role: Web Developer, Digital Designer, Strategist.
+- Based in: Estepona, Málaga, Spain. Works in person on the Costa del Sol and remotely anywhere.
+- Languages of work: English, Spanish and Portuguese. This site is published in English, Spanish, Portuguese and Russian.
+- Pricing: no fixed packages. Each project gets a clear price after a conversation about what it needs, before work starts.
+- Brine Club: his landing-page service, from €99, delivered in 24–48 hours.
+- Contact: the form on the homepage, email welly.almeida@gmail.com, or WhatsApp +34 604 286 691.
+
+Services:
+
+- Web design: Clear visual systems and pages that are easy to understand and use.
+- Web development: Websites built around a real business, with care for speed, usability and upkeep.
+- App development: Apps for when a business needs something people use on a phone, not only a website.
+- SEO and AEO: Help for a business to be found in search and in answer engines, with clear pages and plain language.
+- Digital branding: A voice and a look that feel like the business, carried through the site and the wider presence.
+
+The journal is written in four languages with the same entries in each. The 100 Days series is a public challenge: one website concept a day for a real business, each with a write-up. Concept pages are design proposals shown on this site; they are not the businesses' own websites unless an entry says otherwise.
+
+## Site
+
+- [Wellyington, home (English)](https://wellyington.github.io/): Web design, development and apps for businesses in Estepona, Marbella and Málaga, and across Torremolinos, Nerja, Gibraltar and Algeciras. Wellyington — digital that works.
+- [Home in Spanish](https://wellyington.github.io/es/): The same page in Spanish
+- [Home in Portuguese (Brazil)](https://wellyington.github.io/pt/): The same page in Portuguese (Brazil)
+- [Home in Russian](https://wellyington.github.io/ru/): The same page in Russian
+- [Brine Club](https://wellyington.github.io/brineclub/): Landing pages for the UK and Europe from €99, designed and built in 24–48 hours
+
+## Selected work
+
+- [EQUA Estates](https://equaestates.com/): EQUA Estates helps international clients buy, rent and relocate to Marbella and the Costa del Sol. The site brings together property search, curated collections, area guidance and relocation support, including residency coordination and private education.
+- [Mirela B. Interiors](https://mirelabinteriors.com/): Mirela B. Interiors is a renovation and interior design studio working across the Costa del Sol, from Mijas Costa to Casares. The site presents planned renovations, material and colour advice, painting, and a furnishing service.
+- [Mistral & Marea](https://mistralmarea.com/): Mistral & Marea is a daily coastal wire for business and culture on the Costa del Sol. The homepage files short signals, longer features, a salon directory and a black book of local businesses.
+- [Chill and Heal Hub](https://www.chillandhealhub.com/): Chill and Heal Hub is a naturopathic and Traditional Chinese Medicine practice in London and Marbella. The site sets out therapies such as acupuncture, manual treatments and nutrition, and lists session types and prices.
+- [Your New Life in Spain](https://www.yournewlifeinspain.com/): Your New Life in Spain is Natasha Horner's relocation coaching practice, based in Málaga. The site explains one-to-one support for people planning a move to Spain, from a short service-finder call to longer coaching.
+
+## Journal
+
+- [Journal home](https://wellyington.github.io/journal/en/): Working notes on websites, design and the 100 Days challenge
+- [from the counter to the ticket](https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/): 100 Days. A website concept for El Dorado, Estepona's rotisserie chicken house: the full menu with prices, a live order ticket, delivery or pick-up times and opening status.
+- [as careful as the kitchen](https://wellyington.github.io/journal/en/articles/as-careful-as-the-kitchen/): 100 Days. A website concept for Espacio IME in Motril: tasting menus with prices, local produce, a wine cellar, gift cards and a booking request, in light and dark.
+- [the website that looks after itself](https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/): Notes. A plain-language guide for small business owners: why brochure websites go out of date, what APIs and 'autonomous' websites are, and what to pay for.
+- [judgement over volume](https://wellyington.github.io/journal/en/articles/judgement-over-volume/): 100 Days. A website concept for Nina Estate in Málaga: a private real estate practice with residences, four services, a clear buying process and the director up front.
+- [a seat at the long table](https://wellyington.github.io/journal/en/articles/a-seat-at-the-long-table/): 100 Days. A homepage concept for Los Arcos, a family bar and restaurant in Estepona: menu, what's on, opening hours and a booking request, in light and dark. Day 3.
+- [room for a whole season](https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/): 100 Days. A homepage concept for Teatro Soho CaixaBank in Málaga: the season, tickets and partners in a clear order, with light and dark themes. Day 2 of 100 Days.
+- [built before the yes](https://wellyington.github.io/journal/en/articles/built-before-the-yes/): 100 Days. A one-page website for Pedro Sánchez Construction, a family builder in Jávea, Dénia and Calpe, built and live before any contract. Day 1 of 100 Days.
+
+## 100 Days concepts
+
+- [Day 1: Pedro Sánchez Construcción | Constructora en la Marina Alta](https://wellyington.github.io/challenge/day1/): Más de 25 años construyendo viviendas de calidad, reformas integrales y obra nueva en Jávea, Dénia, Calpe y la Marina Alta.
+- [Day 2: Teatro Soho CaixaBank](https://wellyington.github.io/challenge/day2/): Teatro Soho CaixaBank, Málaga. Programación de la temporada 26/27: teatro, música, danza y circo.
+- [Day 4: Nina Estate — Private real estate in Málaga, Marbella & the Costa del Sol](https://wellyington.github.io/challenge/day4/): Nina Estate is a private real estate practice in Málaga led by Jovana Dokic: acquisition, sale, investment and rental across Málaga, Marbella and the Costa del Sol.
+- [Day 5: Espacio IME · Motril](https://wellyington.github.io/challenge/day5/): Espacio IME — cocina de autor de Iván Mateo en Motril, Granada. Menús degustación con producto de la Costa Tropical.
+- [Day 6: El Dorado · Pollos asados a domicilio en Estepona](https://wellyington.github.io/challenge/day6/): Asador de Pollos El Dorado, Estepona. Pollos asados, hamburguesas de la casa, croquetas caseras y empanadillas argentinas, a domicilio o para recoger. Pide online.
+
+## Optional
+
+- [CV](https://wellyington.github.io/cv/): Wellington Almeida's CV
+- [Journal archive](https://wellyington.github.io/journal/en/archive/): Every entry, newest first
+- [Journal feed (Atom)](https://wellyington.github.io/journal/en/feed.xml): English entries with full text
+- [Journal in Spanish](https://wellyington.github.io/journal/es/): 7 entries, the same as the English journal
+- [Journal feed in Spanish (Atom)](https://wellyington.github.io/journal/es/feed.xml): Full text of each entry
+- [Journal in Portuguese (Brazil)](https://wellyington.github.io/journal/pt/): 7 entries, the same as the English journal
+- [Journal feed in Portuguese (Brazil) (Atom)](https://wellyington.github.io/journal/pt/feed.xml): Full text of each entry
+- [Journal in Russian](https://wellyington.github.io/journal/ru/): 7 entries, the same as the English journal
+- [Journal feed in Russian (Atom)](https://wellyington.github.io/journal/ru/feed.xml): Full text of each entry
+- [Sitemap](https://wellyington.github.io/sitemap.xml): Main site pages
+- [Journal sitemap](https://wellyington.github.io/journal/sitemap.xml): Every journal page with its language versions
+- [LinkedIn](https://www.linkedin.com/in/wellyington/)
+- [Instagram](https://instagram.com/wellyington)
+- [X](https://x.com/wellyington)
+- [Facebook](https://facebook.com/wellyington/)
