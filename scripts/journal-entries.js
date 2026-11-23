@@ -61,6 +61,7 @@ function articles(code) {
         slug: f.replace(/\.md$/, ""),
         title: fm.title,
         lede: fm.lede || fm.description || "",
+        description: fm.description || fm.lede || "",
         category: fm.category || "",
         image: fm.image || "",
         imageAlt: fm.image_alt || "",

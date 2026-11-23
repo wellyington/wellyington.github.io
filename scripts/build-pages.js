@@ -719,9 +719,10 @@ function main() {
     writePage(localeCache[code], html);
   });
   writeSitemap();
+  require("./build-llms").build();
   fix404();
   fs.writeFileSync(templatePath, template);
-  console.log("Built en, es, pt and ru pages, sitemap and 404 paths.");
+  console.log("Built en, es, pt and ru pages, sitemap, llms.txt and 404 paths.");
 }
 
 main();
