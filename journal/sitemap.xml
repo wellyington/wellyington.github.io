@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/archive/</loc>
-    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -55,7 +55,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/</loc>
-    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -81,6 +81,15 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/"/>
   </url>
   <url>
+    <loc>https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/</loc>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-misma-piscina-de-noche/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/"/>
+  </url>
+  <url>
     <loc>https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/</loc>
     <lastmod>2026-11-21T10:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-website-that-looks-after-itself/"/>
@@ -99,7 +108,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/archive/</loc>
-    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -126,12 +135,21 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/</loc>
-    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/la-misma-piscina-de-noche/</loc>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-misma-piscina-de-noche/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/</loc>
@@ -179,6 +197,15 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/"/>
   </url>
   <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/</loc>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-misma-piscina-de-noche/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/"/>
+  </url>
+  <url>
     <loc>https://wellyington.github.io/journal/pt/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/about/"/>
@@ -188,7 +215,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/archive/</loc>
-    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -224,7 +251,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/</loc>
-    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -277,7 +304,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/archive/</loc>
-    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -286,7 +313,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/</loc>
-    <lastmod>2026-11-22T15:45:00+01:00</lastmod>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -355,5 +382,14 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/</loc>
+    <lastmod>2026-11-23T19:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-misma-piscina-de-noche/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/"/>
   </url>
 </urlset>

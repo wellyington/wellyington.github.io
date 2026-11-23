@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-misma-piscina-de-noche/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<title>Концепт сайта отеля с режимом дня и ночи: Morfeas, Кавос · Wellyington</title>
+<meta name="description" content="Независимый концепт сайта для Morfeas Hotel в Кавосе на Корфу: главный экран от дня к ночи, светлая и тёмная тема, план дня по настроению, афиши событий и бр...">
+<meta name="keywords" content="концепт дизайна сайта для отеля, редизайн сайта семейного отеля, сайт отеля со светлой и тёмной темой, сайт с переключением дня и ночи на главном экране, сайт бронирования отеля, сделанный сначала для телефона, отель в Кавосе на Корфу, дизайн сайта для отеля на греческом острове, сайт для тусовочного отеля в Кавосе, независимый веб-дизайнер в Испании, челлендж 100 дней 100 сайтов">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Журнал">
+<meta property="og:title" content="Концепт сайта отеля с режимом дня и ночи: Morfeas, Кавос">
+<meta property="og:description" content="Независимый концепт сайта для Morfeas Hotel в Кавосе на Корфу: главный экран от дня к ночи, светлая и тёмная тема, план дня по настроению, афиши событий и бр...">
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp">
+<meta property="og:image:alt" content="Обложка кейса концепта сайта Morfeas Hotel: Design Challenge Day 7, днём и ночью, компьютер с иллюстрированным главным экраном, разделённым между бассейном на солнце и бассейном под луной, и телефон с той же сценой.">
+<meta property="article:published_time" content="2026-11-23T19:30:00+01:00">
+<meta property="article:modified_time" content="2026-11-23T19:30:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 дней">
+<meta property="article:tag" content="концепт дизайна сайта для отеля">
+<meta property="article:tag" content="редизайн сайта семейного отеля">
+<meta property="article:tag" content="сайт отеля со светлой и тёмной темой">
+<meta property="article:tag" content="сайт с переключением дня и ночи на главном экране">
+<meta property="article:tag" content="сайт бронирования отеля, сделанный сначала для телефона">
+<meta property="article:tag" content="отель в Кавосе на Корфу">
+<meta property="article:tag" content="дизайн сайта для отеля на греческом острове">
+<meta property="article:tag" content="сайт для тусовочного отеля в Кавосе">
+<meta property="article:tag" content="независимый веб-дизайнер в Испании">
+<meta property="article:tag" content="челлендж 100 дней 100 сайтов">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Концепт сайта отеля с режимом дня и ночи: Morfeas, Кавос">
+<meta name="twitter:description" content="Независимый концепт сайта для Morfeas Hotel в Кавосе на Корфу: главный экран от дня к ночи, светлая и тёмная тема, план дня по настроению, афиши событий и бр...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp">
+<meta name="twitter:image:alt" content="Обложка кейса концепта сайта Morfeas Hotel: Design Challenge Day 7, днём и ночью, компьютер с иллюстрированным главным экраном, разделённым между бассейном на солнце и бассейном под луной, и телефон с той же сценой.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/#article",
+      "url": "https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/",
+      "headline": "Концепт сайта отеля с режимом дня и ночи: Morfeas, Кавос",
+      "alternativeHeadline": "тот же бассейн ночью",
+      "description": "Независимый концепт сайта для Morfeas Hotel в Кавосе на Корфу: главный экран от дня к ночи, светлая и тёмная тема, план дня по настроению, афиши событий и бр...",
+      "inLanguage": "ru",
+      "datePublished": "2026-11-23T19:30:00+01:00",
+      "dateModified": "2026-11-23T19:30:00+01:00",
+      "articleSection": "100 дней",
+      "keywords": "концепт дизайна сайта для отеля, редизайн сайта семейного отеля, сайт отеля со светлой и тёмной темой, сайт с переключением дня и ночи на главном экране, сайт бронирования отеля, сделанный сначала для телефона, отель в Кавосе на Корфу, дизайн сайта для отеля на греческом острове, сайт для тусовочного отеля в Кавосе, независимый веб-дизайнер в Испании, челлендж 100 дней 100 сайтов",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp", "caption": "Обложка кейса концепта сайта Morfeas Hotel: Design Challenge Day 7, днём и ночью, компьютер с иллюстрированным главным экраном, разделённым между бассейном на солнце и бассейном под луной, и телефон с той же сценой." },
+      "about": {
+        "@type": "Hotel",
+        "name": "Morfeas Hotel", "url": "https://www.morfeashotel.com/", "address": { "@type": "PostalAddress", "addressLocality": "Kavos, Corfu", "addressCountry": "GR" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 дней", "url": "https://wellyington.github.io/journal/ru/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Журнал", "item": "https://wellyington.github.io/journal/ru/" },
+        { "@type": "ListItem", "position": 2, "name": "тот же бассейн ночью", "item": "https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/the-same-pool-after-dark/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-misma-piscina-de-noche/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/a-mesma-piscina-a-noite/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/tot-zhe-bassein-nochyu/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/tot-zhe-bassein-nochyu/" class="menu-entry">
+            <span class="mono dim">№ 008</span>
+            <span>тот же бассейн ночью<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/ot-prilavka-do-cheka/" class="menu-entry">
+            <span class="mono dim">№ 007</span>
+            <span>от прилавка до чека<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/" class="menu-entry">
+            <span class="mono dim">№ 006</span>
+            <span>так же тщательно, как на кухне<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/sait-kotoryi-sledit-za-soboi/" class="menu-entry">
+            <span class="mono dim">№ 005</span>
+            <span>сайт, который следит за собой<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/the-same-pool-after-dark/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-misma-piscina-de-noche/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/a-mesma-piscina-a-noite/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/tot-zhe-bassein-nochyu/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 008</span>
+    <span class="entry-cell label">100 дней</span>
+    <time class="entry-cell" datetime="2026-11-23T19:30:00+01:00">23 ноября 2026</time>
+    <span class="entry-cell">10 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">тот же бассейн ночью<span class="dot">.</span></h1><p class="entry-lede">Седьмой день из ста: концепт сайта для Morfeas Hotel, семейного отеля в Кавосе на Корфу, который меняется вместе со временем суток, от бассейна под солнцем до того же бассейна под луной.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp" alt="Обложка кейса концепта сайта Morfeas Hotel: Design Challenge Day 7, днём и ночью, компьютер с иллюстрированным главным экраном, разделённым между бассейном на солнце и бассейном под луной, и телефон с той же сценой." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 008</span>
+</div>
+<p class="caption label">Седьмой день. Концепт для Morfeas Hotel в Кавосе: с одной стороны день, с другой ночь.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Ftot-zhe-bassein-nochyu%2F&text=%D1%82%D0%BE%D1%82+%D0%B6%D0%B5+%D0%B1%D0%B0%D1%81%D1%81%D0%B5%D0%B9%D0%BD+%D0%BD%D0%BE%D1%87%D1%8C%D1%8E"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Ftot-zhe-bassein-nochyu%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>23 ноября я опубликовал седьмую заметку этой серии, челленджа, который придумал Рамайя Траск: сто дней, сто компаний, сто сайтов. Первым днём была семейная строительная компания в Марина-Альте. <a href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">Та страница здесь.</a> Вторым — театр в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/">Она здесь.</a> Третьим — семейный ресторан в Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/">Она здесь.</a> Четвёртым — частная консалтинговая практика по недвижимости в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/">Она здесь.</a> Пятым — ресторан дегустационных сетов в Мотриле. <a href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">Она здесь.</a> Шестым — заведение с курицей-гриль в Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/">Она здесь.</a></p>
+
+<p>Сегодня первая компания серии за пределами Испании. Morfeas Hotel — семейный отель с номерами и апартаментами в Кавосе, на южной оконечности Корфу. До Ионического моря одна минута, до главной улицы Кавоса несколько минут пешком, а Кавос знаменит одним: ночной жизнью. Отель назван в честь Морфея, греческого бога сновидений. Его сайт — <a href="https://www.morfeashotel.com/">morfeashotel.com</a>.</p>
+
+<p>Концепт здесь: <a href="https://wellyington.github.io/challenge/day7/">Morfeas Hotel, седьмой день</a>.</p>
+
+<p>Это независимый концепт редизайна. Это не официальное сотрудничество с Morfeas Hotel, никто оттуда меня об этом не просил, и ничто на странице не означает, что они его одобрили. Как и шесть предыдущих, пока он живёт на моём собственном адресе.</p>
+
+<h2 id="один-отель-два-отпуска">один отель, два отпуска</h2>
+
+<p>Большинство сайтов отелей описывают один отпуск. Бассейн, номер, завтрак, закат. Для тихого отеля это работает. Для отеля в Кавосе — нет.</p>
+
+<p>У гостей Morfeas два отпуска за одну неделю, а иногда и за один день. Днём — бассейн: шезлонги, холодные напитки, резидентный диджей. Ночью — ужин с кухни отеля, а потом вечеринка, в отеле или на улице за углом. Те же люди, тот же бассейн, два разных настроения. Отель уже говорит это в одной из своих фраз: dream by day, dance by night. Мечтай днём, танцуй ночью.</p>
+
+<p>Поэтому концепт не выбирает одно из двух, а показывает оба и даёт посетителю решить, на какое он смотрит.</p>
+
+<p><img src="/images/journal/100-days-day-7/01-cover.webp" alt="Design Challenge Day 7: Morfeas Hotel, dream by day, dance by night. Компьютер с главным экраном, разделённым между днём и ночью, и телефон с той же сценой." />
+<em>Седьмой день: один отель, один бассейн, два настроения.</em></p>
+
+<h2 id="от-дня-к-ночи-одним-движением">от дня к ночи одним движением</h2>
+
+<p>Верх страницы — рисунок, а не фотография: белое здание отеля с синими ставнями, пляжный зонтик, два шезлонга, море позади и бассейн на переднем плане. Поперёк всего — слово Morfeas крупной антиквой, настолько большой, насколько позволяет экран.</p>
+
+<p>Рисунок существует дважды, днём и ночью, и обе версии лежат точно друг на друге. Посередине — маленький ползунок: с одной стороны солнце, с другой луна. Потяните его, и граница между рисунками пойдёт за пальцем. Слева — бледно-голубое небо и фраза dream by day. Справа — тёмно-синее небо, звёзды, полумесяц, силуэт пальмы, гирлянда праздничных огней над водой и луч света, поднимающийся от бассейна. Там фраза — dance by night. Протяните ползунок до конца, и весь отель перейдёт из полудня в полночь.</p>
+
+<p>Когда страница открывается, ползунок стоит не посередине. Он склоняется к тому, который сейчас час в Кавосе. Кто заходит днём, видит в основном день. Кто смотрит в одиннадцать вечера по времени Корфу, видит в основном ночь. Маленькие часы в шапке показывают время в Кавосе с солнцем или луной рядом: мелочь, но полезная для того, кто планирует отпуск из другого часового пояса.</p>
+
+<p>Я нарисовал сцену, а не взял фотографии, по двум причинам. Рисунок может перейти от дня к ночи без второй фотосессии. И в маленьком размере, на телефоне, простой рисунок читается быстрее, чем пёстрая фотография бассейна, полного людей.</p>
+
+<p><img src="/images/journal/100-days-day-7/02-day-night.webp" alt="Главный экран от дня к ночи: нарисованный отель и бассейн, разделённые посередине ползунком с солнцем и луной, день слева и лунная ночь справа, и два меньших вида — почти весь день и почти вся ночь." />
+<em>Потяните ползунок, и бассейн перейдёт из полудня в полночь. При открытии страницы он склоняется к времени в Кавосе.</em></p>
+
+<h2 id="светлая-тема-и-тёмная">светлая тема и тёмная</h2>
+
+<p>Меняется не только главный экран. У всего сайта есть светлая тема и тёмная.</p>
+
+<p>Светлая тема — это день у бассейна: белые страницы, глубокий эгейский синий греческих ставен и дверей и лимонно-жёлтые акценты. Тёмная — тот же сайт после заката: глубокие тёмно-синие страницы, светло-голубые ссылки и кнопки, тот же лимонно-жёлтый. Ни одна из них не сделана в последний момент. Я проработал обе, раздел за разделом, чтобы тёмная версия не была просто светлой с инвертированными цветами.</p>
+
+<p>Кнопка с луной или солнцем в шапке переключает их. Сайт запоминает выбор до следующего визита. Если человек ни разу её не нажимал, сайт следует тому, что уже выбрано в его телефоне или компьютере. При смене темы сдвигается и ползунок на главном экране, чтобы рисунок наверху соответствовал остальной странице.</p>
+
+<p><img src="/images/journal/100-days-day-7/03-light-theme.webp" alt="Светлая тема: главный экран, склонённый к дню, раздел Named after the god of dreams с запиской от семьи и телефон с разделом How do you holiday и кнопками настроений." />
+<em>Светлая тема: белые страницы, эгейский синий и лимонно-жёлтый, а почти в самом начале — записка от самой семьи.</em></p>
+
+<p><img src="/images/journal/100-days-day-7/04-dark-theme.webp" alt="Тёмная тема: раздел размещения Your key to Kavos с синим брелоком для номеров и жёлтым для апартаментов и начало раздела событий, на компьютере и телефоне." />
+<em>Тёмная тема. Одно касание луны — и весь сайт становится тёмно-синим, и таким остаётся в следующий раз.</em></p>
+
+<h2 id="записка-от-семьи">записка от семьи</h2>
+
+<p>Под главным экраном первое, что читаешь, — не список услуг. Это короткая записка от семьи, подписанная от руки: Morfeas — семейный отель на южной оконечности Корфу, в минуте от моря и в нескольких минутах ходьбы от главной улицы. Днём — бассейн. Ночью — ужин с собственной кухни, а потом вечеринка. Поживите неделю — и уедете, чувствуя себя частью семьи.</p>
+
+<p>Рядом — три числа крупным шрифтом: 55 номеров и апартаментов, одна минута до моря, 30 километров от аэропорта. Они отвечают на три вопроса, которые люди задают о любом островном отеле раньше всего остального: какой он по размеру, далеко ли море, далеко ли аэропорт.</p>
+
+<h2 id="ваш-ключ-от-кавоса">ваш ключ от Кавоса</h2>
+
+<p>Раздел размещения называется your key to Kavos, ваш ключ от Кавоса, и у каждого типа проживания свой брелок, старомодный, какие висят на ключах на ресепшене. Синий — для номеров отеля. Жёлтый — для апартаментов. Появляясь на экране, они мягко покачиваются.</p>
+
+<p>Номера — с двуспальной или двумя отдельными кроватями, у каждого свой балкон, кондиционер, телевизор, сейф, фен и душ. В апартаментах больше места, для друзей и семей, которые путешествуют вместе, детские кроватки по запросу и бесплатная парковка. У каждого типа есть кнопка проверки дат, которая открывает панель бронирования с уже выбранным типом.</p>
+
+<h2 id="меню-на-весь-экран">меню на весь экран</h2>
+
+<p>На телефоне шапка сводится к трём вещам: логотип, кнопка Book и кнопка меню. Нажмите на меню, и оно заполнит весь экран: шесть разделов сайта крупным курсивом с засечками, кнопка онлайн-бронирования и греческий меандр внизу, узор, который видишь на тарелках и плитке по всем островам. В обеих темах оно работает одинаково.</p>
+
+<p>Стоит немного прокрутить вниз, и внизу экрана появляется панель с двумя вещами: проверить наличие мест и кнопка звонка на ресепшен. На сайте отеля бронирование никогда не должно быть дальше одного касания.</p>
+
+<p><img src="/images/journal/100-days-day-7/05-mobile-menu.webp" alt="Два телефона с полноэкранным меню, в светлой и тёмной теме, с крупными курсивными ссылками, кнопкой Online Reservation и меандром." />
+<em>Меню на весь экран: крупные ссылки с засечками, кнопка бронирования и меандр, в светлой или тёмной теме.</em></p>
+
+<h2 id="выберите-настроение--получите-план-дня">выберите настроение — получите план дня</h2>
+
+<p>Эту часть мне больше всего хотелось бы, чтобы отели забирали себе.</p>
+
+<p>Отель в Кавосе выбирают не за полотенца. Его выбирают за тот отпуск, которого хочется. Поэтому раздел спрашивает: how do you holiday?, как вы отдыхаете? Ответов четыре, в виде кнопок: sun-seeker, любитель солнца; night owl, сова; foodie, гурман; и friends and family, друзья и семья. Выберите один, и сайт набросает день в Morfeas для такого гостя, час за часом.</p>
+
+<p>День любителя солнца — весь про бассейн: завтрак в десять, а потом первым занять шезлонг, диджей в час, джакузи и коктейль в четыре, прогулка к морю перед ужином. День совы начинается в полдень на балконе, без будильника, разогревается на вечеринке у бассейна в три, продолжается греческой или тематической ночью в девять и в полночь выходит на главную улицу. День гурмана строится вокруг завтрака, бара у бассейна и ужина в ресторане отеля. День для друзей и семьи заканчивается тем, что все сидят на балконе, потому что он есть у каждого номера и апартамента.</p>
+
+<p>Каждая строка этих планов взята из того, что в отеле действительно есть. Ничего не придумано, чтобы день звучал лучше. Смысл в том, чтобы посетитель узнал в нём себя и за четыре строки понял, его ли это отель. Переключаться между настроениями можно и стрелками на клавиатуре.</p>
+
+<p><img src="/images/journal/100-days-day-7/06-plan-your-day.webp" alt="Раздел Plan your day на компьютере и телефоне: четыре кнопки настроений и план дня по часам, например Built for late nights для совы и Eat like you mean it для гурмана." />
+<em>Четыре настроения отпуска. Каждое рисует свой день в отеле, час за часом.</em></p>
+
+<h2 id="три-ночи-которые-запомнятся">три ночи, которые запомнятся</h2>
+
+<p>У вечера в Morfeas три постоянных события: вечеринка у бассейна, греческая ночь и тематические ночи. На большинстве сайтов отелей это были бы три строки в списке. Здесь это три афиши, какие висят у стойки ресепшена.</p>
+
+<p>Афиша вечеринки у бассейна — лимонно-жёлтая, с волнистыми линиями, как вода. Греческая ночь — белая, с синим меандром и надписью Opa! от руки наверху. Тематические ночи — тёмно-синие с большой жёлтой луной. На компьютере они прислонены друг к другу, как афиши на стене. На телефоне их листаешь по одной, а маленькие точки показывают, где ты. Над ними одна честная строка: спросите на ресепшене, что будет во время вашего отдыха. Даты меняются каждый сезон, и сайт, который обещает дату, которую не сможет выдержать, хуже сайта, который отправляет к стойке.</p>
+
+<p>Дальше идёт еда: ресторан отеля, завтрак, бар у бассейна, ужин и music lounge, со ссылкой на меню. Потом удобства: открытый бассейн, резидентный диджей, джакузи, два бара, ресторан, кондиционер, бесплатный Wi-Fi, бесплатная парковка и круглосуточный ресепшен.</p>
+
+<p><img src="/images/journal/100-days-day-7/07-events.webp" alt="Раздел событий с тремя афишами — Pool Party жёлтая, Greek Night белая с меандром и Theme Nights тёмно-синяя — на компьютере и телефоне, над рядом удобств." />
+<em>Pool Party, Greek Night и Theme Nights как нарисованные от руки афиши, которые на телефоне листаются пальцем.</em></p>
+
+<h2 id="ваш-отдых-в-одной-панели">ваш отдых в одной панели</h2>
+
+<p>Все кнопки бронирования на странице — в шапке, под типом номера или внизу — открывают одно и то же: панель, которая выезжает сбоку, под названием your stay, ваш отдых. Она спрашивает четыре вещи: дату заезда, дату выезда, номер в отеле или апартаменты и сколько гостей, от одного взрослого до двух взрослых с двумя детьми.</p>
+
+<p>По ходу она считает ночи и возвращает всё одной строкой: 7 ночей, апартаменты, 3 взрослых. Потом передаёт вас на защищённую страницу бронирования отеля. Если не хватает даты, она говорит об этом и ставит курсор в нужное поле, вместо того чтобы дать нажать кнопку и гадать, почему ничего не произошло.</p>
+
+<p>Внизу панели ещё одна строка: предпочитаете поговорить? Позвоните на ресепшен — номер готов к нажатию. Многие до сих пор бронируют семейный отпуск по телефону, и панель считает это совершенно нормальным ответом.</p>
+
+<p>Чтобы было ясно, что концепт делает в этот момент: панель собирает данные и отправляет посетителя на нынешний сайт отеля. Даты в концепте туда не передаются. В настоящей версии она открывала бы систему бронирования отеля с уже заполненными датами и типом номера.</p>
+
+<p><img src="/images/journal/100-days-day-7/08-booking.webp" alt="Панель бронирования Your stay поверх размытого главного экрана: даты заезда и выезда, Apartment, 3 adults, строка итога и кнопка Check availability, в светлой и тёмной теме." />
+<em>Выберите даты, тип номера и гостей. Панель посчитает ночи и передаст вас дальше. Каждая панель заканчивается номером телефона.</em></p>
+
+<h2 id="открытка-из-кавоса">открытка из Кавоса</h2>
+
+<p>Раздел контактов — это открытка. Заголовок — wish you were here, жаль, что тебя здесь нет. На левой половине — нарисованная от руки сине-белая карта юга Корфу с жёлтой булавкой и рукописным we’re here, мы здесь, рядом. Справа, где пишут текст открытки, — короткая записка: море в минуте, главная улица за углом, приезжайте. Под ней расстояния: Ионическое море — минута пешком; центр Кавоса и главная улица — 0,2 км; пляж Кавоса — 1,2 км; порт Лефкими — 5 км; аэропорт Корфу — 30 км. В углу — марка, плитка с меандром и маленьким жёлтым солнцем, и почтовый штемпель.</p>
+
+<p>Дальше — оценка гостей, такая же крупная, как название отеля наверху: 4,6 из 5, среднее по 1340 отзывам гостей на easyJet holidays, как она указана на собственном сайте отеля. Строка от семьи, кнопка проверки наличия мест и телефон. Страницу закрывает меандр.</p>
+
+<p><img src="/images/journal/100-days-day-7/09-contact-reviews.webp" alt="Раздел контактов в виде открытки Wish you were here: нарисованная от руки карта, расстояния до моря, главной улицы и аэропорта и оценка 4,6 из 5 на телефоне." />
+<em>Нарисованная от руки открытка с теми расстояниями, которые важны, и оценка гостей на самом видном месте.</em></p>
+
+<h2 id="детали">детали</h2>
+
+<p>Шрифты: DM Serif Display для заголовков, крупно и плотно, с курсивом для более тёплых слов. Jost, чистый геометрический гротеск, для всего, что читается. Caveat, рукописный шрифт, для подписи семьи, Opa! и we’re here.</p>
+
+<p>Цвета держатся близко к острову: эгейский синий ставен и дверей, глубокий ночной тёмно-синий, лимонно-жёлтый и много белого. Логотип — собственный логотип отеля.</p>
+
+<p>Заголовки при прокрутке поднимаются на место слово за словом, разделы плавно появляются, брелоки покачиваются, а звёзды над ночным бассейном мерцают. Всё это отключается для тех, кто попросил свой телефон или компьютер уменьшить анимацию, и страница без этого работает точно так же. Ползунок дня и ночи можно двигать и с клавиатуры, а не только мышью или пальцем.</p>
+
+<h2 id="что-такое-этот-концепт-и-чем-он-не-является">что такое этот концепт и чем он не является</h2>
+
+<p>Данные на странице взяты с нынешнего сайта отеля и из публичных источников: номера и апартаменты, удобства, события, адрес, телефоны, расстояния и оценка гостей. Записку от семьи и планы дня написал я, только на основе этих данных. Если семья когда-нибудь захочет, она заменит мои слова своими.</p>
+
+<p>Новое — то, как всё складывается вместе: один отель в двух настроениях, страница, которая знает, который час в Кавосе, планировщик, который говорит о типе гостя, а не о типе номера, и шаг бронирования, который не уводит со страницы, пока вы не готовы.</p>
+
+<p>Цифр по бронированиям у меня нет, и придумывать их я не буду. Если в Morfeas это никому не нужно, концепт останется там, где он есть, седьмым днём. Если нужно, остальное — практическая работа: их слова вместо моих, их фотографии рядом с рисунками, панель бронирования, подключённая к их системе бронирования, версия на греческом и перенос сайта на morfeashotel.com.</p>
+
+<h2 id="если-ваш-бизнес-меняется-вместе-с-часами">если ваш бизнес меняется вместе с часами</h2>
+
+<p>Возможно, у вас нет отеля в Кавосе. Но у многих компаний два лица: пляжный бар, который становится коктейль-баром, кафе, где подают ужины, ресторан с тихим обедом и шумной субботней ночью, площадка, где днём свадьбы, а вечером концерты. Их сайты обычно показывают только одно из двух, а второй половине клиентов приходится гадать.</p>
+
+<p>Помогает то же, что и здесь. Покажите оба настроения и дайте людям выбрать. Используйте время суток, если оно важно. Описывайте впечатление в том порядке, в каком его проживает гость, а не в порядке прайс-листа. Держите кнопку бронирования под рукой на каждом экране. И всегда оставляйте телефон для тех, кто предпочитает поговорить.</p>
+
+<p>Я веб-дизайнер из Эстепоны, на Коста-дель-Соль, и проектирую и делаю сайты для компаний в Испании и за её пределами. Если это похоже на ваш бизнес, напишите мне через <a href="https://wellyington.github.io/ru/">основной сайт</a>. Расскажите, чем вы занимаетесь и где, и я отвечу простым языком. Концепт <a href="https://wellyington.github.io/challenge/day7/">здесь</a>, а нынешний сайт Morfeas Hotel <a href="https://www.morfeashotel.com/">здесь</a>, чтобы вы могли их сравнить. Семь готово, осталось девяносто три.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>100 дней</li><li>кейс</li><li>отель</li><li>корфу</li><li>светлая и тёмная тема</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><a class="pager-cell rollable" href="/journal/ru/articles/ot-prilavka-do-cheka/">
+      <span class="label">← предыдущая</span>
+      <span class="pager-title">от прилавка до чека<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Читайте дальше</span>
+    <h2 id="more-title" class="h-section">ещё записи.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/ru/articles/ot-prilavka-do-cheka/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp" alt="Обложка кейса концепта сайта El Dorado: меню Haz tu comanda на компьютере с напитками, бумажный чек заказа справа и телефон с меню и панелью Mi comanda." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 007</span>
+</div>
+<span class="label">100 дней · 22.11.26</span><span class="card-title">от прилавка до чека<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp" alt="Обложка кейса с концептом сайта Espacio IME: Design Challenge, день 5, тёмная главная на компьютере с заголовком Un viaje por los sabores de la Costa Tropical и телефон в светлой теме с местными продуктами." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 006</span>
+</div>
+<span class="label">100 дней · 21.11.26</span><span class="card-title">так же тщательно, как на кухне<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/suzhdenie-vazhnee-obema/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Обложка кейса с концептом сайта Nina Estate: первый экран разделён между светлой каменной и почти чёрной тёмной темой, вилла с бассейном в сумерках, рядом тот же сайт на телефоне." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 004</span>
+</div>
+<span class="label">100 дней · 20.11.26</span><span class="card-title">суждение важнее объёма<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

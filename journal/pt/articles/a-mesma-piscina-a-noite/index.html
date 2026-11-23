@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diário" href="/journal/pt/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-misma-piscina-de-noche/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4XBY16BPLY');
+  function loadWellyAnalytics() {
+    if (window.__wellyGa) return;
+    window.__wellyGa = true;
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", function () {
+    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
+    else window.setTimeout(loadWellyAnalytics, 1200);
+  });
+</script>
+<title>Conceito de site de hotel com modo dia e noite: Morfeas, Kavos · Wellyington</title>
+<meta name="description" content="Um conceito independente de site para o Morfeas Hotel em Kavos, Corfu: abertura do dia para a noite, temas claro e escuro, roteiro do dia por estilo, cartaze...">
+<meta name="keywords" content="conceito de design de site para hotel, redesign de site para hotel familiar, site de hotel com modo claro e escuro, site com abertura de dia e de noite deslizante, site de reservas de hotel pensado para o celular, hotel em Kavos Corfu, design de site para hotel em ilha grega, site para hotel de festa em Kavos, web designer independente na Espanha, desafio 100 dias 100 sites">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Diário">
+<meta property="og:title" content="Conceito de site de hotel com modo dia e noite: Morfeas, Kavos">
+<meta property="og:description" content="Um conceito independente de site para o Morfeas Hotel em Kavos, Corfu: abertura do dia para a noite, temas claro e escuro, roteiro do dia por estilo, cartaze...">
+<meta property="og:url" content="https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp">
+<meta property="og:image:alt" content="Capa do caso do conceito de site do Morfeas Hotel: Design Challenge Day 7, de dia e de noite, um computador com a abertura ilustrada dividida entre uma piscina ao sol e outra sob a lua, e um celular com a mesma cena.">
+<meta property="article:published_time" content="2026-11-23T19:30:00+01:00">
+<meta property="article:modified_time" content="2026-11-23T19:30:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 dias">
+<meta property="article:tag" content="conceito de design de site para hotel">
+<meta property="article:tag" content="redesign de site para hotel familiar">
+<meta property="article:tag" content="site de hotel com modo claro e escuro">
+<meta property="article:tag" content="site com abertura de dia e de noite deslizante">
+<meta property="article:tag" content="site de reservas de hotel pensado para o celular">
+<meta property="article:tag" content="hotel em Kavos Corfu">
+<meta property="article:tag" content="design de site para hotel em ilha grega">
+<meta property="article:tag" content="site para hotel de festa em Kavos">
+<meta property="article:tag" content="web designer independente na Espanha">
+<meta property="article:tag" content="desafio 100 dias 100 sites">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Conceito de site de hotel com modo dia e noite: Morfeas, Kavos">
+<meta name="twitter:description" content="Um conceito independente de site para o Morfeas Hotel em Kavos, Corfu: abertura do dia para a noite, temas claro e escuro, roteiro do dia por estilo, cartaze...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp">
+<meta name="twitter:image:alt" content="Capa do caso do conceito de site do Morfeas Hotel: Design Challenge Day 7, de dia e de noite, um computador com a abertura ilustrada dividida entre uma piscina ao sol e outra sob a lua, e um celular com a mesma cena.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/#article",
+      "url": "https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/",
+      "headline": "Conceito de site de hotel com modo dia e noite: Morfeas, Kavos",
+      "alternativeHeadline": "a mesma piscina à noite",
+      "description": "Um conceito independente de site para o Morfeas Hotel em Kavos, Corfu: abertura do dia para a noite, temas claro e escuro, roteiro do dia por estilo, cartaze...",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-11-23T19:30:00+01:00",
+      "dateModified": "2026-11-23T19:30:00+01:00",
+      "articleSection": "100 dias",
+      "keywords": "conceito de design de site para hotel, redesign de site para hotel familiar, site de hotel com modo claro e escuro, site com abertura de dia e de noite deslizante, site de reservas de hotel pensado para o celular, hotel em Kavos Corfu, design de site para hotel em ilha grega, site para hotel de festa em Kavos, web designer independente na Espanha, desafio 100 dias 100 sites",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp", "caption": "Capa do caso do conceito de site do Morfeas Hotel: Design Challenge Day 7, de dia e de noite, um computador com a abertura ilustrada dividida entre uma piscina ao sol e outra sob a lua, e um celular com a mesma cena." },
+      "about": {
+        "@type": "Hotel",
+        "name": "Morfeas Hotel", "url": "https://www.morfeashotel.com/", "address": { "@type": "PostalAddress", "addressLocality": "Kavos, Corfu", "addressCountry": "GR" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 dias", "url": "https://wellyington.github.io/journal/pt/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Diário", "item": "https://wellyington.github.io/journal/pt/" },
+        { "@type": "ListItem", "position": 2, "name": "a mesma piscina à noite", "item": "https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/pt/" class="bar-cell bar-brand" aria-label="Wellyington Diário">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diário</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Horário local e no que estou trabalhando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escrevendo</span><span>notas sobre lançar pequeno</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Ouvindo</span><span>Wellyington — demos de estúdio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/the-same-pool-after-dark/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-misma-piscina-de-noche/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/a-mesma-piscina-a-noite/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/tot-zhe-bassein-nochyu/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Mudar para o tema escuro" data-label-dark="Mudar para o tema escuro" data-label-light="Mudar para o tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Escuro"></span><span class="theme-word" data-light="Claro" data-dark="Escuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menu" data-label-open="Abrir menu" data-label-close="Fechar menu" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegação" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegação">
+      <p class="label">Navegação</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/pt/" class="rollable">
+            <span class="roll"><span>diário.</span><span aria-hidden="true">diário.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/archive/" class="rollable">
+            <span class="roll"><span>arquivo.</span><span aria-hidden="true">arquivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/about/" class="rollable">
+            <span class="roll"><span>sobre.</span><span aria-hidden="true">sobre.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>site principal.</span><span aria-hidden="true">site principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/pt/articles/a-mesma-piscina-a-noite/" class="menu-entry">
+            <span class="mono dim">Nº 008</span>
+            <span>a mesma piscina à noite<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/do-balcao-a-comanda/" class="menu-entry">
+            <span class="mono dim">Nº 007</span>
+            <span>do balcão à comanda<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/" class="menu-entry">
+            <span class="mono dim">Nº 006</span>
+            <span>tão cuidadoso quanto a cozinha<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/o-site-que-cuida-de-si-mesmo/" class="menu-entry">
+            <span class="mono dim">Nº 005</span>
+            <span>o site que cuida de si mesmo<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/the-same-pool-after-dark/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/la-misma-piscina-de-noche/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/a-mesma-piscina-a-noite/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/tot-zhe-bassein-nochyu/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/pt/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/pt/" class="entry-cell entry-back rollable"><span class="roll"><span>← diário</span><span aria-hidden="true">← diário</span></span></a>
+    <span class="entry-cell mono">Nº 008</span>
+    <span class="entry-cell label">100 dias</span>
+    <time class="entry-cell" datetime="2026-11-23T19:30:00+01:00">23 de novembro de 2026</time>
+    <span class="entry-cell">13 min de leitura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">a mesma piscina à noite<span class="dot">.</span></h1><p class="entry-lede">Dia sete de cem: um conceito de site para o Morfeas Hotel, um hotel familiar em Kavos, Corfu, que muda com a hora do dia, de uma piscina ao sol para a mesma piscina sob a lua.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp" alt="Capa do caso do conceito de site do Morfeas Hotel: Design Challenge Day 7, de dia e de noite, um computador com a abertura ilustrada dividida entre uma piscina ao sol e outra sob a lua, e um celular com a mesma cena." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 008</span>
+</div>
+<p class="caption label">Dia sete. Um conceito para o Morfeas Hotel em Kavos, de dia de um lado e de noite do outro.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="nesta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">nesta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartilhar.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar link</span><span aria-hidden="true">copiar link</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fa-mesma-piscina-a-noite%2F&text=a+mesma+piscina+%C3%A0+noite"><span class="roll"><span>publicar no X</span><span aria-hidden="true">publicar no X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fa-mesma-piscina-a-noite%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>Em 23 de novembro publiquei a sétima nota desta série, o desafio que Ramiah Trask lançou: cem dias, cem negócios, cem sites. O dia um foi uma construtora familiar da Marina Alta. <a href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/">Essa página está aqui.</a> O dia dois, um teatro de Málaga. <a href="https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/">Essa está aqui.</a> O dia três, um restaurante familiar de Estepona. <a href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/">Essa está aqui.</a> O dia quatro, uma consultoria imobiliária privada de Málaga. <a href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/">Essa está aqui.</a> O dia cinco, um restaurante de menu degustação em Motril. <a href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/">Essa está aqui.</a> O dia seis, uma casa de frango assado em Estepona. <a href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/">Essa está aqui.</a></p>
+
+<p>Hoje é o primeiro negócio da série fora da Espanha. O Morfeas Hotel é um hotel familiar com quartos e apartamentos em Kavos, na ponta sul de Corfu. Fica a um minuto do mar Jônico e a poucos minutos a pé da rua principal de Kavos, famosa por uma coisa: a vida noturna. O hotel leva o nome de Morfeu, o deus grego dos sonhos. O site dele está em <a href="https://www.morfeashotel.com/">morfeashotel.com</a>.</p>
+
+<p>O conceito está aqui: <a href="https://wellyington.github.io/challenge/day7/">Morfeas Hotel, dia sete</a>.</p>
+
+<p>Este é um conceito de redesign independente. Não é uma colaboração oficial com o Morfeas Hotel, ninguém lá me pediu isso e nada na página significa que eles aprovaram. Como os seis anteriores, por enquanto ele mora no meu próprio endereço.</p>
+
+<h2 id="um-hotel-duas-férias">um hotel, duas férias</h2>
+
+<p>A maioria dos sites de hotel descreve um tipo de férias. Uma piscina, um quarto, um café da manhã, um pôr do sol. Isso funciona para um hotel tranquilo. Não funciona para um hotel em Kavos.</p>
+
+<p>Os hóspedes do Morfeas têm duas férias na mesma semana, às vezes no mesmo dia. De dia é a piscina: espreguiçadeiras, bebidas geladas, o DJ residente. À noite é o jantar da cozinha do hotel e depois a festa, no hotel ou na rua logo ali. As mesmas pessoas, a mesma piscina, dois climas diferentes. O hotel já diz isso numa das suas frases: dream by day, dance by night. Sonhe de dia, dance à noite.</p>
+
+<p>Então, em vez de escolher um dos dois, o conceito mostra os dois, e deixa quem visita decidir qual está vendo.</p>
+
+<p><img src="/images/journal/100-days-day-7/01-cover.webp" alt="Design Challenge Day 7: Morfeas Hotel, dream by day, dance by night. Um computador com a abertura dividida entre o dia e a noite, e um celular com a mesma cena." />
+<em>Dia sete: um hotel, uma piscina, dois climas.</em></p>
+
+<h2 id="deslize-do-dia-para-a-noite">deslize do dia para a noite</h2>
+
+<p>O topo da página é um desenho, não uma fotografia: o prédio branco do hotel com as suas janelas azuis, um guarda-sol, duas espreguiçadeiras, o mar atrás e uma piscina em primeiro plano. A palavra Morfeas atravessa tudo numa serifa grande, do tamanho que a tela permitir.</p>
+
+<p>O desenho existe duas vezes, uma de dia e outra de noite, colocadas exatamente uma sobre a outra. No meio há uma pequena alça com um sol de um lado e uma lua do outro. Arraste-a, e a linha entre os dois desenhos acompanha o seu dedo. À esquerda, um céu azul-claro e a frase dream by day. À direita, um céu azul-marinho, estrelas, uma lua crescente, a silhueta de uma palmeira, um varal de luzes de festa sobre a água e um feixe de luz subindo da piscina. Ali a frase diz dance by night. Leve a alça até o fim e o hotel inteiro passa do meio-dia à meia-noite.</p>
+
+<p>Quando a página abre, a alça não está no meio. Ela pende para a hora que for em Kavos. Quem chega à tarde vê quase só o dia. Quem olha às onze da noite, horário de Corfu, vê quase só a noite. Um pequeno relógio no cabeçalho mostra a hora em Kavos com um sol ou uma lua ao lado, o que é pouca coisa, mas útil para quem planeja as férias de outro fuso horário.</p>
+
+<p>Desenhei a cena em vez de usar fotografias por dois motivos. Um desenho pode passar do dia para a noite sem uma segunda sessão de fotos. E, pequeno, num celular, um desenho simples se entende mais rápido do que a foto cheia de detalhes de uma piscina lotada.</p>
+
+<p><img src="/images/journal/100-days-day-7/02-day-night.webp" alt="A abertura do dia para a noite: o hotel e a piscina ilustrados, divididos ao meio por uma alça com sol e lua, com o dia à esquerda e uma noite de lua à direita, e duas vistas menores com quase só dia e quase só noite." />
+<em>Arraste a alça e a beira da piscina passa do meio-dia à meia-noite. Quando a página abre, ela pende para a hora em Kavos.</em></p>
+
+<h2 id="um-tema-claro-e-um-escuro">um tema claro e um escuro</h2>
+
+<p>A abertura não é a única coisa que muda. O site inteiro tem um tema claro e um escuro.</p>
+
+<p>O tema claro é um dia de piscina: páginas brancas, o azul Egeu das janelas e portas gregas, e toques de amarelo-limão. O tema escuro é o mesmo site depois do pôr do sol: páginas azul-marinho profundo, azul-claro para links e botões, o mesmo amarelo-limão. Nenhum dos dois foi feito de última hora. Desenhei os dois, seção por seção, para que a versão escura não seja só a clara com as cores invertidas.</p>
+
+<p>Um botão com uma lua ou um sol no cabeçalho alterna entre eles. O site lembra a escolha na próxima visita. Se a pessoa nunca apertou o botão, o site segue o que o celular ou o computador dela já estiver usando. Trocar o tema também move a alça da abertura, para que o desenho do topo combine com o resto da página.</p>
+
+<p><img src="/images/journal/100-days-day-7/03-light-theme.webp" alt="O tema claro: a abertura pendendo para o dia, a seção Named after the god of dreams com um recado da família, e um celular com a seção How do you holiday e os botões de estilo." />
+<em>O tema claro: páginas brancas, azul Egeu e amarelo-limão, com o recado da própria família logo no começo.</em></p>
+
+<p><img src="/images/journal/100-days-day-7/04-dark-theme.webp" alt="O tema escuro: a seção de hospedagem, Your key to Kavos, com um chaveiro azul para os quartos e um amarelo para os apartamentos, e o começo da seção de eventos, num computador e num celular." />
+<em>O tema escuro. Um toque na lua e o site inteiro fica azul-marinho, e continua assim na próxima vez.</em></p>
+
+<h2 id="um-recado-da-família">um recado da família</h2>
+
+<p>Abaixo da abertura, a primeira coisa para ler não é uma lista de serviços. É um recado curto da família, assinado à mão: o Morfeas é um hotel familiar na ponta sul de Corfu, a um minuto do mar e a poucos minutos a pé da rua principal. De dia, a piscina. À noite, o jantar da própria cozinha e depois a festa. Fique uma semana e você vai embora se sentindo parte da família.</p>
+
+<p>Ao lado, três números em letra grande: 55 quartos e apartamentos, um minuto até o mar, 30 quilômetros do aeroporto. Eles respondem às três perguntas que as pessoas fazem sobre qualquer hotel de ilha antes de qualquer outra: qual o tamanho, a que distância fica o mar, a que distância fica o aeroporto.</p>
+
+<h2 id="a-sua-chave-de-kavos">a sua chave de Kavos</h2>
+
+<p>A seção de hospedagem se chama your key to Kavos, a sua chave de Kavos, e cada tipo de estadia tem o seu próprio chaveiro, daqueles antigos que ficam pendurados na chave da recepção. Um azul para os quartos do hotel. Um amarelo para os apartamentos. Eles balançam de leve quando aparecem na tela.</p>
+
+<p>Os quartos são de casal ou com duas camas, cada um com a sua varanda, ar-condicionado, televisão, cofre, secador de cabelo e banheiro com chuveiro. Os apartamentos têm mais espaço, para amigos e famílias que viajam juntos, com berço sob pedido e estacionamento gratuito. Cada tipo tem um botão para ver datas, que abre a gaveta de reserva com esse tipo já escolhido.</p>
+
+<h2 id="um-menu-que-ocupa-a-tela">um menu que ocupa a tela</h2>
+
+<p>No celular, o cabeçalho se reduz a três coisas: o logotipo, um botão Book e o botão do menu. Toque no menu e ele ocupa a tela inteira com as seis seções do site em letras grandes, em serifa itálica, um botão de reserva online e uma grega na parte de baixo, o desenho que se vê em pratos e azulejos por todas as ilhas. Funciona igual nos dois temas.</p>
+
+<p>Assim que você desce um pouco, uma barra se acomoda na parte de baixo da tela com duas coisas: ver disponibilidade e um botão que liga para a recepção. Num site de hotel, reservar nunca deveria estar a mais de um toque.</p>
+
+<p><img src="/images/journal/100-days-day-7/05-mobile-menu.webp" alt="Dois celulares com o menu em tela cheia, um no tema claro e outro no escuro, com links grandes em itálico, um botão Online Reservation e uma grega." />
+<em>O menu ocupa a tela: links grandes em serifa, um botão de reserva e uma grega, no claro ou no escuro.</em></p>
+
+<h2 id="escolha-um-estilo-ganhe-um-roteiro">escolha um estilo, ganhe um roteiro</h2>
+
+<p>Esta é a parte que eu mais gostaria que um hotel copiasse.</p>
+
+<p>Ninguém escolhe um hotel em Kavos pelas toalhas. Escolhe pelo tipo de férias que quer. Então a seção pergunta: how do you holiday?, como você gosta de passar as férias? Há quatro respostas, em botões: sun-seeker, quem busca sol; night owl, a coruja da noite; foodie, quem viaja pela comida; e friends and family, amigos e família. Escolha uma, e o site desenha um dia no Morfeas para esse tipo de hóspede, hora a hora.</p>
+
+<p>O dia de quem busca sol gira em torno da piscina: café da manhã às dez e depois a primeira escolha de espreguiçadeira, o DJ à uma, a hidromassagem e um coquetel às quatro, uma caminhada até o mar antes do jantar. O dia da coruja da noite começa ao meio-dia na varanda, sem despertador, esquenta na festa da piscina às três, segue para a noite grega ou uma noite temática às nove e chega à rua da festa à meia-noite. O dia de quem viaja pela comida gira em torno do café da manhã, do bar da piscina e do jantar no restaurante do hotel. O de amigos e família termina com todo mundo na varanda, porque cada quarto e cada apartamento tem uma.</p>
+
+<p>Cada linha desses roteiros vem de coisas que o hotel realmente tem. Nada foi inventado para o dia parecer melhor. A ideia é que quem visita se veja ali e, em quatro linhas, saiba se esse é o seu tipo de hotel. Também dá para passar de um estilo a outro com as setas do teclado.</p>
+
+<p><img src="/images/journal/100-days-day-7/06-plan-your-day.webp" alt="A seção Plan your day num computador e num celular: quatro botões de estilo e um roteiro do dia com horários, como Built for late nights para a coruja da noite e Eat like you mean it para quem viaja pela comida." />
+<em>Quatro estilos de férias. Cada um desenha um dia diferente no hotel, hora a hora.</em></p>
+
+<h2 id="três-noites-para-lembrar">três noites para lembrar</h2>
+
+<p>A noite no Morfeas tem três programas regulares: a festa na piscina, a noite grega e as noites temáticas. Na maioria dos sites de hotel seriam três linhas numa lista. Aqui são três cartazes, daqueles que você veria colados perto da recepção.</p>
+
+<p>O cartaz da festa na piscina é amarelo-limão com linhas onduladas como a água. O da noite grega é branco, com uma grega azul e Opa! escrito à mão no alto. O das noites temáticas é azul-marinho com uma grande lua amarela. No computador eles se apoiam uns nos outros como cartazes numa parede. No celular você passa de um para o outro deslizando, com pontinhos que mostram onde você está. Acima deles, uma frase honesta: pergunte na recepção o que vai ter durante a sua estadia. As datas mudam a cada temporada, e um site que promete uma data que não pode cumprir é pior do que um que manda você ao balcão.</p>
+
+<p>Depois vem a comida, com o restaurante do hotel, o café da manhã, o bar da piscina, o jantar e o music lounge, e um link para os cardápios. Em seguida, a estrutura: a piscina ao ar livre, o DJ residente, a hidromassagem, dois bares, o restaurante, ar-condicionado, Wi-Fi grátis, estacionamento gratuito e uma recepção aberta 24 horas.</p>
+
+<p><img src="/images/journal/100-days-day-7/07-events.webp" alt="A seção de eventos com três cartazes, Pool Party em amarelo, Greek Night em branco com uma grega e Theme Nights em azul-marinho, num computador e num celular, acima de uma fileira de itens da estrutura." />
+<em>Pool Party, Greek Night e Theme Nights como cartazes feitos à mão, que se passam deslizando no celular.</em></p>
+
+<h2 id="a-sua-estadia-numa-gaveta">a sua estadia, numa gaveta</h2>
+
+<p>Todos os botões de reserva da página, seja no cabeçalho, embaixo de um tipo de quarto ou no fim, abrem a mesma coisa: uma gaveta que desliza de lado, chamada your stay, a sua estadia. Ela pede quatro coisas: data de entrada, data de saída, quarto de hotel ou apartamento, e quantas pessoas, de um adulto até dois adultos e duas crianças.</p>
+
+<p>Ela conta as noites enquanto você preenche e devolve tudo numa linha: 7 noites, apartamento, 3 adultos. Depois leva você à página de reserva segura do hotel. Se faltar uma data, ela avisa e coloca o cursor no campo certo, em vez de deixar você apertar o botão e ficar sem saber por que nada aconteceu.</p>
+
+<p>No fim da gaveta há mais uma linha: prefere conversar? Ligue para a recepção, com o número pronto para tocar. Muita gente ainda reserva as férias da família por telefone, e a gaveta trata isso como uma resposta perfeitamente boa.</p>
+
+<p>Para deixar claro o que o conceito faz nesse ponto: a gaveta reúne os dados e leva quem visita ao site atual do hotel. No conceito, as datas não são passadas de um lado para o outro. Numa versão real, ela abriria o sistema de reservas do hotel com as datas e o tipo de quarto já preenchidos.</p>
+
+<p><img src="/images/journal/100-days-day-7/08-booking.webp" alt="A gaveta de reserva Your stay aberta sobre a abertura desfocada, com datas de entrada e saída, Apartment, 3 adults, uma linha de resumo e um botão Check availability, nos temas claro e escuro." />
+<em>Escolha datas, tipo de quarto e pessoas. Ela conta as noites e depois leva você adiante. Toda gaveta termina com um número para ligar.</em></p>
+
+<h2 id="um-cartão-postal-de-kavos">um cartão-postal de Kavos</h2>
+
+<p>A seção de contato é um cartão-postal. O título é wish you were here, queria que você estivesse aqui. Na metade esquerda há um mapa desenhado à mão do sul de Corfu em azul e branco, com um alfinete amarelo e we’re here, estamos aqui, escrito à mão ao lado. À direita, onde você escreveria a mensagem, há um recado curto: o mar está a um minuto, a rua da festa logo ali na esquina, venha ficar. Embaixo, as distâncias: o mar Jônico, a um minuto a pé; o centro de Kavos e a rua da festa, a 0,2 km; a praia de Kavos, a 1,2 km; o porto de Lefkimmi, a 5 km; o aeroporto de Corfu, a 30 km. Num canto há um selo, um azulejo com uma grega e um pequeno sol amarelo, e um carimbo.</p>
+
+<p>Depois, a avaliação dos hóspedes, tão grande quanto o nome do hotel no topo: 4,6 de 5, a média de 1.340 avaliações de hóspedes no easyJet holidays, como aparece no próprio site do hotel. Uma frase da família, um botão para ver disponibilidade e o telefone. Uma grega fecha a página.</p>
+
+<p><img src="/images/journal/100-days-day-7/09-contact-reviews.webp" alt="A seção de contato como um cartão-postal, Wish you were here, com um mapa desenhado à mão, distâncias até o mar, a rua da festa e o aeroporto, e a avaliação de 4,6 de 5 num celular." />
+<em>Um cartão-postal desenhado à mão com as distâncias que importam, e a avaliação dos hóspedes em destaque.</em></p>
+
+<h2 id="os-detalhes">os detalhes</h2>
+
+<p>A tipografia é DM Serif Display nos títulos, grande e apertada, com itálico nas palavras mais calorosas. Jost, uma sem serifa geométrica e limpa, em tudo o que se lê. Caveat, uma letra manuscrita, na assinatura da família, no Opa! e no we’re here.</p>
+
+<p>As cores ficam perto da ilha: o azul Egeu das janelas e portas, um azul-marinho profundo de noite, amarelo-limão e muito branco. O logotipo é o do próprio hotel.</p>
+
+<p>Os títulos sobem para o lugar palavra por palavra enquanto você rola, as seções aparecem suavemente, os chaveiros balançam e as estrelas sobre a piscina à noite piscam. Tudo isso se desliga para quem pediu ao celular ou ao computador que reduza as animações, e a página funciona exatamente igual sem isso. A alça do dia e da noite também pode ser movida pelo teclado, não só pelo mouse ou pelo dedo.</p>
+
+<h2 id="o-que-o-conceito-é-e-o-que-não-é">o que o conceito é, e o que não é</h2>
+
+<p>Os dados da página vêm do site atual do hotel e das suas páginas públicas: os quartos e apartamentos, a estrutura, os eventos, o endereço, os telefones, as distâncias e a avaliação dos hóspedes. O recado da família e os roteiros do dia foram escritos por mim, só a partir desses dados. Se um dia a família quisesse, trocaria as minhas palavras pelas dela.</p>
+
+<p>O que é novo é o jeito como tudo se encaixa: um hotel mostrado em dois climas, uma página que sabe que horas são em Kavos, um roteiro que fala do tipo de hóspede e não do tipo de quarto, e uma etapa de reserva que não tira você da página até que esteja pronto.</p>
+
+<p>Não tenho números de reservas, e não vou inventar nenhum. Se ninguém no Morfeas quiser isso, o conceito fica onde está, como dia sete. Se quiserem, o resto é prático: as palavras deles no lugar das minhas, as fotografias deles ao lado dos desenhos, a gaveta de reserva ligada ao sistema de reservas deles, uma versão em grego e o site levado para morfeashotel.com.</p>
+
+<h2 id="se-o-seu-negócio-muda-com-a-hora">se o seu negócio muda com a hora</h2>
+
+<p>Talvez você não tenha um hotel em Kavos. Mas muitos negócios têm duas caras: um quiosque de praia que vira bar de coquetéis, uma cafeteria que serve jantar, um restaurante com um almoço tranquilo e um sábado à noite barulhento, um espaço que recebe casamentos de dia e shows à noite. Os sites deles costumam mostrar só uma das duas, e a outra metade dos clientes precisa adivinhar.</p>
+
+<p>O que ajuda é o mesmo que aqui. Mostre os dois climas, e deixe as pessoas escolherem. Use a hora do dia, se ela importa. Descreva a experiência na ordem em que o cliente a vive, não na ordem da sua tabela de preços. Mantenha o botão de reserva ao alcance em todas as telas. E deixe sempre um telefone para quem prefere conversar.</p>
+
+<p>Sou web designer em Estepona, na Costa del Sol, e desenho e construo sites para negócios na Espanha e fora dela. Se isto parece com o seu negócio, escreva para mim pelo <a href="https://wellyington.github.io/pt/">site principal</a>. Conte o que você faz e onde, e eu respondo em linguagem simples. O conceito está <a href="https://wellyington.github.io/challenge/day7/">aqui</a>, e o site atual do Morfeas Hotel <a href="https://www.morfeashotel.com/">aqui</a>, para você comparar os dois. Sete feitos, faltam noventa e três.</p>
+
+      <p class="fin" aria-label="Fim da entrada">fim.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">arquivado em</span>
+    <ul class="chips"><li>100 dias</li><li>caso real</li><li>hotel</li><li>corfu</li><li>claro e escuro</li></ul>
+  </div><nav class="rail pager" aria-label="mais entradas."><a class="pager-cell rollable" href="/journal/pt/articles/do-balcao-a-comanda/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">do balcão à comanda<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">a entrada mais recente.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Continue lendo</span>
+    <h2 id="more-title" class="h-section">mais entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/pt/articles/do-balcao-a-comanda/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp" alt="Capa do caso do conceito de site do El Dorado: o cardápio Haz tu comanda num computador com as bebidas, uma comanda de papel à direita e um celular com o cardápio e a barra Mi comanda." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 007</span>
+</div>
+<span class="label">100 dias · 22.11.26</span><span class="card-title">do balcão à comanda<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp" alt="Capa do caso do conceito de site para o Espacio IME: Design Challenge dia 5, a página inicial escura num computador com o título Un viaje por los sabores de la Costa Tropical e um celular no tema claro com o produto local." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 006</span>
+</div>
+<span class="label">100 dias · 21.11.26</span><span class="card-title">tão cuidadoso quanto a cozinha<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/criterio-antes-de-volume/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-4/09-cover.webp" alt="Capa do caso de um conceito de site para a Nina Estate: a abertura dividida entre um tema claro cor de pedra e um tema escuro quase preto, com uma villa com piscina ao entardecer, e o mesmo site num celular." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 004</span>
+</div>
+<span class="label">100 dias · 20.11.26</span><span class="card-title">critério antes de volume<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independente por design · Escrito em público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/pt/" class="rollable"><span class="roll"><span>diário</span><span aria-hidden="true">diário</span></span>
+    </a><a href="/journal/pt/archive/" class="rollable"><span class="roll"><span>arquivo</span><span aria-hidden="true">arquivo</span></span>
+    </a><a href="/journal/pt/about/" class="rollable"><span class="roll"><span>sobre</span><span aria-hidden="true">sobre</span></span>
+    </a><a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>site principal</span><span aria-hidden="true">site principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">em outros lugares</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/pt/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escreva para mim</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Eu leio todas as respostas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Composto em Space Grotesk · Feito com Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
