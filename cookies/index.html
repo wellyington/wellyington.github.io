@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookie policy · Wellyington</title>
+  <meta name="description" content="Which cookies and local storage wellyington.github.io uses, what each one does, how long it lasts and how to accept, reject or change your choice.">
+  <link rel="canonical" href="https://wellyington.github.io/cookies/">
+  <link rel="alternate" hreflang="en" href="https://wellyington.github.io/cookies/">
+  <link rel="alternate" hreflang="es" href="https://wellyington.github.io/es/cookies/">
+  <link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/cookies/">
+  <link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/cookies/">
+  <link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/cookies/">
+  <meta name="theme-color" content="#e3fdfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17484d" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("welly-theme");
+        var theme = saved === "light" || saved === "dark" ? saved
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/site.css">
+  <style>
+    .legal { font-size: 1.0625rem; line-height: 1.7; }
+    .legal h2 { margin: 3rem 0 .75rem; font-size: 1.6rem; font-weight: 700; line-height: 1.15; letter-spacing: -.04em; }
+    .legal h3 { margin: 1.75rem 0 .5rem; font-size: 1.15rem; font-weight: 700; letter-spacing: -.02em; }
+    .legal p, .legal ul { margin: .75rem 0; max-width: 68ch; }
+    .legal ul { list-style: disc; padding-left: 1.25rem; }
+    .legal li { margin: .35rem 0; }
+    .legal a { text-decoration: underline; text-underline-offset: 3px; }
+    .legal .table { overflow-x: auto; margin: 1rem 0; }
+    .legal table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .95rem; }
+    .legal th, .legal td { border: 1px solid currentColor; padding: .55rem .7rem; text-align: left; vertical-align: top; }
+    .legal th { font-weight: 700; }
+    .legal td:first-child { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85rem; overflow-wrap: anywhere; }
+    .legal-nav a[aria-current="page"] { font-weight: 700; text-decoration: none; }
+  </style>
+  <script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="#17484d" data-fg="#e3fdfd" defer></script>
+</head>
+<body class="bg-brand-cream font-sans text-brand-primary antialiased">
+  <header class="flex flex-wrap items-center justify-between gap-2 border-b border-brand-primary/50">
+    <a href="/" class="site-wordmark inline-flex min-h-14 items-center whitespace-nowrap px-3 font-bold tracking-[-0.06em] md:px-5">Wellyington</a>
+    <nav class="flex flex-wrap text-sm" aria-label="Language">
+      <a class="inline-flex min-h-11 items-center px-2 underline underline-offset-4" href="/cookies/" hreflang="en" lang="en" aria-current="page">English</a>
+      <a class="inline-flex min-h-11 items-center px-2 underline underline-offset-4" href="/es/cookies/" hreflang="es" lang="es">Español</a>
+      <a class="inline-flex min-h-11 items-center px-2 underline underline-offset-4" href="/pt/cookies/" hreflang="pt-BR" lang="pt-BR">Português</a>
+      <a class="inline-flex min-h-11 items-center px-2 underline underline-offset-4" href="/ru/cookies/" hreflang="ru" lang="ru">Русский</a>
+    </nav>
+  </header>
+  <main id="top" class="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em]">Legal</p>
+    <h1 class="text-5xl font-bold leading-[0.9] tracking-[-0.06em] md:text-7xl">Cookie policy</h1>
+    <p class="mt-6 text-sm uppercase tracking-[0.14em] opacity-75">Last updated: <time datetime="2026-11-24">24 November 2026</time></p>
+    <div class="legal mt-10">
+<p>Cookies are small files a website saves in your browser. Local storage does a similar job, but the data never leaves your device. This page lists everything wellyington.github.io saves, and how to change your choice.</p>
+
+<h2>The short version</h2>
+<p>The only thing that needs your consent is Google Analytics, which counts visits. It does not run, and sets no cookies, until you press <em>Accept analytics</em>. If you press <em>Reject</em>, or do nothing, nothing is sent to Google. Everything else the site saves is needed for a feature you use, such as remembering dark mode, and stays on your device.</p>
+
+<h2>Needed for the site to work (no consent required)</h2>
+<div class="table"><table>
+<thead><tr><th>Name</th><th>Type</th><th>What it does</th><th>How long</th></tr></thead>
+<tbody>
+<tr><td>welly-consent</td><td>Local storage</td><td>Remembers whether you accepted or rejected analytics.</td><td>12 months</td></tr>
+<tr><td>welly-theme, journal-theme</td><td>Local storage</td><td>Remembers light or dark mode on the main site and the journal.</td><td>Until you clear it</td></tr>
+<tr><td>welly-lang</td><td>Local storage</td><td>Remembers the language you chose.</td><td>Until you clear it</td></tr>
+<tr><td>welly-lang-hint</td><td>Session storage</td><td>Hides the language suggestion once you close it.</td><td>Until you close the tab</td></tr>
+<tr><td>Theme keys on the 100 Days concept pages (for example morfeas-theme, ime-mode)</td><td>Local or session storage</td><td>Remember light or dark mode, or that the intro has played, on that concept page.</td><td>Until you clear it, or close the tab</td></tr>
+</tbody>
+</table></div>
+
+<h2>Analytics (only with your consent)</h2>
+<div class="table"><table>
+<thead><tr><th>Name</th><th>Provider</th><th>What it does</th><th>How long</th></tr></thead>
+<tbody>
+<tr><td>_ga</td><td>Google Analytics</td><td>Tells one visitor apart from another, without identifying you, to count visits.</td><td>2 years</td></tr>
+<tr><td>_ga_4XBY16BPLY</td><td>Google Analytics</td><td>Keeps track of the current visit.</td><td>2 years</td></tr>
+</tbody>
+</table></div>
+<p>Google Analytics is provided by Google Ireland Limited. More about how Google uses this data: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a>. There are no advertising cookies on this site.</p>
+
+<h2>Changing your mind</h2>
+<p>Open <a href="#" data-cookie-settings>Cookie settings</a> (also at the bottom of every page) to accept or reject at any time. Rejecting after accepting deletes the analytics cookies. You can also delete cookies and site data in your browser settings, which resets every choice above.</p>
+
+<h2>Links to other services</h2>
+<p>Some links open other services, such as WhatsApp, Google Maps, Instagram or X. They are only contacted if you click, and they set their own cookies under their own policies.</p>
+
+<p>More about your data: <a href="/privacy/">privacy policy</a>.</p>
+    </div>
+    <nav class="legal legal-nav mt-16 border-t border-brand-primary/50 pt-8" aria-label="Other legal pages">
+      <p class="text-xs font-bold uppercase tracking-[0.2em]">Other legal pages</p>
+      <ul>
+        <li><a href="/privacy/">Privacy policy</a></li>
+        <li><a href="/cookies/" aria-current="page">Cookie policy</a></li>
+        <li><a href="/legal/">Legal notice and terms of use</a></li>
+        <li><a href="#" data-cookie-settings>Cookie settings</a></li>
+      </ul>
+      <p class="mt-8"><a href="/">Back to the home page</a></p>
+    </nav>
+  </main>
+</body>
+</html>

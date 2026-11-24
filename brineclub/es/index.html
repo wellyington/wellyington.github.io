@@ -2,13 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ed302d">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4XBY16BPLY');
-</script>
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="#171312" data-fg="#f5e9d5" defer></script>
 <title>Landing pages para España y Latinoamérica | Brine Club</title>
 <meta name="description" content="Diseño y desarrollo de landing pages para España y Latinoamérica. Listas en 24–48 horas. Planes desde 99 €. Por Wellyington, desde Estepona.">
 <meta name="keywords" content="diseño de landing page, creación de landing pages, desarrollo web España, landing page Latinoamérica, Brine Club">
@@ -443,6 +437,13 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 .phone-field{border:0;margin:0;padding:0;display:grid;gap:6px}
 .phone-row{display:grid;grid-template-columns:minmax(7.2rem,10rem) minmax(0,1fr);gap:8px}
 .botcheck{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.brine-form .consent{display:flex;align-items:flex-start;gap:10px;margin-top:6px;font:13px/1.5 var(--sans);letter-spacing:0;text-transform:none}
+.brine-form .consent input{width:20px;height:20px;min-height:0;flex:0 0 auto;margin:1px 0 0;padding:0;accent-color:var(--ink)}
+.brine-form .consent a{text-decoration:underline;text-underline-offset:3px}
+.brine-form .form-note{margin:0;font:10px/1.6 var(--mono);letter-spacing:.06em;color:#5f514a}
+.footer-legal{display:flex;flex-wrap:wrap;gap:6px 22px;padding:0 0 18px;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.footer-legal a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px;color:var(--cream)}
+.footer-legal a:hover{color:var(--pink)}
 .brine-form button[type=submit]{min-height:48px;margin-top:6px;background:var(--ink);color:var(--cream);border:1px solid var(--ink);font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 .brine-form button[type=submit]:disabled{opacity:.65;cursor:progress}
 .brine-form button[type=submit]:focus-visible{outline:2px solid var(--deep);outline-offset:3px}
@@ -541,11 +542,12 @@ html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html
 </select>
 <label for="brine-message">Mensaje</label>
 <textarea id="brine-message" name="message" rows="4" required placeholder="¿Qué estás cocinando?"></textarea>
+<label class="consent" for="brine-privacy"><input id="brine-privacy" name="privacy_accepted" type="checkbox" value="yes" required><span>He leído la <a href="/es/privacidad/" target="_blank" rel="noopener">política de privacidad</a> y entiendo que mis datos se usarán para responder a mi consulta.</span></label><p class="form-note">Responsable: Wellington Almeida. Finalidad: responderte. Puedes acceder a tus datos, rectificarlos o suprimirlos en cualquier momento.</p>
 <button type="submit">Enviar</button>
 <p class="form-status" aria-live="polite"></p>
 </form><div class="contact-panel"><div class="label">BRINE CLUB® / POR WELLYINGTON</div><div class="big">Tu oferta tiene una historia. Démosle un aterrizaje en condiciones.</div><p class="fine">¿Prefieres escribir o llamar? Usa una de estas.</p><div class="contact-links"><div class="contact-link"><span>Email</span><a href="mailto:welly.almeida@gmail.com?subject=Hablemos%20de%20tu%20landing%20page">welly.almeida@gmail.com ↗</a></div><div class="contact-link"><span>Llamada / WhatsApp</span><a href="https://wa.me/34604286691" target="_blank" rel="noopener noreferrer">+34 604 286 691 ↗</a></div><div class="contact-link"><span>Portfolio</span><a href="https://wellyington.github.io/" target="_blank" rel="noopener noreferrer">wellyington.github.io ↗</a></div></div><div class="contact-socials"><a href="https://x.com/wellyington" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a><a href="https://instagram.com/wellyington" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div></section>
 </main>
-<footer class="footer"><div class="footer-top"><div class="footer-brand"><div class="footer-logo">BRINE<br>CLUB®</div><div class="footer-byline">Un proyecto personal <span>de Wellyington.</span></div></div><div class="footer-note">Hago salsa digital<br>para productos, servicios<br>y gente con planes.</div></div><div class="footer-bottom"><span>© 2026 BRINE CLUB® · POR WELLYINGTON</span><span>Que te vean. Que te entiendan. Que te elijan.</span><span>Hecho con un poco más de mordida.</span></div></footer>
+<footer class="footer"><div class="footer-top"><div class="footer-brand"><div class="footer-logo">BRINE<br>CLUB®</div><div class="footer-byline">Un proyecto personal <span>de Wellyington.</span></div></div><div class="footer-note">Hago salsa digital<br>para productos, servicios<br>y gente con planes.</div></div><nav aria-label="Legal" class="footer-legal"><a href="/es/privacidad/">Privacidad</a><a href="/es/cookies/">Cookies</a><a href="/es/aviso-legal/">Aviso legal</a><a href="#" data-cookie-settings>Configurar cookies</a></nav><div class="footer-bottom"><span>© 2026 BRINE CLUB® · POR WELLYINGTON</span><span>Que te vean. Que te entiendan. Que te elijan.</span><span>Hecho con un poco más de mordida.</span></div></footer>
 
 <div class="scroll-progress" aria-hidden="true"></div>
 <script>

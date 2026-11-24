@@ -84,8 +84,12 @@ jobs:
             fi
           done
           test -s journal/assets/css/journal.css
-          missing=$(grep -L "gtag('config', 'G-" $(find journal -name '*.html' ! -path 'journal/index.html') || true)
-          [ -z "$missing" ] || { echo "::error::Google tag missing from: $missing"; exit 1; }
+          # Google Analytics only through the consent banner (/js/consent.js):
+          # every page has it, and no page loads the Google tag directly.
+          missing=$(grep -L 'src="/js/consent.js" data-ga="G-' $(find journal -name '*.html' ! -path 'journal/index.html') || true)
+          [ -z "$missing" ] || { echo "::error::consent script missing from: $missing"; exit 1; }
+          direct=$(grep -l 'googletagmanager.com' $(find journal -name '*.html') || true)
+          [ -z "$direct" ] || { echo "::error::Google tag loaded without consent in: $direct"; exit 1; }
           for f in journal/*/articles/*/index.html; do
             grep -q '<meta name="keywords"' "$f" || { echo "::error::$f has no keywords (add seo_title, description, keywords to its front matter)"; exit 1; }
             [ "$(grep -c '<title>' "$f")" -eq 1 ] || { echo "::error::$f needs exactly one <title>"; exit 1; }

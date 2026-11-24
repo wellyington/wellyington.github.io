@@ -62,24 +62,7 @@
 
   <link rel="stylesheet" href="/css/site.css">
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4XBY16BPLY');
-    function loadWellyAnalytics() {
-      if (window.__wellyGa) return;
-      window.__wellyGa = true;
-      var script = document.createElement("script");
-      script.async = true;
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
-      document.head.appendChild(script);
-    }
-    window.addEventListener("load", function () {
-      if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
-      else window.setTimeout(loadWellyAnalytics, 1200);
-    });
-  </script>
+  <script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="#17484d" data-fg="#e3fdfd" defer></script>
 
   {{jsonLd}}
 </head>
@@ -700,6 +683,7 @@
               <label class="grid gap-1.5 text-xs font-bold uppercase tracking-[0.16em]" for="enquiry-message">{{formMessage}}
                 <textarea id="enquiry-message" name="message" rows="4" required placeholder="{{formMessagePh}}" class="min-h-28 resize-y border border-brand-primary bg-transparent px-3 py-2 text-base font-normal normal-case tracking-normal text-brand-primary placeholder:text-brand-primary/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"></textarea>
               </label>
+              {{formConsent}}
               <button type="submit" class="mt-1 inline-flex min-h-12 items-center justify-center border border-brand-primary bg-brand-primary px-4 text-xs font-bold uppercase tracking-[0.16em] text-brand-cream transition-colors hover:bg-brand-cream hover:text-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary disabled:opacity-60">{{formSubmit}}</button>
               <p class="form-status min-h-[1.4em] text-sm leading-relaxed" aria-live="polite"></p>
             </form>
@@ -800,6 +784,7 @@
               </li>
             </ul>
             <p class="text-xs uppercase tracking-[0.18em] opacity-70">{{rights}}</p>
+            {{legalLinks}}
           </div>
         </div>
       </div>

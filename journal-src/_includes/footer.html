@@ -36,6 +36,14 @@
 
   <p class="wordmark-xl" aria-hidden="true">{{ site.author }}</p>
 
+  {%- assign legal = site.data.legal[lang] | default: site.data.legal.en -%}
+  <nav class="foot-legal" aria-label="{{ legal.label }}">
+    {%- for item in legal.links %}
+    <a href="{{ item.url }}">{{ item.title }}</a>
+    {%- endfor %}
+    <a href="#" data-cookie-settings>{{ legal.settings }}</a>
+  </nav>
+
   <div class="foot-colophon">
     <span>© {{ site.time | date: "%Y" }} {{ site.author }}</span>
     <span>{{ T.colophon }}</span>

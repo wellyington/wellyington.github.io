@@ -1,27 +1,10 @@
 {%- comment -%}
-  Google tag (GA4). Same property and loading pattern as the main site:
-  the gtag script is fetched after the page has loaded, so it never
-  competes with the content. Only added to production builds (the
-  Pages workflow sets JEKYLL_ENV=production), so local previews
-  don't send visits.
+  Cookie consent + Google tag (GA4), shared with the main site: /js/consent.js.
+  Google Analytics is not loaded, and sets no cookies, until the visitor
+  presses Accept in the banner. Only added to production builds (the Pages
+  workflow sets JEKYLL_ENV=production), so local previews don't send visits.
+  The banner takes the journal's own colours, so it follows light and dark.
 {%- endcomment -%}
 {%- if site.google_analytics and jekyll.environment == "production" -%}
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ site.google_analytics }}');
-  function loadWellyAnalytics() {
-    if (window.__wellyGa) return;
-    window.__wellyGa = true;
-    var script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}";
-    document.head.appendChild(script);
-  }
-  window.addEventListener("load", function () {
-    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
-    else window.setTimeout(loadWellyAnalytics, 1200);
-  });
-</script>
+<script src="/js/consent.js" data-ga="{{ site.google_analytics }}" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
 {%- endif -%}
