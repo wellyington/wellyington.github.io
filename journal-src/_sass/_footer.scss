@@ -42,3 +42,10 @@
   position: relative; background: inherit;
 }
 .foot-colophon a:hover { text-decoration: underline; }
+.foot-legal {
+  display: flex; flex-wrap: wrap; gap: 0 1.5rem; padding: .5rem 1.5rem;
+  border-top: 1px solid var(--line); position: relative; background: inherit;
+  font-size: .7rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+}
+.foot-legal a { display: inline-flex; align-items: center; min-height: 44px; opacity: .8; text-decoration: underline; text-underline-offset: 4px; }
+.foot-legal a:hover { opacity: 1; }

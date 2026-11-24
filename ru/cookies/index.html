@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Политика cookies · Wellyington</title>
+  <meta name="description" content="Какие cookies и локальное хранилище использует wellyington.github.io, что делает каждый элемент, сколько он хранится и как принять, отклонить или изменить выбор.">
+  <link rel="canonical" href="https://wellyington.github.io/ru/cookies/">
+  <link rel="alternate" hreflang="en" href="https://wellyington.github.io/cookies/">
+  <link rel="alternate" hreflang="es" href="https://wellyington.github.io/es/cookies/">
+  <link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/pt/cookies/">
+  <link rel="alternate" hreflang="ru" href="https://wellyington.github.io/ru/cookies/">
+  <link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/cookies/">
+  <meta name="theme-color" content="#e3fdfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17484d" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("welly-theme");
+        var theme = saved === "light" || saved === "dark" ? saved
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/site.css">
+  <style>
+    .legal { font-size: 1.0625rem; line-height: 1.7; }
+    .legal h2 { margin: 3rem 0 .75rem; font-size: 1.6rem; font-weight: 700; line-height: 1.15; letter-spacing: -.04em; }
+    .legal h3 { margin: 1.75rem 0 .5rem; font-size: 1.15rem; font-weight: 700; letter-spacing: -.02em; }
+    .legal p, .legal ul { margin: .75rem 0; max-width: 68ch; }
+    .legal ul { list-style: disc; padding-left: 1.25rem; }
+    .legal li { margin: .35rem 0; }
+    .legal a { text-decoration: underline; text-underline-offset: 3px; }
+    .legal .table { overflow-x: auto; margin: 1rem 0; }
+    .legal table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .95rem; }
+    .legal th, .legal td { border: 1px solid currentColor; padding: .55rem .7rem; text-align: left; vertical-align: top; }
+    .legal th { font-weight: 700; }
+    .legal td:first-child { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85rem; overflow-wrap: anywhere; }
+    .legal-nav a[aria-current="page"] { font-weight: 700; text-decoration: none; }
+  </style>
+  <script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="#17484d" data-fg="#e3fdfd" defer></script>
+</head>
+<body class="bg-brand-cream font-sans text-brand-primary antialiased">
+  <header class="flex flex-wrap items-center justify-between gap-2 border-b border-brand-primary/50">
+    <a href="/ru/" class="site-wordmark inline-flex min-h-14 items-center whitespace-nowrap px-3 font-bold tracking-[-0.06em] md:px-5">Wellyington</a>
+    <nav class="flex flex-wrap text-sm" aria-label="Language">
+      <a class="inline-flex min-h-11 items-center px-2 underline underline-offset-4" href="/cookies/" hreflang="en" lang="en">English</a>
+      <a class="inline-flex min-h-11 items-center px-2 underline underline-offset-4" href="/es/cookies/" hreflang="es" lang="es">Español</a>
+      <a class="inline-flex min-h-11 items-center px-2 underline underline-offset-4" href="/pt/cookies/" hreflang="pt-BR" lang="pt-BR">Português</a>
+      <a class="inline-flex min-h-11 items-center px-2 underline underline-offset-4" href="/ru/cookies/" hreflang="ru" lang="ru" aria-current="page">Русский</a>
+    </nav>
+  </header>
+  <main id="top" class="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em]">Правовая информация</p>
+    <h1 class="text-5xl font-bold leading-[0.9] tracking-[-0.06em] md:text-7xl">Политика cookies</h1>
+    <p class="mt-6 text-sm uppercase tracking-[0.14em] opacity-75">Последнее обновление: <time datetime="2026-11-24">24 ноября 2026 г.</time></p>
+    <div class="legal mt-10">
+<p>Cookies — это небольшие файлы, которые сайт сохраняет в вашем браузере. Локальное хранилище работает похоже, но данные никогда не покидают ваше устройство. На этой странице перечислено всё, что сохраняет wellyington.github.io, и как изменить ваш выбор.</p>
+
+<h2>Коротко</h2>
+<p>Согласие нужно только для Google Analytics, который считает посещения. Он не работает и не сохраняет cookies, пока вы не нажмёте <em>Принять аналитику</em>. Если вы нажмёте <em>Отклонить</em> или ничего не сделаете, в Google ничего не отправляется. Всё остальное, что сохраняет сайт, нужно для функций, которыми вы пользуетесь, например чтобы запомнить тёмную тему, и остаётся на вашем устройстве.</p>
+
+<h2>Необходимые для работы сайта (согласие не требуется)</h2>
+<div class="table"><table>
+<thead><tr><th>Название</th><th>Тип</th><th>Назначение</th><th>Срок</th></tr></thead>
+<tbody>
+<tr><td>welly-consent</td><td>Локальное хранилище</td><td>Запоминает, приняли вы аналитику или отклонили.</td><td>12 месяцев</td></tr>
+<tr><td>welly-theme, journal-theme</td><td>Локальное хранилище</td><td>Запоминает светлую или тёмную тему на основном сайте и в журнале.</td><td>Пока вы его не очистите</td></tr>
+<tr><td>welly-lang</td><td>Локальное хранилище</td><td>Запоминает выбранный язык.</td><td>Пока вы его не очистите</td></tr>
+<tr><td>welly-lang-hint</td><td>Хранилище сессии</td><td>Скрывает подсказку о языке после того, как вы её закрыли.</td><td>До закрытия вкладки</td></tr>
+<tr><td>Ключи темы на страницах концептов «100 дней» (например morfeas-theme, ime-mode)</td><td>Локальное хранилище или хранилище сессии</td><td>Запоминают светлую или тёмную тему, или что вступление уже показано, на этой странице.</td><td>Пока вы его не очистите или до закрытия вкладки</td></tr>
+</tbody>
+</table></div>
+
+<h2>Аналитика (только с вашего согласия)</h2>
+<div class="table"><table>
+<thead><tr><th>Название</th><th>Поставщик</th><th>Назначение</th><th>Срок</th></tr></thead>
+<tbody>
+<tr><td>_ga</td><td>Google Analytics</td><td>Отличает одного посетителя от другого, не устанавливая вашу личность, чтобы считать посещения.</td><td>2 года</td></tr>
+<tr><td>_ga_4XBY16BPLY</td><td>Google Analytics</td><td>Отслеживает текущее посещение.</td><td>2 года</td></tr>
+</tbody>
+</table></div>
+<p>Google Analytics предоставляется компанией Google Ireland Limited. Подробнее о том, как Google использует эти данные: <a href="https://policies.google.com/technologies/partner-sites?hl=ru" rel="noopener">policies.google.com/technologies/partner-sites</a>. Рекламных cookies на сайте нет.</p>
+
+<h2>Если вы передумали</h2>
+<p>Откройте <a href="#" data-cookie-settings>Настройки cookies</a> (они также есть внизу каждой страницы), чтобы принять или отклонить аналитику в любой момент. Если отклонить после согласия, cookies аналитики будут удалены. Вы также можете удалить cookies и данные сайта в настройках браузера — это сбросит все перечисленные выше настройки.</p>
+
+<h2>Ссылки на другие сервисы</h2>
+<p>Некоторые ссылки открывают другие сервисы, например WhatsApp, Google Maps, Instagram или X. К ним обращаются только если вы нажмёте на ссылку, и они сохраняют свои cookies по своим правилам.</p>
+
+<p>Подробнее о ваших данных: <a href="/ru/privacy/">политика конфиденциальности</a>.</p>
+    </div>
+    <nav class="legal legal-nav mt-16 border-t border-brand-primary/50 pt-8" aria-label="Другие правовые страницы">
+      <p class="text-xs font-bold uppercase tracking-[0.2em]">Другие правовые страницы</p>
+      <ul>
+        <li><a href="/ru/privacy/">Политика конфиденциальности</a></li>
+        <li><a href="/ru/cookies/" aria-current="page">Политика cookies</a></li>
+        <li><a href="/ru/terms/">Правовая информация и условия использования</a></li>
+        <li><a href="#" data-cookie-settings>Настройки cookies</a></li>
+      </ul>
+      <p class="mt-8"><a href="/ru/">На главную страницу</a></p>
+    </nav>
+  </main>
+</body>
+</html>

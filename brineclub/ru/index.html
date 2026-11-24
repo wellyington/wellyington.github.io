@@ -2,13 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ed302d">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4XBY16BPLY');
-</script>
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="#171312" data-fg="#f5e9d5" defer></script>
 <title>Разработка лендинга для бизнеса | Brine Club</title>
 <meta name="description" content="Создание landing page и дизайн лендинга для России, Казахстана, Беларуси и русскоязычных клиентов в ЕС. Готово за 24–48 часов. От 99 €. Wellyington, Эстепона.">
 <meta name="keywords" content="разработка лендинга, создание landing page, дизайн лендинга, лендинг под ключ, Brine Club">
@@ -443,6 +437,13 @@ html[lang="ru"] h2,html[lang="zh-CN"] h2{overflow-wrap:break-word}
 .phone-field{border:0;margin:0;padding:0;display:grid;gap:6px}
 .phone-row{display:grid;grid-template-columns:minmax(7.2rem,10rem) minmax(0,1fr);gap:8px}
 .botcheck{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.brine-form .consent{display:flex;align-items:flex-start;gap:10px;margin-top:6px;font:13px/1.5 var(--sans);letter-spacing:0;text-transform:none}
+.brine-form .consent input{width:20px;height:20px;min-height:0;flex:0 0 auto;margin:1px 0 0;padding:0;accent-color:var(--ink)}
+.brine-form .consent a{text-decoration:underline;text-underline-offset:3px}
+.brine-form .form-note{margin:0;font:10px/1.6 var(--mono);letter-spacing:.06em;color:#5f514a}
+.footer-legal{display:flex;flex-wrap:wrap;gap:6px 22px;padding:0 0 18px;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.footer-legal a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px;color:var(--cream)}
+.footer-legal a:hover{color:var(--pink)}
 .brine-form button[type=submit]{min-height:48px;margin-top:6px;background:var(--ink);color:var(--cream);border:1px solid var(--ink);font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 .brine-form button[type=submit]:disabled{opacity:.65;cursor:progress}
 .brine-form button[type=submit]:focus-visible{outline:2px solid var(--deep);outline-offset:3px}
@@ -541,11 +542,12 @@ html[lang="zh-CN"] .brine-form label,html[lang="zh-CN"] .phone-field legend,html
 </select>
 <label for="brine-message">Сообщение</label>
 <textarea id="brine-message" name="message" rows="4" required placeholder="Что будем готовить?"></textarea>
+<label class="consent" for="brine-privacy"><input id="brine-privacy" name="privacy_accepted" type="checkbox" value="yes" required><span>Я прочитал(а) <a href="/ru/privacy/" target="_blank" rel="noopener">политику конфиденциальности</a> и понимаю, что мои данные будут использованы для ответа на мой запрос.</span></label><p class="form-note">Wellington Almeida использует эти данные только для ответа вам. Вы можете в любой момент получить к ним доступ, исправить или удалить их.</p>
 <button type="submit">Отправить</button>
 <p class="form-status" aria-live="polite"></p>
 </form><div class="contact-panel"><div class="label">BRINE CLUB® / ОТ WELLYINGTON</div><div class="big">У оффера есть история. Дадим ей нормальную посадку.</div><p class="fine">Удобнее написать или позвонить? Вот контакты.</p><div class="contact-links"><div class="contact-link"><span>Почта</span><a href="mailto:welly.almeida@gmail.com?subject=%D0%94%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D0%BC%20%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3">welly.almeida@gmail.com ↗</a></div><div class="contact-link"><span>Звонок / WhatsApp</span><a href="https://wa.me/34604286691" target="_blank" rel="noopener noreferrer">+34 604 286 691 ↗</a></div><div class="contact-link"><span>Портфолио</span><a href="https://wellyington.github.io/" target="_blank" rel="noopener noreferrer">wellyington.github.io ↗</a></div></div><div class="contact-socials"><a href="https://x.com/wellyington" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a><a href="https://instagram.com/wellyington" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div></section>
 </main>
-<footer class="footer"><div class="footer-top"><div class="footer-brand"><div class="footer-logo">BRINE<br>CLUB®</div><div class="footer-byline">Личный проект <span>Wellyington.</span></div></div><div class="footer-note">Я делаю цифровой соус<br>для продуктов, услуг<br>и людей с планами.</div></div><div class="footer-bottom"><span>© 2026 BRINE CLUB® · WELLYINGTON</span><span>Чтобы вас увидели. Поняли. Выбрали.</span><span>Сделано с чуть более острым вкусом.</span></div></footer>
+<footer class="footer"><div class="footer-top"><div class="footer-brand"><div class="footer-logo">BRINE<br>CLUB®</div><div class="footer-byline">Личный проект <span>Wellyington.</span></div></div><div class="footer-note">Я делаю цифровой соус<br>для продуктов, услуг<br>и людей с планами.</div></div><nav aria-label="Правовая информация" class="footer-legal"><a href="/ru/privacy/">Конфиденциальность</a><a href="/ru/cookies/">Cookies</a><a href="/ru/terms/">Правовая информация</a><a href="#" data-cookie-settings>Настройки cookies</a></nav><div class="footer-bottom"><span>© 2026 BRINE CLUB® · WELLYINGTON</span><span>Чтобы вас увидели. Поняли. Выбрали.</span><span>Сделано с чуть более острым вкусом.</span></div></footer>
 
 <div class="scroll-progress" aria-hidden="true"></div>
 <script>

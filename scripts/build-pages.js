@@ -522,6 +522,16 @@ function render(template, locale) {
     journalEntries: require("./journal-entries").latestEntries(locale),
     journalHref: "/journal/" + locale.code + "/",
     journalFeed: "/journal/" + locale.code + "/feed.xml",
+    formConsent: require("./build-legal").formConsent(locale.code, "enquiry-privacy", {
+      label: "flex items-start gap-3 text-sm font-normal normal-case leading-relaxed tracking-normal",
+      box: "mt-1 h-5 w-5 shrink-0 accent-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary",
+      link: "underline underline-offset-4",
+      note: "text-xs leading-relaxed opacity-75",
+    }),
+    legalLinks: require("./build-legal").footerLinks(locale.code, {
+      nav: "flex flex-wrap gap-x-4 text-xs uppercase tracking-[0.18em]",
+      link: "inline-flex min-h-11 items-center underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100",
+    }),
   };
   return template.replace(/\{\{([a-zA-Z0-9]+)\}\}/g, function (_, key) {
     if (Object.prototype.hasOwnProperty.call(raw, key)) return raw[key];
@@ -656,8 +666,9 @@ function validate(locale, html) {
   });
   assert(html.includes('property="og:locale" content="' + locale.ogLocale + '"'), locale.code + " og:locale");
   assert((html.match(/og:locale:alternate/g) || []).length === 3, locale.code + " og alternates");
-  assert((html.match(/gtag\/js\?id=G-4XBY16BPLY/g) || []).length === 1, locale.code + " gtag src");
-  assert((html.match(/G-4XBY16BPLY/g) || []).length === 2, locale.code + " gtag id count");
+  // Google Analytics only through the consent script: nothing loads before Accept.
+  assert(html.includes('src="/js/consent.js" data-ga="G-4XBY16BPLY"'), locale.code + " consent script");
+  assert(!html.includes("googletagmanager.com"), locale.code + " Google tag outside consent");
   assert(html.includes('href="/css/site.css"'), locale.code + " css path");
   assert(html.includes('src="/js/main.min.js"'), locale.code + " js path");
   assert(!html.includes('src="images/') && !html.includes('href="css/'), locale.code + " relative asset");
@@ -719,6 +730,7 @@ function main() {
     writePage(localeCache[code], html);
   });
   writeSitemap();
+  require("./build-legal").buildLegal();
   require("./build-llms").build();
   fix404();
   fs.writeFileSync(templatePath, template);

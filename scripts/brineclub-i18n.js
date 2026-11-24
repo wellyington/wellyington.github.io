@@ -34,7 +34,8 @@ const LINK_LANG = { en: "en", es: "es", pt: "pt-BR", ru: "ru", zh: "zh-CN" };
 const RAW = new Set([
   "byline", "h1", "seal", "jarTitle", "introH", "whyH", "card1H", "card2H", "card3H",
   "howH", "priceH", "promiseQ", "faqH", "contactH", "footerNote", "footerByline", "extraHead",
-  "jsonLd", "hreflang", "ogAlternates", "langSwitch", "langSwitchMenu", "faqItems", "phoneOptions"
+  "jsonLd", "hreflang", "ogAlternates", "langSwitch", "langSwitchMenu", "faqItems", "phoneOptions",
+  "formConsent", "legalLinks"
 ]);
 
 function esc(value) {
@@ -220,6 +221,8 @@ function renderPage(template, locale, page) {
   const values = Object.assign({}, locale, {
     assets: page.code === "en" ? "" : "../",
     phoneOptions: phoneOptions(locale, page.code),
+    formConsent: require("./build-legal").formConsent(page.code, "brine-privacy", { label: "consent", note: "form-note" }),
+    legalLinks: require("./build-legal").footerLinks(page.code, { nav: "footer-legal" }),
     canonical: page.url,
     hreflang: hreflangLinks(),
     ogAlternates: ogAlternates(page.code),
@@ -238,10 +241,9 @@ function renderPage(template, locale, page) {
     return RAW.has(key) ? String(value) : esc(value);
   });
   if (html.includes("{{")) throw new Error(page.code + " still has a token");
-  if ((html.match(/G-4XBY16BPLY/g) || []).length !== 2) throw new Error(page.code + " GA count");
-  if (!html.includes('async src="https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY"')) {
-    throw new Error(page.code + " GA script");
-  }
+  // Google Analytics only through the consent script: nothing loads before Accept.
+  if (!html.includes('src="/js/consent.js" data-ga="G-4XBY16BPLY"')) throw new Error(page.code + " consent script");
+  if (html.includes("googletagmanager.com")) throw new Error(page.code + " Google tag outside consent");
   return html;
 }
 

@@ -68,24 +68,7 @@
 
   <link rel="stylesheet" href="/css/site.css">
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4XBY16BPLY');
-    function loadWellyAnalytics() {
-      if (window.__wellyGa) return;
-      window.__wellyGa = true;
-      var script = document.createElement("script");
-      script.async = true;
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
-      document.head.appendChild(script);
-    }
-    window.addEventListener("load", function () {
-      if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
-      else window.setTimeout(loadWellyAnalytics, 1200);
-    });
-  </script>
+  <script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="#17484d" data-fg="#e3fdfd" defer></script>
 
   <script type="application/ld+json">
   {
@@ -908,6 +891,7 @@
               <label class="grid gap-1.5 text-xs font-bold uppercase tracking-[0.16em]" for="enquiry-message">Mensaje
                 <textarea id="enquiry-message" name="message" rows="4" required placeholder="¿Qué necesitas?" class="min-h-28 resize-y border border-brand-primary bg-transparent px-3 py-2 text-base font-normal normal-case tracking-normal text-brand-primary placeholder:text-brand-primary/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"></textarea>
               </label>
+              <label class="flex items-start gap-3 text-sm font-normal normal-case leading-relaxed tracking-normal" for="enquiry-privacy"><input id="enquiry-privacy" name="privacy_accepted" type="checkbox" value="yes" required class="mt-1 h-5 w-5 shrink-0 accent-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"><span>He leído la <a href="/es/privacidad/" target="_blank" rel="noopener" class="underline underline-offset-4">política de privacidad</a> y entiendo que mis datos se usarán para responder a mi consulta.</span></label><p class="text-xs leading-relaxed opacity-75">Responsable: Wellington Almeida. Finalidad: responderte. Puedes acceder a tus datos, rectificarlos o suprimirlos en cualquier momento.</p>
               <button type="submit" class="mt-1 inline-flex min-h-12 items-center justify-center border border-brand-primary bg-brand-primary px-4 text-xs font-bold uppercase tracking-[0.16em] text-brand-cream transition-colors hover:bg-brand-cream hover:text-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary disabled:opacity-60">Enviar</button>
               <p class="form-status min-h-[1.4em] text-sm leading-relaxed" aria-live="polite"></p>
             </form>
@@ -1008,6 +992,7 @@
               </li>
             </ul>
             <p class="text-xs uppercase tracking-[0.18em] opacity-70">© 2026 Wellyington. Todos los derechos reservados.</p>
+            <nav aria-label="Legal" class="flex flex-wrap gap-x-4 text-xs uppercase tracking-[0.18em]"><a href="/es/privacidad/" class="inline-flex min-h-11 items-center underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100">Privacidad</a><a href="/es/cookies/" class="inline-flex min-h-11 items-center underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100">Cookies</a><a href="/es/aviso-legal/" class="inline-flex min-h-11 items-center underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100">Aviso legal</a><a href="#" data-cookie-settings class="inline-flex min-h-11 items-center underline decoration-brand-cream/40 underline-offset-4 hover:opacity-100">Configurar cookies</a></nav>
           </div>
         </div>
       </div>
