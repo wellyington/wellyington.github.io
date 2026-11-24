@@ -25,24 +25,7 @@
 <link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/">
 <link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/">
 <link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4XBY16BPLY');
-  function loadWellyAnalytics() {
-    if (window.__wellyGa) return;
-    window.__wellyGa = true;
-    var script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
-    document.head.appendChild(script);
-  }
-  window.addEventListener("load", function () {
-    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
-    else window.setTimeout(loadWellyAnalytics, 1200);
-  });
-</script>
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
 <title>Сайт для строительной компании в Марина-Альте · Wellyington</title>
 <meta name="description" content="Одностраничный сайт для семейной строительной фирмы Pedro Sánchez Construction в Хавеа, Дении и Кальпе, готовый ещё до договора. День 1 из 100.">
 <meta name="keywords" content="сайт для строительной компании, разработка сайта для строительной фирмы в Испании, сайт строительной компании на Коста-Бланке, веб-дизайн для строителей в Хавеа и Дении, одностраничный сайт для семейной фирмы, семейная строительная фирма в Марина-Альте, сайт до подписания договора, строительная компания в Аликанте, челлендж 100 дней 100 сайтов">
@@ -415,7 +398,12 @@
     </div>
   </div>
 
-  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Правовая информация">
+    <a href="/ru/privacy/">Конфиденциальность</a>
+    <a href="/ru/cookies/">Cookies</a>
+    <a href="/ru/terms/">Правовая информация</a>
+    <a href="#" data-cookie-settings>Настройки cookies</a>
+  </nav>
 
   <div class="foot-colophon">
     <span>© 2026 Wellyington</span>

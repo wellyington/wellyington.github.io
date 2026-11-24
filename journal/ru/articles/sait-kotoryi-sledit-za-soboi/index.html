@@ -25,24 +25,7 @@
 <link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/">
 <link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/">
 <link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4XBY16BPLY');
-  function loadWellyAnalytics() {
-    if (window.__wellyGa) return;
-    window.__wellyGa = true;
-    var script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
-    document.head.appendChild(script);
-  }
-  window.addEventListener("load", function () {
-    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
-    else window.setTimeout(loadWellyAnalytics, 1200);
-  });
-</script>
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
 <title>Статичный сайт или сайт, который обновляется сам · Wellyington</title>
 <meta name="description" content="Простое объяснение для владельцев малого бизнеса: почему сайты-буклеты устаревают, что такое API и «автономный» сайт и за что действительно стоит платить.">
 <meta name="keywords" content="нужен ли малому бизнесу сайт, почему мой сайт устарел, статичный и динамический сайт простыми словами, что такое API простыми словами, сайт, который обновляется сам, поддержка сайта с искусственным интеллектом для малого бизнеса, как держать часы работы на сайте актуальными, что спросить у веб-дизайнера перед оплатой, техническая поддержка сайта для малого бизнеса, веб-дизайнер на Коста-дель-Соль">
@@ -467,7 +450,12 @@
     </div>
   </div>
 
-  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Правовая информация">
+    <a href="/ru/privacy/">Конфиденциальность</a>
+    <a href="/ru/cookies/">Cookies</a>
+    <a href="/ru/terms/">Правовая информация</a>
+    <a href="#" data-cookie-settings>Настройки cookies</a>
+  </nav>
 
   <div class="foot-colophon">
     <span>© 2026 Wellyington</span>

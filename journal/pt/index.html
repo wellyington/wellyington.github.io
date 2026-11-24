@@ -25,24 +25,7 @@
 <link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/">
 <link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/">
 <link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4XBY16BPLY');
-  function loadWellyAnalytics() {
-    if (window.__wellyGa) return;
-    window.__wellyGa = true;
-    var script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
-    document.head.appendChild(script);
-  }
-  window.addEventListener("load", function () {
-    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
-    else window.setTimeout(loadWellyAnalytics, 1200);
-  });
-</script>
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
 <!-- Begin Jekyll SEO tag v2.9.1 -->
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Journal" />
@@ -383,7 +366,12 @@
     </div>
   </div>
 
-  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Legal">
+    <a href="/pt/privacidade/">Privacidade</a>
+    <a href="/pt/cookies/">Cookies</a>
+    <a href="/pt/termos/">Aviso legal</a>
+    <a href="#" data-cookie-settings>Configurar cookies</a>
+  </nav>
 
   <div class="foot-colophon">
     <span>© 2026 Wellyington</span>

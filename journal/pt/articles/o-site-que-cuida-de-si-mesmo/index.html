@@ -25,24 +25,7 @@
 <link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/">
 <link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/">
 <link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4XBY16BPLY');
-  function loadWellyAnalytics() {
-    if (window.__wellyGa) return;
-    window.__wellyGa = true;
-    var script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-4XBY16BPLY";
-    document.head.appendChild(script);
-  }
-  window.addEventListener("load", function () {
-    if (window.requestIdleCallback) window.requestIdleCallback(loadWellyAnalytics, { timeout: 2500 });
-    else window.setTimeout(loadWellyAnalytics, 1200);
-  });
-</script>
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
 <title>Site estático ou site que se atualiza sozinho: guia simples · Wellyington</title>
 <meta name="description" content="Um guia em linguagem simples para pequenos negócios: por que sites folheto ficam desatualizados, o que é uma API, o que é um site autônomo e o que pagar.">
 <meta name="keywords" content="meu pequeno negócio ainda precisa de site, por que meu site está desatualizado, site estático e site dinâmico explicado de forma simples, o que é uma API em palavras simples, site que se atualiza sozinho, manutenção de site com inteligência artificial para pequenas empresas, manter o horário de funcionamento atualizado no site, o que perguntar a um web designer antes de pagar, plano de manutenção de site para pequenas empresas, web designer na Costa del Sol">
@@ -467,7 +450,12 @@
     </div>
   </div>
 
-  <p class="wordmark-xl" aria-hidden="true">Wellyington</p>
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Legal">
+    <a href="/pt/privacidade/">Privacidade</a>
+    <a href="/pt/cookies/">Cookies</a>
+    <a href="/pt/termos/">Aviso legal</a>
+    <a href="#" data-cookie-settings>Configurar cookies</a>
+  </nav>
 
   <div class="foot-colophon">
     <span>© 2026 Wellyington</span>
