@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Target Models</title>
+<meta name="description" content="Target Models is a highly professional and multilingual casting agency in Marbella and London. Formed in 1999 on the Costa del Sol.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/* VOICE: quiet, editorial, confident — an agency board, not a brochure
+   IDEA: the model agency's wall of comp cards, always moving
+   PICTURE: drifting columns of portraits behind a huge wordmark
+   COLOUR and TYPE: client palette — sky #b7c4cf, cream #eee3cb, blush #d7c0ae, taupe #967e76 — on white; Inter Tight variable + Cormorant italic
+   LAYOUT: hero wall, strapline, divisions, filterable board, about, clients, footer */
+:root{
+  color-scheme:light;
+  --sans:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Cormorant Garamond",Garamond,"Times New Roman",serif;
+  --sky:#b7c4cf; --cream:#eee3cb; --blush:#d7c0ae; --taupe:#967e76; --taupe-d:#6e5a53;
+  --ink:#221c1a; --sand:var(--cream); --sand2:#f6f0e2; --brown:var(--taupe); --pad:10px; --gap:10px;
+  --ease:cubic-bezier(.7,0,.2,1); --out:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--ink);background:#fff;font-size:14px;line-height:1.5;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{list-style:none}
+img{display:block;max-width:100%}
+::selection{background:var(--blush);color:var(--ink)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0}
+.skip:focus{left:10px;top:10px;background:#fff;padding:6px 10px;z-index:999}
+:focus-visible{outline:2px solid var(--taupe);outline-offset:3px}
+
+/* ---------- INTRO ---------- */
+.intro{position:fixed;inset:0;z-index:200;background:var(--sky);display:none;align-items:center;justify-content:center;transition:clip-path 1s var(--ease)}
+.is-loading .intro{display:flex}
+.intro.out{clip-path:inset(0 0 100% 0)}
+.intro .wm{font-size:clamp(48px,11vw,180px)}
+.intro .l{display:inline-block;transform:translateY(105%);animation:rise .9s var(--out) forwards}
+.intro__mask{overflow:hidden;display:block;padding-bottom:.12em}
+.intro__count{position:absolute;right:20px;bottom:16px;font-size:12px;font-weight:500;font-variant-numeric:tabular-nums}
+@keyframes rise{to{transform:none}}
+
+/* ---------- WORDMARK ---------- */
+.wm{display:inline-flex;flex-direction:column;line-height:.8;color:var(--ink)}
+.wm__main{font-family:var(--sans);letter-spacing:-.055em;white-space:nowrap}
+.wm__main b{font-weight:640}
+.wm__main span{font-weight:180}
+.wm__sub{font-weight:400;letter-spacing:.06em;align-self:flex-end;margin-top:.9em;color:var(--brown)}
+
+/* ---------- NAV ---------- */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--taupe);transform-origin:0 50%;transform:scaleX(0);z-index:60}
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;height:60px;pointer-events:none}
+.nav__row{display:flex;justify-content:space-between;align-items:center;padding:16px 20px 0;font-weight:500;font-size:14px}
+.nav__row a,.nav__row button{pointer-events:auto}
+.nav__group{display:flex;align-items:center;gap:12px}
+.nav__links{display:flex;gap:6px;align-items:center}
+.nav__links a{position:relative}
+.nav__links a::after,.u::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:100% 50%;transition:transform .45s var(--ease)}
+.nav__links a:hover::after,.u:hover::after{transform:scaleX(1);transform-origin:0 50%}
+.u{position:relative}
+.nav button{display:flex;align-items:center;gap:12px;min-height:32px}
+.plus{width:18px;height:18px;position:relative;flex:none;transition:transform .5s var(--ease)}
+.plus::before,.plus::after{content:"";position:absolute;background:currentColor;left:50%;top:50%;transform:translate(-50%,-50%)}
+.plus::before{width:18px;height:1.5px}.plus::after{width:1.5px;height:18px}
+.is-open .plus{transform:rotate(135deg)}
+.nav__logo{position:absolute;left:50%;top:16px;height:32px;display:flex;align-items:center;transform:translate(-50%,-80px);transition:transform .7s var(--ease);pointer-events:auto;font-size:22px}
+body.scrolled .nav__logo{transform:translate(-50%,0)}
+.nav::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.96);box-shadow:0 1px 0 rgba(19,17,16,.06);opacity:0;transition:opacity .5s}
+body.scrolled .nav::before{opacity:1}
+.nav__row,.nav__logo{position:relative}.nav__logo{position:absolute}
+
+/* overlay panels */
+.panel{position:fixed;inset:0;z-index:40;background:var(--sky);display:grid;grid-template-columns:1fr 1fr;align-items:end;padding:90px 20px 30px;clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease);visibility:hidden}
+.panel.is-open{clip-path:inset(0 0 0 0);visibility:visible}
+.panel ul li{overflow:hidden}
+.panel ul li a,.panel ul li button{font-family:var(--serif);font-size:clamp(46px,8vw,118px);line-height:1;display:inline-flex;align-items:baseline;gap:.25em;transition:opacity .3s,transform .8s var(--out);transform:translateY(100%)}
+.panel.is-open ul li a,.panel.is-open ul li button{transform:none}
+.panel.is-open li:nth-child(2) *{transition-delay:.05s}.panel.is-open li:nth-child(3) *{transition-delay:.1s}.panel.is-open li:nth-child(4) *{transition-delay:.15s}.panel.is-open li:nth-child(5) *{transition-delay:.2s}
+.panel ul:hover li>*{opacity:.25}
+.panel ul li>*:hover{opacity:1;font-style:italic}
+.panel sup{font-family:var(--sans);font-size:12px;font-weight:500;font-style:normal}
+.panel__aside{align-self:end;justify-self:end;text-align:right;font-size:14px;color:var(--taupe-d);max-width:300px}
+.panel__peek{position:absolute;right:20px;top:90px;width:min(26vw,320px);aspect-ratio:3/4;overflow:hidden;background:var(--sand);opacity:0;transition:opacity .4s}
+.panel__peek.on{opacity:1}
+.panel__peek img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.panel--menu{grid-template-columns:1fr;background:var(--blush)}
+.panel--menu ul{justify-self:end;text-align:right}
+
+/* ---------- CURSOR ---------- */
+.cursor{position:fixed;left:0;top:0;z-index:300;pointer-events:none;display:none}
+.cursor__dot{position:absolute;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:#fff;mix-blend-mode:difference;transition:transform .35s var(--out),opacity .3s}
+.cursor__ring{position:absolute;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:var(--taupe);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;transform:scale(0);transition:transform .45s var(--out)}
+.cursor.is-view .cursor__ring{transform:scale(1)}
+.cursor.is-view .cursor__dot{opacity:0}
+.cursor.is-link .cursor__dot{transform:scale(3.2)}
+@media (pointer:fine){.has-cursor .cursor{display:block}.has-cursor .tile,.has-cursor .card a,.has-cursor .board__item{cursor:none}}
+
+/* ---------- HERO ---------- */
+.home{position:relative;padding-top:max(150px,22.5vw)}
+.home__logo-row{position:absolute;top:max(150px,22.5vw);left:12.5vw;display:flex;gap:2.5vw;align-items:flex-start;z-index:4;mix-blend-mode:difference;color:#fff;pointer-events:none}
+.home__logo-row .wm,.home__logo-row .wm__sub{color:#fff}
+.home__logo-row .wm{font-size:8.5vw}
+.home__logo-row .wm__sub{font-size:max(10px,1.05vw)}
+.home__tagline{font-size:clamp(16px,2.35vw,34px);line-height:1.1;width:23vw;margin-top:-.1em}
+.home__tagline span{display:block;overflow:hidden}
+.home__tagline span i{display:block;font-style:normal;transform:translateY(105%);transition:transform 1s var(--out) .9s}
+.home__tagline span+span i{transition-delay:1s}
+.ready .home__tagline span i{transform:none}
+.gallery-wrap{position:relative;z-index:2;height:max(900px,118vw);overflow:hidden;-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent)}
+.gallery{display:flex;gap:var(--gap);margin-left:-14vw;width:130vw;align-items:flex-start}
+.gallery__col{flex:0 0 24.8vw;will-change:transform}
+.gallery__col:nth-child(2),.gallery__col:nth-child(4){margin-top:22.5vw}
+.gallery__col:nth-child(3){margin-top:9.6vw}
+.gallery__track{display:flex;flex-direction:column;gap:var(--gap);animation:drift var(--dur,90s) linear infinite;animation-direction:var(--dir,normal)}
+.gallery__col:hover .gallery__track{animation-play-state:paused}
+@keyframes drift{from{transform:translateY(0)}to{transform:translateY(calc(-50% - var(--gap) / 2))}}
+.gallery__lift{opacity:0;transform:translateY(80px);transition:opacity 1.2s var(--out),transform 1.4s var(--out)}
+.ready .gallery__lift{opacity:1;transform:none}
+.tile{display:block;width:100%;text-align:left}
+.tile__media{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--sand)}
+.tile__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;opacity:0;transform:scale(1.06);transition:opacity 1.2s ease,transform 1.6s var(--out)}
+.tile__media img.on{opacity:1;transform:scale(1)}
+.tile:hover .tile__media img.on{transform:scale(1.05)}
+.tile__cap{display:flex;justify-content:space-between;font-size:12px;font-weight:500;padding-top:6px;height:24px;opacity:0;transform:translateY(4px);transition:.4s}
+.tile:hover .tile__cap,.tile:focus-visible .tile__cap{opacity:1;transform:none}
+
+/* ---------- STRAPLINE ---------- */
+.wrap{padding:0 var(--pad)}
+.strapline{position:relative;z-index:3;margin-top:-34vw;font-family:var(--serif);font-size:clamp(44px,9.4vw,150px);line-height:1;letter-spacing:-.01em;pointer-events:none}
+.strapline em{font-style:italic}
+.strapline .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.strapline .ch{display:inline-block;opacity:0;transform:translateY(70%) rotate(4deg);transition:opacity .6s ease,transform .9s var(--out)}
+.strapline.in .ch{opacity:1;transform:none}
+
+/* ---------- SECTION HEADS ---------- */
+.sec{padding-top:max(110px,16vw)}
+.sec__head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:15px}
+.sec__title{font-family:var(--serif);font-weight:400;font-size:clamp(44px,9.4vw,150px);line-height:1}
+.sec__title em{font-style:italic}
+.sec__intro{max-width:340px;font-size:16px;line-height:1.35;padding-bottom:1.2vw}
+.reveal-up{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1.2s var(--out)}
+.reveal-up.in{opacity:1;transform:none}
+
+/* ---------- DIVISIONS ---------- */
+.cards{display:flex;gap:var(--gap)}
+.cards__col{flex:1;display:flex;flex-direction:column;gap:40px}
+.cards__col:nth-child(2){padding-top:80px}
+.card a{display:block;perspective:900px}
+.card__media{position:relative;overflow:hidden;background:var(--sand);transform-style:preserve-3d;transition:transform .6s var(--out)}
+.card__media img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transform:scale(1.12) translate(var(--px,0),var(--py,0));transition:transform .8s var(--out)}
+.card a:hover .card__media img{transform:scale(1.16) translate(var(--px,0),var(--py,0))}
+.card__media::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(110,90,83,.6));opacity:0;transition:opacity .5s}
+.card a:hover .card__media::after{opacity:1}
+.card__go{position:absolute;left:14px;bottom:12px;color:#fff;font-size:14px;font-weight:500;display:flex;gap:8px;align-items:center;opacity:0;transform:translateY(10px);transition:.5s var(--out);z-index:1}
+.card a:hover .card__go{opacity:1;transform:none}
+.card__row{display:flex;justify-content:space-between;align-items:baseline;padding-top:10px;gap:10px}
+.card h3{font-size:14px;font-weight:500;letter-spacing:.01em}
+.card__n{font-size:12px;color:var(--taupe-d);font-variant-numeric:tabular-nums}
+.card p{font-size:14px;color:var(--taupe-d);max-width:34ch}
+.cta{display:flex;justify-content:center;gap:10px;padding-top:80px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--sand);font-size:14px;font-weight:500;padding:16px 20px;line-height:1;transition:background .3s,color .3s;will-change:transform}
+.btn:hover{background:var(--ink);color:#fff}
+.btn--ink{background:var(--taupe);color:#fff}.btn--ink:hover{background:var(--ink)}
+
+/* ---------- BANDS ---------- */
+.band{margin-left:calc(-1*var(--pad));margin-right:calc(-1*var(--pad));padding-left:var(--pad);padding-right:var(--pad);padding-bottom:110px}
+.band--sky{background:var(--sky);margin-top:max(110px,12vw);padding-top:90px}
+.band--blush{background:var(--blush)}
+.band--sky .tile__media{background:#cfd8df}
+/* ---------- BOARD ---------- */
+.board__bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 20px}
+.chip{position:relative;height:40px;padding:0 16px;border-radius:40px;border:1px solid rgba(34,28,26,.25);background:rgba(255,255,255,.35);font-size:14px;font-weight:500;display:inline-flex;align-items:center;gap:8px;transition:background .3s,color .3s,border-color .3s}
+.chip sup{font-size:10px;opacity:.6}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--taupe);color:#fff;border-color:var(--taupe)}
+.board__count{margin-left:auto;font-size:12px;color:var(--taupe-d);font-variant-numeric:tabular-nums}
+.board__grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--gap)}
+.board__item{display:block;width:100%;text-align:left}
+.board__item[hidden]{display:none}
+.board__item .tile__media img{opacity:1;transform:none;transition:transform 1s var(--out),filter .6s}
+.board__item:hover .tile__media img{transform:scale(1.05)}
+.board__grid:hover .board__item:not(:hover) img{filter:grayscale(1) brightness(1.04) opacity(.85)}
+.board__meta{display:flex;justify-content:space-between;font-size:12px;font-weight:500;padding-top:6px}
+.board__meta span:last-child{color:var(--taupe-d);font-weight:400}
+
+/* ---------- LIGHTBOX ---------- */
+.lb{position:fixed;inset:0;z-index:150;background:rgba(238,227,203,.97);display:grid;grid-template-columns:1fr minmax(0,auto) 1fr;align-items:center;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.lb.open{opacity:1;visibility:visible}
+.lb__fig{grid-column:2;height:min(82vh,1000px);aspect-ratio:3/4;max-width:92vw;position:relative;overflow:hidden;background:var(--sand);transform:scale(.96);transition:transform .7s var(--out)}
+.lb.open .lb__fig{transform:none}
+.lb__fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;animation:lbin .7s var(--out)}
+@keyframes lbin{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+.lb__info{position:absolute;left:20px;bottom:20px;max-width:260px}
+.lb__info h2{font-variant-numeric:lining-nums;font-family:var(--serif);font-weight:400;font-style:italic;font-size:44px;line-height:1}
+.lb__info p{font-size:14px;color:var(--taupe-d);margin:6px 0 14px}
+.lb__count{position:absolute;left:20px;top:22px;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+.lb__close{position:absolute;right:20px;top:14px;display:flex;align-items:center;gap:10px;font-weight:500;min-height:44px}
+.lb__close .plus{transform:rotate(45deg)}
+.lb__nav{position:absolute;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:1px solid var(--taupe);display:flex;align-items:center;justify-content:center;transition:background .3s,color .3s}
+.lb__nav:hover{background:var(--taupe);color:#fff;border-color:var(--taupe)}
+.lb__prev{left:20px}.lb__next{right:20px}
+.lb__thumbs{position:absolute;right:20px;bottom:20px;display:flex;gap:4px}
+.lb__thumbs button{width:34px;height:44px;overflow:hidden;opacity:.45;transition:opacity .3s,transform .3s}
+.lb__thumbs button.on{opacity:1;transform:translateY(-4px)}
+.lb__thumbs img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- ABOUT + CLIENTS ---------- */
+.about{display:grid;grid-template-columns:50% 1fr;padding-top:70px;padding-bottom:120px}
+.label{font-size:11px;font-weight:500;padding-top:8px}
+.about__text{font-size:clamp(20px,2.2vw,32px);line-height:1.18;letter-spacing:-.01em}
+.about__text p+p{margin-top:.8em}
+.about__text em{font-family:var(--serif);font-style:italic;font-size:1.12em}
+.about__text .wd{opacity:.18;transition:opacity .5s}
+.about__text.in .wd{opacity:1}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);margin-top:50px}
+.stat{border-top:1px solid var(--taupe-d);padding-top:10px}
+.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(40px,5vw,76px);line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.stat span{font-size:12px;color:var(--taupe-d)}
+.clients{padding:90px 0 120px}
+.clients__head{display:grid;grid-template-columns:50% 1fr;margin-bottom:24px}
+.clients__head p{font-size:16px}
+.clients__list{border-top:1px solid rgba(150,126,118,.35)}
+.clients__list li{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(150,126,118,.35);padding:14px 0;transition:padding .5s var(--out)}
+.clients__list li b{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.2vw,62px);line-height:1;transition:font-style .1s}
+.clients__list li span{font-size:12px;color:var(--taupe-d)}
+.clients__list li:hover{padding-left:20px}
+.clients__list li:hover b{font-style:italic}
+
+/* ---------- FOOTER ---------- */
+.footer{background:var(--sand);min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:30px var(--pad) 10px;position:relative;overflow:hidden}
+.footer__main{display:grid;grid-template-columns:50% repeat(3,minmax(0,1fr))}
+.footer__strap{font-family:var(--serif);font-size:clamp(28px,4.4vw,64px);line-height:.95;padding-right:20px}
+.footer__strap p:nth-child(3){margin-top:.35em}
+.footer__strap em{font-style:italic}
+.footer__title{display:block;font-size:11px;font-weight:500;margin-bottom:14px}
+.footer__links li a,.footer__links li button{font-size:clamp(16px,2.6vw,26px);line-height:1.15;display:inline-block;padding:1px 0;transition:opacity .3s}
+.footer__links ul:hover a,.footer__links ul:hover button{opacity:.35}
+.footer__links ul a:hover,.footer__links ul button:hover{opacity:1}
+.footer__links small{display:block;font-size:12px;color:var(--taupe-d);margin-top:10px}
+.clocks{display:flex;gap:28px;margin-top:40px;font-size:12px;font-weight:500}
+.clocks b{font-family:var(--serif);font-weight:400;font-size:30px;display:block;line-height:1;margin-top:4px;font-variant-numeric:lining-nums tabular-nums}
+.clocks i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#6f8aa0;margin-right:6px;vertical-align:1px;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.footer__bottom{display:flex;justify-content:space-between;align-items:flex-end;padding-top:60px;gap:20px}
+.footer__logo{flex:0 0 auto}
+.footer__logo .wm{font-size:11vw}
+.footer__logo .wm__main{display:block;clip-path:inset(-30% 101% -40% -2%);transition:clip-path 1.6s var(--ease)}
+.footer__logo.in .wm__main{clip-path:inset(-30% -4% -40% -2%)}
+.footer__logo .wm__main i{font-style:normal;display:inline-block;transition:font-variation-settings .25s ease}
+.footer__logo .wm__sub{font-size:max(10px,1.1vw);opacity:0;transition:opacity .8s 1.2s}
+.footer__logo.in .wm__sub{opacity:1}
+.footer__copy{font-size:14px;font-weight:500;text-align:right;white-space:nowrap}
+.footer__copy small{display:block;font-size:12px;font-weight:400;color:var(--taupe-d)}
+.footer__copy small a{text-decoration:underline}
+.totop{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;margin-bottom:10px}
+.totop span{display:inline-block;transition:transform .4s var(--out)}
+.totop:hover span{transform:translateY(-4px)}
+.peek{position:fixed;left:0;top:0;width:220px;height:290px;pointer-events:none;z-index:60;opacity:0;transform:translate(-50%,-50%) scale(.85) rotate(-3deg);transition:opacity .3s,transform .4s var(--out);background-size:cover;background-position:center 25%}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0)}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px){.board__grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:767px){
+  .nav__row{padding:14px 16px 0}
+  .nav__logo{font-size:19px!important;top:14px!important}
+  .nav__links{display:none}
+  .panel{grid-template-columns:1fr}.panel__peek,.panel__aside{display:none}
+  .home{padding-top:130px}
+  .home__logo-row{top:110px;left:var(--pad);flex-direction:column;gap:10px}
+  .home__logo-row .wm{font-size:17vw}
+  .home__logo-row .wm__sub{font-size:10px}
+  .home__tagline{width:auto;font-size:18px}
+  .gallery-wrap{height:190vw}
+  .gallery-wrap{margin-top:30vw}
+  .gallery{width:160vw;margin-left:-30vw}
+  .nav__logo{font-size:16px;top:16px}
+  .gallery__col{flex-basis:31vw}
+  .gallery__col:nth-child(2),.gallery__col:nth-child(4){margin-top:40vw}
+  .gallery__col:nth-child(3){margin-top:16vw}
+  .strapline{margin-top:-50vw}
+  .sec__head{flex-direction:column;align-items:flex-start}
+  .cards{flex-direction:column}.cards__col:nth-child(2){padding-top:0}
+  .board__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .board__count{width:100%;margin-left:0}
+  .about,.clients__head{grid-template-columns:1fr;gap:14px}
+  .stats{grid-template-columns:1fr 1fr 1fr}
+  .footer__main{grid-template-columns:1fr 1fr;row-gap:40px}
+  .footer__strap{grid-column:1/-1}
+  .clocks{margin-top:28px}
+  .clocks b{font-size:26px}
+  .cursor{display:none!important}
+  .lb{grid-template-columns:1fr}.lb__fig{grid-column:1;justify-self:center;height:auto;width:86vw}
+  .lb__nav{top:auto;bottom:20px;transform:none;width:48px;height:48px}.lb__prev{left:auto;right:76px}
+  .lb__info{bottom:84px}.lb__thumbs{display:none}
+}
+@media (max-width:1099px){
+  .footer__bottom{flex-direction:column;align-items:flex-start}
+  .footer__logo{width:100%}
+  .footer__copy{text-align:left;white-space:normal;font-size:13px;width:100%;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:end;border-top:1px solid rgba(150,126,118,.35);padding-top:14px}
+  .footer__copy br{display:none}
+  .footer__copy .totop{grid-column:2;grid-row:1/3;margin:0}
+  .footer__copy small{grid-column:1}
+}
+@media (max-width:600px){.nav .lbl{display:none}.nav button{min-width:44px;min-height:44px;justify-content:center}.nav__logo{height:44px}.nav{height:68px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01s!important;animation:none!important}
+  .strapline .ch,.reveal-up,.gallery__lift{opacity:1;transform:none}
+}
+</style>
+<script>document.documentElement.classList.add('is-loading')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <span class="wm"><span class="wm__main intro__mask" id="introWm"></span></span>
+  <span class="intro__count" id="introCount">0</span>
+</div>
+
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><div class="cursor__ring">View</div><div class="cursor__dot"></div></div>
+
+<nav class="nav" id="nav" aria-label="Main">
+  <a href="#top" class="nav__logo" aria-label="Target Models — back to top"><span class="wm"><span class="wm__main"><b>target</b><span>models</span></span></span></a>
+  <div class="nav__row">
+    <div class="nav__group">
+      <button type="button" id="modelsBtn" aria-expanded="false" aria-controls="modelsPanel" aria-label="Models"><span class="plus"></span><span class="lbl">Models</span></button>
+    </div>
+    <div class="nav__group">
+      <div class="nav__links"><a href="#divisions">Divisions</a><span>/</span><a href="#board">Board</a><span>/</span><a href="#about">About</a></div>
+      <button type="button" id="menuBtn" aria-expanded="false" aria-controls="menuPanel" aria-label="Book talent"><span class="lbl">Book talent</span><span class="plus"></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="panel" id="modelsPanel" aria-hidden="true">
+  <ul id="modelsList"></ul>
+  <p class="panel__aside">Women, men and kids for fashion, beauty, commercial and editorial work — booked from Marbella and London.</p>
+  <div class="panel__peek" id="panelPeek"><img alt="" id="panelPeekImg"></div>
+</div>
+<div class="panel panel--menu" id="menuPanel" aria-hidden="true">
+  <ul>
+    <li><a href="#divisions">Divisions</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="https://www.targetmodels.eu/apply">Be discovered</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<main id="main">
+  <div class="home" id="top">
+    <h1 class="vh">Target Models International — model and casting agency in Marbella and London</h1>
+    <div class="home__logo-row" id="heroLogo">
+      <span class="wm" aria-hidden="true"><span class="wm__main"><b>target</b><span>models</span></span><span class="wm__sub">international personal management</span></span>
+      <p class="home__tagline"><span><i>Models + talent.</i></span><span><i>Marbella + London.</i></span></p>
+    </div>
+    <div class="gallery-wrap" id="galleryWrap"><section class="gallery" id="gallery" aria-label="Our models — hover to pause, click to open"></section></div>
+  </div>
+
+  <div class="wrap">
+    <div class="strapline" id="strapline">
+      <span class="vh">Target is a multilingual model and casting agency in Marbella and London.</span>
+      <span aria-hidden="true" id="strapText"></span>
+    </div>
+
+    <section class="sec" id="divisions">
+      <div class="sec__head reveal-up">
+        <h2 class="sec__title">Divisions</h2>
+        <p class="sec__intro">Looking to book models or talent for your next project? We’d love to hear from you.</p>
+      </div>
+      <div class="cards" id="cards"></div>
+      <div class="cta">
+        <a href="#contact" class="btn btn--ink mag">Book our talent</a>
+        <a href="https://www.targetmodels.eu/apply" class="btn mag">Apply now</a>
+      </div>
+    </section>
+
+    <section class="sec band band--sky" id="board">
+      <div class="sec__head reveal-up">
+        <h2 class="sec__title">The <em>board</em></h2>
+        <p class="sec__intro">Filter by division, hover to focus, click any face to open the full card.</p>
+      </div>
+      <div class="board__bar" role="group" aria-label="Filter models" id="chips"></div>
+      <div class="board__grid" id="boardGrid"></div>
+    </section>
+
+    <section class="about band band--blush" id="about">
+      <div class="label">About us</div>
+      <div>
+        <div class="about__text" id="aboutText">
+          <p>Formed in <em>1999</em> on the Costa del Sol, opposite the famous Puerto Banús marina, Target has grown into a <em>multilingual</em> agency in Marbella and London.</p>
+          <p>Our mission is simple: a <em>bespoke</em> one-stop service for every client, however large or small — models, dancers, actors and children, through to make-up, hair, photographers, full production teams and location search.</p>
+        </div>
+        <div class="stats" id="stats">
+          <div class="stat"><b data-to="1999" data-from="1970">1999</b><span>Founded in Puerto Banús</span></div>
+          <div class="stat"><b data-to="2">2</b><span>Offices — Marbella &amp; London</span></div>
+          <div class="stat"><b data-to="5">5</b><span>Divisions, one booking</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients" id="clients">
+      <div class="clients__head"><div class="label">Our clients</div><p>We believe every client is a valuable long-term partner.</p></div>
+      <ul class="clients__list" id="clientsList"></ul>
+    </section>
+  </div>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer__main">
+    <div>
+      <div class="footer__strap">
+        <p><em>Target</em> is <em>models</em>.</p>
+        <p><em>Target</em> is <em>talent</em>.</p>
+        <p>A <em>bespoke</em> one-stop service.</p>
+        <p>Since <em>1999</em>, in Marbella.</p>
+      </div>
+      <div class="clocks" id="clocks"></div>
+    </div>
+    <div class="footer__links"><ul id="footerModels"><li><span class="footer__title">Models</span></li></ul></div>
+    <div class="footer__links"><ul>
+      <li><span class="footer__title">Explore</span></li>
+      <li><a href="#divisions">Divisions</a></li>
+      <li><a href="#board">Board</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="https://www.targetmodels.eu/apply">Apply</a></li>
+    </ul></div>
+    <div class="footer__links"><ul>
+      <li><span class="footer__title">Connect</span></li>
+      <li><button type="button" id="copyMail">Email us</button></li>
+      <li><a href="https://www.instagram.com/targetmodelsinternational/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://www.facebook.com/Target-Models-International-126922830715063/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      <li><small id="mailNote">info@targetmodels.com — click to copy</small></li>
+    </ul></div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__logo" id="footerLogo"><span class="wm" aria-hidden="true"><span class="wm__main" id="footWm"></span><span class="wm__sub">international personal management</span></span></div>
+    <div class="footer__copy">
+      <a href="#top" class="totop"><span>↑</span> Back to top</a><br>
+      © 2026 Target Models International. All rights reserved.<small>Website by <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Wellyington</a></small>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Model card" aria-hidden="true">
+  <span class="lb__count" id="lbCount"></span>
+  <button class="lb__close" id="lbClose" type="button">Close<span class="plus"></span></button>
+  <button class="lb__nav lb__prev" id="lbPrev" type="button" aria-label="Previous">←</button>
+  <figure class="lb__fig" id="lbFig"></figure>
+  <button class="lb__nav lb__next" id="lbNext" type="button" aria-label="Next">→</button>
+  <div class="lb__info"><h2 id="lbTitle"></h2><p id="lbText"></p><a href="#contact" class="btn btn--ink" id="lbBook">Book this model</a></div>
+  <div class="lb__thumbs" id="lbThumbs"></div>
+</div>
+
+<div class="peek" id="peek"></div>
+
+<script>
+{
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const root=document.documentElement;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine=matchMedia('(pointer: fine)').matches;
+const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ---------- DATA: your 12 photos ---------- */
+const P=[
+  {src:'images/women-1.jpg',div:'Women',code:'W·01'},{src:'images/women-2.jpg',div:'Women',code:'W·02'},
+  {src:'images/women-3.jpg',div:'Women',code:'W·03'},{src:'images/women-4.jpg',div:'Women',code:'W·04'},
+  {src:'images/women-5.jpg',div:'Women',code:'W·05'},{src:'images/women-6.jpg',div:'Women',code:'W·06'},
+  {src:'images/men-1.jpg',div:'Men',code:'M·01'},{src:'images/men-2.jpg',div:'Men',code:'M·02'},
+  {src:'images/kids-1.jpg',div:'Kids',code:'K·01'},{src:'images/kids-2.jpg',div:'Kids',code:'K·02'},
+  {src:'images/kids-3.jpg',div:'Kids',code:'K·03'},{src:'images/kids-4.jpg',div:'Kids',code:'K·04'}
+];
+P.forEach((p,i)=>p.i=i);
+const byDiv=d=>P.filter(p=>p.div===d);
+const DIVTEXT={Women:'Fashion, beauty and commercial.',Men:'Lifestyle, fashion and campaigns.',Kids:'From babies to teens.'};
+
+/* ---------- INTRO ---------- */
+const introWm=$('#introWm');
+introWm.innerHTML='<b>'+[...'target'].map((c,i)=>`<span class="l" style="animation-delay:${i*45}ms">${c}</span>`).join('')+'</b><span>'+[...'models'].map((c,i)=>`<span class="l" style="animation-delay:${(i+6)*45}ms">${c}</span>`).join('')+'</span>';
+let loaded=0;const total=P.length;
+P.forEach(p=>{const im=new Image();im.onload=im.onerror=()=>{loaded++;$('#introCount').textContent=Math.round(loaded/total*100)};im.src=p.src});
+function start(){
+  if(root.classList.contains('ready'))return;
+  $('#intro').classList.add('out');root.classList.add('ready');
+  setTimeout(()=>root.classList.remove('is-loading'),1000);
+}
+setTimeout(start,reduce?0:1500);
+
+/* ---------- GALLERY: drifting columns ---------- */
+const COLS=[[0,9,6,3,11],[6,1,10,4,2],[1,8,5,7,0],[10,2,7,9,5],[3,11,4,8,1]];
+const DUR=[95,80,110,85,100];
+const gallery=$('#gallery');
+gallery.innerHTML=COLS.map((col,ci)=>{
+  const tiles=col.map((pi,ti)=>{const p=P[pi];const alt=byDiv(p.div).filter(x=>x.i!==pi);const set=[p,alt[(ci+ti)%alt.length]];
+    return `<button type="button" class="tile" data-i="${pi}" aria-label="Open ${esc(p.div)} ${esc(p.code)}"><div class="tile__media">${set.map((x,k)=>`<img src="${x.src}" data-i="${x.i}" alt="" ${k?'loading="lazy"':''} class="${k?'':'on'}">`).join('')}</div><div class="tile__cap"><span>${esc(p.div)}</span><span>${esc(p.code)}</span></div></button>`}).join('');
+  return `<div class="gallery__col" data-c="${ci}"><div class="gallery__lift" style="transition-delay:${.9+ci*.08}s"><div class="gallery__track" style="--dur:${DUR[ci]}s;--dir:${ci%2?'reverse':'normal'}">${tiles}${tiles.replace(/<button/g,'<button tabindex="-1" aria-hidden="true"')}</div></div></div>`;
+}).join('');
+const tileMedia=$$('.tile__media');
+setInterval(()=>{if(document.hidden)return;
+  for(let k=0;k<2;k++){const m=tileMedia[Math.floor(Math.random()*tileMedia.length)];if(m.closest('.tile:hover'))continue;
+    const ims=[...m.children];const i=ims.findIndex(x=>x.classList.contains('on'));
+    ims[i].classList.remove('on');ims[(i+1)%ims.length].classList.add('on');
+    m.closest('.tile').dataset.i=ims[(i+1)%ims.length].dataset.i;}
+},2200);
+
+/* ---------- STRAPLINE ---------- */
+const STRAP=[['Target',1],['is',0],['a',0],['multilingual',1],['model',0],['and',0],['casting',1],['agency',0],['in',0],['Marbella',1],['and',0],['London.',1]];
+let ci=0;
+$('#strapText').innerHTML=STRAP.map(([w,it])=>`<${it?'em':'span'} class="w">${[...w].map(ch=>`<span class="ch" style="transition-delay:${(ci++)*16}ms">${ch}</span>`).join('')}</${it?'em':'span'}>`).join(' ');
+
+/* ---------- DIVISION CARDS ---------- */
+const CARDS=[
+  [['Women','women-2','3/4','#board','Women'],['New Faces','kids-3','4/5','https://www.targetmodels.eu/new-face-models',null]],
+  [['Kids','kids-2','4/5','#board','Kids'],['Talent','women-5','3/4','https://www.targetmodels.eu/about',null]],
+  [['Men','men-1','3/4','#board','Men'],['Be discovered','women-3','4/5','https://www.targetmodels.eu/apply',null]]
+];
+const CARDTEXT={'New Faces':'Fresh faces, ready to be discovered.','Talent':'Dancers, actors, hair & make-up, photographers and full production.','Be discovered':'We are currently accepting models from Spain and London.'};
+$('#cards').innerHTML=CARDS.map(col=>'<div class="cards__col">'+col.map(([t,img,ar,href,filter])=>{
+  const n=filter?byDiv(filter).length:null;const ext=href.startsWith('http');
+  return `<article class="card reveal-up"><a href="${href}" ${filter?`data-filter="${filter}"`:''} ${ext?'target="_blank" rel="noopener"':''}><div class="card__media" style="aspect-ratio:${ar}"><img src="images/${img}.jpg" alt="${esc(t)}" loading="lazy"><span class="card__go">${filter?'See the board':'Visit'} <span>→</span></span></div><div class="card__row"><h3>${esc(t.toUpperCase())}</h3>${n?`<span class="card__n">${String(n).padStart(2,'0')} on board</span>`:''}</div><p>${esc(DIVTEXT[t]||CARDTEXT[t])}</p></a></article>`}).join('')+'</div>').join('');
+
+/* ---------- BOARD ---------- */
+const FILTERS=['All','Women','Men','Kids'];
+$('#chips').innerHTML=FILTERS.map(f=>`<button type="button" class="chip" data-f="${f}" aria-pressed="${f==='All'}">${f}<sup>${f==='All'?P.length:byDiv(f).length}</sup></button>`).join('')+'<span class="board__count" id="boardCount"></span>';
+const ORDER=[0,6,8,1,9,2,7,3,10,4,11,5];
+$('#boardGrid').innerHTML=ORDER.map(i=>{const p=P[i];return `<button type="button" class="board__item" data-i="${i}" data-div="${p.div}"><div class="tile__media"><img src="${p.src}" alt="${esc(p.div)} model ${esc(p.code)}" loading="lazy"></div><div class="board__meta"><span>${esc(p.code)}</span><span>${esc(p.div)}</span></div></button>`}).join('');
+let current='All';
+function setFilter(f){
+  if(f===current&&f!=='All')return;current=f;
+  $$('.chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===f));
+  const items=$$('.board__item');const first=new Map(items.map(el=>[el,el.getBoundingClientRect()]));
+  items.forEach(el=>el.hidden=!(f==='All'||el.dataset.div===f));
+  const shown=items.filter(el=>!el.hidden);
+  $('#boardCount').textContent=`Showing ${String(shown.length).padStart(2,'0')} of ${P.length}`;
+  if(reduce)return;
+  shown.forEach((el,k)=>{const a=first.get(el),b=el.getBoundingClientRect();
+    if(a.width){el.animate([{transform:`translate(${a.left-b.left}px,${a.top-b.top}px) scale(${a.width/b.width})`},{transform:'none'}],{duration:700,easing:'cubic-bezier(.2,.7,.2,1)'})}
+    else el.animate([{opacity:0,transform:'translateY(30px)'},{opacity:1,transform:'none'}],{duration:600,delay:k*40,easing:'cubic-bezier(.2,.7,.2,1)',fill:'backwards'});
+  });
+}
+$('#chips').addEventListener('click',e=>{const c=e.target.closest('.chip');if(c)setFilter(c.dataset.f)});
+setFilter('All');
+function goBoard(f){setFilter(f);$('#board').scrollIntoView({behavior:reduce?'auto':'smooth'})}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-filter]');if(a){e.preventDefault();closeAll();goBoard(a.dataset.filter)}});
+
+/* ---------- LIGHTBOX ---------- */
+const lb=$('#lb');let list=P,pos=0,lastFocus=null;
+$('#lbThumbs').innerHTML='';
+function renderLb(){
+  const p=list[pos];
+  $('#lbFig').innerHTML=`<img src="${p.src}" alt="${esc(p.div)} model ${esc(p.code)}">`;
+  $('#lbTitle').textContent=p.code;
+  $('#lbText').textContent=`${p.div} division · ${DIVTEXT[p.div]}`;
+  $('#lbCount').textContent=`${String(pos+1).padStart(2,'0')} / ${String(list.length).padStart(2,'0')} — ${current==='All'?'All divisions':current}`;
+  $('#lbThumbs').innerHTML=list.map((x,k)=>`<button type="button" data-k="${k}" class="${k===pos?'on':''}" aria-label="Show ${esc(x.code)}"><img src="${x.src}" alt=""></button>`).join('');
+}
+function openLb(i){
+  const visible=$$('.board__item:not([hidden])').map(el=>P[+el.dataset.i]);
+  list=visible.some(p=>p.i===i)?visible:P;pos=Math.max(0,list.findIndex(p=>p.i===i));
+  lastFocus=document.activeElement;$('#cursor').classList.remove('is-view');renderLb();lb.classList.add('open');lb.setAttribute('aria-hidden','false');$('#lbClose').focus();
+}
+function closeLb(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');if(lastFocus)lastFocus.focus({preventScroll:true})}
+const step=d=>{pos=(pos+d+list.length)%list.length;renderLb()};
+$('#lbPrev').onclick=()=>step(-1);$('#lbNext').onclick=()=>step(1);$('#lbClose').onclick=closeLb;
+$('#lbThumbs').addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(b){pos=+b.dataset.k;renderLb()}});
+$('#lbBook').addEventListener('click',closeLb);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+let sx=null;lb.addEventListener('pointerdown',e=>sx=e.clientX);lb.addEventListener('pointerup',e=>{if(sx!==null&&Math.abs(e.clientX-sx)>50)step(e.clientX<sx?1:-1);sx=null});
+document.addEventListener('click',e=>{const t=e.target.closest('.tile,.board__item');if(t)openLb(+t.dataset.i)});
+
+/* ---------- PANELS ---------- */
+$('#modelsList').innerHTML=['Women','Men','Kids'].map(d=>`<li><button type="button" data-filter="${d}" data-peek="${byDiv(d)[0].src}">${d}<sup>${String(byDiv(d).length).padStart(2,'0')}</sup></button></li>`).join('')+
+  `<li><a href="https://www.targetmodels.eu/new-face-models" data-peek="images/kids-3.jpg">New Faces</a></li><li><a href="https://www.targetmodels.eu/about" data-peek="images/women-5.jpg">Talent</a></li>`;
+const pairs=[[$('#modelsBtn'),$('#modelsPanel')],[$('#menuBtn'),$('#menuPanel')]];
+function closeAll(){pairs.forEach(([b,p])=>{p.classList.remove('is-open');b.classList.remove('is-open');b.setAttribute('aria-expanded','false');p.setAttribute('aria-hidden','true')})}
+pairs.forEach(([b,p])=>{
+  b.addEventListener('click',()=>{const open=!p.classList.contains('is-open');closeAll();if(open){p.classList.add('is-open');b.classList.add('is-open');b.setAttribute('aria-expanded','true');p.setAttribute('aria-hidden','false')}});
+  p.addEventListener('click',e=>{if(e.target.closest('a'))closeAll()});
+});
+$$('#modelsList [data-peek]').forEach(el=>el.addEventListener('mouseenter',()=>{$('#panelPeekImg').src=el.dataset.peek;$('#panelPeek').classList.add('on')}));
+$('#modelsList').addEventListener('mouseleave',()=>$('#panelPeek').classList.remove('on'));
+addEventListener('keydown',e=>{
+  if(lb.classList.contains('open')){if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);return}
+  if(e.key==='Escape')closeAll();
+});
+
+/* ---------- CLIENTS ---------- */
+const CLIENTS=[['Dior','Fashion & beauty'],['Chopard','Fine jewellery'],['Chaumet','Fine jewellery'],['Nikki Beach','Hospitality'],['Ping','Golf'],['Naturana','Lingerie'],['Orchestra','Kidswear']];
+$('#clientsList').innerHTML=CLIENTS.map(([n,t])=>`<li class="reveal-up"><b>${esc(n)}</b><span>${esc(t)}</span></li>`).join('');
+
+/* ---------- FOOTER ---------- */
+$('#footerModels').insertAdjacentHTML('beforeend',['Women','Men','Kids'].map(d=>`<li><button type="button" data-filter="${d}" data-peek="${byDiv(d)[1].src}">${d}</button></li>`).join('')+
+  '<li><a href="https://www.targetmodels.eu/new-face-models" data-peek="images/kids-3.jpg">New Faces</a></li><li><a href="https://www.targetmodels.eu/about" data-peek="images/women-5.jpg">Talent</a></li>');
+const peek=$('#peek');
+$$('.footer [data-peek]').forEach(l=>{
+  l.addEventListener('mouseenter',()=>{peek.style.backgroundImage=`url("${l.dataset.peek}")`;peek.classList.add('on')});
+  l.addEventListener('mouseleave',()=>peek.classList.remove('on'));
+});
+// footer wordmark: each letter shifts weight toward the cursor
+const fw=$('#footWm');
+fw.innerHTML='<b>'+[...'target'].map(c=>`<i data-w="640">${c}</i>`).join('')+'</b><span>'+[...'models'].map(c=>`<i data-w="180">${c}</i>`).join('')+'</span>';
+const letters=$$('#footWm i');
+function fitWm(){
+  const wm=fw.closest('.wm'),row=$('.footer__bottom');
+  letters.forEach(l=>l.style.fontVariationSettings=`"wght" ${l.dataset.w}`);
+  const copy=$('.footer__copy');const avail=innerWidth<1100?row.clientWidth:Math.min(row.clientWidth*0.66,row.clientWidth-copy.offsetWidth-40);
+  wm.style.fontSize='100px';const w=fw.scrollWidth;
+  if(w)wm.style.fontSize=(100*avail/w*0.995)+'px';
+}
+fitWm();addEventListener('resize',fitWm);if(document.fonts)document.fonts.ready.then(fitWm);
+letters.forEach(l=>l.style.fontVariationSettings=`"wght" ${l.dataset.w}`);
+$('.footer').addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'||!fine)return;
+  letters.forEach(l=>{const r=l.getBoundingClientRect();const d=Math.hypot(e.clientX-(r.left+r.width/2),e.clientY-(r.top+r.height/2));
+    const k=Math.max(0,1-d/320);const base=+l.dataset.w;const target=base>400?160:760;
+    l.style.fontVariationSettings=`"wght" ${Math.round(base+(target-base)*k)}`;});
+});
+$('.footer').addEventListener('mouseleave',()=>letters.forEach(l=>l.style.fontVariationSettings=`"wght" ${l.dataset.w}`));
+// live clocks
+function clocks(){
+  const f=tz=>new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:tz}).format(new Date());
+  $('#clocks').innerHTML=`<div><i></i>Marbella<b>${f('Europe/Madrid')}</b></div><div><i></i>London<b>${f('Europe/London')}</b></div>`;
+}
+clocks();setInterval(clocks,20000);
+// copy email (mail links don't always open from inside apps)
+$('#copyMail').addEventListener('click',async()=>{
+  const note=$('#mailNote');
+  try{await navigator.clipboard.writeText('info@targetmodels.com');note.textContent='Copied — info@targetmodels.com';}
+  catch(e){note.textContent='info@targetmodels.com';location.href='mailto:info@targetmodels.com';}
+  setTimeout(()=>note.textContent='info@targetmodels.com — click to copy',2600);
+});
+
+/* ---------- ABOUT words + stats ---------- */
+const at=$('#aboutText');
+at.querySelectorAll('p').forEach(p=>{
+  let k=0;p.innerHTML=p.innerHTML.split(/(<em>.*?<\/em>|\s+)/).map(part=>{
+    if(!part||/^\s+$/.test(part))return part||'';
+    return `<span class="wd" style="transition-delay:${(k++)*22}ms">${part}</span>`;}).join('');
+});
+function countUp(el){
+  const to=+el.dataset.to,from=+(el.dataset.from||0),t0=performance.now(),d=1400;
+  const tick=t=>{const k=Math.min(1,(t-t0)/d),e=1-Math.pow(1-k,3);el.textContent=Math.round(from+(to-from)*e);if(k<1)requestAnimationFrame(tick)};
+  reduce?el.textContent=to:requestAnimationFrame(tick);
+}
+
+/* ---------- VISIBILITY (works whatever element scrolls) ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  const el=e.target;
+  if(el.id==='heroLogo'){document.body.classList.toggle('scrolled',!e.isIntersecting);return}
+  if(e.isIntersecting){
+    el.classList.add('in');
+    if(el.id==='stats')$$('#stats b').forEach(countUp);
+    io.unobserve(el);
+  }
+}),{threshold:0,rootMargin:'0px 0px -12% 0px'});
+[$('#strapline'),$('#aboutText'),$('#stats'),...$$('.reveal-up')].forEach(el=>io.observe(el));
+const io3=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io3.unobserve(e.target)}}),{threshold:.2});
+io3.observe($('#footerLogo'));
+const io2=new IntersectionObserver(es=>es.forEach(e=>document.body.classList.toggle('scrolled',!e.isIntersecting)),{threshold:0});
+io2.observe($('#heroLogo'));
+
+/* scroll: progress bar + extra parallax — listens to every scroller (capture) */
+const cols=$$('.gallery__col'),speeds=[.10,-.05,.18,-.02,.14],bar=$('#progress'),wrapEl=$('#galleryWrap');
+let ticking=false,scroller=document.scrollingElement;
+function frame(){
+  ticking=false;
+  const sc=scroller||document.scrollingElement;
+  const max=sc.scrollHeight-sc.clientHeight;
+  bar.style.transform=`scaleX(${max>0?sc.scrollTop/max:0})`;
+  if(reduce)return;
+  const y=-wrapEl.getBoundingClientRect().top+wrapEl.offsetTop;
+  cols.forEach((c,i)=>c.style.transform=`translate3d(0,${-Math.max(0,y)*speeds[i]}px,0)`);
+}
+document.addEventListener('scroll',e=>{scroller=e.target===document?document.scrollingElement:e.target;if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true,capture:true});
+addEventListener('resize',frame);frame();
+
+/* ---------- CURSOR + MAGNETIC ---------- */
+if(fine&&!reduce){
+  document.body.classList.add('has-cursor');
+  const cur=$('#cursor');let mx=-100,my=-100,cx=-100,cy=-100;
+  addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;peek.style.left=mx+'px';peek.style.top=my+'px';
+    const t=e.target;
+    const inLb=!!t.closest('.lb');cur.classList.toggle('is-view',!inLb&&!!t.closest('.tile,.board__item,.card a'));
+    cur.classList.toggle('is-link',!t.closest('.tile,.board__item,.card a')&&!!t.closest('a,button'));
+    const ring=cur.querySelector('.cursor__ring');ring.textContent=t.closest('.card a')?(t.closest('[data-filter]')?'Board':'Visit'):'View';
+  },{passive:true});
+  (function loop(){cx+=(mx-cx)*.2;cy+=(my-cy)*.2;cur.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(loop)})();
+  $$('.mag').forEach(b=>{
+    b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});
+    b.addEventListener('mouseleave',()=>{b.style.transition='transform .6s cubic-bezier(.2,.7,.2,1),background .3s,color .3s';b.style.transform='';setTimeout(()=>b.style.transition='',600)});
+  });
+  // card tilt + inner image parallax
+  $$('.card a').forEach(a=>{
+    const m=a.querySelector('.card__media');
+    a.addEventListener('mousemove',e=>{const r=m.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      m.style.transform=`rotateY(${x*6}deg) rotateX(${-y*6}deg)`;m.style.setProperty('--px',`${-x*14}px`);m.style.setProperty('--py',`${-y*14}px`)});
+    a.addEventListener('mouseleave',()=>{m.style.transform='';m.style.setProperty('--px','0px');m.style.setProperty('--py','0px')});
+  });
+}else{addEventListener('pointermove',e=>{peek.style.left=e.clientX+'px';peek.style.top=e.clientY+'px'},{passive:true})}
+}
+</script>
+</body>
+</html>
