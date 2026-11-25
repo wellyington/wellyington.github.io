@@ -43,6 +43,7 @@ The journal is written in four languages with the same entries in each. The 100 
 ## Journal
 
 - [Journal home](https://wellyington.github.io/journal/en/): Working notes on websites, design and the 100 Days challenge
+- [let the photographs talk](https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/): 100 Days. A website concept for Target Models in Marbella and London: a moving wall of portraits, six divisions, a filterable model board, a card for each face and a simple way to book talent.
 - [three houses, one front door](https://wellyington.github.io/journal/en/articles/three-houses-one-front-door/): 100 Days. A website concept for The Lights in Málaga: one identity for a hostel, suites and a garden house, a booking bar in the hero, walking times, free extras and light and dark themes.
 - [the same pool after dark](https://wellyington.github.io/journal/en/articles/the-same-pool-after-dark/): 100 Days. An independent website concept for Morfeas Hotel in Kavos, Corfu: a day-to-night hero, light and dark themes, a day planner by mood, event posters and a booking drawer.
 - [from the counter to the ticket](https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/): 100 Days. A website concept for El Dorado, Estepona's rotisserie chicken house: the full menu with prices, a live order ticket, delivery or pick-up times and opening status.
@@ -62,17 +63,18 @@ The journal is written in four languages with the same entries in each. The 100 
 - [Day 6: El Dorado · Pollos asados a domicilio en Estepona](https://wellyington.github.io/challenge/day6/): Asador de Pollos El Dorado, Estepona. Pollos asados, hamburguesas de la casa, croquetas caseras y empanadillas argentinas, a domicilio o para recoger. Pide online.
 - [Day 7: Morfeas Hotel Kavos](https://wellyington.github.io/challenge/day7/): Morfeas Hotel — a family-run hotel and apartments in Kavos, Corfu. A minute from the Ionian Sea, steps from the strip.
 - [Day 8: The Lights Málaga — Hostel · Suites · Garden in the heart of Málaga](https://wellyington.github.io/challenge/day8/): Your summer base in Málaga. Three houses next to the Mercado Central, walking distance to La Malagueta beach. Free sangría, breakfast and themed dinners. Best price when you book direct.
+- [Day 9: Target Models](https://wellyington.github.io/challenge/day9/): Target Models is a highly professional and multilingual casting agency in Marbella and London. Formed in 1999 on the Costa del Sol.
 
 ## Optional
 
 - [CV](https://wellyington.github.io/cv/): Wellington Almeida's CV
 - [Journal archive](https://wellyington.github.io/journal/en/archive/): Every entry, newest first
 - [Journal feed (Atom)](https://wellyington.github.io/journal/en/feed.xml): English entries with full text
-- [Journal in Spanish](https://wellyington.github.io/journal/es/): 9 entries, the same as the English journal
+- [Journal in Spanish](https://wellyington.github.io/journal/es/): 10 entries, the same as the English journal
 - [Journal feed in Spanish (Atom)](https://wellyington.github.io/journal/es/feed.xml): Full text of each entry
-- [Journal in Portuguese (Brazil)](https://wellyington.github.io/journal/pt/): 9 entries, the same as the English journal
+- [Journal in Portuguese (Brazil)](https://wellyington.github.io/journal/pt/): 10 entries, the same as the English journal
 - [Journal feed in Portuguese (Brazil) (Atom)](https://wellyington.github.io/journal/pt/feed.xml): Full text of each entry
-- [Journal in Russian](https://wellyington.github.io/journal/ru/): 9 entries, the same as the English journal
+- [Journal in Russian](https://wellyington.github.io/journal/ru/): 10 entries, the same as the English journal
 - [Journal feed in Russian (Atom)](https://wellyington.github.io/journal/ru/feed.xml): Full text of each entry
 - [Sitemap](https://wellyington.github.io/sitemap.xml): Main site pages
 - [Journal sitemap](https://wellyington.github.io/journal/sitemap.xml): Every journal page with its language versions
