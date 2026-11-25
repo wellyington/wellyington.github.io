@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/three-houses-one-front-door/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/three-houses-one-front-door/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tres-casas-una-sola-puerta/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tres-casas-uma-so-porta/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/">
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
+<title>Концепт сайта хостела с прямым бронированием: The Lights, Малага · Wellyington</title>
+<meta name="description" content="Концепт сайта для The Lights в Малаге: единый образ для хостела, сьютов и дома с садом, поиск бронирования на главном экране, время пешком, бесплатные бонусы...">
+<meta name="keywords" content="дизайн сайта для хостела, концепт сайта бутик-хостела, сайт для хостела с несколькими объектами, сайт прямого бронирования для хостела, хостел в историческом центре Малаги, хостел рядом с рынком Меркадо Сентраль в Малаге, сайт летнего жилья в Малаге, сайт хостела со светлой и тёмной темой, веб-дизайнер на Коста-дель-Соль, челлендж 100 дней 100 сайтов">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Журнал">
+<meta property="og:title" content="Концепт сайта хостела с прямым бронированием: The Lights, Малага">
+<meta property="og:description" content="Концепт сайта для The Lights в Малаге: единый образ для хостела, сьютов и дома с садом, поиск бронирования на главном экране, время пешком, бесплатные бонусы...">
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp">
+<meta property="og:image:alt" content="Обложка кейса концепта сайта The Lights Málaga: Design Challenge Day 8, хостел, сьюты и сад, компьютер с летним главным экраном над портом Малаги и панелью бронирования и телефон с полноэкранным меню.">
+<meta property="article:published_time" content="2026-11-25T08:00:00+01:00">
+<meta property="article:modified_time" content="2026-11-25T08:00:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 дней">
+<meta property="article:tag" content="дизайн сайта для хостела">
+<meta property="article:tag" content="концепт сайта бутик-хостела">
+<meta property="article:tag" content="сайт для хостела с несколькими объектами">
+<meta property="article:tag" content="сайт прямого бронирования для хостела">
+<meta property="article:tag" content="хостел в историческом центре Малаги">
+<meta property="article:tag" content="хостел рядом с рынком Меркадо Сентраль в Малаге">
+<meta property="article:tag" content="сайт летнего жилья в Малаге">
+<meta property="article:tag" content="сайт хостела со светлой и тёмной темой">
+<meta property="article:tag" content="веб-дизайнер на Коста-дель-Соль">
+<meta property="article:tag" content="челлендж 100 дней 100 сайтов">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Концепт сайта хостела с прямым бронированием: The Lights, Малага">
+<meta name="twitter:description" content="Концепт сайта для The Lights в Малаге: единый образ для хостела, сьютов и дома с садом, поиск бронирования на главном экране, время пешком, бесплатные бонусы...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp">
+<meta name="twitter:image:alt" content="Обложка кейса концепта сайта The Lights Málaga: Design Challenge Day 8, хостел, сьюты и сад, компьютер с летним главным экраном над портом Малаги и панелью бронирования и телефон с полноэкранным меню.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/#article",
+      "url": "https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/",
+      "headline": "Концепт сайта хостела с прямым бронированием: The Lights, Малага",
+      "alternativeHeadline": "три дома, одна дверь",
+      "description": "Концепт сайта для The Lights в Малаге: единый образ для хостела, сьютов и дома с садом, поиск бронирования на главном экране, время пешком, бесплатные бонусы...",
+      "inLanguage": "ru",
+      "datePublished": "2026-11-25T08:00:00+01:00",
+      "dateModified": "2026-11-25T08:00:00+01:00",
+      "articleSection": "100 дней",
+      "keywords": "дизайн сайта для хостела, концепт сайта бутик-хостела, сайт для хостела с несколькими объектами, сайт прямого бронирования для хостела, хостел в историческом центре Малаги, хостел рядом с рынком Меркадо Сентраль в Малаге, сайт летнего жилья в Малаге, сайт хостела со светлой и тёмной темой, веб-дизайнер на Коста-дель-Соль, челлендж 100 дней 100 сайтов",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp", "caption": "Обложка кейса концепта сайта The Lights Málaga: Design Challenge Day 8, хостел, сьюты и сад, компьютер с летним главным экраном над портом Малаги и панелью бронирования и телефон с полноэкранным меню." },
+      "about": {
+        "@type": "Hostel",
+        "name": "The Lights Málaga", "url": "https://www.thelights.es/", "address": { "@type": "PostalAddress", "addressLocality": "Málaga", "addressCountry": "ES" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 дней", "url": "https://wellyington.github.io/journal/ru/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Журнал", "item": "https://wellyington.github.io/journal/ru/" },
+        { "@type": "ListItem", "position": 2, "name": "три дома, одна дверь", "item": "https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/three-houses-one-front-door/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/tres-casas-una-sola-puerta/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/tres-casas-uma-so-porta/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/tri-doma-odna-dver/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/tri-doma-odna-dver/" class="menu-entry">
+            <span class="mono dim">№ 009</span>
+            <span>три дома, одна дверь<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/tot-zhe-bassein-nochyu/" class="menu-entry">
+            <span class="mono dim">№ 008</span>
+            <span>тот же бассейн ночью<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/ot-prilavka-do-cheka/" class="menu-entry">
+            <span class="mono dim">№ 007</span>
+            <span>от прилавка до чека<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/" class="menu-entry">
+            <span class="mono dim">№ 006</span>
+            <span>так же тщательно, как на кухне<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/three-houses-one-front-door/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/tres-casas-una-sola-puerta/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/tres-casas-uma-so-porta/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/tri-doma-odna-dver/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 009</span>
+    <span class="entry-cell label">100 дней</span>
+    <time class="entry-cell" datetime="2026-11-25T08:00:00+01:00">25 ноября 2026</time>
+    <span class="entry-cell">11 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">три дома, одна дверь<span class="dot">.</span></h1><p class="entry-lede">Восьмой день из ста: концепт сайта для The Lights — трёх домов в историческом центре Малаги под одним именем: общительный хостел, сьюты в духе отеля и столетний дом с собственным садом.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp" alt="Обложка кейса концепта сайта The Lights Málaga: Design Challenge Day 8, хостел, сьюты и сад, компьютер с летним главным экраном над портом Малаги и панелью бронирования и телефон с полноэкранным меню." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 009</span>
+</div>
+<p class="caption label">Восьмой день. Концепт для The Lights в Малаге: три дома, один и тот же радушный приём.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Ftri-doma-odna-dver%2F&text=%D1%82%D1%80%D0%B8+%D0%B4%D0%BE%D0%BC%D0%B0%2C+%D0%BE%D0%B4%D0%BD%D0%B0+%D0%B4%D0%B2%D0%B5%D1%80%D1%8C"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Ftri-doma-odna-dver%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>25 ноября я опубликовал восьмую заметку этой серии, челленджа, который придумал Рамайя Траск: сто дней, сто компаний, сто сайтов. Первым днём была семейная строительная компания в Марина-Альте. <a href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">Та страница здесь.</a> Вторым — театр в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/">Она здесь.</a> Третьим — семейный ресторан в Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/">Она здесь.</a> Четвёртым — частная консалтинговая практика по недвижимости в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/">Она здесь.</a> Пятым — ресторан дегустационных сетов в Мотриле. <a href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">Она здесь.</a> Шестым — заведение с курицей-гриль в Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/">Она здесь.</a> Седьмым — семейный отель в Кавосе на Корфу. <a href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/">Она здесь.</a></p>
+
+<p>Сегодня мы снова на Коста-дель-Соль, в самой Малаге. The Lights — это три места для проживания в историческом центре под одним именем. The Lights Hostel — бутик-хостел в историческом андалусском здании. The Lights Suites — частные номера в духе отеля в том же здании, у некоторых балконы выходят на рынок Меркадо Сентраль. The Lights Garden — традиционный андалусский дом старше ста лет в нескольких улицах оттуда, с собственным садом. Их нынешний сайт — <a href="https://www.thelights.es/">thelights.es</a>.</p>
+
+<p>Концепт здесь: <a href="https://wellyington.github.io/challenge/day8/">The Lights Málaga, восьмой день</a>.</p>
+
+<h2 id="три-дома-три-гостя">три дома, три гостя</h2>
+
+<p>Сложность здесь не в дизайне. Она в задаче, которая спрятана внутри самого бизнеса.</p>
+
+<p>Хостел, сьюты и тихий старый дом — это три разных продукта для трёх разных людей. Хостел — для тех, кто путешествует один, и для компаний друзей, которым нужна терраса, общий ужин и с кем пойти на пляж. Сьюты — для пар и семей, которым нужен отдельный номер и балкон дешевле, чем в отеле. Дом с садом — для тех, кто ищет покоя после долгого солнечного дня, и часто для долгих поездок.</p>
+
+<p>Соберите всё это на одном сайте, и обычно получается страница, которая не говорит ни с кем. Гость хостела читает про тихий сад. Семья читает про двухъярусные кровати и вечеринки. А кнопку бронирования не находит никто, потому что их три в трёх разных местах.</p>
+
+<p>Поэтому задача была объединить их под одним образом — одно имя, одна команда, одни и те же бесплатные бонусы, — и при этом дать каждому дому сохранить свой характер. И сделать так, чтобы три вещи невозможно было не заметить на любом экране: где это, какой номер вы получаете и как забронировать его напрямую.</p>
+
+<p><img src="/images/journal/100-days-day-8/01-cover.webp" alt="Design Challenge Day 8: The Lights Málaga, хостел, сьюты и сад. Компьютер с летним главным экраном над портом Малаги в светлой теме и телефон в тёмной теме." />
+<em>Восьмой день: три дома в самом сердце старой Малаги, в нескольких минутах ходьбы от моря.</em></p>
+
+<h2 id="летний-главный-экран">летний главный экран</h2>
+
+<p>Малага продаёт лето. Большинство тех, кто бронирует кровать в центре, едут за солнцем, морем и долгими вечерами, поэтому первый экран говорит именно об этом.</p>
+
+<p>Фон — фотография порта у Муэлье-Уно: пальмы, маяк, парусники и вода. Поверх — крупной антиквой глубокого морского синего цвета фраза your summer in Málaga starts here, ваше лето в Малаге начинается здесь, а последние два слова — терракотовым курсивом. В углу медленно вращается маленькое нарисованное солнце. Над заголовком три слова мелкими заглавными: hostel, suites, garden. Весь бизнес в трёх словах, ещё до того, как кто-то начал прокручивать.</p>
+
+<p>Под заголовком одна фраза: три уютных дома в самом сердце старого города, рядом с Меркадо Сентраль и в нескольких минутах ходьбы от моря. Затем две кнопки: проверить наличие мест и посмотреть наши дома.</p>
+
+<p>Логотип — тот, которым The Lights уже пользуется: круглый синий значок с фонариком в центре шапки. Я его не перерисовывал. Вокруг него в шапке — шесть разделов, которые у компании уже есть: Home, Accommodations, Facilities, Offers, Blog и Contact Us, и терракотовая кнопка Book now справа.</p>
+
+<p><img src="/images/journal/100-days-day-8/02-light-theme.webp" alt="Светлая тема: главный экран с портом Малаги, панель бронирования и приветственный раздел с фотографией арены для корриды и моря, на компьютере и телефоне." />
+<em>Светлая тема: кремовые страницы, морской синий текст и терракотовые кнопки, а впереди — порт и три дома.</em></p>
+
+<h2 id="сначала--панель-бронирования">сначала — панель бронирования</h2>
+
+<p>Прямо под главным экраном, поверх нижнего края фотографии, — панель бронирования. Где, заезд, выезд, гости, поиск. Это первое на странице, чем действительно можно воспользоваться.</p>
+
+<p>«Где» — выбор из трёх домов. В датах уже стоят разумные значения — завтра и через три ночи, — так что менять нужно только то, что отличается. Гостей можно выбрать от одного до шести, а дальше — семь и больше, группа. На телефоне панель превращается в аккуратную форму, поле под полем, с большой кнопкой поиска внизу.</p>
+
+<p>Под панелью — четыре коротких обещания, каждое с галочкой: лучшая цена гарантирована, бесплатный завтрак, бесплатная сангрия, бесплатный Wi-Fi. Именно эти четыре вещи гости сравнивают на сайтах бронирования, и здесь они написаны раньше, чем их придётся искать.</p>
+
+<p>Чтобы было ясно, что концепт делает в этот момент: кнопка поиска отправляет даты, дом и число гостей на нынешний сайт The Lights. У каждого дома своя система бронирования, и в настоящей версии кнопка открывала бы нужную с уже заполненными датами. Это подключение — первое в списке, если концепт пойдёт дальше.</p>
+
+<p><img src="/images/journal/100-days-day-8/08-booking.webp" alt="Панель бронирования на компьютере с полями Where, Arrival, Departure, Guests и кнопкой Search, и на телефоне в тёмной теме с выбранными The Lights Garden и тремя гостями." />
+<em>Сначала дом, потом дата. Четыре обещания стоят под поиском при каждом посещении.</em></p>
+
+<h2 id="три-дома-одна-малага">три дома, одна Малага</h2>
+
+<p>Сердце страницы — раздел three houses, one Málaga, три дома, одна Малага. Его первая строка говорит, что общего у всех трёх: та же дружелюбная команда и те же бесплатные бонусы. Выберите стиль, который подходит вашему лету.</p>
+
+<p>Дальше — три карточки: рядом на компьютере и одна за другой на телефоне. У каждой фотография в арочной рамке — отсылка к дверям и окнам старых андалусских домов, свой цвет и строка о том, для кого этот дом.</p>
+
+<p>The Lights Hostel — синий, для тех, кто путешествует один, и для друзей: бутик-хостел в историческом андалусском здании, общительный, центральный и располагающий, с террасой, созданной для знакомств. Терраса, тематические ужины, камера хранения.</p>
+
+<p>The Lights Suites — терракотовые, для пар и семей: комфорт уровня отеля по цене хостела, номера повышенной категории с балконами прямо на Меркадо Сентраль. Отдельные номера, балконы с видом на рынок, завтрак.</p>
+
+<p>The Lights Garden — оливково-зелёный, для неспешного отдыха: традиционный андалусский дом старше ста лет в историческом центре, зелёный и тихий уголок после долгого солнечного дня. Столетний дом, сад, долгие поездки.</p>
+
+<p>Каждая карточка заканчивается своей кнопкой — book the hostel, book the suites, book the garden, — которая возвращает к панели бронирования с уже выбранным домом. А под кнопкой — адрес, потому что у двух домов он общий, а у сада свой. Тот, кто забронировал сад, не должен оказаться у дверей хостела.</p>
+
+<p>Эти три цвета — синий, терракотовый и оливковый — проходят через всю страницу. Увидев их в карточках, вы понимаете, о каком доме говорит кнопка или строка, даже не читая подписи.</p>
+
+<p><img src="/images/journal/100-days-day-8/06-three-houses.webp" alt="Раздел Our houses на компьютере: три карточки для The Lights Hostel, The Lights Suites и The Lights Garden, у каждой арочное фото, свой цвет, особенности и своя кнопка бронирования, и тот же раздел на телефоне в тёмной теме." />
+<em>Хостел для друзей, сьюты для пар и семей и столетний андалусский дом с садом.</em></p>
+
+<h2 id="мелочи--за-наш-счёт">мелочи — за наш счёт</h2>
+
+<p>Хостелы Малаги конкурируют ценой, а на сайтах бронирования цены всегда похожи. Отличается то, что входит в стоимость. У The Lights входит многое, а нынешний сайт упоминает об этом вскользь.</p>
+
+<p>Поэтому для этого есть отдельный раздел — the little things are on us, мелочи за наш счёт, — с простой строкой: никаких доплат за хорошее. Дальше восемь небольших карточек. Бесплатная сангрия — холодный бокал в знак приветствия при каждом заезде. Бесплатный завтрак — чтобы правильно начать пляжный день. Бесплатные тематические ужины — общие столы и новые друзья. Быстрый Wi-Fi, бесплатно во всём доме. Солнечная терраса — солнце днём и сангрия вечером. Камера хранения — для раннего рейса или позднего заезда. Карты и советы от команды. И группы — с индивидуальными предложениями для больших компаний. На первых трёх — маленькая терракотовая метка free, бесплатно, потому что их никто не ждёт.</p>
+
+<p>В приветственном разделе есть и круглая жёлтая наклейка с надписью free sangría, every guest, every stay — бесплатная сангрия для каждого гостя при каждом заезде. Она медленно вращается, как бирка на чемодане. Это самая дружелюбная фраза на странице, поэтому ей позволено двигаться.</p>
+
+<h2 id="солнце-море-и-город">солнце, море и город</h2>
+
+<p>Перед бонусами — фотография во всю ширину: надпись на пляже Ла-Малагета, городском пляже, и короткое приглашение: оставьте машину дома. От двери лучшие летние дни Малаги — в пешей доступности.</p>
+
+<p>Рядом — время пешком, записанное так, как планируют день. Муэлье-Уно и порт — около двенадцати минут. Пляж Ла-Малагета — около двадцати. Пляжи Педрегалехо и Эль-Пало — короткая поездка на автобусе. Закат на Хибральфаро — около двадцати пяти минут пешком. Это вопросы, которые люди задают на ресепшене в первое утро, — с ответами ещё до приезда.</p>
+
+<p><img src="/images/journal/100-days-day-8/07-summer-included.webp" alt="Летний раздел с фотографией надписи Ла-Малагета на пляже, временем пешком до Муэлье-Уно, Ла-Малагеты, Педрегалехо и Хибральфаро и телефоном с бесплатными бонусами: сангрия, завтрак, ужины и Wi-Fi." />
+<em>Время пешком до порта, пляжа и Хибральфаро и бесплатные сангрия, завтрак и ужины при каждом заезде.</em></p>
+
+<h2 id="лучший-адрес-в-городе">лучший адрес в городе</h2>
+
+<p>Самый сильный аргумент в пользу The Lights — их расположение, поэтому оно не спрятано в подвале сайта. У него свой раздел — the best address in town, лучший адрес в городе.</p>
+
+<p>С одной стороны — фотография собора, который малагеньо называют Ла-Манкита, «однорукая», потому что вторую башню так и не достроили. С другой — пронумерованный список времени пешком от двери на улице Торрегорда, каждое число в круглом значке. Минута до рынка Меркадо Сентраль де Атарасанас — свежая рыба, фрукты и тапас-бары. Пять минут до улицы Ларьос — главной торговой улицы. Восемь минут до собора и площадей старого города. Десять минут до Музея Пикассо и Алькасабы. Двадцать минут до пляжа Ла-Малагета. Маленькая заметка внизу говорит, что время приблизительное, — так и есть.</p>
+
+<p>Продают здесь цифры. «Одна минута до рынка» говорит о расположении больше, чем любое прилагательное.</p>
+
+<p><img src="/images/journal/100-days-day-8/09-neighbourhood.webp" alt="Раздел о районе в тёмной теме с фотографией собора Малаги и временем пешком до Меркадо Сентраль, улицы Ларьос, собора, Музея Пикассо и Ла-Малагеты, рядом телефон с двумя адресами и кнопками маршрута, WhatsApp и почты." />
+<em>Путеводитель по времени пешком до рынка, улицы Ларьос и пляжа, плюс оба адреса, телефоны и почта.</em></p>
+
+<h2 id="бронируйте-напрямую-и-экономьте">бронируйте напрямую и экономьте</h2>
+
+<p>Каждое бронирование, которое хостел получает через крупную платформу, стоит ему комиссии. The Lights уже обещает лучшую цену на своём сайте и пишет об этом мелким шрифтом в шапке. Концепт говорит об этом крупно.</p>
+
+<p>Есть раздел always the best price here, здесь всегда лучшая цена, с одной честной фразой: забудьте о платформах бронирования; бронируя на нашем сайте, вы всегда получаете самую низкую цену и несколько бонусов, которые можем предложить только мы. Затем четыре причины. Лучшая цена гарантирована. Скидка для подписчиков — с эксклюзивным кодом для тех, кто следит за ними в соцсетях. Предложения для групп — индивидуальная цена для большой компании. И особые тарифы для долгого проживания в Малаге. Одна кнопка — проверить наличие мест — возвращает к панели бронирования.</p>
+
+<p>То же обещание проходит по верхней полосе каждого экрана: book on our website, best price guaranteed, золотом. А на телефоне, как только вы прокрутили панель бронирования, внизу появляется тонкая полоса с названием, фразой best price, booked direct и кнопкой book now. Она остаётся там до самого ухода со страницы.</p>
+
+<h2 id="мы-оставим-для-вас-свет">мы оставим для вас свет</h2>
+
+<p>Раздел контактов берёт заголовок из названия компании: we’ll leave a light on for you, мы оставим для вас свет. Такую фразу маленький отель написал бы на записке от руки.</p>
+
+<p>Ниже — две карточки, по одной на адрес, потому что The Lights находится в двух местах. Хостел и сьюты — улица Торрегорда, 3, с телефоном, почтой, кнопкой маршрута и кнопкой WhatsApp. Garden — улица Молинильо-дель-Асейте, 5, со своим телефоном, своей почтой и своей кнопкой маршрута. У каждой карточки кайма цвета своего дома — синяя для хостела и сьютов, зелёная для сада, — чтобы их никогда не перепутать.</p>
+
+<h2 id="меню-которое-опускается">меню, которое опускается</h2>
+
+<p>На телефоне в шапке остаются три вещи: кнопка меню, логотип посередине и book now. Над ней — тонкая полоса с телефоном и переключателем светлой и тёмной темы.</p>
+
+<p>Нажмите на меню — оно опускается и заполняет весь экран, а три полоски кнопки превращаются в крестик. Шесть разделов появляются крупной антиквой, под ними кнопка book now во всю ширину, а внизу, там, куда дотягивается большой палец, — адрес и телефон. В обеих темах всё работает одинаково.</p>
+
+<p><img src="/images/journal/100-days-day-8/05-mobile-menu.webp" alt="Два телефона с полноэкранным меню, светлым и тёмным: логотип, крестик для закрытия, шесть разделов крупной антиквой, кнопка Book Now, адрес и телефон." />
+<em>Крупный шрифт, кнопка бронирования, адрес и телефон.</em></p>
+
+<h2 id="тот-же-приём-после-заката">тот же приём после заката</h2>
+
+<p>Как и у вчерашнего отеля на Корфу, у The Lights есть светлая и тёмная тема. Маленький переключатель с солнцем и луной стоит рядом с book now на компьютере и в верхней полосе на телефоне.</p>
+
+<p>Светлая тема — это утро в Малаге: кремовые и песочные страницы, текст глубокого морского синего цвета, терракотовые кнопки и солнечно-жёлтые акценты. Тёмная — тот же город после заката: глубокие тёмно-синие страницы, кремовый текст, та же терракота, а жёлтый становится золотым. Обе темы проработаны раздел за разделом, а не получены инверсией цветов. Сайт запоминает выбор до следующего визита, а если человек ни разу не трогал переключатель, следует настройке его телефона или компьютера.</p>
+
+<p><img src="/images/journal/100-days-day-8/03-dark-theme.webp" alt="Тёмная тема на компьютере и телефоне: главный экран над портом в ночных цветах, панель бронирования и приветственный раздел в глубоком тёмно-синем." />
+<em>Переключатель с солнцем и луной делает кремовые страницы тёмно-синими, и сайт запоминает выбор.</em></p>
+
+<p><img src="/images/journal/100-days-day-8/04-light-vs-dark.webp" alt="Два телефона рядом с приветственным разделом A sunny home in the heart of Málaga и наклейкой о бесплатной сангрии, в светлой и тёмной теме." />
+<em>Один переключатель меняет свет: обе темы рядом.</em></p>
+
+<h2 id="детали">детали</h2>
+
+<p>Шрифты: DM Serif Display для заголовков, крупно, с терракотовым курсивом для более тёплых слов — starts here, one Málaga, light on. Jost, чистый геометрический гротеск, для всего, что читается, разреженными заглавными для мелких подписей и кнопок.</p>
+
+<p>Цвета — цвета города: глубокий синий моря и самого логотипа The Lights, терракота крыш, песок и крем стен старого города, солнечный жёлтый и оливково-зелёный для сада. Тонкая пунктирная линия синего и жёлтого цвета, как край пляжного полотенца, разделяет некоторые разделы.</p>
+
+<p>При прокрутке всё плавно появляется, фото на главном экране очень медленно смещается, а солнце и наклейка с сангрией вращаются. Всё это останавливается для тех, кто попросил свой телефон или компьютер уменьшить анимацию, и страница без этого работает точно так же. Шрифты загружаются с моего собственного сайта, а не из Google, поэтому открытие страницы не передаёт ничей адрес третьим лицам.</p>
+
+<h2 id="что-такое-этот-концепт-и-что-дальше">что такое этот концепт и что дальше</h2>
+
+<p>Сведения на странице — три дома, их адреса, телефоны и почта, бесплатные бонусы, предложения и обещание лучшей цены — взяты с нынешнего сайта The Lights. Логотип и разделы меню сохранены как есть. Время пешком приблизительное, и страница об этом говорит.</p>
+
+<p>Новое — это структура: единый образ, который держит три разных дома, панель бронирования раньше всего остального, свой цвет для каждого дома, бонусы как повод бронировать напрямую и раздел о расположении, где говорят цифры.</p>
+
+<p>Цифр по бронированиям у меня нет, и придумывать их я не буду. Чтобы превратить концепт в работающий сайт, нужны практические шаги: подключить каждый дом к его системе бронирования, чтобы даты передавались, сделать испанскую версию рядом с английской, страницы блога и предложений и поставить собственные фотографии команды везде, где они есть.</p>
+
+<h2 id="если-у-вас-больше-одного-места">если у вас больше одного места</h2>
+
+<p>Возможно, у вас не хостел. Но у многих компаний на этом побережье несколько мест под одним именем: ресторанная группа с пляжным баром и рестораном в центре, компания посуточной аренды с апартаментами в трёх посёлках, спортзал с двумя филиалами, языковая школа с летним кампусом.</p>
+
+<p>Помогает то же, что и здесь. Сначала скажите, что их объединяет, а потом дайте каждому месту сохранить свой характер. Дайте каждому свой цвет и придерживайтесь его. Ставьте каждый адрес рядом с тем, к чему он относится, а не только в подвале сайта. Сделайте расположение причиной выбрать вас — с реальными расстояниями вместо прилагательных. И ставьте кнопку бронирования туда, куда смотрят в первую очередь, а не туда, где осталось место.</p>
+
+<p>Я веб-дизайнер из Эстепоны, на Коста-дель-Соль, и проектирую и делаю сайты для компаний в Испании и за её пределами. Если это похоже на ваш бизнес, напишите мне через <a href="https://wellyington.github.io/ru/">основной сайт</a>. Расскажите, чем вы занимаетесь и где, и я отвечу простым языком. Концепт <a href="https://wellyington.github.io/challenge/day8/">здесь</a>, а нынешний сайт The Lights <a href="https://www.thelights.es/">здесь</a>, чтобы вы могли их сравнить. Восемь готово, осталось девяносто два.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>100 дней</li><li>кейс</li><li>хостел</li><li>малага</li><li>прямое бронирование</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><a class="pager-cell rollable" href="/journal/ru/articles/tot-zhe-bassein-nochyu/">
+      <span class="label">← предыдущая</span>
+      <span class="pager-title">тот же бассейн ночью<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Читайте дальше</span>
+    <h2 id="more-title" class="h-section">ещё записи.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/ru/articles/tot-zhe-bassein-nochyu/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp" alt="Обложка кейса концепта сайта Morfeas Hotel: Design Challenge Day 7, днём и ночью, компьютер с иллюстрированным главным экраном, разделённым между бассейном на солнце и бассейном под луной, и телефон с той же сценой." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 008</span>
+</div>
+<span class="label">100 дней · 23.11.26</span><span class="card-title">тот же бассейн ночью<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/ot-prilavka-do-cheka/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp" alt="Обложка кейса концепта сайта El Dorado: меню Haz tu comanda на компьютере с напитками, бумажный чек заказа справа и телефон с меню и панелью Mi comanda." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 007</span>
+</div>
+<span class="label">100 дней · 22.11.26</span><span class="card-title">от прилавка до чека<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp" alt="Обложка кейса с концептом сайта Espacio IME: Design Challenge, день 5, тёмная главная на компьютере с заголовком Un viaje por los sabores de la Costa Tropical и телефон в светлой теме с местными продуктами." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 006</span>
+</div>
+<span class="label">100 дней · 21.11.26</span><span class="card-title">так же тщательно, как на кухне<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Правовая информация">
+    <a href="/ru/privacy/">Конфиденциальность</a>
+    <a href="/ru/cookies/">Cookies</a>
+    <a href="/ru/terms/">Правовая информация</a>
+    <a href="#" data-cookie-settings>Настройки cookies</a>
+  </nav>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

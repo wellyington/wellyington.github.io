@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diário" href="/journal/pt/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/three-houses-one-front-door/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/three-houses-one-front-door/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tres-casas-una-sola-puerta/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tres-casas-uma-so-porta/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/">
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
+<title>Conceito de site para hostel com reserva direta: The Lights, Málaga · Wellyington</title>
+<meta name="description" content="Um conceito de site para o The Lights em Málaga: uma só identidade para um hostel, suítes e uma casa com jardim, busca de reservas na abertura, tempos a pé, ...">
+<meta name="keywords" content="design de site para hostel, conceito de site para hostel boutique, site para hostel com várias unidades, site de reserva direta para hostel, hostel no centro histórico de Málaga, hostel ao lado do Mercado Central de Málaga, site de hospedagem de verão em Málaga, site de hostel com modo claro e escuro, web designer na Costa del Sol, desafio 100 dias 100 sites">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/pt/articles/tres-casas-uma-so-porta/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Diário">
+<meta property="og:title" content="Conceito de site para hostel com reserva direta: The Lights, Málaga">
+<meta property="og:description" content="Um conceito de site para o The Lights em Málaga: uma só identidade para um hostel, suítes e uma casa com jardim, busca de reservas na abertura, tempos a pé, ...">
+<meta property="og:url" content="https://wellyington.github.io/journal/pt/articles/tres-casas-uma-so-porta/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp">
+<meta property="og:image:alt" content="Capa do caso do conceito de site do The Lights Málaga: Design Challenge Day 8, hostel, suítes e jardim, um computador com a abertura de verão sobre o porto de Málaga e a barra de reservas, e um celular com o menu em tela cheia.">
+<meta property="article:published_time" content="2026-11-25T08:00:00+01:00">
+<meta property="article:modified_time" content="2026-11-25T08:00:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 dias">
+<meta property="article:tag" content="design de site para hostel">
+<meta property="article:tag" content="conceito de site para hostel boutique">
+<meta property="article:tag" content="site para hostel com várias unidades">
+<meta property="article:tag" content="site de reserva direta para hostel">
+<meta property="article:tag" content="hostel no centro histórico de Málaga">
+<meta property="article:tag" content="hostel ao lado do Mercado Central de Málaga">
+<meta property="article:tag" content="site de hospedagem de verão em Málaga">
+<meta property="article:tag" content="site de hostel com modo claro e escuro">
+<meta property="article:tag" content="web designer na Costa del Sol">
+<meta property="article:tag" content="desafio 100 dias 100 sites">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Conceito de site para hostel com reserva direta: The Lights, Málaga">
+<meta name="twitter:description" content="Um conceito de site para o The Lights em Málaga: uma só identidade para um hostel, suítes e uma casa com jardim, busca de reservas na abertura, tempos a pé, ...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp">
+<meta name="twitter:image:alt" content="Capa do caso do conceito de site do The Lights Málaga: Design Challenge Day 8, hostel, suítes e jardim, um computador com a abertura de verão sobre o porto de Málaga e a barra de reservas, e um celular com o menu em tela cheia.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/pt/articles/tres-casas-uma-so-porta/#article",
+      "url": "https://wellyington.github.io/journal/pt/articles/tres-casas-uma-so-porta/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/pt/articles/tres-casas-uma-so-porta/",
+      "headline": "Conceito de site para hostel com reserva direta: The Lights, Málaga",
+      "alternativeHeadline": "três casas, uma só porta",
+      "description": "Um conceito de site para o The Lights em Málaga: uma só identidade para um hostel, suítes e uma casa com jardim, busca de reservas na abertura, tempos a pé, ...",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-11-25T08:00:00+01:00",
+      "dateModified": "2026-11-25T08:00:00+01:00",
+      "articleSection": "100 dias",
+      "keywords": "design de site para hostel, conceito de site para hostel boutique, site para hostel com várias unidades, site de reserva direta para hostel, hostel no centro histórico de Málaga, hostel ao lado do Mercado Central de Málaga, site de hospedagem de verão em Málaga, site de hostel com modo claro e escuro, web designer na Costa del Sol, desafio 100 dias 100 sites",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp", "caption": "Capa do caso do conceito de site do The Lights Málaga: Design Challenge Day 8, hostel, suítes e jardim, um computador com a abertura de verão sobre o porto de Málaga e a barra de reservas, e um celular com o menu em tela cheia." },
+      "about": {
+        "@type": "Hostel",
+        "name": "The Lights Málaga", "url": "https://www.thelights.es/", "address": { "@type": "PostalAddress", "addressLocality": "Málaga", "addressCountry": "ES" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 dias", "url": "https://wellyington.github.io/journal/pt/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Diário", "item": "https://wellyington.github.io/journal/pt/" },
+        { "@type": "ListItem", "position": 2, "name": "três casas, uma só porta", "item": "https://wellyington.github.io/journal/pt/articles/tres-casas-uma-so-porta/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/pt/" class="bar-cell bar-brand" aria-label="Wellyington Diário">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diário</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Horário local e no que estou trabalhando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escrevendo</span><span>notas sobre lançar pequeno</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Ouvindo</span><span>Wellyington — demos de estúdio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/three-houses-one-front-door/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/tres-casas-una-sola-puerta/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/tres-casas-uma-so-porta/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/tri-doma-odna-dver/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Mudar para o tema escuro" data-label-dark="Mudar para o tema escuro" data-label-light="Mudar para o tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Escuro"></span><span class="theme-word" data-light="Claro" data-dark="Escuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menu" data-label-open="Abrir menu" data-label-close="Fechar menu" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegação" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegação">
+      <p class="label">Navegação</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/pt/" class="rollable">
+            <span class="roll"><span>diário.</span><span aria-hidden="true">diário.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/archive/" class="rollable">
+            <span class="roll"><span>arquivo.</span><span aria-hidden="true">arquivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/about/" class="rollable">
+            <span class="roll"><span>sobre.</span><span aria-hidden="true">sobre.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>site principal.</span><span aria-hidden="true">site principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/pt/articles/tres-casas-uma-so-porta/" class="menu-entry">
+            <span class="mono dim">Nº 009</span>
+            <span>três casas, uma só porta<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/a-mesma-piscina-a-noite/" class="menu-entry">
+            <span class="mono dim">Nº 008</span>
+            <span>a mesma piscina à noite<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/do-balcao-a-comanda/" class="menu-entry">
+            <span class="mono dim">Nº 007</span>
+            <span>do balcão à comanda<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/" class="menu-entry">
+            <span class="mono dim">Nº 006</span>
+            <span>tão cuidadoso quanto a cozinha<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/three-houses-one-front-door/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/tres-casas-una-sola-puerta/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/tres-casas-uma-so-porta/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/tri-doma-odna-dver/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/pt/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/pt/" class="entry-cell entry-back rollable"><span class="roll"><span>← diário</span><span aria-hidden="true">← diário</span></span></a>
+    <span class="entry-cell mono">Nº 009</span>
+    <span class="entry-cell label">100 dias</span>
+    <time class="entry-cell" datetime="2026-11-25T08:00:00+01:00">25 de novembro de 2026</time>
+    <span class="entry-cell">14 min de leitura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">três casas, uma só porta<span class="dot">.</span></h1><p class="entry-lede">Dia oito de cem: um conceito de site para o The Lights, três casas no centro histórico de Málaga com um só nome: um hostel social, suítes no estilo de hotel e uma casa centenária com jardim.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp" alt="Capa do caso do conceito de site do The Lights Málaga: Design Challenge Day 8, hostel, suítes e jardim, um computador com a abertura de verão sobre o porto de Málaga e a barra de reservas, e um celular com o menu em tela cheia." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 009</span>
+</div>
+<p class="caption label">Dia oito. Um conceito para o The Lights em Málaga: três casas, uma mesma acolhida.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="nesta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">nesta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartilhar.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar link</span><span aria-hidden="true">copiar link</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Ftres-casas-uma-so-porta%2F&text=tr%C3%AAs+casas%2C+uma+s%C3%B3+porta"><span class="roll"><span>publicar no X</span><span aria-hidden="true">publicar no X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Ftres-casas-uma-so-porta%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>Em 25 de novembro publiquei a oitava nota desta série, o desafio que Ramiah Trask lançou: cem dias, cem negócios, cem sites. O dia um foi uma construtora familiar da Marina Alta. <a href="https://wellyington.github.io/journal/pt/articles/o-site-antes-do-sim/">Essa página está aqui.</a> O dia dois, um teatro de Málaga. <a href="https://wellyington.github.io/journal/pt/articles/espaco-para-a-temporada-inteira/">Essa está aqui.</a> O dia três, um restaurante familiar de Estepona. <a href="https://wellyington.github.io/journal/pt/articles/um-lugar-na-mesa-comprida/">Essa está aqui.</a> O dia quatro, uma consultoria imobiliária privada de Málaga. <a href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/">Essa está aqui.</a> O dia cinco, um restaurante de menu degustação em Motril. <a href="https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/">Essa está aqui.</a> O dia seis, uma casa de frango assado em Estepona. <a href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/">Essa está aqui.</a> O dia sete, um hotel familiar em Kavos, Corfu. <a href="https://wellyington.github.io/journal/pt/articles/a-mesma-piscina-a-noite/">Essa está aqui.</a></p>
+
+<p>Hoje voltamos à Costa del Sol, à própria Málaga. O The Lights são três hospedagens no centro histórico com um só nome. O The Lights Hostel é um hostel boutique num prédio andaluz histórico. As The Lights Suites são quartos privados no estilo de hotel no mesmo prédio, alguns com varanda para o Mercado Central. O The Lights Garden é uma casa andaluza tradicional com mais de cem anos, a algumas ruas dali, com o seu próprio jardim. O site atual deles está em <a href="https://www.thelights.es/">thelights.es</a>.</p>
+
+<p>O conceito está aqui: <a href="https://wellyington.github.io/challenge/day8/">The Lights Málaga, dia oito</a>.</p>
+
+<h2 id="três-casas-três-hóspedes">três casas, três hóspedes</h2>
+
+<p>O difícil aqui não é o design. É o briefing escondido dentro do negócio.</p>
+
+<p>Um hostel, umas suítes e uma casa tranquila são três produtos diferentes para três pessoas diferentes. O hostel é para quem viaja sozinho e para grupos de amigos que querem um terraço, um jantar compartilhado e alguém para ir à praia. As suítes são para casais e famílias que querem um quarto privado e uma varanda, por um preço melhor que o de um hotel. A casa com jardim é para quem quer sossego depois de um longo dia de sol, e muitas vezes para estadias mais longas.</p>
+
+<p>Coloque os três no mesmo site e o resultado de sempre é uma página que não fala com ninguém. Quem procura o hostel lê sobre jardins tranquilos. A família lê sobre beliches e festas. E ninguém acha o botão de reservar, porque há três deles em três lugares diferentes.</p>
+
+<p>Então o desafio era reunir as três sob uma só identidade, o mesmo nome, a mesma equipe e os mesmos extras grátis, deixando cada casa manter o seu caráter. E tornar três coisas impossíveis de não ver em todas as telas: onde fica, que tipo de quarto você vai ter e como reservar direto.</p>
+
+<p><img src="/images/journal/100-days-day-8/01-cover.webp" alt="Design Challenge Day 8: The Lights Málaga, hostel, suítes e um jardim. Um computador com a abertura de verão sobre o porto de Málaga no tema claro, e um celular no tema escuro." />
+<em>Dia oito: três casas no coração do centro histórico de Málaga, a uma caminhada do mar.</em></p>
+
+<h2 id="uma-abertura-de-verão">uma abertura de verão</h2>
+
+<p>Málaga vende verão. A maioria das pessoas que reservam uma cama no centro vem pelo sol, pelo mar e pelas noites longas, então a primeira tela diz exatamente isso.</p>
+
+<p>O fundo é uma fotografia do porto no Muelle Uno: palmeiras, o farol, veleiros e a água. Por cima, numa serifa grande em azul-mar profundo, a frase your summer in Málaga starts here, o seu verão em Málaga começa aqui, com as duas últimas palavras em itálico terracota. Um pequeno sol desenhado gira devagar num canto. Acima do título, três palavras em letras pequenas e espaçadas: hostel, suites, garden. É o negócio inteiro em três palavras, antes de alguém rolar a página.</p>
+
+<p>Abaixo do título, uma frase: três casas charmosas no coração do centro histórico, ao lado do Mercado Central e a uma caminhada do mar. Depois, dois botões: ver disponibilidade e conhecer as nossas casas.</p>
+
+<p>O logotipo é o que o The Lights já usa, um selo azul redondo com uma lamparina, no meio do cabeçalho. Não redesenhei. Em volta dele, o cabeçalho traz as seis seções que o negócio já usa, Home, Accommodations, Facilities, Offers, Blog e Contact Us, e um botão terracota Book now à direita.</p>
+
+<p><img src="/images/journal/100-days-day-8/02-light-theme.webp" alt="O tema claro: a abertura com o porto de Málaga, a barra de reservas e a seção de boas-vindas com uma foto da praça de touros e do mar, num computador e num celular." />
+<em>O tema claro: páginas creme, letras azul-mar e botões terracota, com o porto e as três casas logo na frente.</em></p>
+
+<h2 id="primeiro-a-barra-de-reservas">primeiro, a barra de reservas</h2>
+
+<p>Logo abaixo da abertura, sobre a borda de baixo da fotografia, há uma barra de reservas. Onde, chegada, saída, hóspedes, buscar. É a primeira coisa da página que dá para usar de verdade.</p>
+
+<p>Onde é uma escolha entre as três casas. As datas já vêm com valores sensatos, amanhã e três noites depois, para que só seja preciso mudar o que for diferente. Os hóspedes vão de um a seis, e depois sete ou mais, um grupo. No celular a barra vira um formulário organizado, um campo embaixo do outro, com um botão de busca grande no fim.</p>
+
+<p>Abaixo da barra, quatro promessas curtas, cada uma com um tique: melhor preço garantido, café da manhã grátis, sangria grátis, Wi-Fi grátis. São as quatro coisas que um hóspede compara entre os sites de reserva, e aqui estão escritas antes que ele precise ir procurá-las.</p>
+
+<p>Para deixar claro o que o conceito faz nesse ponto: o botão de busca envia as datas, a casa e o número de hóspedes ao site atual do The Lights. Cada casa tem o seu próprio sistema de reservas, e numa versão real o botão abriria o certo, com as datas já preenchidas. Essa ligação é a primeira tarefa da lista se o conceito seguir adiante.</p>
+
+<p><img src="/images/journal/100-days-day-8/08-booking.webp" alt="A barra de reservas num computador, com Where, Arrival, Departure, Guests e um botão Search, e num celular no tema escuro com The Lights Garden e três hóspedes selecionados." />
+<em>Escolha a casa, depois a data. As quatro promessas ficam embaixo da busca em todas as visitas.</em></p>
+
+<h2 id="três-casas-uma-málaga">três casas, uma Málaga</h2>
+
+<p>O coração da página é uma seção chamada three houses, one Málaga, três casas, uma Málaga. A primeira linha diz o que as três têm em comum: a mesma equipe simpática e os mesmos extras grátis. Escolha o estilo que combina com o seu verão.</p>
+
+<p>Depois, três cartões, lado a lado no computador e um depois do outro no celular. Cada um tem uma fotografia numa moldura em arco, uma referência às portas e janelas das casas andaluzas antigas, uma cor própria e uma linha dizendo para quem é.</p>
+
+<p>O The Lights Hostel é azul, para quem viaja sozinho e para amigos: um hostel boutique num prédio andaluz histórico e emblemático, social, central e fácil de gostar, com um terraço feito para conhecer gente. Terraço, jantares temáticos, guarda-volumes.</p>
+
+<p>As The Lights Suites são terracota, para casais e famílias: conforto de hotel a preço de hostel, com quartos superiores cujas varandas dão direto para o Mercado Central. Quartos privados, varandas com vista para o mercado, café da manhã.</p>
+
+<p>O The Lights Garden é verde-oliva, para estadias calmas: uma casa andaluza tradicional com mais de cem anos no centro histórico, um refúgio verde e silencioso depois de um longo dia de sol. Casa centenária, jardim, estadias longas.</p>
+
+<p>Cada cartão termina com o seu próprio botão, book the hostel, book the suites, book the garden, que leva você de volta à barra de reservas com aquela casa já escolhida. E embaixo de cada botão, o endereço, porque duas das casas dividem o mesmo e o jardim tem outro. Quem reserva o jardim nunca deveria aparecer no hostel.</p>
+
+<p>Essas três cores, azul, terracota e oliva, atravessam a página inteira. Depois de vê-las nos cartões, você sabe de qual casa um botão ou uma linha de texto está falando sem ler a etiqueta.</p>
+
+<p><img src="/images/journal/100-days-day-8/06-three-houses.webp" alt="A seção Our houses num computador, com três cartões para The Lights Hostel, The Lights Suites e The Lights Garden, cada um com uma foto em arco, uma cor, as suas características e o seu próprio botão de reserva, e a mesma seção num celular no tema escuro." />
+<em>Um hostel para amigos, suítes para casais e famílias, e uma casa andaluza centenária com jardim.</em></p>
+
+<h2 id="os-detalhes-são-por-nossa-conta">os detalhes são por nossa conta</h2>
+
+<p>Os hostels de Málaga competem no preço, e num site de reservas os preços sempre parecem iguais. O que muda é o que está incluído. O The Lights inclui muita coisa, e o site atual só menciona isso de passagem.</p>
+
+<p>Então há uma seção para isso, chamada the little things are on us, os detalhes são por nossa conta, com uma frase simples embaixo: sem cobranças extras pelo que é bom. Seguem oito cartões pequenos. Sangria grátis, um copo gelado de boas-vindas em toda estadia. Café da manhã grátis, para começar bem o dia de praia. Jantares temáticos grátis, mesas compartilhadas e novos amigos. Wi-Fi rápido, grátis na casa toda. Um terraço ensolarado, sol de dia e sangria à noite. Guarda-volumes, para o voo cedo ou o check-in tarde. Mapas e dicas da equipe. E grupos são bem-vindos, com ofertas sob medida para grupos grandes. Os três primeiros levam uma pequena etiqueta terracota de free, grátis, porque são os que ninguém espera.</p>
+
+<p>Há também um adesivo redondo amarelo na seção de boas-vindas que diz free sangría, every guest, every stay, sangria grátis para todo hóspede em toda estadia, e gira devagar como uma etiqueta numa mala. É a frase mais simpática da página, então ela ganha o direito de se mexer.</p>
+
+<h2 id="sol-mar-e-cidade">sol, mar e cidade</h2>
+
+<p>Antes dos extras há uma fotografia de largura total do letreiro de La Malagueta, a praia da cidade, e um convite curto: deixe o carro em casa. Da porta, os melhores dias de verão de Málaga estão a uma caminhada.</p>
+
+<p>Ao lado, os tempos a pé, escritos do jeito que você planejaria um dia. O Muelle Uno e o porto, cerca de doze minutos. A praia de La Malagueta, cerca de vinte. As praias de Pedregalejo e El Palo, um trajeto curto de ônibus. O pôr do sol no Gibralfaro, cerca de vinte e cinco minutos a pé. São as perguntas que as pessoas fazem na recepção na primeira manhã, respondidas antes de chegarem.</p>
+
+<p><img src="/images/journal/100-days-day-8/07-summer-included.webp" alt="A seção de verão com uma foto do letreiro de La Malagueta na praia, tempos a pé até o Muelle Uno, La Malagueta, Pedregalejo e o Gibralfaro, e um celular com os extras grátis: sangria, café da manhã, jantares e Wi-Fi." />
+<em>Tempos a pé até o porto, a praia e o Gibralfaro, e a sangria, o café da manhã e os jantares grátis que vêm com cada estadia.</em></p>
+
+<h2 id="o-melhor-endereço-da-cidade">o melhor endereço da cidade</h2>
+
+<p>O argumento mais forte a favor do The Lights é onde ele fica, então a localização não está escondida no rodapé. Tem uma seção só para ela, chamada the best address in town, o melhor endereço da cidade.</p>
+
+<p>De um lado, uma fotografia da catedral, que os malaguenhos chamam de La Manquita, a manetinha, porque a sua segunda torre nunca foi terminada. Do outro, uma lista numerada de tempos a pé a partir da porta na rua Torregorda, cada um num selo redondo. Um minuto até o Mercado Central de Atarazanas, para peixe fresco, frutas e bares de tapas. Cinco minutos até a rua Larios, a principal rua de compras. Oito minutos até a catedral e as praças do centro. Dez minutos até o Museu Picasso e a Alcazaba. Vinte minutos até a praia de La Malagueta. Uma nota pequena no fim diz que são aproximados, e são.</p>
+
+<p>Os números fazem o trabalho de vender. Um minuto até o mercado diz mais sobre a localização do que qualquer adjetivo.</p>
+
+<p><img src="/images/journal/100-days-day-8/09-neighbourhood.webp" alt="A seção do bairro no tema escuro com uma foto da catedral de Málaga e tempos a pé até o Mercado Central, a rua Larios, a catedral, o Museu Picasso e La Malagueta, ao lado de um celular com os dois endereços e botões de como chegar, WhatsApp e e-mail." />
+<em>Um guia de tempos a pé até o mercado, a rua Larios e a praia, com os dois endereços, telefones e e-mails.</em></p>
+
+<h2 id="reserve-direto-e-economize">reserve direto e economize</h2>
+
+<p>Cada reserva que um hostel recebe por uma grande plataforma custa uma comissão. O The Lights já promete o melhor preço no seu próprio site, e diz isso em letra pequena no cabeçalho. O conceito diz em letra grande.</p>
+
+<p>Há uma seção chamada always the best price here, aqui sempre o melhor preço, com uma frase honesta: deixe as plataformas de reserva de lado; quando você reserva no nosso próprio site, sempre tem a nossa tarifa mais baixa, além de alguns extras que só nós podemos oferecer. Depois, quatro motivos. Melhor preço garantido. Um desconto para seguidores, com um código exclusivo para quem os segue nas redes sociais. Ofertas para grupos, um preço sob medida para quem viaja com muita gente. E tarifas especiais para estadias longas em Málaga. Um botão, ver disponibilidade, leva de volta à barra de reservas.</p>
+
+<p>A mesma promessa corre pela barra do topo de todas as telas, book on our website, best price guaranteed, em dourado. E no celular, assim que você passa da barra de reservas, aparece embaixo uma barra fina com o nome, a frase best price, booked direct, e um botão book now. Ela fica ali até você sair.</p>
+
+<h2 id="vamos-deixar-uma-luz-acesa-para-você">vamos deixar uma luz acesa para você</h2>
+
+<p>A seção de contato tira o título do nome do negócio: we’ll leave a light on for you, vamos deixar uma luz acesa para você. É o tipo de frase que um hotel pequeno escreveria num bilhete à mão.</p>
+
+<p>Embaixo há dois cartões, um por endereço, porque o The Lights fica em dois lugares. Hostel e suítes na rua Torregorda 3, com o telefone, o e-mail, um botão de como chegar e outro para o WhatsApp. O Garden na rua Molinillo del Aceite 5, com o seu próprio telefone, o seu próprio e-mail e o seu próprio botão de como chegar. Cada cartão tem a borda na cor da sua casa, azul para o hostel e as suítes, verde para o jardim, para que nunca se confundam.</p>
+
+<h2 id="um-menu-que-desce">um menu que desce</h2>
+
+<p>No celular, o cabeçalho fica com três coisas: o botão do menu, o logotipo no meio e book now. Acima dele, uma barra fina com o telefone e o interruptor de tema claro e escuro.</p>
+
+<p>Toque no menu e ele desce até ocupar a tela inteira, enquanto as três linhas do botão viram um X. As seis seções aparecem numa serifa grande, com um botão book now de largura total embaixo, e o endereço e o telefone no fim, onde o polegar alcança. Funciona igual nos dois temas.</p>
+
+<p><img src="/images/journal/100-days-day-8/05-mobile-menu.webp" alt="Dois celulares com o menu em tela cheia, um claro e outro escuro, com o logotipo, um X para fechar, as seis seções em serifa grande, um botão Book Now, o endereço e o telefone." />
+<em>Letra grande, um botão de reserva, o endereço e o telefone.</em></p>
+
+<h2 id="a-mesma-acolhida-depois-do-pôr-do-sol">a mesma acolhida depois do pôr do sol</h2>
+
+<p>Como o hotel de Corfu de ontem, o The Lights tem um tema claro e um escuro. Um pequeno interruptor com um sol e uma lua fica ao lado do book now no computador e na barra do topo no celular.</p>
+
+<p>O tema claro é uma manhã em Málaga: páginas creme e areia, letras em azul-mar profundo, botões terracota e toques de amarelo-sol. O tema escuro é a mesma cidade depois do pôr do sol: páginas azul-marinho profundo, letras creme, a mesma terracota e o amarelo virando dourado. Os dois foram desenhados seção por seção, não invertendo cores. O site lembra a escolha na próxima visita e, se a pessoa nunca mexeu no interruptor, segue o que o celular ou o computador dela já estiver usando.</p>
+
+<p><img src="/images/journal/100-days-day-8/03-dark-theme.webp" alt="O tema escuro num computador e num celular: a abertura sobre o porto com cores da noite, a barra de reservas e a seção de boas-vindas em azul-marinho profundo." />
+<em>Um interruptor com sol e lua transforma as páginas creme em azul-marinho, e o site lembra a escolha.</em></p>
+
+<p><img src="/images/journal/100-days-day-8/04-light-vs-dark.webp" alt="Dois celulares lado a lado com a seção de boas-vindas, A sunny home in the heart of Málaga, e o adesivo de sangria grátis, nos temas claro e escuro." />
+<em>Um interruptor muda a luz: os dois temas, lado a lado.</em></p>
+
+<h2 id="os-detalhes">os detalhes</h2>
+
+<p>A tipografia é DM Serif Display nos títulos, em tamanho grande, com itálico terracota nas palavras mais calorosas: starts here, one Málaga, light on. Jost, uma sem serifa geométrica e limpa, em tudo o que se lê, em maiúsculas espaçadas nas etiquetas pequenas e nos botões.</p>
+
+<p>As cores são as da cidade: o azul profundo do mar e do próprio logotipo do The Lights, a terracota dos telhados, a areia e o creme dos muros do centro, o amarelo-sol e o verde-oliva para o jardim. Uma linha fina tracejada em azul e amarelo, como a borda de uma toalha de praia, separa algumas seções.</p>
+
+<p>As coisas aparecem suavemente quando você rola, a foto da abertura se desloca bem devagar e o sol e o adesivo de sangria giram. Tudo isso para para quem pediu ao celular ou ao computador que reduza as animações, e a página funciona exatamente igual sem isso. As fontes vêm do meu próprio site, e não do Google, então abrir a página não entrega o endereço de ninguém a terceiros.</p>
+
+<h2 id="o-que-o-conceito-é-e-o-que-vem-depois">o que o conceito é, e o que vem depois</h2>
+
+<p>Os dados da página, as três casas, os seus endereços, telefones e e-mails, os extras grátis, as ofertas e a promessa de melhor preço, vêm do site atual do The Lights. O logotipo e as seções do menu ficam como estão. Os tempos a pé são aproximados, e a página diz isso.</p>
+
+<p>O que é novo é a estrutura: uma identidade que segura três casas diferentes, uma barra de reservas antes de tudo, uma cor para cada casa, os extras transformados num motivo para reservar direto e uma seção de localização que deixa os números falarem.</p>
+
+<p>Não tenho números de reservas, e não vou inventar nenhum. Transformar o conceito num site funcionando exigiria os passos práticos: ligar cada casa ao seu próprio sistema de reservas para que as datas passem de um lado para o outro, uma versão em espanhol ao lado da inglesa, as páginas do blog e das ofertas, e as fotografias da própria equipe onde houver.</p>
+
+<h2 id="se-você-tem-mais-de-um-endereço">se você tem mais de um endereço</h2>
+
+<p>Talvez você não tenha um hostel. Mas muitos negócios desta costa têm mais de um endereço sob o mesmo nome: um grupo de restaurantes com um quiosque de praia e um restaurante no centro, uma empresa de aluguel de temporada com apartamentos em três vilas, uma academia com duas unidades, uma escola de idiomas com um campus de verão.</p>
+
+<p>O que ajuda é o mesmo que aqui. Diga primeiro o que eles têm em comum, depois deixe cada lugar manter o seu caráter. Dê a cada um uma cor e mantenha. Coloque cada endereço ao lado do que lhe pertence, nunca só no rodapé. Faça da localização um motivo para escolher você, com distâncias reais em vez de adjetivos. E coloque o botão de reserva onde as pessoas olham primeiro, não onde sobrou espaço.</p>
+
+<p>Sou web designer em Estepona, na Costa del Sol, e desenho e construo sites para negócios na Espanha e fora dela. Se isto parece com o seu negócio, escreva para mim pelo <a href="https://wellyington.github.io/pt/">site principal</a>. Conte o que você faz e onde, e eu respondo em linguagem simples. O conceito está <a href="https://wellyington.github.io/challenge/day8/">aqui</a>, e o site atual do The Lights <a href="https://www.thelights.es/">aqui</a>, para você comparar os dois. Oito feitos, faltam noventa e dois.</p>
+
+      <p class="fin" aria-label="Fim da entrada">fim.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">arquivado em</span>
+    <ul class="chips"><li>100 dias</li><li>caso real</li><li>hostel</li><li>málaga</li><li>reserva direta</li></ul>
+  </div><nav class="rail pager" aria-label="mais entradas."><a class="pager-cell rollable" href="/journal/pt/articles/a-mesma-piscina-a-noite/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">a mesma piscina à noite<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">a entrada mais recente.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Continue lendo</span>
+    <h2 id="more-title" class="h-section">mais entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/pt/articles/a-mesma-piscina-a-noite/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp" alt="Capa do caso do conceito de site do Morfeas Hotel: Design Challenge Day 7, de dia e de noite, um computador com a abertura ilustrada dividida entre uma piscina ao sol e outra sob a lua, e um celular com a mesma cena." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 008</span>
+</div>
+<span class="label">100 dias · 23.11.26</span><span class="card-title">a mesma piscina à noite<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/do-balcao-a-comanda/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp" alt="Capa do caso do conceito de site do El Dorado: o cardápio Haz tu comanda num computador com as bebidas, uma comanda de papel à direita e um celular com o cardápio e a barra Mi comanda." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 007</span>
+</div>
+<span class="label">100 dias · 22.11.26</span><span class="card-title">do balcão à comanda<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-5/09-landscape.webp" alt="Capa do caso do conceito de site para o Espacio IME: Design Challenge dia 5, a página inicial escura num computador com o título Un viaje por los sabores de la Costa Tropical e um celular no tema claro com o produto local." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 006</span>
+</div>
+<span class="label">100 dias · 21.11.26</span><span class="card-title">tão cuidadoso quanto a cozinha<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independente por design · Escrito em público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/pt/" class="rollable"><span class="roll"><span>diário</span><span aria-hidden="true">diário</span></span>
+    </a><a href="/journal/pt/archive/" class="rollable"><span class="roll"><span>arquivo</span><span aria-hidden="true">arquivo</span></span>
+    </a><a href="/journal/pt/about/" class="rollable"><span class="roll"><span>sobre</span><span aria-hidden="true">sobre</span></span>
+    </a><a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>site principal</span><span aria-hidden="true">site principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">em outros lugares</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/pt/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escreva para mim</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Eu leio todas as respostas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Legal">
+    <a href="/pt/privacidade/">Privacidade</a>
+    <a href="/pt/cookies/">Cookies</a>
+    <a href="/pt/termos/">Aviso legal</a>
+    <a href="#" data-cookie-settings>Configurar cookies</a>
+  </nav>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Composto em Space Grotesk · Feito com Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
