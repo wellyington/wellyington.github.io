@@ -129,6 +129,11 @@ footer .brand .logo{width:120px;height:120px;margin:0;filter:none}
 .bk label{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
 .bk select,.bk input{border:0;background:transparent;font-size:1.02rem;font-weight:500;padding:.25rem 0;outline:none;width:100%;cursor:pointer;color:var(--ink)}
 .bk .btn{border-radius:0;padding:0 2.2rem;font-size:.86rem}
+.bk select{color-scheme:light}
+.bk select option{background:#fffdf8;color:#1d2a3a}
+html[data-theme="dark"] .bk select{color-scheme:dark}
+html[data-theme="dark"] .bk select option{background:#18233b;color:#f2ece1}
+.bk select option:checked{background:#f4b63f;color:#1d2a3a}
 .bk-msg{grid-column:1/-1;color:var(--terra-deep);font-size:.85rem;padding:.6rem 1.4rem;display:none;background:var(--lime)}
 .bk-msg.show{display:block}
 .trust{display:flex;justify-content:center;gap:2.4rem;flex-wrap:wrap;padding:1.3rem 0 0;font-size:.9rem;color:var(--soft)}
