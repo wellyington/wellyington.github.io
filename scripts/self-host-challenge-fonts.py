@@ -30,7 +30,7 @@ FAMILIES = {
     "Montserrat": ("@fontsource/montserrat", ["300", "400", "500", "600"]),
     "Instrument Serif": ("@fontsource/instrument-serif", ["400", "400-italic"]),
     "Hanken Grotesk": ("@fontsource/hanken-grotesk", ["400", "500", "600"]),
-    "Cormorant Garamond": ("@fontsource/cormorant-garamond", ["300", "400", "300-italic", "400-italic"]),
+    "Cormorant Garamond": ("@fontsource/cormorant-garamond", ["300", "400", "500", "300-italic", "400-italic", "500-italic"]),
     "Jost": ("@fontsource/jost", ["300", "400", "500", "600"]),
     "Manrope": ("@fontsource/manrope", ["400", "500", "600", "700"]),
     "Bricolage Grotesque": ("@fontsource-variable/bricolage-grotesque", ["opsz"]),
@@ -38,6 +38,7 @@ FAMILIES = {
     "Space Mono": ("@fontsource/space-mono", ["400", "700"]),
     "DM Serif Display": ("@fontsource/dm-serif-display", ["400", "400-italic"]),
     "Caveat": ("@fontsource/caveat", ["600", "700"]),
+    "Inter Tight": ("@fontsource-variable/inter-tight", ["wght"]),
 }
 
 # day -> families, with the weights each page actually asks Google for
@@ -55,6 +56,7 @@ PAGES = {
     },
     7: {"DM Serif Display": ["400", "400-italic"], "Caveat": ["600", "700"], "Jost": ["400", "500", "600"]},
     8: {"DM Serif Display": ["400", "400-italic"], "Jost": ["400", "500", "600"]},
+    9: {"Inter Tight": ["wght"], "Cormorant Garamond": ["400", "500", "400-italic", "500-italic"]},
 }
 
 BLOCK = re.compile(r"/\*\s*([^*]+?)\s*\*/\s*(@font-face\s*\{[^}]*\})", re.S)
