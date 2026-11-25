@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/archive/</loc>
-    <lastmod>2026-11-25T08:00:00+01:00</lastmod>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -55,7 +55,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/</loc>
-    <lastmod>2026-11-25T08:00:00+01:00</lastmod>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -70,6 +70,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/</loc>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/deixe-as-fotos-falarem/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/</loc>
@@ -117,7 +126,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/archive/</loc>
-    <lastmod>2026-11-25T08:00:00+01:00</lastmod>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -144,7 +153,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/</loc>
-    <lastmod>2026-11-25T08:00:00+01:00</lastmod>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -177,6 +186,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/</loc>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/deixe-as-fotos-falarem/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/</loc>
@@ -233,7 +251,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/archive/</loc>
-    <lastmod>2026-11-25T08:00:00+01:00</lastmod>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -248,6 +266,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/deixe-as-fotos-falarem/</loc>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/deixe-as-fotos-falarem/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/</loc>
@@ -269,7 +296,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/</loc>
-    <lastmod>2026-11-25T08:00:00+01:00</lastmod>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -331,7 +358,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/archive/</loc>
-    <lastmod>2026-11-25T08:00:00+01:00</lastmod>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -340,7 +367,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/</loc>
-    <lastmod>2026-11-25T08:00:00+01:00</lastmod>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -373,6 +400,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/</loc>
+    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/deixe-as-fotos-falarem/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/</loc>

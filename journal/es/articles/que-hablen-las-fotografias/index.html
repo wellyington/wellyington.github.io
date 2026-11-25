@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diario" href="/journal/es/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/let-the-photographs-talk/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/deixe-as-fotos-falarem/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/">
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
+<title>Concepto de web para agencia de modelos: Target Models, Marbella y Londres · Wellyington</title>
+<meta name="description" content="Un concepto de web para Target Models en Marbella y Londres: un muro de retratos en movimiento, seis divisiones, un book de modelos con filtros, una ficha pa...">
+<meta name="keywords" content="diseño web para agencia de modelos, concepto de web para agencia de casting, web con book de modelos y filtros, web de portfolio para agencia de modelos, agencia de modelos en Marbella, agencia de modelos y casting en Marbella y Londres, web para contratar modelos y talento, diseño web editorial y minimalista, diseñador web en la Costa del Sol, reto 100 días 100 webs">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Diario">
+<meta property="og:title" content="Concepto de web para agencia de modelos: Target Models, Marbella y Londres">
+<meta property="og:description" content="Un concepto de web para Target Models en Marbella y Londres: un muro de retratos en movimiento, seis divisiones, un book de modelos con filtros, una ficha pa...">
+<meta property="og:url" content="https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-9/10-landscape.webp">
+<meta property="og:image:alt" content="Portada del caso del concepto de web de Target Models: Design Challenge Day 9, Marbella y Londres, un ordenador con el gran logotipo targetmodels entre columnas de retratos y un móvil con el menú a pantalla completa.">
+<meta property="article:published_time" content="2026-11-25T15:30:00+01:00">
+<meta property="article:modified_time" content="2026-11-25T15:30:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 días">
+<meta property="article:tag" content="diseño web para agencia de modelos">
+<meta property="article:tag" content="concepto de web para agencia de casting">
+<meta property="article:tag" content="web con book de modelos y filtros">
+<meta property="article:tag" content="web de portfolio para agencia de modelos">
+<meta property="article:tag" content="agencia de modelos en Marbella">
+<meta property="article:tag" content="agencia de modelos y casting en Marbella y Londres">
+<meta property="article:tag" content="web para contratar modelos y talento">
+<meta property="article:tag" content="diseño web editorial y minimalista">
+<meta property="article:tag" content="diseñador web en la Costa del Sol">
+<meta property="article:tag" content="reto 100 días 100 webs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Concepto de web para agencia de modelos: Target Models, Marbella y Londres">
+<meta name="twitter:description" content="Un concepto de web para Target Models en Marbella y Londres: un muro de retratos en movimiento, seis divisiones, un book de modelos con filtros, una ficha pa...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-9/10-landscape.webp">
+<meta name="twitter:image:alt" content="Portada del caso del concepto de web de Target Models: Design Challenge Day 9, Marbella y Londres, un ordenador con el gran logotipo targetmodels entre columnas de retratos y un móvil con el menú a pantalla completa.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/#article",
+      "url": "https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/",
+      "headline": "Concepto de web para agencia de modelos: Target Models, Marbella y Londres",
+      "alternativeHeadline": "que hablen las fotografías",
+      "description": "Un concepto de web para Target Models en Marbella y Londres: un muro de retratos en movimiento, seis divisiones, un book de modelos con filtros, una ficha pa...",
+      "inLanguage": "es",
+      "datePublished": "2026-11-25T15:30:00+01:00",
+      "dateModified": "2026-11-25T15:30:00+01:00",
+      "articleSection": "100 días",
+      "keywords": "diseño web para agencia de modelos, concepto de web para agencia de casting, web con book de modelos y filtros, web de portfolio para agencia de modelos, agencia de modelos en Marbella, agencia de modelos y casting en Marbella y Londres, web para contratar modelos y talento, diseño web editorial y minimalista, diseñador web en la Costa del Sol, reto 100 días 100 webs",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-9/10-landscape.webp", "caption": "Portada del caso del concepto de web de Target Models: Design Challenge Day 9, Marbella y Londres, un ordenador con el gran logotipo targetmodels entre columnas de retratos y un móvil con el menú a pantalla completa." },
+      "about": {
+        "@type": "Organization",
+        "name": "Target Models International", "url": "https://www.targetmodels.eu/", "address": { "@type": "PostalAddress", "addressLocality": "Marbella", "addressCountry": "ES" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 días", "url": "https://wellyington.github.io/journal/es/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Diario", "item": "https://wellyington.github.io/journal/es/" },
+        { "@type": "ListItem", "position": 2, "name": "que hablen las fotografías", "item": "https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/es/" class="bar-cell bar-brand" aria-label="Wellyington Diario">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diario</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Hora local y en qué estoy trabajando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escribiendo</span><span>notas sobre lanzar en pequeño</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escuchando</span><span>Wellyington — maquetas de estudio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/let-the-photographs-talk/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/que-hablen-las-fotografias/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/deixe-as-fotos-falarem/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/pust-govoryat-fotografii/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Cambiar a tema oscuro" data-label-dark="Cambiar a tema oscuro" data-label-light="Cambiar a tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Oscuro"></span><span class="theme-word" data-light="Claro" data-dark="Oscuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegación" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegación">
+      <p class="label">Navegación</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/es/" class="rollable">
+            <span class="roll"><span>diario.</span><span aria-hidden="true">diario.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/archive/" class="rollable">
+            <span class="roll"><span>archivo.</span><span aria-hidden="true">archivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/about/" class="rollable">
+            <span class="roll"><span>sobre mí.</span><span aria-hidden="true">sobre mí.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>web principal.</span><span aria-hidden="true">web principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/es/articles/que-hablen-las-fotografias/" class="menu-entry">
+            <span class="mono dim">N.º 010</span>
+            <span>que hablen las fotografías<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/tres-casas-una-sola-puerta/" class="menu-entry">
+            <span class="mono dim">N.º 009</span>
+            <span>tres casas, una sola puerta<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/la-misma-piscina-de-noche/" class="menu-entry">
+            <span class="mono dim">N.º 008</span>
+            <span>la misma piscina de noche<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/del-mostrador-a-la-comanda/" class="menu-entry">
+            <span class="mono dim">N.º 007</span>
+            <span>del mostrador a la comanda<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/let-the-photographs-talk/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/que-hablen-las-fotografias/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/deixe-as-fotos-falarem/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/pust-govoryat-fotografii/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/es/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/es/" class="entry-cell entry-back rollable"><span class="roll"><span>← diario</span><span aria-hidden="true">← diario</span></span></a>
+    <span class="entry-cell mono">N.º 010</span>
+    <span class="entry-cell label">100 días</span>
+    <time class="entry-cell" datetime="2026-11-25T15:30:00+01:00">25 de noviembre de 2026</time>
+    <span class="entry-cell">12 min de lectura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">que hablen las fotografías<span class="dot">.</span></h1><p class="entry-lede">Día nueve de cien: un concepto de web para Target Models, una agencia de modelos y casting fundada en 1999 frente a Puerto Banús, con oficinas en Marbella y Londres, donde los retratos hablan casi por sí solos.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-9/10-landscape.webp" alt="Portada del caso del concepto de web de Target Models: Design Challenge Day 9, Marbella y Londres, un ordenador con el gran logotipo targetmodels entre columnas de retratos y un móvil con el menú a pantalla completa." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 010</span>
+</div>
+<p class="caption label">Día nueve. Un concepto para Target Models: Marbella y Londres, desde 1999.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="en esta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">en esta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartir.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar enlace</span><span aria-hidden="true">copiar enlace</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fque-hablen-las-fotografias%2F&text=que+hablen+las+fotograf%C3%ADas"><span class="roll"><span>publicar en X</span><span aria-hidden="true">publicar en X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fque-hablen-las-fotografias%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>El 25 de noviembre publiqué la novena nota de esta serie, el reto que planteó Ramiah Trask: cien días, cien negocios, cien webs. Fue la segunda del día. El día uno fue un constructor familiar de la Marina Alta. <a href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/">Esa página está aquí.</a> El día dos, un teatro de Málaga. <a href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/">Esa está aquí.</a> El día tres, un restaurante familiar de Estepona. <a href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/">Esa está aquí.</a> El día cuatro, una consultora inmobiliaria privada de Málaga. <a href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/">Esa está aquí.</a> El día cinco, un restaurante de menús degustación en Motril. <a href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/">Esa está aquí.</a> El día seis, un asador de pollos de Estepona. <a href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/">Esa está aquí.</a> El día siete, un hotel familiar en Kavos, Corfú. <a href="https://wellyington.github.io/journal/es/articles/la-misma-piscina-de-noche/">Esa está aquí.</a> El día ocho, tres casas en el centro histórico de Málaga. <a href="https://wellyington.github.io/journal/es/articles/tres-casas-una-sola-puerta/">Esa está aquí.</a></p>
+
+<p>Hoy toca otro tipo de negocio. Target Models es una agencia de modelos y casting fundada en 1999 en la Costa del Sol, frente al puerto deportivo de Puerto Banús. Hoy trabaja desde dos oficinas, Marbella y Londres, y en varios idiomas. Representa a mujeres, hombres y niños para moda, belleza, publicidad y trabajos editoriales, y también contrata bailarines, actores, maquilladores y peluqueros, fotógrafos y equipos de producción completos. Su web actual está en <a href="https://www.targetmodels.eu/">targetmodels.eu</a>.</p>
+
+<p>El concepto está aquí: <a href="https://wellyington.github.io/challenge/day9/">Target Models, día nueve</a>.</p>
+
+<h2 id="las-caras-son-el-producto">las caras son el producto</h2>
+
+<p>Casi todas las webs de esta serie han tenido que explicar algo. Cómo es una casa por dentro, por qué un menú degustación cuesta lo que cuesta, cómo se pide un pollo. Una agencia de modelos tiene un problema más sencillo, y más difícil. No necesita explicar mucho. Las caras son el producto. Si la web se interpone, ha fracasado, por muy ingeniosa que sea.</p>
+
+<p>Así que la idea era dejar que la fotografía hable casi por sí sola. Mucho blanco, muy poco color, letra pequeña y retratos tan grandes como permita la pantalla. Todo lo demás, los menús, las divisiones, la reserva, se queda en segundo plano hasta que alguien lo pide.</p>
+
+<p>El otro trabajo se ve menos. Quienes usan la web de una agencia de modelos casi nunca son modelos. Son directores de arte, fotógrafos, responsables de marca y productoras que buscan una cara para una sesión la semana que viene. Quieren ver quién hay en el book, acotar y ponerse en contacto. La web tiene que hacer eso rápido sin parecer nunca un catálogo.</p>
+
+<p><img src="/images/journal/100-days-day-9/01-cover.webp" alt="Design Challenge Day 9: Target Models, Marbella y Londres. Un ordenador con el logotipo targetmodels entre columnas de retratos y un móvil con el mismo muro de caras." />
+<em>Día nueve: una agencia de modelos y casting multilingüe, con retratos que pasan junto al logotipo.</em></p>
+
+<h2 id="un-muro-de-composites">un muro de composites</h2>
+
+<p>Las agencias de modelos solían enviar composites: una tarjeta impresa con varias fotos de un modelo y sus datos, clavada en la pared de cada oficina de casting de la ciudad. La portada del concepto es esa pared.</p>
+
+<p>Se abre en blanco. El nombre, targetmodels, cruza el centro en letra muy grande, target en negro grueso y models en un peso finísimo a su lado, con international personal management en letra pequeña debajo. A su derecha, dos líneas cortas: models and talent; Marbella and London, modelos y talento; Marbella y Londres. Esa es toda la presentación.</p>
+
+<p>Alrededor y detrás del nombre, los retratos se mueven. Están colocados en columnas, cada una a una altura ligeramente distinta de la siguiente, y cada una sube o baja despacio a su propio ritmo, así que el muro nunca está quieto ni se repite igual. Pasa el ratón por una columna y se detiene, para que puedas mirar con calma. Haz clic en una cara y se abre su ficha.</p>
+
+<p>En el móvil, el mismo muro se convierte en tres columnas estrechas bajo el nombre, que siguen moviéndose y se detienen al tocarlas.</p>
+
+<p>No hay carrusel, ni un gran mensaje de bienvenida, ni un botón pidiendo que bajes. Lo primero que ves es el nombre y las personas, que es lo que es una agencia.</p>
+
+<p><img src="/images/journal/100-days-day-9/02-hero-wall.webp" alt="La portada en un ordenador: el logotipo targetmodels con Models and talent, Marbella and London, entre columnas de retratos de mujeres, hombres y niños." />
+<em>La portada es un muro de composites. Pasa el ratón por un retrato para pararlo y haz clic para abrir su ficha.</em></p>
+
+<h2 id="dos-botones-dos-menús">dos botones, dos menús</h2>
+
+<p>La cabecera es casi nada: un signo más y la palabra Models a la izquierda, un signo más y Book talent a la derecha, y entre ellos, en el ordenador, una línea discreta de enlaces: Divisions, Board y About. Los dos signos más son toda la navegación, porque la web tiene dos tipos de visitante.</p>
+
+<p>Pulsa Models y un panel azul cielo pálido se desliza sobre la página. A la izquierda, las divisiones en una serifa grande: Women, Men, Kids, New Faces y Talent, con un número pequeño junto a las tres primeras que indica cuántas caras hay en ese book. Al recorrer la lista, los nombres que no señalas se desvanecen y a la derecha aparece un retrato de esa división. Funciona como pasar las fichas de un montón.</p>
+
+<p>Pulsa Book talent y entra otro panel, en un rosa empolvado suave: Divisions, About, Clients, Be discovered y Contact, en grande y alineados a la derecha. El signo más se convierte en una cruz, para que quede claro cómo cerrarlo. La tecla Escape también lo cierra.</p>
+
+<p>En el móvil, los dos botones se quedan en las esquinas de la pantalla y los dos paneles la llenan. Un toque para ver a los modelos, un toque para reservar.</p>
+
+<p><img src="/images/journal/100-days-day-9/03-models-panel.webp" alt="El panel Models en un ordenador y un móvil, en azul cielo pálido: Women, Men, Kids, New Faces y Talent en serifa grande, con un retrato de la división Women." />
+<em>El botón Models abre un panel a pantalla completa: mujeres, hombres y niños, además de New Faces y Talent.</em></p>
+
+<p><img src="/images/journal/100-days-day-9/04-mobile-menu.webp" alt="El menú Book talent en un ordenador y un móvil, en rosa empolvado: Divisions, About, Clients, Be discovered y Contact, alineados a la derecha." />
+<em>Un signo más que se convierte en cruz y un menú a pantalla completa: Divisions, About, Clients, Be discovered, Contact.</em></p>
+
+<h2 id="seis-puertas-una-reserva">seis puertas, una reserva</h2>
+
+<p>El negocio de Target es más amplio de lo que sugiere su nombre. Además de modelos, contrata talento y siempre busca gente nueva. La sección de divisiones lo enseña todo a la vez, como seis puertas.</p>
+
+<p>Women, mujeres, para moda, belleza y publicidad. Kids, niños, de bebés a adolescentes. Men, hombres, para lifestyle, moda y campañas. New Faces, caras nuevas listas para ser descubiertas. Talent, para bailarines, actores, peluquería y maquillaje, fotógrafos y producción completa. Y Be discovered, para quien quiere unirse: la agencia acepta ahora modelos de España y de Londres.</p>
+
+<p>Cada puerta es un retrato grande con una etiqueta debajo y, en las tres primeras, el número de personas que hay en el book. Los retratos están a alturas ligeramente distintas, como copias extendidas sobre una mesa más que baldosas en una cuadrícula. Encima, una frase sencilla: ¿buscas modelos o talento para tu próximo proyecto? Nos encantará saber de ti. Debajo, dos botones: book our talent y apply now, contrata a nuestro talento y preséntate.</p>
+
+<p>Los dos botones dicen para quién es la sección. Los clientes reservan. Los futuros modelos se presentan. Ninguno tiene que leer la mitad del otro.</p>
+
+<p><img src="/images/journal/100-days-day-9/05-divisions.webp" alt="La sección Divisions en un ordenador y un móvil: seis retratos para Women, Kids, Men, New Faces, Talent y Be discovered, cada uno con una descripción corta y un número, y los botones Book our talent y Apply now." />
+<em>Women, Kids, Men, New Faces, Talent y Be discovered, con el número de personas en el book.</em></p>
+
+<h2 id="el-book">el book</h2>
+
+<p>El book es donde trabaja de verdad un cliente. Se llama simplemente the board, en letra grande, mitad recta y mitad cursiva, con una sola instrucción al lado: filtra por división, pasa el ratón para enfocar, haz clic en cualquier cara para abrir la ficha completa.</p>
+
+<p>Encima de las caras hay cuatro filtros, All, Women, Men y Kids, cada uno con su número. Elige uno y el book se reorganiza para mostrar solo esa división, con una línea pequeña a la derecha que dice cuántas ves, por ejemplo showing 6 of 12.</p>
+
+<p>Las caras están en blanco y negro hasta que señalas una. Entonces ese retrato pasa a color y los demás se quedan en silencio. En una página llena de caras, ese único cambio basta para saber dónde está tu atención, sin marcos, sombras ni zooms.</p>
+
+<p>Cada cara tiene un código en lugar de un nombre: W·01 para la primera mujer, M·01 para el primer hombre, K·01 para el primer niño. Es una decisión deliberada. Un book real llevaría a los modelos de la propia agencia, con sus nombres y medidas, y solo con su consentimiento. El concepto no necesita poner nombres reales en internet para enseñar cómo funciona el book, así que no lo hace.</p>
+
+<p><img src="/images/journal/100-days-day-9/06-the-board.webp" alt="El book en un ordenador: doce retratos en blanco y negro con códigos como W·01, M·01 y K·01, filtros para All, Women, Men y Kids, y el primer retrato en color bajo el cursor." />
+<em>Filtra por división, pasa el ratón para enfocar y haz clic en cualquier cara para abrir su ficha. Solo códigos.</em></p>
+
+<h2 id="haz-clic-en-una-cara-abre-su-ficha">haz clic en una cara, abre su ficha</h2>
+
+<p>Al hacer clic en cualquier cara, en la portada, en las divisiones o en el book, se abre su ficha. La pantalla se funde a crema y el retrato aparece en el centro, en grande. En una esquina, un contador, 01 de 12, y la división que estás viendo. Debajo, el código en serifa cursiva, la división y lo que abarca, y un botón: book this model, reservar a este modelo.</p>
+
+<p>Las flechas a los lados y una fila de miniaturas abajo permiten recorrer el resto sin cerrar nada. Con teclado, las flechas izquierda y derecha hacen lo mismo y Escape cierra la ficha. En el móvil, se desliza con el dedo.</p>
+
+<p>Book this model cierra la ficha y te lleva a los datos de contacto. En una versión real, abriría una consulta ya marcada con el código del modelo, para que la agencia sepa exactamente por quién pregunta el cliente.</p>
+
+<p><img src="/images/journal/100-days-day-9/07-lightbox.webp" alt="La ficha abierta en un ordenador y un móvil, sobre crema: un retrato grande, el código W·01, división Women, moda, belleza y publicidad, un botón Book this model, flechas y miniaturas." />
+<em>Una ficha en crema con el retrato, el código, la división y un botón Book this model.</em></p>
+
+<h2 id="desde-1999">desde 1999</h2>
+
+<p>La sección sobre la agencia es breve. Fundada en 1999 en la Costa del Sol, frente al famoso puerto de Puerto Banús, Target se ha convertido en una agencia multilingüe en Marbella y Londres. Su misión es un servicio a medida y completo para cada cliente, grande o pequeño: modelos, bailarines, actores y niños, hasta maquillaje, peluquería, fotógrafos, equipos de producción completos y búsqueda de localizaciones.</p>
+
+<p>Algunas de esas palabras van en serifa cursiva en medio del texto en palo seco, 1999, multilingual y bespoke, como cuando una revista destaca una palabra en una cita. Debajo, tres cifras: 1999, fundada en Puerto Banús; 2, oficinas en Marbella y Londres; 5, divisiones, una sola reserva.</p>
+
+<p>Después, los clientes, tal como los enumera la agencia: Dior y Chopard, Chaumet, Nikki Beach, Ping, Naturana y Orchestra, de la moda y la alta joyería a la hostelería, el golf, la lencería y la ropa infantil. Bajo ellos, una frase de la agencia: creemos que cada cliente es un socio valioso a largo plazo.</p>
+
+<p><img src="/images/journal/100-days-day-9/08-about.webp" alt="La sección About en rosa empolvado: Formed in 1999 on the Costa del Sol, opposite Puerto Banús, con 1999, 2 oficinas y 5 divisiones, y los clientes Dior, Chopard, Chaumet, Nikki Beach, Ping, Naturana y Orchestra." />
+<em>Fundada en la Costa del Sol, frente a Puerto Banús, y hoy una agencia multilingüe en Marbella y Londres.</em></p>
+
+<h2 id="nosotros-nos-encargamos-de-la-reserva">nosotros nos encargamos de la reserva</h2>
+
+<p>El final de la página es la voz de la agencia, en una serifa cursiva grande: Target is models. Target is talent. A bespoke one-stop service. Since 1999, in Marbella. Target son modelos, Target es talento, un servicio completo a medida, desde 1999 en Marbella.</p>
+
+<p>Debajo, dos relojes pequeños, Marbella y Londres, con la hora de cada oficina. Hay una hora de diferencia, y quien reserva una sesión desde fuera tiene que calcularlo cada vez. Los relojes se actualizan solos mientras la página está abierta.</p>
+
+<p>Al lado, tres columnas cortas: las divisiones de modelos, el resto de la web y las formas de contactar. Email us copia la dirección de la agencia al portapapeles y lo dice, en lugar de abrir un programa de correo que quizá no uses. Hay enlaces a Instagram y Facebook, y el nombre otra vez al final del todo, con el mismo grosor y la misma línea finísima que arriba.</p>
+
+<p><img src="/images/journal/100-days-day-9/09-contact.webp" alt="La sección de contacto en un ordenador y un móvil, sobre crema: Target is models, Target is talent, relojes de Marbella y Londres, enlaces a las divisiones y a la web, y Email us, Instagram y Facebook." />
+<em>Relojes en directo de Marbella y Londres, un correo para copiar, Instagram y Facebook.</em></p>
+
+<h2 id="los-detalles">los detalles</h2>
+
+<p>Solo hay dos tipografías. Inter Tight, una palo seco estrecha y precisa, para casi todo, desde el enorme nombre de arriba hasta la etiqueta más pequeña. Cormorant Garamond, una serifa clásica, en cursiva, para las divisiones, los menús, los títulos de las fichas y las palabras en las que merece la pena detenerse.</p>
+
+<p>Los colores son la paleta de la propia agencia: un azul cielo pálido para el panel Models y el book, crema para las fichas y el pie de página, un rosa empolvado suave para el menú Book talent y la sección sobre la agencia, y un topo apagado para los botones, todo sobre blanco. Cada color marca una parte distinta de la agencia, así que siempre sabes si estás mirando caras, leyendo sobre el negocio o poniéndote en contacto.</p>
+
+<p>El movimiento es lento a propósito. Las columnas se desplazan, los titulares suben a su sitio línea a línea, los menús se deslizan. Todo se detiene para quien ha pedido a su móvil u ordenador que reduzca las animaciones, y entonces los retratos simplemente se quedan quietos en sus columnas. Las fuentes se sirven desde mi propia web y no desde Google, así que abrir la página no entrega la dirección de nadie a un tercero.</p>
+
+<h2 id="qué-es-el-concepto-y-qué-viene-después">qué es el concepto, y qué viene después</h2>
+
+<p>Los datos de la agencia que aparecen en la página salen de su web actual: el año y el lugar de fundación, las dos oficinas, las divisiones, los servicios, los clientes que menciona, la página para presentarse, el correo y los perfiles sociales. Los retratos ocupan el lugar del book, con códigos en vez de nombres, para enseñar cómo funcionaría uno real.</p>
+
+<p>Lo nuevo es la estructura: un muro de caras en lugar de una portada, dos botones para los dos tipos de visitante, las divisiones una al lado de otra, un book que filtra y enfoca, y una ficha para cada cara que lleva directamente a una reserva.</p>
+
+<p>No tengo cifras de reservas ni de candidaturas, y no me las voy a inventar. Convertir el concepto en una web que funcione requeriría los pasos prácticos: el book propio de la agencia, con el nombre, las medidas y el portfolio de cada modelo, publicado con su acuerdo; un formulario de consulta que lleve el código del modelo; español junto al inglés; y una forma sencilla de que la agencia añada y quite caras sin depender de nadie.</p>
+
+<h2 id="si-tu-trabajo-es-visual">si tu trabajo es visual</h2>
+
+<p>Puede que no lleves una agencia de modelos. Pero muchos negocios venden algo que hay que ver: un fotógrafo, una floristería, un estudio de arquitectura, un estudio de tatuajes, una finca para bodas, un ebanista. Sus webs suelen enterrar las imágenes bajo párrafos sobre pasión y calidad.</p>
+
+<p>Lo que ayuda es lo mismo que aquí. Pon el trabajo primero y deja todo lo demás en silencio. Usa una o dos tipografías y muy poco color. Deja que la gente acote, por tipo, estilo o tamaño, con un clic. Haz que cada imagen lleve a algún sitio, a más detalle y después a una forma de contactar. Y dale una puerta distinta a quien quiere trabajar contigo y a quien quiere comprarte.</p>
+
+<p>Soy diseñador web en Estepona, en la Costa del Sol, y diseño y construyo webs para negocios de España y de fuera. Si esto se parece a tu negocio, escríbeme desde <a href="https://wellyington.github.io/es/">la web principal</a>. Cuéntame a qué te dedicas y dónde, y te contestaré en un lenguaje claro. El concepto está <a href="https://wellyington.github.io/challenge/day9/">aquí</a>, y la web actual de Target Models <a href="https://www.targetmodels.eu/">aquí</a>, para que puedas compararlas. Nueve hechas, quedan noventa y una.</p>
+
+      <p class="fin" aria-label="Fin de la entrada">fin.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">archivado en</span>
+    <ul class="chips"><li>100 días</li><li>caso real</li><li>agencia de modelos</li><li>marbella</li><li>londres</li></ul>
+  </div><nav class="rail pager" aria-label="más entradas."><a class="pager-cell rollable" href="/journal/es/articles/tres-casas-una-sola-puerta/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">tres casas, una sola puerta<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">la última entrada.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Sigue leyendo</span>
+    <h2 id="more-title" class="h-section">más entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/es/articles/tres-casas-una-sola-puerta/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp" alt="Portada del caso del concepto de web de The Lights Málaga: Design Challenge Day 8, hostel, suites y jardín, un ordenador con la portada de verano sobre el puerto de Málaga y el buscador de reservas, y un móvil con el menú a pantalla completa." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 009</span>
+</div>
+<span class="label">100 días · 25.11.26</span><span class="card-title">tres casas, una sola puerta<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/la-misma-piscina-de-noche/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp" alt="Portada del caso del concepto de web de Morfeas Hotel: Design Challenge Day 7, de día y de noche, un ordenador con la portada ilustrada dividida entre una piscina al sol y otra bajo la luna, y un móvil con la misma escena." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 008</span>
+</div>
+<span class="label">100 días · 23.11.26</span><span class="card-title">la misma piscina de noche<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/del-mostrador-a-la-comanda/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-6/10-landscape.webp" alt="Portada del caso del concepto de web de El Dorado: la carta Haz tu comanda en un ordenador con las bebidas, una comanda de papel a la derecha y un móvil con la carta y la barra Mi comanda." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 007</span>
+</div>
+<span class="label">100 días · 22.11.26</span><span class="card-title">del mostrador a la comanda<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independiente por diseño · Escrito en público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/es/" class="rollable"><span class="roll"><span>diario</span><span aria-hidden="true">diario</span></span>
+    </a><a href="/journal/es/archive/" class="rollable"><span class="roll"><span>archivo</span><span aria-hidden="true">archivo</span></span>
+    </a><a href="/journal/es/about/" class="rollable"><span class="roll"><span>sobre mí</span><span aria-hidden="true">sobre mí</span></span>
+    </a><a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>web principal</span><span aria-hidden="true">web principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">en otros sitios</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/es/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escríbeme</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Leo todas las respuestas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Legal">
+    <a href="/es/privacidad/">Privacidad</a>
+    <a href="/es/cookies/">Cookies</a>
+    <a href="/es/aviso-legal/">Aviso legal</a>
+    <a href="#" data-cookie-settings>Configurar cookies</a>
+  </nav>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Compuesto en Space Grotesk · Hecho con Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
