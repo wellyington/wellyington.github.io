@@ -57,6 +57,7 @@ PAGES = {
     7: {"DM Serif Display": ["400", "400-italic"], "Caveat": ["600", "700"], "Jost": ["400", "500", "600"]},
     8: {"DM Serif Display": ["400", "400-italic"], "Jost": ["400", "500", "600"]},
     9: {"Inter Tight": ["wght"], "Cormorant Garamond": ["400", "500", "400-italic", "500-italic"]},
+    10: {"Jost": ["300", "400", "500", "600"]},
 }
 
 BLOCK = re.compile(r"/\*\s*([^*]+?)\s*\*/\s*(@font-face\s*\{[^}]*\})", re.S)
