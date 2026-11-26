@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/archive/</loc>
-    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -55,7 +55,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/</loc>
-    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -79,6 +79,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/deixe-as-fotos-falarem/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/en/articles/quality-over-trends/</loc>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/calidad-antes-que-modas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/qualidade-acima-de-modismos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/articles/room-for-a-whole-season/</loc>
@@ -135,12 +144,21 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/archive/</loc>
-    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/archive/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/archive/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/calidad-antes-que-modas/</loc>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/calidad-antes-que-modas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/qualidade-acima-de-modismos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/</loc>
@@ -162,7 +180,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/</loc>
-    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -269,7 +287,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/archive/</loc>
-    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -314,7 +332,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/</loc>
-    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -347,6 +365,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/por-que-tu-web-no-consigue-clientes/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pochemu-sait-ne-privodit-klientov/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/qualidade-acima-de-modismos/</loc>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/calidad-antes-que-modas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/qualidade-acima-de-modismos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/</loc>
@@ -385,7 +412,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/archive/</loc>
-    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -394,12 +421,21 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/</loc>
-    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/</loc>
+    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/calidad-antes-que-modas/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/qualidade-acima-de-modismos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/</loc>

@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/quality-over-trends/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/calidad-antes-que-modas/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/qualidade-acima-de-modismos/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/">
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
+<title>Концепция сайта для студии пилатеса: Nordic Balance Studios, Марбелья · Wellyington</title>
+<meta name="description" content="Концепция сайта для Nordic Balance Studios в Марбелье: первый экран с видео, понятные уровни Reformer, недельное расписание, часы работы в реальном времени, ...">
+<meta name="keywords" content="дизайн сайта для студии пилатеса, концепция сайта для пилатеса на реформере, сайт фитнес-студии с расписанием занятий, сайт для бутик-студии пилатеса, студия пилатеса в Марбелье, пилатес на реформере в Нуэва-Андалусии, минималистичный дизайн сайта в северном стиле, сайт с недельным расписанием и часами работы, веб-дизайнер на Коста-дель-Соль, челлендж 100 дней 100 сайтов">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Журнал">
+<meta property="og:title" content="Концепция сайта для студии пилатеса: Nordic Balance Studios, Марбелья">
+<meta property="og:description" content="Концепция сайта для Nordic Balance Studios в Марбелье: первый экран с видео, понятные уровни Reformer, недельное расписание, часы работы в реальном времени, ...">
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-10/13-landscape.webp">
+<meta property="og:image:alt" content="Обложка кейса концепции сайта Nordic Balance Studios: Design Challenge Day 10, компьютер с надписью Move better, live better вокруг кадра из видео студии и телефон с полноэкранным меню.">
+<meta property="article:published_time" content="2026-11-26T21:00:00+01:00">
+<meta property="article:modified_time" content="2026-11-26T21:00:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 дней">
+<meta property="article:tag" content="дизайн сайта для студии пилатеса">
+<meta property="article:tag" content="концепция сайта для пилатеса на реформере">
+<meta property="article:tag" content="сайт фитнес-студии с расписанием занятий">
+<meta property="article:tag" content="сайт для бутик-студии пилатеса">
+<meta property="article:tag" content="студия пилатеса в Марбелье">
+<meta property="article:tag" content="пилатес на реформере в Нуэва-Андалусии">
+<meta property="article:tag" content="минималистичный дизайн сайта в северном стиле">
+<meta property="article:tag" content="сайт с недельным расписанием и часами работы">
+<meta property="article:tag" content="веб-дизайнер на Коста-дель-Соль">
+<meta property="article:tag" content="челлендж 100 дней 100 сайтов">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Концепция сайта для студии пилатеса: Nordic Balance Studios, Марбелья">
+<meta name="twitter:description" content="Концепция сайта для Nordic Balance Studios в Марбелье: первый экран с видео, понятные уровни Reformer, недельное расписание, часы работы в реальном времени, ...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-10/13-landscape.webp">
+<meta name="twitter:image:alt" content="Обложка кейса концепции сайта Nordic Balance Studios: Design Challenge Day 10, компьютер с надписью Move better, live better вокруг кадра из видео студии и телефон с полноэкранным меню.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/#article",
+      "url": "https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/",
+      "headline": "Концепция сайта для студии пилатеса: Nordic Balance Studios, Марбелья",
+      "alternativeHeadline": "качество важнее моды",
+      "description": "Концепция сайта для Nordic Balance Studios в Марбелье: первый экран с видео, понятные уровни Reformer, недельное расписание, часы работы в реальном времени, ...",
+      "inLanguage": "ru",
+      "datePublished": "2026-11-26T21:00:00+01:00",
+      "dateModified": "2026-11-26T21:00:00+01:00",
+      "articleSection": "100 дней",
+      "keywords": "дизайн сайта для студии пилатеса, концепция сайта для пилатеса на реформере, сайт фитнес-студии с расписанием занятий, сайт для бутик-студии пилатеса, студия пилатеса в Марбелье, пилатес на реформере в Нуэва-Андалусии, минималистичный дизайн сайта в северном стиле, сайт с недельным расписанием и часами работы, веб-дизайнер на Коста-дель-Соль, челлендж 100 дней 100 сайтов",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-10/13-landscape.webp", "caption": "Обложка кейса концепции сайта Nordic Balance Studios: Design Challenge Day 10, компьютер с надписью Move better, live better вокруг кадра из видео студии и телефон с полноэкранным меню." },
+      "about": {
+        "@type": "SportsActivityLocation",
+        "name": "Nordic Balance Studios", "url": "https://www.nordicbalancestudios.com/", "address": { "@type": "PostalAddress", "addressLocality": "Marbella", "addressCountry": "ES" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 дней", "url": "https://wellyington.github.io/journal/ru/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Журнал", "item": "https://wellyington.github.io/journal/ru/" },
+        { "@type": "ListItem", "position": 2, "name": "качество важнее моды", "item": "https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/quality-over-trends/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/calidad-antes-que-modas/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/qualidade-acima-de-modismos/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/kachestvo-vazhnee-mody/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/kachestvo-vazhnee-mody/" class="menu-entry">
+            <span class="mono dim">№ 012</span>
+            <span>качество важнее моды<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/pochemu-sait-ne-privodit-klientov/" class="menu-entry">
+            <span class="mono dim">№ 011</span>
+            <span>десять причин, почему сайт не приводит клиентов<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/pust-govoryat-fotografii/" class="menu-entry">
+            <span class="mono dim">№ 010</span>
+            <span>пусть говорят фотографии<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/tri-doma-odna-dver/" class="menu-entry">
+            <span class="mono dim">№ 009</span>
+            <span>три дома, одна дверь<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/quality-over-trends/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/calidad-antes-que-modas/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/qualidade-acima-de-modismos/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/kachestvo-vazhnee-mody/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 012</span>
+    <span class="entry-cell label">100 дней</span>
+    <time class="entry-cell" datetime="2026-11-26T21:00:00+01:00">26 ноября 2026</time>
+    <span class="entry-cell">10 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">качество важнее моды<span class="dot">.</span></h1><p class="entry-lede">День десятый из ста: концепция сайта для Nordic Balance Studios, студии пилатеса в Нуэва-Андалусии, Марбелья, — спокойный северный дизайн и короткий, понятный путь от первого взгляда до записи.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-10/13-landscape.webp" alt="Обложка кейса концепции сайта Nordic Balance Studios: Design Challenge Day 10, компьютер с надписью Move better, live better вокруг кадра из видео студии и телефон с полноэкранным меню." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 012</span>
+</div>
+<p class="caption label">День десятый. Концепция для Nordic Balance Studios в Марбелье.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fkachestvo-vazhnee-mody%2F&text=%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE+%D0%B2%D0%B0%D0%B6%D0%BD%D0%B5%D0%B5+%D0%BC%D0%BE%D0%B4%D1%8B"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fkachestvo-vazhnee-mody%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>26 ноября я опубликовал десятую заметку этой серии — челленджа, который придумал Рамайя Траск: сто дней, сто бизнесов, сто сайтов. Десять — небольшая веха, поэтому сначала оглянусь назад. День первый — семейная строительная компания с Марина-Альты. <a href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">Эта страница здесь.</a> День второй — театр в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/">Она здесь.</a> День третий — семейный ресторан в Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/">Она здесь.</a> День четвёртый — частная консалтинговая компания по недвижимости в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/">Она здесь.</a> День пятый — ресторан дегустационных меню в Мотриле. <a href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">Она здесь.</a> День шестой — заведение с курицей-гриль в Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/">Она здесь.</a> День седьмой — семейный отель в Кавосе на Корфу. <a href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/">Она здесь.</a> День восьмой — три дома в историческом центре Малаги. <a href="https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/">Она здесь.</a> День девятый — модельное агентство из Марбельи и Лондона. <a href="https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/">Она здесь.</a></p>
+
+<p>Сегодня — студия пилатеса. Nordic Balance Studios находится в Нуэва-Андалусии, Марбелья, в торговом центре Centro Plaza на проспекте Манолете. Здесь проходят занятия пилатесом на реформере в небольших группах и на трёх уровнях, индивидуальные и полуиндивидуальные сессии и несколько специальных классов — от Stretch &amp; Mobility до Prenatal &amp; Postnatal. Студия основана на опыте спортивной медицины, реабилитации и пилатеса и принимает и мужчин, и женщин. Её нынешний сайт — <a href="https://www.nordicbalancestudios.com/">nordicbalancestudios.com</a>.</p>
+
+<p>Концепция здесь: <a href="https://wellyington.github.io/challenge/day10/">Nordic Balance Studios, день десятый</a>.</p>
+
+<h2 id="пространство-и-есть-аргумент">пространство и есть аргумент</h2>
+
+<p>Студию пилатеса выбирают по трём причинам, примерно в таком порядке: хочется ли там находиться, хорошо ли там учат и вписываются ли занятия в твою неделю.</p>
+
+<p>Первую сложнее всего перенести на сайт, и о ней чаще всего забывают. Многие сайты студий яркие, перегруженные и полны акций: первое занятие за полцены, абонемент на пять занятий, новогодний марафон. Они похожи на спортзал. Nordic Balance — не спортзал. Сама студия спокойная: тёмный пол, тёплое дерево и камень, большие окна с видом на зелёные холмы, ряды реформеров в мягком свете. Сайт, который кричит, описывал бы другое место.</p>
+
+<p>Поэтому направление — минималистичное и северное, под стать названию. Тёмные тона, тёплые нейтральные оттенки, журнальная типографика и много места для фотографий. А уже внутри этого спокойствия — две другие вещи, которые нужны людям: что за занятия и как на них записаться, причём ни то ни другое не приходится искать.</p>
+
+<p><img src="/images/journal/100-days-day-10/01-cover.webp" alt="Design Challenge Day 10: Nordic Balance Studios, Марбелья. Компьютер и телефон с надписью Move better, live better на тёмном фоне вокруг кадра из видео студии." />
+<em>День десятый: студия пилатеса в Нуэва-Андалусии — реформер, индивидуальные и полуиндивидуальные сессии на основе спортивной медицины.</em></p>
+
+<h2 id="двигайся-лучше-живи-лучше">двигайся лучше, живи лучше</h2>
+
+<p>Главная страница открывается почти чёрной. В центре крупными лёгкими буквами — фраза студии: move better, live better, двигайся лучше, живи лучше. Между двумя половинами фразы — короткое зацикленное видео из студии: клиентка на реформере, проходящий мимо инструктор, зал за ними. Оно размером с фотографию в журнале и плавно приближается, когда начинаешь прокручивать.</p>
+
+<p>Внизу первого экрана — четыре направления студии простыми словами: Reformer, Private &amp; Semi-Private, Stretch &amp; Mobility, Prenatal &amp; Postnatal. Других слоганов, кроме верхнего, нет — ни акций, ни всплывающих окон.</p>
+
+<p>Я выбрал видео, а не фотографию, потому что пилатес — это движение, а неподвижный кадр человека на реформере может выглядеть как угодно. Несколько секунд медленного, контролируемого движения рассказывают о занятиях лучше любого абзаца.</p>
+
+<p><img src="/images/journal/100-days-day-10/02-hero.webp" alt="Первый экран на компьютере: логотип Nordic Balance Studios, кнопка Menu, Move better, live better вокруг кадра из видео студии и внизу Reformer, Private &amp; Semi-Private, Stretch &amp; Mobility и Prenatal &amp; Postnatal." />
+<em>Главная открывается кадром из видео студии, а внизу — четыре вида занятий.</em></p>
+
+<h2 id="одна-кнопка-одно-меню">одна кнопка, одно меню</h2>
+
+<p>В шапке две вещи: круглый логотип и название студии слева и маленькая кнопка Menu справа. Нажмёшь — три полоски превращаются в крестик, и появляется полноэкранный список: Home, Classes, About, Schedule, Contact. Внизу — строка о студии и адрес почты.</p>
+
+<p>На компьютере и на телефоне всё одинаково. Пять слов, достаточно крупных, чтобы попасть пальцем не целясь, и больше ничего, что с ними спорит. Для сайта такого размера этого хватает.</p>
+
+<p><img src="/images/journal/100-days-day-10/03-menu.webp" alt="Открытое меню на компьютере и телефоне: Home, Classes, About, Schedule и Contact на тёмном фоне, внизу Pilates studio in Marbella и адрес почты." />
+<em>Кнопка Menu открывает полноэкранный список, внизу — строка о студии и почта.</em></p>
+
+<h2 id="качество-важнее-моды">качество важнее моды</h2>
+
+<p>Дальше следующий раздел заполняет экран фотографией: мужчина на реформере в растяжке у окон студии, за окнами — холмы. Поверх — фраза, которая подытоживает весь бизнес, словами самой студии: если для вас качество важнее модных трендов, вы пришли по адресу. Мы соединяем научно обоснованное движение и персональные тренировки на основе спортивной медицины, реабилитации и пилатеса.</p>
+
+<p>Вот и вся презентация. Здесь нет списка из десяти преимуществ и обещания нового тела за тридцать дней. Сказано, что это за студия и для кого, а остальное показывает фотография. Тот, кто ищет шумное интенсивное занятие, сразу поймёт, что ему не сюда. Тот, кто ищет внимательное и профессиональное обучение, поймёт, что нашёл. И то и другое хорошо для студии.</p>
+
+<p><img src="/images/journal/100-days-day-10/04-intro.webp" alt="Фотография во всю ширину: мужчина тянется на реформере у окон студии, поверх текст If you value quality over trends, you're in the right place." />
+<em>Научно обоснованное движение и персональные тренировки поверх портрета студии во всю ширину.</em></p>
+
+<h2 id="четыре-двери-к-занятиям">четыре двери к занятиям</h2>
+
+<p>Следующий раздел называется classes for every stage — занятия для каждого этапа. В нём четыре больших блока, расставленных крестом, а не в ряд, у каждого номер и название: 01 Reformer, 02 Private, 03 Specialist, 04 First Visit. Ссылка на все занятия — в правом верхнем углу.</p>
+
+<p>Блоки молчат, пока они не нужны. Наведите курсор на компьютере или коснитесь на телефоне — блок становится кремовым и показывает, что внутри. Reformer — Beginners, Intermediate и Advanced Reformer, полуиндивидуальные сессии и небольшие группы с сертифицированными инструкторами. Private — для чего нужна индивидуальная работа: спортивные результаты, реабилитация и восстановление после травм, коррекция осанки, здоровье позвоночника и беременность. Specialist собирает Stretch &amp; Mobility, Posture для всех уровней, Longevity 50+, Teen Girls Pilates и Outdoor Mat Pilates. А First Visit объясняет, что происходит в начале: индивидуальное занятие Consultation Class, оценка движения, разговор о целях и прошлых травмах и рекомендованные вам занятия.</p>
+
+<p>Эта последняя дверь — главная. Новые клиенты часто сомневаются, потому что не знают, куда им. Здесь «я новенький» — отдельная категория с понятным первым шагом.</p>
+
+<p><img src="/images/journal/100-days-day-10/05-classes.webp" alt="Раздел Classes for every stage: четыре тёмных блока с номерами 01 Reformer, 02 Private, 03 Specialist и 04 First Visit, расставленные крестом, справа вверху All classes." />
+<em>Reformer, Private, Specialist и First Visit — четыре двери в расписание.</em></p>
+
+<p><img src="/images/journal/100-days-day-10/06-hover.webp" alt="Блок Reformer, открытый при наведении, кремового цвета: Beginners, Intermediate и Advanced Reformer, Semi-Private Sessions и небольшие группы с сертифицированными инструкторами." />
+<em>Наведите на дверь — и кремовая панель покажет, что за ней.</em></p>
+
+<h2 id="три-способа-записаться">три способа записаться</h2>
+
+<p>Большинство фитнес-студий пользуются сразу несколькими системами записи, и их сайты редко объясняют, какая для чего. Nordic Balance — не исключение: на групповые и полуиндивидуальные занятия записываются в приложении студии, на индивидуальные — через WhatsApp, а новые клиенты начинают с консультации.</p>
+
+<p>Поэтому раздел записи, book your session, объясняет ровно это — в трёх колонках, у каждой своя фотография. Запишитесь на групповое занятие: Beginner, Intermediate и Advanced Reformer плюс специальные классы, запись прямо в приложении Nordic Balance Studios, включая полуиндивидуальные сессии. Запишитесь на индивидуальное занятие: через WhatsApp по номеру +34 648 876 173, чтобы студия подобрала инструктора под ваши цели. И запишитесь на первую Consultation Class: индивидуальную сессию, где оценят ваше движение, обсудят цели и возможные травмы и порекомендуют подходящие занятия.</p>
+
+<p>Над каждой колонкой — две маленькие метки: для кого это и где проходит запись. Group classes и app, private classes и WhatsApp, new clients и start here. Никому не нужно гадать, куда ведёт кнопка.</p>
+
+<p><img src="/images/journal/100-days-day-10/07-book.webp" alt="Раздел Book your session с тремя фотографиями и тремя колонками: Book your group class в приложении, Book your private class через WhatsApp и Book your first Consultation Class для новых клиентов." />
+<em>Групповые и полуиндивидуальные занятия — в приложении, индивидуальные — через WhatsApp, а для новичков — Consultation Class.</em></p>
+
+<h2 id="уровни-расписанные-полностью">уровни, расписанные полностью</h2>
+
+<p>Страница занятий отвечает на вопрос, который задаёт каждый новичок и на который отвечают немногие сайты студий: какое занятие моё?</p>
+
+<p>У каждого уровня реформера — короткий абзац простым языком. Beginners Reformer — отправная точка, если вы впервые занимаетесь пилатесом на реформере или возвращаетесь после перерыва; в небольших группах сертифицированные инструкторы помогают освоить основы и подскажут, когда вы готовы к Intermediate. Intermediate — для клиентов с крепкой базой, готовых к более динамичным движениям и длинным последовательностям; как сказано на странице, прогресс — это не двигаться быстрее, а двигаться лучше. Advanced — для тех, кто занимается на реформере не меньше года: сложные связки, которые проверяют силу, стабильность и контроль. А Private &amp; Semi-Private, специализация студии, охватывает спортивные результаты, реабилитацию, осанку, беременность, здоровье позвоночника и восстановление после травм.</p>
+
+<p>Ниже три пронумерованных шага объясняют, как начинает новый клиент: 01 — Consultation Class; 02 — план занятий с рекомендацией групповых, полуиндивидуальных или индивидуальных сессий; 03 — прогресс под контролем, когда инструктор сам скажет, что вы готовы к следующему уровню. Хорошее движение начинается с освоения основ, говорит страница, и её структура с этим согласна.</p>
+
+<p><img src="/images/journal/100-days-day-10/08-levels.webp" alt="Страница занятий: Beginners, Intermediate и Advanced Reformer и Private &amp; Semi-Private, у каждого абзац о том, для кого это занятие." />
+<em>Каждый уровень реформера расписан полностью, плюс Private &amp; Semi-Private.</em></p>
+
+<h2 id="неделя-одним-взглядом">неделя одним взглядом</h2>
+
+<p>Под уровнями — недельное расписание: ряд карточек, по одной на день, которые листаются стрелками снизу. На каждой карточке — занятия дня со временем, окно индивидуальных сессий более мягким серым, а внизу — день и число групповых занятий.</p>
+
+<p>В понедельник четыре групповых занятия, от Intermediate в 09:15 до Prenatal &amp; Postnatal в 13:30, а после обеда — индивидуальные сессии. Четверг самый насыщенный: семь занятий, от Intermediate в 09:15 до Stretch &amp; Mobility в 19:45, и Longevity 50+ в 10:30. В субботу — только индивидуальные сессии. Ряд закольцован: после воскресенья снова идёт понедельник, а на телефоне видна одна карточка за раз.</p>
+
+<p>Смысл в том, чтобы одним взглядом ответить на вопрос «успеваю ли я?» — не скачивая приложение и не открывая PDF. Записываются по-прежнему в приложении; решают — на сайте.</p>
+
+<p><img src="/images/journal/100-days-day-10/09-schedule.webp" alt="Недельное расписание на компьютере и телефоне: ряд карточек по дням со временем занятий, например понедельник с Intermediate в 09:15, Beginners в 10:30, Stretch &amp; Mobility в 12:00 и Prenatal &amp; Postnatal в 13:30." />
+<em>Карусель недели: групповые занятия с 09:15 и индивидуальные окна после обеда.</em></p>
+
+<h2 id="наша-студия">наша студия</h2>
+
+<p>Страница о студии снова выводит фотографию на первый план. Четыре снимка студии, у каждого название занятия: Reformer Pilates — небольшие группы на трёх уровнях; Private sessions — под ваши цели; Posture для всех уровней — выравнивание для повседневной жизни; Stretch &amp; Mobility — чтобы двигаться свободнее. Рядом — кремовая карточка, которая намеренно нарушает тёмную сетку: вы здесь впервые? Начните с Consultation Class — и ссылка на запись.</p>
+
+<p>Ниже — философия студии её собственными словами: мы не гонимся за фитнес-трендами; мы сосредоточены на долгосрочном здоровье, осмысленном движении и стойких результатах. И три цифры: 5,0 — оценка студии в Google по 44 отзывам; 3 — уровня реформера; 7 — дней в неделю с занятиями в расписании.</p>
+
+<p><img src="/images/journal/100-days-day-10/10-about.webp" alt="Страница о студии: четыре фотографии студии с подписями Reformer Pilates, Private sessions, Posture – All Levels и Stretch &amp; Mobility и кремовая карточка New here? Start with a Consultation Class." />
+<em>Реформер, индивидуальные сессии, осанка и растяжка — и кремовая карточка, которая отправляет новичков на Consultation Class.</em></p>
+
+<h2 id="открыто-сейчас">открыто сейчас</h2>
+
+<p>Страница контактов называется get in touch — свяжитесь с нами, и две части фразы разнесены к противоположным краям экрана. Под ней — главное: почта, полный адрес в Centro Plaza, телефон и WhatsApp и строка, которая ещё раз напоминает, как записаться на каждый вид занятий.</p>
+
+<p>Рядом — часы работы на каждый день недели. Сегодняшний день выделен, а страница говорит, открыта ли студия прямо сейчас. Она считает это по времени Марбельи, а не по часам устройства посетителя, поэтому ответ верен и для того, кто смотрит из Лондона или Стокгольма перед отпуском.</p>
+
+<p>Ниже — частые вопросы: пять, и первый уже раскрыт, потому что его задают чаще всего. Я новичок — с чего начать? С Consultation Class. Как записаться на индивидуальную сессию? Через WhatsApp. Студия только для женщин? Нет, рады и мужчинам, и женщинам, а ещё есть занятия Teen Girls и Longevity 50+. Когда можно перейти на следующий уровень? Когда скажет инструктор; для Advanced нужно не меньше года на реформере. Как записаться на групповые и полуиндивидуальные занятия? В приложении.</p>
+
+<p>Каждый из этих ответов иначе команде студии пришлось бы объяснять по телефону снова и снова.</p>
+
+<p><img src="/images/journal/100-days-day-10/11-hours.webp" alt="Страница контактов на компьютере и телефоне: Get in touch, почта, адрес и WhatsApp, часы работы по дням с выделенным четвергом как сегодняшним днём." />
+<em>Адрес в Centro Plaza, WhatsApp и часы работы с выделенным сегодняшним днём.</em></p>
+
+<p><img src="/images/journal/100-days-day-10/12-faq.webp" alt="Частые вопросы: пять вопросов, раскрыт I'm new – where do I start? с ответом With a Consultation Class." />
+<em>Пять вопросов, один уже раскрыт: начните с Consultation Class.</em></p>
+
+<h2 id="детали">детали</h2>
+
+<p>Шрифт один — Jost, чистый геометрический гротеск, в тонком и обычном начертании почти для всего и чуть плотнее для маленьких меток. Одно семейство держит страницы спокойными и оставляет работу размеру и пространству.</p>
+
+<p>В палитре три цвета: почти чёрный с оттенком зелёного, тёплый кремовый и мягкий серый между ними. Тёмные разделы держат фотографию; кремовые появляются там, где нужно внимание: открытый блок, карточка консультации, выделенный день.</p>
+
+<p>Движение медленное и сдержанное. Заголовки поднимаются на место, видео на первом экране плавно приближается при прокрутке, а страницы мягко переходят от раздела к разделу. Что я добавил бы в настоящей версии: отключение видео и эффектов прокрутки для тех, кто попросил своё устройство уменьшить анимацию. Шрифты загружаются с моего собственного сайта, а не из Google, так что, открывая страницы, никто не передаёт свой адрес третьей стороне.</p>
+
+<h2 id="что-это-за-концепция-и-что-дальше">что это за концепция и что дальше</h2>
+
+<p>Факты на страницах взяты с нынешнего сайта студии и её публичных профилей: занятия и уровни, расписание, способы записи, адрес и телефон, ответы на частые вопросы и оценка в Google в том виде, в каком она была.</p>
+
+<p>Новое — это структура: спокойный первый экран с видео, четыре двери к занятиям, одна из которых — «First Visit», запись, объяснённая по видам занятий, уровни, расписанные полностью, неделя на виду и часы работы, которые знают, открыта ли студия прямо сейчас.</p>
+
+<p>Цифр по записям у меня нет, и выдумывать их я не буду. Чтобы превратить концепцию в работающий сайт, нужны практические шаги: связать расписание с приложением студии, чтобы оно обновлялось само, сделать испанскую версию рядом с английской и добавить профили самих инструкторов, потому что в такой студии преподаватели — во многом причина, по которой люди приходят.</p>
+
+<h2 id="десять-готово">десять готово</h2>
+
+<p>После десяти дней виден закономерный рисунок. У всех бизнесов этой серии уже был сайт. Сломанных было очень мало. Большинство просто сделаны так, чтобы выглядеть законченными, а не отвечать на то, о чём клиенты действительно спрашивают: что это, подходит ли мне, сколько стоит, когда можно прийти и как записаться. Ответы Nordic Balance на эти вопросы уже существовали — в приложении, в WhatsApp, в головах команды. Задача сайта — собрать их в одном спокойном месте.</p>
+
+<p>Если у вас студия, клиника или любой бизнес, где люди записываются на время, всё то же самое. Объясните уровни или услуги простыми словами. Покажите неделю. Скажите точно, как записаться на каждое. Дайте новичкам их собственный первый шаг. И позвольте месту говорить за себя.</p>
+
+<p>Я веб-дизайнер из Эстепоны на Коста-дель-Соль, проектирую и делаю сайты для бизнеса в Испании и за её пределами. Если это похоже на ваш бизнес, напишите мне через <a href="https://wellyington.github.io/ru/">основной сайт</a>. Расскажите, чем вы занимаетесь и где, и я отвечу понятным языком. Концепция <a href="https://wellyington.github.io/challenge/day10/">здесь</a>, а нынешний сайт Nordic Balance Studios — <a href="https://www.nordicbalancestudios.com/">здесь</a>, чтобы вы могли сравнить. Десять готово, осталось девяносто.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>100 дней</li><li>кейс</li><li>пилатес</li><li>марбелья</li><li>фитнес-студия</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><a class="pager-cell rollable" href="/journal/ru/articles/pochemu-sait-ne-privodit-klientov/">
+      <span class="label">← предыдущая</span>
+      <span class="pager-title">десять причин, почему сайт не приводит клиентов<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Читайте дальше</span>
+    <h2 id="more-title" class="h-section">ещё записи.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/ru/articles/pust-govoryat-fotografii/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-9/10-landscape.webp" alt="Обложка кейса концепта сайта Target Models: Design Challenge Day 9, Марбелья и Лондон, компьютер с крупным логотипом targetmodels среди колонок портретов и телефон с полноэкранным меню." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 010</span>
+</div>
+<span class="label">100 дней · 25.11.26</span><span class="card-title">пусть говорят фотографии<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/tri-doma-odna-dver/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp" alt="Обложка кейса концепта сайта The Lights Málaga: Design Challenge Day 8, хостел, сьюты и сад, компьютер с летним главным экраном над портом Малаги и панелью бронирования и телефон с полноэкранным меню." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 009</span>
+</div>
+<span class="label">100 дней · 25.11.26</span><span class="card-title">три дома, одна дверь<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/tot-zhe-bassein-nochyu/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-7/10-landscape.webp" alt="Обложка кейса концепта сайта Morfeas Hotel: Design Challenge Day 7, днём и ночью, компьютер с иллюстрированным главным экраном, разделённым между бассейном на солнце и бассейном под луной, и телефон с той же сценой." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 008</span>
+</div>
+<span class="label">100 дней · 23.11.26</span><span class="card-title">тот же бассейн ночью<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Правовая информация">
+    <a href="/ru/privacy/">Конфиденциальность</a>
+    <a href="/ru/cookies/">Cookies</a>
+    <a href="/ru/terms/">Правовая информация</a>
+    <a href="#" data-cookie-settings>Настройки cookies</a>
+  </nav>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
