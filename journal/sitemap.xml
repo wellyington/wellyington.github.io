@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/archive/</loc>
-    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -55,7 +55,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/</loc>
-    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -117,6 +117,15 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/"/>
   </url>
   <url>
+    <loc>https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/</loc>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/por-que-tu-web-no-consigue-clientes/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pochemu-sait-ne-privodit-klientov/"/>
+  </url>
+  <url>
     <loc>https://wellyington.github.io/journal/es/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/about/"/>
@@ -126,7 +135,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/archive/</loc>
-    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -153,7 +162,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/</loc>
-    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -186,6 +195,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/por-que-tu-web-no-consigue-clientes/</loc>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/por-que-tu-web-no-consigue-clientes/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pochemu-sait-ne-privodit-klientov/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/</loc>
@@ -251,7 +269,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/archive/</loc>
-    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -296,7 +314,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/</loc>
-    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -320,6 +338,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/la-web-que-se-cuida-sola/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/o-site-que-cuida-de-si-mesmo/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-kotoryi-sledit-za-soboi/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/</loc>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/por-que-tu-web-no-consigue-clientes/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pochemu-sait-ne-privodit-klientov/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/articles/tao-cuidadoso-quanto-a-cozinha/</loc>
@@ -358,7 +385,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/archive/</loc>
-    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -367,7 +394,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/</loc>
-    <lastmod>2026-11-25T15:30:00+01:00</lastmod>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -400,6 +427,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/do-balcao-a-comanda/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/pochemu-sait-ne-privodit-klientov/</loc>
+    <lastmod>2026-11-26T15:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/por-que-tu-web-no-consigue-clientes/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pochemu-sait-ne-privodit-klientov/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/</loc>

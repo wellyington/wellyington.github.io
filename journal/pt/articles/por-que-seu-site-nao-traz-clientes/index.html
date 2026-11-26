@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diário" href="/journal/pt/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/why-your-website-isnt-bringing-clients/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/por-que-tu-web-no-consigue-clientes/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/pochemu-sait-ne-privodit-klientov/">
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
+<title>10 motivos pelos quais o seu site não traz clientes · Wellyington</title>
+<meta name="description" content="Por que o site de uma pequena empresa recebe visitas mas não contatos: dez motivos comuns, da mensagem confusa e do site lento aos formulários longos e à fal...">
+<meta name="keywords" content="por que o meu site não gera contatos, meu site tem visitas mas nenhum contato, como conseguir mais clientes pelo site, site da minha empresa não converte, o que faz um site trazer clientes, chamada para ação clara num site, quantos campos deve ter um formulário de contato, como deixar o meu site mais rápido no celular, SEO local e Perfil da Empresa no Google para pequenos negócios, web designer na Costa del Sol">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Diário">
+<meta property="og:title" content="10 motivos pelos quais o seu site não traz clientes">
+<meta property="og:description" content="Por que o site de uma pequena empresa recebe visitas mas não contatos: dez motivos comuns, da mensagem confusa e do site lento aos formulários longos e à fal...">
+<meta property="og:url" content="https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/ten-reasons/pt/01-cover.webp">
+<meta property="og:image:alt" content="Infográfico: dez motivos pelos quais o seu site não traz clientes, da proposta de valor pouco clara à falta de medição.">
+<meta property="article:published_time" content="2026-11-26T15:00:00+01:00">
+<meta property="article:modified_time" content="2026-11-26T15:00:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="Notas">
+<meta property="article:tag" content="por que o meu site não gera contatos">
+<meta property="article:tag" content="meu site tem visitas mas nenhum contato">
+<meta property="article:tag" content="como conseguir mais clientes pelo site">
+<meta property="article:tag" content="site da minha empresa não converte">
+<meta property="article:tag" content="o que faz um site trazer clientes">
+<meta property="article:tag" content="chamada para ação clara num site">
+<meta property="article:tag" content="quantos campos deve ter um formulário de contato">
+<meta property="article:tag" content="como deixar o meu site mais rápido no celular">
+<meta property="article:tag" content="SEO local e Perfil da Empresa no Google para pequenos negócios">
+<meta property="article:tag" content="web designer na Costa del Sol">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="10 motivos pelos quais o seu site não traz clientes">
+<meta name="twitter:description" content="Por que o site de uma pequena empresa recebe visitas mas não contatos: dez motivos comuns, da mensagem confusa e do site lento aos formulários longos e à fal...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/ten-reasons/pt/01-cover.webp">
+<meta name="twitter:image:alt" content="Infográfico: dez motivos pelos quais o seu site não traz clientes, da proposta de valor pouco clara à falta de medição.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/#article",
+      "url": "https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/",
+      "headline": "10 motivos pelos quais o seu site não traz clientes",
+      "alternativeHeadline": "dez motivos pelos quais o seu site não traz clientes",
+      "description": "Por que o site de uma pequena empresa recebe visitas mas não contatos: dez motivos comuns, da mensagem confusa e do site lento aos formulários longos e à fal...",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-11-26T15:00:00+01:00",
+      "dateModified": "2026-11-26T15:00:00+01:00",
+      "articleSection": "Notas",
+      "keywords": "por que o meu site não gera contatos, meu site tem visitas mas nenhum contato, como conseguir mais clientes pelo site, site da minha empresa não converte, o que faz um site trazer clientes, chamada para ação clara num site, quantos campos deve ter um formulário de contato, como deixar o meu site mais rápido no celular, SEO local e Perfil da Empresa no Google para pequenos negócios, web designer na Costa del Sol",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/ten-reasons/pt/01-cover.webp", "caption": "Infográfico: dez motivos pelos quais o seu site não traz clientes, da proposta de valor pouco clara à falta de medição." },
+      "about": {
+        "@type": "Thing",
+        "name": "Sites para pequenas empresas"
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "Notas", "url": "https://wellyington.github.io/journal/pt/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Diário", "item": "https://wellyington.github.io/journal/pt/" },
+        { "@type": "ListItem", "position": 2, "name": "dez motivos pelos quais o seu site não traz clientes", "item": "https://wellyington.github.io/journal/pt/articles/por-que-seu-site-nao-traz-clientes/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/pt/" class="bar-cell bar-brand" aria-label="Wellyington Diário">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diário</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Horário local e no que estou trabalhando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escrevendo</span><span>notas sobre lançar pequeno</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Ouvindo</span><span>Wellyington — demos de estúdio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/why-your-website-isnt-bringing-clients/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/por-que-tu-web-no-consigue-clientes/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/por-que-seu-site-nao-traz-clientes/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/pochemu-sait-ne-privodit-klientov/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Mudar para o tema escuro" data-label-dark="Mudar para o tema escuro" data-label-light="Mudar para o tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Escuro"></span><span class="theme-word" data-light="Claro" data-dark="Escuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menu" data-label-open="Abrir menu" data-label-close="Fechar menu" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegação" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegação">
+      <p class="label">Navegação</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/pt/" class="rollable">
+            <span class="roll"><span>diário.</span><span aria-hidden="true">diário.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/archive/" class="rollable">
+            <span class="roll"><span>arquivo.</span><span aria-hidden="true">arquivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/about/" class="rollable">
+            <span class="roll"><span>sobre.</span><span aria-hidden="true">sobre.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>site principal.</span><span aria-hidden="true">site principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/pt/articles/por-que-seu-site-nao-traz-clientes/" class="menu-entry">
+            <span class="mono dim">Nº 011</span>
+            <span>dez motivos pelos quais o seu site não traz clientes<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/deixe-as-fotos-falarem/" class="menu-entry">
+            <span class="mono dim">Nº 010</span>
+            <span>deixe as fotos falarem<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/tres-casas-uma-so-porta/" class="menu-entry">
+            <span class="mono dim">Nº 009</span>
+            <span>três casas, uma só porta<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/pt/articles/a-mesma-piscina-a-noite/" class="menu-entry">
+            <span class="mono dim">Nº 008</span>
+            <span>a mesma piscina à noite<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/why-your-website-isnt-bringing-clients/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/por-que-tu-web-no-consigue-clientes/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/por-que-seu-site-nao-traz-clientes/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" aria-current="true" title="Português">PT</a><a href="/journal/ru/articles/pochemu-sait-ne-privodit-klientov/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/pt/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/pt/" class="entry-cell entry-back rollable"><span class="roll"><span>← diário</span><span aria-hidden="true">← diário</span></span></a>
+    <span class="entry-cell mono">Nº 011</span>
+    <span class="entry-cell label">Notas</span>
+    <time class="entry-cell" datetime="2026-11-26T15:00:00+01:00">26 de novembro de 2026</time>
+    <span class="entry-cell">14 min de leitura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">dez motivos pelos quais o seu site não traz clientes<span class="dot">.</span></h1><p class="entry-lede">Um site pode parecer profissional e não trazer ninguém. Estes são os dez motivos que eu mais vejo, como identificar cada um e a pergunta que importa mais do que a aparência do site.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/ten-reasons/pt/01-cover.webp" alt="Infográfico: dez motivos pelos quais o seu site não traz clientes, da proposta de valor pouco clara à falta de medição." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 011</span>
+</div>
+<p class="caption label">Dez motivos, na ordem em que um visitante os encontra.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="nesta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">nesta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartilhar.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar link</span><span aria-hidden="true">copiar link</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fpor-que-seu-site-nao-traz-clientes%2F&text=dez+motivos+pelos+quais+o+seu+site+n%C3%A3o+traz+clientes"><span class="roll"><span>publicar no X</span><span aria-hidden="true">publicar no X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fpt%2Farticles%2Fpor-que-seu-site-nao-traz-clientes%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>“O site ficou ótimo. Todo mundo diz isso. Só que ele não traz trabalho.”</p>
+
+<p>Ouço alguma versão dessa frase a cada poucas semanas, de restaurantes, construtoras, clínicas, agências e lojas da costa. O site custou um bom dinheiro, as fotos são lindas, os amigos elogiaram. E o telefone não toca por causa dele.</p>
+
+<p>Quase nunca há algo quebrado que dê para apontar. O site carrega, as páginas estão lá, o formulário envia. O problema é que um site tem um trabalho a fazer, e muitos sites foram feitos para parecer prontos, não para fazer esse trabalho.</p>
+
+<p>Esta nota passa pelos dez motivos que eu mais vejo. Nenhum exige um site novo para ser corrigido. A maioria pede uma tarde, a cabeça fresca e a disposição de olhar o próprio site como um estranho olharia.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/01-cover.webp" alt="Infográfico: dez motivos pelos quais o seu site não traz clientes, da proposta de valor pouco clara à falta de medição." />
+<em>Os dez motivos, mais ou menos na ordem em que um visitante os encontra.</em></p>
+
+<h2 id="antes-para-que-serve-um-site">antes, para que serve um site</h2>
+
+<p>Antes da lista, vale ter claro o que é sucesso. O site de uma empresa tem três tarefas, uma depois da outra:</p>
+
+<ol>
+  <li>Atrair os visitantes certos.</li>
+  <li>Convencê-los de que a empresa pode resolver o problema deles.</li>
+  <li>Transformar o interesse num contato, numa reserva ou numa compra.</li>
+</ol>
+
+<p>Uma falha em qualquer uma dessas etapas compromete todo o resto. Um site lindo que ninguém encontra falha na primeira tarefa. Um site com muitas visitas que vão embora sem entender o que você faz falha na segunda. Um site que convence e depois pede para preencher um formulário com catorze campos falha na terceira.</p>
+
+<p>Os dez motivos se encaixam nessas três etapas, mais um que corre por baixo de todas: não medir nada.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/02-three-jobs.webp" alt="Infográfico: as três tarefas de um site, atrair, convencer e converter, com os dez motivos colocados na etapa em que causam estrago, e a medição por baixo das três." />
+<em>Cada motivo quebra uma das três tarefas. A medição corre por baixo de todas.</em></p>
+
+<h2 id="1-não-dá-para-entender-o-que-você-faz">1. não dá para entender o que você faz</h2>
+
+<p>Um visitante novo dá à sua página inicial alguns segundos. Nesse tempo, ele precisa de resposta para três perguntas: o que você faz, para quem é e por que ele deveria escolher você e não o próximo resultado.</p>
+
+<p>A maioria das páginas iniciais responde a outra pergunta: quem somos nós. Bem-vindo ao nosso site. Somos uma empresa líder com mais de vinte anos de paixão e excelência. Essa frase poderia ser de um dentista, de um escritório de advocacia ou de uma empresa de andaimes. Fala da empresa, não do problema do cliente.</p>
+
+<p>Compare dois títulos para o mesmo montador de cozinhas. “Bem-vindo à Smith Interiores, o seu parceiro de confiança desde 2004.” Ou: “Cozinhas novas em Marbella e Estepona, montadas em três semanas. Orçamento grátis em 48 horas.” O segundo diz o quê, onde, em quanto tempo e o que fazer em seguida, numa frase só.</p>
+
+<p><strong>Como verificar:</strong> mostre a sua página inicial por cinco segundos a alguém que não conhece o seu negócio e feche. Pergunte o que você faz, para quem e o que te diferencia. Se a pessoa não souber dizer, os seus clientes também não sabem.</p>
+
+<p><strong>O que fazer:</strong> reescreva a primeira linha da página para que ela diga o serviço, o cliente ou o lugar, e um motivo concreto para escolher você. Leve a história e a missão para mais abaixo, onde quem quiser vai encontrá-las.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/03-headline.webp" alt="Infográfico: duas versões do título de uma página inicial. Antes: Bem-vindo à Smith Interiores, o seu parceiro de confiança desde 2004. Depois: Cozinhas novas em Marbella e Estepona, montadas em três semanas, orçamento grátis em 48 horas. Embaixo, três perguntas: o que você faz, para quem, por que você." />
+<em>A mesma empresa, duas primeiras linhas. Só uma responde às perguntas do visitante.</em></p>
+
+<h2 id="2-não-funciona-no-celular">2. não funciona no celular</h2>
+
+<p>A maioria das pessoas que procura um negócio local vê o site primeiro no celular, muitas vezes com uma mão e na rua. Um site desenhado numa tela grande e espremido depois costuma mostrar isso: texto que é preciso ampliar para ler, botões tão juntos que você toca no errado, menus que cobrem a página, formulários em que o teclado esconde o campo onde você está digitando.</p>
+
+<p>Nada disso aparece quando o dono confere o site no notebook. Aparece na paciência do cliente.</p>
+
+<p><strong>Como verificar:</strong> use o seu próprio site no seu próprio celular por cinco minutos, como um cliente faria. Procure o preço de alguma coisa. Ligue para você. Envie o formulário. Faça tudo com um polegar só.</p>
+
+<p><strong>O que fazer:</strong> texto grande o bastante para ler sem zoom, uns 16 pixels no mínimo. Botões e links do tamanho de um polegar, uns 44 pixels de altura, com espaço entre eles. O telefone como um link que liga. Formulários com o teclado certo em cada campo, números para o telefone, e-mail para o e-mail. E desenhe primeiro a versão para celular, depois a de tela grande, não o contrário.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/04-mobile.webp" alt="Infográfico: a tela de um celular com quatro verificações: texto legível sem zoom, botões do tamanho de um polegar, um telefone que liga ao toque e um formulário curto com o teclado certo." />
+<em>Quatro coisas para verificar no seu próprio celular, com um polegar só.</em></p>
+
+<h2 id="3-demora-demais-para-carregar">3. demora demais para carregar</h2>
+
+<p>As pessoas são impacientes, e com razão. Se uma página continua em branco depois de alguns segundos, muitos visitantes voltam e tocam no próximo resultado antes de ver qualquer coisa que você oferece.</p>
+
+<p>O Google mede isso com três números que chama de Core Web Vitals: Largest Contentful Paint (LCP), Interaction to Next Paint (INP) e Cumulative Layout Shift (CLS). Em palavras simples: quanto tempo até o conteúdo principal aparecer, quão rápido a página responde quando você toca em algo e quanto o layout pula enquanto carrega. As metas que o Google considera “boas” são um LCP de 2,5 segundos ou menos, um INP de 200 milissegundos ou menos e um CLS de 0,1 ou menos, medidos em visitas reais à página.</p>
+
+<p>Os suspeitos de sempre são os mesmos em quase todo site lento que eu analiso. Fotos enviadas direto da câmera, com vários megabytes cada, quando algumas centenas de kilobytes ficariam iguais na tela. Scripts demais: chats, carrosséis, rastreadores e pop-ups, cada um carregando o próprio código. Hospedagem compartilhada barata e longe do cliente. E, em sites feitos com construtores de página, uma longa lista de plugins instalados uma vez para um recurso pequeno e nunca removidos.</p>
+
+<p><strong>Como verificar:</strong> passe a sua página inicial pelo PageSpeed Insights, a ferramenta gratuita do Google, e olhe o resultado para celular, não o de desktop.</p>
+
+<p><strong>O que fazer:</strong> redimensione e comprima todas as imagens e use um formato moderno como WebP. Remova todo plugin e script para o qual você não tenha um motivo claro. Depois, olhe a hospedagem.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/05-speed.webp" alt="Infográfico: os três Core Web Vitals com os seus limites bons, LCP de 2,5 segundos ou menos, INP de 200 milissegundos ou menos, CLS de 0,1 ou menos, e as quatro causas comuns de um site lento: imagens pesadas, scripts demais, hospedagem lenta e plugins sem uso." />
+<em>As três metas de velocidade do Google e as quatro coisas que costumam impedir que sejam atingidas.</em></p>
+
+<h2 id="4-não-há-um-próximo-passo-óbvio">4. não há um próximo passo óbvio</h2>
+
+<p>Alguém leu a sua página e gostou do que viu. E agora? Deve ligar, reservar, pedir orçamento, mandar mensagem, passar na loja?</p>
+
+<p>Muitos sites nunca dizem. Há uma página de contato em algum lugar do menu, e só. Outros dizem demais: reserve já, ligue, chame no WhatsApp, assine a newsletter, siga no Instagram, baixe o folheto, tudo ao mesmo tempo e tudo do mesmo tamanho. Quando tudo é botão, nada é.</p>
+
+<p><strong>Como verificar:</strong> em cada página importante, pergunte qual é a única coisa que você quer que o visitante faça depois de ler. Se você não consegue responder numa frase, a página também não consegue.</p>
+
+<p><strong>O que fazer:</strong> escolha uma ação principal por página e faça dela a coisa mais visível da tela, repetida no fim da página e, no celular, ao alcance do polegar. Use palavras que digam o que acontece: “Peça um orçamento grátis”, “Reserve uma mesa para hoje”, “Ligue para a clínica”. Deixe uma alternativa mais discreta para quem preferir, como o telefone embaixo do botão de reserva. Todo o resto pode esperar no rodapé.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/06-cta.webp" alt="Infográfico: duas versões da mesma página. À esquerda, seis botões do mesmo peso disputam a atenção. À direita, um botão principal claro, Peça um orçamento grátis, com um link discreto para o telefone embaixo." />
+<em>Seis botões do mesmo peso, ou um próximo passo claro e uma alternativa discreta.</em></p>
+
+<h2 id="5-ainda-não-passa-confiança">5. ainda não passa confiança</h2>
+
+<p>Ninguém gosta de entrar em contato com uma empresa sobre a qual não sabe nada. Antes de ligar, as pessoas procuram sinais de que você é real, de que faz bem o que faz e de que gente como elas já contratou você e ficou satisfeita.</p>
+
+<p>Um número surpreendente de sites de empresas não oferece nada disso. Nada de avaliações, nomes, exemplos de trabalho, fotos da equipe ou do espaço de verdade, só imagens de banco de pessoas apertando as mãos num escritório que poderia estar em qualquer lugar.</p>
+
+<p><strong>Como verificar:</strong> imagine que você nunca ouviu falar da sua empresa. O que na página faria você acreditar que ela é boa? Conte as coisas que são específicas suas, e não do seu setor.</p>
+
+<p><strong>O que fazer:</strong> mostre avaliações reais, com nomes, de preferência tiradas do Google para que possam ser conferidas. Mostre o seu trabalho: fotos de trabalhos reais e casos curtos com o problema, o que você fez e o resultado. Mostre o seu rosto e o seu espaço. Inclua as associações, licenças e certificações que importam para o seu cliente. E coloque um endereço, um telefone e o nome de uma pessoa real onde dê para ver.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/07-trust.webp" alt="Infográfico: uma lista de sinais de confiança: avaliações reais com nomes, fotos de trabalhos reais, casos, o rosto da própria equipe, certificações e associações, um endereço e um telefone visíveis." />
+<em>Seis sinais de que uma empresa é real e boa no que faz.</em></p>
+
+<h2 id="6-não-fica-claro-o-que-você-oferece-nem-quanto-custa">6. não fica claro o que você oferece nem quanto custa</h2>
+
+<p>As pessoas não querem adivinhar. Se o seu site não deixa claro se você oferece exatamente o que elas precisam, ou se cabe mais ou menos no orçamento, muitas vão escolher a empresa ao lado que deixou isso claro.</p>
+
+<p>Os culpados de sempre são nomes de serviço vagos (“soluções”, “pacotes”, “serviços personalizados”), descrições que listam características em vez de resultados e preços que só aparecem depois de uma ligação. Entendo por que muitas empresas não publicam preços. Cada trabalho é diferente. Mas nenhuma informação faz as pessoas pensarem o pior.</p>
+
+<p><strong>Como verificar:</strong> um visitante conseguiria saber, só pelo seu site, qual dos seus serviços serve para ele e quanto custaria mais ou menos?</p>
+
+<p><strong>O que fazer:</strong> dê a cada serviço um nome claro e uma página curta dizendo para quem é, o que está incluído e o que acontece depois. Mostre preços onde puder, ou pelo menos um preço a partir de ou uma faixa comum, por exemplo “a maioria das reformas de banheiro fica entre 6.000 e 9.000 €”. Diga o que faz o preço variar. As pessoas não precisam de um orçamento do site. Precisam do suficiente para decidir que vale a pena ligar para você.</p>
+
+<h2 id="7-as-pessoas-não-encontram-você">7. as pessoas não encontram você</h2>
+
+<p>Nem o melhor site do mundo traz clientes se quem procura por você nunca o vê. Para a maioria dos negócios locais, isso quer dizer dois lugares: os resultados do Google e o Google Maps.</p>
+
+<p>Os problemas comuns são simples. O site nunca diz, com palavras, o que você faz e onde: “montador de cozinhas em Estepona” não aparece em lugar nenhum da página, então o Google não tem com o que relacioná-la. As páginas não estão indexadas por causa de uma configuração esquecida desde a construção. Todas as páginas têm o mesmo título. E o Perfil da Empresa no Google, muitas vezes a primeira coisa que um cliente local vê, tem o horário errado, nenhuma foto, nenhum serviço e nenhuma resposta às avaliações.</p>
+
+<p><strong>Como verificar:</strong> procure o seu serviço principal e a sua cidade no celular, sem estar logado, como um cliente faria. Onde você aparece, no mapa e nos resultados? Depois olhe o seu Perfil da Empresa como um estranho olharia.</p>
+
+<p><strong>O que fazer:</strong> diga em palavras simples, na página e no título da página, o que você faz e onde. Dê a cada serviço e a cada região que você atende uma página própria. Conecte o site ao Google Search Console para ver se ele está indexado e o que as pessoas pesquisam para encontrar você. Preencha todos os campos do seu Perfil da Empresa, mantenha o horário certo, inclua fotos reais e responda às avaliações.</p>
+
+<h2 id="8-entrar-em-contato-dá-trabalho-demais">8. entrar em contato dá trabalho demais</h2>
+
+<p>Cada passo a mais entre “tenho interesse” e “já enviei” é mais uma chance de desistir. Ainda vejo formulários de contato com doze campos, metade obrigatórios: tratamento, nome, sobrenome, empresa, cargo, endereço, CEP, país, como nos conheceu. Sistemas de reserva que pedem para criar uma conta antes de mostrar um horário livre. Formulários que não enviam nada porque uma configuração quebrou meses atrás e ninguém percebeu.</p>
+
+<p><strong>Como verificar:</strong> envie hoje o seu próprio formulário pelo celular e cronometre. Depois confira se a mensagem chegou, e onde.</p>
+
+<p><strong>O que fazer:</strong> peça só o que você precisa para responder: um nome, uma forma de contato e a mensagem. O resto pode vir na conversa. Nunca peça cadastro antes do contato. Ofereça uma alternativa rápida, telefone ou WhatsApp, para quem preferir. Mostre uma confirmação clara depois do envio e diga quando a pessoa vai ter resposta. E teste o formulário todo mês.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/08-form.webp" alt="Infográfico: dois formulários de contato. O longo tem doze campos, entre eles tratamento, empresa, cargo, endereço, CEP e como nos conheceu. O curto tem quatro: nome, e-mail ou telefone, mensagem e enviar." />
+<em>Doze campos, ou os quatro de que você realmente precisa para responder.</em></p>
+
+<h2 id="9-parece-igual-a-todo-mundo">9. parece igual a todo mundo</h2>
+
+<p>“Temos orgulho de oferecer um serviço de qualidade.” “A sua satisfação é a nossa prioridade.” “Profissionais apaixonados e comprometidos com a excelência.” Essas frases estão em milhares de sites, e é exatamente por isso que não dizem nada. Um cliente que compara três empresas não consegue diferenciá-las, então escolhe pelo preço, ou não escolhe.</p>
+
+<p>O mesmo vale para as imagens. Uma foto de banco de uma atendente sorridente de headset diz ao visitante que você não tinha uma foto sua.</p>
+
+<p><strong>Como verificar:</strong> cubra o seu logotipo e leia a sua página inicial. Ela poderia ser de um concorrente? Se você trocasse os nomes, alguém perceberia?</p>
+
+<p><strong>O que fazer:</strong> anote as perguntas que os seus clientes realmente fazem, por telefone e pessoalmente, e responda no site com as suas próprias palavras. Quanto tempo leva? E se chover? Vocês trabalham no fim de semana? Posso ver um que vocês fizeram? Use detalhes que só você pode dizer: as ruas onde você trabalha, os materiais que usa, quantos trabalhos fez no ano passado. Troque as fotos de banco por fotos reais, mesmo que sejam do celular.</p>
+
+<h2 id="10-ninguém-mede-nada">10. ninguém mede nada</h2>
+
+<p>O último motivo fica por baixo de todos os outros. Muitas empresas lançam um site e simplesmente supõem que ele está funcionando. Ninguém conta os contatos que ele gera, as ligações que produz ou as reservas que traz. Ninguém sabe quantas pessoas começam o formulário e desistem no meio, nem de que página elas saem.</p>
+
+<p>Sem dados, todos os problemas acima ficam invisíveis. Você não sabe se o site tem poucas visitas ou poucos contatos, então não sabe se deve gastar com publicidade ou com a correção da página.</p>
+
+<p><strong>Como verificar:</strong> você consegue dizer quantos contatos o seu site trouxe no mês passado e quantos viraram clientes? Se não, é a primeira coisa a corrigir.</p>
+
+<p><strong>O que fazer:</strong> instale uma análise simples, com o consentimento dos visitantes onde a lei exige, e conte o que importa para o negócio, não só as visitas: formulários enviados, toques no telefone, reservas feitas, cliques no WhatsApp. Pergunte a cada cliente novo como encontrou você e anote. Olhe os números uma vez por mês, mude uma coisa e olhe de novo.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/10-scoreboard.webp" alt="Infográfico: um placar mensal simples para o site de uma empresa: visitas, contatos, ligações, reservas, formulários começados mas não enviados e clientes novos, com a origem de cada um." />
+<em>Um placar mensal: seis números que mostram onde está o problema.</em></p>
+
+<h2 id="o-quadro-geral-visitas-não-são-clientes">o quadro geral: visitas não são clientes</h2>
+
+<p>Quando você mede, os números começam a apontar o problema. Um guia aproximado que uso com os meus clientes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>O que você vê</th>
+      <th>Onde provavelmente está o problema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pouquíssimas visitas</td>
+      <td>Marketing e SEO</td>
+    </tr>
+    <tr>
+      <td>Muitas visitas, poucos contatos</td>
+      <td>A mensagem, a confiança ou a oferta</td>
+    </tr>
+    <tr>
+      <td>Muitos contatos, poucos clientes</td>
+      <td>O processo de venda, os preços ou a qualidade dos contatos</td>
+    </tr>
+    <tr>
+      <td>Muitos formulários começados e abandonados</td>
+      <td>A experiência do usuário ou algo técnico</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>É por isso que “precisamos de mais tráfego” costuma ser a resposta errada. Se cem pessoas visitam o site por semana e ninguém entra em contato, mandar duzentas vai sobretudo dobrar o número de pessoas que vão embora. Conserte o vazamento antes de abrir mais a torneira.</p>
+
+<p><img src="/images/journal/ten-reasons/pt/09-diagnosis.webp" alt="Infográfico: uma tabela de diagnóstico. Pouquíssimas visitas aponta para marketing e SEO. Muitas visitas e poucos contatos, para a mensagem, a confiança ou a oferta. Muitos contatos e poucos clientes, para o processo de venda, os preços ou a qualidade dos contatos. Muitos formulários abandonados, para a experiência do usuário ou falhas técnicas." />
+<em>O que os números dizem e onde olhar primeiro.</em></p>
+
+<h2 id="por-onde-começar">por onde começar</h2>
+
+<p>Se os dez parecem familiares, não tente corrigir tudo de uma vez. Na minha experiência, a ordem que dá resultado mais rápido é:</p>
+
+<ol>
+  <li>Garanta que o formulário e o link do telefone funcionam, hoje.</li>
+  <li>Reescreva a primeira linha da página inicial.</li>
+  <li>Escolha uma ação principal por página e deixe-a óbvia.</li>
+  <li>Confira o site no seu celular, com um polegar, e corrija o que incomodar.</li>
+  <li>Instale a medição, para que a próxima decisão seja baseada em números.</li>
+</ol>
+
+<p>Todo o resto, a velocidade, as avaliações, as páginas de serviços, a visibilidade nas buscas, fica mais fácil depois dessas cinco.</p>
+
+<h2 id="a-minha-principal-recomendação">a minha principal recomendação</h2>
+
+<p>Pare de julgar o seu site só por quão profissional ele parece. Julgue-o por quão bem ele traz oportunidades reais para o negócio.</p>
+
+<p>Um site bonito é um ativo. Um site que traz contatos qualificados mês após mês é uma ferramenta de negócio. Os dois podem ser o mesmo site, mas só se ele foi feito pensando na segunda tarefa.</p>
+
+<p>Sou web designer em Estepona, na Costa del Sol, e é isso que eu faço na maior parte do tempo: olhar sites que deveriam funcionar e descobrir por que não funcionam. Se o seu site está bonito e o telefone mesmo assim não toca, escreva para mim pelo <a href="https://wellyington.github.io/pt/">site principal</a>. Conte o que você faz e onde, e eu digo em linguagem simples qual desses dez eu acho que está custando mais para você. Você também pode ver como eu faço isso na prática na <a href="https://wellyington.github.io/journal/pt/archive/">série 100 dias</a>, em que redesenho todos os dias o site de um negócio real.</p>
+
+      <p class="fin" aria-label="Fim da entrada">fim.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">arquivado em</span>
+    <ul class="chips"><li>notas</li><li>pequenas empresas</li><li>sites</li><li>conversão</li></ul>
+  </div><nav class="rail pager" aria-label="mais entradas."><a class="pager-cell rollable" href="/journal/pt/articles/deixe-as-fotos-falarem/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">deixe as fotos falarem<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">a entrada mais recente.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Continue lendo</span>
+    <h2 id="more-title" class="h-section">mais entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/pt/articles/o-site-que-cuida-de-si-mesmo/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/living-website/pt/01-cover.webp" alt="Ilustração: um folheto impresso com o horário riscado à esquerda e, à direita, um celular com um site que diz aberto agora e as sugestões de hoje atualizadas pela manhã." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 005</span>
+</div>
+<span class="label">Notas · 21.11.26</span><span class="card-title">o site que cuida de si mesmo<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/deixe-as-fotos-falarem/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-9/10-landscape.webp" alt="Capa do caso do conceito de site da Target Models: Design Challenge Day 9, Marbella e Londres, um computador com o grande logotipo targetmodels entre colunas de retratos e um celular com o menu em tela cheia." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 010</span>
+</div>
+<span class="label">100 dias · 25.11.26</span><span class="card-title">deixe as fotos falarem<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/pt/articles/tres-casas-uma-so-porta/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp" alt="Capa do caso do conceito de site do The Lights Málaga: Design Challenge Day 8, hostel, suítes e jardim, um computador com a abertura de verão sobre o porto de Málaga e a barra de reservas, e um celular com o menu em tela cheia." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>Nº 009</span>
+</div>
+<span class="label">100 dias · 25.11.26</span><span class="card-title">três casas, uma só porta<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independente por design · Escrito em público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/pt/" class="rollable"><span class="roll"><span>diário</span><span aria-hidden="true">diário</span></span>
+    </a><a href="/journal/pt/archive/" class="rollable"><span class="roll"><span>arquivo</span><span aria-hidden="true">arquivo</span></span>
+    </a><a href="/journal/pt/about/" class="rollable"><span class="roll"><span>sobre</span><span aria-hidden="true">sobre</span></span>
+    </a><a href="https://wellyington.github.io/pt/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>site principal</span><span aria-hidden="true">site principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">em outros lugares</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/pt/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escreva para mim</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Eu leio todas as respostas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Legal">
+    <a href="/pt/privacidade/">Privacidade</a>
+    <a href="/pt/cookies/">Cookies</a>
+    <a href="/pt/termos/">Aviso legal</a>
+    <a href="#" data-cookie-settings>Configurar cookies</a>
+  </nav>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Composto em Space Grotesk · Feito com Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
