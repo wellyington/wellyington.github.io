@@ -101,3 +101,9 @@ a.pager-cell:hover { background: rgb(var(--fg)); color: rgb(var(--bg)); }
   .card { border-bottom: 0; }
   .card + .card { border-left: 1px solid var(--line); }
 }
+
+// Tables: plain, ruled, scroll sideways on narrow screens.
+.prose table { display: block; overflow-x: auto; border-collapse: collapse; width: 100%; font-size: .95em; }
+.prose th, .prose td { padding: .7rem 1rem .7rem 0; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; min-width: 12ch; }
+.prose th { font-family: var(--mono); font-size: .75rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; opacity: .7; border-bottom-color: rgb(var(--fg)); }
+.prose tbody tr:last-child td { border-bottom: 0; }
