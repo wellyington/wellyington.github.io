@@ -65,6 +65,7 @@ The journal is written in four languages with the same entries in each. The 100 
 - [Day 7: Morfeas Hotel Kavos](https://wellyington.github.io/challenge/day7/): Morfeas Hotel — a family-run hotel and apartments in Kavos, Corfu. A minute from the Ionian Sea, steps from the strip.
 - [Day 8: The Lights Málaga — Hostel · Suites · Garden in the heart of Málaga](https://wellyington.github.io/challenge/day8/): Your summer base in Málaga. Three houses next to the Mercado Central, walking distance to La Malagueta beach. Free sangría, breakfast and themed dinners. Best price when you book direct.
 - [Day 9: Target Models](https://wellyington.github.io/challenge/day9/): Target Models is a highly professional and multilingual casting agency in Marbella and London. Formed in 1999 on the Costa del Sol.
+- [Day 10: Nordic Balance Studios | Pilates Studio in Marbella](https://wellyington.github.io/challenge/day10/): Pilates studio in Nueva Andalucía, Marbella. Reformer, private and semi-private Pilates rooted in sports medicine and rehabilitation.
 
 ## Optional
 
