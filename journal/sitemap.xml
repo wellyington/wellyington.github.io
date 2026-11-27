@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/archive/</loc>
-    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -45,6 +45,15 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/"/>
   </url>
   <url>
+    <loc>https://wellyington.github.io/journal/en/articles/everything-in-its-place/</loc>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/cada-coisa-no-seu-lugar/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/"/>
+  </url>
+  <url>
     <loc>https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/</loc>
     <lastmod>2026-11-22T15:45:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/from-the-counter-to-the-ticket/"/>
@@ -55,7 +64,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/en/</loc>
-    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -144,12 +153,21 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/archive/</loc>
-    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/archive/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/archive/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/</loc>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/cada-coisa-no-seu-lugar/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/articles/calidad-antes-que-modas/</loc>
@@ -180,7 +198,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/es/</loc>
-    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -287,12 +305,21 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/archive/</loc>
-    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/archive/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/archive/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/pt/articles/cada-coisa-no-seu-lugar/</loc>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/cada-coisa-no-seu-lugar/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/"/>
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/articles/criterio-antes-de-volume/</loc>
@@ -332,7 +359,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/pt/</loc>
-    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -412,7 +439,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/archive/</loc>
-    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/archive/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/archive/"/>
@@ -421,7 +448,7 @@
   </url>
   <url>
     <loc>https://wellyington.github.io/journal/ru/</loc>
-    <lastmod>2026-11-26T21:00:00+01:00</lastmod>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/"/>
@@ -535,5 +562,14 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/tres-casas-una-sola-puerta/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/tres-casas-uma-so-porta/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/"/>
+  </url>
+  <url>
+    <loc>https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/</loc>
+    <lastmod>2026-11-27T21:00:00+01:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/cada-coisa-no-seu-lugar/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/"/>
   </url>
 </urlset>

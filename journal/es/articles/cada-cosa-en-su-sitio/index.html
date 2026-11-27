@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Diario" href="/journal/es/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/cada-coisa-no-seu-lugar/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/">
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
+<title>Concepto de web para asistente virtual: Elevate Admin Studio, Leeds · Wellyington</title>
+<meta name="description" content="Un concepto de web de una página para Elevate Admin Studio, asistente virtual en Leeds (Reino Unido): servicios en acordeón, un control deslizante de cuotas ...">
+<meta name="keywords" content="diseño web para asistente virtual, web para una asistente virtual en Reino Unido, web de una página para un negocio de apoyo administrativo, web de asistente virtual con precios, control deslizante de precios para cuotas mensuales, asistente virtual en Leeds, apoyo administrativo y de proyectos para pequeñas empresas, diseño web en azul marino, crema y dorado, diseñador web en la Costa del Sol, reto 100 días 100 webs">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Diario">
+<meta property="og:title" content="Concepto de web para asistente virtual: Elevate Admin Studio, Leeds">
+<meta property="og:description" content="Un concepto de web de una página para Elevate Admin Studio, asistente virtual en Leeds (Reino Unido): servicios en acordeón, un control deslizante de cuotas ...">
+<meta property="og:url" content="https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-11/13-landscape.webp">
+<meta property="og:image:alt" content="Portada del caso del concepto de web de Elevate Admin Studio: Design Challenge Day 11, un ordenador con Virtual assistant support for busy business owners junto a una forma dibujada con líneas, y un móvil con el menú azul marino a pantalla completa.">
+<meta property="article:published_time" content="2026-11-27T21:00:00+01:00">
+<meta property="article:modified_time" content="2026-11-27T21:00:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 días">
+<meta property="article:tag" content="diseño web para asistente virtual">
+<meta property="article:tag" content="web para una asistente virtual en Reino Unido">
+<meta property="article:tag" content="web de una página para un negocio de apoyo administrativo">
+<meta property="article:tag" content="web de asistente virtual con precios">
+<meta property="article:tag" content="control deslizante de precios para cuotas mensuales">
+<meta property="article:tag" content="asistente virtual en Leeds">
+<meta property="article:tag" content="apoyo administrativo y de proyectos para pequeñas empresas">
+<meta property="article:tag" content="diseño web en azul marino, crema y dorado">
+<meta property="article:tag" content="diseñador web en la Costa del Sol">
+<meta property="article:tag" content="reto 100 días 100 webs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Concepto de web para asistente virtual: Elevate Admin Studio, Leeds">
+<meta name="twitter:description" content="Un concepto de web de una página para Elevate Admin Studio, asistente virtual en Leeds (Reino Unido): servicios en acordeón, un control deslizante de cuotas ...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-11/13-landscape.webp">
+<meta name="twitter:image:alt" content="Portada del caso del concepto de web de Elevate Admin Studio: Design Challenge Day 11, un ordenador con Virtual assistant support for busy business owners junto a una forma dibujada con líneas, y un móvil con el menú azul marino a pantalla completa.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/#article",
+      "url": "https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/",
+      "headline": "Concepto de web para asistente virtual: Elevate Admin Studio, Leeds",
+      "alternativeHeadline": "cada cosa en su sitio",
+      "description": "Un concepto de web de una página para Elevate Admin Studio, asistente virtual en Leeds (Reino Unido): servicios en acordeón, un control deslizante de cuotas ...",
+      "inLanguage": "es",
+      "datePublished": "2026-11-27T21:00:00+01:00",
+      "dateModified": "2026-11-27T21:00:00+01:00",
+      "articleSection": "100 días",
+      "keywords": "diseño web para asistente virtual, web para una asistente virtual en Reino Unido, web de una página para un negocio de apoyo administrativo, web de asistente virtual con precios, control deslizante de precios para cuotas mensuales, asistente virtual en Leeds, apoyo administrativo y de proyectos para pequeñas empresas, diseño web en azul marino, crema y dorado, diseñador web en la Costa del Sol, reto 100 días 100 webs",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-11/13-landscape.webp", "caption": "Portada del caso del concepto de web de Elevate Admin Studio: Design Challenge Day 11, un ordenador con Virtual assistant support for busy business owners junto a una forma dibujada con líneas, y un móvil con el menú azul marino a pantalla completa." },
+      "about": {
+        "@type": "ProfessionalService",
+        "name": "Elevate Admin Studio", "url": "https://elevateadminstudio.co.uk/", "address": { "@type": "PostalAddress", "addressLocality": "Leeds", "addressCountry": "GB" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 días", "url": "https://wellyington.github.io/journal/es/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Diario", "item": "https://wellyington.github.io/journal/es/" },
+        { "@type": "ListItem", "position": 2, "name": "cada cosa en su sitio", "item": "https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/es/" class="bar-cell bar-brand" aria-label="Wellyington Diario">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ diario</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Hora local y en qué estoy trabajando.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escribiendo</span><span>notas sobre lanzar en pequeño</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Escuchando</span><span>Wellyington — maquetas de estudio</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Idioma">
+    <a href="/journal/en/articles/everything-in-its-place/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/cada-cosa-en-su-sitio/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/cada-coisa-no-seu-lugar/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/vsyo-na-svoikh-mestakh/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Cambiar a tema oscuro" data-label-dark="Cambiar a tema oscuro" data-label-light="Cambiar a tema claro">
+    <span class="roll label"><span class="theme-word" data-light="Claro" data-dark="Oscuro"></span><span class="theme-word" data-light="Claro" data-dark="Oscuro" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Navegación" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Navegación">
+      <p class="label">Navegación</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/es/" class="rollable">
+            <span class="roll"><span>diario.</span><span aria-hidden="true">diario.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/archive/" class="rollable">
+            <span class="roll"><span>archivo.</span><span aria-hidden="true">archivo.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/about/" class="rollable">
+            <span class="roll"><span>sobre mí.</span><span aria-hidden="true">sobre mí.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>web principal.</span><span aria-hidden="true">web principal.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Últimas entradas</p><ol><li>
+          <a href="/journal/es/articles/cada-cosa-en-su-sitio/" class="menu-entry">
+            <span class="mono dim">N.º 013</span>
+            <span>cada cosa en su sitio<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/calidad-antes-que-modas/" class="menu-entry">
+            <span class="mono dim">N.º 012</span>
+            <span>calidad antes que modas<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/por-que-tu-web-no-consigue-clientes/" class="menu-entry">
+            <span class="mono dim">N.º 011</span>
+            <span>diez razones por las que tu web no consigue clientes<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/es/articles/que-hablen-las-fotografias/" class="menu-entry">
+            <span class="mono dim">N.º 010</span>
+            <span>que hablen las fotografías<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Idioma"><a href="/journal/en/articles/everything-in-its-place/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/cada-cosa-en-su-sitio/" hreflang="es" lang="es" data-set-lang="es" aria-current="true" title="Español">ES</a><a href="/journal/pt/articles/cada-coisa-no-seu-lugar/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/vsyo-na-svoikh-mestakh/" hreflang="ru" lang="ru" data-set-lang="ru" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/es/feed.xml"><span class="roll"><span>Feed RSS →</span><span aria-hidden="true">Feed RSS →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/es/" class="entry-cell entry-back rollable"><span class="roll"><span>← diario</span><span aria-hidden="true">← diario</span></span></a>
+    <span class="entry-cell mono">N.º 013</span>
+    <span class="entry-cell label">100 días</span>
+    <time class="entry-cell" datetime="2026-11-27T21:00:00+01:00">27 de noviembre de 2026</time>
+    <span class="entry-cell">17 min de lectura</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">cada cosa en su sitio<span class="dot">.</span></h1><p class="entry-lede">Día once de cien: un concepto de web de una sola página para Elevate Admin Studio, una asistente virtual de Leeds, pensado para parecer tan ordenado y fiable como el servicio que vende, con los precios a la vista.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-11/13-landscape.webp" alt="Portada del caso del concepto de web de Elevate Admin Studio: Design Challenge Day 11, un ordenador con Virtual assistant support for busy business owners junto a una forma dibujada con líneas, y un móvil con el menú azul marino a pantalla completa." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 013</span>
+</div>
+<p class="caption label">Día once. Un concepto para Elevate Admin Studio en Leeds.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="en esta página.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">en esta página.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">compartir.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="copiado."><span class="roll"><span>copiar enlace</span><span aria-hidden="true">copiar enlace</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fcada-cosa-en-su-sitio%2F&text=cada+cosa+en+su+sitio"><span class="roll"><span>publicar en X</span><span aria-hidden="true">publicar en X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fes%2Farticles%2Fcada-cosa-en-su-sitio%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>El 27 de noviembre publiqué la undécima nota de esta serie, el reto que planteó Ramiah Trask: cien días, cien negocios, cien webs. El día uno fue un constructor familiar de la Marina Alta. <a href="https://wellyington.github.io/journal/es/articles/la-web-antes-del-si/">Esa página está aquí.</a> El día dos, un teatro de Málaga. <a href="https://wellyington.github.io/journal/es/articles/sitio-para-toda-la-temporada/">Esa está aquí.</a> El día tres, un restaurante familiar de Estepona. <a href="https://wellyington.github.io/journal/es/articles/un-sitio-en-la-mesa-larga/">Esa está aquí.</a> El día cuatro, una consultora inmobiliaria privada de Málaga. <a href="https://wellyington.github.io/journal/es/articles/criterio-antes-que-volumen/">Esa está aquí.</a> El día cinco, un restaurante de menús degustación en Motril. <a href="https://wellyington.github.io/journal/es/articles/tan-cuidada-como-la-cocina/">Esa está aquí.</a> El día seis, un asador de pollos de Estepona. <a href="https://wellyington.github.io/journal/es/articles/del-mostrador-a-la-comanda/">Esa está aquí.</a> El día siete, un hotel familiar en Kavos, Corfú. <a href="https://wellyington.github.io/journal/es/articles/la-misma-piscina-de-noche/">Esa está aquí.</a> El día ocho, tres casas en el centro histórico de Málaga. <a href="https://wellyington.github.io/journal/es/articles/tres-casas-una-sola-puerta/">Esa está aquí.</a> El día nueve, una agencia de modelos de Marbella y Londres. <a href="https://wellyington.github.io/journal/es/articles/que-hablen-las-fotografias/">Esa está aquí.</a> El día diez, un estudio de Pilates de Marbella. <a href="https://wellyington.github.io/journal/es/articles/calidad-antes-que-modas/">Esa está aquí.</a></p>
+
+<p>Hoy toca una asistente virtual. Elevate Admin Studio es el negocio de Charlotte, con base en Leeds y clientes en todo el Reino Unido. Aporta más de 22 años en puestos sénior de apoyo administrativo y de proyectos, cinco de ellos en el NHS, el sistema de salud público británico, a nivel nacional, y ahora pone esa experiencia al servicio de coaches, consultores, creativos, pequeñas empresas y equipos en crecimiento que necesitan ayuda entre bastidores pero no están listos para contratar a alguien en plantilla. El trabajo abarca administración, correo y agenda, redes sociales, administración financiera, eventos, proyectos, y documentos y datos. Su web actual está en <a href="https://elevateadminstudio.co.uk/">elevateadminstudio.co.uk</a>.</p>
+
+<p>El concepto está aquí: <a href="https://wellyington.github.io/challenge/day11/">Elevate Admin Studio, día once</a>.</p>
+
+<h2 id="la-web-es-el-primer-trabajo">la web es el primer trabajo</h2>
+
+<p>Una asistente virtual vende algo difícil de enseñar: orden. Nadie ve desde fuera una bandeja de entrada bien llevada, una agenda que nunca se solapa o el correo de seguimiento que salió a tiempo. Lo que un posible cliente sí ve, antes de hablar con ella, es la web. Y la va a leer, lo sepa o no, como una muestra del trabajo.</p>
+
+<p>Ese es el encargo. Si la web está desordenada, el visitante se pregunta si la administración también lo estará. Si los precios se esconden tras un «contacta para pedir presupuesto», se pregunta qué más será impreciso. Si el siguiente paso no está claro, se pregunta cómo de claros serán los informes semanales. Una web para una asistente tiene que ser lo contrario de todo eso: ordenada, honesta con el dinero y clara sobre lo que pasa después.</p>
+
+<p>Así que la dirección fue una web de una sola página, tranquila y ordenada. Una paleta azul marino, crema y dorado, unas mayúsculas clásicas para los titulares, una palo seco ligera para la lectura, líneas finas que dividen la página en secciones claras, y todo lo que un cliente necesita en un solo recorrido, en el orden en que lo necesita.</p>
+
+<p><img src="/images/journal/100-days-day-11/01-cover.webp" alt="Design Challenge Day 11: Elevate Admin Studio, Leeds. Un ordenador y un móvil con la portada en crema, Virtual assistant support for busy business owners, y los botones Book a discovery call y View packages &amp; prices." />
+<em>Día once: una web de una página para una asistente virtual del Reino Unido con apoyo administrativo, de proyectos y de redes sociales.</em></p>
+
+<h2 id="apoyo-para-empresarios-con-poco-tiempo">apoyo para empresarios con poco tiempo</h2>
+
+<p>La página se abre con una breve pantalla de carga. Un contador llega a cien mientras pasan cuatro palabras: organising, scheduling, delegating, ready, organizar, programar, delegar, listo. Después, un botón Enter site. Es un pequeño gesto teatral, y dice lo que hace el servicio antes de leer una sola frase.</p>
+
+<p>Detrás está la portada. A la izquierda, el titular en mayúsculas altas y espaciadas: virtual assistant support for busy business owners, apoyo de asistente virtual para empresarios ocupados. Debajo, una frase: apoyo administrativo, de proyectos y de redes sociales fiable, que te ayuda a recuperar tu tiempo, reducir el agobio y mantener tu negocio funcionando sin sobresaltos. Luego dos botones, uno dorado para reservar una llamada de presentación y otro con contorno para ver paquetes y precios. A la derecha, un vídeo corto en bucle de una forma dibujada con líneas finas que gira despacio.</p>
+
+<p>Y debajo, una línea discreta que trabaja mucho: más de 22 años en apoyo administrativo y de proyectos sénior, con base en Leeds y clientes en todo el Reino Unido. Experiencia, lugar y alcance, antes de que nadie haya bajado.</p>
+
+<p><img src="/images/journal/100-days-day-11/02-hero.webp" alt="La portada en un ordenador: el logotipo de Elevate, los enlaces de la cabecera y tres bloques, Get in touch, Packages &amp; Prices y Explore services, sobre el titular Virtual assistant support for busy business owners y un vídeo de líneas en bucle." />
+<em>La portada: un titular, dos botones, un vídeo de líneas y la frase sobre los 22 años de experiencia.</em></p>
+
+<h2 id="una-cabecera-que-funciona-como-un-archivador">una cabecera que funciona como un archivador</h2>
+
+<p>La cabecera está organizada como un índice. El logotipo ocupa su propio panel a la izquierda. A la derecha, las secciones se listan en tres columnas pequeñas, como se etiquetarían los cajones: asistente virtual, sobre mí, servicios; paquetes y precios, proceso, testimonios; contacto y escríbeme. Debajo, tres bloques sirven de atajos: Get in touch y Packages &amp; Prices en azul marino, Explore services en dorado.</p>
+
+<p>En el móvil, y en cualquier pantalla de menos de 1.025 píxeles, esa cabecera se reduce al logotipo y un botón de tres rayas. Al tocarlo, un panel azul marino entra deslizándose en 0,8 segundos y llena la pantalla, con las siete secciones en una sola columna, cada una en su propia línea: Home, About, Services, Packages &amp; Prices, Process, Testimonials, Contact. Las líneas son lo bastante grandes para tocarlas sin apuntar, y la cruz para cerrar queda donde estaba el botón.</p>
+
+<p>En una web de una sola página, el menú es en realidad un índice. Debe leerse como tal.</p>
+
+<p><img src="/images/journal/100-days-day-11/03-menu.webp" alt="El menú en un ordenador y un móvil: en el ordenador los enlaces están en la cabecera; en el móvil, una lista azul marino a pantalla completa de Home a Contact." />
+<em>En pantalla grande, los enlaces en la cabecera; en el móvil, una lista azul marino a pantalla completa.</em></p>
+
+<h2 id="hola-soy-charlotte">hola, soy Charlotte</h2>
+
+<p>En un negocio de una sola persona, la persona es el producto. Por eso la primera sección después de la portada la presenta a ella, con su propia voz: hola, soy Charlotte, fundadora de Elevate. Al lado, un retrato.</p>
+
+<p>El texto es breve y concreto. Ofrece un apoyo virtual tranquilo, organizado y fiable a empresarios ocupados que necesitan ayuda entre bastidores. Trabaja con personas que llevan demasiadas cosas a la vez y necesitan un apoyo fiable para mantenerlo todo en orden. Ya sea administración, redes sociales, coordinación de proyectos u organización del día a día, puede aportar más calma, claridad y estructura. Algunas de esas frases van en un peso más grueso, para que una lectura rápida capte la promesa sin leer cada palabra.</p>
+
+<p>Debajo viene una lista de con quién trabaja: coaches y consultores, creativos y proveedores de servicios, pequeños empresarios, equipos en crecimiento y empresarios listos para delegar. Y una invitación: ¿preparado para delegar tu administración con confianza? Esa lista importa más de lo que parece. Quien se ve reflejado en ella deja de preguntarse si esto es para él.</p>
+
+<p><img src="/images/journal/100-days-day-11/04-about.webp" alt="La sección sobre Charlotte en un ordenador: Hi, I'm Charlotte, founder of Elevate, con una breve presentación y un retrato de Charlotte." />
+<em>Hola, soy Charlotte: una presentación breve con sus palabras, junto a un retrato.</em></p>
+
+<h2 id="dos-décadas-en-cifras-y-en-valores">dos décadas, en cifras y en valores</h2>
+
+<p>La siguiente sección, meet Charlotte, conoce a Charlotte, recoge la experiencia. Más de dos décadas de apoyo tranquilo y capaz. Dos párrafos explican de dónde viene: puestos sénior administrativos y de proyectos, cinco años en el NHS a nivel nacional, apoyando a equipos, directivos y programas con la gestión de prioridades, la coordinación de reuniones, la preparación de documentos y el seguimiento de acciones. Y luego el presente: llevar esa experiencia a empresarios que necesitan un apoyo de confianza sin el compromiso de contratar en plantilla.</p>
+
+<p>Bajo el texto hay tres cifras, que suben al aparecer en pantalla: más de 22 años en apoyo administrativo y de proyectos sénior, 5 años en el NHS a nivel nacional, y Leeds, donde tiene su base, con clientes en todo el Reino Unido. A la derecha, una tarjeta azul marino describe cómo es trabajar con ella y qué puede esperar un cliente: comunicación clara, cumplimiento fiable, sistemas organizados, un enfoque tranquilo y profesional, un apoyo que se siente como parte del propio negocio, y cuidado, discreción y atención al detalle.</p>
+
+<p>Más abajo, cinco tarjetas de valores, cada una con un pequeño icono dorado y unas líneas: fiabilidad, cuidado y profesionalidad, organización y claridad, confianza y confidencialidad, y colaboración. Las secciones de valores suelen ser relleno. Aquí se ganan su sitio, porque para una asistente que va a ver tu correo, tus facturas y los datos de tus clientes, la confianza y la confidencialidad no son palabras abstractas. Son la pregunta que todo cliente se hace en silencio.</p>
+
+<p><img src="/images/journal/100-days-day-11/05-values.webp" alt="La sección Meet Charlotte: Over two decades of calm, capable support, las cifras 22+, 5 y Leeds, una tarjeta azul marino con lo que se puede esperar y cinco tarjetas de valores, de Reliability a Supportive Partnership." />
+<em>22 años, 5 en el NHS, base en Leeds y cinco valores que responden a la pregunta de la confianza.</em></p>
+
+<h2 id="seis-servicios-uno-abierto-cada-vez">seis servicios, uno abierto cada vez</h2>
+
+<p>La sección de servicios se vuelve oscura. Se abre con una fotografía de una agenda mensual y unos bolígrafos, y una breve introducción: un apoyo flexible pensado para que te sientas más organizado, menos agobiado y con más control de tu carga de trabajo, sea de forma continua o para tareas concretas.</p>
+
+<p>Después, los seis servicios, en un acordeón con uno solo abierto cada vez: Social Media Admin Support, Finance Admin Support, Event Admin Support, Project Support, Traditional PA/EA Support y Documents &amp; Data Support. Cada uno, al abrirse, sigue el mismo patrón: una descripción de una línea, las tareas que puede incluir como pequeñas etiquetas con contorno, para quién es ideal y un enlace para preguntar por ese servicio en concreto.</p>
+
+<p>El de redes sociales empieza abierto. Sus etiquetas cubren la vigilancia de comentarios, la gestión de mensajes, las respuestas siguiendo tus pautas, el apoyo en la creación de contenido, plantillas y gráficos de Canva, el formato de los textos, la programación y los informes semanales. El de administración financiera cubre facturas, reclamar pagos, seguir presupuestos, controlar gastos y actualizar hojas de seguimiento, y dice claramente que apoya tu administración financiera pero no sustituye a un contable ni a un gestor. Esa línea es el tipo de honestidad que genera confianza, y le ahorra a todo el mundo una conversación incómoda más adelante.</p>
+
+<p>El acordeón evita que una lista larga de servicios se convierta en un muro. El visitante abre el que le interesa, lo lee y lo cierra. Y cada enlace de consulta abre un correo con el servicio ya escrito en el asunto, así que Charlotte sabe de qué va el mensaje antes de abrirlo.</p>
+
+<p>Al final de la sección, una línea para los indecisos: ¿no sabes qué apoyo necesitas? No pasa nada. Podemos repasar tu carga de trabajo actual. Y un botón para reservar una llamada de presentación.</p>
+
+<p><img src="/images/journal/100-days-day-11/06-services.webp" alt="La sección de servicios sobre fondo oscuro: una fotografía de una agenda mensual y un acordeón con Social Media Admin Support abierto, con etiquetas como Managing social media inboxes y Content scheduling." />
+<em>Seis servicios en acordeón. El de redes sociales se abre primero, con sus tareas como etiquetas.</em></p>
+
+<h2 id="qué-pasa-cuando-escribes">qué pasa cuando escribes</h2>
+
+<p>Una de las razones silenciosas por las que la gente aplaza contratar ayuda es que no sabe cómo será el proceso. ¿Habrá presión para vender? ¿Un formulario largo? ¿Un contrato en la primera llamada? La sección how it works, cómo funciona, quita esa preocupación en seis pasos, colocados sobre una línea vertical con círculos numerados.</p>
+
+<p>Paso uno, escribir, por correo o redes sociales, con un poco de información sobre el negocio. No hace falta saber exactamente qué apoyo necesitas. Paso dos, una llamada de presentación: corta e informal, sin presión ni obligación de seguir. Un pequeño enlace abre la lista de lo que se hablará, de las prioridades actuales a qué paquete puede encajar. Paso tres, una propuesta, enviada después de la llamada, con tiempo para revisarla. Paso cuatro, el formulario de reserva, el contrato y la factura, para que todo quede acordado antes de empezar. Paso cinco, la incorporación: acceso a sistemas, carpetas compartidas, un tablero de Trello o un gestor de tareas, preferencias de comunicación y pautas sobre el tono. Paso seis, empieza el apoyo, con comunicación clara e informes regulares.</p>
+
+<p>Seis pasos parecen muchos. Presentados así, se leen al revés: como alguien que ya lo ha hecho antes y tiene un sistema. Que es exactamente lo que un cliente está pagando.</p>
+
+<p><img src="/images/journal/100-days-day-11/07-process.webp" alt="La sección How it works: Simple, clear and supportive from the very beginning, con Step 1 Enquire y Step 2 Discovery call sobre una línea vertical numerada." />
+<em>Seis pasos desde la primera consulta hasta el apoyo, cada uno en una línea numerada.</em></p>
+
+<h2 id="los-precios-en-voz-alta">los precios, en voz alta</h2>
+
+<p>Esta es la parte que más quería acertar. Muchos negocios de servicios esconden sus precios, con la idea de que una llamada vende mejor que una cifra. Para una asistente virtual, creo que es al revés. Las personas con las que trabaja están ocupadas por definición. Un visitante que ve el precio puede decidir en un minuto si reserva la llamada. Uno que no lo ve tiene que dedicar tiempo a averiguarlo, y la gente ocupada a menudo no lo hace.</p>
+
+<p>La sección se abre con el argumento a favor de una asistente virtual en una frase: un apoyo fiable y profesional sin los costes añadidos de un empleado, como las vacaciones pagadas, los impuestos, la seguridad social, las pensiones, la oficina, el equipo o la formación. Luego tres pestañas: cuotas mensuales, paquetes y por horas o a medida.</p>
+
+<p>La pestaña de cuotas es la parte interactiva. En lugar de seis tarjetas una junto a otra, hay un control deslizante: ¿cuántas horas de apoyo al mes? Va de 12 a 60 horas en seis paradas. Al moverlo, cambia la tarjeta de al lado: The Assistant, 12 horas, 420 £ al mes; The Coordinator, 20 horas, 700 £; The Senior Support, 30 horas, 1.050 £; The Operations Partner, 40 horas, 1.400 £; The Executive Support, 50 horas, 1.750 £; y The Strategic Support, 60 horas, 2.100 £. Cada una lleva una línea sobre a quién le encaja y un botón para preguntar, que abre un correo con el nombre de esa cuota ya en el asunto. Empieza en The Coordinator.</p>
+
+<p>El control deslizante hace algo que una tabla no haría. Permite empezar por la propia pregunta, cuánta ayuda necesito, y ver la respuesta, en vez de leer seis opciones y hacer el camino al revés. Debajo, las condiciones están escritas: el tiempo se registra redondeado a los 15 minutos más cercanos, las horas no usadas no pasan al mes siguiente, las horas incluyen el tiempo de instrucciones y comunicación, se recomienda un compromiso de tres meses y la disponibilidad es limitada. Son condiciones que normalmente solo salen en un contrato. Aquí salen antes del primer correo.</p>
+
+<p><img src="/images/journal/100-days-day-11/08-retainers.webp" alt="La pestaña de cuotas mensuales: un control deslizante que pregunta How many hours of support a month?, en 20 horas, junto a una tarjeta de The Coordinator a 700 £ al mes." />
+<em>Desliza de 12 a 60 horas y la tarjeta cambia. A 20 horas, The Coordinator, 700 £ al mes.</em></p>
+
+<h2 id="paquetes-horas-y-proyectos">paquetes, horas y proyectos</h2>
+
+<p>La segunda pestaña es para quien quiere ayuda con una sola cosa. Tres paquetes, cada uno en su tarjeta: Elevate Social Support a 450 £ al mes, que incluye 10 piezas de contenido en hasta dos plataformas; Executive Support &amp; Project Coordination a 700 £ al mes, que combina la gestión del correo y la agenda con reuniones, órdenes del día, actas y seguimiento de acciones; y Elevate Inbox Management a 450 £ al mes, desde ordenar y marcar prioridades hasta redactar respuestas para su aprobación y un resumen semanal del correo. Cada tarjeta tiene un enlace what’s included que abre la lista completa, y su propio enlace de consulta.</p>
+
+<p>La tercera pestaña es para todo lo demás. Ad-Hoc Support cuesta 35 £ la hora, con una reserva mínima de cinco horas, para tareas puntuales, documentos, hojas de cálculo, limpiezas del correo y proyectos cortos. Bespoke Project Support tiene precio a consultar, para trabajos que no encajan en un formato por horas o mensual, con el precio según el tamaño del proyecto, la duración y el encargo acordado.</p>
+
+<p>Debajo de las pestañas hay una frase: ¿no sabes qué opción es para ti? Lo podemos hablar en una llamada de presentación. Los precios dan a la gente un punto de partida. La llamada sigue siendo donde se decide.</p>
+
+<p><img src="/images/journal/100-days-day-11/09-packages.webp" alt="La pestaña de paquetes: tres tarjetas, Elevate Social Support a 450 £, Executive Support &amp; Project Coordination a 700 £ y Elevate Inbox Management a 450 £ al mes." />
+<em>Tres paquetes para un apoyo centrado en un área.</em></p>
+
+<p><img src="/images/journal/100-days-day-11/10-adhoc.webp" alt="La pestaña por horas y a medida: Ad-Hoc Support a 35 £ la hora con un mínimo de cinco horas, y Bespoke Project Support con precio a consultar." />
+<em>35 £ la hora para tareas puntuales, o un proyecto a medida con presupuesto.</em></p>
+
+<h2 id="un-apoyo-en-el-que-confiar">un apoyo en el que confiar</h2>
+
+<p>La sección de testimonios es corta, y debe serlo. Hay dos citas, en una sola tarjeta con flechas para pasar de una a otra, de dos personas sénior que han trabajado con Charlotte durante varios años.</p>
+
+<p>Ellie Gordon, que fue Senior Nurse de salud mental y discapacidad intelectual en NHS England, la describe como «cálida, comprensiva y adaptable». David Harling, BEM, National Deputy Director for Learning Disability Nursing, habla de proyectos nacionales, plazos ajustados e informes escritos con un alto nivel.</p>
+
+<p>Dos testimonios pueden parecer pocos en algunas webs. Aquí pesan por quién los firma y por lo que describen: años de trabajo, cargos con nombre, cosas concretas hechas. Prefiero dos citas reales y concretas con nombre completo que diez anónimas.</p>
+
+<p><img src="/images/journal/100-days-day-11/11-testimonials.webp" alt="La sección de testimonios: Support people can rely on, con una cita de Ellie Gordon, Former Senior Nurse for MH &amp; LD at NHS England, en una tarjeta con flechas." />
+<em>Dos testimonios con nombre de compañeros sénior, uno cada vez.</em></p>
+
+<h2 id="una-dirección-dos-botones">una dirección, dos botones</h2>
+
+<p>La página termina donde apuntaba cada sección. Get in touch: hagamos que tu carga de trabajo pese menos. Un párrafo corto invita a contar un poco sobre el negocio y el apoyo que se necesita, y promete una respuesta con los siguientes pasos.</p>
+
+<p>No hay formulario. Hay dos botones: Email Charlotte, que abre un correo nuevo ya dirigido a ella, y Copy email address, que copia la dirección y muestra una pequeña confirmación, para quien usa el correo en el navegador o prefiere escribir desde otro dispositivo. La dirección está impresa debajo, charlotte@elevateadminstudio.co.uk, en texto normal.</p>
+
+<p>Para un negocio basado en una persona que responde bien al correo, me pareció lo correcto. Un formulario añade un paso y una capa entre el cliente y ella. Un correo va directo a la bandeja que ella gestiona como oficio.</p>
+
+<p><img src="/images/journal/100-days-day-11/12-contact.webp" alt="La sección de contacto en un ordenador y un móvil: Let's make your workload feel lighter, con los botones Email Charlotte y Copy email address y la dirección debajo." />
+<em>Escribe a Charlotte o copia la dirección. Sin formulario de por medio.</em></p>
+
+<h2 id="los-detalles">los detalles</h2>
+
+<p>La paleta tiene tres colores: un azul marino profundo, un crema cálido y un dorado apagado. El azul marino lleva las partes serias, el menú, los servicios y los precios. El crema lleva las partes personales, la presentación, los valores y los testimonios. El dorado se reserva para lo que hay que pulsar: los botones principales, la pestaña activa, el control deslizante.</p>
+
+<p>Los titulares van en Cinzel, unas mayúsculas clásicas con aire de inscripción grabada, que dan a un negocio pequeño una tranquila sensación de permanencia. El texto de lectura va en Raleway, ligera y abierta. Las dos fuentes se sirven desde la propia web y no desde Google, así que abrir la página no entrega la dirección de nadie a un tercero.</p>
+
+<p>El movimiento es suave. Las secciones aparecen y suben a su sitio al bajar, un elemento un poco después del otro, y el propio desplazamiento está suavizado. Para quien ha pedido a su dispositivo que reduzca las animaciones, los efectos de aparición se apagan y el contenido simplemente está ahí. Toda la web está solo en inglés, porque sus clientes están en el Reino Unido.</p>
+
+<h2 id="qué-es-el-concepto-y-qué-viene-después">qué es el concepto, y qué viene después</h2>
+
+<p>Los datos del concepto vienen de Elevate Admin Studio: los servicios y lo que incluye cada uno, el proceso, las cuotas, paquetes y tarifas, la trayectoria de Charlotte y los dos testimonios.</p>
+
+<p>Lo nuevo es la estructura: una sola página ordenada, un menú que se lee como un índice, los servicios en acordeón con enlaces de consulta que nombran el servicio, un proceso explicado paso a paso y unos precios que se pueden explorar con un control deslizante en vez de tener que pedirlos.</p>
+
+<p>No tengo cifras de consultas, y no me las voy a inventar. Convertir el concepto en una web que funcione requeriría los pasos prácticos: las condiciones de uso y las políticas de privacidad y de cookies a las que enlaza el pie, redactadas según las normas británicas; enlaces a las redes sociales que menciona el primer paso del proceso, que la página aún no tiene; y una forma de que Charlotte actualice ella misma los precios cuando cambien, para que la página nunca muestre la tarifa del año pasado.</p>
+
+<h2 id="once-hechas">once hechas</h2>
+
+<p>La web de una asistente virtual tiene un trabajo por encima de todos: ser la primera prueba de que es organizada. La mejor forma de conseguirlo no es poner «organizada» en el titular. Es serlo: decir para quién es, decir qué incluye, decir cuánto cuesta, decir qué pasa después, y poner cada una de esas cosas en su propio sitio, bien claro.</p>
+
+<p>Si vendes un servicio y no un producto, vale lo mismo. Enseña a la persona que hay detrás. Di qué está incluido y qué no. Pon un precio en la página, aunque sea uno de partida. Explica los pasos desde el primer mensaje hasta el primer trabajo. Y haz que la forma de contactar sea lo más sencillo de la página.</p>
+
+<p>Soy diseñador web en Estepona, en la Costa del Sol, y diseño y construyo webs para negocios de España y de fuera. Si esto se parece a tu negocio, escríbeme desde <a href="https://wellyington.github.io/es/">la web principal</a>. Cuéntame a qué te dedicas y dónde, y te contestaré en un lenguaje claro. El concepto está <a href="https://wellyington.github.io/challenge/day11/">aquí</a>, y la web actual de Elevate Admin Studio <a href="https://elevateadminstudio.co.uk/">aquí</a>, para que puedas compararlas. Once hechas, quedan ochenta y nueve.</p>
+
+      <p class="fin" aria-label="Fin de la entrada">fin.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">archivado en</span>
+    <ul class="chips"><li>100 días</li><li>caso real</li><li>asistente virtual</li><li>leeds</li><li>pequeña empresa</li></ul>
+  </div><nav class="rail pager" aria-label="más entradas."><a class="pager-cell rollable" href="/journal/es/articles/calidad-antes-que-modas/">
+      <span class="label">← anterior</span>
+      <span class="pager-title">calidad antes que modas<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">la última entrada.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Sigue leyendo</span>
+    <h2 id="more-title" class="h-section">más entradas.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/es/articles/calidad-antes-que-modas/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-10/13-landscape.webp" alt="Portada del caso del concepto de web de Nordic Balance Studios: Design Challenge Day 10, un ordenador con Move better, live better alrededor de un fotograma de un vídeo del estudio, y un móvil con el menú a pantalla completa." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 012</span>
+</div>
+<span class="label">100 días · 26.11.26</span><span class="card-title">calidad antes que modas<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/que-hablen-las-fotografias/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-9/10-landscape.webp" alt="Portada del caso del concepto de web de Target Models: Design Challenge Day 9, Marbella y Londres, un ordenador con el gran logotipo targetmodels entre columnas de retratos y un móvil con el menú a pantalla completa." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 010</span>
+</div>
+<span class="label">100 días · 25.11.26</span><span class="card-title">que hablen las fotografías<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/es/articles/tres-casas-una-sola-puerta/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp" alt="Portada del caso del concepto de web de The Lights Málaga: Design Challenge Day 8, hostel, suites y jardín, un ordenador con la portada de verano sobre el puerto de Málaga y el buscador de reservas, y un móvil con el menú a pantalla completa." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>N.º 009</span>
+</div>
+<span class="label">100 días · 25.11.26</span><span class="card-title">tres casas, una sola puerta<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Independiente por diseño · Escrito en público</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/es/" class="rollable"><span class="roll"><span>diario</span><span aria-hidden="true">diario</span></span>
+    </a><a href="/journal/es/archive/" class="rollable"><span class="roll"><span>archivo</span><span aria-hidden="true">archivo</span></span>
+    </a><a href="/journal/es/about/" class="rollable"><span class="roll"><span>sobre mí</span><span aria-hidden="true">sobre mí</span></span>
+    </a><a href="https://wellyington.github.io/es/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>web principal</span><span aria-hidden="true">web principal</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">en otros sitios</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/es/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">escríbeme</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Leo todas las respuestas. Todas.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Legal">
+    <a href="/es/privacidad/">Privacidad</a>
+    <a href="/es/cookies/">Cookies</a>
+    <a href="/es/aviso-legal/">Aviso legal</a>
+    <a href="#" data-cookie-settings>Configurar cookies</a>
+  </nav>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Compuesto en Space Grotesk · Hecho con Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>

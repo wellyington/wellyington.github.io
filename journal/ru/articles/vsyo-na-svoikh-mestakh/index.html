@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17484d">
+<script>
+  /* Set the theme before first paint — no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("journal-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/journal/assets/css/journal.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="describedby" type="text/markdown" href="/llms.txt">
+<link rel="alternate" type="application/atom+xml" title="Wellyington — Журнал" href="/journal/ru/feed.xml">
+<link rel="alternate" hreflang="en" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/">
+<link rel="alternate" hreflang="x-default" href="https://wellyington.github.io/journal/en/articles/everything-in-its-place/">
+<link rel="alternate" hreflang="es" href="https://wellyington.github.io/journal/es/articles/cada-cosa-en-su-sitio/">
+<link rel="alternate" hreflang="pt-BR" href="https://wellyington.github.io/journal/pt/articles/cada-coisa-no-seu-lugar/">
+<link rel="alternate" hreflang="ru" href="https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/">
+<script src="/js/consent.js" data-ga="G-4XBY16BPLY" data-bg="rgb(var(--fg))" data-fg="rgb(var(--bg))" defer></script>
+<title>Концепция сайта виртуального ассистента: Elevate Admin Studio, Лидс · Wellyington</title>
+<meta name="description" content="Концепция одностраничного сайта для Elevate Admin Studio, виртуального ассистента в Лидсе (Великобритания): услуги в аккордеоне, интерактивный ползунок ежеме...">
+<meta name="keywords" content="дизайн сайта для виртуального ассистента, сайт для виртуального ассистента в Великобритании, одностраничный сайт для бизнеса административной поддержки, сайт виртуального ассистента с ценами, интерактивный ползунок цен для ежемесячных пакетов, виртуальный ассистент в Лидсе, административная и проектная поддержка для малого бизнеса, дизайн сайта в тёмно-синем, кремовом и золотом, веб-дизайнер на Коста-дель-Соль, челлендж 100 дней 100 сайтов">
+<meta name="author" content="Wellyington">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wellyington — Журнал">
+<meta property="og:title" content="Концепция сайта виртуального ассистента: Elevate Admin Studio, Лидс">
+<meta property="og:description" content="Концепция одностраничного сайта для Elevate Admin Studio, виртуального ассистента в Лидсе (Великобритания): услуги в аккордеоне, интерактивный ползунок ежеме...">
+<meta property="og:url" content="https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:image" content="https://wellyington.github.io/images/journal/100-days-day-11/13-landscape.webp">
+<meta property="og:image:alt" content="Обложка кейса концепции сайта Elevate Admin Studio: Design Challenge Day 11, компьютер с надписью Virtual assistant support for busy business owners рядом с фигурой из тонких линий и телефон с полноэкранным тёмно-синим меню.">
+<meta property="article:published_time" content="2026-11-27T21:00:00+01:00">
+<meta property="article:modified_time" content="2026-11-27T21:00:00+01:00">
+<meta property="article:author" content="https://wellyington.github.io/">
+<meta property="article:section" content="100 дней">
+<meta property="article:tag" content="дизайн сайта для виртуального ассистента">
+<meta property="article:tag" content="сайт для виртуального ассистента в Великобритании">
+<meta property="article:tag" content="одностраничный сайт для бизнеса административной поддержки">
+<meta property="article:tag" content="сайт виртуального ассистента с ценами">
+<meta property="article:tag" content="интерактивный ползунок цен для ежемесячных пакетов">
+<meta property="article:tag" content="виртуальный ассистент в Лидсе">
+<meta property="article:tag" content="административная и проектная поддержка для малого бизнеса">
+<meta property="article:tag" content="дизайн сайта в тёмно-синем, кремовом и золотом">
+<meta property="article:tag" content="веб-дизайнер на Коста-дель-Соль">
+<meta property="article:tag" content="челлендж 100 дней 100 сайтов">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Концепция сайта виртуального ассистента: Elevate Admin Studio, Лидс">
+<meta name="twitter:description" content="Концепция одностраничного сайта для Elevate Admin Studio, виртуального ассистента в Лидсе (Великобритания): услуги в аккордеоне, интерактивный ползунок ежеме...">
+<meta name="twitter:image" content="https://wellyington.github.io/images/journal/100-days-day-11/13-landscape.webp">
+<meta name="twitter:image:alt" content="Обложка кейса концепции сайта Elevate Admin Studio: Design Challenge Day 11, компьютер с надписью Virtual assistant support for busy business owners рядом с фигурой из тонких линий и телефон с полноэкранным тёмно-синим меню.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/#article",
+      "url": "https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/",
+      "mainEntityOfPage": "https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/",
+      "headline": "Концепция сайта виртуального ассистента: Elevate Admin Studio, Лидс",
+      "alternativeHeadline": "всё на своих местах",
+      "description": "Концепция одностраничного сайта для Elevate Admin Studio, виртуального ассистента в Лидсе (Великобритания): услуги в аккордеоне, интерактивный ползунок ежеме...",
+      "inLanguage": "ru",
+      "datePublished": "2026-11-27T21:00:00+01:00",
+      "dateModified": "2026-11-27T21:00:00+01:00",
+      "articleSection": "100 дней",
+      "keywords": "дизайн сайта для виртуального ассистента, сайт для виртуального ассистента в Великобритании, одностраничный сайт для бизнеса административной поддержки, сайт виртуального ассистента с ценами, интерактивный ползунок цен для ежемесячных пакетов, виртуальный ассистент в Лидсе, административная и проектная поддержка для малого бизнеса, дизайн сайта в тёмно-синем, кремовом и золотом, веб-дизайнер на Коста-дель-Соль, челлендж 100 дней 100 сайтов",
+      "image": { "@type": "ImageObject", "url": "https://wellyington.github.io/images/journal/100-days-day-11/13-landscape.webp", "caption": "Обложка кейса концепции сайта Elevate Admin Studio: Design Challenge Day 11, компьютер с надписью Virtual assistant support for busy business owners рядом с фигурой из тонких линий и телефон с полноэкранным тёмно-синим меню." },
+      "about": {
+        "@type": "ProfessionalService",
+        "name": "Elevate Admin Studio", "url": "https://elevateadminstudio.co.uk/", "address": { "@type": "PostalAddress", "addressLocality": "Leeds", "addressCountry": "GB" }
+      },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "100 дней", "url": "https://wellyington.github.io/journal/ru/" },
+      "author": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" },
+      "publisher": { "@type": "Person", "name": "Wellyington", "url": "https://wellyington.github.io/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Журнал", "item": "https://wellyington.github.io/journal/ru/" },
+        { "@type": "ListItem", "position": 2, "name": "всё на своих местах", "item": "https://wellyington.github.io/journal/ru/articles/vsyo-na-svoikh-mestakh/" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body class="layout-article">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <div class="grid-lines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="bar" data-header>
+  <a href="/journal/ru/" class="bar-cell bar-brand" aria-label="Wellyington Журнал">
+    <span class="wordmark">Wellyington</span>
+    <span class="wordmark-dot" aria-hidden="true"></span>
+    <span class="bar-kicker">/ журнал</span>
+  </a>
+
+  <div class="bar-cell bar-ticker">
+    <p class="sr-only">Местное время и над чем я сейчас работаю.</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" data-marquee><span class="tick tick--home">
+          <span>Estepona</span>
+          <span class="mono" data-clock="Europe/Madrid">--:--:--</span>
+          <span class="dim">CET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>London</span>
+          <span class="mono" data-clock="Europe/London">--:--:--</span>
+          <span class="dim">GMT</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>New York</span>
+          <span class="mono" data-clock="America/New_York">--:--:--</span>
+          <span class="dim">ET</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick">
+          <span>Dubai</span>
+          <span class="mono" data-clock="Asia/Dubai">--:--:--</span>
+          <span class="dim">GST</span>
+        </span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Пишу</span><span>заметки о маленьких запусках</span></span>
+        <span class="tick-sep">/</span><span class="tick"><span class="dim">Слушаю</span><span>Wellyington — студийные черновики</span></span>
+        <span class="tick-sep">/</span></div>
+    </div>
+  </div>
+
+  <nav class="bar-cell lang-switch" aria-label="Язык">
+    <a href="/journal/en/articles/everything-in-its-place/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/cada-cosa-en-su-sitio/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/cada-coisa-no-seu-lugar/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/vsyo-na-svoikh-mestakh/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a>
+  </nav>
+
+  <button type="button" class="bar-cell theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Включить тёмную тему" data-label-dark="Включить тёмную тему" data-label-light="Включить светлую тему">
+    <span class="roll label"><span class="theme-word" data-light="Светлая" data-dark="Тёмная"></span><span class="theme-word" data-light="Светлая" data-dark="Тёмная" aria-hidden="true"></span></span>
+    <span class="theme-square" aria-hidden="true"><span></span></span>
+  </button><span class="progress" aria-hidden="true"><span data-progress></span></span></header>
+
+<button type="button" class="menu-btn" data-menu-btn aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню" aria-expanded="false" aria-controls="menu">
+  <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Навигация" aria-hidden="true" inert data-menu>
+  <div class="menu-grid">
+    <nav aria-label="Навигация">
+      <p class="label">Навигация</p>
+      <ul class="menu-links"><li>
+          <a href="/journal/ru/" class="rollable">
+            <span class="roll"><span>журнал.</span><span aria-hidden="true">журнал.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/archive/" class="rollable">
+            <span class="roll"><span>архив.</span><span aria-hidden="true">архив.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/about/" class="rollable">
+            <span class="roll"><span>обо мне.</span><span aria-hidden="true">обо мне.</span></span>
+          </a>
+        </li><li>
+          <a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable">
+            <span class="roll"><span>основной сайт.</span><span aria-hidden="true">основной сайт.</span></span>
+          </a>
+        </li></ul>
+    </nav>
+
+    <div class="menu-latest">
+      <p class="label">Последние записи</p><ol><li>
+          <a href="/journal/ru/articles/vsyo-na-svoikh-mestakh/" class="menu-entry">
+            <span class="mono dim">№ 013</span>
+            <span>всё на своих местах<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/kachestvo-vazhnee-mody/" class="menu-entry">
+            <span class="mono dim">№ 012</span>
+            <span>качество важнее моды<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/pochemu-sait-ne-privodit-klientov/" class="menu-entry">
+            <span class="mono dim">№ 011</span>
+            <span>десять причин, почему сайт не приводит клиентов<span class="dot">.</span></span>
+          </a>
+        </li><li>
+          <a href="/journal/ru/articles/pust-govoryat-fotografii/" class="menu-entry">
+            <span class="mono dim">№ 010</span>
+            <span>пусть говорят фотографии<span class="dot">.</span></span>
+          </a>
+        </li></ol></div>
+  </div>
+
+  <div class="menu-foot">
+    <nav class="lang-switch lang-switch--menu" aria-label="Язык"><a href="/journal/en/articles/everything-in-its-place/" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a><a href="/journal/es/articles/cada-cosa-en-su-sitio/" hreflang="es" lang="es" data-set-lang="es" title="Español">ES</a><a href="/journal/pt/articles/cada-coisa-no-seu-lugar/" hreflang="pt-BR" lang="pt-BR" data-set-lang="pt" title="Português">PT</a><a href="/journal/ru/articles/vsyo-na-svoikh-mestakh/" hreflang="ru" lang="ru" data-set-lang="ru" aria-current="true" title="Русский">RU</a></nav>
+    <a class="label rollable" href="/journal/ru/feed.xml"><span class="roll"><span>RSS-лента →</span><span aria-hidden="true">RSS-лента →</span></span></a>
+  </div>
+</div>
+
+
+  <main id="main" tabindex="-1">
+    <article class="entry">
+
+  <div class="rail entry-bar">
+    <a href="/journal/ru/" class="entry-cell entry-back rollable"><span class="roll"><span>← журнал</span><span aria-hidden="true">← журнал</span></span></a>
+    <span class="entry-cell mono">№ 013</span>
+    <span class="entry-cell label">100 дней</span>
+    <time class="entry-cell" datetime="2026-11-27T21:00:00+01:00">27 ноября 2026</time>
+    <span class="entry-cell">13 мин чтения</span>
+  </div>
+
+  <header class="rail entry-head">
+    <h1 class="entry-title">всё на своих местах<span class="dot">.</span></h1><p class="entry-lede">День одиннадцатый из ста: концепция одностраничного сайта для Elevate Admin Studio, виртуального ассистента из Лидса, — сайт, который выглядит таким же организованным и надёжным, как сама услуга, и с ценами на виду.</p></header>
+
+  <div class="rail entry-cover">
+    <div class="cover cover--lg"><img src="https://wellyington.github.io/images/journal/100-days-day-11/13-landscape.webp" alt="Обложка кейса концепции сайта Elevate Admin Studio: Design Challenge Day 11, компьютер с надписью Virtual assistant support for busy business owners рядом с фигурой из тонких линий и телефон с полноэкранным тёмно-синим меню." fetchpriority="high" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 013</span>
+</div>
+<p class="caption label">День одиннадцатый. Концепция для Elevate Admin Studio в Лидсе.</p></div>
+
+  <div class="rail entry-grid">
+    <aside class="entry-aside" aria-label="на этой странице.">
+      <div class="entry-aside-inner">
+        <nav class="toc" data-toc hidden>
+          <p class="label">на этой странице.</p>
+          <ol data-toc-list></ol>
+        </nav>
+        <div class="share">
+          <p class="label">поделиться.</p>
+          <button type="button" class="share-btn rollable" data-copy-link data-copied="скопировано."><span class="roll"><span>скопировать ссылку</span><span aria-hidden="true">скопировать ссылку</span></span></button>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://x.com/intent/post?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fvsyo-na-svoikh-mestakh%2F&text=%D0%B2%D1%81%D1%91+%D0%BD%D0%B0+%D1%81%D0%B2%D0%BE%D0%B8%D1%85+%D0%BC%D0%B5%D1%81%D1%82%D0%B0%D1%85"><span class="roll"><span>опубликовать в X</span><span aria-hidden="true">опубликовать в X</span></span></a>
+          <a class="share-btn rollable" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwellyington.github.io%2Fjournal%2Fru%2Farticles%2Fvsyo-na-svoikh-mestakh%2F"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="prose" data-prose>
+      <p>27 ноября я опубликовал одиннадцатую заметку этой серии — челленджа, который придумал Рамайя Траск: сто дней, сто бизнесов, сто сайтов. День первый — семейная строительная компания с Марина-Альты. <a href="https://wellyington.github.io/journal/ru/articles/sait-do-slova-da/">Эта страница здесь.</a> День второй — театр в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/mesto-dlya-tselogo-sezona/">Она здесь.</a> День третий — семейный ресторан в Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/mesto-za-dlinnym-stolom/">Она здесь.</a> День четвёртый — частная консалтинговая компания по недвижимости в Малаге. <a href="https://wellyington.github.io/journal/ru/articles/suzhdenie-vazhnee-obema/">Она здесь.</a> День пятый — ресторан дегустационных меню в Мотриле. <a href="https://wellyington.github.io/journal/ru/articles/tak-zhe-tshchatelno-kak-na-kukhne/">Она здесь.</a> День шестой — заведение с курицей-гриль в Эстепоне. <a href="https://wellyington.github.io/journal/ru/articles/ot-prilavka-do-cheka/">Она здесь.</a> День седьмой — семейный отель в Кавосе на Корфу. <a href="https://wellyington.github.io/journal/ru/articles/tot-zhe-bassein-nochyu/">Она здесь.</a> День восьмой — три дома в историческом центре Малаги. <a href="https://wellyington.github.io/journal/ru/articles/tri-doma-odna-dver/">Она здесь.</a> День девятый — модельное агентство из Марбельи и Лондона. <a href="https://wellyington.github.io/journal/ru/articles/pust-govoryat-fotografii/">Она здесь.</a> День десятый — студия пилатеса в Марбелье. <a href="https://wellyington.github.io/journal/ru/articles/kachestvo-vazhnee-mody/">Она здесь.</a></p>
+
+<p>Сегодня — виртуальный ассистент. Elevate Admin Studio — бизнес Шарлотты, она работает из Лидса с клиентами по всей Великобритании. За плечами у неё больше 22 лет на старших должностях в административной и проектной поддержке, из них пять — в NHS, британской государственной системе здравоохранения, на национальном уровне. Теперь этот опыт достаётся коучам, консультантам, людям творческих профессий, малому бизнесу и растущим командам, которым нужна помощь за кулисами, но которые не готовы брать человека в штат. Работа охватывает администрирование, почту и календарь, соцсети, финансовую рутину, мероприятия, проекты, документы и данные. Её нынешний сайт — <a href="https://elevateadminstudio.co.uk/">elevateadminstudio.co.uk</a>.</p>
+
+<p>Концепция здесь: <a href="https://wellyington.github.io/challenge/day11/">Elevate Admin Studio, день одиннадцатый</a>.</p>
+
+<h2 id="сайт--это-первая-работа">сайт — это первая работа</h2>
+
+<p>Виртуальный ассистент продаёт то, что трудно показать: порядок. Снаружи не видно ни аккуратного почтового ящика, ни календаря без накладок, ни письма-напоминания, ушедшего вовремя. Зато будущий клиент видит сайт — ещё до того, как с ней поговорит. И читает его, осознанно или нет, как образец работы.</p>
+
+<p>Отсюда и задача. Если на сайте беспорядок, посетитель думает, не будет ли беспорядка и в делах. Если цены спрятаны за «свяжитесь с нами для расчёта», он гадает, что ещё окажется размытым. Если непонятен следующий шаг, он сомневается, насколько понятными будут еженедельные отчёты. Сайт ассистента должен быть противоположностью всего этого: аккуратным, честным в вопросе денег и ясным в том, что будет дальше.</p>
+
+<p>Поэтому направление — спокойный, упорядоченный одностраничный сайт. Палитра из тёмно-синего, кремового и золотого, классические прописные буквы для заголовков, лёгкий гротеск для текста, тонкие линии, делящие страницу на понятные разделы, и всё, что нужно клиенту, — в одной прокрутке и в том порядке, в каком это нужно.</p>
+
+<p><img src="/images/journal/100-days-day-11/01-cover.webp" alt="Design Challenge Day 11: Elevate Admin Studio, Лидс. Компьютер и телефон с кремовым первым экраном Virtual assistant support for busy business owners и кнопками Book a discovery call и View packages &amp; prices." />
+<em>День одиннадцатый: одностраничный сайт британского виртуального ассистента — административная, проектная поддержка и соцсети.</em></p>
+
+<h2 id="поддержка-для-занятых-предпринимателей">поддержка для занятых предпринимателей</h2>
+
+<p>Страница открывается коротким экраном загрузки. Счётчик доходит до ста, пока сменяются четыре слова: organising, scheduling, delegating, ready — организовать, спланировать, делегировать, готово. Потом появляется кнопка Enter site. Это маленький театральный жест, и он сообщает, чем занимается сервис, раньше, чем прочитана хоть одна фраза.</p>
+
+<p>За ним — первый экран. Слева заголовок высокими разреженными прописными: virtual assistant support for busy business owners — поддержка виртуального ассистента для занятых предпринимателей. Под ним одна фраза: надёжная административная, проектная и SMM-поддержка, которая помогает вернуть время, снять перегрузку и сохранить бизнес в спокойном рабочем ритме. Затем две кнопки: золотая — записаться на знакомственный звонок, контурная — посмотреть пакеты и цены. Справа — короткое зацикленное видео: фигура из тонких линий медленно поворачивается.</p>
+
+<p>А внизу — тихая строка, которая делает очень много: 22+ года в старшей административной и проектной поддержке, база в Лидсе, клиенты по всей Великобритании. Опыт, место и охват — ещё до первой прокрутки.</p>
+
+<p><img src="/images/journal/100-days-day-11/02-hero.webp" alt="Первый экран на компьютере: логотип Elevate, ссылки в шапке и три блока Get in touch, Packages &amp; Prices и Explore services над заголовком Virtual assistant support for busy business owners и зацикленным видео из линий." />
+<em>Первый экран: один заголовок, две кнопки, видео из линий и строка о 22 годах опыта.</em></p>
+
+<h2 id="шапка-устроенная-как-картотека">шапка, устроенная как картотека</h2>
+
+<p>Шапка устроена как оглавление. Логотип стоит в отдельной панели слева. Справа разделы перечислены в три маленьких столбца — так подписывают ящики картотеки: виртуальный ассистент, обо мне, услуги; пакеты и цены, процесс, отзывы; контакты и написать. Ниже — три блока-ярлыка: Get in touch и Packages &amp; Prices тёмно-синие, Explore services — золотой.</p>
+
+<p>На телефоне и на любом экране уже 1025 пикселей шапка сводится к логотипу и кнопке с тремя полосками. Нажмёшь — тёмно-синяя панель за 0,8 секунды выезжает на весь экран, и семь разделов выстраиваются в один столбец, каждый на своей линии: Home, About, Services, Packages &amp; Prices, Process, Testimonials, Contact. Строки достаточно крупные, чтобы попадать не целясь, а крестик для закрытия появляется там, где была кнопка.</p>
+
+<p>На одностраничном сайте меню — это, по сути, оглавление. Пусть и читается как оглавление.</p>
+
+<p><img src="/images/journal/100-days-day-11/03-menu.webp" alt="Меню на компьютере и телефоне: на компьютере ссылки в шапке, на телефоне — полноэкранный тёмно-синий список от Home до Contact." />
+<em>На большом экране ссылки в шапке, на телефоне — полноэкранный тёмно-синий список.</em></p>
+
+<h2 id="привет-я-шарлотта">привет, я Шарлотта</h2>
+
+<p>В бизнесе одного человека этот человек и есть продукт. Поэтому первый раздел после первого экрана знакомит с ней, её собственным голосом: привет, я Шарлотта, основательница Elevate. Рядом — портрет.</p>
+
+<p>Текст короткий и конкретный. Она даёт спокойную, организованную и надёжную виртуальную поддержку занятым предпринимателям, которым нужна помощь за кулисами. Работает с теми, кто тащит на себе слишком много и кому нужна надёжная опора, чтобы всё было в порядке. Администрирование, соцсети, координация проектов или повседневная организация — она помогает внести больше спокойствия, ясности и структуры. Некоторые фразы набраны более плотным начертанием, чтобы беглый взгляд выхватил обещание, не читая каждое слово.</p>
+
+<p>Ниже — список тех, с кем она работает: коучи и консультанты, творческие специалисты и поставщики услуг, владельцы малого бизнеса, растущие команды и предприниматели, готовые делегировать. И вопрос: готовы спокойно передать рутину? Этот список важнее, чем кажется. Кто узнаёт в нём себя, перестаёт гадать, подходит ли ему это.</p>
+
+<p><img src="/images/journal/100-days-day-11/04-about.webp" alt="Раздел о Шарлотте на компьютере: Hi, I'm Charlotte, founder of Elevate, короткое представление и портрет Шарлотты." />
+<em>Привет, я Шарлотта: короткое представление её словами рядом с портретом.</em></p>
+
+<h2 id="два-десятилетия--в-цифрах-и-в-ценностях">два десятилетия — в цифрах и в ценностях</h2>
+
+<p>Следующий раздел, meet Charlotte — знакомьтесь, Шарлотта, — про опыт. Больше двух десятилетий спокойной и умелой поддержки. Два абзаца объясняют, откуда он: старшие административные и проектные должности, пять лет в NHS на национальном уровне, поддержка команд, руководителей и программ — расстановка приоритетов, организация встреч, подготовка документов, контроль поручений. А затем — сегодня: этот опыт для предпринимателей, которым нужна надёжная поддержка без обязательств найма в штат.</p>
+
+<p>Под текстом три цифры, которые отсчитываются вверх, когда появляются на экране: 22+ года в старшей административной и проектной поддержке, 5 лет в NHS на национальном уровне и Лидс — база, клиенты по всей стране. Справа тёмно-синяя карточка рассказывает, каково с ней работать и чего ждать клиенту: ясной коммуникации, надёжного выполнения обещанного, упорядоченных систем, спокойного профессионального подхода, поддержки, которая ощущается как часть вашего бизнеса, а также бережности, деликатности и внимания к деталям.</p>
+
+<p>Ниже — пять карточек ценностей, у каждой маленькая золотая иконка и несколько строк: надёжность, забота и профессионализм, организованность и ясность, доверие и конфиденциальность, партнёрство. Разделы с ценностями часто бывают для галочки. Здесь они на своём месте: для ассистента, который увидит вашу почту, счета и данные ваших клиентов, доверие и конфиденциальность — не абстракции. Это вопрос, который каждый клиент молча задаёт себе.</p>
+
+<p><img src="/images/journal/100-days-day-11/05-values.webp" alt="Раздел Meet Charlotte: Over two decades of calm, capable support, цифры 22+, 5 и Leeds, тёмно-синяя карточка о том, чего ждать, и пять карточек ценностей от Reliability до Supportive Partnership." />
+<em>22 года, 5 из них в NHS, база в Лидсе и пять ценностей, которые отвечают на вопрос о доверии.</em></p>
+
+<h2 id="шесть-услуг-открыта-одна">шесть услуг, открыта одна</h2>
+
+<p>Раздел услуг становится тёмным. Он начинается с фотографии ежемесячного планера и ручек и короткого вступления: гибкая поддержка, чтобы вы чувствовали себя организованнее, меньше перегружены и лучше контролировали свою нагрузку — постоянно или по отдельным задачам.</p>
+
+<p>Дальше шесть услуг в аккордеоне, где открыта только одна: Social Media Admin Support, Finance Admin Support, Event Admin Support, Project Support, Traditional PA/EA Support и Documents &amp; Data Support. Каждая, раскрываясь, следует одной схеме: описание в одну строку, задачи в виде маленьких контурных меток, для кого это подходит и ссылка, чтобы спросить именно об этой услуге.</p>
+
+<p>Соцсети открыты с самого начала. Метки — отслеживание комментариев, работа с входящими сообщениями, ответы по вашим инструкциям, помощь с контентом, шаблоны и графика в Canva, оформление подписей, планирование публикаций и еженедельные отчёты. Финансовый блок — выставление счетов, напоминания о неоплаченных, работа с коммерческими предложениями, учёт расходов и обновление таблиц, и там прямо сказано: это поддержка вашей финансовой рутины, но не замена бухгалтеру. Одна такая строка рождает доверие и избавляет всех от неловкого разговора потом.</p>
+
+<p>Аккордеон не даёт длинному списку услуг превратиться в стену. Посетитель открывает то, за чем пришёл, читает и закрывает. А каждая ссылка «спросить» открывает письмо, где название услуги уже стоит в теме, так что Шарлотта понимает, о чём речь, ещё не открыв его.</p>
+
+<p>В конце раздела — строка для сомневающихся: не знаете, какая помощь нужна? Это совершенно нормально. Можно вместе разобрать вашу текущую нагрузку. И кнопка записи на знакомственный звонок.</p>
+
+<p><img src="/images/journal/100-days-day-11/06-services.webp" alt="Раздел услуг на тёмном фоне: фотография ежемесячного планера и аккордеон с открытым Social Media Admin Support и метками вроде Managing social media inboxes и Content scheduling." />
+<em>Шесть услуг в аккордеоне. Соцсети открыты первыми, задачи — метками.</em></p>
+
+<h2 id="что-происходит-когда-вы-пишете">что происходит, когда вы пишете</h2>
+
+<p>Одна из негласных причин, по которым люди откладывают поиск помощи, — неизвестность. Будут ли давить продажами? Длинная анкета? Договор на первом же звонке? Раздел how it works — как это работает — снимает тревогу шестью шагами на вертикальной линии с пронумерованными кружками.</p>
+
+<p>Шаг первый — написать по почте или в соцсетях, коротко о бизнесе. Точно знать, какая помощь нужна, на этом этапе не обязательно. Шаг второй — знакомственный звонок: короткий и неформальный, без давления и без обязательств. Маленькая ссылка раскрывает список тем, от текущих приоритетов до того, какой пакет может подойти. Шаг третий — предложение, которое приходит после звонка, со временем на раздумья. Шаг четвёртый — форма бронирования, договор и счёт, чтобы всё было согласовано до начала работы. Шаг пятый — подключение: доступы к системам, общие папки, доска Trello или трекер задач, предпочтения по связи и инструкции по тону общения. Шаг шестой — поддержка начинается, с ясной коммуникацией и регулярными отчётами.</p>
+
+<p>Шесть шагов звучат как много. Но поданные так, они читаются наоборот: как работа человека, который делал это не раз и у которого есть система. Ровно за это клиент и платит.</p>
+
+<p><img src="/images/journal/100-days-day-11/07-process.webp" alt="Раздел How it works: Simple, clear and supportive from the very beginning, со Step 1 Enquire и Step 2 Discovery call на вертикальной пронумерованной линии." />
+<em>Шесть шагов от первого письма до начала поддержки, каждый на пронумерованной линии.</em></p>
+
+<h2 id="цены-вслух">цены вслух</h2>
+
+<p>Эту часть мне особенно хотелось сделать правильно. Многие сервисные бизнесы прячут цены, считая, что звонок продаёт лучше цифры. Для виртуального ассистента, по-моему, всё наоборот. Её клиенты заняты по определению. Посетитель, который видит цену, за минуту решает, записываться ли на звонок. Тот, кто её не видит, должен тратить время, чтобы выяснить, а занятые люди часто этого не делают.</p>
+
+<p>Раздел начинается с аргумента в пользу виртуального ассистента в одной фразе: надёжная профессиональная поддержка без дополнительных расходов на сотрудника — отпускных, налогов, страховых взносов, пенсионных отчислений, офиса, техники или обучения. Затем три вкладки: ежемесячные пакеты часов, готовые пакеты и разовая работа или проекты.</p>
+
+<p>Вкладка с ежемесячными пакетами — интерактивная. Вместо шести карточек рядом — ползунок: сколько часов поддержки в месяц? Он идёт от 12 до 60 часов в шесть шагов. Сдвиньте его — и карточка рядом меняется: The Assistant, 12 часов, £420 в месяц; The Coordinator, 20 часов, £700; The Senior Support, 30 часов, £1050; The Operations Partner, 40 часов, £1400; The Executive Support, 50 часов, £1750; The Strategic Support, 60 часов, £2100. У каждого — строка о том, кому он подходит, и кнопка запроса, которая открывает письмо с названием пакета уже в теме. По умолчанию выбран The Coordinator.</p>
+
+<p>Ползунок делает то, чего не сделает таблица. Он позволяет начать со своего вопроса — сколько помощи мне нужно — и увидеть ответ, а не читать шесть вариантов и идти от обратного. Под ним прописаны условия: время учитывается с округлением до 15 минут, неиспользованные часы не переносятся на следующий месяц, в часы входит время на постановку задач и переписку, рекомендуется обязательство на три месяца, а свободных мест немного. Обычно такие условия всплывают только в договоре. Здесь они видны до первого письма.</p>
+
+<p><img src="/images/journal/100-days-day-11/08-retainers.webp" alt="Вкладка ежемесячных пакетов: ползунок How many hours of support a month? на 20 часах рядом с карточкой The Coordinator за £700 в месяц." />
+<em>Сдвигайте от 12 до 60 часов — карточка меняется. На 20 часах: The Coordinator, £700 в месяц.</em></p>
+
+<h2 id="пакеты-часы-и-проекты">пакеты, часы и проекты</h2>
+
+<p>Вторая вкладка — для тех, кому нужна помощь в чём-то одном. Три готовых пакета, у каждого своя карточка: Elevate Social Support за £450 в месяц — 10 единиц контента на одной-двух платформах; Executive Support &amp; Project Coordination за £700 в месяц — почта и календарь плюс встречи, повестки, протоколы и контроль поручений; Elevate Inbox Management за £450 в месяц — от сортировки и выделения приоритетов до черновиков ответов на согласование и еженедельной сводки по почте. На каждой карточке есть ссылка what’s included, раскрывающая полный список, и своя ссылка для запроса.</p>
+
+<p>Третья вкладка — для всего остального. Ad-Hoc Support — £35 в час, минимальный заказ пять часов: разовые задачи, документы, таблицы, разбор завалов в почте, короткие проекты. Bespoke Project Support — цена по запросу, для работы, которая не укладывается в почасовой или ежемесячный формат; стоимость зависит от объёма проекта, сроков и согласованного брифа.</p>
+
+<p>Под вкладками — одна фраза: не уверены, какой вариант ваш? Обсудим на знакомственном звонке и найдём подходящий. Цены дают точку отсчёта. Решение по-прежнему принимается на звонке.</p>
+
+<p><img src="/images/journal/100-days-day-11/09-packages.webp" alt="Вкладка готовых пакетов: три карточки — Elevate Social Support за £450, Executive Support &amp; Project Coordination за £700 и Elevate Inbox Management за £450 в месяц." />
+<em>Три готовых пакета для поддержки в одной области.</em></p>
+
+<p><img src="/images/journal/100-days-day-11/10-adhoc.webp" alt="Вкладка разовой работы и проектов: Ad-Hoc Support за £35 в час с минимумом пять часов и Bespoke Project Support с ценой по запросу." />
+<em>£35 в час за разовые задачи или проект по индивидуальному расчёту.</em></p>
+
+<h2 id="поддержка-на-которую-можно-опереться">поддержка, на которую можно опереться</h2>
+
+<p>Раздел отзывов короткий, и так и должно быть. Две цитаты в одной карточке со стрелками для переключения — от двух людей на высоких должностях, которые несколько лет работали с Шарлоттой.</p>
+
+<p>Элли Гордон, бывшая старшая медсестра по направлению психического здоровья и нарушений интеллектуального развития в NHS England, называет её «тёплой, отзывчивой и гибкой». Дэвид Харлинг, BEM, национальный заместитель директора по сестринскому делу в области нарушений интеллектуального развития, пишет о национальных проектах, сжатых сроках и письменных отчётах высокого уровня.</p>
+
+<p>На некоторых сайтах два отзыва выглядели бы бедно. Здесь они весомы — благодаря тому, кто их написал, и тому, что они описывают: годы работы, названные должности, конкретные дела. Лучше два настоящих конкретных отзыва с полными именами, чем десять анонимных.</p>
+
+<p><img src="/images/journal/100-days-day-11/11-testimonials.webp" alt="Раздел отзывов: Support people can rely on, цитата Элли Гордон, Former Senior Nurse for MH &amp; LD at NHS England, в карточке со стрелками." />
+<em>Два именных отзыва от старших коллег, по одному за раз.</em></p>
+
+<h2 id="один-адрес-две-кнопки">один адрес, две кнопки</h2>
+
+<p>Страница заканчивается там, куда указывал каждый раздел. Get in touch: давайте облегчим вашу нагрузку. Короткий абзац приглашает рассказать немного о бизнесе и нужной помощи и обещает ответ со следующими шагами.</p>
+
+<p>Формы нет. Есть две кнопки: Email Charlotte, которая открывает новое письмо, уже адресованное ей, и Copy email address, которая копирует адрес и показывает маленькое подтверждение — для тех, кто пользуется почтой в браузере или предпочитает писать с другого устройства. Сам адрес напечатан ниже обычным текстом: charlotte@elevateadminstudio.co.uk.</p>
+
+<p>Для бизнеса, построенного на человеке, который умеет хорошо отвечать на письма, это показалось правильным. Форма добавляет шаг и прослойку между клиентом и ней. Письмо идёт прямо в почтовый ящик, которым она профессионально управляет.</p>
+
+<p><img src="/images/journal/100-days-day-11/12-contact.webp" alt="Раздел контактов на компьютере и телефоне: Let's make your workload feel lighter, кнопки Email Charlotte и Copy email address и адрес почты ниже." />
+<em>Напишите Шарлотте или скопируйте адрес. Без формы посередине.</em></p>
+
+<h2 id="детали">детали</h2>
+
+<p>В палитре три цвета: глубокий тёмно-синий, тёплый кремовый и приглушённое золото. Тёмно-синий несёт серьёзные части — меню, услуги и цены. Кремовый — личные: знакомство, ценности и отзывы. Золото оставлено для того, на что нажимают: главные кнопки, активная вкладка, ползунок.</p>
+
+<p>Заголовки набраны Cinzel — классическими прописными, похожими на высеченную надпись; они дают маленькому бизнесу спокойное ощущение основательности. Основной текст — Raleway, лёгкий и открытый. Оба шрифта загружаются с самого сайта, а не из Google, так что, открывая страницу, никто не передаёт свой адрес третьей стороне.</p>
+
+<p>Движение мягкое. Разделы проявляются и поднимаются на место при прокрутке, элементы — один чуть позже другого, а сама прокрутка сглажена. Для тех, кто попросил своё устройство уменьшить анимацию, эффекты появления отключаются и содержимое просто на месте. Весь сайт только на английском, потому что её клиенты в Великобритании.</p>
+
+<h2 id="что-это-за-концепция-и-что-дальше">что это за концепция и что дальше</h2>
+
+<p>Факты в концепции — от Elevate Admin Studio: услуги и что в них входит, процесс, пакеты часов, готовые пакеты и ставки, опыт Шарлотты и два отзыва.</p>
+
+<p>Новое — это структура: одна упорядоченная страница, меню, которое читается как оглавление, услуги в аккордеоне со ссылками-запросами, где названа услуга, процесс, расписанный по шагам, и цены, которые можно исследовать ползунком, а не выспрашивать.</p>
+
+<p>Цифр по обращениям у меня нет, и выдумывать их я не буду. Чтобы превратить концепцию в работающий сайт, нужны практические шаги: условия использования, политика конфиденциальности и политика cookie, на которые ссылается подвал, написанные по британским правилам; ссылки на соцсети, о которых говорит первый шаг процесса и которых на странице пока нет; и возможность для Шарлотты самой обновлять цены, когда они меняются, чтобы страница никогда не показывала прошлогоднюю ставку.</p>
+
+<h2 id="одиннадцать-готово">одиннадцать готово</h2>
+
+<p>У сайта виртуального ассистента одна главная задача: стать первым доказательством её организованности. Лучший способ — не написать «организованная» в заголовке, а быть такой: сказать, для кого это, что входит, сколько стоит, что будет дальше, и поставить каждую из этих вещей на своё ясное место.</p>
+
+<p>Если вы продаёте услугу, а не товар, всё то же самое. Покажите человека, который за ней стоит. Скажите, что входит, а что нет. Поставьте цену на страницу, пусть даже стартовую. Объясните шаги от первого сообщения до первой работы. И сделайте способ связаться самым простым на странице.</p>
+
+<p>Я веб-дизайнер из Эстепоны на Коста-дель-Соль, проектирую и делаю сайты для бизнеса в Испании и за её пределами. Если это похоже на ваш бизнес, напишите мне через <a href="https://wellyington.github.io/ru/">основной сайт</a>. Расскажите, чем вы занимаетесь и где, и я отвечу понятным языком. Концепция <a href="https://wellyington.github.io/challenge/day11/">здесь</a>, а нынешний сайт Elevate Admin Studio — <a href="https://elevateadminstudio.co.uk/">здесь</a>, чтобы вы могли сравнить. Одиннадцать готово, осталось восемьдесят девять.</p>
+
+      <p class="fin" aria-label="Конец записи">конец.</p>
+    </div>
+  </div><div class="rail entry-tags">
+    <span class="label">рубрики</span>
+    <ul class="chips"><li>100 дней</li><li>кейс</li><li>виртуальный ассистент</li><li>лидс</li><li>малый бизнес</li></ul>
+  </div><nav class="rail pager" aria-label="ещё записи."><a class="pager-cell rollable" href="/journal/ru/articles/kachestvo-vazhnee-mody/">
+      <span class="label">← предыдущая</span>
+      <span class="pager-title">качество важнее моды<span class="dot">.</span></span>
+    </a><span class="pager-cell pager-cell--next pager-cell--empty"><span class="label">последняя запись.</span></span></nav>
+</article><section class="section section--last" aria-labelledby="more-title">
+  <div class="rail section-head">
+    <span class="label">Читайте дальше</span>
+    <h2 id="more-title" class="h-section">ещё записи.</h2>
+  </div>
+  <div class="rail">
+    <ul class="cards"><li class="card"><a href="/journal/ru/articles/kachestvo-vazhnee-mody/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-10/13-landscape.webp" alt="Обложка кейса концепции сайта Nordic Balance Studios: Design Challenge Day 10, компьютер с надписью Move better, live better вокруг кадра из видео студии и телефон с полноэкранным меню." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 012</span>
+</div>
+<span class="label">100 дней · 26.11.26</span><span class="card-title">качество важнее моды<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/pust-govoryat-fotografii/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-9/10-landscape.webp" alt="Обложка кейса концепта сайта Target Models: Design Challenge Day 9, Марбелья и Лондон, компьютер с крупным логотипом targetmodels среди колонок портретов и телефон с полноэкранным меню." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 010</span>
+</div>
+<span class="label">100 дней · 25.11.26</span><span class="card-title">пусть говорят фотографии<span class="dot">.</span></span></a></li><li class="card"><a href="/journal/ru/articles/tri-doma-odna-dver/"><div class="cover cover--sm"><img src="https://wellyington.github.io/images/journal/100-days-day-8/10-landscape.webp" alt="Обложка кейса концепта сайта The Lights Málaga: Design Challenge Day 8, хостел, сьюты и сад, компьютер с летним главным экраном над портом Малаги и панелью бронирования и телефон с полноэкранным меню." loading="lazy" decoding="async"><span class="cover-tag"><span class="pulse" aria-hidden="true"></span>№ 009</span>
+</div>
+<span class="label">100 дней · 25.11.26</span><span class="card-title">три дома, одна дверь<span class="dot">.</span></span></a></li></ul>
+  </div>
+</section>
+  </main>
+
+  <footer class="foot"><div class="foot-banner">
+    <img src="/images/footer-city.webp" alt="" loading="lazy" decoding="async">
+    <p class="label">Независимый дизайн · Пишу открыто</p>
+  </div><nav class="foot-nav" aria-label="Footer"><a href="/journal/ru/" class="rollable"><span class="roll"><span>журнал</span><span aria-hidden="true">журнал</span></span>
+    </a><a href="/journal/ru/archive/" class="rollable"><span class="roll"><span>архив</span><span aria-hidden="true">архив</span></span>
+    </a><a href="/journal/ru/about/" class="rollable"><span class="roll"><span>обо мне</span><span aria-hidden="true">обо мне</span></span>
+    </a><a href="https://wellyington.github.io/ru/" target="_blank" rel="noopener" class="rollable"><span class="roll"><span>основной сайт</span><span aria-hidden="true">основной сайт</span></span>
+    </a></nav>
+
+  <div class="rail rail--light">
+    <div class="foot-cols">
+      <div class="foot-col">
+        <p class="label">в других местах</p>
+        <ul class="foot-social"><li><a href="https://x.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>X</span><span aria-hidden="true">X</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://instagram.com/wellyington" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>Instagram</span><span aria-hidden="true">Instagram</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="https://www.linkedin.com/in/wellyington/" target="_blank" rel="noopener me" class="rollable"><span class="roll"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="/journal/ru/feed.xml" class="rollable"><span class="roll"><span>RSS</span><span aria-hidden="true">RSS</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col--right">
+        <p class="label">напишите мне</p>
+        <a class="foot-mail" href="mailto:welly.almeida@gmail.com">welly.almeida@gmail.com</a>
+        <p class="foot-small">Я читаю все ответы. Каждый.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="wordmark-xl" aria-hidden="true">Wellyington</p><nav class="foot-legal" aria-label="Правовая информация">
+    <a href="/ru/privacy/">Конфиденциальность</a>
+    <a href="/ru/cookies/">Cookies</a>
+    <a href="/ru/terms/">Правовая информация</a>
+    <a href="#" data-cookie-settings>Настройки cookies</a>
+  </nav>
+
+  <div class="foot-colophon">
+    <span>© 2026 Wellyington</span>
+    <span>Набрано Space Grotesk · Собрано на Jekyll</span>
+    <a href="https://wellyington.github.io/" target="_blank" rel="noopener">Website by Wellyington</a>
+  </div>
+</footer>
+
+
+  <div class="hover-peek" aria-hidden="true" data-peek><img alt=""></div>
+  <script src="/journal/assets/js/journal.js" defer></script>
+</body>
+</html>
